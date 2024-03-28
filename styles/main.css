@@ -57,3 +57,12 @@ p {
   font-weight: 300;
   line-height: normal;
 }
+
+.hero_image {
+  background-image: url('assets/homepage_banner_full.jpeg');
+  background-color: linear-gradient(rgb(255, 119, 230), rgb(168, 46, 255));
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

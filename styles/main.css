@@ -9,11 +9,18 @@ body {
   background-color: #fafafa;
 }
 
+main {
+  width: 1280px;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
 /* Heading styles */
 h1 {
   color: #000;
   font-family: Montserrat, sans-serif;
-  font-size: 18px;
+  font-size: 20px; /* I know this is small, but this is mainly for the logotype */
   font-style: normal;
   font-weight: 800;
   line-height: normal;
@@ -22,16 +29,17 @@ h1 {
 h2 {
   color: #000;
   font-family: Poppins, sans-serif;
-  font-size: 24px;
+  font-size: 35px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  padding-top: 50px;
 }
 
 h3 {
   color: #000;
   font-family: Poppins, sans-serif;
-  font-size: 18px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -40,9 +48,9 @@ h3 {
 h4 {
   color: #000;
   font-family: Poppins, sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   line-height: normal;
 }
 
@@ -52,7 +60,7 @@ p {
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
-  line-height: normal;
+  line-height: 18pt;
 }
 
 /* Styling for blocks */
@@ -60,20 +68,25 @@ header {
   background: #fff;
   box-shadow: 0px 4px 15.3px 0px rgba(0, 0, 0, 0.05);
   height: 90px;
-}
-
-.logotype {
-  position: relative;
+  width: 100%;
+  position: fixed;
+  display: block;
+  padding: 15px 0px 15px 0px;
 }
 
 nav {
-  text-align: right;
+  float: right;
 }
 
-footer {
-  height: 50px;
-  padding-top: 15px;
-  background-color: rgba(251, 174, 226, 0.18);
+.logo_type {
+  float: left;
+  margin: 15px 0px 0px 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
 }
 
 .hero_image {
@@ -86,13 +99,52 @@ footer {
 }
 
 .about {
-  padding: 50 0 50 50;
-  max-width: 500px;
+  margin: 50 auto 50 auto;
+  padding: 150px 0 0 50px;
+}
+
+.about p {
+  max-width: 550px;
+  padding-top: 20px;
+}
+
+#tech {
+  display: flex;
+  flex-direction: row;
+}
+
+.blog_post {
+  margin: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .blog_post img {
   width: 400px;
   height: auto;
+}
+
+.blog_content {
+  max-width: 400px;
+}
+.blog_content h4 {
+  padding: 15px 0px 5px 0px;
+}
+
+.date {
+  color: grey;
+  padding-bottom: 15px;
+}
+
+.blog_content p {
+  padding-bottom: 15px;
+}
+
+footer {
+  height: 50px;
+  padding-top: 15px;
+  background-color: rgba(251, 174, 226, 0.18);
 }
 
 footer p {

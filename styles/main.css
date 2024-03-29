@@ -3,18 +3,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
 }
 
 body {
-  background-colour: #fafafa;
+  background-color: #fafafa;
 }
 
 /* Heading styles */
 h1 {
-  color: #d464c7;
+  color: #000;
   font-family: Montserrat, sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -58,10 +55,19 @@ p {
   line-height: normal;
 }
 
+/* Styling for blocks */
 header {
   background: #fff;
   box-shadow: 0px 4px 15.3px 0px rgba(0, 0, 0, 0.05);
   height: 90px;
+}
+
+.logotype {
+  position: relative;
+}
+
+nav {
+  text-align: right;
 }
 
 footer {
@@ -70,10 +76,15 @@ footer {
 }
 
 .hero_image {
-  background-image: url('assets/homepage_banner_full.jpeg');
+  background-image: url('../assets/homepage_banner_full.jpeg');
   background-color: linear-gradient(rgb(255, 119, 230), rgb(168, 46, 255));
   height: 500px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.about {
+  padding: 50 0 50 50;
+  max-width: 500px;
 }

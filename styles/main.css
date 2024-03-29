@@ -88,3 +88,8 @@ footer {
   padding: 50 0 50 50;
   max-width: 500px;
 }
+
+.blog_post img {
+  width: 400px;
+  height: auto;
+}

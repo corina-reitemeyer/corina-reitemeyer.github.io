@@ -44,10 +44,10 @@
 }
 
 /* Heading styles */
-h1 a {
+h1 {
   color: #000;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 28px; /* I know this is small, but this is mainly for the logotype */
+  font-family: 'Poppins', sans-serif;
+  font-size: 45px;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
@@ -55,8 +55,8 @@ h1 a {
 
 h2 {
   color: #000;
-  font-family: Poppins, sans-serif;
-  font-size: 45px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 35px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -65,8 +65,8 @@ h2 {
 
 h3 {
   color: #000;
-  font-family: Poppins, sans-serif;
-  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -74,7 +74,7 @@ h3 {
 
 h4 {
   color: #000;
-  font-family: Poppins, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -83,11 +83,22 @@ h4 {
 
 p {
   color: #000;
-  font-family: Poppins, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
-  line-height: 18pt;
+  line-height: 20pt;
+  padding: 20px 0px 10px 0;
+}
+
+li {
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20pt;
+  padding: 20px 0px 10px 0;
 }
 
 /* Styling for blocks */
@@ -103,6 +114,7 @@ main {
   height: 100%;
   display: block;
   margin: 0 auto;
+  padding-bottom: 100px;
 }
 
 header {
@@ -137,6 +149,9 @@ li a:hover {
 .logo_type a {
   float: left;
   margin: 15px 0px 0px 30px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  font-style: normal;
 }
 
 nav ul {
@@ -205,7 +220,7 @@ nav ul li {
   height: auto;
 }
 
-/* This is for the text parts of the blog element */
+/* This is for the blog feature element content */
 .blog_content {
   max-width: 400px;
 }
@@ -215,7 +230,7 @@ nav ul li {
 
 .date {
   color: grey;
-  padding-bottom: 15px;
+  padding: 0 0 15px 0;
 }
 
 .blog_content p {
@@ -228,6 +243,24 @@ nav ul li {
 
 a:hover {
   color: black;
+}
+
+/* These are overrides for the Blog page text styles */
+
+.content_heading {
+  padding: 60px 0 5px 0;
+}
+
+.content_date {
+  margin: 50px 0 0 0;
+}
+
+.description {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 18pt;
+  padding: 0px;
 }
 
 /* Footer */

@@ -117,6 +117,7 @@ main {
   padding-bottom: 100px;
 }
 
+/* Navigation & Header */
 header {
   background: #fff;
   box-shadow: 0px 4px 15.3px 0px rgba(0, 0, 0, 0.05);
@@ -189,7 +190,7 @@ nav ul li {
   padding-top: 20px;
 }
 
-/* Blog structure */
+/* Blog feature structure */
 #tech {
   display: flex;
   flex-direction: row;
@@ -245,7 +246,7 @@ a:hover {
   color: black;
 }
 
-/* These are overrides for the Blog page text styles */
+/* These are overrides for the Blog page styles */
 
 .content_heading {
   padding: 60px 0 5px 0;
@@ -261,6 +262,25 @@ a:hover {
   font-weight: 300;
   line-height: 18pt;
   padding: 0px;
+}
+
+figure {
+  padding-top: 40px;
+}
+
+figure img {
+  width: 80%;
+  height: 100%;
+}
+
+figcaption {
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 20pt;
+  padding: 20px 0px 40px 0;
 }
 
 /* Footer */

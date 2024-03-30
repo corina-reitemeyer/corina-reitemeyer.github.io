@@ -144,7 +144,7 @@ li a {
 }
 
 li a:hover {
-  color: blue;
+  color: rgb(143, 0, 196);
 }
 
 .logo_type a {
@@ -159,11 +159,11 @@ nav ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
+  padding-right: 30px;
 }
 
 nav ul li {
-  margin: 15px 5px 0px 5px;
-  padding-right: 50px;
+  margin: 0px 10px 0px 20px;
 }
 
 /* Homepage Banner */
@@ -178,7 +178,7 @@ nav ul li {
 
 .about {
   margin: 50 auto 50 auto;
-  padding: 150px 0 0 30px;
+  padding: 150px 0 0 0;
   width: 50%;
   height: 100%;
   display: block;
@@ -239,11 +239,12 @@ nav ul li {
 }
 
 .blog_post a {
-  color: violet;
+  color: rgb(213, 6, 134);
 }
 
-a:hover {
-  color: black;
+.blog_post a:hover {
+  border-bottom: 1px solid rgb(213, 6, 134);
+  text-decoration: none;
 }
 
 /* These are overrides for the Blog page styles */
@@ -262,6 +263,10 @@ a:hover {
   font-weight: 300;
   line-height: 18pt;
   padding: 0px;
+}
+
+li {
+  margin-left: 20px;
 }
 
 figure {
@@ -303,23 +308,24 @@ footer p {
 /* Small Mobile */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .logo_type {
-    font-size: 20px;
-    padding: 20px 0px 0px 0px;
-    margin: 0px 0px 0px 20px;
+    font-size: 18px;
+    text-align: left;
   }
 
   nav ul li {
-    margin: 18px 0px 0px 5px;
-    padding-right: 18px;
+    visibility: hidden;
   }
 
   .about {
-    width: 100%;
-    padding: 150px 40px 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    height: 100%;
+    width: 90%;
   }
 
   .about h2 {
-    font-size: 40px;
+    font-size: 35px;
   }
 
   .blog_section {
@@ -332,13 +338,17 @@ footer p {
   }
 
   main {
-    width: 100%;
+    width: 90%;
   }
 
   #tech {
     flex-direction: column;
     text-align: center;
     padding: 40px 0px 0px 0px;
+  }
+
+  .content_heading {
+    padding-top: 20px;
   }
 
   #core {
@@ -352,18 +362,14 @@ footer p {
 @media only screen and (min-device-width: 480px) and (max-device-width: 768px) {
   .logo_type {
     font-size: 28px;
-    padding: 20px 0px 0px 0px;
-    margin: 0px 0px 0px 20px;
-  }
-
-  nav ul li {
-    margin: 20px 0px 0px 5px;
-    padding-right: 20px;
   }
 
   .about {
-    width: 100%;
-    padding: 150px 40px 0 50px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    padding-right: 40px;
   }
 
   .about h2 {
@@ -372,6 +378,7 @@ footer p {
 
   .blog_section {
     flex-direction: column;
+    align-items: center;
   }
 
   .blog_post {
@@ -379,8 +386,12 @@ footer p {
     padding: 10px 0px 0px 0px;
   }
 
+  .content_heading {
+    padding-top: 20px;
+  }
+
   main {
-    width: 100%;
+    width: 90%;
   }
 
   #tech {
@@ -398,18 +409,16 @@ footer p {
 
 /* Tablet */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  nav ul li {
-    margin: 18px 10px 0px 5px;
-    padding-right: 15px;
-  }
-
   .about {
-    width: 100%;
-    padding: 150px 40px 0 50px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
   }
 
   .blog_section {
     flex-direction: row;
+    align-items: first baseline;
   }
 
   .blog_post {
@@ -418,7 +427,7 @@ footer p {
   }
 
   main {
-    width: 100%;
+    width: 90%;
   }
 
   #tech {
@@ -436,18 +445,12 @@ footer p {
 
 /* Small Desktop */
 @media only screen and (min-width: 1024px) and (max-device-width: 1500px) {
-  nav ul li {
-    margin: 18px 10px 0px 5px;
-    padding-right: 15px;
-  }
-
   .about {
-    width: 100%;
-    padding: 150px 40px 0 30px;
+    width: 80%;
   }
 
   main {
-    width: 100%;
+    width: 80%;
     height: 100%;
     display: block;
     margin: 0 auto;
@@ -455,6 +458,7 @@ footer p {
 
   .blog_section {
     flex-direction: row;
+    align-items: first baseline;
   }
 
   .blog_post {

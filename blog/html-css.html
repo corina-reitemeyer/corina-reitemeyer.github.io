@@ -28,7 +28,7 @@
       <div class="about">
         <h2>Sprint 2 - CSS Concepts: Classes vs. IDs</h2>
         <p>
-          An exploration by a newbie developer of when to use Classes and when
+          An exploration by a newbie developer about when to use classes and when
           to use ID's in CSS.
         </p>
       </div>
@@ -45,63 +45,66 @@
         <p>
           Generally it is said that classes are used for reusable styles, and ID’s
           are meant for unique elements. This means that classes are a lot more
-          flexible, whereas ID aren’t and should be used sparingly.
+          flexible, whereas ID aren’t (they are unique) and should be used sparingly.
         </p>
         <p>
-          But if you can apply styles to either one, when do you use which and in
+          But if you can apply styles to either one, when do you use which one and in
           what scenario? For styling, I like to think of the question “how often
           does the styling repeat itself?”.
         </p>
         <p>
-          For example, look at this news video section on BBC.com. Each element
-          looks the same. This is achieved, because someone created a class, added
-          the styling for this particular class, and then used this class for each
-          HTML element of each news video feature. This means the styling of this
-          class has been used at least 5 times on this page alone.
+          For example, look at this news video section on <a href="https://www.bbc.com/" target="_blank">BBC.com</a>. Each element
+          looks the same.
         </p>
           <figure>
           <img src="../assets/bbc_screenshot.png" class="blog_image"/>
           <figcaption> The news section on BBC.com</figcaption>
           </figure>
         <p>
-          Now imagine if they all used an ID. Of course, that would be possible
-          and would work, but let me illustrate how much extra work and risk of
-          maintenance and mistakes that can cause down the track.
+          This can be achieved, because someone created a class, added
+          the styling for this particular class, and then used it for each
+          HTML element of each news video feature. This means the styling of this
+          class has been used at least 5 times on this page alone, but the programmer declared the styling for it <strong>once</strong>.
+        </p>
+        <p>
+          Now, imagine if they all used an ID. Of course, that would be possible
+          and would work, but how much extra work and risk of
+          maintenance and mistakes would that cause down the track? My humble answer would be: more than I'd like.
         </p>
         <p>
           Each element would have to have a unique ID to start with - 5 IDs to be
-          exact. Then in the CSS you’d have to write (or copy & paste) the same
+          exact. In the CSS, you’d have to write (or copy & paste) the same
           styling for each ID separately. At the start, that may not look like a
           big issue because there are <em>just</em>
-          5 of them (if you’re lazy, that may be 4 too many already!). But imagine
-          you want to change the styling in a years time. And you have 100 news
-          video elements instead of just 5 of them.
+          5 of them right now (and arguably if you’re lazy and wanting to make it easier for yourself, 
+          that may be 4 too many already!). But imagine you want to change the styling in a years time. And you have 100 news
+          video elements instead of just 5 of them. I'd imagine that would be quite the hassle!
         </p>
         <p>
           Instead of having to change the styling in one class declaration in your CSS 
-          (which means you’re doing the work once), you suddenly have to change the 
-          styling all 5 or 100 of the IDs! That is not only tedious, but can also 
+          (which means you’re doing the work once, hooray!), 
+          if you've given them IDs instead, you suddenly have to change the styling all 5 or 100 individually! That is not only tedious, but can also 
           invite mistakes, which then would be tricky to find and and correct.
           </p>
           <figure>
           <img src="../assets/code_example.png" class="blog_image"/>
-          <figcaption> Comparing a CSS class with ID's </figcaption>
+          <figcaption> Comparing a CSS class with ID's, one class to rule them all! </figcaption>
         </figure>
         <p>
-          Wouldn’t it be a lot better if you just had one class to debug and maintain? 
-          Hence why they used a class instead of several IDs. Now, after looking via 
-          the Devtools, they have used ID’s as well, however my guess is it is for 
-          their javascript component.
+          Wouldn’t it be a lot better if you just had one class to debug, maintain and update if you've changed your mind on the styling? 
+         When I looked at the code through the dev tools, they used classes instead of several IDs for their styling. They have used ID’s as well, 
+         however my guess is that it is for their JavaScript functionality.
         </p>
       <h3 class="content_heading">This doesn’t mean ID’s are completely useless.</h3>
         <p>
           ID’s are handy if you are trying to create anchor-links. If you tried to 
           link a menu item to a class on your site…how would the browser now where to 
-          send you if you had 100 elements with the same class? Exactly it would be confused. 
-          So an ID is appropriate here. Another use, as mentioned above, is Javascript in order 
-          to add interactivity. The ID selector is used by JavaScript to access and manipulate 
-          the element with the specific ID. Javascript has specific syntaxes that looks for ID’s, 
-          and hence using an HTML ID attribute makes sense here.</p>
+          send you if you had 100 elements with the same class? Exactly, it would be confused and my guess is it would go to the first html element with said class selector.
+          It would be a lot better though, if one had more control about where the browser jumps to, rather than just tossing a coin and hoping the browser will land in the right place. 
+          So using an ID is appropriate here, a unique selector that one can link to. </p>
+
+          <p>Another use, as mentioned above, is utilising ID's for Javascript in order to add interactivity. The ID selector is used by JavaScript to access and manipulate the element with the specific ID. 
+            Javascript has specific syntaxes that looks for ID’s, and hence using an HTML ID attribute makes sense here as well. </p>
     </main>
     <!-- This is site footer -->
     <footer>

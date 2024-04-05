@@ -288,6 +288,11 @@ figcaption {
   padding: 20px 0px 40px 0;
 }
 
+.bloglink {
+  border-bottom: 1px solid black;
+  text-decoration: none;
+}
+
 /* Footer */
 footer {
   height: 50px;

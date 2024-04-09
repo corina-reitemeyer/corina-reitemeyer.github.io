@@ -294,6 +294,15 @@ figcaption {
   text-decoration: none;
 }
 
+p a {
+  color: rgb(213, 6, 134);
+}
+
+p a:hover {
+  border-bottom: 1px solid rgb(213, 6, 134);
+  text-decoration: none;
+}
+
 /* Footer */
 footer {
   height: 50px;

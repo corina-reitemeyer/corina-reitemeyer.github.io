@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Corina - Full Stack Developer</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../styles/main.css" type="text/css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- This is site header & navigation -->
+    <header>
+      <h1 class="logo_type"><a href="/index.html"> Corina Reitemeyer</a></h1>
+      <nav>
+        <ul>
+          <li><a href="#tech"> Tech </a></li>
+          <li><a href="#core"> Core </a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- This is a little something about me for the homepage banner -->
+    <div class="hero_image">
+      <div class="about">
+        <h2>Sprint 4 - Problem Solving</h2>
+        <p>
+          A reflection of how I solved challenges in the last two sprints and which techniques I'm confident in vs. which ones I need to lean more into.
+        </p>
+      </div>
+    </div>
+    <main>
+      <!-- This is the full Blog post -->
+      <p class ="content_date">11 April 2024</h4>
+      <h3 class="content_heading">A time where I got blocked on a simple problem</h3>
+        <p>
+          When I got stuck on that one function challenge in Sprint 3, I could not figure out why my code wasn’t working. 
+          It was a if/else-if/else condition, and it would not pass the test.
+        </p>
+        <p>I tried to comment out code step by step, which didn’t help me here in this case because the test did not give continous feedback 
+          as I was putting the code together. Eventually I reached out to the tech questions channel, where one of the 
+          facilitator pointed out that I had a casing issue with one of the strings. I looked at my code for such a long time, 
+          that something trival as that was missed.</p>
+        <p>I felt a bit dumb, but I had a good laugh about it. It was good that I reached out though, because I don’t think I 
+          would’ve picked it up right away as it was such a subtle error. I learned that peer reviews and pair programming are 
+          so important, because after a while we don’t see the forest for the trees. Someone who hasn’t been so close to the 
+          code can therefore point out errors (and help debug), and even propose refactoring prompts to simplify the code.</p>
+        <h3 class="content_heading">A time where I elegantly solved a problem</h3>
+        <p>
+          When I attempted to solve the Superfizzbuzz challenge, I simply couldn’t get my head around the instructions and 
+          create a translation of them into pseudo code, and eventually real code.
+        </p>
+        <p>The first thing I did is to write out the pseudo code with as much comprehension I could gather from the instructions 
+          until I hit a blocker. With the parts that were unclear, I tried to google them or used OpenAI to paraphrase the instruction 
+          in a simplified way (basically in a non-tech language). This is because I often would get hung up on specific words 
+          e.g. ‘divisible’, so it helped me to paraphrase it into a similar work or describe what it does.</p>
+        <p>I would often use it then to rubber duck, to ensure I understood the instructions based on the complete picture I now I had. 
+          Then I would use the clarified parts and finish my pseudo code. I would then start translating the pseudo code into code, and 
+          googled a long the way if I was unsure how to use a method or expressions.</p>
+        <p>I used the test functions to give me clues, and troubleshoot by trying different syntaxes and playing with the order to see 
+          whether it made a difference. If something worked (or didn’t work) or I simply couldn’t figure out why, and google wasn’t 
+          particularly helpful, I would get the AI to explain to my why certain snippets of my code weren’t working. </p>
+        <p>Sometimes this approach worked and sometimes it didnt (mainly cause it would give me code examples with advanced syntax, 
+          which would confuse me further), so I used it more for explanations rather than to get a straight answer to the problem e.g. 
+          “When should I use a loop and when should I use the .reduce() method to iterate over an array?”, and then compared it with an 
+          article on Mozilla or Dev.to to ensure the answer I’ve been given is most likely trustworthy.</p>
+        <p>At the end I wrote a whole heap of code, and then realised that I’ve broken down the problem so much that I practically rewrote 
+          the logic from the fizzbuzz challenge we did prior. Thats when I realised that refactoring code is very important, cause what I 
+          ended up doing was a slightly overcooked version of what my code could’ve been. So I removed the logic and called the function 
+          from the previous challenge instead, which made it a lot simpler.</p>
+        <p>This made me feel like I was in control of solving the problem and I was not rushing to get to the answer. I tried to embrace 
+          the journey of solving the challenge, not trying to get to the outcome as soon as I can. As confusing and baffling this challenge 
+          was for me, I think it was also the most rewarding - partly because I had to put a lot of effort into it to get the correct code 
+          together, but also feeling like I understood what my code did and why it works rather than having something that works but still 
+          being puzzled as to why and how that is the case.</p>
+        
+        <h3 class="content_heading">Reflect on how confident you feel using each of these problem-solving techniques/processes</h3>
+        <p>
+        <strong>Pseudocode</strong> - Definitely getting better at this, but is quite dependent on what the challenge is. I sometimes need to 
+        use google or other methods to help me simplify the language I use for this.
+        </p>
+        <p><strong>Trying something</strong> - Very confident (sometimes too much for my own good) - this is how I usually try and solve problems, 
+          try everything and then pick what works best. However I did notice when it comes to programming that this can be a trap as well. Having timebox 
+          recommendations or pomodoro are certainly useful for me here.</p>
+        <p><strong>Rubber ducky method</strong> - Love this, I used to do this in my previous career all the time - tried to use AI this time as well to see how 
+          it works, and its not bad. But I find explaining it out loud definitely helps a lot better with the structuring process in my head, so I don’t get the same 
+          effect if I type. Depends what I’m trying to do I suppose. </p>
+        <p><strong>Reading error messages</strong> - This depends on the tech jargon and where the error shows. I love having the error window open in the 
+          code editor, partly because I can click on it and it takes me to the area where it thinks the error is. Often saves me having to manually scan the code if I missed
+          a semi colon or a curly bracket. In the console or as part of a test function, it depends what the error is. Managed to understand most errors, but sometimes I had to 
+          google the error or as OpenAI about the meaning of the error, if my search wasn't useful.</p>
+        <p><strong>Console.logging</strong> - Definitely can use it, but am not using as much as I should I reckon. Not sure if it's because of the type of challenges that 
+          made me less likely to use it or if it's because it still feels a bit alien to use it.</p>
+        <p><strong>Googling</strong> - Strong skills with this one, used to do this lots when I was trying to figure things out when I designed for web/apps. Or if the devs
+          threw a particularly jargony word at me.</p>
+        <p><strong>Asking your peers for help</strong> - Could be better, I think at this stage I'm a bit afraid of leaning onto others who are in the same boat as me, because I know we are
+          all trying to do the assignments (and my question may be out of their depth). So I don't want to feel like a burden. But I can image in the next upcoming weeks to try and post something in my homegroup or 
+          ask people on campus when I start bootcamp.</p>
+        <p><strong>Asking coaches for help</strong> - Definitely ok with this one, had no issues going into the tech questions channel to get me unstuck. Although it is still scary, but 
+          getting better at feeling more confident to post a call for help.</p>
+        <p><strong>Improving your process with reflection</strong> - Pretty good with this one, as I can tell quickly if something works for me or not. I give things a fair shot, but if it doesn't work well or 
+          it causes me more confusion or hardship, then I tend to adjust quickly.</p>
+        <h3 class="content_heading">Reflect on a time you were reluctant to ask for help. Consider what made you reluctant to do so. What might you try 
+          differently next time?</h3>
+        <p>
+          I think asking my very first question in the tech questions channel was pretty daunting. Partly because I posted it next to more 'advanced' challenges (so I was worried that my question was
+          going to look especially stupid) and also because I generally don't like asking for help (was always the case, for anything in my life). So doing this first step felt really uncomfortable, but I was positively surprised
+          that I was given tips/hints to unstuck myself, and that it was done so with compassion, kindness and no (obvious) judgement. So that feeling of being uncomfortable came from that inner ego/voice that
+          I have, and I realise that there is absolutely no reason to feel silly. I don't think this is gonna go away anytime soon, but I think next time I will just tell myself that the reason I am here is not to be perfect, but to learn.
+          Maybe even repeat that as a mantra.
+        </p>
+    </main>
+    <!-- This is site footer -->
+    <footer>
+      <p class="description">Corina Reitemeyer - 2024</p>
+    </footer>
+  </body>
+</html>

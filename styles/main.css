@@ -303,6 +303,10 @@ p a:hover {
   text-decoration: none;
 }
 
+hr {
+  margin-top: 50px;
+}
+
 /* Footer */
 footer {
   height: 50px;

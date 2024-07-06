@@ -1,6 +1,10 @@
-import GridItem from '../components/GridItem.tsx'
+import GridItem from '../components/GridItem'
 
-export default Projects() {
+interface ProjectsProps {
+  images: string
+}
+
+const Projects: React.FC<ProjectsProps> = () => {
   const mockImages = [
     'https://via.placeholder.com/300x200',
     'https://via.placeholder.com/300x200',
@@ -11,15 +15,17 @@ export default Projects() {
     'https://via.placeholder.com/300x200',
     'https://via.placeholder.com/300x200',
     'https://via.placeholder.com/300x200',
-  ];
+  ]
 
   return (
     <>
-    <div>
-    {images.map((image, index) => (
-      <GridItem key={index} image={image} />
-    ))}
-    </div>
+      <div>
+        {mockImages.map((image, index) => (
+          <GridItem key={index} image={image} />
+        ))}
+      </div>
     </>
   )
 }
+
+export default Projects

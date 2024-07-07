@@ -6,17 +6,26 @@ export default function Header() {
       <nav className="bg-white-100 py- ml-4 flex items-center justify-between px-6 py-6">
         <ul className="flex space-x-4">
           <li>
-            <Link to="/about" className="text-gray-800 hover:text-blue-600">
+            <Link
+              to="/about"
+              className="relative inline-block font-medium text-gray-600 hover:text-black"
+            >
               About
             </Link>
           </li>
           <li>
-            <Link to="/projects" className="text-gray-800 hover:text-blue-600">
+            <Link
+              to="/projects"
+              className="relative inline-block font-medium text-gray-600 hover:text-black"
+            >
               Projects
             </Link>
           </li>
           <li>
-            <Link to="/contact" className="text-gray-800 hover:text-blue-600">
+            <Link
+              to="/contact"
+              className="relative inline-block font-medium text-gray-600 hover:text-black"
+            >
               Contact
             </Link>
           </li>

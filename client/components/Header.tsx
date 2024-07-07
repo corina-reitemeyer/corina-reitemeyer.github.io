@@ -4,6 +4,7 @@ export default function Header() {
   return (
     <>
       <nav>
+        <img src="/images/weblogo.PNG" alt="Logo of Corina's website" />
         <ul>
           <li>
             <Link to="/about">About</Link>

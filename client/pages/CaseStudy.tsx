@@ -1,1 +1,5 @@
-export default CaseStudy() {}
+const CaseStudy = () => {
+  return <div></div>
+}
+
+export default CaseStudy

@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* TAILWIND */
+.paragraph {
+  @apply mb-6 text-left text-lg;
+}
+
+/** MANUAL CSS **/
+
+.profile-image {
+  max-width: 100%;
+  max-height: 450px;
+  width: auto;
+  height: auto;
+}

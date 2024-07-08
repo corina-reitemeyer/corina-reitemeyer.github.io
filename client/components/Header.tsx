@@ -7,14 +7,6 @@ export default function Header() {
         <ul className="flex space-x-4">
           <li>
             <Link
-              to="/about"
-              className="relative inline-block font-medium text-gray-600 hover:text-black"
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
               to="/projects"
               className="relative inline-block font-medium text-gray-600 hover:text-black"
             >
@@ -23,10 +15,10 @@ export default function Header() {
           </li>
           <li>
             <Link
-              to="/contact"
+              to="/about"
               className="relative inline-block font-medium text-gray-600 hover:text-black"
             >
-              Contact
+              About
             </Link>
           </li>
           <li>
@@ -35,8 +27,16 @@ export default function Header() {
               className="relative inline-block font-medium text-gray-600 hover:text-black"
               download="Corina_Rei_CV_2024.pdf"
             >
-              Download CV
+              Resume
             </a>
+          </li>
+          <li>
+            <Link
+              to="/contact"
+              className="relative inline-block font-medium text-gray-600 hover:text-black"
+            >
+              Contact
+            </Link>
           </li>
         </ul>
         <div className="flex items-center">

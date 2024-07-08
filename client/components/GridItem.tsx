@@ -6,7 +6,9 @@ interface GridItemProps {
 const GridItem: React.FC<GridItemProps> = ({ image, alt }) => {
   return (
     <>
-      <img src={image} alt={alt || 'Portfolio Item'} />
+      <div className="aspect-w-16 aspect-h-9 flex items-center justify-center">
+        <img src={image} alt={alt || 'Portfolio Item'} />
+      </div>
     </>
   )
 }

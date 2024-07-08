@@ -22,10 +22,11 @@ const About = () => {
           <p className="paragraph">
             My aim is to create easy-to-use software that enhances users&apos;
             trust and improves their experience with digital products, keeping
-            things simple and enjoyable. I prioritise best practices and thrive
-            on continuous learning, embracing new technologies to deliver
-            valuable results. I find fulfilment in tackling challenges, whether
-            it&apos;s through coding or design.{' '}
+            things simple and enjoyable, whilst building software that is robust
+            and easy to maintain. I prioritise best practices and thrive on
+            continuous learning, embracing new technologies to deliver valuable
+            results. I find fulfilment in tackling challenges, whether it&apos;s
+            through coding or design.
           </p>
           <p className="paragraph">
             When I&apos;m not in front of my computer, I enjoy Latin dancing and

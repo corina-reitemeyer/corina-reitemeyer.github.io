@@ -29,6 +29,15 @@ export default function Header() {
               Contact
             </Link>
           </li>
+          <li>
+            <a
+              href="/path-to-your-cv.pdf" // Replace with the actual path to my CV file
+              className="relative inline-block font-medium text-gray-600 hover:text-black"
+              download="Corina_Rei_CV_2024.pdf"
+            >
+              Download CV
+            </a>
+          </li>
         </ul>
         <div className="flex items-center">
           <img

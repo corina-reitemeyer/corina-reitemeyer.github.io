@@ -50,7 +50,7 @@ const Contact = () => {
         </label>
         <label>
           Message:
-          <input
+          <textarea
             name="email"
             value={formData.message}
             onChange={handleChange}

@@ -19,11 +19,13 @@ const Projects: React.FC<ProjectsProps> = () => {
       src: 'https://via.placeholder.com/1300x750',
       alt: 'Description of image 1',
       slug: 'case-study-1',
+      title: 'Case Study 1',
     },
     {
       src: 'https://via.placeholder.com/1300x750',
       alt: 'Description of image 2',
       slug: 'case-study-2',
+      title: 'Case Study 1',
     },
   ]
   return (
@@ -32,7 +34,12 @@ const Projects: React.FC<ProjectsProps> = () => {
         <div className="grid grid-cols-1 justify-items-center gap-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 lg:gap-3">
           {mockImages.map((image, index) => (
             <div key={index} className="flex items-center justify-center">
-              <GridItem image={image.src} alt={image.alt} url={image.url} />
+              <GridItem
+                image={image.src}
+                alt={image.alt}
+                slug={image.slug}
+                title={image.title}
+              />
             </div>
           ))}
         </div>

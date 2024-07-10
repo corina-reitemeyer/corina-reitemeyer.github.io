@@ -1,0 +1,263 @@
+{
+  "projects": [
+    // GROW-GRUB
+    {
+      "headerImage": "/images/project1-header.jpg",
+      "projectTitle": "E-commerce Website Redesign",
+      "company": "ABC Retailers",
+      "role": "Full-stack Developer",
+      "date": "January 2023 - March 2023",
+      "overview": "Redesigned the UI/UX of an e-commerce website to enhance user experience and improve conversion rates.",
+      "objectiveGoals": "Enhance navigation, optimize search functionalities, and modernize visual appeal.",
+      "background": "The client sought to revamp their outdated website to stay competitive in the online retail market.",
+      "designProcess": {
+        "research": "Conducted user surveys and analyzed analytics to identify pain points and user preferences.",
+        "definingProblem": "Outlined key challenges such as slow loading times and outdated UI.",
+        "ideation": "Brainstormed design concepts focusing on a modern, user-friendly interface.",
+        "prototyping": "Created wireframes and interactive prototypes using Figma.",
+        "feedback": "Iteratively refined designs based on client feedback and usability testing."
+      },
+      "softwareDevelopment": {
+        "techStack": "React.js, Node.js, MongoDB",
+        "architecture": "MVC for backend, Component-based architecture for frontend",
+        "developmentProcess": "Agile methodology with bi-weekly sprints, CI/CD pipelines",
+        "integration": "Integrated frontend designs with backend APIs for seamless functionality."
+      },
+      "solutionImplementation": {
+        "designDecisions": "Emphasized mobile-first design, improved accessibility standards.",
+        "codingProcesses": "Developed reusable React components, optimized backend queries.",
+        "accessibilityUsability": "Ensured WCAG 2.1 compliance, conducted usability testing.",
+        "testing": "Performed unit tests with Jest/Enzyme, end-to-end tests with Cypress.",
+        "deployment": "Deployed frontend on Netlify, backend on AWS EC2 instances.",
+        "challengesFaced": "Addressed integration complexities, optimized performance."
+      },
+      "lessonsLearned": {
+        "designInsights": "Importance of iterative design and user feedback loops.",
+        "technicalInsights": "Enhanced understanding of frontend-backend interactions.",
+        "improvements": "Implemented continuous monitoring for better performance."
+      },
+      "keyTakeaways": {
+        "summary": "Successfully improved site performance and user engagement through UI/UX enhancements.",
+        "demonstrationSkills": "Demonstrated proficiency in React development and backend integration."
+      },
+      "githubLink": "https://github.com/yourusername/project1",
+      "deployedSiteLink": "https://www.project1.com"
+    },
+    // TROLL CALCULATOR
+    {
+      "headerImage": "/images/project2-header.jpg",
+      "projectTitle": "Mobile App Development",
+      "company": "XYZ Tech Solutions",
+      "role": "Mobile App Developer",
+      "date": "April 2023 - June 2023",
+      "overview": "Developed a native mobile app for iOS and Android platforms.",
+      "objectiveGoals": "Provide a seamless user experience with real-time data synchronization.",
+      "background": "Client needed a scalable mobile app to expand their customer reach.",
+      "designProcess": {
+        "research": "Studied user behaviors and competitor apps.",
+        "definingProblem": "Identified user pain points and functional requirements.",
+        "ideation": "Brainstormed UI/UX concepts to align with client branding.",
+        "prototyping": "Created interactive prototypes using Adobe XD.",
+        "feedback": "Gathered feedback from beta testing and user interviews."
+      },
+      "softwareDevelopment": {
+        "techStack": "React Native, Firebase",
+        "architecture": "Redux for state management, Microservices architecture",
+        "developmentProcess": "Scrum methodology with sprint planning and retrospectives.",
+        "integration": "Integrated Firebase for real-time database and authentication."
+      },
+      "solutionImplementation": {
+        "designDecisions": "Focused on intuitive navigation and minimalist design.",
+        "codingProcesses": "Implemented Redux for state management, optimized API calls.",
+        "accessibilityUsability": "Ensured app accessibility with screen reader support.",
+        "testing": "Conducted rigorous testing on various devices and platforms.",
+        "deployment": "Published apps to App Store and Google Play Store.",
+        "challengesFaced": "Addressed platform-specific nuances and performance optimizations."
+      },
+      "lessonsLearned": {
+        "designInsights": "Importance of platform-specific design guidelines.",
+        "technicalInsights": "Learned efficient data synchronization techniques.",
+        "improvements": "Implemented continuous integration for faster feedback loops."
+      },
+      "keyTakeaways": {
+        "summary": "Successfully launched a robust mobile app meeting client expectations.",
+        "demonstrationSkills": "Showcased expertise in React Native development and Firebase integration."
+      },
+      "githubLink": "https://github.com/yourusername/project2",
+      "deployedSiteLink": "https://www.project2app.com"
+    },
+    // OPTIMAL WORKSHOP
+    {
+      "headerImage": "/images/project1-header.jpg",
+      "projectTitle": "E-commerce Website Redesign",
+      "company": "ABC Retailers",
+      "role": "Full-stack Developer",
+      "date": "January 2023 - March 2023",
+      "overview": "Redesigned the UI/UX of an e-commerce website to enhance user experience and improve conversion rates.",
+      "objectiveGoals": "Enhance navigation, optimize search functionalities, and modernize visual appeal.",
+      "background": "The client sought to revamp their outdated website to stay competitive in the online retail market.",
+      "designProcess": {
+        "research": "Conducted user surveys and analyzed analytics to identify pain points and user preferences.",
+        "definingProblem": "Outlined key challenges such as slow loading times and outdated UI.",
+        "ideation": "Brainstormed design concepts focusing on a modern, user-friendly interface.",
+        "prototyping": "Created wireframes and interactive prototypes using Figma.",
+        "feedback": "Iteratively refined designs based on client feedback and usability testing."
+      },
+      "softwareDevelopment": {
+        "techStack": "React.js, Node.js, MongoDB",
+        "architecture": "MVC for backend, Component-based architecture for frontend",
+        "developmentProcess": "Agile methodology with bi-weekly sprints, CI/CD pipelines",
+        "integration": "Integrated frontend designs with backend APIs for seamless functionality."
+      },
+      "solutionImplementation": {
+        "designDecisions": "Emphasized mobile-first design, improved accessibility standards.",
+        "codingProcesses": "Developed reusable React components, optimized backend queries.",
+        "accessibilityUsability": "Ensured WCAG 2.1 compliance, conducted usability testing.",
+        "testing": "Performed unit tests with Jest/Enzyme, end-to-end tests with Cypress.",
+        "deployment": "Deployed frontend on Netlify, backend on AWS EC2 instances.",
+        "challengesFaced": "Addressed integration complexities, optimized performance."
+      },
+      "lessonsLearned": {
+        "designInsights": "Importance of iterative design and user feedback loops.",
+        "technicalInsights": "Enhanced understanding of frontend-backend interactions.",
+        "improvements": "Implemented continuous monitoring for better performance."
+      },
+      "keyTakeaways": {
+        "summary": "Successfully improved site performance and user engagement through UI/UX enhancements.",
+        "demonstrationSkills": "Demonstrated proficiency in React development and backend integration."
+      },
+      "githubLink": "https://github.com/yourusername/project1",
+      "deployedSiteLink": "https://www.project1.com"
+    },
+
+    // MOE DESIGN SYSTEM
+    {
+      "headerImage": "/images/project2-header.jpg",
+      "projectTitle": "Mobile App Development",
+      "company": "XYZ Tech Solutions",
+      "role": "Mobile App Developer",
+      "date": "April 2023 - June 2023",
+      "overview": "Developed a native mobile app for iOS and Android platforms.",
+      "objectiveGoals": "Provide a seamless user experience with real-time data synchronization.",
+      "background": "Client needed a scalable mobile app to expand their customer reach.",
+      "designProcess": {
+        "research": "Studied user behaviors and competitor apps.",
+        "definingProblem": "Identified user pain points and functional requirements.",
+        "ideation": "Brainstormed UI/UX concepts to align with client branding.",
+        "prototyping": "Created interactive prototypes using Adobe XD.",
+        "feedback": "Gathered feedback from beta testing and user interviews."
+      },
+      "softwareDevelopment": {
+        "techStack": "React Native, Firebase",
+        "architecture": "Redux for state management, Microservices architecture",
+        "developmentProcess": "Scrum methodology with sprint planning and retrospectives.",
+        "integration": "Integrated Firebase for real-time database and authentication."
+      },
+      "solutionImplementation": {
+        "designDecisions": "Focused on intuitive navigation and minimalist design.",
+        "codingProcesses": "Implemented Redux for state management, optimized API calls.",
+        "accessibilityUsability": "Ensured app accessibility with screen reader support.",
+        "testing": "Conducted rigorous testing on various devices and platforms.",
+        "deployment": "Published apps to App Store and Google Play Store.",
+        "challengesFaced": "Addressed platform-specific nuances and performance optimizations."
+      },
+      "lessonsLearned": {
+        "designInsights": "Importance of platform-specific design guidelines.",
+        "technicalInsights": "Learned efficient data synchronization techniques.",
+        "improvements": "Implemented continuous integration for faster feedback loops."
+      },
+      "keyTakeaways": {
+        "summary": "Successfully launched a robust mobile app meeting client expectations.",
+        "demonstrationSkills": "Showcased expertise in React Native development and Firebase integration."
+      },
+      "githubLink": "https://github.com/yourusername/project2",
+      "deployedSiteLink": "https://www.project2app.com"
+    },
+    // MOE NCEA
+    {
+      "headerImage": "/images/project2-header.jpg",
+      "projectTitle": "Mobile App Development",
+      "company": "XYZ Tech Solutions",
+      "role": "Mobile App Developer",
+      "date": "April 2023 - June 2023",
+      "overview": "Developed a native mobile app for iOS and Android platforms.",
+      "objectiveGoals": "Provide a seamless user experience with real-time data synchronization.",
+      "background": "Client needed a scalable mobile app to expand their customer reach.",
+      "designProcess": {
+        "research": "Studied user behaviors and competitor apps.",
+        "definingProblem": "Identified user pain points and functional requirements.",
+        "ideation": "Brainstormed UI/UX concepts to align with client branding.",
+        "prototyping": "Created interactive prototypes using Adobe XD.",
+        "feedback": "Gathered feedback from beta testing and user interviews."
+      },
+      "softwareDevelopment": {
+        "techStack": "React Native, Firebase",
+        "architecture": "Redux for state management, Microservices architecture",
+        "developmentProcess": "Scrum methodology with sprint planning and retrospectives.",
+        "integration": "Integrated Firebase for real-time database and authentication."
+      },
+      "solutionImplementation": {
+        "designDecisions": "Focused on intuitive navigation and minimalist design.",
+        "codingProcesses": "Implemented Redux for state management, optimized API calls.",
+        "accessibilityUsability": "Ensured app accessibility with screen reader support.",
+        "testing": "Conducted rigorous testing on various devices and platforms.",
+        "deployment": "Published apps to App Store and Google Play Store.",
+        "challengesFaced": "Addressed platform-specific nuances and performance optimizations."
+      },
+      "lessonsLearned": {
+        "designInsights": "Importance of platform-specific design guidelines.",
+        "technicalInsights": "Learned efficient data synchronization techniques.",
+        "improvements": "Implemented continuous integration for faster feedback loops."
+      },
+      "keyTakeaways": {
+        "summary": "Successfully launched a robust mobile app meeting client expectations.",
+        "demonstrationSkills": "Showcased expertise in React Native development and Firebase integration."
+      },
+      "githubLink": "https://github.com/yourusername/project2",
+      "deployedSiteLink": "https://www.project2app.com"
+    },
+    // MASSEY UNI - INFINITE
+    {
+      "headerImage": "/images/project2-header.jpg",
+      "projectTitle": "Mobile App Development",
+      "company": "XYZ Tech Solutions",
+      "role": "Mobile App Developer",
+      "date": "April 2023 - June 2023",
+      "overview": "Developed a native mobile app for iOS and Android platforms.",
+      "objectiveGoals": "Provide a seamless user experience with real-time data synchronization.",
+      "background": "Client needed a scalable mobile app to expand their customer reach.",
+      "designProcess": {
+        "research": "Studied user behaviors and competitor apps.",
+        "definingProblem": "Identified user pain points and functional requirements.",
+        "ideation": "Brainstormed UI/UX concepts to align with client branding.",
+        "prototyping": "Created interactive prototypes using Adobe XD.",
+        "feedback": "Gathered feedback from beta testing and user interviews."
+      },
+      "softwareDevelopment": {
+        "techStack": "React Native, Firebase",
+        "architecture": "Redux for state management, Microservices architecture",
+        "developmentProcess": "Scrum methodology with sprint planning and retrospectives.",
+        "integration": "Integrated Firebase for real-time database and authentication."
+      },
+      "solutionImplementation": {
+        "designDecisions": "Focused on intuitive navigation and minimalist design.",
+        "codingProcesses": "Implemented Redux for state management, optimized API calls.",
+        "accessibilityUsability": "Ensured app accessibility with screen reader support.",
+        "testing": "Conducted rigorous testing on various devices and platforms.",
+        "deployment": "Published apps to App Store and Google Play Store.",
+        "challengesFaced": "Addressed platform-specific nuances and performance optimizations."
+      },
+      "lessonsLearned": {
+        "designInsights": "Importance of platform-specific design guidelines.",
+        "technicalInsights": "Learned efficient data synchronization techniques.",
+        "improvements": "Implemented continuous integration for faster feedback loops."
+      },
+      "keyTakeaways": {
+        "summary": "Successfully launched a robust mobile app meeting client expectations.",
+        "demonstrationSkills": "Showcased expertise in React Native development and Firebase integration."
+      },
+      "githubLink": "https://github.com/yourusername/project2",
+      "deployedSiteLink": "https://www.project2app.com"
+    }
+  ]
+}

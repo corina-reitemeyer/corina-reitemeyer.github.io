@@ -16,16 +16,40 @@ const Projects: React.FC<ProjectsProps> = () => {
 
   const mockImages = [
     {
-      src: 'https://via.placeholder.com/1300x750',
+      src: '/images/portfolio/grow-grub.png',
       alt: 'Description of image 1',
-      slug: 'case-study-1',
-      title: 'Case Study 1',
+      slug: 'grow-grub',
+      title: 'Dev Academy - Grow Grub',
     },
     {
-      src: 'https://via.placeholder.com/1300x750',
+      src: 'public/images/portfolio/trolltollcalculator.png',
       alt: 'Description of image 2',
-      slug: 'case-study-2',
-      title: 'Case Study 1',
+      slug: 'troll-toll-calculator',
+      title: 'Dev Academy - Troll Toll Calculator',
+    },
+    {
+      src: '/images/portfolio/ow-templates.png',
+      alt: 'Description of image 2',
+      slug: 'ow-templates',
+      title: 'Optimal Workshop - Templates',
+    },
+    {
+      src: '/images/portfolio/NCEA - HERO.png',
+      alt: 'Description of image 2',
+      slug: 'moe-ncea',
+      title: 'Ministry of Education - NCEA Website',
+    },
+    {
+      src: '/images/portfolio/MoE - Design System - Hero.png',
+      alt: 'Description of image 2',
+      slug: 'moe-design-system',
+      title: 'Ministry of Education - Design System',
+    },
+    {
+      src: '/images/portfolio/Infinite_badge.png',
+      alt: 'Description of image 2',
+      slug: 'massey-infinite',
+      title: 'Massey University - Infinite (Honours Project)',
     },
   ]
   return (

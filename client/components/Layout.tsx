@@ -5,15 +5,13 @@ import Footer from './Footer.tsx'
 export default function Layout() {
   return (
     <>
-      <header>
+      <div className="flex min-h-screen flex-col">
         <Header />
-      </header>
-      <main>
-        <Outlet />
-      </main>
-      <footer>
+        <main className="flex-grow">
+          <Outlet />
+        </main>
         <Footer />
-      </footer>
+      </div>
     </>
   )
 }

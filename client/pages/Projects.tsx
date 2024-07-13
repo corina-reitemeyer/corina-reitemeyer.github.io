@@ -11,7 +11,7 @@ const Projects: React.FC<ProjectsProps> = () => {
   const projects = caseStudyData as Project[]
   return (
     <>
-      <div className="flex justify-center px-4 py-8">
+      <div className="flex justify-center px-10 py-8">
         <div className="2xl:max-w-8xl grid w-full max-w-full grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:max-w-7xl xl:max-w-fit">
           {projects.map((project) => (
             <Link

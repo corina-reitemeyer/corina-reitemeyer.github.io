@@ -1,8 +1,9 @@
-// This data structure is for the CaseStudy component
-
-interface Project {
+// models/projectdata.ts
+export default interface Project {
+  id: number
   headerImage: string
   projectTitle: string
+  slug: string
   company: string
   role: string
   date: string

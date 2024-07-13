@@ -8,18 +8,22 @@ interface ProjectsProps {
 }
 
 const Projects: React.FC<ProjectsProps> = () => {
-  const projects: Project[] = caseStudyData as Project[]
+  const projects = caseStudyData as Project[]
   return (
     <>
-      <div className="mx-auto px-8 py-10">
-        <div className="grid grid-cols-1 justify-items-center gap-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 lg:gap-3">
-          <div className="flex items-center justify-center">
-            {projects.map((project) => (
-              <Link to={`/projects/${project.slug}`} key={project.id}>
+      <div className="flex justify-center px-4 py-8">
+        <div className="2xl:max-w-8xl grid w-full max-w-full grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:max-w-7xl xl:max-w-fit">
+          {projects.map((project) => (
+            <Link
+              to={`/projects/${project.slug}`}
+              key={project.id}
+              className="block"
+            >
+              <div className="aspect-w-16 aspect-h-9 relative overflow-hidden">
                 <GridItem project={project} />
-              </Link>
-            ))}
-          </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </>

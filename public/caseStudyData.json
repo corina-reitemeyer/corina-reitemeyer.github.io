@@ -4,8 +4,8 @@
     "headerImage": "/images/portfolio/grow-grub.png",
     "projectTitle": "Grow Grub",
     "slug": "grow-grub",
-    "company": "Company A",
-    "role": "Role A",
+    "company": "Dev Academy",
+    "role": "Full Stack Developer (Student)",
     "date": "2024-01-01",
     "overview": "Overview of Project One",
     "objectiveGoals": "Goals of Project One",
@@ -46,11 +46,190 @@
 
   {
     "id": 2,
+    "headerImage": "/images/portfolio/trolltollcalculator.png",
+    "projectTitle": "Troll Toll Calculator",
+    "slug": "troll-toll-calculator",
+    "company": "Dev Academy",
+    "role": "Full Stack Developer (Student)",
+    "date": "2024-01-01",
+    "overview": "Overview of Project One",
+    "objectiveGoals": "Goals of Project One",
+    "background": "Background of Project One",
+    "designProcess": {
+      "research": "Research details",
+      "definingProblem": "Problem definition",
+      "ideation": "Ideation details",
+      "prototyping": "Prototyping details",
+      "feedback": "Feedback details"
+    },
+    "softwareDevelopment": {
+      "techStack": "Tech stack details",
+      "architecture": "Architecture details",
+      "developmentProcess": "Development process details",
+      "integration": "Integration details"
+    },
+    "solutionImplementation": {
+      "designDecisions": "Design decisions",
+      "codingProcesses": "Coding processes",
+      "accessibilityUsability": "Accessibility and usability",
+      "testing": "Testing details",
+      "deployment": "Deployment details",
+      "challengesFaced": "Challenges faced"
+    },
+    "lessonsLearned": {
+      "designInsights": "Design insights",
+      "technicalInsights": "Technical insights",
+      "improvements": "Improvements"
+    },
+    "keyTakeaways": {
+      "summary": "Summary of key takeaways",
+      "demonstrationSkills": "Skills demonstrated"
+    },
+    "githubLink": "http://github.com",
+    "deployedSiteLink": "http://example.com"
+  },
+
+  {
+    "id": 3,
     "headerImage": "/images/portfolio/ow-templates.png",
-    "projectTitle": "Project Two",
+    "projectTitle": "OW Templates",
     "slug": "ow-templates",
-    "company": "Company A",
-    "role": "Role A",
+    "company": "Optimal Workshop",
+    "role": "Product Designer",
+    "date": "2024-01-01",
+    "overview": "Overview of Project One",
+    "objectiveGoals": "Goals of Project One",
+    "background": "Background of Project One",
+    "designProcess": {
+      "research": "Research details",
+      "definingProblem": "Problem definition",
+      "ideation": "Ideation details",
+      "prototyping": "Prototyping details",
+      "feedback": "Feedback details"
+    },
+    "softwareDevelopment": {
+      "techStack": "Tech stack details",
+      "architecture": "Architecture details",
+      "developmentProcess": "Development process details",
+      "integration": "Integration details"
+    },
+    "solutionImplementation": {
+      "designDecisions": "Design decisions",
+      "codingProcesses": "Coding processes",
+      "accessibilityUsability": "Accessibility and usability",
+      "testing": "Testing details",
+      "deployment": "Deployment details",
+      "challengesFaced": "Challenges faced"
+    },
+    "lessonsLearned": {
+      "designInsights": "Design insights",
+      "technicalInsights": "Technical insights",
+      "improvements": "Improvements"
+    },
+    "keyTakeaways": {
+      "summary": "Summary of key takeaways",
+      "demonstrationSkills": "Skills demonstrated"
+    },
+    "githubLink": "http://github.com",
+    "deployedSiteLink": "http://example.com"
+  },
+  {
+    "id": 4,
+    "headerImage": "/images/portfolio/MoE-Design-System-Hero.png",
+    "projectTitle": "Ministry of Education Design System",
+    "slug": "moe-design-system",
+    "company": "Ministry of Education (New Zealand)",
+    "role": "Senior UX/UI Designer",
+    "date": "2024-01-01",
+    "overview": "Overview of Project One",
+    "objectiveGoals": "Goals of Project One",
+    "background": "Background of Project One",
+    "designProcess": {
+      "research": "Research details",
+      "definingProblem": "Problem definition",
+      "ideation": "Ideation details",
+      "prototyping": "Prototyping details",
+      "feedback": "Feedback details"
+    },
+    "softwareDevelopment": {
+      "techStack": "Tech stack details",
+      "architecture": "Architecture details",
+      "developmentProcess": "Development process details",
+      "integration": "Integration details"
+    },
+    "solutionImplementation": {
+      "designDecisions": "Design decisions",
+      "codingProcesses": "Coding processes",
+      "accessibilityUsability": "Accessibility and usability",
+      "testing": "Testing details",
+      "deployment": "Deployment details",
+      "challengesFaced": "Challenges faced"
+    },
+    "lessonsLearned": {
+      "designInsights": "Design insights",
+      "technicalInsights": "Technical insights",
+      "improvements": "Improvements"
+    },
+    "keyTakeaways": {
+      "summary": "Summary of key takeaways",
+      "demonstrationSkills": "Skills demonstrated"
+    },
+    "githubLink": "http://github.com",
+    "deployedSiteLink": "http://example.com"
+  },
+
+  {
+    "id": 5,
+    "headerImage": "/images/portfolio/NCEA - HERO.png",
+    "projectTitle": "Ministry of Education NCEA Website",
+    "slug": "moe-ncea-website",
+    "company": "Ministry of Education (New Zealand)",
+    "role": "Senior UX/UI Designer",
+    "date": "2024-01-01",
+    "overview": "Overview of Project One",
+    "objectiveGoals": "Goals of Project One",
+    "background": "Background of Project One",
+    "designProcess": {
+      "research": "Research details",
+      "definingProblem": "Problem definition",
+      "ideation": "Ideation details",
+      "prototyping": "Prototyping details",
+      "feedback": "Feedback details"
+    },
+    "softwareDevelopment": {
+      "techStack": "Tech stack details",
+      "architecture": "Architecture details",
+      "developmentProcess": "Development process details",
+      "integration": "Integration details"
+    },
+    "solutionImplementation": {
+      "designDecisions": "Design decisions",
+      "codingProcesses": "Coding processes",
+      "accessibilityUsability": "Accessibility and usability",
+      "testing": "Testing details",
+      "deployment": "Deployment details",
+      "challengesFaced": "Challenges faced"
+    },
+    "lessonsLearned": {
+      "designInsights": "Design insights",
+      "technicalInsights": "Technical insights",
+      "improvements": "Improvements"
+    },
+    "keyTakeaways": {
+      "summary": "Summary of key takeaways",
+      "demonstrationSkills": "Skills demonstrated"
+    },
+    "githubLink": "http://github.com",
+    "deployedSiteLink": "http://example.com"
+  },
+
+  {
+    "id": 6,
+    "headerImage": "/images/portfolio/Infinite_badge.png",
+    "projectTitle": "Infinite - VR & Website",
+    "slug": "massey-infinite",
+    "company": "Massey University - Honours Project",
+    "role": "Design Student",
     "date": "2024-01-01",
     "overview": "Overview of Project One",
     "objectiveGoals": "Goals of Project One",
@@ -88,4 +267,5 @@
     "githubLink": "http://github.com",
     "deployedSiteLink": "http://example.com"
   }
+
 ]

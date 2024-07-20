@@ -2,7 +2,7 @@ const About = () => {
   return (
     <>
       <div className="flex min-h-screen flex-col items-center justify-center">
-        <div className="max-w-3xl px-4">
+        <div className="max-w-3xl px-4 py-12">
           <img
             src="/images/corina_about.png"
             alt="Smiling woman surrounded by two yellow circles"

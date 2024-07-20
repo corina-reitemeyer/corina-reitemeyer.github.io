@@ -23,9 +23,9 @@ export default function Header() {
           </li>
           <li>
             <a
-              href="/path-to-your-cv.pdf" // Replace with the actual path to my CV file
+              href="/files/Corina_Rei_CV_JUL2024.pdf" // Replace with the actual path to my CV file
               className="relative inline-block font-medium text-gray-600 hover:text-black"
-              download="Corina_Rei_CV_2024.pdf"
+              download="Corina_Rei_CV_JUL2024.pdf"
             >
               Resume
             </a>

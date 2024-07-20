@@ -1,6 +1,7 @@
 // models/projectdata.ts
 export default interface Project {
   id: number
+  projectImage: string
   headerImage: string
   projectTitle: string
   slug: string
@@ -10,6 +11,7 @@ export default interface Project {
   overview: string
   objectiveGoals: string
   background: string
+  backgroundImages?: string
   designProcess: {
     research: string
     definingProblem: string
@@ -17,18 +19,20 @@ export default interface Project {
     prototyping: string
     feedback?: string // Optional property
   }
+  designProcessImages?: string
   softwareDevelopment: {
     techStack: string
     architecture: string
     developmentProcess: string
     integration: string
   }
+  softwareDevelopmentImages?: string
   solutionImplementation: {
     designDecisions: string
     codingProcesses: string
     accessibilityUsability: string
-    testing: string
-    deployment: string
+    testing?: string
+    deployment?: string
     challengesFaced: string
   }
   lessonsLearned: {
@@ -40,6 +44,7 @@ export default interface Project {
     summary: string
     demonstrationSkills: string
   }
+  finalImage?: string
   githubLink: string
   deployedSiteLink: string
 }

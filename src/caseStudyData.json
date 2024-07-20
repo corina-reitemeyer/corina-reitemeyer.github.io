@@ -2,7 +2,7 @@
   {
     "id": 1,
     "projectImage": "/images/portfolio/grow-grub.png",
-    "headerImage": "/images/portfolio/grow-grub.png",
+    "headerImage": "https://placehold.co/1920x600",
     "projectTitle": "Grow-Grub",
     "slug": "grow-grub",
     "company": "Dev Academy",
@@ -62,7 +62,8 @@
 
   {
     "id": 2,
-    "headerImage": "/images/portfolio/trolltollcalculator.png",
+    "projectImage": "/images/portfolio/trolltollcalculator.png",
+    "headerImage": "https://placehold.co/1920x600",
     "projectTitle": "Troll Toll Calculator",
     "slug": "troll-toll-calculator",
     "company": "Dev Academy",
@@ -107,7 +108,8 @@
 
   {
     "id": 3,
-    "headerImage": "/images/portfolio/ow-templates.png",
+    "projectImage": "/images/portfolio/ow-templates.png",
+    "headerImage": "https://placehold.co/1920x600",
     "projectTitle": "OW Templates",
     "slug": "ow-templates",
     "company": "Optimal Workshop",
@@ -151,7 +153,8 @@
   },
   {
     "id": 4,
-    "headerImage": "/images/portfolio/MoE-Design-System-Hero.png",
+    "projectImage": "/images/portfolio/MoE-Design-System-Hero.png",
+    "headerImage": "https://placehold.co/1920x600",
     "projectTitle": "Ministry of Education Design System",
     "slug": "moe-design-system",
     "company": "Ministry of Education (New Zealand)",
@@ -196,7 +199,8 @@
 
   {
     "id": 5,
-    "headerImage": "/images/portfolio/NCEA - HERO.png",
+    "projectImage": "/images/portfolio/NCEA - HERO.png",
+    "headerImage": "https://placehold.co/1920x600",
     "projectTitle": "Ministry of Education NCEA Website",
     "slug": "moe-ncea-website",
     "company": "Ministry of Education (New Zealand)",
@@ -241,7 +245,8 @@
 
   {
     "id": 6,
-    "headerImage": "/images/portfolio/Infinite_badge.png",
+    "projectImage": "/images/portfolio/Infinite_badge.png",
+    "headerImage": "https://placehold.co/1920x600",
     "projectTitle": "Infinite - VR & Website",
     "slug": "massey-infinite",
     "company": "Massey University - Honours Project",

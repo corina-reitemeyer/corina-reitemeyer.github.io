@@ -14,9 +14,9 @@ const CaseStudy: React.FC = () => {
 
   return (
     <div className="case-study">
-      <img src={project.projectImage} alt={project.projectTitle} />
-      <h1>{project.projectTitle}</h1>
       <img src={project.headerImage} alt={project.projectTitle} />
+      <h1 className="text-5xl font-bold">{project.projectTitle}</h1>
+      <img src={project.projectImage} alt={project.projectTitle} />
       <div>
         <p>{project.overview}</p>
         <h3>Goals</h3>

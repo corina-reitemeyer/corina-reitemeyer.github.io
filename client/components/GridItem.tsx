@@ -8,7 +8,7 @@ const GridItem: React.FC<GridItemProps> = ({ project }) => {
   return (
     <div className="group relative overflow-hidden">
       <img
-        src={project.headerImage}
+        src={project.projectImage}
         alt={project.projectTitle}
         className="h-full w-full transform object-cover transition-transform duration-300 group-hover:scale-105 md:group-hover:scale-110"
       />

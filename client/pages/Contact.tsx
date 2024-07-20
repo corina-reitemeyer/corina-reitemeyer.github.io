@@ -1,66 +1,35 @@
-import { useState } from 'react'
-
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  })
-
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }))
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setFormData({
-      name: '',
-      email: '',
-      message: '',
-    })
-  }
-
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input
-            type="text"
-            name="value"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <br />
-        <label>
-          Email:
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Message:
-          <textarea
-            name="email"
-            value={formData.message}
-            onChange={handleChange}
-            rows={4}
-            required
-          />
-        </label>
-        <br />
-        <button type="submit">Submit</button>
-      </form>
+      <div className="flex min-h-fit flex-col items-center justify-center">
+        <div className="max-w-3xl px-4">
+          <h2 className="py-4 text-3xl font-bold">Get in touch</h2>
+          <p className="paragraph">
+            Have an idea you want to talk about? Let&apos;s have a chat!
+          </p>
+
+          <p>
+            Send me an{' '}
+            <a
+              href="mailto:corina@corina.org"
+              className="text-amber-600 hover:underline"
+            >
+              email
+            </a>{' '}
+            or connect with me on{' '}
+            <a
+              href="https://www.linkedin.com/in/corinareitemeyer"
+              target="_blank"
+              className="text-amber-600 hover:underline"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+            . Whether it&apos;s about a project, a job opportunity, or would
+            like some design mentoring (NZ only) - I&apos;m here to help 😊
+          </p>
+        </div>
+      </div>
     </>
   )
 }

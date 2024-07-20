@@ -1,5 +1,5 @@
 import GridItem from '../components/GridItem'
-import caseStudyData from '../../public/caseStudyData.json'
+import caseStudyData from '../../src/caseStudyData.json'
 import { Link } from 'react-router-dom'
 import Project from '../../models/projectdata.ts'
 

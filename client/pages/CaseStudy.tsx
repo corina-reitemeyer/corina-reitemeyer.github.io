@@ -1,4 +1,4 @@
-import caseStudyData from '../../public/caseStudyData.json'
+import caseStudyData from '../../src/caseStudyData.json'
 import { useParams } from 'react-router-dom'
 import Project from '../../models/projectdata.ts'
 

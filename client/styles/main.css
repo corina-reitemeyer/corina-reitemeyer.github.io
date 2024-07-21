@@ -8,7 +8,11 @@
 }
 
 .subheading {
-  @apply py-4 text-sm uppercase text-gray-500;
+  @apply mb-3 mt-10 text-base uppercase text-gray-500;
+}
+
+.heading2 {
+  @apply mb-4 text-3xl font-bold;
 }
 
 /** MANUAL CSS **/

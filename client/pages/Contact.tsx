@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <>
-      <div className="flex h-screen flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center py-48">
         <div className="w-full max-w-3xl px-4">
           <div className="mb-6 flex w-full items-center justify-center">
             <img src="/images/sunflower.png" alt="" className="max-w-xs" />

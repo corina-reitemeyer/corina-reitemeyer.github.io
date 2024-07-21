@@ -13,9 +13,9 @@ const CaseStudy: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className="leading-8">
       {/* Banner Section (Image only) */}
-      <div className="relative flex items-center justify-center">
+      <div className="relative mx-auto flex items-center justify-center">
         <img
           src={project.headerImage}
           alt={project.projectTitle}
@@ -24,43 +24,67 @@ const CaseStudy: React.FC = () => {
       </div>
 
       {/* Project Title */}
-      <div className="mx-auto mt-20 max-w-7xl px-4 py-8">
+      <div className="mx-auto mt-20 max-w-screen-lg px-10 py-8">
+        {' '}
+        {/* Adjusted max-w-screen-lg */}
         <h1 className="text-5xl font-medium">{project.projectTitle}</h1>
       </div>
 
-      {/* Overview and Role Section */}
-      <div className="mx-auto max-w-7xl px-4 py-12">
+      {/* Overview and Goals Section */}
+      <div className="mx-auto mb-16 max-w-screen-lg px-10 py-12">
+        {' '}
+        {/* Adjusted max-w-screen-lg */}
         <div className="flex flex-col gap-10 md:flex-row">
           {/* Overview */}
           <div className="md:w-1/2 md:pr-8">
             <h2 className="subheading">Overview</h2>
             <p className="mb-4">{project.overview}</p>
             <h2 className="subheading">Goals</h2>
-            <p className="mb-4">{project.objectiveGoals}</p>
+            <ul className="list-disc pl-4">
+              {project.objectiveGoals.map((goal, index) => (
+                <li key={index} className="mb-2">
+                  {goal}
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Role and Date */}
-          <div className="mt-8 md:mt-0 md:w-1/2">
+          <div className="mt-8 px-10 md:mt-0 md:w-1/2">
             <h2 className="subheading">Role</h2>
             <p className="mb-4">{project.role}</p>
             <h2 className="subheading">Date</h2>
             <p className="mb-4">{project.date}</p>
+            <a
+              href={project.githubLink}
+              className="mb-2 text-blue-600 hover:underline"
+            >
+              Github Link
+            </a>
+            <a
+              href={project.deployedSiteLink}
+              className="text-blue-600 hover:underline"
+            >
+              Host Link
+            </a>
           </div>
         </div>
       </div>
 
       {/* Background Section */}
-      <div className="bg-amber-50">
-        <div className="mx-auto max-w-7xl px-4 py-12">
-          <h2 className="mb-4 text-2xl font-bold">Background</h2>
+      <div className="bg-amber-50 py-32">
+        <div className="mx-auto max-w-screen-lg px-10">
+          {' '}
+          {/* Adjusted max-w-screen-lg */}
+          <h2 className="heading2">Background</h2>
           <p>{project.background}</p>
           {/* Add more content related to background here */}
         </div>
       </div>
 
       {/* Design Process Section */}
-      <div className="mx-auto max-w-7xl px-4 py-12">
-        <h3 className="mb-4 text-2xl font-bold">Design Process</h3>
+      <div className="mx-auto mt-28 max-w-screen-lg px-10">
+        <h3 className="heading2">Design Process</h3>
 
         {/* Research */}
         <div>
@@ -95,18 +119,21 @@ const CaseStudy: React.FC = () => {
         {/* Design Process Images (if any) */}
         {project.designProcessImages && (
           <div>
-            <img
-              src={project.designProcessImages}
-              alt="Design Process Images"
-              className="h-auto w-full"
-            />
+            {project.designProcessImages.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Design Process ${index}`}
+                className="h-auto w-full"
+              />
+            ))}
           </div>
         )}
       </div>
 
       {/* Software Development Section */}
-      <div className="mx-auto max-w-7xl px-4 py-12">
-        <h3 className="mb-4 text-2xl font-bold">Software Development</h3>
+      <div className="mx-auto mt-28 max-w-screen-lg px-10">
+        <h3 className="heading2">Software Development</h3>
 
         {/* Tech Stack */}
         <div>
@@ -135,18 +162,21 @@ const CaseStudy: React.FC = () => {
         {/* Software Development Images (if any) */}
         {project.softwareDevelopmentImages && (
           <div>
-            <img
-              src={project.softwareDevelopmentImages}
-              alt="Software Development Images"
-              className="h-auto w-full"
-            />
+            {project.softwareDevelopmentImages.map((images, index) => (
+              <img
+                key={index}
+                src={images}
+                alt="Software Development Images"
+                className="h-auto w-full"
+              />
+            ))}
           </div>
         )}
       </div>
 
       {/* Solution Implementation Section */}
-      <div className="mx-auto max-w-7xl px-4 py-12">
-        <h3 className="mb-4 text-2xl font-bold">Solution Implementation</h3>
+      <div className="mx-auto mt-28 max-w-screen-lg px-10">
+        <h3 className="heading2">Solution Implementation</h3>
 
         {/* Design Decisions */}
         <div>
@@ -186,8 +216,8 @@ const CaseStudy: React.FC = () => {
       </div>
 
       {/* Lessons Learned Section */}
-      <div className="mx-auto max-w-7xl px-4 py-12">
-        <h3 className="mb-4 text-2xl font-bold">Lessons I Learned</h3>
+      <div className="mx-auto mt-28 max-w-screen-lg px-10">
+        <h3 className="heading2">Lessons I Learned</h3>
 
         {/* Design Insights */}
         <div>
@@ -209,10 +239,10 @@ const CaseStudy: React.FC = () => {
       </div>
 
       {/* Key Takeaways Section */}
-      <div className="mx-auto max-w-7xl px-4 py-12">
-        <h3 className="mb-4 text-2xl font-bold">Key Takeaways</h3>
+      <div className="mx-auto mt-28 max-w-screen-lg px-10">
+        <h3 className="heading2">Key Takeaways</h3>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
           {/* Summary */}
           <div>
             <h4 className="mb-2 text-xl font-bold">Summary</h4>
@@ -228,7 +258,7 @@ const CaseStudy: React.FC = () => {
       </div>
 
       {/* Final Image and Links Section */}
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-center px-4 py-12">
+      <div className="mx-auto mb-28 flex max-w-screen-lg items-center justify-center px-10">
         <img
           src={project.finalImage}
           alt="Completed project"

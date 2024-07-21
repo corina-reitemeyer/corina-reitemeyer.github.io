@@ -9,9 +9,9 @@ export default interface Project {
   role: string
   date: string
   overview: string
-  objectiveGoals: string
+  objectiveGoals: string[]
   background: string
-  backgroundImages?: string
+  backgroundImages?: string[]
   designProcess: {
     research: string
     definingProblem: string
@@ -19,14 +19,14 @@ export default interface Project {
     prototyping: string
     feedback?: string // Optional property
   }
-  designProcessImages?: string
+  designProcessImages?: string[]
   softwareDevelopment: {
     techStack: string
     architecture: string
     developmentProcess: string
     integration: string
   }
-  softwareDevelopmentImages?: string
+  softwareDevelopmentImages?: string[]
   solutionImplementation: {
     designDecisions: string
     codingProcesses: string

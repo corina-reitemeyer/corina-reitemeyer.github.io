@@ -2,12 +2,12 @@
   {
     "id": 1,
     "projectImage": "/images/portfolio/grow-grub.png",
-    "headerImage": "https://placehold.co/1920x600",
+    "headerImage": "https://placehold.co/1280x600",
     "projectTitle": "Grow-Grub",
     "slug": "grow-grub",
     "company": "Dev Academy",
     "role": "Full Stack Developer (Student)",
-    "date": "2024-07-14",
+    "date": "June - July 2024",
     "overview": "Grow-Grub is a comprehensive app designed to help gardening enthusiasts effortlessly plan, track, and manage their vegetable gardens, catering to both beginners and seasoned gardeners.",
     "objectiveGoals": [
       "Simplify garden management by integrating planning, tracking, and care into a single platform.",

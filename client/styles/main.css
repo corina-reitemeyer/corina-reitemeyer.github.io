@@ -7,6 +7,10 @@
   @apply mb-6 text-left text-lg;
 }
 
+.subheading {
+  @apply py-4 text-sm uppercase text-gray-500;
+}
+
 /** MANUAL CSS **/
 
 .profile-image {

@@ -1,8 +1,11 @@
 const Contact = () => {
   return (
     <>
-      <div className="flex min-h-fit flex-col items-center justify-center">
-        <div className="max-w-3xl px-4">
+      <div className="flex h-screen flex-col items-center justify-center">
+        <div className="w-full max-w-3xl px-4">
+          <div className="mb-6 flex w-full items-center justify-center">
+            <img src="/images/sunflower.png" alt="" className="max-w-xs" />
+          </div>
           <h2 className="py-4 text-3xl font-bold">Get in touch</h2>
           <p className="paragraph">
             Have an idea you want to talk about? Let&apos;s have a chat!

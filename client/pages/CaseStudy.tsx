@@ -1,6 +1,7 @@
 import caseStudyData from '../../src/caseStudyData.json'
 import { useParams } from 'react-router-dom'
 import Project from '../../models/projectdata.ts'
+import Button from '../components/Button.tsx'
 
 const projects: Project[] = caseStudyData as Project[]
 
@@ -44,6 +45,11 @@ const CaseStudy: React.FC = () => {
                 </li>
               ))}
             </ul>
+            <Button
+              url={project.githubLink}
+              label={'Github repository'}
+              className={`primary_button`}
+            />
           </div>
 
           {/* Role and Date */}
@@ -52,18 +58,6 @@ const CaseStudy: React.FC = () => {
             <p className="mb-4">{project.role}</p>
             <h2 className="subheading">Date</h2>
             <p className="mb-4">{project.date}</p>
-            <a
-              href={project.githubLink}
-              className="mb-2 mr-6 text-blue-600 hover:underline"
-            >
-              Github Link
-            </a>
-            <a
-              href={project.deployedSiteLink}
-              className="text-blue-600 hover:underline"
-            >
-              Host Link
-            </a>
           </div>
         </div>
       </div>

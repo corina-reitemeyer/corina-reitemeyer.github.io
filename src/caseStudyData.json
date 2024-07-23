@@ -2,7 +2,7 @@
   {
     "id": 1,
     "projectImage": "/images/portfolio/grow-grub.png",
-    "headerImage": "/images/banner-images/da-grow-grub.png",
+    "headerImage": "/images/banner-images/grow-grub.png",
     "projectTitle": "Grow-Grub",
     "slug": "grow-grub",
     "company": "Dev Academy",
@@ -16,9 +16,8 @@
       "Offer personalized advice and seasonal tips to help users make informed gardening decisions."
     ],
     "background": "Grow-Grub was developed to address the challenges of vegetable gardening by providing an integrated platform that simplifies garden planning, tracking, and management. The app was conceived to meet the needs of the growing number of individuals interested in sustainable living and home gardening.",
-    "backgroundImages": [
-      "/images/projects/grow-grub-background1.png"
-    ],
+    "backgroundImages":
+      "/images/projects/grow-grub-background.png",
     "designProcess": {
       "research": "Conducted extensive market research and user interviews to understand the needs and preferences of vegetable gardeners. Analyzed existing solutions to identify gaps and opportunities.",
       "definingProblem": "Identified the lack of comprehensive, user-friendly tools for garden planning and management as a key problem. The goal was to create an app that integrates these functions into a single platform.",
@@ -54,15 +53,14 @@
       "demonstrationSkills": "Demonstrated skills in user-centered design, cross-platform development, and agile project management."
     },
     "finalImage": "/images/projects/grow-grub-background2.png",
-    "githubLink": "http://github.com/grow-grub",
-    "deployedSiteLink": "http://growgrub.com"
+    "githubLink": "https://github.com/corina-reitemeyer/Grow-Grub"
   }
   ,
 
   {
     "id": 2,
     "projectImage": "/images/portfolio/trolltollcalculator.png",
-    "headerImage": "/images/banner-images/da-troll-patrol.png",
+    "headerImage": "/images/banner-images/troll-toll.png",
     "projectTitle": "Troll Toll Calculator",
     "slug": "troll-toll-calculator",
     "company": "Dev Academy",
@@ -106,8 +104,7 @@
       "summary": "Summary of key takeaways",
       "demonstrationSkills": "Skills demonstrated"
     },
-    "githubLink": "http://github.com",
-    "deployedSiteLink": "http://example.com"
+    "githubLink": "https://github.com/corina-reitemeyer/troll-toll-calculator"
   },
 
   {
@@ -156,9 +153,7 @@
     "keyTakeaways": {
       "summary": "Summary of key takeaways",
       "demonstrationSkills": "Skills demonstrated"
-    },
-    "githubLink": "http://github.com",
-    "deployedSiteLink": "http://example.com"
+    }
   },
   {
     "id": 4,
@@ -168,7 +163,7 @@
     "slug": "moe-design-system",
     "company": "Ministry of Education (New Zealand)",
     "role": "Senior UX/UI Designer",
-    "date": "2024-01-01",
+    "date": "2020 - 2022",
     "overview": "Overview of Project One",
     "objectiveGoals": [
       "Simplify garden management by integrating planning, tracking, and care into a single platform.",
@@ -206,20 +201,18 @@
     "keyTakeaways": {
       "summary": "Summary of key takeaways",
       "demonstrationSkills": "Skills demonstrated"
-    },
-    "githubLink": "http://github.com",
-    "deployedSiteLink": "http://example.com"
+    }
   },
 
   {
     "id": 5,
     "projectImage": "/images/portfolio/NCEA - HERO.png",
-    "headerImage": "/images/banner-images/moe-ncea-banner.png",
+    "headerImage": "/images/banner-images/moe-ncea.png",
     "projectTitle": "Ministry of Education NCEA Website",
     "slug": "moe-ncea-website",
     "company": "Ministry of Education (New Zealand)",
     "role": "Senior UX/UI Designer",
-    "date": "2024-01-01",
+    "date": "2019 - 2021",
     "overview": "Overview of Project One",
     "objectiveGoals": [
       "Simplify garden management by integrating planning, tracking, and care into a single platform.",
@@ -257,15 +250,13 @@
     "keyTakeaways": {
       "summary": "Summary of key takeaways",
       "demonstrationSkills": "Skills demonstrated"
-    },
-    "githubLink": "http://github.com",
-    "deployedSiteLink": "http://example.com"
+    }
   },
 
   {
     "id": 6,
     "projectImage": "/images/portfolio/Infinite_badge.png",
-    "headerImage": "/images/banner-images/Infinite.png",
+    "headerImage": "/images/banner-images/infinite.png",
     "projectTitle": "Infinite",
     "slug": "massey-infinite",
     "company": "Massey University",
@@ -309,8 +300,6 @@
       "summary": "Summary of key takeaways",
       "demonstrationSkills": "Skills demonstrated"
     },
-    "githubLink": "http://github.com",
-    "deployedSiteLink": "http://example.com",
     "bestAwardsSiteLink": "https://bestawards.co.nz/digital/student-digital/massey-university-college-of-creative-arts/infinite/"
   }
 

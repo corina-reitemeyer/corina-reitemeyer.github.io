@@ -11,7 +11,7 @@ export default interface Project {
   overview: string
   objectiveGoals: string[]
   background: string
-  backgroundImages?: string[]
+  backgroundImages?: string
   designProcess: {
     research: string
     definingProblem: string

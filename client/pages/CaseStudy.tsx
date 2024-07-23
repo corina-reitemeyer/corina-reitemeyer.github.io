@@ -44,11 +44,6 @@ const CaseStudy: React.FC = () => {
                 </li>
               ))}
             </ul>
-            <Button
-              url={project.githubLink}
-              label={'Github repository'}
-              className={`primary_button`}
-            />
           </div>
 
           {/* Role and Date */}
@@ -59,6 +54,37 @@ const CaseStudy: React.FC = () => {
             <p className="mb-4">{project.company}</p>
             <h2 className="subheading">Date</h2>
             <p className="mb-4">{project.date}</p>
+            {(project.githubLink ||
+              project.deployedSiteLink ||
+              project.bestAwardsSiteLink) && (
+              <div>
+                <h2 className="subheading">Links</h2>
+
+                {project.githubLink && (
+                  <Button
+                    url={project.githubLink}
+                    label={'Github repository'}
+                    className={`primary_button`}
+                  />
+                )}
+
+                {project.deployedSiteLink && (
+                  <Button
+                    url={project.deployedSiteLink}
+                    label={'Deployed website'}
+                    className={`primary_button`}
+                  />
+                )}
+
+                {project.bestAwardsSiteLink && (
+                  <Button
+                    url={project.bestAwardsSiteLink}
+                    label={'Best Awards website'}
+                    className={`primary_button`}
+                  />
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -71,6 +97,11 @@ const CaseStudy: React.FC = () => {
           <h2 className="heading2">Background</h2>
           <p>{project.background}</p>
           {/* Add more content related to background here */}
+        </div>
+        <div>
+          {project.backgroundImages && (
+            <img src={project.backgroundImages} alt="" />
+          )}
         </div>
       </div>
 

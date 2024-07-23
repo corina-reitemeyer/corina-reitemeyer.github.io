@@ -2,7 +2,7 @@
   {
     "id": 1,
     "projectImage": "/images/portfolio/grow-grub.png",
-    "headerImage": "https://placehold.co/1280x600",
+    "headerImage": "https://placehold.co/1920x900",
     "projectTitle": "Grow-Grub",
     "slug": "grow-grub",
     "company": "Dev Academy",
@@ -70,7 +70,12 @@
     "role": "Full Stack Developer (Student)",
     "date": "2024-01-01",
     "overview": "Overview of Project One",
-    "objectiveGoals": "Goals of Project One",
+    "objectiveGoals": [
+      "Simplify garden management by integrating planning, tracking, and care into a single platform.",
+      "Enhance gardening success rates with features such as automated care reminders and progress tracking.",
+      "Provide a user-friendly experience tailored to both novice and experienced gardeners.",
+      "Offer personalized advice and seasonal tips to help users make informed gardening decisions."
+    ],
     "background": "Background of Project One",
     "designProcess": {
       "research": "Research details",
@@ -116,7 +121,12 @@
     "role": "Product Designer",
     "date": "2024-01-01",
     "overview": "Overview of Project One",
-    "objectiveGoals": "Goals of Project One",
+    "objectiveGoals": [
+      "Simplify garden management by integrating planning, tracking, and care into a single platform.",
+      "Enhance gardening success rates with features such as automated care reminders and progress tracking.",
+      "Provide a user-friendly experience tailored to both novice and experienced gardeners.",
+      "Offer personalized advice and seasonal tips to help users make informed gardening decisions."
+    ],
     "background": "Background of Project One",
     "designProcess": {
       "research": "Research details",
@@ -161,7 +171,12 @@
     "role": "Senior UX/UI Designer",
     "date": "2024-01-01",
     "overview": "Overview of Project One",
-    "objectiveGoals": "Goals of Project One",
+    "objectiveGoals": [
+      "Simplify garden management by integrating planning, tracking, and care into a single platform.",
+      "Enhance gardening success rates with features such as automated care reminders and progress tracking.",
+      "Provide a user-friendly experience tailored to both novice and experienced gardeners.",
+      "Offer personalized advice and seasonal tips to help users make informed gardening decisions."
+    ],
     "background": "Background of Project One",
     "designProcess": {
       "research": "Research details",
@@ -207,7 +222,12 @@
     "role": "Senior UX/UI Designer",
     "date": "2024-01-01",
     "overview": "Overview of Project One",
-    "objectiveGoals": "Goals of Project One",
+    "objectiveGoals": [
+      "Simplify garden management by integrating planning, tracking, and care into a single platform.",
+      "Enhance gardening success rates with features such as automated care reminders and progress tracking.",
+      "Provide a user-friendly experience tailored to both novice and experienced gardeners.",
+      "Offer personalized advice and seasonal tips to help users make informed gardening decisions."
+    ],
     "background": "Background of Project One",
     "designProcess": {
       "research": "Research details",
@@ -253,7 +273,12 @@
     "role": "Design Student",
     "date": "2024-01-01",
     "overview": "Overview of Project One",
-    "objectiveGoals": "Goals of Project One",
+    "objectiveGoals": [
+      "Simplify garden management by integrating planning, tracking, and care into a single platform.",
+      "Enhance gardening success rates with features such as automated care reminders and progress tracking.",
+      "Provide a user-friendly experience tailored to both novice and experienced gardeners.",
+      "Offer personalized advice and seasonal tips to help users make informed gardening decisions."
+    ],
     "background": "Background of Project One",
     "designProcess": {
       "research": "Research details",

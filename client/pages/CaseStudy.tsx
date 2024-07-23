@@ -14,26 +14,23 @@ const CaseStudy: React.FC = () => {
 
   return (
     <div className="leading-8">
-      {/* Banner Section (Image only) */}
-      <div className="relative mx-auto flex items-center justify-center">
+      <div className="relative flex items-center justify-center">
         <img
           src={project.headerImage}
           alt={project.projectTitle}
-          className="h-auto max-w-full"
+          className="h-auto w-full object-cover lg:w-full xl:max-w-screen-2xl"
         />
       </div>
 
       {/* Project Title */}
       <div className="mx-auto mt-20 max-w-screen-lg px-10 py-8">
         {' '}
-        {/* Adjusted max-w-screen-lg */}
         <h1 className="text-5xl font-medium">{project.projectTitle}</h1>
       </div>
 
       {/* Overview and Goals Section */}
       <div className="mx-auto mb-16 max-w-screen-lg px-10 py-12">
         {' '}
-        {/* Adjusted max-w-screen-lg */}
         <div className="flex flex-col gap-10 md:flex-row">
           {/* Overview */}
           <div className="md:w-1/2 md:pr-8">
@@ -57,7 +54,7 @@ const CaseStudy: React.FC = () => {
             <p className="mb-4">{project.date}</p>
             <a
               href={project.githubLink}
-              className="mb-2 text-blue-600 hover:underline"
+              className="mb-2 mr-6 text-blue-600 hover:underline"
             >
               Github Link
             </a>
@@ -242,23 +239,23 @@ const CaseStudy: React.FC = () => {
       <div className="mx-auto mt-28 max-w-screen-lg px-10">
         <h3 className="heading2">Key Takeaways</h3>
 
-        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {/* Summary */}
           <div>
-            <h4 className="mb-2 text-xl font-bold">Summary</h4>
+            <h4 className="subheading">Summary</h4>
             <p>{project.keyTakeaways.summary}</p>
           </div>
 
           {/* Skills Demonstrated */}
           <div>
-            <h4 className="mb-2 text-xl font-bold">Skills Demonstrated</h4>
+            <h4 className="subheading">Skills Demonstrated</h4>
             <p>{project.keyTakeaways.demonstrationSkills}</p>
           </div>
         </div>
       </div>
 
       {/* Final Image and Links Section */}
-      <div className="mx-auto mb-28 flex max-w-screen-lg items-center justify-center px-10">
+      <div className="mx-auto flex max-w-screen-lg items-center justify-center px-10 py-28">
         <img
           src={project.finalImage}
           alt="Completed project"
@@ -266,7 +263,7 @@ const CaseStudy: React.FC = () => {
         />
         <a
           href={project.githubLink}
-          className="mb-2 text-blue-600 hover:underline"
+          className="mb-2 mr-8 text-blue-600 hover:underline"
         >
           Github Link
         </a>

@@ -1,5 +1,5 @@
 interface ButtonProps {
-  url: string
+  url?: string
   label: string
   className: string
 }

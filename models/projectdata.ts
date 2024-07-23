@@ -45,6 +45,7 @@ export default interface Project {
     demonstrationSkills: string
   }
   finalImage?: string
-  githubLink: string
-  deployedSiteLink: string
+  githubLink?: string
+  deployedSiteLink?: string
+  bestAwardsSiteLink?: string
 }

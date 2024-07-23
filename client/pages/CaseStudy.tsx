@@ -29,11 +29,10 @@ const CaseStudy: React.FC = () => {
         <h1 className="text-5xl font-medium">{project.projectTitle}</h1>
       </div>
 
-      {/* Overview and Goals Section */}
+      {/* Overview, Company and Goals Section */}
       <div className="mx-auto mb-16 max-w-screen-lg px-10 py-12">
         {' '}
         <div className="flex flex-col gap-10 md:flex-row">
-          {/* Overview */}
           <div className="md:w-1/2 md:pr-8">
             <h2 className="subheading">Overview</h2>
             <p className="mb-4">{project.overview}</p>
@@ -56,6 +55,8 @@ const CaseStudy: React.FC = () => {
           <div className="mt-8 px-10 md:mt-0 md:w-1/2">
             <h2 className="subheading">Role</h2>
             <p className="mb-4">{project.role}</p>
+            <h2 className="subheading">Company / Client</h2>
+            <p className="mb-4">{project.company}</p>
             <h2 className="subheading">Date</h2>
             <p className="mb-4">{project.date}</p>
           </div>
@@ -255,18 +256,6 @@ const CaseStudy: React.FC = () => {
           alt="Completed project"
           className="mb-8 h-auto w-full"
         />
-        <a
-          href={project.githubLink}
-          className="mb-2 mr-8 text-blue-600 hover:underline"
-        >
-          Github Link
-        </a>
-        <a
-          href={project.deployedSiteLink}
-          className="text-blue-600 hover:underline"
-        >
-          Host Link
-        </a>
       </div>
     </div>
   )

@@ -2,7 +2,7 @@
   {
     "id": 1,
     "projectImage": "/images/portfolio/grow-grub.png",
-    "headerImage": "https://placehold.co/1920x900",
+    "headerImage": "/images/banner-images/da-grow-grub.png",
     "projectTitle": "Grow-Grub",
     "slug": "grow-grub",
     "company": "Dev Academy",
@@ -17,8 +17,7 @@
     ],
     "background": "Grow-Grub was developed to address the challenges of vegetable gardening by providing an integrated platform that simplifies garden planning, tracking, and management. The app was conceived to meet the needs of the growing number of individuals interested in sustainable living and home gardening.",
     "backgroundImages": [
-      "/images/projects/grow-grub-background1.png",
-      "/images/projects/grow-grub-background2.png"
+      "/images/projects/grow-grub-background1.png"
     ],
     "designProcess": {
       "research": "Conducted extensive market research and user interviews to understand the needs and preferences of vegetable gardeners. Analyzed existing solutions to identify gaps and opportunities.",
@@ -63,12 +62,12 @@
   {
     "id": 2,
     "projectImage": "/images/portfolio/trolltollcalculator.png",
-    "headerImage": "https://placehold.co/1920x600",
+    "headerImage": "/images/banner-images/da-troll-patrol.png",
     "projectTitle": "Troll Toll Calculator",
     "slug": "troll-toll-calculator",
     "company": "Dev Academy",
     "role": "Full Stack Developer (Student)",
-    "date": "2024-01-01",
+    "date": "June 2024",
     "overview": "Overview of Project One",
     "objectiveGoals": [
       "Simplify garden management by integrating planning, tracking, and care into a single platform.",
@@ -114,12 +113,12 @@
   {
     "id": 3,
     "projectImage": "/images/portfolio/ow-templates.png",
-    "headerImage": "https://placehold.co/1920x600",
+    "headerImage": "/images/banner-images/ow-templates.png",
     "projectTitle": "OW Templates",
     "slug": "ow-templates",
     "company": "Optimal Workshop",
     "role": "Product Designer",
-    "date": "2024-01-01",
+    "date": "September 2022 - August 2023",
     "overview": "Overview of Project One",
     "objectiveGoals": [
       "Simplify garden management by integrating planning, tracking, and care into a single platform.",
@@ -164,7 +163,7 @@
   {
     "id": 4,
     "projectImage": "/images/portfolio/MoE-Design-System-Hero.png",
-    "headerImage": "https://placehold.co/1920x600",
+    "headerImage": "/images/banner-images/moe-design-system.png",
     "projectTitle": "Ministry of Education Design System",
     "slug": "moe-design-system",
     "company": "Ministry of Education (New Zealand)",
@@ -215,7 +214,7 @@
   {
     "id": 5,
     "projectImage": "/images/portfolio/NCEA - HERO.png",
-    "headerImage": "https://placehold.co/1920x600",
+    "headerImage": "/images/banner-images/moe-ncea-banner.png",
     "projectTitle": "Ministry of Education NCEA Website",
     "slug": "moe-ncea-website",
     "company": "Ministry of Education (New Zealand)",
@@ -266,20 +265,20 @@
   {
     "id": 6,
     "projectImage": "/images/portfolio/Infinite_badge.png",
-    "headerImage": "https://placehold.co/1920x600",
-    "projectTitle": "Infinite - VR & Website",
+    "headerImage": "/images/banner-images/Infinite.png",
+    "projectTitle": "Infinite",
     "slug": "massey-infinite",
-    "company": "Massey University - Honours Project",
-    "role": "Design Student",
-    "date": "2024-01-01",
-    "overview": "Overview of Project One",
+    "company": "Massey University",
+    "role": "Design Student (Honours Project)",
+    "date": "February - November 2017",
+    "overview": "Infinite is a website and VR based experience, which enables users to preserve their memories and prepare them to be experienced in the future.",
     "objectiveGoals": [
       "Simplify garden management by integrating planning, tracking, and care into a single platform.",
       "Enhance gardening success rates with features such as automated care reminders and progress tracking.",
       "Provide a user-friendly experience tailored to both novice and experienced gardeners.",
       "Offer personalized advice and seasonal tips to help users make informed gardening decisions."
     ],
-    "background": "Background of Project One",
+    "background": "It’s a question that this open-ended, speculative project is based on and I have been answering it from an Experience Design perspective. It is an important question, because at the moment many users upload and save assets without asking their emotional and memorial value. It is a 'out of sight out of mind' situation - once that photo or video is on Social media, it stays on there. Whilst in the past a photo album only had so much space to hold for memories - the photos had to be carefully selected.",
     "designProcess": {
       "research": "Research details",
       "definingProblem": "Problem definition",

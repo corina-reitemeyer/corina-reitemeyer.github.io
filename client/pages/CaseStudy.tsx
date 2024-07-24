@@ -92,16 +92,23 @@ const CaseStudy: React.FC = () => {
       {/* Background Section */}
       <div className="bg-amber-50 py-32">
         <div className="mx-auto max-w-screen-lg px-10">
-          {' '}
-          {/* Adjusted max-w-screen-lg */}
           <h2 className="heading2">Background</h2>
           <p>{project.background}</p>
-          {/* Add more content related to background here */}
         </div>
-        <div>
-          {project.backgroundImages && (
-            <img src={project.backgroundImages} alt="" />
-          )}
+        <div className="mt-10 flex items-center justify-center space-x-4">
+          {Array.isArray(project.backgroundImages) &&
+            project.backgroundImages.length > 0 && (
+              <div className="text-center">
+                {project.backgroundImages.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt="Background information images"
+                    className="mx-auto h-auto max-w-full"
+                  />
+                ))}
+              </div>
+            )}
         </div>
       </div>
 
@@ -134,10 +141,12 @@ const CaseStudy: React.FC = () => {
         </div>
 
         {/* Feedback */}
-        <div>
-          <h4 className="subheading">Feedback</h4>
-          <p>{project.designProcess.feedback}</p>
-        </div>
+        {project.designProcess.feedback && (
+          <div>
+            <h4 className="subheading">Feedback</h4>
+            <p>{project.designProcess.feedback}</p>
+          </div>
+        )}
 
         {/* Design Process Images (if any) */}
         {project.designProcessImages && (
@@ -214,16 +223,20 @@ const CaseStudy: React.FC = () => {
         </div>
 
         {/* Accessibility & Usability */}
-        <div>
-          <h4 className="subheading">Accessibility & Usability</h4>
-          <p>{project.solutionImplementation.accessibilityUsability}</p>
-        </div>
+        {project.solutionImplementation.accessibilityUsability && (
+          <div>
+            <h4 className="subheading">Accessibility & Usability</h4>
+            <p>{project.solutionImplementation.accessibilityUsability}</p>
+          </div>
+        )}
 
         {/* Testing */}
-        <div>
-          <h4 className="subheading">Testing</h4>
-          <p>{project.solutionImplementation.testing}</p>
-        </div>
+        {project.solutionImplementation.accessibilityUsability && (
+          <div>
+            <h4 className="subheading">Testing</h4>
+            <p>{project.solutionImplementation.testing}</p>
+          </div>
+        )}
 
         {/* Deployment */}
         <div>

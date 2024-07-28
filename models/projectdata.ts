@@ -17,9 +17,9 @@ export default interface Project {
     definingProblem: string
     ideation: string
     prototyping: string
-    feedback?: string // Optional property
+    feedback?: string
+    designProcessImages?: string[]
   }
-  designProcessImages?: string[]
   softwareDevelopment: {
     techStack: string
     architecture: string

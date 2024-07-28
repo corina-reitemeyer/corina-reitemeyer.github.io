@@ -24,8 +24,8 @@
       "ideation": "Developed user personas and prioritized features based on research findings and MVP scope. Focused on functionalities like garden planning, plant tracking, care reminders, and plant information.",
       "prototyping": "Created low-fidelity wireframes as a team, to facilitate buy-in by the whole team and feasibility check. I went and created high-fidelity wireframes, to ensure we have a cohesive user experience and a plan for how the user interface looks.",
       "designProcessImages": [
-        "/images/projects/grow-grub-research.png",
-        "/images/projects/grow-grub-prototyping.png"
+        "/images/optional/grow-grub-user-profiles.png",
+        "/images/optional/grow-grub-user-tech-journey.png"
       ]
     },
     "softwareDevelopment": {
@@ -49,7 +49,7 @@
       "summary": "Grow-Grub successfully addressed the need for a comprehensive gardening app by combining various features into a cohesive platform, enhancing user gardening experiences. We implemented a solid MVP product, with ideas for future enhancements.",
       "demonstrationSkills": "Demonstrated skills in user-centered design, cross-platform development, and agile project management. Worked in pair and solo programming sessions, led couragous conversations by positively challenging the team of making product decisions, particularly in the planning stage of the product."
     },
-    "finalImage": "/images/projects/grow-grub-background2.png",
+    "finalImage": "/images/optional/grow-grub-hi-fi-wireframes.png",
     "githubLink": "https://github.com/corina-reitemeyer/Grow-Grub"
   }
   ,

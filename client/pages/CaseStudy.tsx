@@ -148,23 +148,28 @@ const CaseStudy: React.FC = () => {
           </div>
         )}
 
-        {/* Design Process Images (if any) */}
-        {project.designProcessImages && (
-          <div>
-            {project.designProcessImages.map((image, index) => (
-              <img
-                key={index}
-                src={image}
-                alt={`Design Process ${index}`}
-                className="h-auto w-full"
-              />
-            ))}
-          </div>
-        )}
+        {/* Design Process Images */}
+        <div className="mt-12 flex items-center justify-center space-x-4">
+          {Array.isArray(project.designProcess.designProcessImages) &&
+            project.designProcess.designProcessImages.length > 0 && (
+              <div className="text-center">
+                {project.designProcess.designProcessImages.map(
+                  (image, index) => (
+                    <img
+                      key={index}
+                      src={image}
+                      alt="Design process images"
+                      className="mx-auto mb-10 h-auto max-w-full"
+                    />
+                  ),
+                )}
+              </div>
+            )}
+        </div>
       </div>
 
       {/* Software Development Section */}
-      <div className="mx-auto mt-28 max-w-screen-lg px-10">
+      <div className="mx-auto mt-20 max-w-screen-lg px-10">
         <h3 className="heading2">Software Development</h3>
 
         {/* Tech Stack */}
@@ -207,47 +212,49 @@ const CaseStudy: React.FC = () => {
       </div>
 
       {/* Solution Implementation Section */}
-      <div className="mx-auto mt-28 max-w-screen-lg px-10">
-        <h3 className="heading2">Solution Implementation</h3>
+      <div className="mt-20 bg-blue-50 py-20">
+        <div className="mx-auto max-w-screen-lg px-10">
+          <h2 className="heading2 mb-8">Solution Implementation</h2>
 
-        {/* Design Decisions */}
-        <div>
-          <h4 className="subheading">Design Decisions</h4>
-          <p>{project.solutionImplementation.designDecisions}</p>
-        </div>
-
-        {/* Coding Process */}
-        <div>
-          <h4 className="subheading">Coding Process</h4>
-          <p>{project.solutionImplementation.codingProcesses}</p>
-        </div>
-
-        {/* Accessibility & Usability */}
-        {project.solutionImplementation.accessibilityUsability && (
-          <div>
-            <h4 className="subheading">Accessibility & Usability</h4>
-            <p>{project.solutionImplementation.accessibilityUsability}</p>
+          {/* Design Decisions */}
+          <div className="mb-6">
+            <h4 className="subheading">Design Decisions</h4>
+            <p>{project.solutionImplementation.designDecisions}</p>
           </div>
-        )}
 
-        {/* Testing */}
-        {project.solutionImplementation.accessibilityUsability && (
-          <div>
-            <h4 className="subheading">Testing</h4>
-            <p>{project.solutionImplementation.testing}</p>
+          {/* Coding Process */}
+          <div className="mb-6">
+            <h4 className="subheading">Coding Process</h4>
+            <p>{project.solutionImplementation.codingProcesses}</p>
           </div>
-        )}
 
-        {/* Deployment */}
-        <div>
-          <h4 className="subheading">Deployment</h4>
-          <p>{project.solutionImplementation.deployment}</p>
-        </div>
+          {/* Accessibility & Usability */}
+          {project.solutionImplementation.accessibilityUsability && (
+            <div className="mb-6">
+              <h4 className="subheading">Accessibility & Usability</h4>
+              <p>{project.solutionImplementation.accessibilityUsability}</p>
+            </div>
+          )}
 
-        {/* Challenges Faced */}
-        <div>
-          <h4 className="subheading">Challenges Faced</h4>
-          <p>{project.solutionImplementation.challengesFaced}</p>
+          {/* Testing */}
+          {project.solutionImplementation.testing && (
+            <div className="mb-6">
+              <h4 className="subheading">Testing</h4>
+              <p>{project.solutionImplementation.testing}</p>
+            </div>
+          )}
+
+          {/* Deployment */}
+          <div className="mb-6">
+            <h4 className="subheading">Deployment</h4>
+            <p>{project.solutionImplementation.deployment}</p>
+          </div>
+
+          {/* Challenges Faced */}
+          <div>
+            <h4 className="subheading">Challenges Faced</h4>
+            <p>{project.solutionImplementation.challengesFaced}</p>
+          </div>
         </div>
       </div>
 
@@ -278,7 +285,7 @@ const CaseStudy: React.FC = () => {
       <div className="mx-auto mt-28 max-w-screen-lg px-10">
         <h3 className="heading2">Key Takeaways</h3>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
           {/* Summary */}
           <div>
             <h4 className="subheading">Summary</h4>
@@ -294,7 +301,7 @@ const CaseStudy: React.FC = () => {
       </div>
 
       {/* Final Image and Links Section */}
-      <div className="mx-auto flex max-w-screen-lg items-center justify-center px-10 py-28">
+      <div className="mx-auto flex max-w-screen-lg items-center justify-center px-10 py-20">
         <img
           src={project.finalImage}
           alt="Completed project"

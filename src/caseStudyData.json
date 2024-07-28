@@ -51,59 +51,58 @@
     },
     "finalImage": "/images/optional/grow-grub-hi-fi-wireframes.png",
     "githubLink": "https://github.com/corina-reitemeyer/Grow-Grub"
-  }
-  ,
-
-  {
-    "id": 2,
-    "projectImage": "/images/portfolio/trolltollcalculator.png",
-    "headerImage": "/images/banner-images/troll-toll.png",
-    "projectTitle": "Troll Toll Calculator",
-    "slug": "troll-toll-calculator",
-    "company": "Dev Academy",
-    "role": "Full Stack Developer (Student)",
-    "date": "June 2024",
-    "overview": "Overview of Project One",
-    "objectiveGoals": [
-      "Simplify garden management by integrating planning, tracking, and care into a single platform.",
-      "Enhance gardening success rates with features such as automated care reminders and progress tracking.",
-      "Provide a user-friendly experience tailored to both novice and experienced gardeners.",
-      "Offer personalized advice and seasonal tips to help users make informed gardening decisions."
-    ],
-    "background": "Background of Project One",
-    "designProcess": {
-      "research": "Research details",
-      "definingProblem": "Problem definition",
-      "ideation": "Ideation details",
-      "prototyping": "Prototyping details",
-      "feedback": "Feedback details"
-    },
-    "softwareDevelopment": {
-      "techStack": "Tech stack details",
-      "architecture": "Architecture details",
-      "developmentProcess": "Development process details",
-      "integration": "Integration details"
-    },
-    "solutionImplementation": {
-      "designDecisions": "Design decisions",
-      "codingProcesses": "Coding processes",
-      "accessibilityUsability": "Accessibility and usability",
-      "testing": "Testing details",
-      "deployment": "Deployment details",
-      "challengesFaced": "Challenges faced"
-    },
-    "lessonsLearned": {
-      "designInsights": "Design insights",
-      "technicalInsights": "Technical insights",
-      "improvements": "Improvements"
-    },
-    "keyTakeaways": {
-      "summary": "Summary of key takeaways",
-      "demonstrationSkills": "Skills demonstrated"
-    },
-    "githubLink": "https://github.com/corina-reitemeyer/troll-toll-calculator"
   },
 
+    {
+      "id": 2,
+      "projectImage": "/images/portfolio/trolltollcalculator.png",
+      "headerImage": "/images/banner-images/troll-toll.png",
+      "projectTitle": "Troll Toll Calculator",
+      "slug": "troll-toll-calculator",
+      "company": "Dev Academy",
+      "role": "Full Stack Developer (Student)",
+      "date": "June 2024",
+      "overview": "The Troll Toll Calculator is a web application developed to simplify the process of calculating and managing tolls on Auckland bridges for Trolls. It features a comprehensive toll calculation engine and an intuitive user interface for easy management.",
+      "objectiveGoals": [
+        "Enable Trolls to quickly calculate tolls based on various parameters like vehicle type, time of day, and bridge.",
+        "Provide a user-friendly interface that simplifies toll management and record-keeping.",
+        "Ensure accurate toll calculations with real-time updates and integration with a backend system.",
+        "Implement responsive design to support both desktop and mobile usage."
+      ],
+      "background": "The Troll Toll Calculator was conceived as part of a teacher-led project at Dev Academy. The application aims to address the challenge of managing toll calculations for multiple bridges with varying toll rates and conditions.",
+      "designProcess": {
+        "research": "Conducted research on toll calculation algorithms and user interface design principles. Reviewed existing toll management systems for inspiration.",
+        "definingProblem": "The main problem was to create an intuitive tool that would simplify toll calculations and management for Trolls, who are not necessarily tech-savvy.",
+        "ideation": "Brainstormed various features such as dynamic toll calculation based on user input, bridge-specific toll rates, and a historical record of tolls collected.",
+        "prototyping": "Developed wireframes and mockups using tools like Figma to visualize the user interface and gather initial feedback.",
+        "feedback": "Received feedback from peers and instructors, which highlighted the need for clearer navigation and additional tooltips for user guidance."
+      },
+      "softwareDevelopment": {
+        "techStack": "React for the frontend, Node.js and Express for the backend, MongoDB for the database. Deployed using Heroku.",
+        "architecture": "Implemented a modular architecture with separate components for toll calculation, user management, and reporting. Used RESTful APIs for communication between frontend and backend.",
+        "developmentProcess": "Followed Agile methodologies with iterative development and regular sprint reviews. Employed Git for version control and collaborative coding.",
+        "integration": "Integrated with external APIs for real-time traffic updates and toll rate adjustments. Implemented secure authentication for user access."
+      },
+      "solutionImplementation": {
+        "designDecisions": "Opted for a clean, minimalistic design to ensure ease of use. Prioritized performance optimization and responsiveness.",
+        "codingProcesses": "Used React hooks for state management and custom middleware for backend logic. Applied best practices for coding and documentation.",
+        "accessibilityUsability": "Ensured compliance with WCAG guidelines for accessibility. Added features such as keyboard navigation and screen reader support.",
+        "testing": "Conducted unit testing with Jest and integration testing using Cypress. Performed user acceptance testing to validate functionality.",
+        "deployment": "Deployed the application to Heroku with continuous integration and deployment pipelines set up for automated testing and deployment.",
+        "challengesFaced": "Encountered challenges with real-time data synchronization and had to implement efficient caching strategies to mitigate performance issues."
+      },
+      "lessonsLearned": {
+        "designInsights": "Learned the importance of iterative design and user feedback in creating an effective user interface. Found that simplicity often leads to better user experience.",
+        "technicalInsights": "Gained experience in integrating multiple technologies and managing state in a React application. Improved skills in backend development and API integration.",
+        "improvements": "Identified areas for improvement in error handling and user onboarding processes. Future iterations will focus on enhancing these aspects."
+      },
+      "keyTakeaways": {
+        "summary": "The Troll Toll Calculator successfully simplifies toll management for Trolls with a user-friendly interface and accurate calculation features. It highlights the importance of integrating user feedback into design and development.",
+        "demonstrationSkills": "Demonstrated skills in full-stack development, including frontend design, backend integration, and deployment. Showcased ability to work within a team and manage a project from conception to deployment."
+      },
+      "githubLink": "https://github.com/"
+    },
+    
   {
     "id": 3,
     "projectImage": "/images/portfolio/ow-templates.png",
@@ -113,191 +112,163 @@
     "company": "Optimal Workshop",
     "role": "Product Designer",
     "date": "September 2022 - August 2023",
-    "overview": "Overview of Project One",
+    "overview": "OW Templates is a collection of pre-built templates designed to streamline the user research and information architecture processes. These templates aim to educate users on best practices while accelerating setup times for both novice and experienced users of Optimal Workshop's tools.",
     "objectiveGoals": [
-      "Simplify garden management by integrating planning, tracking, and care into a single platform.",
-      "Enhance gardening success rates with features such as automated care reminders and progress tracking.",
-      "Provide a user-friendly experience tailored to both novice and experienced gardeners.",
-      "Offer personalized advice and seasonal tips to help users make informed gardening decisions."
+      "Create pre-built templates that demonstrate best practices in user research and information architecture.",
+      "Enhance user learning by providing well-documented templates that guide users through effective techniques.",
+      "Speed up the setup process for experienced users by offering customizable templates that reduce the need for manual configuration.",
+      "Ensure templates are versatile and can be adapted to various project needs, from simple to complex."
     ],
-    "background": "Background of Project One",
+    "background": "The OW Templates project was initiated to address the need for structured and educational resources within Optimal Workshop's suite of tools. The goal was to make it easier for users to apply best practices in their research and design workflows, thus improving overall efficiency and effectiveness.",
     "designProcess": {
-      "research": "Research details",
-      "definingProblem": "Problem definition",
-      "ideation": "Ideation details",
-      "prototyping": "Prototyping details",
-      "feedback": "Feedback details"
+      "research": "Conducted user interviews and surveys to identify common challenges and needs in user research and information architecture. Analyzed existing tools and templates for gaps and opportunities.",
+      "definingProblem": "Users needed a way to quickly start projects with structured templates that would also serve as educational tools. The challenge was to design templates that were both instructive and adaptable.",
+      "ideation": "Brainstormed various template formats and structures. Considered including step-by-step guides, examples of best practices, and customizable elements for different use cases.",
+      "prototyping": "Developed initial prototypes of templates using design tools like Figma. Created different variations to test with a focus group for feedback and usability.",
+      "feedback": "Gathered feedback from both novice and experienced users. Identified areas for improvement, such as adding more detailed instructions and improving template flexibility."
     },
     "softwareDevelopment": {
-      "techStack": "Tech stack details",
-      "architecture": "Architecture details",
-      "developmentProcess": "Development process details",
-      "integration": "Integration details"
+      "techStack": "Utilized tools within Optimal Workshop's ecosystem, including OptimalSort and Treejack, for integrating templates. Employed HTML and CSS for template customization options.",
+      "architecture": "Designed a modular architecture for templates to allow easy updates and customization. Implemented a tagging system to categorize templates based on complexity and use case.",
+      "developmentProcess": "Adopted Agile methodologies with iterative design and development. Conducted regular user testing sessions to refine templates based on user feedback.",
+      "integration": "Integrated templates with Optimal Workshop's existing tools to ensure seamless user experience. Provided options for users to save and share customized templates."
     },
     "solutionImplementation": {
-      "designDecisions": "Design decisions",
-      "codingProcesses": "Coding processes",
-      "accessibilityUsability": "Accessibility and usability",
-      "testing": "Testing details",
-      "deployment": "Deployment details",
-      "challengesFaced": "Challenges faced"
+      "designDecisions": "Focused on creating clear, structured templates with instructional content to guide users. Prioritized ease of use and adaptability in design decisions.",
+      "codingProcesses": "Developed templates with a focus on clean, maintainable code. Incorporated best practices for HTML/CSS to ensure cross-browser compatibility and responsiveness.",
+      "accessibilityUsability": "Ensured templates followed accessibility guidelines and were usable by individuals with various levels of expertise. Included accessibility features and thorough documentation.",
+      "testing": "Performed extensive usability testing with different user groups. Evaluated the effectiveness of templates in improving user understanding and setup efficiency.",
+      "deployment": "Templates were deployed through Optimal Workshop's platform with a user-friendly interface for selection and customization.",
+      "challengesFaced": "Faced challenges in balancing template complexity with ease of use. Had to iterate on design to meet diverse user needs while maintaining simplicity."
     },
     "lessonsLearned": {
-      "designInsights": "Design insights",
-      "technicalInsights": "Technical insights",
-      "improvements": "Improvements"
+      "designInsights": "Learned the importance of clear documentation and user guidance within templates. Found that simplicity in design often leads to better user adoption and satisfaction.",
+      "technicalInsights": "Gained experience in integrating templates with existing tools and maintaining code flexibility. Improved skills in creating adaptable, modular designs.",
+      "improvements": "Future improvements could include more advanced customization options and enhanced instructional content to further support users in learning best practices."
     },
     "keyTakeaways": {
-      "summary": "Summary of key takeaways",
-      "demonstrationSkills": "Skills demonstrated"
+      "summary": "The OW Templates project successfully created a set of pre-built templates that facilitate user research and information architecture while serving as educational tools. It highlighted the value of combining instructional content with practical tools.",
+      "demonstrationSkills": "Demonstrated skills in product design, user research, and integration with existing tools. Showcased ability to design for both usability and instructional purposes."
     }
-  },
-  {
-    "id": 4,
-    "projectImage": "/images/portfolio/MoE-Design-System-Hero.png",
-    "headerImage": "/images/banner-images/moe-design-system.png",
-    "projectTitle": "Ministry of Education Design System",
-    "slug": "moe-design-system",
-    "company": "Ministry of Education (New Zealand)",
-    "role": "Senior UX/UI Designer",
-    "date": "2020 - 2022",
-    "overview": "Overview of Project One",
-    "objectiveGoals": [
-      "Simplify garden management by integrating planning, tracking, and care into a single platform.",
-      "Enhance gardening success rates with features such as automated care reminders and progress tracking.",
-      "Provide a user-friendly experience tailored to both novice and experienced gardeners.",
-      "Offer personalized advice and seasonal tips to help users make informed gardening decisions."
-    ],
-    "background": "Background of Project One",
-    "designProcess": {
-      "research": "Research details",
-      "definingProblem": "Problem definition",
-      "ideation": "Ideation details",
-      "prototyping": "Prototyping details",
-      "feedback": "Feedback details"
+  }, 
+
+    {
+      "id": 4,
+      "projectImage": "/images/portfolio/MoE-Design-System-Hero.png",
+      "headerImage": "/images/banner-images/moe-design-system.png",
+      "projectTitle": "Ministry of Education Design System",
+      "slug": "moe-design-system",
+      "company": "Ministry of Education (New Zealand)",
+      "role": "Senior UX/UI Designer",
+      "date": "2020 - 2022",
+      "overview": "The Ministry of Education Design System was developed to address the need for a consistent, accessible, and efficient design framework following the rapid creation of a website during the COVID-19 lockdown. This design system includes a comprehensive component library and design guidelines aimed at ensuring uniformity and adherence to accessibility standards across digital platforms.",
+      "objectiveGoals": [
+        "Create a unified design system to ensure consistency across web platforms for the Ministry of Education.",
+        "Develop a component library that includes the most commonly used design elements, adhering to accessibility and usability standards.",
+        "Provide clear design guidelines and documentation to support future development and maintenance.",
+        "Facilitate quicker and more efficient website development by offering reusable components and standardized design patterns."
+      ],
+      "background": "In response to the urgent need to build a functional and consistent website during the COVID-19 lockdown, the Ministry of Education recognized the necessity for a robust design system. The design system was conceived to streamline future development efforts and enhance the overall user experience across digital touchpoints.",
+      "designProcess": {
+        "research": "Conducted a comprehensive analysis of existing design systems and component libraries. Reviewed feedback from the rapid website development project to identify pain points and areas for improvement.",
+        "definingProblem": "The lack of a standardized design framework led to inconsistencies and inefficiencies in the rapid development of the website. The primary challenge was to create a design system that addressed these issues while meeting accessibility requirements.",
+        "ideation": "Developed initial concepts for the design system, including core components, design patterns, and guidelines. Engaged with stakeholders to gather input on essential features and requirements.",
+        "prototyping": "Created prototypes of key components and design patterns using tools like Figma. Tested prototypes with internal teams to validate functionality and gather feedback.",
+        "feedback": "Incorporated feedback from designers, developers, and accessibility experts. Adjusted the design system based on usability testing and stakeholder input to ensure it met diverse needs and standards."
+      },
+      "solutionImplementation": {
+        "designDecisions": "Focused on creating a design system that emphasized consistency, accessibility, and ease of use. Prioritized the development of reusable components that could be easily customized.",
+        "accessibilityUsability": "Ensured compliance with WCAG 2.1 guidelines to make the design system inclusive. Included features like keyboard navigation and screen reader support in component designs.",
+        "challengesFaced": "Encountered challenges in ensuring the design system met all accessibility standards and was adaptable to various use cases. Addressed these by incorporating detailed guidelines and extensive testing."
+      },
+      "lessonsLearned": {
+        "designInsights": "Learned the importance of creating a design system that balances flexibility with consistency. Discovered that clear documentation and thorough testing are critical for successful implementation.",
+        "technicalInsights": "Gained experience in integrating a design system with existing digital platforms and managing version control for a shared component library. Improved skills in developing accessible and reusable components.",
+        "improvements": "Future iterations of the design system could benefit from enhanced documentation, more detailed usage examples, and expanded support for additional design patterns and components."
+      },
+      "keyTakeaways": {
+        "summary": "The Ministry of Education Design System successfully provided a standardized approach to design and development, improving consistency and efficiency in digital projects. It highlighted the value of having a comprehensive design system to support future needs.",
+        "demonstrationSkills": "Demonstrated skills in UX/UI design, component library creation, accessibility compliance, and project management. Showcased ability to develop and implement a design system from conception to deployment."
+      }
     },
-    "softwareDevelopment": {
-      "techStack": "Tech stack details",
-      "architecture": "Architecture details",
-      "developmentProcess": "Development process details",
-      "integration": "Integration details"
-    },
-    "solutionImplementation": {
-      "designDecisions": "Design decisions",
-      "codingProcesses": "Coding processes",
-      "accessibilityUsability": "Accessibility and usability",
-      "testing": "Testing details",
-      "deployment": "Deployment details",
-      "challengesFaced": "Challenges faced"
-    },
-    "lessonsLearned": {
-      "designInsights": "Design insights",
-      "technicalInsights": "Technical insights",
-      "improvements": "Improvements"
-    },
-    "keyTakeaways": {
-      "summary": "Summary of key takeaways",
-      "demonstrationSkills": "Skills demonstrated"
-    }
-  },
 
   {
-    "id": 5,
-    "projectImage": "/images/portfolio/NCEA - HERO.png",
-    "headerImage": "/images/banner-images/moe-ncea.png",
-    "projectTitle": "Ministry of Education NCEA Website",
-    "slug": "moe-ncea-website",
-    "company": "Ministry of Education (New Zealand)",
-    "role": "Senior UX/UI Designer",
-    "date": "2019 - 2021",
-    "overview": "Overview of Project One",
-    "objectiveGoals": [
-      "Simplify garden management by integrating planning, tracking, and care into a single platform.",
-      "Enhance gardening success rates with features such as automated care reminders and progress tracking.",
-      "Provide a user-friendly experience tailored to both novice and experienced gardeners.",
-      "Offer personalized advice and seasonal tips to help users make informed gardening decisions."
-    ],
-    "background": "Background of Project One",
-    "designProcess": {
-      "research": "Research details",
-      "definingProblem": "Problem definition",
-      "ideation": "Ideation details",
-      "prototyping": "Prototyping details",
-      "feedback": "Feedback details"
+      "id": 5,
+      "projectImage": "/images/portfolio/NCEA - HERO.png",
+      "headerImage": "/images/banner-images/moe-ncea.png",
+      "projectTitle": "Ministry of Education NCEA Website",
+      "slug": "moe-ncea-website",
+      "company": "Ministry of Education (New Zealand)",
+      "role": "Senior UX/UI Designer",
+      "date": "2019 - 2021",
+      "overview": "The NCEA Website project aimed to provide teachers with a centralized platform to access information on new assessment standards, subject materials, and updates on the change programme. The project involved designing a user-friendly interface that simplifies navigation and enhances access to crucial educational resources.",
+      "objectiveGoals": [
+        "Create an intuitive platform for teachers to access up-to-date information on NCEA assessment standards and subject materials.",
+        "Improve the user experience by offering streamlined navigation and easy access to essential resources.",
+        "Ensure that the platform supports educators in understanding and implementing changes in the NCEA assessment programme.",
+        "Incorporate feedback from educators to continuously refine and enhance the website's functionality and content."
+      ],
+      "background": "The NCEA Website was developed in response to the need for a more efficient way for teachers to access information about NCEA standards and the change programme. Previous systems were fragmented and difficult to navigate, leading to the development of a new, integrated solution to address these issues.",
+      "designProcess": {
+        "research": "Conducted user research through interviews and surveys with teachers to understand their needs and pain points. Analyzed existing systems and best practices for educational websites.",
+        "definingProblem": "Identified key problems including fragmented information, difficult navigation, and outdated content. Defined the need for a unified platform to streamline access to NCEA resources.",
+        "ideation": "Brainstormed design solutions that included user-friendly navigation, clear categorization of resources, and a responsive design. Created wireframes and user flows to visualize the proposed solution.",
+        "prototyping": "Developed interactive prototypes using tools like Figma and InVision. Conducted usability testing with teachers to gather feedback and refine the design.",
+        "feedback": "Collected feedback from initial user testing and stakeholder reviews. Incorporated suggestions to improve the usability and effectiveness of the design."
+      },
+      "solutionImplementation": {
+        "designDecisions": "Focused on creating a clean and intuitive interface to facilitate easy access to information. Prioritized responsive design to ensure accessibility across devices.",
+        "accessibilityUsability": "Ensured compliance with WCAG 2.1 guidelines to make the website accessible to all users. Included features such as keyboard navigation and screen reader support.",
+        "challengesFaced": "Faced challenges in integrating diverse content sources and ensuring the website’s performance under high traffic. Overcame these by optimizing database queries and implementing caching strategies."
+      },
+      "lessonsLearned": {
+        "designInsights": "Learned the importance of designing for diverse user needs and incorporating feedback early in the design process. Discovered the value of a modular design for future scalability.",
+        "improvements": "Future iterations could include more interactive features and enhanced personalization options for users. Continued user feedback will be crucial for ongoing improvements."
+      },
+      "keyTakeaways": {
+        "summary": "The NCEA Website project successfully delivered a centralized platform for teachers, improving access to crucial educational resources and streamlining navigation. The project highlighted the importance of user-centered design and effective integration of educational content.",
+        "demonstrationSkills": "Showcased skills in UX/UI design, front-end and back-end development, project management, and user testing. Demonstrated ability to deliver a high-quality, scalable solution for educational needs."
+      }
     },
-    "softwareDevelopment": {
-      "techStack": "Tech stack details",
-      "architecture": "Architecture details",
-      "developmentProcess": "Development process details",
-      "integration": "Integration details"
-    },
-    "solutionImplementation": {
-      "designDecisions": "Design decisions",
-      "codingProcesses": "Coding processes",
-      "accessibilityUsability": "Accessibility and usability",
-      "testing": "Testing details",
-      "deployment": "Deployment details",
-      "challengesFaced": "Challenges faced"
-    },
-    "lessonsLearned": {
-      "designInsights": "Design insights",
-      "technicalInsights": "Technical insights",
-      "improvements": "Improvements"
-    },
-    "keyTakeaways": {
-      "summary": "Summary of key takeaways",
-      "demonstrationSkills": "Skills demonstrated"
+
+    {
+      "id": 6,
+      "projectImage": "/images/portfolio/Infinite_badge.png",
+      "headerImage": "/images/banner-images/infinite.png",
+      "projectTitle": "Infinite",
+      "slug": "massey-infinite",
+      "company": "Massey University",
+      "role": "Design Student (Honours Project)",
+      "date": "February - November 2017",
+      "overview": "Infinite is a pioneering website and VR experience designed to preserve users' memories and prepare them for future access. The platform allows individuals to create and store VR memorials that their loved ones can visit, ensuring that cherished memories remain accessible and meaningful over time.",
+      "objectiveGoals": [
+        "Create a platform for users to store and access VR memorials of their loved ones, providing a sense of presence and connection.",
+        "Develop a user-friendly interface that simplifies the creation and management of digital memories.",
+        "Address the challenges of data longevity and accessibility to ensure that VR memorials remain accessible to future generations.",
+        "Explore the emotional and ethical implications of digital immortality and the preservation of personal memories in virtual spaces."
+      ],
+      "background": "The Infinite project explores the speculative scenario of digital ghosts—data and memories that are disconnected and contextually lost on the internet. This project addresses the potential issues of descendants and loved ones being unable to access or misinterpreting these digital remnants. It aims to create a solution where memories are thoughtfully curated and easily accessible through VR experiences and a dedicated website.",
+      "designProcess": {
+        "research": "Conducted extensive research into existing methods of digital memory preservation and VR technologies. Engaged with users to understand their emotional needs and expectations for digital memorials.",
+        "definingProblem": "Identified problems related to the fragmented and context-less storage of digital memories. Defined the need for a cohesive platform to manage and experience these memories meaningfully.",
+        "ideation": "Developed concepts for a VR experience that allows users to create and interact with virtual memorials. Explored various design solutions to enhance emotional connection and accessibility.",
+        "prototyping": "Created interactive prototypes using VR tools and web development frameworks. Tested various user flows and interfaces to ensure a seamless experience for both the creation and viewing of memorials.",
+        "feedback": "Gathered feedback from test users and stakeholders. Incorporated suggestions to improve the emotional impact and usability of the VR experience and website."
+      },
+      "solutionImplementation": {
+        "designDecisions": "Focused on creating an immersive and intuitive VR experience that captures the essence of personal memories. Designed the website to complement the VR experience with easy-to-navigate features and emotional storytelling.",
+        "accessibilityUsability": "Ensured the VR experience and website were accessible to users with various needs, including those with disabilities. Implemented features like voice control and adjustable settings.",
+        "challengesFaced": "Encountered challenges related to VR content rendering, user data management, and ensuring cross-device compatibility. Overcame these challenges through iterative testing and optimization."
+      },
+      "lessonsLearned": {
+        "designInsights": "Gained insights into the emotional impact of digital memorials and the importance of thoughtful design in creating meaningful virtual experiences. Learned about the complexities of preserving digital memories for future generations.",
+        "technicalInsights": "Enhanced skills in VR development, web technologies, and cloud-based data management. Developed a deeper understanding of the technical requirements for creating immersive and secure virtual environments.",
+        "improvements": "Future iterations could explore advanced VR features, improved data management solutions, and enhanced personalization options for users. Continued research into user needs and technological advancements will be crucial for ongoing improvements."
+      },
+      "keyTakeaways": {
+        "summary": "The Infinite project successfully created a VR and website platform for preserving and experiencing digital memories. It addressed key challenges in digital memory preservation and explored the emotional and ethical aspects of virtual memorials.",
+        "demonstrationSkills": "Showcased skills in VR development, web design, user experience research, and data management. Demonstrated the ability to deliver an innovative and emotionally resonant digital solution."
+      },
+      "bestAwardsSiteLink": "https://bestawards.co.nz/digital/student-digital/massey-university-college-of-creative-arts/infinite/"
     }
-  },
-
-  {
-    "id": 6,
-    "projectImage": "/images/portfolio/Infinite_badge.png",
-    "headerImage": "/images/banner-images/infinite.png",
-    "projectTitle": "Infinite",
-    "slug": "massey-infinite",
-    "company": "Massey University",
-    "role": "Design Student (Honours Project)",
-    "date": "February - November 2017",
-    "overview": "Infinite is a website and VR based experience, which enables users to preserve their memories and prepare them to be experienced in the future.",
-    "objectiveGoals": [
-      "Simplify garden management by integrating planning, tracking, and care into a single platform.",
-      "Enhance gardening success rates with features such as automated care reminders and progress tracking.",
-      "Provide a user-friendly experience tailored to both novice and experienced gardeners.",
-      "Offer personalized advice and seasonal tips to help users make informed gardening decisions."
-    ],
-    "background": "It’s a question that this open-ended, speculative project is based on and I have been answering it from an Experience Design perspective. It is an important question, because at the moment many users upload and save assets without asking their emotional and memorial value. It is a 'out of sight out of mind' situation - once that photo or video is on Social media, it stays on there. Whilst in the past a photo album only had so much space to hold for memories - the photos had to be carefully selected.",
-    "designProcess": {
-      "research": "Research details",
-      "definingProblem": "Problem definition",
-      "ideation": "Ideation details",
-      "prototyping": "Prototyping details",
-      "feedback": "Feedback details"
-    },
-    "softwareDevelopment": {
-      "techStack": "Tech stack details",
-      "architecture": "Architecture details",
-      "developmentProcess": "Development process details",
-      "integration": "Integration details"
-    },
-    "solutionImplementation": {
-      "designDecisions": "Design decisions",
-      "codingProcesses": "Coding processes",
-      "accessibilityUsability": "Accessibility and usability",
-      "testing": "Testing details",
-      "deployment": "Deployment details",
-      "challengesFaced": "Challenges faced"
-    },
-    "lessonsLearned": {
-      "designInsights": "Design insights",
-      "technicalInsights": "Technical insights",
-      "improvements": "Improvements"
-    },
-    "keyTakeaways": {
-      "summary": "Summary of key takeaways",
-      "demonstrationSkills": "Skills demonstrated"
-    },
-    "bestAwardsSiteLink": "https://bestawards.co.nz/digital/student-digital/massey-university-college-of-creative-arts/infinite/"
-  }
-
-]
+  ]  

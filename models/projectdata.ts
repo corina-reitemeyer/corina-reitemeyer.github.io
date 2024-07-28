@@ -20,16 +20,16 @@ export default interface Project {
     feedback?: string
     designProcessImages?: string[]
   }
-  softwareDevelopment: {
-    techStack: string
-    architecture: string
-    developmentProcess: string
-    integration: string
+  softwareDevelopment?: {
+    techStack?: string
+    architecture?: string
+    developmentProcess?: string
+    integration?: string
   }
   softwareDevelopmentImages?: string[]
   solutionImplementation: {
     designDecisions: string
-    codingProcesses: string
+    codingProcesses?: string
     accessibilityUsability: string
     testing?: string
     deployment?: string
@@ -37,7 +37,7 @@ export default interface Project {
   }
   lessonsLearned: {
     designInsights: string
-    technicalInsights: string
+    technicalInsights?: string
     improvements: string
   }
   keyTakeaways: {

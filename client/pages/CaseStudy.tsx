@@ -168,48 +168,58 @@ const CaseStudy: React.FC = () => {
         </div>
       </div>
 
-      {/* Software Development Section */}
-      <div className="mx-auto mt-20 max-w-screen-lg px-10">
-        <h3 className="heading2">Software Development</h3>
+      {project.softwareDevelopment && (
+        <div className="mx-auto mt-20 max-w-screen-lg px-10">
+          <h3 className="heading2">Software Development</h3>
 
-        {/* Tech Stack */}
-        <div>
-          <h4 className="subheading">Tech Stack</h4>
-          <p>{project.softwareDevelopment.techStack}</p>
+          {/* Tech Stack */}
+          {project.softwareDevelopment.techStack && (
+            <div>
+              <h4 className="subheading">Tech Stack</h4>
+              <p>{project.softwareDevelopment.techStack}</p>
+            </div>
+          )}
+
+          {/* Architecture */}
+          {project.softwareDevelopment.architecture && (
+            <div>
+              <h4 className="subheading">Architecture</h4>
+              <p>{project.softwareDevelopment.architecture}</p>
+            </div>
+          )}
+
+          {/* Development Process */}
+          {project.softwareDevelopment.developmentProcess && (
+            <div>
+              <h4 className="subheading">Development Process</h4>
+              <p>{project.softwareDevelopment.developmentProcess}</p>
+            </div>
+          )}
+
+          {/* Integration */}
+          {project.softwareDevelopment.integration && (
+            <div>
+              <h4 className="subheading">Integration</h4>
+              <p>{project.softwareDevelopment.integration}</p>
+            </div>
+          )}
+
+          {/* Software Development Images (if any) */}
+          {project.softwareDevelopmentImages &&
+            project.softwareDevelopmentImages.length > 0 && (
+              <div>
+                {project.softwareDevelopmentImages.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt="Software Development Images"
+                    className="h-auto w-full"
+                  />
+                ))}
+              </div>
+            )}
         </div>
-
-        {/* Architecture */}
-        <div>
-          <h4 className="subheading">Architecture</h4>
-          <p>{project.softwareDevelopment.architecture}</p>
-        </div>
-
-        {/* Development Process */}
-        <div>
-          <h4 className="subheading">Development Process</h4>
-          <p>{project.softwareDevelopment.developmentProcess}</p>
-        </div>
-
-        {/* Integration */}
-        <div>
-          <h4 className="subheading">Integration</h4>
-          <p>{project.softwareDevelopment.integration}</p>
-        </div>
-
-        {/* Software Development Images (if any) */}
-        {project.softwareDevelopmentImages && (
-          <div>
-            {project.softwareDevelopmentImages.map((images, index) => (
-              <img
-                key={index}
-                src={images}
-                alt="Software Development Images"
-                className="h-auto w-full"
-              />
-            ))}
-          </div>
-        )}
-      </div>
+      )}
 
       {/* Solution Implementation Section */}
       <div className="mt-20 bg-blue-50 py-20">
@@ -223,10 +233,12 @@ const CaseStudy: React.FC = () => {
           </div>
 
           {/* Coding Process */}
-          <div className="mb-6">
-            <h4 className="subheading">Coding Process</h4>
-            <p>{project.solutionImplementation.codingProcesses}</p>
-          </div>
+          {project.solutionImplementation.codingProcesses && (
+            <div className="mb-6">
+              <h4 className="subheading">Coding Process</h4>
+              <p>{project.solutionImplementation.codingProcesses}</p>
+            </div>
+          )}
 
           {/* Accessibility & Usability */}
           {project.solutionImplementation.accessibilityUsability && (
@@ -245,10 +257,12 @@ const CaseStudy: React.FC = () => {
           )}
 
           {/* Deployment */}
-          <div className="mb-6">
-            <h4 className="subheading">Deployment</h4>
-            <p>{project.solutionImplementation.deployment}</p>
-          </div>
+          {project.solutionImplementation.deployment && (
+            <div className="mb-6">
+              <h4 className="subheading">Deployment</h4>
+              <p>{project.solutionImplementation.deployment}</p>
+            </div>
+          )}
 
           {/* Challenges Faced */}
           <div>
@@ -269,10 +283,12 @@ const CaseStudy: React.FC = () => {
         </div>
 
         {/* Technical Insights */}
-        <div>
-          <h4 className="subheading">Technical Insights</h4>
-          <p>{project.lessonsLearned.technicalInsights}</p>
-        </div>
+        {project.lessonsLearned.technicalInsights && (
+          <div>
+            <h4 className="subheading">Technical Insights</h4>
+            <p>{project.lessonsLearned.technicalInsights}</p>
+          </div>
+        )}
 
         {/* Improvements */}
         <div>

@@ -10,9 +10,9 @@ const About = () => {
           />
           <h2 className="py-8 text-3xl font-bold">Hi! I&apos;m Corina 👋</h2>
           <p className="paragraph">
-            I&apos;m a Full Stack Developer, backed with 6-7 years experience
-            working as a Senior UX/UI Designer in the tech industry. My journey
-            into technology began in my teens, where I explored both design and
+            I&apos;m a Full Stack Developer & Senior UX/UI Designer, backed with
+            6-7 years experience working in the tech industry. My journey into
+            technology began in my teens, where I explored both design and
             coding out of personal interest. After dedicating a significant
             portion of my career to UX/UI design, I decided to shift gears from
             design to delve deeper into programming. In March 2024, I enrolled

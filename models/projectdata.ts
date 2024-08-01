@@ -25,8 +25,8 @@ export default interface Project {
     architecture?: string
     developmentProcess?: string
     integration?: string
+    softwareDevelopmentImages?: string[]
   }
-  softwareDevelopmentImages?: string[]
   solutionImplementation: {
     designDecisions: string
     codingProcesses?: string

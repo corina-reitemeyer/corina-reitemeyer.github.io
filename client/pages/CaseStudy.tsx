@@ -205,19 +205,26 @@ const CaseStudy: React.FC = () => {
           )}
 
           {/* Software Development Images (if any) */}
-          {project.softwareDevelopmentImages &&
-            project.softwareDevelopmentImages.length > 0 && (
-              <div>
-                {project.softwareDevelopmentImages.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image}
-                    alt="Software Development Images"
-                    className="h-auto w-full"
-                  />
-                ))}
-              </div>
-            )}
+          <div className="mt-12 flex items-center justify-center space-x-4">
+            {Array.isArray(
+              project.softwareDevelopment.softwareDevelopmentImages,
+            ) &&
+              project.softwareDevelopment.softwareDevelopmentImages.length >
+                0 && (
+                <div className="text-center">
+                  {project.softwareDevelopment.softwareDevelopmentImages.map(
+                    (image, index) => (
+                      <img
+                        key={index}
+                        src={image}
+                        alt="Design process images"
+                        className="mx-auto mb-10 h-auto max-w-full"
+                      />
+                    ),
+                  )}
+                </div>
+              )}
+          </div>
         </div>
       )}
 

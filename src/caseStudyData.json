@@ -60,7 +60,7 @@
       "projectTitle": "Troll Toll Calculator",
       "slug": "troll-toll-calculator",
       "company": "Dev Academy",
-      "role": "Full Stack Developer (Student), UX/UI Designer",
+      "role": "Full Stack Developer (Student), UX/UI Designer, Product Owner",
       "date": "June 2024",
       "overview": "The Troll Toll Calculator is a web application developed to simplify the process of calculating and managing tolls on Auckland bridges for Trolls. The MVP of the product features a toll calculator, and a list of bridges which include useful information and troll occupation.",
       "objectiveGoals": [
@@ -73,10 +73,10 @@
       "background": "The Troll Toll Calculator was brought to life as part of a teacher-led project at Dev Academy. The cost of living is on the rise, and house prices are skyrocketing. Fortunately, for the rest of NZ, we are safe from traffic monetisation, unlike our friends in Auckland who have to deal with the trolls that live under their landmark bridges. It's tough for a troll in 2024. There is a lot of competition and not a lot of good resources for trolls. Trolls are are the hunt for smarter, more digital ways to optimise their toll revenue. That's where we come in with our Bridge Troll Toll Calculator app.",
       "designProcess": {
         "research": "Conducted research on toll calculation features that exist in Australasia (e.g. Waka Kotahi, Linkt).",
-        "definingProblem": "The main problem was to create an intuitive tool that would simplify toll calculations and management for Trolls, who are not necessarily tech-savvy. We had to be ",
-        "ideation": "Brainstormed various features such as dynamic toll calculation based on user input, bridge-specific toll rates, and a historical record of tolls collected.",
-        "prototyping": "Developed wireframes and mockups using tools like Figma to visualize the user interface and gather initial feedback.",
-        "feedback": "Received feedback from peers and instructors, which highlighted the need for clearer navigation and additional tooltips for user guidance.",
+        "definingProblem": "The main problem was to create an intuitive tool that would simplify toll calculations and management for Trolls, who are not necessarily tech-savvy and may have accessibility needs.",
+        "ideation": "Brainstormed various features such as dynamic toll calculation based on user input, bridge-specific toll rates that get converted into troll currency (rock candy, gold rings, and goats), and a list of bridges that trolls can collect tolls from.",
+        "prototyping": "Developed wireframes and mockups using tools like Figma to visualize the user interface and gather initial feedback. Created a user journey based on the user profiles for a veteran toll-collecting troll, and a newly inducted one.",
+        "feedback": "Received feedback from peers and instructors, the calculator itself was a bit too similar to the toll paying sites (which are focused on vehicle owners who get charged driving over the bridge), but in this case we needed to focus it on the trolls who collect them. This significantly simplified the calculator.",
         "designProcessImages":[
           "/images/optional/troll-olaf-profile.png",
           "/images/optional/troll-stacey-profile.png",
@@ -84,10 +84,10 @@
         ]
       },
       "softwareDevelopment": {
-        "techStack": "React for the frontend, Node.js and Express for the backend, MongoDB for the database. Deployed using Heroku.",
-        "architecture": "Implemented a modular architecture with separate components for toll calculation, user management, and reporting. Used RESTful APIs for communication between frontend and backend.",
+        "techStack": "React for the frontend, Node.js and Express for the backend, SQLite for the database using Knex.js.",
+        "architecture": "Implemented a modular architecture with separate components for toll calculation, user management, and information on a variety of Auckland's bridges. Used RESTful APIs for communication between frontend and backend.",
         "developmentProcess": "Followed Agile methodologies with iterative development and regular sprint reviews. Employed Git for version control and collaborative coding.",
-        "integration": "Integrated with external APIs for real-time traffic updates and toll rate adjustments. Implemented secure authentication for user access.",
+        "integration": "Implemented secure authentication for user access with Auth0.",
         "softwareDevelopmentImages": [
           "/images/optional/troll-db-diagram.png"
         ]
@@ -95,20 +95,19 @@
       "solutionImplementation": {
         "designDecisions": "Opted for a clean, minimalistic design to ensure ease of use. Prioritized performance optimization and responsiveness.",
         "codingProcesses": "Used React hooks for state management and custom middleware for backend logic. Applied best practices for coding and documentation.",
-        "accessibilityUsability": "Ensured compliance with WCAG guidelines for accessibility. Added features such as keyboard navigation and screen reader support.",
-        "testing": "Conducted unit testing with Jest and integration testing using Cypress. Performed user acceptance testing to validate functionality.",
-        "deployment": "Deployed the application to Heroku with continuous integration and deployment pipelines set up for automated testing and deployment.",
-        "challengesFaced": "Encountered challenges with real-time data synchronization and had to implement efficient caching strategies to mitigate performance issues."
+        "accessibilityUsability": "Ensured compliance with WCAG guidelines for accessibility. However, web accessibility was set as a stretch goal by the teacher, so we did not get around to implementing it.",
+        "challengesFaced": "Encountered challenges with the bridges list (favouritising and activating bridges that are collecting tolls). We also wanted to utilise the Waka Kotahi API to show the location of each bridge, but we found out that this was no longer possible due to limiting the use of the API for third-party users."
       },
       "lessonsLearned": {
-        "designInsights": "Learned the importance of iterative design and user feedback in creating an effective user interface. Found that simplicity often leads to better user experience.",
-        "technicalInsights": "Gained experience in integrating multiple technologies and managing state in a React application. Improved skills in backend development and API integration.",
-        "improvements": "Identified areas for improvement in error handling and user onboarding processes. Future iterations will focus on enhancing these aspects."
+        "designInsights": "Highlighted the importance of iterative design and user feedback in creating an effective user interface, especially when surprising technical limitations appeared in the building process.",
+        "technicalInsights": "Gained experience in integrating multiple technologies and managing state in a React application. Improved skills in backend development, particularly database implementation.",
+        "improvements": "Identified areas for improvement in error handling and user onboarding processes. We ran out of time to implement web accessibility and overall designs that were wireframes. Future iterations will focus on enhancing these aspects."
       },
       "keyTakeaways": {
-        "summary": "The Troll Toll Calculator successfully simplifies toll management for Trolls with a user-friendly interface and accurate calculation features. It highlights the importance of integrating user feedback into design and development.",
-        "demonstrationSkills": "Demonstrated skills in full-stack development, including frontend design, backend integration, and deployment. Showcased ability to work within a team and manage a project from conception to deployment."
+        "summary": "The Troll Toll Calculator as an MVP product simplifies toll management for Trolls with a user-friendly interface and accurate calculation features. It highlights the importance of integrating user feedback and web accessibility into design and development.",
+        "demonstrationSkills": "Demonstrated skills in full-stack development, including frontend design, backend integration. Showcased ability to work within a team and manage a project from conception to near deployment stage. I was able to take the role as the product owner, and therefore take leadership in the planning stages, make executive decisions alongside the teacher of keeping workstreams on track. As the product owner and designer, I also took advocacy of the user."
       },
+      "finalImage":"/images/optional/trollcalculator-hi-fi-wireframes.png",
       "githubLink": "https://github.com/"
     },
     

@@ -277,6 +277,25 @@ const CaseStudy: React.FC = () => {
             <p>{project.solutionImplementation.challengesFaced}</p>
           </div>
         </div>
+
+        {/* Design Product Images */}
+        <div className="mx-auto mt-12 flex max-w-screen-lg items-center justify-center space-x-4 px-10">
+          {Array.isArray(project.solutionImplementation.designProductImages) &&
+            project.solutionImplementation.designProductImages.length > 0 && (
+              <div className="text-center">
+                {project.solutionImplementation.designProductImages.map(
+                  (image, index) => (
+                    <img
+                      key={index}
+                      src={image}
+                      alt="Design process images"
+                      className="mx-auto mb-10 h-auto max-w-full"
+                    />
+                  ),
+                )}
+              </div>
+            )}
+        </div>
       </div>
 
       {/* Lessons Learned Section */}

@@ -34,6 +34,7 @@ export default interface Project {
     testing?: string
     deployment?: string
     challengesFaced: string
+    designProductImages: string[]
   }
   lessonsLearned: {
     designInsights: string

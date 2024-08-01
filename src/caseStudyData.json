@@ -171,7 +171,7 @@
       "id": 4,
       "projectImage": "/images/portfolio/MoE-Design-System-Hero.png",
       "headerImage": "/images/banner-images/moe-design-system.png",
-      "projectTitle": "Ministry of Education Design System",
+      "projectTitle": "Ministry of Education - Design System",
       "slug": "moe-design-system",
       "company": "Ministry of Education (New Zealand)",
       "role": "Senior UX/UI Designer",
@@ -186,105 +186,85 @@
       "background": "In response to the urgent need to build a functional and consistent website during the COVID-19 lockdown, the Ministry of Education recognized the necessity for a robust design system. The design system was conceived to streamline future development efforts and enhance the overall user experience across digital touchpoints.",
       "designProcess": {
         "research": "Conducted a comprehensive analysis of existing design systems and component libraries. Reviewed feedback from the rapid website development project to identify pain points and areas for improvement.",
-        "definingProblem": "The lack of a standardized design framework led to inconsistencies and inefficiencies in the rapid development of the website. The primary challenge was to create a design system that addressed these issues while meeting accessibility requirements.",
+        "definingProblem": "The lack of a standardised design framework led to inconsistencies and inefficiencies in the rapid development of the website. The primary challenge was to create a design system that addressed these issues while meeting accessibility requirements.",
         "ideation": "Developed initial concepts for the design system, including core components, design patterns, and guidelines. Engaged with stakeholders to gather input on essential features and requirements.",
         "prototyping": "Created prototypes of key components and design patterns using tools like Figma. Tested prototypes with internal teams to validate functionality and gather feedback.",
-        "feedback": "Incorporated feedback from designers, developers, and accessibility experts. Adjusted the design system based on usability testing and stakeholder input to ensure it met diverse needs and standards."
+        "feedback": "Incorporated feedback from designers, developers, and accessibility experts. Adjusted the design system based on usability testing and stakeholder input to ensure it met diverse needs and standards.",
+        "designProcessImages":[
+          "/images/optional/design-system-process-1.png",
+          "/images/optional/design-system-process-2.png"
+
+        ]
       },
       "solutionImplementation": {
-        "designDecisions": "Focused on creating a design system that emphasized consistency, accessibility, and ease of use. Prioritized the development of reusable components that could be easily customized.",
+        "designDecisions": "Focused on creating a design system that emphasised consistency, accessibility, and ease of use. Prioritised the development of reusable components that could be easily customised.",
         "accessibilityUsability": "Ensured compliance with WCAG 2.1 guidelines to make the design system inclusive. Included features like keyboard navigation and screen reader support in component designs.",
-        "challengesFaced": "Encountered challenges in ensuring the design system met all accessibility standards and was adaptable to various use cases. Addressed these by incorporating detailed guidelines and extensive testing."
+        "challengesFaced": "Encountered challenges in ensuring the design system met all accessibility standards and was adaptable to various use cases. Addressed these by incorporating detailed guidelines and extensive testing.",
+        "designProductImages":[
+          "/images/product/design-system-product-1.png",
+          "/images/product/design-system-product-2.png",
+          "/images/product/design-system-product-3.png"
+
+        ]
       },
       "lessonsLearned": {
         "designInsights": "Learned the importance of creating a design system that balances flexibility with consistency. Discovered that clear documentation and thorough testing are critical for successful implementation.",
         "technicalInsights": "Gained experience in integrating a design system with existing digital platforms and managing version control for a shared component library. Improved skills in developing accessible and reusable components.",
-        "improvements": "Future iterations of the design system could benefit from enhanced documentation, more detailed usage examples, and expanded support for additional design patterns and components."
+        "improvements": "Future iterations of the design system could benefit from enhanced documentation, more detailed usage examples, and expanded support for additional design patterns and components. Also planned to include case studies, to show how the design system could be utilised, and highlighting why design systems are so useful for cross-collaborative teams."
       },
       "keyTakeaways": {
-        "summary": "The Ministry of Education Design System successfully provided a standardized approach to design and development, improving consistency and efficiency in digital projects. It highlighted the value of having a comprehensive design system to support future needs.",
-        "demonstrationSkills": "Demonstrated skills in UX/UI design, component library creation, accessibility compliance, and project management. Showcased ability to develop and implement a design system from conception to deployment."
-      },
-      "finalImage":"/images/optional/ow-hi-fi-wireframes.png"
+        "summary": "The Ministry of Education Design System successfully provided a standardised approach to design and development, improving consistency and efficiency in digital projects. It highlighted the value of having a comprehensive design system to support future needs.",
+        "demonstrationSkills": "Demonstrated skills in UX/UI design, component library creation, accessibility compliance, and technical leadership. Showcased ability to develop and implement a design system from conception to deployment."
+      }
     },
 
   {
       "id": 5,
       "projectImage": "/images/portfolio/NCEA - HERO.png",
       "headerImage": "/images/banner-images/moe-ncea.png",
-      "projectTitle": "Ministry of Education NCEA Website",
+      "projectTitle": "Ministry of Education - NCEA Website",
       "slug": "moe-ncea-website",
       "company": "Ministry of Education (New Zealand)",
       "role": "Senior UX/UI Designer",
       "date": "2019 - 2021",
-      "overview": "The NCEA Website project aimed to provide teachers with a centralized platform to access information on new assessment standards, subject materials, and updates on the change programme. The project involved designing a user-friendly interface that simplifies navigation and enhances access to crucial educational resources.",
+      "overview": "The NCEA Website project aimed to provide teachers with a centralised platform to access information on new assessment standards, subject materials, and updates on the change programme. The project involved designing a user-friendly interface that simplifies navigation and enhances access to crucial educational resources.",
       "objectiveGoals": [
         "Create an intuitive platform for teachers to access up-to-date information on NCEA assessment standards and subject materials.",
         "Improve the user experience by offering streamlined navigation and easy access to essential resources.",
         "Ensure that the platform supports educators in understanding and implementing changes in the NCEA assessment programme.",
         "Incorporate feedback from educators to continuously refine and enhance the website's functionality and content."
       ],
-      "background": "The NCEA Website was developed in response to the need for a more efficient way for teachers to access information about NCEA standards and the change programme. Previous systems were fragmented and difficult to navigate, leading to the development of a new, integrated solution to address these issues.",
+      "background": "The NCEA Website was developed in response to the NCEA Change Programme, which kicked off in 2019. This was the first step to digitise and create a single touch point for teachers to access the newly updated assessment standards, newly introduced subjects and materials.",
       "designProcess": {
-        "research": "Conducted user research through interviews and surveys with teachers to understand their needs and pain points. Analyzed existing systems and best practices for educational websites.",
-        "definingProblem": "Identified key problems including fragmented information, difficult navigation, and outdated content. Defined the need for a unified platform to streamline access to NCEA resources.",
-        "ideation": "Brainstormed design solutions that included user-friendly navigation, clear categorization of resources, and a responsive design. Created wireframes and user flows to visualize the proposed solution.",
-        "prototyping": "Developed interactive prototypes using tools like Figma and InVision. Conducted usability testing with teachers to gather feedback and refine the design.",
-        "feedback": "Collected feedback from initial user testing and stakeholder reviews. Incorporated suggestions to improve the usability and effectiveness of the design."
+        "research": "Conducted user research through interviews and surveys with teachers to understand their needs and pain points. Most of the insights were received though the change programme workstreams itself, as the advisors worked closely with the teachers. Analysed existing systems and best practices for educational websites.",
+        "definingProblem": "Identified key problems including fragmented information, difficult navigation, and outdated content. Defined the need for a unified platform to streamline access to NCEA resources. This was often done by reviewing proposed changes to the ncea programme, in form of a workshop with the advisors.",
+        "ideation": "Brainstormed design solutions that included user-friendly navigation, clear categorisation of resources, and a responsive design. Created wireframes and user flows to visualise the proposed solution.",
+        "prototyping": "Developed interactive prototypes using tools like Adobe XD. Conducted usability testing with teachers to gather feedback and refine the design.",
+        "feedback": "Collected feedback from initial user testing and stakeholder reviews. Incorporated suggestions to improve the usability and effectiveness of the design. Because the designs were worked on in parallel to the change programme itself, stakeholders and teachers who worked at the Ministry provided regular feedback. Regular consulation periods were held with NCEA teachers who worked at New Zealand schools.",
+        "designProcessImages":[
+          "/images/optional/ncea-process-1.png"
+
+        ]
       },
       "solutionImplementation": {
-        "designDecisions": "Focused on creating a clean and intuitive interface to facilitate easy access to information. Prioritized responsive design to ensure accessibility across devices.",
+        "designDecisions": "Focused on creating a clean and intuitive interface to facilitate easy access to information. Prioritised responsive design to ensure accessibility across devices.",
         "accessibilityUsability": "Ensured compliance with WCAG 2.1 guidelines to make the website accessible to all users. Included features such as keyboard navigation and screen reader support.",
-        "challengesFaced": "Faced challenges in integrating diverse content sources and ensuring the website’s performance under high traffic. Overcame these by optimizing database queries and implementing caching strategies."
+        "challengesFaced": "Faced challenges in the design process overall, as it was Waterfall based, and often the designs proceeded the content production, which created blue-sky scenarios. The user consulations were not consistent, so we had stages where we had no validation around whether the designs meet the users needs. Incorporating different cultural world views was tricky, as we had limited access to certain demographic groups.",
+        "designProductImages":[
+          "/images/product/ncea-product-1.png",
+          "/images/product/ncea-product-2.png",
+          "/images/product/ncea-product-6.png",
+          "/images/product/ncea-product-4.png",
+          "/images/product/ncea-product-5.png"
+        ]
       },
       "lessonsLearned": {
         "designInsights": "Learned the importance of designing for diverse user needs and incorporating feedback early in the design process. Discovered the value of a modular design for future scalability.",
-        "improvements": "Future iterations could include more interactive features and enhanced personalization options for users. Continued user feedback will be crucial for ongoing improvements."
+        "improvements": "Future iterations could include more interactive features and enhanced personalisation options for users. Continued user feedback will be crucial for ongoing improvements."
       },
       "keyTakeaways": {
-        "summary": "The NCEA Website project successfully delivered a centralized platform for teachers, improving access to crucial educational resources and streamlining navigation. The project highlighted the importance of user-centered design and effective integration of educational content.",
-        "demonstrationSkills": "Showcased skills in UX/UI design, front-end and back-end development, project management, and user testing. Demonstrated ability to deliver a high-quality, scalable solution for educational needs."
+        "summary": "The NCEA Website project successfully delivered a centralised platform for teachers, improving access to crucial educational resources and streamlining navigation. The project highlighted the importance of user-centered design and effective integration of educational content.",
+        "demonstrationSkills": "Showcased skills in UX/UI design, technical leadership, and user testing. Demonstrated ability to deliver a high-quality, scalable solution for educational needs. This project allowed me to grow from an intermediate designer into a Senior UX/UI Designer by taking on more responsibility."
       }
-    },
-
-    {
-      "id": 6,
-      "projectImage": "/images/portfolio/Infinite_badge.png",
-      "headerImage": "/images/banner-images/infinite.png",
-      "projectTitle": "Infinite",
-      "slug": "massey-infinite",
-      "company": "Massey University",
-      "role": "Design Student (Honours Project)",
-      "date": "February - November 2017",
-      "overview": "Infinite is a pioneering website and VR experience designed to preserve users' memories and prepare them for future access. The platform allows individuals to create and store VR memorials that their loved ones can visit, ensuring that cherished memories remain accessible and meaningful over time.",
-      "objectiveGoals": [
-        "Create a platform for users to store and access VR memorials of their loved ones, providing a sense of presence and connection.",
-        "Develop a user-friendly interface that simplifies the creation and management of digital memories.",
-        "Address the challenges of data longevity and accessibility to ensure that VR memorials remain accessible to future generations.",
-        "Explore the emotional and ethical implications of digital immortality and the preservation of personal memories in virtual spaces."
-      ],
-      "background": "The Infinite project explores the speculative scenario of digital ghosts—data and memories that are disconnected and contextually lost on the internet. This project addresses the potential issues of descendants and loved ones being unable to access or misinterpreting these digital remnants. It aims to create a solution where memories are thoughtfully curated and easily accessible through VR experiences and a dedicated website.",
-      "designProcess": {
-        "research": "Conducted extensive research into existing methods of digital memory preservation and VR technologies. Engaged with users to understand their emotional needs and expectations for digital memorials.",
-        "definingProblem": "Identified problems related to the fragmented and context-less storage of digital memories. Defined the need for a cohesive platform to manage and experience these memories meaningfully.",
-        "ideation": "Developed concepts for a VR experience that allows users to create and interact with virtual memorials. Explored various design solutions to enhance emotional connection and accessibility.",
-        "prototyping": "Created interactive prototypes using VR tools and web development frameworks. Tested various user flows and interfaces to ensure a seamless experience for both the creation and viewing of memorials.",
-        "feedback": "Gathered feedback from test users and stakeholders. Incorporated suggestions to improve the emotional impact and usability of the VR experience and website."
-      },
-      "solutionImplementation": {
-        "designDecisions": "Focused on creating an immersive and intuitive VR experience that captures the essence of personal memories. Designed the website to complement the VR experience with easy-to-navigate features and emotional storytelling.",
-        "accessibilityUsability": "Ensured the VR experience and website were accessible to users with various needs, including those with disabilities. Implemented features like voice control and adjustable settings.",
-        "challengesFaced": "Encountered challenges related to VR content rendering, user data management, and ensuring cross-device compatibility. Overcame these challenges through iterative testing and optimization."
-      },
-      "lessonsLearned": {
-        "designInsights": "Gained insights into the emotional impact of digital memorials and the importance of thoughtful design in creating meaningful virtual experiences. Learned about the complexities of preserving digital memories for future generations.",
-        "technicalInsights": "Enhanced skills in VR development, web technologies, and cloud-based data management. Developed a deeper understanding of the technical requirements for creating immersive and secure virtual environments.",
-        "improvements": "Future iterations could explore advanced VR features, improved data management solutions, and enhanced personalization options for users. Continued research into user needs and technological advancements will be crucial for ongoing improvements."
-      },
-      "keyTakeaways": {
-        "summary": "The Infinite project successfully created a VR and website platform for preserving and experiencing digital memories. It addressed key challenges in digital memory preservation and explored the emotional and ethical aspects of virtual memorials.",
-        "demonstrationSkills": "Showcased skills in VR development, web design, user experience research, and data management. Demonstrated the ability to deliver an innovative and emotionally resonant digital solution."
-      },
-      "bestAwardsSiteLink": "https://bestawards.co.nz/digital/student-digital/massey-university-college-of-creative-arts/infinite/"
     }
   ]  

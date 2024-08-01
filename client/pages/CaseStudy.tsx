@@ -324,7 +324,7 @@ const CaseStudy: React.FC = () => {
       </div>
 
       {/* Key Takeaways Section */}
-      <div className="mx-auto mt-28 max-w-screen-lg px-10">
+      <div className="mx-auto mb-20 mt-28 max-w-screen-lg px-10">
         <h3 className="heading2">Key Takeaways</h3>
 
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
@@ -343,13 +343,15 @@ const CaseStudy: React.FC = () => {
       </div>
 
       {/* Final Image and Links Section */}
-      <div className="mx-auto flex max-w-screen-lg items-center justify-center px-10 py-20">
-        <img
-          src={project.finalImage}
-          alt="Completed project"
-          className="mb-8 h-auto w-full"
-        />
-      </div>
+      {project.finalImage && (
+        <div className="mx-auto flex max-w-screen-lg items-center justify-center px-10 py-20">
+          <img
+            src={project.finalImage}
+            alt="Completed project"
+            className="mb-8 h-auto w-full"
+          />
+        </div>
+      )}
     </div>
   )
 }

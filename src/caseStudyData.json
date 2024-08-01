@@ -127,7 +127,7 @@
     "company": "Optimal Workshop",
     "role": "Senior Product Designer",
     "date": "September 2022 - August 2023",
-    "overview": "Optimal Workshop Templates is a collection of pre-built templates designed to streamline the user research and information architecture processes. These templates aim to educate users on best practices while accelerating setup times for both novice and experienced users of Optimal Workshop's tools.",
+    "overview": "Optimal Workshop Templates is a collection of pre-built templates designed to streamline the user research and information architecture processes. The MVP product aims to educate users on best practices while accelerating setup times for both novice and experienced users of Optimal Workshop's tools.",
     "objectiveGoals": [
       "Create pre-built templates that demonstrate best practices in user research and information architecture.",
       "Enhance user learning by providing well-documented templates that guide users through effective techniques.",
@@ -136,7 +136,7 @@
     ],
     "background": "The Templates project was initiated to address the need for structured and educational resources within Optimal Workshop's suite of tools. The goal was to make it easier for users to apply best practices in their research and design workflows, thus improving overall efficiency and effectiveness. Additionally it addressed the initial 'blank screen' scenario, where less experienced users may find themselves in, unsure where to start especially if they had a specific research outcome in mind.",
     "designProcess": {
-      "research": "Conducted user interviews and surveys to identify common challenges and needs in user research and information architecture. Analyzed existing tools and templates for gaps and opportunities. Conducted competitor analysis to highlight gaps in the market.",
+      "research": "Conducted user interviews and surveys to identify common challenges and needs in user research and information architecture. Analysed existing tools and templates for gaps and opportunities. Conducted competitor analysis to highlight gaps in the market.",
       "definingProblem": "Inexperienced users needed more guidance when setting up research projects, as they often found themselves unsure how to connect the tools with the results they were hoping to achieve. Experienced users needed a way to quickly start projects with structured templates that would also serve as educational tools to enable them to explore the tools in ways they may have not thought of. Often they would recommend certain tools and processes around it to the juniors in their teams. The challenge was to design templates that were both instructive and adaptable.",
       "ideation": "Brainstormed various template formats and structures. Considered including step-by-step guides, examples of best practices, and customisable elements for different use cases. Pre-filled fields inside the tools to allow users to get an impression of how they could shape their data.",
       "prototyping": "Developed initial prototypes of templates using design tools like Figma. Created an MVP, which we then A/B tested with a small user group.",
@@ -161,7 +161,7 @@
       "improvements": "Future improvements could include more advanced customisation options and enhanced instructional content to further support users in learning best practices."
     },
     "keyTakeaways": {
-      "summary": "The Optimal Workshop Templates project successfully created a set of pre-built templates that facilitate user research and information architecture while serving as educational tools. It highlighted the value of combining instructional content with practical tools.",
+      "summary": "The Optimal Workshop Templates project successfully created a set of pre-built templates that facilitate user research and information architecture while serving as educational tools. It highlighted the value of combining instructional content with practical tools. The next step involves expanding the range of use cases by introducing additional templates. This will provide users with pre-configured data across various areas of the tool, enhancing their ability to seamlessly integrate and transfer information between different tools.",
       "demonstrationSkills": "Demonstrated skills in product design, user research, and integration with existing tools. Showcased ability to design for both usability and instructional purposes."
     },
     "finalImage":"/images/optional/ow-hi-fi-wireframes.png"
@@ -267,4 +267,4 @@
         "demonstrationSkills": "Showcased skills in UX/UI design, technical leadership, and user testing. Demonstrated ability to deliver a high-quality, scalable solution for educational needs. This project allowed me to grow from an intermediate designer into a Senior UX/UI Designer by taking on more responsibility."
       }
     }
-  ]  
+  ]

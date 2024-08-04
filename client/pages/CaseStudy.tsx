@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import Project from '../../models/projectdata.ts'
 import Button from '../components/Button.tsx'
 
-const projects: Project[] = caseStudyData as Project[]
+const projects: Project[] = caseStudyData as unknown as Project[]
 
 const CaseStudy: React.FC = () => {
   const { slug } = useParams<{ slug: string }>()
@@ -148,19 +148,24 @@ const CaseStudy: React.FC = () => {
           </div>
         )}
 
-        {/* Design Process Images */}
         <div className="mt-12 flex items-center justify-center space-x-4">
           {Array.isArray(project.designProcess.designProcessImages) &&
             project.designProcess.designProcessImages.length > 0 && (
               <div className="text-center">
                 {project.designProcess.designProcessImages.map(
-                  (image, index) => (
-                    <img
-                      key={index}
-                      src={image}
-                      alt="Design process images"
-                      className="mx-auto mb-10 h-auto max-w-full"
-                    />
+                  (imageObj, index) => (
+                    <div key={index} className="mb-10">
+                      <img
+                        src={imageObj.path}
+                        alt={`Design process ${index + 1}`}
+                        className="mx-auto h-auto max-w-full"
+                      />
+                      {imageObj.caption && (
+                        <p className="mt-2 text-sm text-gray-600">
+                          {imageObj.caption}
+                        </p>
+                      )}
+                    </div>
                   ),
                 )}
               </div>

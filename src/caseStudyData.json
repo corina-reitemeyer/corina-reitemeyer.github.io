@@ -21,11 +21,16 @@
     "designProcess": {
       "research": "We conducted market research to understand the needs and preferences of vegetable gardeners. Analysed existing solutions to identify gaps and opportunities.",
       "definingProblem": "Existing resources are often overwhelming or insufficiently tailored to the specific needs and preferences of veggie gardeners, leading to uncertainty about plant selection, layout, planting schedules, and maintenance practices. They are either catering to beginner gardeners, or to fully experienced users. A solution is needed that simplifies planning and maintenance of the garden, providing a planning tool and reminders to ensure the plants thrive and produce a successful harvest, but still acknowledges the gardeners proficiency level.",
-      "ideation": "Developed user personas, user journey with important tech stack points and prioritised features based on research findings and MVP scope. Focused on functionalities like garden planning, plant tracking, care reminders, and plant information.",
+      "ideation": "Developed user personas that focused on different gardening proficiencies and interests, user journey with important tech stack points and prioritised features based on research findings and MVP scope. Focused on functionalities like garden planning, plant tracking, care reminders, and plant information.",
       "prototyping": "Created low-fidelity wireframes as a team, to facilitate buy-in by the whole team and feasibility check. Then I went and created high-fidelity wireframes, to ensure we have a cohesive user experience and a plan for how the user interface looks.",
       "designProcessImages": [
-        "/images/optional/grow-grub-user-profiles.png",
-        "/images/optional/grow-grub-user-tech-journey.png"
+        {
+          "path": "/images/optional/grow-grub-user-profiles.png"
+          },
+          {
+            "path": "/images/optional/grow-grub-user-tech-journey.png",
+            "caption": "A MVP user journey map, with tech dependency points - this was used to highlight the screens that we needed to build, what types of inteactions needed to be considered for them, and what data was going to be requested from the database. This was especially important as we had to determine what type of information the user would see for each screen, parts of this was send by an API and the rest from our own database."
+          }
       ]
     },
     "softwareDevelopment": {
@@ -82,8 +87,17 @@
         "prototyping": "Developed wireframes and mockups using tools like Figma to visualize the user interface and gather initial feedback. Created a user journey based on the user profiles for a veteran toll-collecting troll, and a newly inducted one.",
         "feedback": "Received feedback from peers and instructors, the calculator itself was a bit too similar to the toll paying sites (which are focused on vehicle owners who get charged driving over the bridge), but in this case we needed to focus it on the trolls who collect them. This significantly simplified the calculator.",
         "designProcessImages":[
-          "/images/optional/troll-olaf-profile.png",
-          "/images/optional/troll-stacey-profile.png"
+          {
+            "path": "/images/optional/troll-olaf-profile.png"
+            },
+            {
+              "path": "/images/optional/troll-stacey-profile.png"
+            },
+            {
+              "path": "/images/optional/troll-user-journey.png",
+              "caption": "A user journey map which takes the two troll user profiles into account. It shows the different interaction points for non-registered and registered users. The non-registered view is limited (e.g. cannot like or favourite bridges, can't collect tolls or assign themselves to a bridge) compared to the view if a user is logged in."
+            }
+    
         ]
       },
       "softwareDevelopment": {
@@ -142,7 +156,10 @@
       "prototyping": "Developed initial prototypes of templates using design tools like Figma. Created an MVP, which we then A/B tested with a small user group.",
       "feedback": "Gathered feedback from both novice and experienced users after we rolled out the feature to more users to gain feedback. Identified areas for improvement, such as adding more detailed instructions and improving template flexibility.",
       "designProcessImages":[
-        "/images/optional/PROJECT TEMPLATES - MVP.jpg"
+        {
+        "path": "/images/optional/PROJECT TEMPLATES - MVP.jpg",
+        "caption": "This user journey shows the user interaction points where users would creating studies from - dashboard and studies tab. From here, the user can chose a template, which opens up a view with further information on how the template should be used and what it contains. "
+        }
       ]
     },
     "solutionImplementation": {
@@ -164,7 +181,7 @@
       "summary": "The Optimal Workshop Templates project successfully created a set of pre-built templates that facilitate user research and information architecture while serving as educational tools. It highlighted the value of combining instructional content with practical tools. The next step involves expanding the range of use cases by introducing additional templates. This will provide users with pre-configured data across various areas of the tool, enhancing their ability to seamlessly integrate and transfer information between different tools.",
       "demonstrationSkills": "Demonstrated skills in product design, user research, and integration with existing tools. Showcased ability to design for both usability and instructional purposes."
     },
-    "finalImage":"/images/optional/ow-hi-fi-wireframes.png"
+    "finalImage":"/images/product/ow-hi-fi-wireframes.png"
   }, 
 
     {
@@ -191,9 +208,12 @@
         "prototyping": "Created prototypes of key components and design patterns using tools like Figma. Tested prototypes with internal teams to validate functionality and gather feedback.",
         "feedback": "Incorporated feedback from designers, developers, and accessibility experts. Adjusted the design system based on usability testing and stakeholder input to ensure it met diverse needs and standards.",
         "designProcessImages":[
-          "/images/optional/design-system-process-1.png",
-          "/images/optional/design-system-process-2.png"
-
+            {
+            "path": "/images/optional/design-system-process-1.png"
+            },
+            {
+              "path": "/images/optional/design-system-process-2.png"
+            }
         ]
       },
       "solutionImplementation": {
@@ -242,8 +262,9 @@
         "prototyping": "Developed interactive prototypes using tools like Adobe XD. Conducted usability testing with teachers to gather feedback and refine the design.",
         "feedback": "Collected feedback from initial user testing and stakeholder reviews. Incorporated suggestions to improve the usability and effectiveness of the design. Because the designs were worked on in parallel to the change programme itself, stakeholders and teachers who worked at the Ministry provided regular feedback. Regular consulation periods were held with NCEA teachers who worked at New Zealand schools.",
         "designProcessImages":[
-          "/images/optional/ncea-process-1.png"
-
+          {
+            "path": "/images/optional/ncea-process-1.png"
+          }
         ]
       },
       "solutionImplementation": {

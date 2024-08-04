@@ -1,4 +1,9 @@
 // models/projectdata.ts
+export default interface DesignProcessImage {
+  path: string
+  caption?: string
+}
+
 export default interface Project {
   id: number
   projectImage: string
@@ -18,7 +23,7 @@ export default interface Project {
     ideation: string
     prototyping: string
     feedback?: string
-    designProcessImages?: string[]
+    designProcessImages?: DesignProcessImage[]
   }
   softwareDevelopment?: {
     techStack?: string

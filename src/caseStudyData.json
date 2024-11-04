@@ -1,139 +1,6 @@
 [
   {
     "id": 1,
-    "projectImage": "/images/portfolio/grow-grub.png",
-    "headerImage": "/images/banner-images/grow-grub.png",
-    "projectTitle": "Grow-Grub",
-    "slug": "grow-grub",
-    "company": "Dev Academy",
-    "role": "Full Stack Developer (Student), UX/UI Designer",
-    "date": "June - July 2024",
-    "overview": "Grow-Grub is a comprehensive app designed to help gardening enthusiasts in New Zealand effortlessly plan, track, and manage their vegetable gardens, catering to both beginners and seasoned gardeners.",
-    "objectiveGoals": [
-      "Simplify garden management by integrating planning, tracking, and care into a single platform.",
-      "Enhance gardening success rates with features such as automated care reminders and progress tracking.",
-      "Provide a user-friendly experience tailored to both novice and experienced gardeners.",
-      "Offer personalised advice and seasonal tips to help users make informed gardening decisions."
-    ],
-    "background": "The concept for Grow-Grub originated from our team's shared passion for vegetable gardening and caring for plants. Recognising the challenges gardeners face, we developed the app to streamline garden planning, tracking, and management. Our goal was to cater to the increasing number of people interested in sustainable living and home gardening. Unlike most garden design tools, which are often proprietary, we aimed to create an open-source platform to make garden planning accessible and customisable for everyone.",
-    "backgroundImages": [
-      "/images/optional/grow-grub-background.png"],
-    "designProcess": {
-      "research": "We conducted market research to understand the needs and preferences of vegetable gardeners. Analysed existing solutions to identify gaps and opportunities.",
-      "definingProblem": "Existing resources are often overwhelming or insufficiently tailored to the specific needs and preferences of veggie gardeners, leading to uncertainty about plant selection, layout, planting schedules, and maintenance practices. They are either catering to beginner gardeners, or to fully experienced users. A solution is needed that simplifies planning and maintenance of the garden, providing a planning tool and reminders to ensure the plants thrive and produce a successful harvest, but still acknowledges the gardeners proficiency level.",
-      "ideation": "Developed user personas that focused on different gardening proficiencies and interests, user journey with important tech stack points and prioritised features based on research findings and MVP scope. Focused on functionalities like garden planning, plant tracking, care reminders, and plant information.",
-      "prototyping": "Created low-fidelity wireframes as a team, to facilitate buy-in by the whole team and feasibility check. Then I went and created high-fidelity wireframes, to ensure we have a cohesive user experience and a plan for how the user interface looks.",
-      "designProcessImages": [
-        {
-          "path": "/images/optional/grow-grub-user-profiles.png"
-          },
-          {
-            "path": "/images/optional/grow-grub-user-tech-journey.png",
-            "caption": "A MVP user journey map, with tech dependency points - this was used to highlight the screens that we needed to build, what types of inteactions needed to be considered for them, and what data was going to be requested from the database. This was especially important as we had to determine what type of information the user would see for each screen, parts of this was send by an API and the rest from our own database."
-          }
-      ]
-    },
-    "softwareDevelopment": {
-      "techStack": "We tried to use most of the technologies that have been introduced to us during the bootcamp. Used React for cross-platform development, Gemini API to access plant data, and storig data with SQLite3 (with Knex) for backend services. For the Garden layout tool, we used the 'React-Grid-Layout' npm package. We used Tailwind CSS to keep the components and styling consistent throughout the product, the front-end was built predominantely with React and TypeScript. We used Auth0 to authenticate the user with a register page and login functionality.",
-      "architecture": "Implemented a modular architecture with a clear separation between frontend and backend components. Ensured scalability and maintainability of the app.",
-      "developmentProcess": "Followed an agile development process with regular sprints and iterative merges. Employed continuous integration and deployment practices to ensure timely updates. We sliced the features vertically (front & back end) and horizontally (front-end only or back-end only) depending on the feature that needed to be priotised. We worked on features in pairs or solo.",
-      "integration": "Integrated frontend and backend systems, ensuring seamless synchronisation of data and smooth user experience across different devices. Connected an external API (Gemini) with a SQLite based database, which contains additional plant data, saved garden layout data and user data."
-    },
-    "solutionImplementation": {
-      "designDecisions": "Focused on creating a clean, intuitive interface with a natural color scheme to enhance user engagement. Incorporated and prioritised features that simplify planning and maintancence of gardens, over decorative nice to have featurss. Using Tailwind CSS framework ensure the brand and UI design was implemented cohesively.",
-      "codingProcesses": "Employed best practices in coding, including modular development, and code reviews. We regularly pair programmed, and we made sure we got everyone on features that aligned with their learning objectives. Regular check-ins of the whole team to determine any blockers or possible dependencies on other workstreams.",
-      "deployment": "Originally deployed the app to a Dev Academy's Dokku host - however this was a short-term solution and we need to explore an alternative where we can host the app longer.",
-      "challengesFaced": "Faced challenges related to integrating various features seamlessly and optimizing the app for different devices and operating systems. We had a large team, so we had to carefully plan out 2-3 workstreams ad overall areas that everyone worked on simutanously. Due to my UX design background, I decided to take ownership of the front-end, as I knew the wireframes very well and I wanted to learn how to use the Tailwind CSS framework and implement React's use methods in different ways. But this also meant that I was a bit further removed from the back-end as anticipated, and this caused miscommunication to some parts that we wanted to display visually e.g. we had a few missing vegetable icons and plant care instructions, because I wasn't aware we got this data from Gemini.",
-      "designProductImages":[
-        "/images/product/grow-grub-hi-fi-wireframes 1.png",
-        "/images/product/grow-grub-hi-fi-wireframes 2.png"
-      ]
-    },
-    "lessonsLearned": {
-      "designInsights": "Most of the peers in my team never worked with a designer before, so I had to take extra care in explaining decisions and design patterns carefully. At the end of the project, they did give me the feedback that this helped them immensely for envisioning what the product would look like. It created a sense of certainty and agreement of what we were going to build together. I was very aware of keeping the design incredibly simple, mainly because of the tech spikes we had to explore (e.g. Gemini API and React Grid) in a very short time frame, and all of us code at different speeds. As a designer, I would have fleshed it out a little more if I had a bit more time for the design process.",
-      "technicalInsights": "Gained in-depth knowledge about front-end development. I always spread myself across full- in our grou projects at the course, but I wanted to ensure that I started gaining deeper knowledge in React, which to this point I felt just scraped the surface. Instead of Gemini, we originally wanted to implement Perenual API, but ran into a pay wall and therefore had to switch direction.",
-      "improvements": "We didn't get around to implement any tests (test-driven development) and test our wireframes with any of our peers, which would have been something we would have to plan into our process to begin with. Additionally, we had team members who go quite excited about the project, which caused them to get carried away and added more features even though we were already stretching the MVP to it's limit. Being adaptive is good, but some of those add-ons were done without the buy-in by the entire team. This caused some pressure on other workstreams, as additional dependencies were created, and also meant that we lost a bit of oversight on what the final product would contain in terms of functionality. Auth0 needs to be setup so that anyone can login/register, including a fleshed out user journey and screens for this part of the product."
-    },
-    "keyTakeaways": {
-      "summary": "We managed to create an MVP of Grow-Grub, which successfully addressed the need planning, tracking tasks and showing important plant data for several different fruits and vegetables. The functionality of the MVP would be enough for a testing prototype, with future enhancements in the backlog.",
-      "demonstrationSkills": "Demonstrated skills in user-centered design, cross-platform development, and agile project management. Worked in pair and solo programming sessions, led couragous conversations by positively challenging the team of making smart product decisions, particularly in the planning stage of the product."
-    },
-    "finalImage": "/images/optional/grow-grub-hi-fi-wireframes.png",
-    "githubLink": "https://github.com/corina-reitemeyer/Grow-Grub"
-  },
-
-    {
-      "id": 2,
-      "projectImage": "/images/portfolio/trolltollcalculator.png",
-      "headerImage": "/images/banner-images/troll-toll.png",
-      "projectTitle": "Troll Toll Calculator",
-      "slug": "troll-toll-calculator",
-      "company": "Dev Academy",
-      "role": "Full Stack Developer (Student), UX/UI Designer, Product Owner",
-      "date": "June 2024",
-      "overview": "The Troll Toll Calculator is a web application developed to simplify the process of calculating and managing tolls on Auckland bridges for Trolls. The MVP of the product features a toll calculator, and a list of bridges which include useful information and troll occupation.",
-      "objectiveGoals": [
-        "Enable Trolls to quickly calculate tolls based on the bridge. It should be able to convert the toll fee in troll currency.",
-        "Provide a user-friendly interface that simplifies toll management and record-keeping.",
-        "Ensure accurate toll calculations with real-time updates and integration with a backend system.",
-        "Include web accessibility to ensure the app is accessible to various different trolls and abilities.",
-        "Communicate which bridge is occupied by a troll, and which ones are open for toll collection."
-      ],
-      "background": "The Troll Toll Calculator was brought to life as part of a teacher-led project at Dev Academy. The cost of living is on the rise, and house prices are skyrocketing. Fortunately, for the rest of NZ, we are safe from traffic monetisation, unlike our friends in Auckland who have to deal with the trolls that live under their landmark bridges. It's tough for a troll in 2024. There is a lot of competition and not a lot of good resources for trolls. Trolls are are the hunt for smarter, more digital ways to optimise their toll revenue. That's where we come in with our Bridge Troll Toll Calculator app.",
-      "designProcess": {
-        "research": "Conducted research on toll calculation features that exist in Australasia (e.g. Waka Kotahi, Linkt).",
-        "definingProblem": "The main problem was to create an intuitive tool that would simplify toll calculations and management for Trolls, who are not necessarily tech-savvy and may have accessibility needs.",
-        "ideation": "Brainstormed various features such as dynamic toll calculation based on user input, bridge-specific toll rates that get converted into troll currency (rock candy, gold rings, and goats), and a list of bridges that trolls can collect tolls from.",
-        "prototyping": "Developed wireframes and mockups using tools like Figma to visualize the user interface and gather initial feedback. Created a user journey based on the user profiles for a veteran toll-collecting troll, and a newly inducted one.",
-        "feedback": "Received feedback from peers and instructors, the calculator itself was a bit too similar to the toll paying sites (which are focused on vehicle owners who get charged driving over the bridge), but in this case we needed to focus it on the trolls who collect them. This significantly simplified the calculator.",
-        "designProcessImages":[
-          {
-            "path": "/images/optional/troll-olaf-profile.png"
-            },
-            {
-              "path": "/images/optional/troll-stacey-profile.png"
-            },
-            {
-              "path": "/images/optional/troll-user-journey.png",
-              "caption": "A user journey map which takes the two troll user profiles into account. It shows the different interaction points for non-registered and registered users. The non-registered view is limited (e.g. cannot like or favourite bridges, can't collect tolls or assign themselves to a bridge) compared to the view if a user is logged in."
-            }
-    
-        ]
-      },
-      "softwareDevelopment": {
-        "techStack": "React for the frontend, Node.js and Express for the backend, SQLite for the database using Knex.js.",
-        "architecture": "Implemented a modular architecture with separate components for toll calculation, user management, and information on a variety of Auckland's bridges. Used RESTful APIs for communication between frontend and backend.",
-        "developmentProcess": "Followed Agile methodologies with iterative development and regular sprint reviews. Employed Git for version control and collaborative coding.",
-        "integration": "Implemented secure authentication for user access with Auth0.",
-        "softwareDevelopmentImages": [
-          "/images/optional/troll-db-diagram.png"
-        ]
-      },
-      "solutionImplementation": {
-        "designDecisions": "Opted for a clean, minimalistic design to ensure ease of use. Prioritized performance optimization and responsiveness.",
-        "codingProcesses": "Used React hooks for state management and custom middleware for backend logic. Applied best practices for coding and documentation.",
-        "accessibilityUsability": "Ensured compliance with WCAG guidelines for accessibility. However, web accessibility was set as a stretch goal by the teacher, so we did not get around to implementing it.",
-        "challengesFaced": "Encountered challenges with the bridges list (favouritising and activating bridges that are collecting tolls). We also wanted to utilise the Waka Kotahi API to show the location of each bridge, but we found out that this was no longer possible due to limiting the use of the API for third-party users.",
-        "designProductImages":[
-          "/images/product/trollcalculator-hi-fi-wireframes 1.png",
-          "/images/product/trollcalculator-hi-fi-wireframes 2.png"
-        ]
-      },
-      "lessonsLearned": {
-        "designInsights": "Highlighted the importance of iterative design and user feedback in creating an effective user interface, especially when surprising technical limitations appeared in the building process.",
-        "technicalInsights": "Gained experience in integrating multiple technologies and managing state in a React application. Improved skills in backend development, particularly database implementation.",
-        "improvements": "Identified areas for improvement in error handling and user onboarding processes. We ran out of time to implement web accessibility and overall designs that were wireframes. Future iterations will focus on enhancing these aspects."
-      },
-      "keyTakeaways": {
-        "summary": "The Troll Toll Calculator as an MVP product simplifies toll management for Trolls with a user-friendly interface and accurate calculation features. It highlights the importance of integrating user feedback and web accessibility into design and development.",
-        "demonstrationSkills": "Demonstrated skills in full-stack development, including frontend design, backend integration. Showcased ability to work within a team and manage a project from conception to near deployment stage. I was able to take the role as the product owner, and therefore take leadership in the planning stages, make executive decisions alongside the teacher of keeping workstreams on track. As the product owner and designer, I also took advocacy of the user."
-      },
-      "finalImage":"/images/optional/trollcalculator-hi-fi-wireframes.png",
-      "githubLink": "https://github.com/"
-    },
-    
-  {
-    "id": 3,
     "projectImage": "/images/portfolio/ow-templates.png",
     "headerImage": "/images/banner-images/ow-templates.png",
     "projectTitle": "Optimal Workshop Templates",
@@ -185,7 +52,7 @@
   }, 
 
     {
-      "id": 4,
+      "id": 2,
       "projectImage": "/images/portfolio/MoE-Design-System-Hero.png",
       "headerImage": "/images/banner-images/moe-design-system.png",
       "projectTitle": "Ministry of Education - Design System",
@@ -239,7 +106,7 @@
     },
 
   {
-      "id": 5,
+      "id": 3,
       "projectImage": "/images/portfolio/NCEA - HERO.png",
       "headerImage": "/images/banner-images/moe-ncea.png",
       "projectTitle": "Ministry of Education - NCEA Website",
@@ -287,5 +154,137 @@
         "summary": "The NCEA Website project successfully delivered a centralised platform for teachers, improving access to crucial educational resources and streamlining navigation. The project highlighted the importance of user-centered design and effective integration of educational content.",
         "demonstrationSkills": "Showcased skills in UX/UI design, technical leadership, and user testing. Demonstrated ability to deliver a high-quality, scalable solution for educational needs. This project allowed me to grow from an intermediate designer into a Senior UX/UI Designer by taking on more responsibility."
       }
-    }
+    },
+    {
+      "id": 4,
+      "projectImage": "/images/portfolio/grow-grub.png",
+      "headerImage": "/images/banner-images/grow-grub.png",
+      "projectTitle": "Grow-Grub",
+      "slug": "grow-grub",
+      "company": "Dev Academy",
+      "role": "Full Stack Developer (Student), UX/UI Designer",
+      "date": "June - July 2024",
+      "overview": "Grow-Grub is a comprehensive app designed to help gardening enthusiasts in New Zealand effortlessly plan, track, and manage their vegetable gardens, catering to both beginners and seasoned gardeners.",
+      "objectiveGoals": [
+        "Simplify garden management by integrating planning, tracking, and care into a single platform.",
+        "Enhance gardening success rates with features such as automated care reminders and progress tracking.",
+        "Provide a user-friendly experience tailored to both novice and experienced gardeners.",
+        "Offer personalised advice and seasonal tips to help users make informed gardening decisions."
+      ],
+      "background": "The concept for Grow-Grub originated from our team's shared passion for vegetable gardening and caring for plants. Recognising the challenges gardeners face, we developed the app to streamline garden planning, tracking, and management. Our goal was to cater to the increasing number of people interested in sustainable living and home gardening. Unlike most garden design tools, which are often proprietary, we aimed to create an open-source platform to make garden planning accessible and customisable for everyone.",
+      "backgroundImages": [
+        "/images/optional/grow-grub-background.png"],
+      "designProcess": {
+        "research": "We conducted market research to understand the needs and preferences of vegetable gardeners. Analysed existing solutions to identify gaps and opportunities.",
+        "definingProblem": "Existing resources are often overwhelming or insufficiently tailored to the specific needs and preferences of veggie gardeners, leading to uncertainty about plant selection, layout, planting schedules, and maintenance practices. They are either catering to beginner gardeners, or to fully experienced users. A solution is needed that simplifies planning and maintenance of the garden, providing a planning tool and reminders to ensure the plants thrive and produce a successful harvest, but still acknowledges the gardeners proficiency level.",
+        "ideation": "Developed user personas that focused on different gardening proficiencies and interests, user journey with important tech stack points and prioritised features based on research findings and MVP scope. Focused on functionalities like garden planning, plant tracking, care reminders, and plant information.",
+        "prototyping": "Created low-fidelity wireframes as a team, to facilitate buy-in by the whole team and feasibility check. Then I went and created high-fidelity wireframes, to ensure we have a cohesive user experience and a plan for how the user interface looks.",
+        "designProcessImages": [
+          {
+            "path": "/images/optional/grow-grub-user-profiles.png"
+            },
+            {
+              "path": "/images/optional/grow-grub-user-tech-journey.png",
+              "caption": "A MVP user journey map, with tech dependency points - this was used to highlight the screens that we needed to build, what types of inteactions needed to be considered for them, and what data was going to be requested from the database. This was especially important as we had to determine what type of information the user would see for each screen, parts of this was send by an API and the rest from our own database."
+            }
+        ]
+      },
+      "softwareDevelopment": {
+        "techStack": "We tried to use most of the technologies that have been introduced to us during the bootcamp. Used React for cross-platform development, Gemini API to access plant data, and storig data with SQLite3 (with Knex) for backend services. For the Garden layout tool, we used the 'React-Grid-Layout' npm package. We used Tailwind CSS to keep the components and styling consistent throughout the product, the front-end was built predominantely with React and TypeScript. We used Auth0 to authenticate the user with a register page and login functionality.",
+        "architecture": "Implemented a modular architecture with a clear separation between frontend and backend components. Ensured scalability and maintainability of the app.",
+        "developmentProcess": "Followed an agile development process with regular sprints and iterative merges. Employed continuous integration and deployment practices to ensure timely updates. We sliced the features vertically (front & back end) and horizontally (front-end only or back-end only) depending on the feature that needed to be priotised. We worked on features in pairs or solo.",
+        "integration": "Integrated frontend and backend systems, ensuring seamless synchronisation of data and smooth user experience across different devices. Connected an external API (Gemini) with a SQLite based database, which contains additional plant data, saved garden layout data and user data."
+      },
+      "solutionImplementation": {
+        "designDecisions": "Focused on creating a clean, intuitive interface with a natural color scheme to enhance user engagement. Incorporated and prioritised features that simplify planning and maintancence of gardens, over decorative nice to have featurss. Using Tailwind CSS framework ensure the brand and UI design was implemented cohesively.",
+        "codingProcesses": "Employed best practices in coding, including modular development, and code reviews. We regularly pair programmed, and we made sure we got everyone on features that aligned with their learning objectives. Regular check-ins of the whole team to determine any blockers or possible dependencies on other workstreams.",
+        "deployment": "Originally deployed the app to a Dev Academy's Dokku host - however this was a short-term solution and we need to explore an alternative where we can host the app longer.",
+        "challengesFaced": "Faced challenges related to integrating various features seamlessly and optimizing the app for different devices and operating systems. We had a large team, so we had to carefully plan out 2-3 workstreams ad overall areas that everyone worked on simutanously. Due to my UX design background, I decided to take ownership of the front-end, as I knew the wireframes very well and I wanted to learn how to use the Tailwind CSS framework and implement React's use methods in different ways. But this also meant that I was a bit further removed from the back-end as anticipated, and this caused miscommunication to some parts that we wanted to display visually e.g. we had a few missing vegetable icons and plant care instructions, because I wasn't aware we got this data from Gemini.",
+        "designProductImages":[
+          "/images/product/grow-grub-hi-fi-wireframes 1.png",
+          "/images/product/grow-grub-hi-fi-wireframes 2.png"
+        ]
+      },
+      "lessonsLearned": {
+        "designInsights": "Most of the peers in my team never worked with a designer before, so I had to take extra care in explaining decisions and design patterns carefully. At the end of the project, they did give me the feedback that this helped them immensely for envisioning what the product would look like. It created a sense of certainty and agreement of what we were going to build together. I was very aware of keeping the design incredibly simple, mainly because of the tech spikes we had to explore (e.g. Gemini API and React Grid) in a very short time frame, and all of us code at different speeds. As a designer, I would have fleshed it out a little more if I had a bit more time for the design process.",
+        "technicalInsights": "Gained in-depth knowledge about front-end development. I always spread myself across full- in our grou projects at the course, but I wanted to ensure that I started gaining deeper knowledge in React, which to this point I felt just scraped the surface. Instead of Gemini, we originally wanted to implement Perenual API, but ran into a pay wall and therefore had to switch direction.",
+        "improvements": "We didn't get around to implement any tests (test-driven development) and test our wireframes with any of our peers, which would have been something we would have to plan into our process to begin with. Additionally, we had team members who go quite excited about the project, which caused them to get carried away and added more features even though we were already stretching the MVP to it's limit. Being adaptive is good, but some of those add-ons were done without the buy-in by the entire team. This caused some pressure on other workstreams, as additional dependencies were created, and also meant that we lost a bit of oversight on what the final product would contain in terms of functionality. Auth0 needs to be setup so that anyone can login/register, including a fleshed out user journey and screens for this part of the product."
+      },
+      "keyTakeaways": {
+        "summary": "We managed to create an MVP of Grow-Grub, which successfully addressed the need planning, tracking tasks and showing important plant data for several different fruits and vegetables. The functionality of the MVP would be enough for a testing prototype, with future enhancements in the backlog.",
+        "demonstrationSkills": "Demonstrated skills in user-centered design, cross-platform development, and agile project management. Worked in pair and solo programming sessions, led couragous conversations by positively challenging the team of making smart product decisions, particularly in the planning stage of the product."
+      },
+      "finalImage": "/images/optional/grow-grub-hi-fi-wireframes.png",
+      "githubLink": "https://github.com/corina-reitemeyer/Grow-Grub"
+    },
+  
+      {
+        "id": 5,
+        "projectImage": "/images/portfolio/trolltollcalculator.png",
+        "headerImage": "/images/banner-images/troll-toll.png",
+        "projectTitle": "Troll Toll Calculator",
+        "slug": "troll-toll-calculator",
+        "company": "Dev Academy",
+        "role": "Full Stack Developer (Student), UX/UI Designer, Product Owner",
+        "date": "June 2024",
+        "overview": "The Troll Toll Calculator is a web application developed to simplify the process of calculating and managing tolls on Auckland bridges for Trolls. The MVP of the product features a toll calculator, and a list of bridges which include useful information and troll occupation.",
+        "objectiveGoals": [
+          "Enable Trolls to quickly calculate tolls based on the bridge. It should be able to convert the toll fee in troll currency.",
+          "Provide a user-friendly interface that simplifies toll management and record-keeping.",
+          "Ensure accurate toll calculations with real-time updates and integration with a backend system.",
+          "Include web accessibility to ensure the app is accessible to various different trolls and abilities.",
+          "Communicate which bridge is occupied by a troll, and which ones are open for toll collection."
+        ],
+        "background": "The Troll Toll Calculator was brought to life as part of a teacher-led project at Dev Academy. The cost of living is on the rise, and house prices are skyrocketing. Fortunately, for the rest of NZ, we are safe from traffic monetisation, unlike our friends in Auckland who have to deal with the trolls that live under their landmark bridges. It's tough for a troll in 2024. There is a lot of competition and not a lot of good resources for trolls. Trolls are are the hunt for smarter, more digital ways to optimise their toll revenue. That's where we come in with our Bridge Troll Toll Calculator app.",
+        "designProcess": {
+          "research": "Conducted research on toll calculation features that exist in Australasia (e.g. Waka Kotahi, Linkt).",
+          "definingProblem": "The main problem was to create an intuitive tool that would simplify toll calculations and management for Trolls, who are not necessarily tech-savvy and may have accessibility needs.",
+          "ideation": "Brainstormed various features such as dynamic toll calculation based on user input, bridge-specific toll rates that get converted into troll currency (rock candy, gold rings, and goats), and a list of bridges that trolls can collect tolls from.",
+          "prototyping": "Developed wireframes and mockups using tools like Figma to visualize the user interface and gather initial feedback. Created a user journey based on the user profiles for a veteran toll-collecting troll, and a newly inducted one.",
+          "feedback": "Received feedback from peers and instructors, the calculator itself was a bit too similar to the toll paying sites (which are focused on vehicle owners who get charged driving over the bridge), but in this case we needed to focus it on the trolls who collect them. This significantly simplified the calculator.",
+          "designProcessImages":[
+            {
+              "path": "/images/optional/troll-olaf-profile.png"
+              },
+              {
+                "path": "/images/optional/troll-stacey-profile.png"
+              },
+              {
+                "path": "/images/optional/troll-user-journey.png",
+                "caption": "A user journey map which takes the two troll user profiles into account. It shows the different interaction points for non-registered and registered users. The non-registered view is limited (e.g. cannot like or favourite bridges, can't collect tolls or assign themselves to a bridge) compared to the view if a user is logged in."
+              }
+      
+          ]
+        },
+        "softwareDevelopment": {
+          "techStack": "React for the frontend, Node.js and Express for the backend, SQLite for the database using Knex.js.",
+          "architecture": "Implemented a modular architecture with separate components for toll calculation, user management, and information on a variety of Auckland's bridges. Used RESTful APIs for communication between frontend and backend.",
+          "developmentProcess": "Followed Agile methodologies with iterative development and regular sprint reviews. Employed Git for version control and collaborative coding.",
+          "integration": "Implemented secure authentication for user access with Auth0.",
+          "softwareDevelopmentImages": [
+            "/images/optional/troll-db-diagram.png"
+          ]
+        },
+        "solutionImplementation": {
+          "designDecisions": "Opted for a clean, minimalistic design to ensure ease of use. Prioritized performance optimization and responsiveness.",
+          "codingProcesses": "Used React hooks for state management and custom middleware for backend logic. Applied best practices for coding and documentation.",
+          "accessibilityUsability": "Ensured compliance with WCAG guidelines for accessibility. However, web accessibility was set as a stretch goal by the teacher, so we did not get around to implementing it.",
+          "challengesFaced": "Encountered challenges with the bridges list (favouritising and activating bridges that are collecting tolls). We also wanted to utilise the Waka Kotahi API to show the location of each bridge, but we found out that this was no longer possible due to limiting the use of the API for third-party users.",
+          "designProductImages":[
+            "/images/product/trollcalculator-hi-fi-wireframes 1.png",
+            "/images/product/trollcalculator-hi-fi-wireframes 2.png"
+          ]
+        },
+        "lessonsLearned": {
+          "designInsights": "Highlighted the importance of iterative design and user feedback in creating an effective user interface, especially when surprising technical limitations appeared in the building process.",
+          "technicalInsights": "Gained experience in integrating multiple technologies and managing state in a React application. Improved skills in backend development, particularly database implementation.",
+          "improvements": "Identified areas for improvement in error handling and user onboarding processes. We ran out of time to implement web accessibility and overall designs that were wireframes. Future iterations will focus on enhancing these aspects."
+        },
+        "keyTakeaways": {
+          "summary": "The Troll Toll Calculator as an MVP product simplifies toll management for Trolls with a user-friendly interface and accurate calculation features. It highlights the importance of integrating user feedback and web accessibility into design and development.",
+          "demonstrationSkills": "Demonstrated skills in full-stack development, including frontend design, backend integration. Showcased ability to work within a team and manage a project from conception to near deployment stage. I was able to take the role as the product owner, and therefore take leadership in the planning stages, make executive decisions alongside the teacher of keeping workstreams on track. As the product owner and designer, I also took advocacy of the user."
+        },
+        "finalImage":"/images/optional/trollcalculator-hi-fi-wireframes.png",
+        "githubLink": "https://github.com/"
+      }
   ]

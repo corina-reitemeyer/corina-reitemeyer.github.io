@@ -23,9 +23,9 @@ export default function Header() {
           </li>
           <li>
             <a
-              href="/files/Corina_Rei_CV_JUL2024.pdf"
+              href="/files/Corina_Rei_UXDesigner_CV_NOV2024"
               className="relative inline-block font-medium text-gray-600 hover:text-black"
-              download="Corina_Rei_CV_JUL2024.pdf"
+              download="Corina_Rei_UXDesigner_CV_NOV2024"
             >
               Resume
             </a>

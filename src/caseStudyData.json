@@ -27,8 +27,12 @@
       "feedback": "So far I have shown the wireframes to a few students, who gave really good constructive feedback such as including rueda hand signals and providing several sources of video content to be able to view the move from different angles.",
       "designProcessImages": [
         {
-          "path": "/images/product/ritmo-personas.png",
-          "caption": "User personas for Beginner, Improvers, Intermediate/Advanced level and Instructors"
+          "path": "/images/product/ritmo-personas-1.png",
+          "caption": "User personas for a Beginner and Improvers level student"
+        },
+        {
+          "path": "/images/product/ritmo-personas-2.png",
+          "caption": "User personas for a Intermediate/Advanced level student, and Dance Instructor"
         },
         {
           "path": "/images/product/sofia-userjourney-ritmo.png",
@@ -89,6 +93,9 @@
       "Ensure templates are versatile and can be adapted to various project needs, from simple to complex."
     ],
     "background": "The Templates project was initiated to address the need for structured and educational resources within Optimal Workshop's suite of tools. The goal was to make it easier for users to apply best practices in their research and design workflows, thus improving overall efficiency and effectiveness. Additionally it addressed the initial 'blank screen' scenario, where less experienced users may find themselves in, unsure where to start especially if they had a specific research outcome in mind.",
+    "backgroundImages": [
+      "/images/product/ow-research.png"
+    ],
     "designProcess": {
       "research": "Conducted user interviews and surveys to identify common challenges and needs in user research and information architecture. Analysed existing tools and templates for gaps and opportunities. Conducted competitor analysis to highlight gaps in the market.",
       "definingProblem": "Inexperienced users needed more guidance when setting up research projects, as they often found themselves unsure how to connect the tools with the results they were hoping to achieve. Experienced users needed a way to quickly start projects with structured templates that would also serve as educational tools to enable them to explore the tools in ways they may have not thought of. Often they would recommend certain tools and processes around it to the juniors in their teams. The challenge was to design templates that were both instructive and adaptable.",
@@ -150,25 +157,32 @@
         "Provide clear design guidelines and documentation to support future development and maintenance.",
         "Facilitate quicker and more efficient website development by offering reusable components and standardized design patterns."
       ],
-      "background": "In response to the urgent need to build a functional and consistent website during the COVID-19 lockdown, the Ministry of Education recognized the necessity for a robust design system. The design system was conceived to streamline future development efforts and enhance the overall user experience across digital touchpoints.",
+      "background": "In response to the urgent need to build a functional and consistent website during the COVID-19 lockdown ('Learning from Home'), the Ministry of Education recognised the necessity for a robust design system. The design system was conceived to streamline future development efforts and enhance the overall user experience across digital touchpoints.",
+      "backgroundImages": [
+      "/images/product/moe-ds-lfh.png"
+    ],
       "designProcess": {
-        "research": "Conducted a comprehensive analysis of existing design systems and component libraries. Reviewed feedback from the rapid website development project to identify pain points and areas for improvement.",
-        "definingProblem": "The lack of a standardised design framework led to inconsistencies and inefficiencies in the rapid development of the website. The primary challenge was to create a design system that addressed these issues while meeting accessibility requirements.",
-        "ideation": "Developed initial concepts for the design system, including core components, design patterns, and guidelines. Engaged with stakeholders to gather input on essential features and requirements.",
-        "prototyping": "Created prototypes of key components and design patterns using tools like Figma. Tested prototypes with internal teams to validate functionality and gather feedback.",
+        "research": "Conducted a comprehensive analysis of existing design systems and component libraries. Reviewed feedback from the rapid website development project to identify pain points and areas for improvement. Held extensive interviews and workshops with stakeholders (which consistent of members of the IT teams such as developers, business analysts, content developers, web advisors, ux designers and more). Part of this workshop was to create buy-in for a design system solution, whilst also figuring out the goals, needs and pain-points of each stakeholder. I took a co-design approach, where I developed a strategy together with the lead engineer of the team, who consulted the project with technical input.",
+        "definingProblem": "The lack of a standardised design framework led to inconsistencies and inefficiencies in the rapid development of the website. This became clear once the web team had to quickly produce the 'Learning from Home' website in response to the COVID-19 lockdown in 2020. The lack of a unified design system meant that coming up with a design, and building it was a lot slower than we could afford (the project retrospective highlighted several crucial painpoints, all relating back to slow turnover and low confidence on development and design decisions). The primary challenge was to create a design system that addressed these issues while meeting accessibility requirements.",
+        "ideation": "Developed initial concepts for the design system, including core components, design patterns, and guidelines. Decided on a website solution, due to the regular engagement with third-party vendors, who needed the guidance and inspiration of exisiting sites (displayed as 'Case Studies'). Therefore a website was a reasonable approach, compared to keeping the information on an internal platform. Engaged with stakeholders to gather input on essential features and requirements as the wireframes took shape. As we worked on other projects, essential components and patterns were agreed on and defined in smaller feedback loops.",
+        "prototyping": "Created prototypes of key components and design patterns using Adobe XD. Tested prototypes with internal teams to validate functionality and gather feedback. Whilst the site was built, we utilised Confluence as an interim solution to build out the content for the guidance pages.",
         "feedback": "Incorporated feedback from designers, developers, and accessibility experts. Adjusted the design system based on usability testing and stakeholder input to ensure it met diverse needs and standards.",
         "designProcessImages":[
             {
-            "path": "/images/optional/design-system-process-1.png"
+            "path": "/images/product/moe-ds-secondary-research.png",
+            "caption": "First I started by doing a bit of secondary research into exisiting design systems, especially in government and education space sector. I would audit them and figure out commonalities, as well as informing myself on specific features that are useful to use when creating a medium that contains all the guidance information about components and patterns."
             },
             {
-              "path": "/images/product/moe-ds-sitemap.png"
+              "path": "/images/product/moe-ds-sitemap.png",
+              "caption":"In order to create a site that had useful information, I had to create a sitemap which helped organize and structure the content in a logical way. Because several different teams were going to use this (Developers, UX Designers, Brand designers, Content Developers, Web Advisors, etc.), the information architecture had to be clear but able to grow as the design system became more evolved."
             },
             {
-              "path": "/images/optional/design-system-process-2.png"
+              "path": "/images/optional/design-system-process-2.png",
+              "caption":"Developed low-fidelity wireframes, which enabled me to figure out the structure and hierarchy of content. That way I was able to determine some of our earliest components that we were going to publish in the design system, such as headers, button, footers and cards."
             },
             {
-              "path": "/images/product/moe-ds-wireframes.png"
+              "path": "/images/product/moe-ds-wireframes.png",
+              "caption":"From there on I started to give the wireframes more detail. This happened along-side an iterative process with the teams, who gave me feedback around what information they would need to effectively write, develop or design solutions. This means the content was able to be shaped before I implemented any UI Design and Branding onto the site."
             }
         ]
       },
@@ -184,7 +198,7 @@
         ]
       },
       "lessonsLearned": {
-        "designInsights": "Learned the importance of creating a design system that balances flexibility with consistency. Discovered that clear documentation and thorough testing are critical for successful implementation.",
+        "designInsights": "Learned the importance of creating a design system that balances flexibility with consistency. Discovered that clear documentation and thorough testing are critical for successful implementation. Design systems only work if everyone is using it (so the buy-in process at the start with the workshop was more important than originally thought!). There also needs to be a solid process and criteria in place, there are right and wrong ways to document and good planning helps in the long run.",
         "technicalInsights": "Gained experience in integrating a design system with existing digital platforms and managing version control for a shared component library. Improved skills in developing accessible and reusable components.",
         "improvements": "Future iterations of the design system could benefit from enhanced documentation, more detailed usage examples, and expanded support for additional design patterns and components. Also planned to include case studies, to show how the design system could be utilised, and highlighting why design systems are so useful for cross-collaborative teams."
       },

@@ -50,8 +50,12 @@ const CaseStudy: React.FC = () => {
           <div className="mt-8 px-10 md:mt-0 md:w-1/2">
             <h2 className="subheading">Role</h2>
             <p className="mb-4">{project.role}</p>
-            <h2 className="subheading">Company / Client</h2>
-            <p className="mb-4">{project.company}</p>
+            {project.company && (
+              <>
+                <h2 className="subheading">Company / Client</h2>
+                <p className="mb-4">{project.company}</p>
+              </>
+            )}
             <h2 className="subheading">Date</h2>
             <p className="mb-4">{project.date}</p>
             {(project.githubLink ||

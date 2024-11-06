@@ -10,7 +10,7 @@ export default interface Project {
   headerImage: string
   projectTitle: string
   slug: string
-  company: string
+  company?: string
   role: string
   date: string
   overview: string

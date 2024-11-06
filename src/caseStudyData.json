@@ -99,7 +99,15 @@
         {
         "path": "/images/optional/PROJECT TEMPLATES - MVP.jpg",
         "caption": "This user journey shows the user interaction points where users would creating studies from - dashboard and studies tab. From here, the user can chose a template, which opens up a view with further information on how the template should be used and what it contains. "
-        }
+        },
+        {
+          "path": "/images/product/ow-userjourney.png",
+          "caption": "A simplified view of the user journey."
+          },
+          {
+            "path": "/images/product/ow-wireframes.png",
+            "caption": "Preview of the medium-fidelity wireframes for the templates feature."
+            }
       ]
     },
     "solutionImplementation": {
@@ -109,7 +117,9 @@
       "designProductImages":[
         "/images/product/ow-hi-fi-wireframes 1.png",
         "/images/product/ow-hi-fi-wireframes 10.png",
-        "/images/product/ow-hi-fi-wireframes 3.png"
+        "/images/product/ow-hi-fi-wireframes 3.png",
+        "/images/product/ow-prototypes-1.png",
+        "/images/product/ow-prototypes-2.png"
       ]
     },
     "lessonsLearned": {
@@ -152,7 +162,13 @@
             "path": "/images/optional/design-system-process-1.png"
             },
             {
+              "path": "/images/product/moe-ds-sitemap.png"
+            },
+            {
               "path": "/images/optional/design-system-process-2.png"
+            },
+            {
+              "path": "/images/product/moe-ds-wireframes.png"
             }
         ]
       },
@@ -175,7 +191,8 @@
       "keyTakeaways": {
         "summary": "The Ministry of Education Design System successfully provided a standardised approach to design and development, improving consistency and efficiency in digital projects. It highlighted the value of having a comprehensive design system to support future needs.",
         "demonstrationSkills": "Demonstrated skills in UX/UI design, component library creation, accessibility compliance, and technical leadership. Showcased ability to develop and implement a design system from conception to deployment."
-      }
+      },
+      "finalImage":"/images/product/moe-ds-final.png"
     },
 
   {
@@ -231,7 +248,7 @@
     {
       "id": 5,
       "projectImage": "/images/portfolio/grow-grub.png",
-      "headerImage": "/images/banner-images/grow-grub.png",
+      "headerImage": "/images/banner-images/Grow-grub.png",
       "projectTitle": "Grow-Grub",
       "slug": "grow-grub",
       "company": "Dev Academy",

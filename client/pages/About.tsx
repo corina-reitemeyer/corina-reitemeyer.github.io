@@ -84,7 +84,7 @@ const About = () => {
                 <h3 className="font-heading text-2xl font-bold text-black">
                   {role.title}
                 </h3>
-                <p className="font-body py-4 text-sm italic text-gray-700">
+                <p className="font-body pb-4 text-sm italic text-gray-700">
                   {role.subtitle}
                 </p>
                 <p className="mt-4 text-gray-800">{role.description}</p>

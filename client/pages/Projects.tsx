@@ -68,7 +68,7 @@ const Projects: React.FC<ProjectsProps> = () => {
                       : index % 3 === 1
                         ? 'bg-[#FFDBB5]'
                         : 'bg-[#B5FFFA]'
-                  } relative overflow-hidden`}
+                  } relative transform overflow-hidden transition-transform duration-300 ease-in-out hover:-translate-y-2`}
                 >
                   {/* Text Content */}
                   <div className="relative z-10 mt-6 p-6 text-right">

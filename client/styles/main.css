@@ -2,24 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-/* TAILWIND */
-.paragraph {
-  @apply mb-6 text-left text-lg;
+/* Custom Typography */
+@font-face {
+  font-family: 'Getai Grotesk Display';
+  src: url('/public/fonts/GetaiGroteskDisplay/DTGetaiGroteskDisplay-Black.woff2')
+    format('woff2');
+  font-weight: 400;
+  font-style: normal;
 }
 
-.subheading {
-  @apply mb-3 mt-10 text-base uppercase text-gray-500;
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/public/fonts/SofiaPro/SofiaPro.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
 }
 
-.heading2 {
-  @apply mb-4 text-3xl font-bold;
+/* Applying fonts to headings and body */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Getai Grotesk Display', sans-serif;
+  text-transform: uppercase;
 }
 
-/** MANUAL CSS **/
+body,
+p,
+span,
+a,
+li {
+  font-family: 'Sofia Pro', sans-serif;
+}
 
+/* Header Section */
+.header-section {
+  @apply border-b-4 border-t-4 border-black bg-white py-20 text-center;
+}
+
+.main-heading {
+  @apply mb-6 text-7xl font-bold;
+}
+
+.sub-heading {
+  @apply mb-6 text-lg text-slate-400;
+}
+
+.intro-text {
+  @apply mx-auto max-w-2xl text-base leading-relaxed text-gray-700;
+}
+
+/* Projects Grid */
+.projects-grid {
+  @apply mx-auto grid max-w-7xl grid-cols-1 gap-8 px-8 py-10 sm:grid-cols-2;
+}
+
+.project-link {
+  @apply block border-4 border-black p-4 transition-transform duration-300;
+}
+
+.project-link:hover {
+  @apply -translate-y-1 transform;
+  background-color: #bbb5ff; /* Accent color on hover */
+  border-color: #b5fffa;
+}
+
+/* Grid Item Wrapper */
+.grid-item-wrapper {
+  @apply aspect-w-16 aspect-h-9 relative overflow-hidden;
+}
+
+/* Profile Image (Optional) */
 .profile-image {
-  max-width: 100%;
-  max-height: 450px;
-  width: auto;
-  height: auto;
+  @apply mx-auto max-h-[450px] max-w-full;
 }

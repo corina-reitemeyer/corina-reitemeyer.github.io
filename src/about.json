@@ -1,0 +1,75 @@
+{
+  "roles": [
+    {
+      "title": "Product Designer",
+      "company": "Spark + Mint",
+      "description": "I lead design projects through the end-to-end design process and help our clients to successfully launch their products."
+    },
+    {
+      "title": "Podcast Host",
+      "company": "Podcast Name",
+      "description": "In my free time, I co-host a podcast about [topic]."
+    },
+    {
+      "title": "Influencer & Advisor",
+      "company": "Instagram and LinkedIn",
+      "description": "I create educational content about Product Design and Career Growth on Instagram and LinkedIn."
+    },
+    {
+      "title": "Nominee",
+      "company": "Award Title",
+      "description": "Nominated for “[Award]” in [Location], [Year]."
+    }
+  ],
+  "process": [
+    {
+      "step": "Step 1",
+      "title": "Research",
+      "description": "Discovering and understanding the problem space and learning about the user. Bonus: Can use data analytics to gain insights from datasets."
+    },
+    {
+      "step": "Step 2",
+      "title": "Principles & Strategy",
+      "description": "Creating design principles to help guide the project and UX decisions. Ensures alignment across the team."
+    },
+    {
+      "step": "Step 3",
+      "title": "User Journey",
+      "description": "Diving deep into user journey, user stories, and user decision making."
+    },
+    {
+      "step": "Step 4",
+      "title": "Exploration",
+      "description": "Exploring a wide range of possible solutions. Testing, iterating, discussing and working through the problem."
+    },
+    {
+      "step": "Step 5",
+      "title": "Refinement",
+      "description": "Refining a chosen solution, polishing until it’s ready for handover to the developers. Documenting design decisions."
+    },
+    {
+      "step": "Step 6",
+      "title": "Handover",
+      "description": "Working closely with the dev team to ensure a successful handover and implementation process. Can be an extra pair of hands for front-end implementation."
+    },
+    {
+      "step": "Step 7",
+      "title": "Supporting",
+      "description": "Keep monitoring implementation process, in case improvements need to be made."
+    }
+  ],
+  "values": [
+    {
+      "title": "Curiosity",
+      "description": "When tasked with a challenge, I always start solving problems by asking 'What if?' My curiosity leads me to innovative solutions."
+    },
+    {
+      "title": "Challenge Assumptions",
+      "description": "I prefer to test my assumptions with real users every time I can, and base my solutions on research data."
+    },
+    {
+      "title": "Attention to Detail",
+      "description": "Great design is always in the details. I double-check everything to ensure nothing is missed."
+    }
+  ]
+}

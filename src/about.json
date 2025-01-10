@@ -1,31 +1,31 @@
 {
   "roles": [
     {
-      "title": "Product Designer",
-      "company": "Spark + Mint",
-      "description": "I lead design projects through the end-to-end design process and help our clients to successfully launch their products."
+      "title": "User-Centered Design",
+      "subtitle": "Crafting intuitive and delightful user experiences",
+      "description": "I create intuitive and delightful user experiences by focusing on user needs. I love turning complex problems into simple, elegant solutions."
     },
     {
-      "title": "Podcast Host",
-      "company": "Podcast Name",
-      "description": "In my free time, I co-host a podcast about [topic]."
+      "title": "Design Systems",
+      "subtitle": "Building scalable and cohesive design systems",
+      "description": "I build scalable design systems that help maintain a consistent and cohesive user experience across large-scale applications."
     },
     {
-      "title": "Influencer & Advisor",
-      "company": "Instagram and LinkedIn",
-      "description": "I create educational content about Product Design and Career Growth on Instagram and LinkedIn."
+      "title": "Full Stack Development",
+      "subtitle": "Delivering end-to-end solutions",
+      "description": "I develop full-stack web applications, bringing ideas to life by combining thoughtful design with clean, efficient code."
     },
     {
-      "title": "Nominee",
-      "company": "Award Title",
-      "description": "Nominated for “[Award]” in [Location], [Year]."
+      "title": "Data-Driven Design",
+      "subtitle": "Leveraging data for informed design decisions",
+      "description": "I use data-driven insights to inform my design decisions, continuously improving products to deliver real value and measurable results."
     }
   ],
   "process": [
     {
       "step": "Step 1",
       "title": "Research",
-      "description": "Discovering and understanding the problem space and learning about the user. Bonus: Can use data analytics to gain insights from datasets."
+      "description": "Discovering and understanding the problem space and learning about the user. Bonus: I can use data analytics to gain insights from datasets."
     },
     {
       "step": "Step 2",
@@ -50,7 +50,7 @@
     {
       "step": "Step 6",
       "title": "Handover",
-      "description": "Working closely with the dev team to ensure a successful handover and implementation process. Can be an extra pair of hands for front-end implementation."
+      "description": "Working closely with the dev team to ensure a successful handover and implementation process. I can be an extra pair of hands for front-end implementation."
     },
     {
       "step": "Step 7",
@@ -60,16 +60,28 @@
   ],
   "values": [
     {
-      "title": "Curiosity",
-      "description": "When tasked with a challenge, I always start solving problems by asking 'What if?' My curiosity leads me to innovative solutions."
+      "title": "Making a Positive Impact",
+      "description": "I believe in creating designs and products that make a positive difference in the world. Every decision I make aims to create meaningful, accessible, and inclusive experiences."
     },
     {
-      "title": "Challenge Assumptions",
-      "description": "I prefer to test my assumptions with real users every time I can, and base my solutions on research data."
+      "title": "Curiosity & Iteration",
+      "description": "I approach design with an experimentation mindset, asking myself 'What if?', and continuously testing and iterating to learn faster and drive innovation. I value data-driven decisions to solve complex user challenges."
+    },
+    {
+      "title": "Collaboration and Versatility",
+      "description": "I thrive in collaborative environments—whether it’s working with centralised design teams or cross-functional teams. My experience across various industries, including education, SaaS, and emerging tech, helps me bring a well-rounded perspective to every project."
     },
     {
       "title": "Attention to Detail",
-      "description": "Great design is always in the details. I double-check everything to ensure nothing is missed."
+      "description": "Great design is in the details. I’m meticulous about ensuring that every element works harmoniously, whether it’s pixel-perfect UI, clean code, or a smooth user flow."
+    },
+    {
+      "title": "Balancing Creativity & Logic",
+      "description": "I believe great solutions emerge when creativity meets logic. I love blending imaginative ideas with a solid technical foundation to create designs that are not only beautiful but also functional and scalable."
+    },
+    {
+      "title": "Lifelong Learning",
+      "description": "I’m always curious and eager to learn. Whether it’s a new design approach, a coding framework, or an analytics tool, I embrace continuous learning to stay ahead and improve my craft."
     }
   ]
 }

@@ -5,8 +5,8 @@ export default interface AboutData {
 }
 
 interface Role {
-  title: string
-  company: string
+  title?: string
+  subtitle?: string
   description: string
 }
 

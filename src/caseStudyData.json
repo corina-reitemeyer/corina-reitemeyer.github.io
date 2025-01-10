@@ -79,7 +79,7 @@
   },
   {
     "id": 2,
-    "projectImage": "/images/portfolio/ow-templates.png",
+    "projectImage": "/images/portfolio/ow-templates-cover.png",
     "headerImage": "/images/banner-images/ow-templates.png",
     "projectTitle": "Templates",
     "slug": "ow-templates",
@@ -144,7 +144,7 @@
 
     {
       "id": 3,
-      "projectImage": "/images/portfolio/MoE-Design-System-Hero.png",
+      "projectImage": "/images/portfolio/moe-design-system-cover.png",
       "headerImage": "/images/banner-images/moe-design-system.png",
       "projectTitle": "Design System",
       "slug": "moe-design-system",
@@ -212,7 +212,7 @@
 
   {
       "id": 4,
-      "projectImage": "/images/portfolio/NCEA - HERO.png",
+      "projectImage": "/images/portfolio/moe-ncea-cover.png",
       "headerImage": "/images/banner-images/moe-ncea.png",
       "projectTitle": "NCEA Website",
       "slug": "moe-ncea-website",

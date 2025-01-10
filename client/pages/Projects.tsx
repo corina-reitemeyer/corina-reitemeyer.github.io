@@ -77,7 +77,7 @@ const Projects: React.FC<ProjectsProps> = () => {
                         {project.company}
                       </p>
                     )}
-                    <h3 className="font-heading mb-4 text-4xl font-bold">
+                    <h3 className="font-heading text-4xl font-bold">
                       {project.projectTitle}
                     </h3>
                   </div>

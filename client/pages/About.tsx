@@ -101,66 +101,77 @@ const About = () => {
             How I Work
           </h2>
 
-          {/* Row 1 */}
-          <div className="relative mb-14">
-            {/* Grey Line for Row 1 */}
-            <div className="absolute left-0 top-[20px] h-0.5 w-full bg-slate-200"></div>
+          {/* Mobile Layout: Stacked Steps */}
+          <div className="block space-y-16 sm:hidden">
+            {[...firstRowSteps, ...secondRowSteps].map((step, index) => (
+              <div key={index} className="relative flex flex-col items-center">
+                {/* Grey Line */}
+                <div className="absolute top-[20px] h-0.5 w-full bg-slate-200"></div>
 
-            <div className="relative flex items-start justify-between">
-              {firstRowSteps.map((step, index) => (
-                <div key={index} className="relative flex-1 px-4 text-left">
-                  {/* Circle Positioned on the Line */}
-                  <div className="bg-customTeal absolute left-[10px] top-[8px] z-10 h-6 w-6 rounded-full border-4 border-white"></div>
+                {/* Circle Positioned on the Line */}
+                <div className="bg-customTeal absolute top-[8px] z-10 h-6 w-6 rounded-full border-4 border-white"></div>
 
-                  {/* Step Number */}
-                  <div className="font-body mt-10 text-sm text-gray-700">
+                {/* Step Content */}
+                <div className="relative mt-10 flex-1 px-4 text-center">
+                  <div className="font-body text-sm text-gray-700">
                     {step.step}
                   </div>
-
-                  {/* Step Title */}
                   <h3 className="font-heading mt-2 text-lg font-bold text-black">
                     {step.title}
                   </h3>
-
-                  {/* Step Description */}
                   <p className="font-body mt-2 text-sm leading-relaxed text-gray-800">
                     {step.description}
                   </p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
 
-          {/* Row 2 */}
-          <div className="relative">
-            {/* Grey Line for Row 2 */}
-            <div className="absolute left-0 top-[20px] h-0.5 w-full bg-slate-200"></div>
-
-            <div className="relative flex items-start justify-between">
-              {secondRowSteps.map((step, index) => (
-                <div key={index} className="relative flex-1 px-4 text-left">
-                  {/* Circle Positioned on the Line */}
-                  <div className="bg-customTeal absolute left-[10px] top-[8px] z-10 h-6 w-6 rounded-full border-4 border-white"></div>
-
-                  {/* Step Number */}
-                  <div className="font-body mt-10 text-sm text-gray-700">
-                    {step.step}
+          {/* Desktop Layout: Two Rows */}
+          <div className="hidden sm:block">
+            {/* Row 1 */}
+            <div className="relative mb-14">
+              <div className="absolute left-0 top-[20px] h-0.5 w-full bg-slate-200"></div>
+              <div className="relative flex items-start justify-between">
+                {firstRowSteps.map((step, index) => (
+                  <div key={index} className="relative flex-1 px-4 text-left">
+                    <div className="bg-customTeal absolute left-[10px] top-[8px] z-10 h-6 w-6 rounded-full border-4 border-white"></div>
+                    <div className="font-body mt-10 text-sm text-gray-700">
+                      {step.step}
+                    </div>
+                    <h3 className="font-heading mt-2 text-lg font-bold text-black">
+                      {step.title}
+                    </h3>
+                    <p className="font-body mt-2 text-sm leading-relaxed text-gray-800">
+                      {step.description}
+                    </p>
                   </div>
+                ))}
+              </div>
+            </div>
 
-                  {/* Step Title */}
-                  <h3 className="font-heading mt-2 text-lg font-bold text-black">
-                    {step.title}
-                  </h3>
+            {/* Row 2 */}
+            <div className="relative">
+              <div className="absolute left-0 top-[20px] h-0.5 w-full bg-slate-200"></div>
+              <div className="relative flex items-start justify-between">
+                {secondRowSteps.map((step, index) => (
+                  <div key={index} className="relative flex-1 px-4 text-left">
+                    <div className="bg-customTeal absolute left-[10px] top-[8px] z-10 h-6 w-6 rounded-full border-4 border-white"></div>
+                    <div className="font-body mt-10 text-sm text-gray-700">
+                      {step.step}
+                    </div>
+                    <h3 className="font-heading mt-2 text-lg font-bold text-black">
+                      {step.title}
+                    </h3>
+                    <p className="font-body mt-2 text-sm leading-relaxed text-gray-800">
+                      {step.description}
+                    </p>
+                  </div>
+                ))}
 
-                  {/* Step Description */}
-                  <p className="font-body mt-2 text-sm leading-relaxed text-gray-800">
-                    {step.description}
-                  </p>
-                </div>
-              ))}
-
-              {/* Dummy Invisible Element for Alignment */}
-              <div className="invisible relative flex-1 px-4"></div>
+                {/* Dummy Invisible Element for Alignment */}
+                <div className="invisible relative flex-1 px-4"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -173,23 +184,29 @@ const About = () => {
             My Philosophy
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {data.values.map((value, index) => (
-              <div
-                key={index}
-                className={`rounded-3xl border-4 border-black p-6 ${
-                  index % 3 === 0
-                    ? 'bg-[#BBB5FF]' // Purple
-                    : index % 3 === 1
-                      ? 'bg-[#FFDBB5]' // Peach
-                      : 'bg-[#B5FFFA]' // Teal
-                }`}
-              >
-                <h3 className="font-heading text-xl font-bold text-black">
-                  {value.title}
-                </h3>
-                <p className="mt-4 text-gray-800">{value.description}</p>
-              </div>
-            ))}
+            {data.values.map((value, index) => {
+              // Fixed color pattern for rows
+              const rowColors = [
+                ['bg-[#FFB5DE]', 'bg-[#B5FFFA]', 'bg-[#BBB5FF]'], // Row 1: Raspberry Pink, Grape, Plum
+                ['bg-[#FFF4B0]', 'bg-[#BBB5FF]', 'bg-[#FFB5DE]'], // Row 2: Lemon, Plum, Raspberry Pink
+              ]
+
+              // Determine row and column position
+              const rowIndex = Math.floor(index / 3) % 2 // 0 or 1 (alternates between row patterns)
+              const colIndex = index % 3 // 0, 1, or 2 (column position)
+
+              return (
+                <div
+                  key={index}
+                  className={`rounded-3xl border-4 border-black p-6 ${rowColors[rowIndex][colIndex]}`}
+                >
+                  <h3 className="font-heading text-xl font-bold text-black">
+                    {value.title}
+                  </h3>
+                  <p className="mt-4 text-gray-800">{value.description}</p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>

@@ -11,73 +11,81 @@ const Projects: React.FC<ProjectsProps> = () => {
 
   return (
     <>
-      <header className="header-section relative overflow-hidden">
-        {/* Turquoise Flower - Top Left */}
-        <img
-          src="/images/shapes/Elements-geometric-shape-flower-marigold-nature.svg"
-          alt="Turquoise Flower"
-          className="absolute left-[-50px] top-[-50px] h-48 w-48"
-        />
-
-        {/* Stripe Doodle - Top Right */}
-        <img
-          src="/images/shapes/OrganicShapes2.svg"
-          alt="Stripe Doodle"
-          className="absolute right-[-50px] top-[-50px] h-48 w-48"
-        />
-
-        {/* Squiggle Doodle - Bottom Left */}
-        <img
-          src="/images/shapes/OrganicShapes1.svg"
-          alt="Squiggle Doodle"
-          className="absolute bottom-[-50px] left-[-70px] h-56 w-56"
-        />
-
-        {/* Purple Flower - Bottom Right */}
-        <img
-          src="/images/shapes/Elements-geometric-shape-flower-daisy-nature.svg"
-          alt="Purple Flower"
-          className="absolute bottom-[-50px] right-[-70px] h-56 w-56"
-        />
+      <header className="relative mx-auto flex min-h-[70vh] max-w-5xl flex-col items-start justify-center px-4 sm:px-8">
+        {/* Background Gradient Circles */}
+        <div
+          className="absolute right-[-25%] top-[-20%] h-[1000px] w-[1000px] rounded-full"
+          style={{
+            background:
+              'radial-gradient(circle, rgba(187,181,255,0.6) 0%, transparent 50%)',
+          }}
+        ></div>
+        <div
+          className="absolute bottom-[-50%] left-[-25%] h-[1000px] w-[1000px] rounded-full"
+          style={{
+            background:
+              'radial-gradient(circle, rgba(181,255,250,0.6) 0%, transparent 60%)',
+          }}
+        ></div>
 
         {/* Header Text */}
-        <h1 className="main-heading">Hi! I&apos;m Corina.</h1>
-        <h2 className="sub-heading">
-          UX/UI Designer geeking over data and design systems.
-        </h2>
-        <p className="intro-text">
-          I’m passionate about creating user-centered designs for web and mobile
-          apps, blending creativity with usability to craft delightful user
-          experiences.
-        </p>
+        <div className="z-10 w-full text-left">
+          <div className="flex items-center gap-4">
+            {/* Title Section */}
+            <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
+              Hi! I&apos;m Corina
+            </h1>
+
+            {/* Image Section */}
+            <div className="-ml-4 mb-4 h-24 w-24 flex-shrink-0 sm:-mr-20 sm:ml-0 sm:h-24 sm:w-24">
+              <img
+                src="/images/my-notion-face-transparent.png"
+                alt="Corina illustration"
+                className="h-full w-full object-contain"
+              />
+            </div>
+          </div>
+
+          {/* Description Section */}
+          <p className="mt-6 max-w-2xl text-left text-lg leading-relaxed text-gray-700 sm:text-xl">
+            I enjoy creating user-centric and delightful experiences, with a
+            technical and thoughtful approach that brings clarity to complexity.
+            Whether it&apos;s simplifying workflows, improving usability, or
+            crafting consistent interfaces, I love blending logic with a touch
+            of creativity to build intuitive designs that feel effortless.
+          </p>
+        </div>
       </header>
 
-      <div className="flex justify-center px-4 py-10">
-        <div className="w-full max-w-7xl p-10">
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
+      <div className="flex justify-center px-4 py-10 sm:px-8">
+        <div className="w-full max-w-5xl p-4 sm:p-8">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
             {projects.map((project, index) => (
               <Link
                 to={`/projects/${project.slug}`}
                 key={project.id}
                 className="block"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
                 <div
                   className={`rounded-3xl border-4 border-black ${
-                    index % 3 === 0
-                      ? 'bg-[#BBB5FF]'
-                      : index % 3 === 1
-                        ? 'bg-[#FFDBB5]'
-                        : 'bg-[#B5FFFA]'
+                    index % 4 === 0
+                      ? 'bg-[#BBB5FF]' // Plum
+                      : index % 4 === 1
+                        ? 'bg-[#FFF4B0]' // Lemon
+                        : index % 4 === 2
+                          ? 'bg-[#B5FFFA]' // Grape
+                          : 'bg-[#FFB5DE]' // Raspberry
                   } relative transform overflow-hidden transition-transform duration-300 ease-in-out hover:-translate-y-2`}
                 >
                   {/* Text Content */}
-                  <div className="relative z-10 mt-6 p-6 text-right">
+                  <div className="relative z-10 mt-6 p-4 text-right sm:p-6">
                     {project.company && (
                       <p className="font-body mb-2 text-sm uppercase text-black">
                         {project.company}
                       </p>
                     )}
-                    <h3 className="font-heading text-4xl font-bold">
+                    <h3 className="font-heading text-3xl font-bold sm:text-4xl">
                       {project.projectTitle}
                     </h3>
                   </div>
@@ -86,7 +94,7 @@ const Projects: React.FC<ProjectsProps> = () => {
                   <img
                     src={project.projectImage}
                     alt={project.projectTitle}
-                    className="h-auto w-full rounded-3xl object-contain"
+                    className="h-auto w-full object-contain"
                   />
                 </div>
               </Link>

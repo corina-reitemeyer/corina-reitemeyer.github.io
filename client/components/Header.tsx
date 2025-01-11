@@ -6,7 +6,7 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
-    <nav className="bg-white-100 flex items-center justify-between px-6 py-6 sm:px-10">
+    <nav className="z-20 flex items-center justify-between bg-white px-6 py-6 sm:px-10">
       {/* Logo */}
       <div className="flex items-center">
         <img src="/images/weblogo.PNG" alt="Logo of website" className="h-10" />
@@ -113,7 +113,7 @@ export default function Header() {
       )}
 
       {/* Desktop Menu */}
-      <ul className="hidden space-x-8 sm:flex">
+      <ul className="bg-white-800 hidden space-x-8 sm:flex">
         <li>
           <NavLink
             to="/projects"

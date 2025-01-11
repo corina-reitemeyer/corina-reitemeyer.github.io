@@ -40,70 +40,75 @@ const CaseStudy: React.FC = () => {
       </div>
 
       {/* Project Title */}
-      <div className="mx-auto mt-20 max-w-screen-lg px-10 py-8">
+      <div className="mx-auto mt-20 max-w-4xl px-6 py-8 sm:px-10">
         <h1 className="text-6xl font-medium">{project.projectTitle}</h1>
       </div>
 
       {/* Overview, Company and Goals Section */}
-      <div className="mx-auto mb-16 max-w-screen-lg px-10 py-12">
-        {/* Content */}
-        <div className="flex flex-col gap-10 md:flex-row">
-          <div className="md:w-1/2 md:pr-8">
-            <h3>Overview</h3>
-            <p className="mb-10">{project.overview}</p>
-            <h3>Goals</h3>
-            <ul className="list-disc pl-4">
-              {project.objectiveGoals.map((goal, index) => (
-                <li key={index} className="mb-2">
-                  {goal}
-                </li>
-              ))}
-            </ul>
-          </div>
+      <div className="flex justify-center">
+        <div className="w-full max-w-4xl px-6 py-12 sm:px-10">
+          {/* Content */}
+          <div className="flex flex-col gap-10 md:flex-row">
+            {/* Left Column */}
+            <div className="md:w-1/2 md:pr-8">
+              <h3 className="text-xl font-semibold">Overview</h3>
+              <p className="mb-10">{project.overview}</p>
+              <h3 className="text-xl font-semibold">Goals</h3>
+              <ul className="list-disc pl-5">
+                {project.objectiveGoals.map((goal, index) => (
+                  <li key={index} className="mb-2">
+                    {goal}
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Role and Date */}
-          <div className="mt-8 px-10 md:mt-0 md:w-1/2">
-            <h6>Role</h6>
-            <p className="mb-6">{project.role}</p>
-            {project.company && (
-              <>
-                <h6>Company / Client</h6>
-                <p className="mb-6">{project.company}</p>
-              </>
-            )}
-            <h6>Date</h6>
-            <p className="mb-6">{project.date}</p>
-            {(project.githubLink ||
-              project.deployedSiteLink ||
-              project.bestAwardsSiteLink) && (
-              <div>
-                <h5>Links</h5>
+            {/* Right Column */}
+            <div className="mt-8 md:mt-0 md:w-1/3 md:pl-8">
+              <h6 className="pb-2 text-lg font-semibold">Role</h6>
+              <p className="mb-6">{project.role}</p>
+              {project.company && (
+                <>
+                  <h6 className="pb-2 text-lg font-semibold">
+                    Company / Client
+                  </h6>
+                  <p className="mb-6">{project.company}</p>
+                </>
+              )}
+              <h6 className="pb-2 text-lg font-semibold">Date</h6>
+              <p className="mb-8">{project.date}</p>
+              {(project.githubLink ||
+                project.deployedSiteLink ||
+                project.bestAwardsSiteLink) && (
+                <div>
+                  <h5 className="text-lg font-semibold">Links</h5>
 
-                {project.githubLink && (
-                  <Button
-                    url={project.githubLink}
-                    label={'Github repository'}
-                    className={`primary_button`}
-                  />
-                )}
+                  {project.githubLink && (
+                    <Button
+                      url={project.githubLink}
+                      label={'Github repository'}
+                      className={`primary_button`}
+                    />
+                  )}
 
-                {project.deployedSiteLink && (
-                  <Button
-                    url={project.deployedSiteLink}
-                    label={'Deployed website'}
-                    className={`primary_button`}
-                  />
-                )}
+                  {project.deployedSiteLink && (
+                    <Button
+                      url={project.deployedSiteLink}
+                      label={'Deployed website'}
+                      className={`primary_button`}
+                    />
+                  )}
 
-                {project.bestAwardsSiteLink && (
-                  <Button
-                    url={project.bestAwardsSiteLink}
-                    label={'Best Awards website'}
-                    className={`primary_button`}
-                  />
-                )}
-              </div>
-            )}
+                  {project.bestAwardsSiteLink && (
+                    <Button
+                      url={project.bestAwardsSiteLink}
+                      label={'Best Awards website'}
+                      className={`primary_button`}
+                    />
+                  )}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -176,9 +181,9 @@ const CaseStudy: React.FC = () => {
           )}
         </div>
 
-        {/* Designing the Problem */}
-        <div className="mb-16">
-          <h4 className="pb-4 text-xl font-bold">Designing the Problem</h4>
+        {/* Defining the Problem */}
+        <div className="py-16">
+          <h4 className="pb-4 text-xl font-bold">Defining the Problem</h4>
           <p className="text-gray-700">
             {project.designProcess.definingProblem}
           </p>
@@ -218,7 +223,7 @@ const CaseStudy: React.FC = () => {
         </div>
 
         {/* Ideation */}
-        <div className="mb-16">
+        <div className="py-16">
           <h4 className="pb-4 text-xl font-bold">Ideation</h4>
           <p className="text-gray-700">{project.designProcess.ideation}</p>
           {project.designProcess.designProcessImages?.[2] && (
@@ -226,7 +231,7 @@ const CaseStudy: React.FC = () => {
               <div
                 role="button"
                 tabIndex={0}
-                className="h-auto max-h-[600px] w-full cursor-pointer overflow-hidden rounded-3xl border-4 border-black object-cover"
+                className="h-auto max-h-[600px] w-full cursor-pointer overflow-hidden rounded-3xl object-cover"
                 onClick={() =>
                   openLightbox(
                     project.designProcess.designProcessImages?.[2].path,
@@ -256,37 +261,38 @@ const CaseStudy: React.FC = () => {
         </div>
 
         {/* Prototyping */}
-        <div className="mb-16">
+        <div className="py-16">
           <h4 className="pb-4 text-xl font-bold">Prototyping</h4>
           <p className="text-gray-700">{project.designProcess.prototyping}</p>
-          {project.designProcess.designProcessImages?.[3] && (
+          <p className="text-gray-700">{project.designProcess.ideation}</p>
+          {project.designProcess.designProcessImages?.[2] && (
             <div className="mt-8">
               <div
                 role="button"
                 tabIndex={0}
+                className="h-auto max-h-[600px] w-full cursor-pointer overflow-hidden rounded-3xl object-cover"
                 onClick={() =>
                   openLightbox(
-                    project.designProcess.designProcessImages[3].path,
+                    project.designProcess.designProcessImages?.[2].path,
                   )
                 }
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    openLightbox(
-                      project.designProcess.designProcessImages[3].path,
-                    )
-                  }
-                }}
-                className="inline-block cursor-pointer"
+                onKeyDown={(e) =>
+                  (e.key === 'Enter' || e.key === ' ') &&
+                  openLightbox(
+                    project.designProcess.designProcessImages?.[2].path,
+                  )
+                }
+                aria-label="Open ideation image in lightbox"
               >
                 <img
-                  src={project.designProcess.designProcessImages[3].path}
-                  alt="Prototyping"
+                  src={project.designProcess.designProcessImages[2].path}
+                  alt="Ideation"
                   className="h-auto max-h-[600px] w-full rounded-3xl object-cover"
                 />
               </div>
-              {project.designProcess.designProcessImages[3].caption && (
+              {project.designProcess.designProcessImages[2].caption && (
                 <p className="mt-2 text-center text-sm text-gray-600">
-                  {project.designProcess.designProcessImages[3].caption}
+                  {project.designProcess.designProcessImages[2].caption}
                 </p>
               )}
             </div>
@@ -295,7 +301,7 @@ const CaseStudy: React.FC = () => {
 
         {/* Feedback */}
         {project.designProcess.feedback && (
-          <div className="mb-16">
+          <div className="py-16">
             <h4 className="pb-4 text-xl font-bold">Feedback</h4>
             <p className="text-gray-700">{project.designProcess.feedback}</p>
             {project.designProcess.designProcessImages?.[4] && (
@@ -336,7 +342,7 @@ const CaseStudy: React.FC = () => {
 
       {/* Key Takeaways Section */}
       <div className="mx-auto mb-14 mt-28 max-w-screen-lg px-10">
-        <h3 className="pb-6">Key Takeaways</h3>
+        <h3 className="pb-12">Key Takeaways</h3>
 
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
           {/* Summary */}

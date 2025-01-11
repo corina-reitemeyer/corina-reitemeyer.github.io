@@ -86,7 +86,7 @@ const Projects: React.FC<ProjectsProps> = () => {
                   <img
                     src={project.projectImage}
                     alt={project.projectTitle}
-                    className="w-90 relative bottom-[-30px] mr-[-30px] h-auto object-contain"
+                    className="h-auto w-full rounded-3xl object-contain"
                   />
                 </div>
               </Link>

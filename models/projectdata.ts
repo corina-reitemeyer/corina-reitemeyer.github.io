@@ -23,7 +23,7 @@ export default interface Project {
     ideation: string
     prototyping: string
     feedback?: string
-    designProcessImages: DesignProcessImage[]
+    designProcessImages?: DesignProcessImage[]
   }
   softwareDevelopment?: {
     techStack?: string

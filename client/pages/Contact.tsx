@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <>
-      <div className="flex justify-center px-4 py-16 sm:px-8">
+      <div className="grid h-[80vh] place-items-center px-4 sm:px-8">
         <div className="w-full max-w-4xl rounded-3xl border-4 border-black bg-white p-8 text-center sm:p-10">
           {/* Heading */}
           <h2 className="font-heading mb-6 text-3xl font-extrabold text-black">
@@ -14,14 +14,14 @@ const Contact = () => {
             <p className="font-body text-lg leading-relaxed text-gray-800">
               Send me an{' '}
               <a
-                href="mailto: corina@corina.org"
+                href="mailto:"
                 className="text-black underline decoration-4 hover:text-purple-500"
               >
                 email
               </a>{' '}
               or connect with me on{' '}
               <a
-                href="https://www.linkedin.com/in/corinareitemeyer/"
+                href=""
                 target="_blank"
                 className="text-black underline decoration-4 hover:text-purple-500"
                 rel="noreferrer"

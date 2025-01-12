@@ -3,7 +3,7 @@ export default function Footer() {
     <>
       <footer className="w-full bg-white py-4">
         <div className="container mx-auto pt-4 text-center">
-          <p className="mb-4 mt-4">&copy; 2024 Corina Reitemeyer.</p>
+          <p className="mb-4 mt-4">&copy; 2025 — Corina Reitemeyer.</p>
         </div>
       </footer>
     </>

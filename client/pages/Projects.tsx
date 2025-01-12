@@ -11,7 +11,7 @@ const Projects: React.FC<ProjectsProps> = () => {
 
   return (
     <>
-      <header className="relative mx-auto flex min-h-[70vh] max-w-5xl flex-col items-start justify-center px-4 sm:px-8">
+      <header className="relative mx-auto flex min-h-[50vh] flex-col items-start justify-center px-8 sm:min-h-[70vh] sm:max-w-5xl sm:px-8">
         {/* Background Gradient Circles */}
         <div
           className="absolute right-[-25%] top-[-20%] h-[1000px] w-[1000px] rounded-full"
@@ -29,15 +29,15 @@ const Projects: React.FC<ProjectsProps> = () => {
         ></div>
 
         {/* Header Text */}
-        <div className="z-10 w-full text-left">
-          <div className="flex items-center gap-4">
+        <div className="z-10 w-full gap-4 text-left sm:gap-6">
+          <div className="flex items-center">
             {/* Title Section */}
             <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
               Hi! I&apos;m Corina
             </h1>
 
             {/* Image Section */}
-            <div className="-ml-4 mb-4 h-24 w-24 flex-shrink-0 sm:-mr-20 sm:ml-0 sm:h-24 sm:w-24">
+            <div className="-ml-2 mb-6 h-20 w-20 flex-shrink-0 sm:-mr-20 sm:mb-4 sm:ml-0 sm:h-24 sm:w-24">
               <img
                 src="/images/my-notion-face-transparent.png"
                 alt="Corina illustration"
@@ -47,7 +47,7 @@ const Projects: React.FC<ProjectsProps> = () => {
           </div>
 
           {/* Description Section */}
-          <p className="mt-6 max-w-2xl text-left text-lg leading-relaxed text-gray-700 sm:text-xl">
+          <p className="-mt-2 max-w-2xl text-left text-lg leading-relaxed text-gray-700 sm:mt-6 sm:text-xl">
             I enjoy creating user-centric and delightful experiences, with a
             technical and thoughtful approach that brings clarity to complexity.
             Whether it&apos;s simplifying workflows, improving usability, or
@@ -57,8 +57,8 @@ const Projects: React.FC<ProjectsProps> = () => {
         </div>
       </header>
 
-      <div className="flex justify-center px-4 py-10 sm:px-8">
-        <div className="w-full max-w-5xl p-4 sm:p-8">
+      <div className="flex justify-center px-4 py-10 sm:px-8 sm:py-6">
+        <div className="w-full max-w-7xl p-4 sm:p-8">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
             {projects.map((project, index) => (
               <Link

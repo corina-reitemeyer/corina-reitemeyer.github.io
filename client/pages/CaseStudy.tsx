@@ -240,9 +240,15 @@ const CaseStudy: React.FC = () => {
                 </div>
               )}
 
-              <h4 className="pb-4 pt-12">Accessibility & Usability</h4>
-              <p>{project.solutionImplementation.accessibilityUsability}</p>
+              {/* Accessibility & Usability Section */}
+              {project.solutionImplementation.accessibilityUsability && (
+                <div>
+                  <h4 className="pb-4 pt-12">Accessibility & Usability</h4>
+                  <p>{project.solutionImplementation.accessibilityUsability}</p>
+                </div>
+              )}
 
+              {/* Testing Section */}
               {project.solutionImplementation.testing && (
                 <div>
                   <h4 className="pb-4 pt-12">Testing</h4>

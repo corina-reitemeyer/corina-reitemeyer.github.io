@@ -60,45 +60,52 @@ const Projects: React.FC<ProjectsProps> = () => {
       <div className="flex justify-center px-4 py-10 sm:px-8 sm:py-6">
         <div className="w-full max-w-7xl p-4 sm:p-8">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
-            {projects.map((project, index) => (
-              <Link
-                to={`/projects/${project.slug}`}
-                key={project.id}
-                className="block"
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              >
-                <div
-                  className={`rounded-3xl border-4 border-black ${
-                    index % 4 === 0
-                      ? 'bg-[#BBB5FF]' // Plum
-                      : index % 4 === 1
-                        ? 'bg-[#FFF4B0]' // Lemon
-                        : index % 4 === 2
-                          ? 'bg-[#B5FFFA]' // Grape
-                          : 'bg-[#FFB5DE]' // Raspberry
-                  } relative transform overflow-hidden transition-transform duration-300 ease-in-out hover:-translate-y-2`}
+            {projects
+              .filter(
+                (project) =>
+                  project.projectTitle && project.slug && project.projectImage,
+              )
+              .map((project, index) => (
+                <Link
+                  to={`/projects/${project.slug}`}
+                  key={project.id}
+                  className="block"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                  }
                 >
-                  {/* Text Content */}
-                  <div className="relative z-10 mt-6 p-4 text-right sm:p-6">
-                    {project.company && (
-                      <p className="font-body mb-2 text-sm uppercase text-black">
-                        {project.company}
-                      </p>
-                    )}
-                    <h3 className="font-heading text-3xl font-bold sm:text-4xl">
-                      {project.projectTitle}
-                    </h3>
-                  </div>
+                  <div
+                    className={`rounded-3xl border-4 border-black ${
+                      index % 4 === 0
+                        ? 'bg-[#BBB5FF]' // Plum
+                        : index % 4 === 1
+                          ? 'bg-[#FFF4B0]' // Lemon
+                          : index % 4 === 2
+                            ? 'bg-[#B5FFFA]' // Grape
+                            : 'bg-[#FFB5DE]' // Raspberry
+                    } relative transform overflow-hidden transition-transform duration-300 ease-in-out hover:-translate-y-2`}
+                  >
+                    {/* Text Content */}
+                    <div className="relative z-10 mt-6 p-4 text-right sm:p-6">
+                      {project.company && (
+                        <p className="font-body mb-2 text-sm uppercase text-black">
+                          {project.company}
+                        </p>
+                      )}
+                      <h3 className="font-heading text-3xl font-bold sm:text-4xl">
+                        {project.projectTitle}
+                      </h3>
+                    </div>
 
-                  {/* Project Image */}
-                  <img
-                    src={project.projectImage}
-                    alt={project.projectTitle}
-                    className="h-auto w-full object-contain"
-                  />
-                </div>
-              </Link>
-            ))}
+                    {/* Project Image */}
+                    <img
+                      src={project.projectImage}
+                      alt={project.projectTitle}
+                      className="h-auto w-full object-contain"
+                    />
+                  </div>
+                </Link>
+              ))}
           </div>
         </div>
       </div>

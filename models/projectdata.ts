@@ -1,5 +1,9 @@
 // models/projectdata.ts
-import { ImageData } from './imagedata.ts'
+export default interface ImageData {
+  path: string
+  tabName?: string
+  caption?: string
+}
 
 export default interface Project {
   id: number

@@ -30,12 +30,12 @@
         {
           "path": "/images/product/ritmo-personas-1.png",
           "caption": "User personas for a Beginner and Improvers level student",
-          "tabName": "Persona - Sofia & Mark"
+          "tabName": "Persona = Beginner/Improver"
         },
         {
           "path": "/images/product/ritmo-personas-2.png",
           "caption": "User personas for a Intermediate/Advanced level student, and Dance Instructor",
-          "tabName": "Persona - Javier & Carla"
+          "tabName": "Persona - Intermediate/Advanced"
         },
         {
           "path": "/images/product/sofia-userjourney-ritmo.png",
@@ -50,7 +50,7 @@
         {
           "path": "/images/product/javier-userjourney-ritmo.png",
           "caption": "User Journey flowchart for Intermediate/Advanced student Javier",
-          "tabName": "Uer Journey - Javier"
+          "tabName": "USer Journey - Javier"
         },
         {
           "path": "/images/product/carla-userjourney-ritmo.png",
@@ -60,7 +60,7 @@
         {
           "path": "/images/product/ritmo-low-fi-wireframes.png",
           "caption": "The first three super low fidelity wireframes I created to visualise the main idea for the app - Search functionality to filter the move, dance-style focused page, and a dance-move focus page with all the details. I tend to start from very low-details to get the idea on the page to then gradually adding more and more details. This allows me to keep my focus on the must-have functionality, rather than creating a cluttered interface right of the bat.",
-        "tabName": "Lo-Fi Wireframes"
+        "tabName": "Lo-Fi Wiree"
         }
       ]
     },

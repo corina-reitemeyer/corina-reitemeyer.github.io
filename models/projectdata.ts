@@ -1,8 +1,5 @@
 // models/projectdata.ts
-export default interface DesignProcessImage {
-  path: string
-  caption?: string
-}
+import { ImageData } from './imagedata.ts'
 
 export default interface Project {
   id: number
@@ -15,31 +12,45 @@ export default interface Project {
   date: string
   overview: string
   objectiveGoals: string[]
-  background: string
-  backgroundImages?: string[]
+  background: {
+    text: string
+    backgroundImages?: ImageData[] // Optional array of images for the background section
+  }
   designProcess: {
     research: string
+    researchImages?: ImageData[]
     definingProblem: string
+    definingProblemImages?: ImageData[]
     ideation: string
+    ideationImages?: ImageData[]
     prototyping: string
+    prototypingImages?: ImageData[]
     feedback?: string
-    designProcessImages?: DesignProcessImage[]
+    feedbackImages?: ImageData[]
   }
   softwareDevelopment?: {
     techStack?: string
+    techStackImages?: ImageData[]
     architecture?: string
+    architectureImages?: ImageData[]
     developmentProcess?: string
+    developmentProcessImages?: ImageData[]
     integration?: string
-    softwareDevelopmentImages?: string[]
+    integrationImages?: ImageData[]
   }
   solutionImplementation: {
     designDecisions: string
+    designDecisionsImages?: ImageData[]
     codingProcesses?: string
+    codingProcessesImages?: ImageData[]
     accessibilityUsability: string
+    accessibilityUsabilityImages?: ImageData[]
     testing?: string
+    testingImages?: ImageData[]
     deployment?: string
+    deploymentImages?: ImageData[]
     challengesFaced: string
-    designProductImages: string[]
+    challengesFacedImages?: ImageData[]
   }
   lessonsLearned: {
     designInsights: string

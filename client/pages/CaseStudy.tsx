@@ -115,7 +115,7 @@ const CaseStudy: React.FC = () => {
         <div className="mx-auto max-w-screen-lg px-10">
           <div className="flex flex-col items-center">
             {/* Text Section */}
-            <div className="max-w-2xl text-center">
+            <div className="max-w-2xl text-left">
               <h2 className="text-3xl font-bold">Background</h2>
               <p className="mt-4 text-lg text-gray-700">{project.background}</p>
             </div>
@@ -165,7 +165,7 @@ const CaseStudy: React.FC = () => {
         </div>
 
         {/* Defining the Problem */}
-        <div className="py-16">
+        <div className="py-6">
           <h4 className="pb-4 text-xl font-bold">Defining the Problem</h4>
           <p className="text-gray-700">
             {project.designProcess.definingProblem}
@@ -173,7 +173,7 @@ const CaseStudy: React.FC = () => {
         </div>
 
         {/* Ideation */}
-        <div className="py-16">
+        <div className="py-6">
           <h4 className="pb-4 text-xl font-bold">Ideation</h4>
           <p className="text-gray-700">{project.designProcess.ideation}</p>
         </div>
@@ -182,11 +182,47 @@ const CaseStudy: React.FC = () => {
         <div className="py-16">
           <h4 className="pb-4 text-xl font-bold">Prototyping</h4>
           <p className="text-gray-700">{project.designProcess.prototyping}</p>
+
+          {/* Display Lo-Fi Wireframes Image */}
+          {project.designProcess.designProcessImages &&
+            project.designProcess.designProcessImages.find(
+              (image) => image.tabName === 'Lo-Fi Wireframes',
+            ) && (
+              <div className="mt-8">
+                <button
+                  onClick={() =>
+                    openLightbox(
+                      project.designProcess.designProcessImages.find(
+                        (image) => image.tabName === 'Lo-Fi Wireframes',
+                      ).path,
+                    )
+                  }
+                  className="focus:outline-none"
+                >
+                  <img
+                    src={
+                      project.designProcess.designProcessImages.find(
+                        (image) => image.tabName === 'Lo-Fi Wireframes',
+                      ).path
+                    }
+                    alt="Lo-Fi Wireframes"
+                    className="w-full rounded-3xl object-cover"
+                  />
+                </button>
+                <p className="mt-2 text-center text-sm text-gray-600">
+                  {
+                    project.designProcess.designProcessImages.find(
+                      (image) => image.tabName === 'Lo-Fi Wireframes',
+                    ).caption
+                  }
+                </p>
+              </div>
+            )}
         </div>
 
         {/* Feedback */}
         {project.designProcess.feedback && (
-          <div className="py-16">
+          <div className="pb-20 pt-6">
             <h4 className="pb-4 text-xl font-bold">Feedback</h4>
             <p className="text-gray-700">{project.designProcess.feedback}</p>
           </div>
@@ -269,66 +305,95 @@ const CaseStudy: React.FC = () => {
         </div>
       )}
       {/* Solution Implementation Section */}
-      <div className="mx-auto mt-28 max-w-3xl px-6">
-        <h2 className="pb-12 text-left text-3xl font-extrabold">
-          Solution Implementation
-        </h2>
+      <div className="w-full bg-sky-100 py-20">
+        <div className="mx-auto max-w-3xl px-6">
+          <h2 className="pb-12 text-left text-3xl font-extrabold">
+            Solution Implementation
+          </h2>
 
-        {/* Design Decisions */}
-        <div className="mb-10">
-          <h4 className="pb-4 text-xl font-bold">Design Decisions</h4>
-          <p className="text-gray-700">
-            {project.solutionImplementation.designDecisions}
-          </p>
-        </div>
-
-        {/* Coding Processes */}
-        {project.solutionImplementation.codingProcesses && (
+          {/* Design Decisions */}
           <div className="mb-10">
-            <h4 className="pb-4 text-xl font-bold">Coding Processes</h4>
+            <h4 className="pb-4 text-xl font-bold">Design Decisions</h4>
             <p className="text-gray-700">
-              {project.solutionImplementation.codingProcesses}
+              {project.solutionImplementation.designDecisions}
             </p>
           </div>
-        )}
 
-        {/* Accessibility and Usability */}
-        <div className="mb-10">
-          <h4 className="pb-4 text-xl font-bold">Accessibility & Usability</h4>
-          <p className="text-gray-700">
-            {project.solutionImplementation.accessibilityUsability}
-          </p>
-        </div>
+          {/* Coding Processes */}
+          {project.solutionImplementation.codingProcesses && (
+            <div className="mb-10">
+              <h4 className="pb-4 text-xl font-bold">Coding Processes</h4>
+              <p className="text-gray-700">
+                {project.solutionImplementation.codingProcesses}
+              </p>
+            </div>
+          )}
 
-        {/* Testing */}
-        {project.solutionImplementation.testing && (
+          {/* Accessibility and Usability */}
+          {project.solutionImplementation.accessibilityUsability && (
+            <div className="mb-10">
+              <h4 className="pb-4 text-xl font-bold">
+                Accessibility & Usability
+              </h4>
+              <p className="text-gray-700">
+                {project.solutionImplementation.accessibilityUsability}
+              </p>
+            </div>
+          )}
+
+          {/* Testing */}
+          {project.solutionImplementation.testing && (
+            <div className="mb-10">
+              <h4 className="pb-4 text-xl font-bold">Testing</h4>
+              <p className="text-gray-700">
+                {project.solutionImplementation.testing}
+              </p>
+            </div>
+          )}
+
+          {/* Deployment */}
+          {project.solutionImplementation.deployment && (
+            <div className="mb-10">
+              <h4 className="pb-4 text-xl font-bold">Deployment</h4>
+              <p className="text-gray-700">
+                {project.solutionImplementation.deployment}
+              </p>
+            </div>
+          )}
+
+          {/* Challenges Faced */}
           <div className="mb-10">
-            <h4 className="pb-4 text-xl font-bold">Testing</h4>
+            <h4 className="pb-4 text-xl font-bold">Challenges Faced</h4>
             <p className="text-gray-700">
-              {project.solutionImplementation.testing}
+              {project.solutionImplementation.challengesFaced}
             </p>
           </div>
-        )}
 
-        {/* Deployment */}
-        {project.solutionImplementation.deployment && (
-          <div className="mb-10">
-            <h4 className="pb-4 text-xl font-bold">Deployment</h4>
-            <p className="text-gray-700">
-              {project.solutionImplementation.deployment}
-            </p>
-          </div>
-        )}
-
-        {/* Challenges Faced */}
-        <div className="mb-10">
-          <h4 className="pb-4 text-xl font-bold">Challenges Faced</h4>
-          <p className="text-gray-700">
-            {project.solutionImplementation.challengesFaced}
-          </p>
+          {/* Design Product Images with Lightbox */}
+          {project.solutionImplementation.designProductImages.length > 0 && (
+            <div className="mt-12 grid grid-cols-1 gap-8">
+              {project.solutionImplementation.designProductImages.map(
+                (image, index) => (
+                  <button
+                    key={index}
+                    onClick={() => openLightbox(image)}
+                    className="focus:outline-none"
+                  >
+                    <div className="overflow-hidden rounded-lg">
+                      <img
+                        src={image}
+                        alt={`Design product ${index + 1}`}
+                        className="h-auto w-full cursor-pointer object-cover"
+                      />
+                    </div>
+                  </button>
+                ),
+              )}
+            </div>
+          )}
         </div>
       </div>
-      l{/* Lessons Learned Section */}
+      {/* Lessons Learned Section */}
       <div className="mx-auto mt-28 max-w-3xl px-6">
         <h2 className="pb-12 text-left text-3xl font-extrabold">
           Lessons Learned

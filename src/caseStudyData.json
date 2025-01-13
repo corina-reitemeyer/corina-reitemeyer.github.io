@@ -29,31 +29,38 @@
       "designProcessImages": [
         {
           "path": "/images/product/ritmo-personas-1.png",
-          "caption": "User personas for a Beginner and Improvers level student"
+          "caption": "User personas for a Beginner and Improvers level student",
+          "tabName": "Persona - Sofia & Mark"
         },
         {
           "path": "/images/product/ritmo-personas-2.png",
-          "caption": "User personas for a Intermediate/Advanced level student, and Dance Instructor"
+          "caption": "User personas for a Intermediate/Advanced level student, and Dance Instructor",
+          "tabName": "Persona - Javier & Carla"
         },
         {
           "path": "/images/product/sofia-userjourney-ritmo.png",
-          "caption": "User Journey flowchart for beginner student Sofia"
+          "caption": "User Journey flowchart for beginner student Sofia",
+          "tabName": "User Journey - Sofia"
         },
         {
           "path": "/images/product/mark-userjourney-ritmo.png",
-          "caption": "User Journey flowchart for Improvers student Mark"
+          "caption": "User Journey flowchart for Improvers student Mark",
+          "tabName": "User Horunery - Mark"
         },
         {
           "path": "/images/product/javier-userjourney-ritmo.png",
-          "caption": "User Journey flowchart for Intermediate/Advanced student Javier"
+          "caption": "User Journey flowchart for Intermediate/Advanced student Javier",
+          "tabName": "Uer Journey - Javier"
         },
         {
           "path": "/images/product/carla-userjourney-ritmo.png",
-          "caption": "User Journey flowchart for dance instructor Carla"
+          "caption": "User Journey flowchart for dance instructor Carla",
+          "tabName": "User Journey - Carla"
         },
         {
           "path": "/images/product/ritmo-low-fi-wireframes.png",
-          "caption": "The first three super low fidelity wireframes I created to visualise the main idea for the app - Search functionality to filter the move, dance-style focused page, and a dance-move focus page with all the details. I tend to start from very low-details to get the idea on the page to then gradually adding more and more details. This allows me to keep my focus on the must-have functionality, rather than creating a cluttered interface right of the bat."
+          "caption": "The first three super low fidelity wireframes I created to visualise the main idea for the app - Search functionality to filter the move, dance-style focused page, and a dance-move focus page with all the details. I tend to start from very low-details to get the idea on the page to then gradually adding more and more details. This allows me to keep my focus on the must-have functionality, rather than creating a cluttered interface right of the bat.",
+        "tabName": "Lo-Fi Wireframes"
         }
       ]
     },

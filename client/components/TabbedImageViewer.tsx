@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Lightbox from './LightBox.tsx'
 
 const TabbedImageViewer: React.FC<{
-  images: { path: string; caption?: string }[]
+  images: { path: string; tabName: string; caption?: string }[]
 }> = ({ images }) => {
   const [selectedTab, setSelectedTab] = useState(0)
   const [lightboxImage, setLightboxImage] = useState<string | null>(null)
@@ -38,7 +38,7 @@ const TabbedImageViewer: React.FC<{
                 : 'text-gray-500 hover:text-black'
             }`}
           >
-            Tab {index + 1}
+            {image.tabName}
           </button>
         ))}
       </div>

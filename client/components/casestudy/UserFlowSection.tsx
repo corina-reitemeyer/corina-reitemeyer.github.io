@@ -3,15 +3,15 @@ import TabbedImageViewer from './TabbedImageViewer'
 
 interface TabbedImage {
   path: string
-  caption: string
-  tabName: string // Added tab name for each image
+  caption?: string
+  tabName?: string // Optional tab name
 }
 
 interface UserFlowProps {
   overheadTitle: string // Overhead title for the section
   title: string
   description: string
-  images: TabbedImage[] // Array of images with captions and tab names
+  images: TabbedImage[] // Array of images with captions and optional tab names
 }
 
 const UserFlow: React.FC<UserFlowProps> = ({
@@ -22,7 +22,7 @@ const UserFlow: React.FC<UserFlowProps> = ({
 }) => {
   return (
     <section className="py-28">
-      <div className="container mx-auto max-w-4xl px-6">
+      <div className="container mx-auto max-w-4xl">
         {/* Overhead Title */}
         <p className="text-lg font-semibold text-[#40B0C8]">{overheadTitle}</p>
 
@@ -41,12 +41,14 @@ const UserFlow: React.FC<UserFlowProps> = ({
           <div className="mt-8">
             <img
               src={images[0].path}
-              alt={images[0].caption}
+              alt={images[0].caption || 'User flow image'}
               className="mx-auto w-full max-w-3xl rounded-lg"
             />
-            <p className="mt-4 text-center text-sm text-gray-600">
-              {images[0].caption}
-            </p>
+            {images[0].caption && (
+              <p className="mt-4 text-center text-sm text-gray-600">
+                {images[0].caption}
+              </p>
+            )}
           </div>
         )}
       </div>

@@ -23,7 +23,7 @@ const Hero: React.FC<HeroProps> = ({ project }) => {
   return (
     <section className="w-full bg-white pb-28">
       {/* Banner */}
-      <div className="bg-light-blue relative flex h-96 w-full items-center justify-center">
+      <div className="bg-light-blue relative flex h-full w-full items-center justify-center">
         <img
           src={headerImage}
           alt="Project Banner"

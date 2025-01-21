@@ -2,13 +2,13 @@ import React from 'react'
 
 interface Principle {
   number: number
-  title: string
+  title?: string
   description: string
 }
 
 interface PrinciplesSectionProps {
   subtitle: string
-  title: string
+  title?: string
   description?: string
   principles: Principle[]
   reversedLayout?: boolean // Control the order dynamically

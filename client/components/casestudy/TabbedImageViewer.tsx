@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Lightbox from './LightBox'
 
 interface TabbedImageViewerProps {
-  images: { path: string; tabName: string; caption?: string }[]
+  images: { path: string; tabName?: string; caption?: string }[]
 }
 
 const TabbedImageViewer: React.FC<TabbedImageViewerProps> = ({ images }) => {
@@ -18,7 +18,7 @@ const TabbedImageViewer: React.FC<TabbedImageViewerProps> = ({ images }) => {
   }
 
   return (
-    <div>
+    <div className="mx-auto max-w-4xl">
       {/* Lightbox */}
       {lightboxImage && (
         <Lightbox
@@ -54,7 +54,7 @@ const TabbedImageViewer: React.FC<TabbedImageViewerProps> = ({ images }) => {
           <img
             src={images[selectedTab].path}
             alt={images[selectedTab].caption || 'Tabbed image'}
-            className="w-full rounded-lg"
+            className="w-full max-w-4xl rounded-lg"
           />
         </button>
         {images[selectedTab].caption && (

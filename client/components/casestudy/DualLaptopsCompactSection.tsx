@@ -15,17 +15,18 @@ const DualLaptopsCompactSection: React.FC<DualLaptopsCompactSectionProps> = ({
   backgroundColor = '#FFF4B0',
 }) => {
   return (
-    <section
-      className="dual-laptops-compact-section"
-      style={{ backgroundColor }}
-    >
-      <div className="compact-laptops-container">
+    <section className="relative w-screen py-36" style={{ backgroundColor }}>
+      <div className="flex h-auto w-full items-center justify-between">
         {laptops.map((laptop, index) => (
           <img
             key={index}
             src={laptop.src}
             alt={laptop.alt}
-            className="compact-laptop-image"
+            className={`h-auto object-contain ${index === 0 ? 'ml-0' : 'mr-0'}`}
+            style={{
+              width: 'auto', // Each laptop image takes ~48% of the viewport width
+              height: '30vw',
+            }}
           />
         ))}
       </div>

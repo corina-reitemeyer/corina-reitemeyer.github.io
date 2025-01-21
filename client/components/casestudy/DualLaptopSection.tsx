@@ -15,16 +15,31 @@ const DualLaptopsSection: React.FC<DualLaptopsSectionProps> = ({
   backgroundColor = '#FFF4B0',
 }) => {
   return (
-    <section className="dual-laptops-section" style={{ backgroundColor }}>
-      <div className="laptops-container">
-        {laptops.map((laptop, index) => (
+    <section className="relative w-screen py-16" style={{ backgroundColor }}>
+      <div className="grid h-auto w-full grid-cols-2 items-center">
+        {/* Left Laptop */}
+        <div className="relative flex justify-start">
           <img
-            key={index}
-            src={laptop.src}
-            alt={laptop.alt}
-            className="laptop-image"
+            src={laptops[0]?.src}
+            alt={laptops[0]?.alt}
+            className="h-auto w-[48vw] object-contain"
+            style={{
+              marginTop: '100px', // Lower the left laptop
+            }}
           />
-        ))}
+        </div>
+
+        {/* Right Laptop */}
+        <div className="relative flex justify-end">
+          <img
+            src={laptops[1]?.src}
+            alt={laptops[1]?.alt}
+            className="h-auto w-[48vw] object-contain"
+            style={{
+              marginBottom: '100px', // Raise the right laptop
+            }}
+          />
+        </div>
       </div>
     </section>
   )

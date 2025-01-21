@@ -19,21 +19,33 @@ const OpportunitySpace: React.FC<OpportunitySpaceProps> = ({
   kpis,
 }) => {
   return (
-    <section className="opportunity-space">
-      <div className="opportunity-header">
-        <p className="opportunity-subtitle">{subtitle}</p>
-        <h2 className="opportunity-title">{title}</h2>
-        <p className="opportunity-description">{description}</p>
-      </div>
-      <div className="kpi-cards">
-        {kpis.map((kpi, index) => (
-          <div key={index} className="kpi-card">
-            <p className="kpi-value">{kpi.value}</p>
-            <p className="kpi-description">{kpi.description}</p>
+    <>
+      <section className="relative bg-[#E6F8FF] py-24">
+        <div className="container mx-auto max-w-4xl text-left">
+          {/* Header Section */}
+          <p className="text-lg font-semibold text-[#40B0C8]">{subtitle}</p>
+          <h2 className="mt-2 text-4xl font-bold text-gray-900">{title}</h2>
+          <p className="mt-4 text-lg text-gray-700">{description}</p>
+        </div>
+
+        {/* KPI Cards */}
+        <div className="relative mx-auto mt-16 flex max-w-4xl justify-center">
+          <div className="-bottom-26 absolute mb-32 grid grid-cols-1 gap-6 sm:grid-cols-3">
+            {kpis.map((kpi, index) => (
+              <div
+                key={index}
+                className="rounded-lg bg-white p-6 text-center shadow-md"
+              >
+                <p className="text-4xl font-bold text-gray-900">{kpi.value}</p>
+                <p className="mt-2 text-gray-700">{kpi.description}</p>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </section>
+        </div>
+      </section>
+      {/* Ensure extra spacing to the next section */}
+      <div className="mt-28"></div>
+    </>
   )
 }
 

@@ -71,7 +71,7 @@ li {
 
 /* Grid Item Wrapper */
 .grid-item-wrapper {
-  @apply aspect-w-16 aspect-h-9 relative overflow-hidden;
+  @apply aspect-h-9 aspect-w-16 relative overflow-hidden;
 }
 
 /* Profile Image (Optional) */

@@ -3,28 +3,28 @@
     "id": 1,
     "projectTitle": "Ritmo",
     "slug": "ritmo",
-    "projectImage": "/images/projects/ritmo-thumbnail.png",
+    "projectImage": "/images/portfolio/ritmo-cover.png",
     "company": "Personal Project"
   },
   {
     "id": 2,
-    "projectTitle": "UX Design System",
-    "slug": "ux-design-system",
-    "projectImage": "/images/projects/ux-design-system-thumbnail.png",
-    "company": "Tech Agency"
+    "projectTitle": "Templates",
+    "slug": "ow-templates",
+    "projectImage": "/images/portfolio/ow-templates-cover.png",
+    "company": "Optimal Workshop"
   },
   {
     "id": 3,
-    "projectTitle": "E-Commerce Redesign",
-    "slug": "ecommerce-redesign",
-    "projectImage": "/images/projects/ecommerce-redesign-thumbnail.png",
-    "company": "Retail Company"
+    "projectTitle": "Design System",
+    "slug": "moe-design-system",
+    "projectImage": "/images/portfolio/moe-design-system-cover.png",
+    "company": "Ministry of Education (New Zealand)"
   },
   {
     "id": 4,
-    "projectTitle": "Healthcare Dashboard",
-    "slug": "healthcare-dashboard",
-    "projectImage": "/images/projects/healthcare-dashboard-thumbnail.png",
-    "company": "HealthTech Startup"
+    "projectTitle": "NCEA Website",
+    "slug": "moe-ncea-website",
+    "projectImage": "/images/portfolio/moe-ncea-cover.png",
+    "company": "Ministry of Education (New Zealand)"
   }
 ]

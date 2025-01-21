@@ -1,43 +1,74 @@
 import React from 'react'
 
-interface UserCard {
+interface PrimaryUser {
+  number: number
   title: string
   description: string
 }
 
-interface PrimaryUsersProps {
-  title: string
+interface PrimaryUserSectionProps {
   subtitle: string
-  cards: UserCard[] // Dynamically render cards based on the array
+  title: string
+  description?: string
+  principles: PrimaryUser[]
+  backgroundColor: string // Background color for the section
+  subtitleColor: string // Subtitle color for the section
+  reversedLayout?: boolean
 }
 
-const PrimaryUsers: React.FC<PrimaryUsersProps> = ({
-  title,
+const PrimaryUsersSection: React.FC<PrimaryUserSectionProps> = ({
   subtitle,
-  cards,
+  title,
+  description,
+  principles,
+  backgroundColor,
+  subtitleColor,
+  reversedLayout = false,
 }) => {
   return (
-    <div className="bg-light-blue rounded-lg px-8 py-12">
-      <h3 className="text-primary mb-2 text-lg font-bold">{title}</h3>
-      <h2 className="mb-4 text-4xl font-extrabold">{subtitle}</h2>
-      <p className="mb-8 text-lg">{subtitle}</p>
-      <div
-        className={`grid gap-6 ${
-          cards.length === 3 ? 'grid-cols-3' : 'grid-cols-2'
-        }`}
-      >
-        {cards.map((card, index) => (
-          <div
-            key={index}
-            className="bg-light-card rounded-lg p-6 text-center shadow-md"
-          >
-            <h4 className="mb-2 text-xl font-semibold">{card.title}</h4>
-            <p className="text-md">{card.description}</p>
+    <section
+      className="py-16"
+      style={{ backgroundColor }} // Dynamic background color
+    >
+      <div className="container mx-auto max-w-6xl rounded-lg bg-white p-12">
+        {/* Inner Content Wrapper */}
+        <div className="inner-container mx-auto max-w-4xl py-12">
+          {/* Text Container */}
+          <div className="text-container mb-8">
+            <p
+              className="subtitle text-lg font-semibold"
+              style={{ color: subtitleColor }} // Dynamic subtitle color
+            >
+              {subtitle}
+            </p>
+            <h2 className="title text-4xl font-bold text-gray-900">{title}</h2>
+            {description && (
+              <p className="my-6 text-lg text-gray-700">{description}</p>
+            )}
           </div>
-        ))}
+
+          {/* PrimaryUsers List */}
+          <div
+            className={`principles-container grid grid-cols-1 gap-6 sm:grid-cols-3 ${
+              reversedLayout ? 'reversed' : ''
+            }`}
+          >
+            {principles.map((primaryuser) => (
+              <div
+                key={primaryuser.number}
+                className="principle rounded-lg bg-[#E6F8FF] p-8"
+              >
+                <h4 className="mt-2 text-xl font-semibold text-gray-800">
+                  {primaryuser.title}
+                </h4>
+                <p className="mt-2 text-gray-700">{primaryuser.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 
-export default PrimaryUsers
+export default PrimaryUsersSection

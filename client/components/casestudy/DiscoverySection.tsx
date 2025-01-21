@@ -1,5 +1,5 @@
 import React from 'react'
-import TabbedImageViewer from './TabbedImageViewer'
+import TabbedImageViewer from './TabbedImageViewer' // Assuming the tabbed viewer is imported here
 import '../../styles/DiscoverySection.css'
 
 interface ColumnData {
@@ -7,13 +7,20 @@ interface ColumnData {
   description: string
 }
 
+interface TabbedImage {
+  path: string
+  tabName: string
+  caption?: string
+}
+
 interface DiscoverySectionProps {
   subtitle: string
   title: string
   description: string
-  showTabbedImageViewer?: boolean
-  tabbedImageViewerData?: { image: string; caption: string }[]
+  variant: 'default' | 'tabbed' | 'threeColumns'
+  subtitleColor: 'ritmo' | 'project2' | 'project3' // Use keys to map specific colors
   threeColumnData?: ColumnData[]
+  tabbedImages?: TabbedImage[] // Add images for tabbed viewer
   imageSrc?: string
   imageAlt?: string
 }
@@ -22,38 +29,62 @@ const DiscoverySection: React.FC<DiscoverySectionProps> = ({
   subtitle,
   title,
   description,
-  showTabbedImageViewer = false,
-  tabbedImageViewerData,
+  variant,
+  subtitleColor,
   threeColumnData,
+  tabbedImages,
   imageSrc,
   imageAlt = 'Illustration',
 }) => {
+  const subtitleColorMap = {
+    ritmo: '#40B0C8',
+    project2: '#5452F6',
+    project3: '#C7A000',
+  }
+
   return (
-    <section className="discovery-section">
-      <div className="discovery-container">
-        <div className="discovery-text">
-          <p className="discovery-subtitle">{subtitle}</p>
-          <h2 className="discovery-title">{title}</h2>
-          <p className="discovery-description">{description}</p>
+    <section className=" my-20">
+      <div className="container mx-auto max-w-4xl space-y-12">
+        {/* Top Section: Text Content */}
+        <div>
+          <p
+            className="text-lg font-semibold"
+            style={{ color: subtitleColorMap[subtitleColor] }}
+          >
+            {subtitle}
+          </p>
+          <h2 className="mt-2 text-4xl font-bold text-gray-900">{title}</h2>
+          <p className="mt-6 text-lg text-gray-700">{description}</p>
         </div>
-        <div className="discovery-visual">
-          {showTabbedImageViewer && tabbedImageViewerData ? (
-            <TabbedImageViewer data={tabbedImageViewerData} />
-          ) : (
-            <img src={imageSrc} alt={imageAlt} className="discovery-image" />
-          )}
-        </div>
+
+        {/* Visual Section */}
+        {variant === 'default' && (
+          <img
+            src={imageSrc}
+            alt={imageAlt}
+            className="mx-auto w-full max-w-4xl rounded-lg"
+          />
+        )}
+        {variant === 'tabbed' && tabbedImages && (
+          <div className="mx-auto w-full max-w-4xl">
+            <TabbedImageViewer images={tabbedImages} />
+          </div>
+        )}
+
+        {/* Additional Visuals for Three Columns */}
+        {variant === 'threeColumns' && threeColumnData && (
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+            {threeColumnData.map((column, index) => (
+              <div key={index} className="rounded-lg bg-gray-100 p-4">
+                <h3 className="text-xl font-bold text-gray-900">
+                  {column.title}
+                </h3>
+                <p className="mt-2 text-gray-700">{column.description}</p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
-      {!showTabbedImageViewer && threeColumnData && (
-        <div className="discovery-three-columns">
-          {threeColumnData.map((column, index) => (
-            <div key={index} className="column">
-              <h3>{column.title}</h3>
-              <p>{column.description}</p>
-            </div>
-          ))}
-        </div>
-      )}
     </section>
   )
 }

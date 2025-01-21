@@ -1,9 +1,0 @@
-.principles-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.principles-container.reversed {
-  flex-direction: column; /* Adjust for the reversed layout */
-}

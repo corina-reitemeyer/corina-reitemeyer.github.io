@@ -1,15 +1,14 @@
 import CompetitiveAnalysisSection from '../components/casestudy/CompetitiveAnalysis'
 import DiscoverySection from '../components/casestudy/DiscoverySection'
 import Hero from '../components/casestudy/Hero'
-import IdeationSection from '../components/casestudy/IdeationSection'
+import Ideation from '../components/casestudy/IdeationSection'
 import InsightsSection from '../components/casestudy/InsightsSection'
 import LessonsLearnedSection from '../components/casestudy/LessonsLearned'
 import MobileScreensShowcase from '../components/casestudy/MobileShowCase'
 import PrimaryUsersSection from '../components/casestudy/PrimaryUsers'
-import PrinciplesSection from '../components/casestudy/Principles'
-import TabbedImageViewer from '../components/casestudy/TabbedImageViewer'
+import PrincipleSection from '../components/casestudy/PrinciplesSection'
 import ThreeMobile from '../components/casestudy/ThreeMobile'
-import UserflowsSection from '../components/casestudy/UserFlowSection'
+import UserFlow from '../components/casestudy/UserFlowSection'
 import WireframesSection from '../components/casestudy/WireframesSection'
 
 const Ritmo = () => {
@@ -31,194 +30,224 @@ const Ritmo = () => {
           company: 'Personal Project',
           date: '2024',
           projectImage: '/images/ritmo-thumbnail.png', // Add this line
-          headerImage: '/images/case-study-1-banner.png',
+          headerImage: '/images/banner-images/ritmo-banner.png',
         }}
       />
 
       {/* Three Mobile Showcase */}
       <ThreeMobile
         screens={[
-          { src: '/images/mobile-screen-1.png', alt: 'Mobile Screen 1' },
-          { src: '/images/mobile-screen-2.png', alt: 'Mobile Screen 2' },
-          { src: '/images/mobile-screen-3.png', alt: 'Mobile Screen 3' },
+          {
+            src: '/images/product/ritmo-mobile-1.png',
+            alt: 'Ritmo Library Screen',
+          },
+          {
+            src: '/images/product/ritmo-mobile-2.png',
+            alt: 'Ritmo Homepage Screen',
+          },
+          {
+            src: '/images/product/ritmo-mobile-3.png',
+            alt: 'Ritmo Moves Screen',
+          },
         ]}
       />
 
       {/* Discovery Section */}
       <DiscoverySection
-        subtitle="Discovery Phase"
+        subtitle="Project Discovery"
         title="Understanding User Needs"
-        description="We started with user research to uncover the key pain points and desires of our target audience."
-        imageSrc="/images/discovery.png"
-        imageAlt="Discovery Image"
-      />
-
-      {/* Tabbed Image Viewer */}
-      <TabbedImageViewer
-        images={[
+        description="We conducted a comprehensive user research phase to identify pain points and opportunities for improvement."
+        variant="tabbed"
+        subtitleColor="ritmo"
+        tabbedImages={[
           {
-            path: '/images/image1.png',
-            tabName: 'Tab 1',
-            caption: 'This is the caption for image 1.',
+            path: '/images/process/UX Persona - Beginner.png',
+            tabName: 'Persona - Beginner',
+            caption: 'Key findings from interviews with dancers.',
           },
           {
-            path: '/images/image2.png',
-            tabName: 'Tab 2',
-            caption: 'This is the caption for image 2.',
+            path: '/images/process/UX Persona - Improvers.png',
+            tabName: 'Persona - Improvers',
+            caption: 'Observed behaviors and patterns.',
           },
           {
-            path: '/images/image3.png',
-            tabName: 'Tab 3',
-            caption: 'This is the caption for image 3.',
+            path: '/images/process/UX Persona - Intermediate.png',
+            tabName: 'Persona - Intermediate',
+            caption: 'Survey results summarized.',
+          },
+          {
+            path: '/images/process/UX Persona - Instructor.png',
+            tabName: 'Persona - Instructor',
+            caption: 'Survey results summarized.',
           },
         ]}
       />
 
       {/* Primary Users Section */}
       <PrimaryUsersSection
+        subtitle="Discovery"
         title="Primary Users"
-        subtitle="Who Are We Designing For?"
-        cards={[
+        description="As I am frequently surrounded by dancers, I conducted semi-informal interviews with a few students in the community as well as fellow instructors, who shared their experiences with me. I consolidated their goals, needs, and pain points into detailed user personas and created user journey flowcharts."
+        principles={[
           {
+            number: 1,
             title: 'Students',
             description:
-              'Beginner and intermediate students looking to improve their skills.',
+              'Create designs that are user-centric, accessible, and visually appealing.',
           },
           {
-            title: 'Instructors',
-            description:
-              'Teachers seeking to provide structured lessons for students.',
+            number: 2,
+            title: 'Teachers',
+            description: 'Build, test, and maintain websites and applications.',
           },
           {
+            number: 3,
             title: 'Social Dancers',
             description:
-              'Experienced dancers practicing advanced moves at socials.',
+              'Act as a bridge between the technical and non-technical stakeholders.',
           },
         ]}
+        backgroundColor="#9EEEFF" // Blue background for "Discovery"
+        subtitleColor="#40B0C8" // Subtitle color matching "Ritmo"
+        reversedLayout={false}
       />
 
       {/* Insights Section */}
       <InsightsSection
-        subtitle="User Research Insights"
-        title="Key Takeaways from Research"
-        description="We identified key insights from user interviews to guide the design process."
+        subtitle="Discovery"
+        title="What is holding the dance students back?"
+        description="Here are key insights derived from our research."
         insights={[
           {
             id: 1,
-            title: 'Ease of Use',
+            title: 'Insight #1',
             description:
-              'Users value intuitive navigation and clear instructions.',
+              'Students and teachers I spoke with consistently expressed the need for a reliable source of truth.',
+            highlights: ['reliable', 'source of truth'],
           },
           {
             id: 2,
-            title: 'Accessibility',
+            title: 'Insight #2',
             description:
-              'Ensuring accessibility features, such as font size adjustments, improves the overall experience.',
+              'Students from varying experience backgrounds need tailored information.',
+            highlights: ['tailored'],
           },
         ]}
       />
 
       {/* Ideation Section */}
-      <IdeationSection
-        title="Ideation"
-        subtitle="Ideating Based on Research"
-        description="We brainstormed features and solutions that address core user needs."
-        cards={[
+      <Ideation
+        title="Discovery"
+        subtitle="Ideating Based on Insights"
+        description="Based on my findings and observations, I brainstormed features to address key challenges faced by students and instructors, such as the lack of accessible tools during classes or prácticas."
+        points={[
           {
-            title: 'Quick Search',
+            title: 'Quick Access',
             description:
-              'Provide a fast, descriptive search option to locate resources easily.',
+              'Students frequently needed quick access to materials, making save functionality and mobile-first design essential for usability.',
           },
           {
-            title: 'Progress Tracking',
+            title: 'Visual Material',
             description:
-              'Incorporate a progress tracker to encourage consistent usage.',
+              'A video library was proposed to provide structured guidance, allowing users to reference and review material without relying on memory alone.',
           },
           {
-            title: 'Community Features',
+            title: 'Descriptive Search',
             description:
-              'Add a feature for users to share tips and experiences.',
+              'Users struggled to recall move names in classes, so a descriptive search was proposed for easier lookup based on key characteristics.',
           },
         ]}
       />
 
       {/* Principles Section */}
-      <PrinciplesSection
-        subtitle="Guiding Design Principles"
-        title="Core Values Driving the Solution"
-        description="These principles formed the foundation of our design and development decisions."
+      <PrincipleSection
+        subtitle="Goals & Strategy"
+        title="Principles"
+        description="These principles were established to address the unique challenges faced by students and instructors in a dynamic learning environment. Accessibility ensures the app remains practical and valuable in real-world settings, such as during lessons or prácticas."
         principles={[
           {
             number: 1,
-            title: 'User-Centered Design',
+            title: 'Accessibility and Usability First',
             description:
-              'Prioritize user needs and ensure designs are easy to use.',
+              'Ensures the app remains accessible and valuable in dynamic learning environments.',
           },
           {
             number: 2,
-            title: 'Accessibility First',
+            title: 'Support for Active Learning',
             description:
-              'Ensure compliance with accessibility standards for inclusivity.',
+              'Tools that help users retain and apply knowledge effectively.',
           },
           {
             number: 3,
-            title: 'Scalable Architecture',
-            description: 'Design a solution that can grow with future needs.',
+            title: 'Scalability and Flexibility',
+            description:
+              'Provides a foundation for future features and content expansions.',
           },
         ]}
+        reversedLayout={true} // Switches the layout order
       />
 
       {/* Competitive Analysis Section */}
       <CompetitiveAnalysisSection
-        subtitle="Competitor Analysis"
-        title="Market Research"
-        description="We analyzed existing tools in the market to identify gaps and opportunities."
-        images={[
-          { src: '/images/competitor-1.png', alt: 'Competitor 1 Analysis' },
-          { src: '/images/competitor-2.png', alt: 'Competitor 2 Analysis' },
-        ]}
+        subtitle="Exploration"
+        title="Dance Libraries Analysis"
+        description="To ensure our design system met industry standards and organizational needs, I conducted thorough research on existing government and private sector design systems. This included analyzing their structure, key features, and content strategies to identify best practices and gaps."
+        image={{
+          src: '/images/process/ritmo-competitors.png',
+          alt: 'Analysis of dance libraries',
+        }}
       />
 
       {/* User Flows Section */}
-      <UserflowsSection
+      <UserFlow
+        overheadTitle="Exploration"
         title="User Flows"
-        description="Detailed user flow diagrams illustrate navigation paths."
-        userflows={[
+        description="Detailed user flows improve illustrations for usability and accessibility."
+        images={[
           {
-            type: 'tabbed',
-            tabbedImages: [
-              {
-                path: '/images/userflow-beginner.png',
-                caption: 'User flow for beginner users.',
-              },
-              {
-                path: '/images/userflow-advanced.png',
-                caption: 'User flow for advanced users.',
-              },
-            ],
+            path: '/images/process/sofia-userjourney.png',
+            tabName: 'Beginner Userflow',
+            caption: 'This is the beginner flow.',
+          },
+          {
+            path: '/images/process/mark-userjourney.png',
+            tabName: 'Intermediate Userflow',
+            caption: 'This is the intermediate flow.',
+          },
+          {
+            path: '/images/process/javier-userjourney.png',
+            tabName: 'Advanced Userflow',
+            caption: 'This is the advanced flow.',
+          },
+          {
+            path: '/images/process/carla-userjourney.png',
+            tabName: 'Instructor Userflow',
+            caption: 'This is the advanced flow.',
+          },
+          {
+            path: '/images/process/ritmo-mvp-technical-journey map.png',
+            tabName: 'Technical Journey Map',
+            caption: 'This is the advanced flow.',
           },
         ]}
       />
 
-      {/* Wireframes Section */}
       <WireframesSection
-        subtitle="Visualizing the Concept"
-        title="Low-Fidelity Wireframes"
-        description="Initial wireframes helped visualize the core functionality and layout of the app."
-        images={[
-          { src: '/images/wireframe-1.png', alt: 'Wireframe 1' },
-          { src: '/images/wireframe-2.png', alt: 'Wireframe 2' },
-        ]}
+        subtitle="Refinement"
+        title="Wireframes"
+        description="To ensure our design system met industry standards and organizational needs, I conducted thorough research on existing government and private sector design systems. This included analyzing their structure, key features, and content strategies to identify best practices and gaps."
+        image={{
+          src: '/images/process/ritmo-wireframes.png',
+          alt: 'Analysis of dance libraries',
+        }}
       />
 
       {/* Mobile Screens Showcase */}
       <MobileScreensShowcase
-        title="Final Mobile Designs"
-        description="Showcasing the final mobile screens highlighting the app’s features."
-        screens={[
-          { src: '/images/mobile-screen-1.png', alt: 'Home Screen' },
-          { src: '/images/mobile-screen-2.png', alt: 'Search Screen' },
-        ]}
+        image={{
+          src: '/images/process/ritmo-showcase.png',
+          alt: 'Showcase of mobile screens',
+        }}
       />
 
       {/* Lessons Learned Section */}

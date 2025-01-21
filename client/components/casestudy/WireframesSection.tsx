@@ -9,31 +9,33 @@ interface WireframesSectionProps {
   subtitle: string
   title: string
   description: string
-  images: WireframeImage[]
+  image: WireframeImage // Change to accept a single image
 }
 
 const WireframesSection: React.FC<WireframesSectionProps> = ({
   subtitle,
   title,
   description,
-  images,
+  image,
 }) => {
   return (
-    <section className="wireframes-section">
-      <div className="wireframes-header">
-        <p className="wireframes-subtitle">{subtitle}</p>
-        <h2 className="wireframes-title">{title}</h2>
-        <p className="wireframes-description">{description}</p>
-      </div>
-      <div className="wireframes-images">
-        {images.map((image, index) => (
+    <section className="bg-[#E6F8FF] py-24">
+      <div className="container mx-auto flex h-[600px] max-w-4xl flex-col justify-between">
+        {/* Header Section */}
+        <div>
+          <p className="text-lg font-semibold text-[#40B0C8]">{subtitle}</p>
+          <h2 className="mt-2 text-4xl font-bold text-gray-900">{title}</h2>
+          <p className="mt-6 text-lg text-gray-700">{description}</p>
+        </div>
+
+        {/* Image Section */}
+        <div className="flex h-full items-end justify-center">
           <img
-            key={index}
             src={image.src}
             alt={image.alt}
-            className="wireframe-image"
+            className="mt-20 max-w-full rounded-lg object-contain"
           />
-        ))}
+        </div>
       </div>
     </section>
   )

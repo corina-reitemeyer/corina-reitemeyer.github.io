@@ -1,94 +1,56 @@
 import React from 'react'
+import TabbedImageViewer from './TabbedImageViewer'
 
 interface TabbedImage {
   path: string
   caption: string
-}
-
-interface UserFlowItem {
-  type: 'tabbed' | 'tall' // Determines which layout to render
-  tabbedImages?: TabbedImage[] // For the Tabbed Image Viewer
-  tallImage?: string // For the Tall Image
-  caption?: string // Caption for the Tall Image
-  additionalImage?: string // Additional image (when using Tabbed Viewer + Separate Image)
+  tabName: string // Added tab name for each image
 }
 
 interface UserFlowProps {
+  overheadTitle: string // Overhead title for the section
   title: string
   description: string
-  userflows: UserFlowItem[] // Allows multiple user flow items
+  images: TabbedImage[] // Array of images with captions and tab names
 }
 
 const UserFlow: React.FC<UserFlowProps> = ({
+  overheadTitle,
   title,
   description,
-  userflows,
+  images,
 }) => {
   return (
-    <div className="bg-light-gray rounded-lg px-8 py-12">
-      {/* Section Title and Description */}
-      <h3 className="text-primary mb-2 text-lg font-bold">{title}</h3>
-      <p className="mb-8 text-lg">{description}</p>
+    <section className="py-28">
+      <div className="container mx-auto max-w-4xl px-6">
+        {/* Overhead Title */}
+        <p className="text-lg font-semibold text-[#40B0C8]">{overheadTitle}</p>
 
-      {/* Render Each User Flow */}
-      {userflows.map((flow, index) => (
-        <div key={index} className="mb-12">
-          {/* Tabbed Layout */}
-          {flow.type === 'tabbed' && flow.tabbedImages ? (
-            <div className="mb-8">
-              <div className="tabs grid grid-cols-1 gap-4 sm:grid-cols-2">
-                {flow.tabbedImages.map((image, i) => (
-                  <div key={i} className="tab-content">
-                    <img
-                      src={image.path}
-                      alt={image.caption}
-                      className="mb-4 h-auto w-full rounded-lg shadow-md"
-                    />
-                    <p className="text-md text-center text-gray-700">
-                      {image.caption}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              {/* Additional Image */}
-              {flow.additionalImage && (
-                <img
-                  src={flow.additionalImage}
-                  alt="Additional Content"
-                  className="mt-6 h-auto w-full rounded-lg shadow-md"
-                />
-              )}
-            </div>
-          ) : (
-            flow.type === 'tabbed' && (
-              <p className="text-center text-red-500">
-                Tabbed layout requires images.
-              </p>
-            )
-          )}
-
-          {/* Tall Layout */}
-          {flow.type === 'tall' && flow.tallImage && flow.caption ? (
-            <div>
-              <img
-                src={flow.tallImage}
-                alt={flow.caption}
-                className="mb-4 h-auto w-full rounded-lg shadow-md"
-              />
-              <p className="text-md text-center text-gray-700">
-                {flow.caption}
-              </p>
-            </div>
-          ) : (
-            flow.type === 'tall' && (
-              <p className="text-center text-red-500">
-                Tall layout requires an image and a caption.
-              </p>
-            )
-          )}
+        {/* Section Title and Description */}
+        <div className="mb-12">
+          <h3 className="mt-2 text-4xl font-bold text-gray-900">{title}</h3>
+          <p className="mt-4 text-lg text-gray-700">{description}</p>
         </div>
-      ))}
-    </div>
+
+        {/* Render TabbedImageViewer if multiple images, or single image with caption */}
+        {images.length > 1 ? (
+          <div className="mt-8">
+            <TabbedImageViewer images={images} />
+          </div>
+        ) : (
+          <div className="mt-8">
+            <img
+              src={images[0].path}
+              alt={images[0].caption}
+              className="mx-auto w-full max-w-3xl rounded-lg"
+            />
+            <p className="mt-4 text-center text-sm text-gray-600">
+              {images[0].caption}
+            </p>
+          </div>
+        )}
+      </div>
+    </section>
   )
 }
 

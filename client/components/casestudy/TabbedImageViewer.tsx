@@ -1,9 +1,11 @@
-import { useState } from 'react'
-import Lightbox from './LightBox.tsx'
+import React, { useState } from 'react'
+import Lightbox from './LightBox'
 
-const TabbedImageViewer: React.FC<{
+interface TabbedImageViewerProps {
   images: { path: string; tabName: string; caption?: string }[]
-}> = ({ images }) => {
+}
+
+const TabbedImageViewer: React.FC<TabbedImageViewerProps> = ({ images }) => {
   const [selectedTab, setSelectedTab] = useState(0)
   const [lightboxImage, setLightboxImage] = useState<string | null>(null)
 
@@ -16,8 +18,8 @@ const TabbedImageViewer: React.FC<{
   }
 
   return (
-    <div className="space-y-8">
-      {/* Lightbox Modal */}
+    <div>
+      {/* Lightbox */}
       {lightboxImage && (
         <Lightbox
           src={lightboxImage}
@@ -26,17 +28,17 @@ const TabbedImageViewer: React.FC<{
         />
       )}
 
-      {/* Tabs Container */}
-      <div className="flex space-x-6 border-b border-gray-200 pb-4">
+      {/* Tabs */}
+      <div className="flex border-b border-gray-200">
         {images.map((image, index) => (
           <button
             key={index}
-            onClick={() => setSelectedTab(index)}
-            className={`px-4 py-2 text-sm font-semibold transition ${
+            className={`text-md px-4 py-2 font-semibold ${
               selectedTab === index
                 ? 'border-b-2 border-black text-black'
                 : 'text-gray-500 hover:text-black'
             }`}
+            onClick={() => setSelectedTab(index)}
           >
             {image.tabName}
           </button>
@@ -44,7 +46,7 @@ const TabbedImageViewer: React.FC<{
       </div>
 
       {/* Selected Image */}
-      <div className="w-full">
+      <div className="mt-6">
         <button
           onClick={() => openLightbox(images[selectedTab].path)}
           className="focus:outline-none"
@@ -52,11 +54,9 @@ const TabbedImageViewer: React.FC<{
           <img
             src={images[selectedTab].path}
             alt={images[selectedTab].caption || 'Tabbed image'}
-            className="h-auto w-full rounded-lg object-cover shadow-md"
+            className="w-full rounded-lg"
           />
         </button>
-
-        {/* Image Caption */}
         {images[selectedTab].caption && (
           <p className="mt-4 text-center text-sm text-gray-600">
             {images[selectedTab].caption}

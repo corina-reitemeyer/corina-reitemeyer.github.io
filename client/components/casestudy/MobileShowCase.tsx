@@ -1,36 +1,35 @@
-import React from 'react'
-
-interface MobileScreen {
-  src: string
-  alt: string
-}
+import React, { useEffect, useState } from 'react'
 
 interface MobileScreensShowcaseProps {
-  title: string
-  description: string
-  screens: MobileScreen[]
+  image: { src: string; alt: string }
 }
 
 const MobileScreensShowcase: React.FC<MobileScreensShowcaseProps> = ({
-  title,
-  description,
-  screens,
+  image,
 }) => {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    // Trigger fade-in after component mounts
+    const timer = setTimeout(() => {
+      setIsVisible(true)
+    }, 100) // Delay to ensure smooth transition
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
-    <section className="mobile-screens-showcase">
-      <div className="mobile-screens-header">
-        <h2 className="mobile-screens-title">{title}</h2>
-        <p className="mobile-screens-description">{description}</p>
-      </div>
-      <div className="mobile-screens-gallery">
-        {screens.map((screen, index) => (
+    <section className="bg-[#9EEEFF] py-16">
+      <div className="max-w-8xl container mx-auto flex flex-col justify-between">
+        {/* Image Section */}
+        <div className="flex h-full items-end justify-center overflow-hidden">
           <img
-            key={index}
-            src={screen.src}
-            alt={screen.alt}
-            className="mobile-screen-image"
+            src={image.src}
+            alt={image.alt}
+            className={`h-auto max-h-full max-w-full object-contain transition-opacity duration-1000 ${
+              isVisible ? 'opacity-100' : 'opacity-0'
+            }`}
           />
-        ))}
+        </div>
       </div>
     </section>
   )

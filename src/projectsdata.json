@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "projectTitle": "Ritmo",
+    "slug": "ritmo",
+    "projectImage": "/images/projects/ritmo-thumbnail.png",
+    "company": "Personal Project"
+  },
+  {
+    "id": 2,
+    "projectTitle": "UX Design System",
+    "slug": "ux-design-system",
+    "projectImage": "/images/projects/ux-design-system-thumbnail.png",
+    "company": "Tech Agency"
+  },
+  {
+    "id": 3,
+    "projectTitle": "E-Commerce Redesign",
+    "slug": "ecommerce-redesign",
+    "projectImage": "/images/projects/ecommerce-redesign-thumbnail.png",
+    "company": "Retail Company"
+  },
+  {
+    "id": 4,
+    "projectTitle": "Healthcare Dashboard",
+    "slug": "healthcare-dashboard",
+    "projectImage": "/images/projects/healthcare-dashboard-thumbnail.png",
+    "company": "HealthTech Startup"
+  }
+]

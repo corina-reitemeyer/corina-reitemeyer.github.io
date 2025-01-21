@@ -1,12 +1,18 @@
 import React from 'react'
 import '../../styles/Principles.css'
 
+interface Principle {
+  number: number
+  title: string
+  description: string
+}
+
 interface PrinciplesSectionProps {
   subtitle: string
   title: string
   description?: string
-  principles: { number: number; title: string; content: string }[]
-  reversedLayout?: boolean // Add a flag for layout variation
+  principles: Principle[]
+  reversedLayout?: boolean
 }
 
 const PrinciplesSection: React.FC<PrinciplesSectionProps> = ({
@@ -30,7 +36,7 @@ const PrinciplesSection: React.FC<PrinciplesSectionProps> = ({
           <div key={principle.number} className="principle">
             <h3>{principle.number}.</h3>
             <h4>{principle.title}</h4>
-            <p>{principle.content}</p>
+            <p>{principle.description}</p> {/* Updated to use 'description' */}
           </div>
         ))}
       </div>

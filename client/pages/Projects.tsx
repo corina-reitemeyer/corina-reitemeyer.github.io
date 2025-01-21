@@ -1,4 +1,4 @@
-import caseStudyData from '../../src/caseStudyData.json'
+import ProjectData from '../../src/projectsdata.json'
 import { Link } from 'react-router-dom'
 import Project from '../../models/projectdata.ts'
 
@@ -7,7 +7,7 @@ interface ProjectsProps {
 }
 
 const Projects: React.FC<ProjectsProps> = () => {
-  const projects = caseStudyData as Project[]
+  const projects = ProjectData as Project[]
 
   return (
     <>

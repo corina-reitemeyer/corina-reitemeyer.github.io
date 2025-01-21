@@ -1,5 +1,4 @@
 import React from 'react'
-import './DualLaptopsSection.css'
 
 interface LaptopImage {
   src: string

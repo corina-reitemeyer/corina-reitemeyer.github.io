@@ -6,36 +6,49 @@ interface Image {
 }
 
 interface TwoRowsImagesSectionProps {
-  topRowImages: Image[]
+  desktopImage: Image // Single desktop image
   bottomRowImages: Image[]
   backgroundColor?: string
 }
 
 const TwoRowsImagesSection: React.FC<TwoRowsImagesSectionProps> = ({
-  topRowImages,
+  desktopImage,
   bottomRowImages,
   backgroundColor = '#B5BFFF', // Default background color
 }) => {
   return (
-    <section className="two-rows-images-section" style={{ backgroundColor }}>
-      <div className="top-row-container">
-        {topRowImages.map((image, index) => (
-          <img
-            key={`top-${index}`}
-            src={image.src}
-            alt={image.alt}
-            className={`top-row-image top-row-image-${index}`}
-          />
-        ))}
+    <section
+      className="relative flex flex-col items-center py-20"
+      style={{ backgroundColor }}
+    >
+      {/* Top Row: Single Desktop Image */}
+      <div className="w-screen overflow-hidden">
+        <img
+          src={desktopImage.src}
+          alt={desktopImage.alt}
+          className="h-auto w-full object-contain"
+        />
       </div>
-      <div className="bottom-row-container">
+
+      {/* Bottom Row: Mobile Screens */}
+      <div className="mt-16 flex w-full max-w-screen-xl justify-center gap-8">
         {bottomRowImages.map((image, index) => (
-          <img
+          <div
             key={`bottom-${index}`}
-            src={image.src}
-            alt={image.alt}
-            className="bottom-row-image"
-          />
+            className={`relative w-[20%] flex-shrink-0 ${
+              index === 0
+                ? 'mt-36' // Lower alignment for the left mobile
+                : index === 1
+                  ? 'mt-0' // Centered alignment for the middle mobile
+                  : 'mt-[-36px]' // Higher alignment for the right mobile
+            }`}
+          >
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="h-full w-full object-contain"
+            />
+          </div>
         ))}
       </div>
     </section>

@@ -108,7 +108,7 @@ const Ritmo = () => {
           },
         ]}
         backgroundColor="#9EEEFF" // Blue background for "Discovery"
-        subtitleColor="#40B0C8" // Subtitle color matching "Ritmo"
+        subtitleColor="ritmo"
         reversedLayout={false}
       />
 
@@ -133,6 +133,7 @@ const Ritmo = () => {
             highlights: ['tailored'],
           },
         ]}
+        subtitleColor={'ritmo'}
       />
 
       {/* Ideation Section */}
@@ -185,6 +186,7 @@ const Ritmo = () => {
           },
         ]}
         reversedLayout={true} // Switches the layout order
+        subtitleColor={'ritmo'}
       />
 
       {/* Competitive Analysis Section */}
@@ -196,6 +198,7 @@ const Ritmo = () => {
           src: '/images/process/ritmo-competitors.png',
           alt: 'Analysis of dance libraries',
         }}
+        subtitleColor={'ritmo'}
       />
 
       {/* User Flows Section */}
@@ -230,6 +233,7 @@ const Ritmo = () => {
             caption: 'This is the advanced flow.',
           },
         ]}
+        overheadTitleColor={'ritmo'}
       />
 
       <WireframesSection
@@ -240,6 +244,7 @@ const Ritmo = () => {
           src: '/images/process/ritmo-wireframes.png',
           alt: 'Analysis of dance libraries',
         }}
+        subtitleColor={'ritmo'}
       />
 
       {/* Mobile Screens Showcase */}

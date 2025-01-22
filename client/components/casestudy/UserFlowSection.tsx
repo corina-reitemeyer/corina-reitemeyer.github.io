@@ -12,6 +12,7 @@ interface UserFlowProps {
   title: string
   description: string
   images: TabbedImage[] // Array of images with captions and optional tab names
+  overheadTitleColor: 'ritmo' | 'ow' | 'moe' // Dynamic color for the overhead title
 }
 
 const UserFlow: React.FC<UserFlowProps> = ({
@@ -19,12 +20,24 @@ const UserFlow: React.FC<UserFlowProps> = ({
   title,
   description,
   images,
+  overheadTitleColor,
 }) => {
+  const overheadTitleColorMap = {
+    ritmo: '#40B0C8',
+    ow: '#C7A000',
+    moe: '#5452F6',
+  }
+
   return (
     <section className="py-28">
       <div className="container mx-auto max-w-4xl">
         {/* Overhead Title */}
-        <p className="text-lg font-semibold text-[#40B0C8]">{overheadTitle}</p>
+        <p
+          className="text-lg font-semibold"
+          style={{ color: overheadTitleColorMap[overheadTitleColor] }}
+        >
+          {overheadTitle}
+        </p>
 
         {/* Section Title and Description */}
         <div className="mb-12">

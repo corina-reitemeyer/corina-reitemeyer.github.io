@@ -18,7 +18,7 @@ interface DiscoverySectionProps {
   title: string
   description: string
   variant: 'default' | 'tabbed' | 'threeColumns'
-  subtitleColor: 'ritmo' | 'project2' | 'project3' // Use keys to map specific colors
+  subtitleColor: 'ritmo' | 'ow' | 'moe' // Use keys to map specific colors
   threeColumnData?: ColumnData[]
   tabbedImages?: TabbedImage[] // Add images for tabbed viewer
   imageSrc?: string
@@ -38,8 +38,8 @@ const DiscoverySection: React.FC<DiscoverySectionProps> = ({
 }) => {
   const subtitleColorMap = {
     ritmo: '#40B0C8',
-    project2: '#5452F6',
-    project3: '#C7A000',
+    ow: '#C7A000',
+    moe: '#5452F6',
   }
 
   return (

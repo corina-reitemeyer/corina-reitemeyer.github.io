@@ -10,6 +10,7 @@ interface IdeationProps {
   subtitle: string
   description: string
   points?: IdeationCard[] // Renamed cards to points for clarity
+  titleColor: 'ritmo' | 'ow' | 'moe' // Dynamic color options for the title
 }
 
 const Ideation: React.FC<IdeationProps> = ({
@@ -17,12 +18,24 @@ const Ideation: React.FC<IdeationProps> = ({
   subtitle,
   description,
   points = [], // Default to an empty array
+  titleColor,
 }) => {
+  const titleColorMap: Record<'ritmo' | 'ow' | 'moe', string> = {
+    ritmo: '#40B0C8',
+    ow: '#C7A000',
+    moe: '#5452F6',
+  }
+
   return (
     <div className="bg-[#EAF4FA] px-8 py-20">
       {/* Header Section */}
       <div className="mx-auto mb-12 max-w-4xl text-left">
-        <p className="text-lg font-bold text-[#40B0C8]">{title}</p>
+        <p
+          className="text-lg font-bold"
+          style={{ color: titleColorMap[titleColor] }}
+        >
+          {title}
+        </p>
         <h2 className="mt-2 text-4xl font-extrabold text-gray-900">
           {subtitle}
         </h2>

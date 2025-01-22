@@ -15,16 +15,28 @@ const OverlappingImagesSection: React.FC<OverlappingImagesSectionProps> = ({
   backgroundColor = '#B5BFFF', // Default light blue
 }) => {
   return (
-    <section className="overlapping-images-section" style={{ backgroundColor }}>
-      <div className="overlapping-images-container">
-        {images.map((image, index) => (
+    <section
+      className="relative h-screen overflow-hidden"
+      style={{ backgroundColor }}
+    >
+      <div className="relative h-full w-full">
+        {/* Top Image - Right */}
+        {images.length > 0 && (
           <img
-            key={index}
-            src={image.src}
-            alt={image.alt}
-            className={`overlapping-image overlapping-image-${index}`}
+            src={images[0].src}
+            alt={images[0].alt}
+            className="z-00 absolute right-40 top-[-5%] h-auto w-[45%] object-cover"
           />
-        ))}
+        )}
+
+        {/* Bottom Image - Left */}
+        {images.length > 1 && (
+          <img
+            src={images[1].src}
+            alt={images[1].alt}
+            className="absolute bottom-[-5%] left-40 z-10 h-auto w-[45%] object-cover"
+          />
+        )}
       </div>
     </section>
   )

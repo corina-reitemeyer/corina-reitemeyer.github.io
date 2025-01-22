@@ -8,7 +8,7 @@ import InsightsSection from '../components/casestudy/InsightsSection'
 import LessonsLearnedSection from '../components/casestudy/LessonsLearned'
 import OverlappingImagesSection from '../components/casestudy/OverlappingImagesSection'
 import PrimaryUsersSection from '../components/casestudy/PrimaryUsers'
-import PrincipleSection from '../components/casestudy/PrinciplesSection'
+import PrinciplesSection from '../components/casestudy/PrinciplesSection'
 import TwoRowsImagesSection from '../components/casestudy/TwoRowsImagesSection'
 import UserFlow from '../components/casestudy/UserFlowSection'
 import WireframesSection from '../components/casestudy/WireframesSection'
@@ -20,8 +20,8 @@ const MOEDesignSystem = () => {
       <Hero
         project={{
           id: 1,
-          projectTitle: 'Ritmo',
-          slug: 'ritmo',
+          projectTitle: 'Design System',
+          slug: 'moe-design-system',
           projectSubtitle: 'Your Latin Dance Library',
           overview: 'This is an awesome project overview.',
           objectiveGoals: [
@@ -32,17 +32,30 @@ const MOEDesignSystem = () => {
           company: 'Personal Project',
           date: '2024',
           projectImage: '/images/ritmo-thumbnail.png', // Add this line
-          headerImage: '/images/banner-images/ritmo-banner.png',
+          headerImage: '/images/banner-images/moe-design-system.png',
         }}
       />
-      <OverlappingImagesSection images={[]} />
+
+      {/* Overlapping ImagesSection */}
+      <OverlappingImagesSection
+        images={[
+          {
+            src: '/images/product/moe-design-system-right.png',
+            alt: 'Top Image',
+          },
+          {
+            src: '/images/product/moe-design-system-left.png',
+            alt: 'Bottom Image',
+          },
+        ]}
+      />
       {/* Discovery Section */}
       <DiscoverySection
         subtitle="Project Discovery"
         title="Understanding User Needs"
         description="We conducted a comprehensive user research phase to identify pain points and opportunities for improvement."
         variant="tabbed"
-        subtitleColor="ritmo"
+        subtitleColor="moe"
         tabbedImages={[
           {
             path: '/images/process/UX Persona - Beginner.png',
@@ -66,13 +79,16 @@ const MOEDesignSystem = () => {
           },
         ]}
       />
+
+      {/* Background Section */}
       <BackgroundSection
-        subtitle={''}
-        title={''}
-        date={''}
-        description={''}
-        imageSrc={''}
-        imageAlt={''}
+        subtitle="Background"
+        title="Learning from Home"
+        date="Website | 2020 - 2021"
+        description="Understanding needs and process pain-points for individual roles in the team."
+        imageSrc="/images/process/moe-learningfromhome.png"
+        imageAlt="Mockup of Learning from Home website"
+        subtitleColor={'moe'}
       />
       {/* Primary Users Section */}
       <PrimaryUsersSection
@@ -98,8 +114,8 @@ const MOEDesignSystem = () => {
               'Act as a bridge between the technical and non-technical stakeholders.',
           },
         ]}
-        backgroundColor="#9EEEFF" // Blue background for "Discovery"
-        subtitleColor="#40B0C8" // Subtitle color matching "Ritmo"
+        backgroundColor="#90AEFF"
+        subtitleColor="moe"
         reversedLayout={false}
       />
       {/* Insights Section */}
@@ -123,6 +139,7 @@ const MOEDesignSystem = () => {
             highlights: ['tailored'],
           },
         ]}
+        subtitleColor={'moe'}
       />
       {/* Ideation Section */}
       <Ideation
@@ -146,9 +163,10 @@ const MOEDesignSystem = () => {
               'Users struggled to recall move names in classes, so a descriptive search was proposed for easier lookup based on key characteristics.',
           },
         ]}
+        titleColor={'moe'}
       />
       {/* Principles Section */}
-      <PrincipleSection
+      <PrinciplesSection
         subtitle="Goals & Strategy"
         title="Principles"
         description="These principles were established to address the unique challenges faced by students and instructors in a dynamic learning environment. Accessibility ensures the app remains practical and valuable in real-world settings, such as during lessons or prácticas."
@@ -173,6 +191,7 @@ const MOEDesignSystem = () => {
           },
         ]}
         reversedLayout={true} // Switches the layout order
+        subtitleColor={'moe'}
       />
       {/* Competitive Analysis Section */}
       <CompetitiveAnalysisSection
@@ -183,6 +202,7 @@ const MOEDesignSystem = () => {
           src: '/images/process/ritmo-competitors.png',
           alt: 'Analysis of dance libraries',
         }}
+        subtitleColor={'moe'}
       />
       {/* User Flows Section */}
       <UserFlow
@@ -216,6 +236,7 @@ const MOEDesignSystem = () => {
             caption: 'This is the advanced flow.',
           },
         ]}
+        overheadTitleColor={'moe'}
       />
       <WireframesSection
         subtitle="Refinement"
@@ -225,8 +246,28 @@ const MOEDesignSystem = () => {
           src: '/images/process/ritmo-wireframes.png',
           alt: 'Analysis of dance libraries',
         }}
+        subtitleColor={'moe'}
       />
-      <TwoRowsImagesSection topRowImages={[]} bottomRowImages={[]} />
+      <TwoRowsImagesSection
+        desktopImage={{
+          src: '/images/product/moe-ds-desktop-allscreens.png', // Replace with your combined desktop image path
+          alt: 'Combined desktop images',
+        }}
+        bottomRowImages={[
+          {
+            src: '/images/product/moe-ds-mobile-menu.png',
+            alt: 'Mobile Image 1',
+          },
+          {
+            src: '/images/product/moe-ds-mobile-hpg.png',
+            alt: 'Mobile Image 2',
+          },
+          {
+            src: '/images/product/moe-ds-mobile-content.png',
+            alt: 'Mobile Image 3',
+          },
+        ]}
+      />
 
       {/* Achievements Section */}
       <AchievementsSection

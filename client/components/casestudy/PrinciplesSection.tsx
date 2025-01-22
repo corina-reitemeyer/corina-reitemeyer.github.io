@@ -11,23 +11,38 @@ interface PrinciplesSectionProps {
   title?: string
   description?: string
   principles: Principle[]
+  subtitleColor: 'ritmo' | 'ow' | 'moe' // Use keys to map specific colors
   reversedLayout?: boolean // Control the order dynamically
 }
 
-const PrincipleSection: React.FC<PrinciplesSectionProps> = ({
+const PrinciplesSection: React.FC<PrinciplesSectionProps> = ({
   subtitle,
   title,
   description,
   principles,
+  subtitleColor,
   reversedLayout = false,
 }) => {
+  const subtitleColorMap: Record<'ritmo' | 'ow' | 'moe', string> = {
+    ritmo: '#40B0C8',
+    ow: '#C7A000',
+    moe: '#5452F6',
+  }
+
   return (
     <section className="py-16">
       <div className="container mx-auto max-w-4xl py-8">
         {/* Text Container */}
         <div className="text-container mb-12">
-          <p className="text-lg font-semibold text-[#40B0C8]">{subtitle}</p>
-          <h2 className="mt-2 text-4xl font-bold text-gray-900">{title}</h2>
+          <p
+            className="text-lg font-semibold"
+            style={{ color: subtitleColorMap[subtitleColor] }}
+          >
+            {subtitle}
+          </p>
+          {title && (
+            <h2 className="mt-2 text-4xl font-bold text-gray-900">{title}</h2>
+          )}
         </div>
 
         {/* Dynamic Order: Points First if reversedLayout is True */}
@@ -39,9 +54,11 @@ const PrincipleSection: React.FC<PrinciplesSectionProps> = ({
                   <span className="text-5xl font-bold text-gray-900">
                     {principle.number}.
                   </span>
-                  <h4 className="mt-4 text-left text-xl font-semibold text-gray-900">
-                    {principle.title}
-                  </h4>
+                  {principle.title && (
+                    <h4 className="mt-4 text-left text-xl font-semibold text-gray-900">
+                      {principle.title}
+                    </h4>
+                  )}
                   <p className="mt-8 text-left text-gray-700">
                     {principle.description}
                   </p>
@@ -67,9 +84,11 @@ const PrincipleSection: React.FC<PrinciplesSectionProps> = ({
                   <span className="text-5xl font-bold text-gray-900">
                     {principle.number}.
                   </span>
-                  <h4 className="mt-4 text-left text-xl font-semibold text-gray-900">
-                    {principle.title}
-                  </h4>
+                  {principle.title && (
+                    <h4 className="mt-4 text-left text-xl font-semibold text-gray-900">
+                      {principle.title}
+                    </h4>
+                  )}
                   <p className="mt-2 text-left text-gray-700">
                     {principle.description}
                   </p>
@@ -83,4 +102,4 @@ const PrincipleSection: React.FC<PrinciplesSectionProps> = ({
   )
 }
 
-export default PrincipleSection
+export default PrinciplesSection

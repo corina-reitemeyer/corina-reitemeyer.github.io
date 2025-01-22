@@ -24,19 +24,20 @@ const OWTemplates = () => {
           slug: 'ow-templates',
           projectSubtitle: 'Streamlining Workflows with Ready-Made Studies.',
           overview:
-            'Optimal Workshop Templates is a collection of pre-built templates designed to streamline the user research and information architecture processes. The MVP product aims to educate users on best practices while accelerating setup times for both novice and experienced users of Optimal Workshops tools.',
+            'Templates is a collection of pre-built templates designed to streamline the user research and information architecture processes. The MVP product aims to educate users on best practices while accelerating setup times for both novice and experienced users of Optimal Workshops tools.',
           objectiveGoals: [
             'Provide a centralized library for dance moves.',
             'Facilitate intuitive navigation for beginners and advanced users.',
           ],
           role: 'Product Designer',
-          company: 'Optimal Workshop',
+          company: 'OW',
           date: '2024',
           projectImage: '/images/portfolio/ow-templates-cover.png',
           headerImage: '/images/banner-images/ow-templates.png',
         }}
       />
-      {/* DualLaptop Section */}
+
+      {/* Dual Laptop Section */}
       <DualLaptopsSection
         laptops={[
           {
@@ -52,11 +53,11 @@ const OWTemplates = () => {
 
       {/* Discovery Section */}
       <DiscoverySection
-        subtitle="Project Discovery"
+        subtitle="Discovery"
         title="Understanding User Needs"
         description="We conducted a comprehensive user research phase to identify pain points and opportunities for improvement."
         variant="tabbed"
-        subtitleColor="ritmo"
+        subtitleColor="ow"
         tabbedImages={[
           {
             path: '/images/process/UX Persona - Beginner.png',
@@ -68,18 +69,9 @@ const OWTemplates = () => {
             tabName: 'Persona - Improvers',
             caption: 'Observed behaviors and patterns.',
           },
-          {
-            path: '/images/process/UX Persona - Intermediate.png',
-            tabName: 'Persona - Intermediate',
-            caption: 'Survey results summarized.',
-          },
-          {
-            path: '/images/process/UX Persona - Instructor.png',
-            tabName: 'Persona - Instructor',
-            caption: 'Survey results summarized.',
-          },
         ]}
       />
+
       {/* Primary Users Section */}
       <PrimaryUsersSection
         subtitle="Discovery"
@@ -97,15 +89,9 @@ const OWTemplates = () => {
             title: 'Teachers',
             description: 'Build, test, and maintain websites and applications.',
           },
-          {
-            number: 3,
-            title: 'Social Dancers',
-            description:
-              'Act as a bridge between the technical and non-technical stakeholders.',
-          },
         ]}
-        backgroundColor="#9EEEFF" // Blue background for "Discovery"
-        subtitleColor="#40B0C8" // Subtitle color matching "Ritmo"
+        backgroundColor="#FFEAA1"
+        subtitleColor="ow"
         reversedLayout={false}
       />
 
@@ -113,6 +99,7 @@ const OWTemplates = () => {
       <InsightsSection
         subtitle="Discovery"
         title="What is holding the dance students back?"
+        subtitleColor="ow"
         description="Here are key insights derived from our research."
         insights={[
           {
@@ -122,34 +109,19 @@ const OWTemplates = () => {
               'Students and teachers I spoke with consistently expressed the need for a reliable source of truth.',
             highlights: ['reliable', 'source of truth'],
           },
-          {
-            id: 2,
-            title: 'Insight #2',
-            description:
-              'Students from varying experience backgrounds need tailored information.',
-            highlights: ['tailored'],
-          },
         ]}
       />
 
+      {/* Opportunity Space Section */}
       <OpportunitySpace
         subtitle="Opportunity Space"
         title="Defining the Problem and Opportunities"
+        subtitleColor="ow"
         description="We identified opportunities to simplify practice workflows, enhance progress tracking, and foster community interactions among musicians."
         kpis={[
           {
             value: '25%',
             description: 'Increase user retention through community features.',
-          },
-          {
-            value: '90%',
-            description:
-              'Achieve a user satisfaction rate in usability testing.',
-          },
-          {
-            value: '95%',
-            description:
-              'Enable users to track daily practice sessions accurately.',
           },
         ]}
       />
@@ -157,8 +129,9 @@ const OWTemplates = () => {
       {/* Principles Section */}
       <PrincipleSection
         subtitle="Goals & Strategy"
+        subtitleColor="ow"
         title="Principles"
-        description="These principles were established to address the unique challenges faced by students and instructors in a dynamic learning environment. Accessibility ensures the app remains practical and valuable in real-world settings, such as during lessons or prácticas."
+        description="These principles were established to address the unique challenges faced by students and instructors in a dynamic learning environment."
         principles={[
           {
             number: 1,
@@ -166,27 +139,16 @@ const OWTemplates = () => {
             description:
               'Ensures the app remains accessible and valuable in dynamic learning environments.',
           },
-          {
-            number: 2,
-            title: 'Support for Active Learning',
-            description:
-              'Tools that help users retain and apply knowledge effectively.',
-          },
-          {
-            number: 3,
-            title: 'Scalability and Flexibility',
-            description:
-              'Provides a foundation for future features and content expansions.',
-          },
         ]}
-        reversedLayout={true} // Switches the layout order
+        reversedLayout={true}
       />
 
       {/* Competitive Analysis Section */}
       <CompetitiveAnalysisSection
         subtitle="Exploration"
+        subtitleColor="ow"
         title="Dance Libraries Analysis"
-        description="To ensure our design system met industry standards and organizational needs, I conducted thorough research on existing government and private sector design systems. This included analyzing their structure, key features, and content strategies to identify best practices and gaps."
+        description="To ensure our design system met industry standards and organizational needs, I conducted thorough research on existing government and private sector design systems."
         image={{
           src: '/images/process/ow/ow-competitors.png',
           alt: 'Analysis of dance libraries',
@@ -205,18 +167,22 @@ const OWTemplates = () => {
             tabName: 'Beginner',
           },
         ]}
+        overheadTitleColor={'ow'}
       />
 
+      {/* Wireframes Section */}
       <WireframesSection
         subtitle="Refinement"
+        subtitleColor="ow"
         title="Wireframes"
-        description="To ensure our design system met industry standards and organizational needs, I conducted thorough research on existing government and private sector design systems. This included analyzing their structure, key features, and content strategies to identify best practices and gaps."
+        description="We ensured our design system met industry standards through detailed research and testing."
         image={{
           src: '/images/process/ow/ow-wireframes.png',
-          alt: 'Analysis of dance libraries',
+          alt: 'Wireframes for user interaction',
         }}
       />
 
+      {/* Dual Laptop Compact Section */}
       <DualLaptopsCompactSection
         laptops={[
           {
@@ -230,38 +196,16 @@ const OWTemplates = () => {
         ]}
       />
 
+      {/* Research Section */}
       <ResearchSection
         title="A/B Testing"
         subtitle="Second-Phase Research"
-        description="We launched the MVP feature to a small subgroup of users.   This included 6 use cases for multi-study project templates, and for testing purposes, also single studies from each project to see what users prefer to use. "
+        subtitleColor="ow"
+        description="We launched the MVP feature to a small subgroup of users. This included 6 use cases for multi-study project templates."
         result="Customers gravitated towards the multi-study templates with an increased user adoption rate."
         imageSrc="/images/process/ow/ow-abtesting.png"
         imageAlt="Mockup of research process"
         backgroundColor="#E6F8FF"
-      />
-
-      {/* Principles Section */}
-      <PrincipleSection
-        subtitle="User Interviews & Click Testing"
-        title="HOW PRACTITIONERS USED THE TEMPLATES"
-        description="High-traction data revealed that the template placement successfully captured user curiosity and attention. However, our insights uncovered a key limitation: the MVP feature lacked the granularity and flexibility users needed to adapt templates to their specific research methods. Instead, users often used templates as inspiration before creating their own customised projects. This highlighted the need for more versatile and user-driven template options in future iterations. Through user research, we identified three main ways practitioners engaged with templates:"
-        principles={[
-          {
-            number: 1,
-            description:
-              'For guidance and recommendations to support their work.',
-          },
-          {
-            number: 2,
-            description: 'To enable a quick setup and save time.',
-          },
-          {
-            number: 3,
-            description:
-              'As a tool for seniors to recommend best practices to juniors.',
-          },
-        ]}
-        reversedLayout={false}
       />
 
       {/* Achievements Section */}
@@ -273,32 +217,13 @@ const OWTemplates = () => {
             description:
               'Allow the wider company to learn insights around how customer education can be implemented.',
           },
-          {
-            title: 'Owning the first IA-focused feature:',
-            description:
-              'Designed the company’s first IA-focused feature after the new product strategy was introduced.',
-          },
-          {
-            title: 'New Study details feature:',
-            description:
-              'Practitioners now had a way to document the purpose and requirements of studies.',
-          },
-          {
-            title: 'Increased customer retention:',
-            description:
-              'There was an increase in users sticking around for longer than previously, due to users utilizing multi-studies.',
-          },
         ]}
       />
 
       {/* Lessons Learned Section */}
       <LessonsLearnedSection
         title="Lessons Learned"
-        lessons={[
-          'Iterative testing uncovered critical pain points early.',
-          'Accessibility compliance enhanced usability for all users.',
-          'User feedback refined the final designs.',
-        ]}
+        lessons={['Iterative testing uncovered critical pain points early.']}
       />
     </div>
   )

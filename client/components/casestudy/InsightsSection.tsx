@@ -12,6 +12,7 @@ interface InsightsSectionProps {
   title: string
   description: string
   insights: Insight[]
+  subtitleColor: 'ritmo' | 'ow' | 'moe' // Dynamic subtitle color options
 }
 
 const InsightsSection: React.FC<InsightsSectionProps> = ({
@@ -19,13 +20,25 @@ const InsightsSection: React.FC<InsightsSectionProps> = ({
   title,
   description,
   insights,
+  subtitleColor,
 }) => {
+  const subtitleColorMap = {
+    ritmo: '#40B0C8',
+    ow: '#C7A000',
+    moe: '#5452F6',
+  }
+
   return (
     <section className="py-16">
       <div className="container mx-auto max-w-4xl py-12">
         {/* Header Section */}
         <div className="mb-12">
-          <p className="text-lg font-bold text-[#40B0C8]">{subtitle}</p>
+          <p
+            className="text-lg font-bold"
+            style={{ color: subtitleColorMap[subtitleColor] }}
+          >
+            {subtitle}
+          </p>
           <h2 className="mt-2 text-4xl font-extrabold text-gray-900">
             {title}
           </h2>

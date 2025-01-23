@@ -47,7 +47,7 @@ const OpportunitySpace: React.FC<OpportunitySpaceProps> = ({
             {kpis.map((kpi, index) => (
               <div
                 key={index}
-                className="rounded-lg bg-white p-6 text-center shadow-md"
+                className="rounded-lg bg-white p-8 text-center shadow-lg"
               >
                 <p className="text-4xl font-bold text-gray-900">{kpi.value}</p>
                 <p className="mt-2 text-gray-700">{kpi.description}</p>

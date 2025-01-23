@@ -1,5 +1,6 @@
 import React from 'react'
 import Project from '../../../models/projectdata' // Import the Project interface
+import Button from '../../components/Button' // Import the Button component
 
 interface HeroProps {
   project: Project
@@ -78,37 +79,16 @@ const Hero: React.FC<HeroProps> = ({ project }) => {
           {/* Links */}
           {githubLink || deployedSiteLink || bestAwardsSiteLink ? (
             <div>
-              <h3 className="mb-4 text-lg font-bold text-gray-900">Links</h3>
+              <h3 className="my-2 text-lg font-bold text-gray-900">Links</h3>
               <div className="space-y-4">
                 {githubLink && (
-                  <a
-                    href={githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block rounded-lg bg-blue-600 px-4 py-2 text-center text-white hover:bg-blue-500"
-                  >
-                    GitHub Repository
-                  </a>
+                  <Button url={githubLink} label="GitHub Repository" />
                 )}
                 {deployedSiteLink && (
-                  <a
-                    href={deployedSiteLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block rounded-lg bg-blue-600 px-4 py-2 text-center text-white hover:bg-blue-500"
-                  >
-                    Deployed Site
-                  </a>
+                  <Button url={deployedSiteLink} label="Deployed Site" />
                 )}
                 {bestAwardsSiteLink && (
-                  <a
-                    href={bestAwardsSiteLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block rounded-lg bg-blue-600 px-4 py-2 text-center text-white hover:bg-blue-500"
-                  >
-                    Best Awards Site
-                  </a>
+                  <Button url={bestAwardsSiteLink} label="Best Awards Site" />
                 )}
               </div>
             </div>

@@ -42,34 +42,40 @@ const InsightsSection: React.FC<InsightsSectionProps> = ({
           <h2 className="mt-2 text-4xl font-extrabold text-gray-900">
             {title}
           </h2>
-          <p className="my-6 pb-12 text-lg text-gray-700">{description}</p>
+          <p className="my-6 pb-8 text-lg text-gray-700">{description}</p>
         </div>
 
         {/* Insights Cards */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          {insights.map((insight) => (
-            <div
-              key={insight.id}
-              className="rounded-lg bg-white p-12 shadow-lg transition-transform duration-300 hover:scale-105"
-            >
-              <p className="mb-4 text-lg text-gray-400">{insight.title}</p>
-              <p className="text-xl text-gray-700">
-                {/* Highlighted Text */}
-                {insight.description.split(' ').map((word, idx) =>
-                  insight.highlights?.includes(word) ? (
-                    <span
-                      key={idx}
-                      className="relative inline-block rounded-lg bg-[#CBBDFF] px-1"
-                    >
-                      {word}{' '}
-                    </span>
-                  ) : (
-                    `${word} `
-                  ),
-                )}
-              </p>
-            </div>
-          ))}
+          {insights.map((insight) => {
+            const { description, highlights } = insight
+
+            // Highlight logic
+            let highlightedDescription = description
+            if (highlights) {
+              highlights.forEach((highlight) => {
+                const regex = new RegExp(`(${highlight})`, 'gi') // Case-insensitive match
+                highlightedDescription = highlightedDescription.replace(
+                  regex,
+                  '<span class="relative inline-block rounded-lg bg-[#CBBDFF] px-1">$1</span>',
+                )
+              })
+            }
+
+            return (
+              <div
+                key={insight.id}
+                className="rounded-lg bg-white p-12 shadow-lg transition-transform duration-300 hover:scale-105"
+              >
+                <p className="mb-4 text-lg text-gray-400">{insight.title}</p>
+                {/* Render the highlighted description */}
+                <p
+                  className="text-xl text-gray-700"
+                  dangerouslySetInnerHTML={{ __html: highlightedDescription }}
+                ></p>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>

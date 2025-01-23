@@ -20,17 +20,24 @@ const Ritmo = () => {
           id: 1,
           projectTitle: 'Ritmo',
           slug: 'ritmo',
-          projectSubtitle: 'Your Latin Dance Library',
-          overview: 'This is an awesome project overview.',
+          projectSubtitle:
+            'A personal library and progress tracker for latin dancers.',
+          overview:
+            'Ritmo is an interactive app designed to help users learn and practice Latin dance moves through video tutorials and step-by-step guides, complementary to going to live classes.',
           objectiveGoals: [
-            'Provide a centralized library for dance moves.',
-            'Facilitate intuitive navigation for beginners and advanced users.',
+            'Create an engaging user interface.',
+            'Develop a centralised comprehensive dance move library that is easy to understand for different skill levels.',
+            'Facilitate easy navigation and search functionality.',
+            'Incorporate user feedback for continuous improvement.',
+            'Provide instructions for follower and leads dancers.',
           ],
-          role: 'UI/UX Designer & Developer',
+          role: 'UI/UX Designer & Full Stack Web Developer',
           company: 'Personal Project',
-          date: '2024',
-          projectImage: '/images/ritmo-thumbnail.png', // Add this line
+          date: 'July 2024 - present',
+          projectImage: '/images/portfolio/ritmo-cover.png',
           headerImage: '/images/banner-images/ritmo-banner.png',
+          githubLink:
+            'https://github.com/corina-reitemeyer/corina-reitemeyer.github.io',
         }}
       />
 
@@ -54,31 +61,27 @@ const Ritmo = () => {
 
       {/* Discovery Section */}
       <DiscoverySection
-        subtitle="Project Discovery"
-        title="Understanding User Needs"
-        description="We conducted a comprehensive user research phase to identify pain points and opportunities for improvement."
+        subtitle="Discovery"
+        title="INTERVIEWS & OBSERVATIONS"
+        description="During dance practicas or socials, I often encounter leads asking about specific moves they’re trying to recall and recreate. Typically, they provide a vague description focusing on a key feature that distinguishes the move. Since most of the moves are named in Spanish, it can be challenging for New Zealand-based students to locate them online, even if they remember the original name."
         variant="tabbed"
         subtitleColor="ritmo"
         tabbedImages={[
           {
-            path: '/images/process/UX Persona - Beginner.png',
+            path: '/images/process/ritmo/UX Persona - Beginner.png',
             tabName: 'Persona - Beginner',
-            caption: 'Key findings from interviews with dancers.',
           },
           {
-            path: '/images/process/UX Persona - Improvers.png',
+            path: '/images/process/ritmo/UX Persona - Improvers.png',
             tabName: 'Persona - Improvers',
-            caption: 'Observed behaviors and patterns.',
           },
           {
-            path: '/images/process/UX Persona - Intermediate.png',
+            path: '/images/process/ritmo/UX Persona - Intermediate.png',
             tabName: 'Persona - Intermediate',
-            caption: 'Survey results summarized.',
           },
           {
-            path: '/images/process/UX Persona - Instructor.png',
+            path: '/images/process/ritmo/UX Persona - Instructor.png',
             tabName: 'Persona - Instructor',
-            caption: 'Survey results summarized.',
           },
         ]}
       />
@@ -93,18 +96,19 @@ const Ritmo = () => {
             number: 1,
             title: 'Students',
             description:
-              'Create designs that are user-centric, accessible, and visually appealing.',
+              'Learn and master skills, track progress, and build confidence in their dancing journey. They can range from absolute beginners to veterans of the community.',
           },
           {
             number: 2,
             title: 'Teachers',
-            description: 'Build, test, and maintain websites and applications.',
+            description:
+              'They share knowledge and experience, streamline lesson planning, and foster student growth. Ranges from trainees to senior instructors.',
           },
           {
             number: 3,
             title: 'Social Dancers',
             description:
-              'Act as a bridge between the technical and non-technical stakeholders.',
+              'Social Dancers connect, explore, and thrive in vibrant dance communities. They can be at different levels, but are not regular students.',
           },
         ]}
         backgroundColor="#9EEEFF" // Blue background for "Discovery"
@@ -116,21 +120,49 @@ const Ritmo = () => {
       <InsightsSection
         subtitle="Discovery"
         title="What is holding the dance students back?"
-        description="Here are key insights derived from our research."
+        description="Through in-depth interviews with students, teachers, and social dancers, I uncovered key insights into their unique needs and challenges. Students crave tools to track progress, reference moves that they are learning, and build confidence as they develop their skills. Teachers need efficient ways to plan lessons, share knowledge, and foster meaningful growth for their students. Social dancers desire platforms that help them connect, explore, and thrive in dynamic dance communities. These insights guide Ritmo's design, ensuring a user-focused experience that empowers every dancer's journey."
         insights={[
           {
             id: 1,
             title: 'Insight #1',
             description:
-              'Students and teachers I spoke with consistently expressed the need for a reliable source of truth.',
-            highlights: ['reliable', 'source of truth'],
+              'Students and teachers I spoke with consistently expressed the need for a reliable "source of truth" they could refer back to',
+            highlights: ['reliable "source of truth"'],
           },
           {
             id: 2,
             title: 'Insight #2',
             description:
-              'Students from varying experience backgrounds need tailored information.',
-            highlights: ['tailored'],
+              'Students from varying experience background need more or less tailored information for moves.',
+            highlights: ['more or less tailored'],
+          },
+          {
+            id: 3,
+            title: 'Insight #3',
+            description:
+              'Instructors highlighted the value of a solution that would help them plan their curriculum and review notes on explaining techniques.',
+            highlights: ['plan their curriculum'],
+          },
+          {
+            id: 4,
+            title: 'Insight #4',
+            description:
+              'Newer teachers need, despite years of dancing and relying on muscle memory, a way of articulating what they were doing in terms of moves and techniques. ',
+            highlights: ['a way of articulating'],
+          },
+          {
+            id: 5,
+            title: 'Insight #5',
+            description:
+              'A need for cohesive and organised resources due to several different naming conventions, which can mean different moves depending where you are taught.',
+            highlights: ['cohesive and organised'],
+          },
+          {
+            id: 6,
+            title: 'Insight #6',
+            description:
+              'Moves are often in Spanish, non-Spanish speakers either mishear the calls or cannot remember them, which does not help when they are trying to look them up online.',
+            highlights: ['mishear the calls or cannot', 'remember'],
           },
         ]}
         subtitleColor={'ritmo'}
@@ -158,6 +190,7 @@ const Ritmo = () => {
               'Users struggled to recall move names in classes, so a descriptive search was proposed for easier lookup based on key characteristics.',
           },
         ]}
+        titleColor={'ritmo'}
       />
 
       {/* Principles Section */}
@@ -170,19 +203,19 @@ const Ritmo = () => {
             number: 1,
             title: 'Accessibility and Usability First',
             description:
-              'Ensures the app remains accessible and valuable in dynamic learning environments.',
+              'Prioritising accessibility ensures that the app is easy to navigate and effective for all users, regardless of their tech proficiency or physical abilities. Usability focuses on intuitive design that supports seamless interactions during real-world scenarios like lessons, prácticas, or on-the-go learning. This principle ensures no user is left behind and that the app consistently enhances their experience without adding complexity.',
           },
           {
             number: 2,
             title: 'Support for Active Learning',
             description:
-              'Tools that help users retain and apply knowledge effectively.',
+              'Active learning is at the heart of skill mastery. This principle emphasizes tools and features designed to engage users in hands-on practice, encourage retention through interactive feedback, and foster real-world application of learned techniques. By supporting active learning, the app empowers users to deepen their understanding and build lasting confidence.',
           },
           {
             number: 3,
             title: 'Scalability and Flexibility',
             description:
-              'Provides a foundation for future features and content expansions.',
+              'A dynamic learning environment demands a system that grows with its users. This principle focuses on creating a robust foundation that accommodates future expansions, whether adding new features, incorporating user-generated content, or adapting to evolving needs. Scalability ensures long-term sustainability, while flexibility allows the app to remain relevant in a constantly changing ecosystem.',
           },
         ]}
         reversedLayout={true} // Switches the layout order
@@ -193,9 +226,9 @@ const Ritmo = () => {
       <CompetitiveAnalysisSection
         subtitle="Exploration"
         title="Dance Libraries Analysis"
-        description="To ensure our design system met industry standards and organizational needs, I conducted thorough research on existing government and private sector design systems. This included analyzing their structure, key features, and content strategies to identify best practices and gaps."
+        description="To understand the landscape of existing resources for dance enthusiasts, I conducted a detailed competitive analysis of similar platforms. While some offered extensive dance libraries, only one included Cuban Salsa content—a significant gap for this niche. Additionally, many platforms lacked intuitive search engines and specific filtering options, making it difficult for users to find the exact moves they were looking for. These findings highlighted opportunities for Ritmo to provide a more focused, user-friendly, and comprehensive solution tailored to the needs of Cuban Salsa dancers and instructors."
         image={{
-          src: '/images/process/ritmo-competitors.png',
+          src: '/images/process/ritmo/ritmo-competitors.png',
           alt: 'Analysis of dance libraries',
         }}
         subtitleColor={'ritmo'}
@@ -205,32 +238,37 @@ const Ritmo = () => {
       <UserFlow
         overheadTitle="Exploration"
         title="User Flows"
-        description="Detailed user flows improve illustrations for usability and accessibility."
+        description="User flows are meticulously crafted to ensure a seamless experience for every type of user, from beginners to advanced dancers and instructors. By mapping out detailed journeys, I address the unique needs and challenges of each group, promoting usability and accessibility at every step. These flows not only enhance user engagement but also ensure the app’s design aligns with real-world scenarios, providing an intuitive and effective solution for learning and teaching."
         images={[
           {
-            path: '/images/process/sofia-userjourney.png',
+            path: '/images/process/ritmo/sofia-userjourney.png',
             tabName: 'Beginner Userflow',
-            caption: 'This is the beginner flow.',
+            caption:
+              'A streamlined journey designed to guide new users through their first steps, focusing on onboarding, learning fundamental skills, and building confidence with intuitive support at every stage',
           },
           {
-            path: '/images/process/mark-userjourney.png',
+            path: '/images/process/ritmo/mark-userjourney.png',
             tabName: 'Intermediate Userflow',
-            caption: 'This is the intermediate flow.',
+            caption:
+              'A tailored flow for users with some experience, emphasizing skill refinement, progress tracking, and advanced practice opportunities to bridge the gap to mastery.',
           },
           {
-            path: '/images/process/javier-userjourney.png',
+            path: '/images/process/ritmo/javier-userjourney.png',
             tabName: 'Advanced Userflow',
-            caption: 'This is the advanced flow.',
+            caption:
+              'A detailed path for experienced users, enabling them to explore high-level techniques, personalize their practice, and achieve their specific goals efficiently.',
           },
           {
-            path: '/images/process/carla-userjourney.png',
+            path: '/images/process/ritmo/carla-userjourney.png',
             tabName: 'Instructor Userflow',
-            caption: 'This is the advanced flow.',
+            caption:
+              'A comprehensive journey for instructors, integrating lesson planning, student management, and feedback tools to streamline teaching and elevate the learning experience',
           },
           {
-            path: '/images/process/ritmo-mvp-technical-journey map.png',
+            path: '/images/process/ritmo/ritmo-mvp-technical-journey map.png',
             tabName: 'Technical Journey Map',
-            caption: 'This is the advanced flow.',
+            caption:
+              'A high-level overview of the app’s technical flow, showcasing key system interactions and backend processes to ensure a smooth and robust user experience across all features.',
           },
         ]}
         overheadTitleColor={'ritmo'}
@@ -239,9 +277,9 @@ const Ritmo = () => {
       <WireframesSection
         subtitle="Refinement"
         title="Wireframes"
-        description="To ensure our design system met industry standards and organizational needs, I conducted thorough research on existing government and private sector design systems. This included analyzing their structure, key features, and content strategies to identify best practices and gaps."
+        description="The wireframes served as a crucial step in translating research insights into a tangible design. By focusing on simplicity and user-centered functionality, the wireframes outlined the app's core structure and navigation, ensuring an intuitive experience for students, instructors, and social dancers. Each screen was thoughtfully designed to prioritise accessibility, effective filtering, and seamless content discovery—addressing gaps identified in the competitive analysis and discovery phase. These wireframes provided a solid foundation for refining the app’s usability and aligning it with the needs of Cuban Salsa enthusiasts."
         image={{
-          src: '/images/process/ritmo-wireframes.png',
+          src: '/images/process/ritmo/ritmo-wireframes.png',
           alt: 'Analysis of dance libraries',
         }}
         subtitleColor={'ritmo'}
@@ -250,7 +288,7 @@ const Ritmo = () => {
       {/* Mobile Screens Showcase */}
       <MobileScreensShowcase
         image={{
-          src: '/images/process/ritmo-showcase.png',
+          src: '/images/process/ritmo/ritmo-showcase.png',
           alt: 'Showcase of mobile screens',
         }}
       />
@@ -260,8 +298,12 @@ const Ritmo = () => {
         title="Lessons Learned"
         lessons={[
           'Iterative testing uncovered critical pain points early.',
-          'Accessibility compliance enhanced usability for all users.',
-          'User feedback refined the final designs.',
+          'Collaborative research fostered alignment between user needs and design priorities.',
+          'Understanding niche user needs, like those of Cuban Salsa dancers, highlighted the importance of targeted solutions.',
+          'Streamlining navigation improved content discoverability and reduced user frustration.',
+          'Addressing gaps in competitive platforms underscored Ritmo’s unique value proposition.',
+          'Scalability prepared the app for future growth and new feature integration.',
+          'Leveraging real-world scenarios during testing enhanced the app’s practicality for users.',
         ]}
       />
     </div>

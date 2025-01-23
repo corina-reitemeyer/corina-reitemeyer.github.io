@@ -44,7 +44,7 @@ const PrimaryUsersSection: React.FC<PrimaryUserSectionProps> = ({
             {/* Text Container */}
             <div className="text-container mb-8">
               <p
-                className="subtitle text-lg font-semibold"
+                className="pb-2 text-lg font-semibold"
                 style={{ color: subtitleColorMap[subtitleColor] }} // Dynamic subtitle color
               >
                 {subtitle}
@@ -53,15 +53,19 @@ const PrimaryUsersSection: React.FC<PrimaryUserSectionProps> = ({
                 {title}
               </h2>
               {description && (
-                <p className="my-6 text-lg text-gray-700">{description}</p>
+                <p className="mb-16 mt-6 text-lg text-gray-700">
+                  {description}
+                </p>
               )}
             </div>
 
             {/* Primary Users List */}
             <div
-              className={`principles-container grid grid-cols-1 gap-6 sm:grid-cols-3 ${
-                reversedLayout ? 'reversed' : ''
-              }`}
+              className={`principles-container grid gap-6 ${
+                principles.length === 2
+                  ? 'grid-cols-1 md:grid-cols-2' // Two columns for two principles
+                  : 'grid-cols-1 sm:grid-cols-3' // Default three columns
+              } ${reversedLayout ? 'reversed' : ''}`}
             >
               {principles.map((primaryuser) => (
                 <div

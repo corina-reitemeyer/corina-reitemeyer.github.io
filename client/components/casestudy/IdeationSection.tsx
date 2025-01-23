@@ -43,9 +43,18 @@ const Ideation: React.FC<IdeationProps> = ({
       </div>
 
       {/* Points Section */}
-      <div className="mx-auto grid max-w-4xl grid-cols-1 gap-12 md:grid-cols-3">
+      <div
+        className={`mx-auto grid max-w-4xl ${
+          points.length === 2
+            ? 'grid-cols-1 md:grid-cols-2'
+            : 'grid-cols-1 md:grid-cols-3'
+        } gap-12`}
+      >
         {points.map((point, index) => (
-          <div key={index} className="flex flex-col items-start">
+          <div
+            key={index}
+            className="flex flex-col items-start rounded-lg py-6"
+          >
             {/* Black Separator Line */}
             <div className="mb-4 h-1 w-14 bg-black"></div>
             {/* Point Title */}

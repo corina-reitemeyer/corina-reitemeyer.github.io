@@ -22,16 +22,19 @@ const MOEDesignSystem = () => {
           id: 1,
           projectTitle: 'Design System',
           slug: 'moe-design-system',
-          projectSubtitle: 'Your Latin Dance Library',
-          overview: 'This is an awesome project overview.',
+          projectSubtitle: 'Building Consistency and Efficiency Across Teams',
+          overview:
+            'The Ministry of Education Design System was developed to address the need for a consistent, accessible, and efficient design framework following the rapid creation of a website during the COVID-19 lockdown. This design system includes a comprehensive component library and design guidelines aimed at ensuring uniformity and adherence to accessibility standards across digital platforms.',
           objectiveGoals: [
-            'Provide a centralized library for dance moves.',
-            'Facilitate intuitive navigation for beginners and advanced users.',
+            'Create a unified design system to ensure consistency across web platforms for the Ministry of Education.',
+            'Develop a component library that includes the most commonly used design elements, adhering to accessibility and usability standards.',
+            'Provide clear design guidelines and documentation to support future development and maintenance.',
+            'Facilitate quicker and more efficient website development by offering reusable components and standardised design patterns.',
           ],
-          role: 'UI/UX Designer & Developer',
-          company: 'Personal Project',
-          date: '2024',
-          projectImage: '/images/ritmo-thumbnail.png', // Add this line
+          role: 'Senior UI/UX Designer',
+          company: 'Ministry of Education (New Zealand)',
+          date: '2020 - 2022',
+          projectImage: '/images/portfolio/moe-design-system-cover.png',
           headerImage: '/images/banner-images/moe-design-system.png',
         }}
       />
@@ -51,65 +54,60 @@ const MOEDesignSystem = () => {
       />
       {/* Discovery Section */}
       <DiscoverySection
-        subtitle="Project Discovery"
+        subtitle="DISCOVERY"
         title="Understanding User Needs"
-        description="We conducted a comprehensive user research phase to identify pain points and opportunities for improvement."
-        variant="tabbed"
+        description="In the discovery phase, we focused on understanding the diverse needs and challenges faced by key stakeholders involved in the design and development process. Through team interviews, project retrospectives, and vendor feedback analysis, we uncovered pain points in workflows, collaboration, and implementation. These insights informed the foundation of the design system, ensuring it addressed the unique requirements of internal teams and external collaborators, ultimately streamlining processes and improving consistency across projects."
+        variant="threeColumns"
         subtitleColor="moe"
-        tabbedImages={[
+        threeColumnData={[
           {
-            path: '/images/process/UX Persona - Beginner.png',
-            tabName: 'Persona - Beginner',
-            caption: 'Key findings from interviews with dancers.',
+            title: 'Team Interviews',
+            description:
+              'Understanding needs and process pain-points for individual roles in the team.',
           },
           {
-            path: '/images/process/UX Persona - Improvers.png',
-            tabName: 'Persona - Improvers',
-            caption: 'Observed behaviors and patterns.',
+            title: 'Project Retro',
+            description:
+              'Highlighted challenges of building the ‘Learning from Home’ website.',
           },
           {
-            path: '/images/process/UX Persona - Intermediate.png',
-            tabName: 'Persona - Intermediate',
-            caption: 'Survey results summarized.',
-          },
-          {
-            path: '/images/process/UX Persona - Instructor.png',
-            tabName: 'Persona - Instructor',
-            caption: 'Survey results summarized.',
+            title: 'Vendor Feedback',
+            description:
+              'Analysed feedback that third-party designers/developers left us after completing projects for the Ministry.',
           },
         ]}
       />
 
       {/* Background Section */}
       <BackgroundSection
-        subtitle="Background"
+        subtitle="DISCOVERY"
         title="Learning from Home"
         date="Website | 2020 - 2021"
-        description="Understanding needs and process pain-points for individual roles in the team."
+        description="During the COVID-19 pandemic, my team was tasked with delivering the 'Learning from Home' website as part of an emergency response. I initiated the Design System project due to the learnings we had from Learning from Home, bringing a fresh perspective to our existing processes. The fast-paced nature of the project and tight deadlines exposed significant pain points, particularly the lack of a cohesive design system and streamlined workflows for design and development. These challenges underscored the need for consistency, scalability, and efficiency, which ultimately informed the foundation for our design system."
         imageSrc="/images/process/moe-learningfromhome.png"
         imageAlt="Mockup of Learning from Home website"
         subtitleColor={'moe'}
       />
       {/* Primary Users Section */}
       <PrimaryUsersSection
-        subtitle="Discovery"
+        subtitle="DISCOVERY"
         title="Primary Users"
-        description="As I am frequently surrounded by dancers, I conducted semi-informal interviews with a few students in the community as well as fellow instructors, who shared their experiences with me. I consolidated their goals, needs, and pain points into detailed user personas and created user journey flowcharts."
+        description="Our primary users—designers, developers, and web advisors—needed a centralised, up-to-date design system that ensures consistency, accessibility, and seamless collaboration across projects, while secondary users like third-party vendors and the brand team required onboarding resources and tools to maintain visual and functional alignment."
         principles={[
           {
             number: 1,
-            title: 'Students',
+            title: 'Designers',
             description:
               'Create designs that are user-centric, accessible, and visually appealing.',
           },
           {
             number: 2,
-            title: 'Teachers',
+            title: 'Developers',
             description: 'Build, test, and maintain websites and applications.',
           },
           {
             number: 3,
-            title: 'Social Dancers',
+            title: 'Web Advisors',
             description:
               'Act as a bridge between the technical and non-technical stakeholders.',
           },
@@ -120,130 +118,108 @@ const MOEDesignSystem = () => {
       />
       {/* Insights Section */}
       <InsightsSection
-        subtitle="Discovery"
-        title="What is holding the dance students back?"
-        description="Here are key insights derived from our research."
+        subtitle="DISCOVERY"
+        title="What is holding the team back?"
+        description="During our research for the design system initiative, we uncovered critical issues that impacted both internal teams and end users. I interviewed several teammembers from different disciplinary teams (Development, Design, Product Managment, Business Analysis, Web Advisors) to get an in-depth understanding of the critical pain-points and opportunities in our process and workflow. These insights shed light on how inconsistent design patterns, interfaces, and interaction methods negatively affected usability, scalability, and overall team productivity. Addressing these bottlenecks was crucial for creating a unified and efficient design system."
         insights={[
           {
             id: 1,
             title: 'Insight #1',
             description:
-              'Students and teachers I spoke with consistently expressed the need for a reliable source of truth.',
-            highlights: ['reliable', 'source of truth'],
+              'Public users (Teachers, students, schools) encounter varying interfaces and interactions across different parts of the product.',
+            highlights: ['varying interfaces and interactions'],
           },
           {
             id: 2,
             title: 'Insight #2',
             description:
-              'Students from varying experience backgrounds need tailored information.',
-            highlights: ['tailored'],
+              'Users experience difficulties navigating or interacting with the product due to inconsistent design elements and patterns.',
+            highlights: ['navigating or interacting'],
           },
         ]}
         subtitleColor={'moe'}
       />
-      {/* Ideation Section */}
+
       <Ideation
-        title="Discovery"
-        subtitle="Ideating Based on Insights"
-        description="Based on my findings and observations, I brainstormed features to address key challenges faced by students and instructors, such as the lack of accessible tools during classes or prácticas."
+        title="IDEATION"
+        subtitle="PROCESS PAINPOINTS"
+        description="The team faced significant challenges that hindered productivity and consistency, particularly under the pressure of tight deadlines. Developers struggled with unclear workflows, resulting in wasted time and inefficiencies, while designers frequently had to correct vendor-delivered work without clear standards or documentation to guide them. These issues created a cycle of uncertainty and inconsistency, making it difficult to deliver cohesive, high-quality results in a fast-paced environment."
         points={[
           {
-            title: 'Quick Access',
+            title: 'Developers',
             description:
-              'Students frequently needed quick access to materials, making save functionality and mobile-first design essential for usability.',
+              'Developers frequently needed quick access to materials and resources. The lack of centralized documentation and a mobile-first design approach made it challenging for them to efficiently navigate the tools they relied on, leading to wasted time and inefficiencies.',
           },
           {
-            title: 'Visual Material',
+            title: 'Designers',
             description:
-              'A video library was proposed to provide structured guidance, allowing users to reference and review material without relying on memory alone.',
-          },
-          {
-            title: 'Descriptive Search',
-            description:
-              'Users struggled to recall move names in classes, so a descriptive search was proposed for easier lookup based on key characteristics.',
+              'Designers often had to correct work produced by vendors, relying on their intuition and judgment due to the absence of clear guidelines or reference material. This created additional work and made it difficult to ensure a consistent design across all outputs.',
           },
         ]}
-        titleColor={'moe'}
+        titleColor="moe"
       />
+
       {/* Principles Section */}
       <PrinciplesSection
-        subtitle="Goals & Strategy"
+        subtitle="GOALS & STRATEGY"
         title="Principles"
-        description="These principles were established to address the unique challenges faced by students and instructors in a dynamic learning environment. Accessibility ensures the app remains practical and valuable in real-world settings, such as during lessons or prácticas."
+        description="These principles were established to address the challenges faced by teams when working on a fast-paced, large-scale design system project. By prioritising consistency, scalability, and user-centered efficiency, these principles ensure the design system supports cohesive collaboration, streamlines workflows, and provides a flexible foundation for future growth. They empower both designers and developers to build faster, more reliably, and with greater confidence."
         principles={[
           {
             number: 1,
-            title: 'Accessibility and Usability First',
+            title: 'Consistency with Flexibility',
             description:
-              'Ensures the app remains accessible and valuable in dynamic learning environments.',
+              'Consistency is the backbone of any design system, ensuring visual and interaction patterns are predictable across the product. At the same time, flexibility is vital to accommodate unique needs of different teams or projects, allowing for creative freedom within defined guidelines.',
           },
           {
             number: 2,
-            title: 'Support for Active Learning',
+            title: 'Scalability & Future-proofing',
             description:
-              'Tools that help users retain and apply knowledge effectively.',
+              'The design system is built with scalability in mind, enabling it to grow as the organisation’s needs evolve. By creating modular components and reusable patterns, the system can adapt to new features, technologies, and tools without requiring a complete overhaul.',
           },
           {
             number: 3,
-            title: 'Scalability and Flexibility',
+            title: 'User-centric Efficiency',
             description:
-              'Provides a foundation for future features and content expansions.',
+              'Efficiency is key to enabling teams to work faster and deliver high-quality outcomes. The design system simplifies handoffs between designers and developers, minimizes redundancies, and ensures that all teams have the resources they need to deliver exceptional user experiences.',
           },
         ]}
         reversedLayout={true} // Switches the layout order
         subtitleColor={'moe'}
       />
+
       {/* Competitive Analysis Section */}
       <CompetitiveAnalysisSection
-        subtitle="Exploration"
-        title="Dance Libraries Analysis"
-        description="To ensure our design system met industry standards and organizational needs, I conducted thorough research on existing government and private sector design systems. This included analyzing their structure, key features, and content strategies to identify best practices and gaps."
+        subtitle="EXPLORATION"
+        title="Design Systems in the wild"
+        description="To inform the development of our design system, I conducted secondary research into existing systems, with a focus on NZ/AUS government design systems. While these provided valuable insights into components, patterns, and guidance, they didn’t align with our brand guidelines or specific use cases. Recognizing this gap, I involved all primary users in the process through regular discussions, progress updates, and workshops. These sessions allowed the team to analyse existing components and patterns, assess their alignment with our design strategy, and provide feedback to ensure the system met their needs while addressing potential risks and benefits."
         image={{
-          src: '/images/process/ritmo-competitors.png',
-          alt: 'Analysis of dance libraries',
+          src: '/images/process/moe-designsystem/moe-design-system-competitors.png',
+          alt: 'Analysis of design systems',
         }}
         subtitleColor={'moe'}
       />
+
       {/* User Flows Section */}
       <UserFlow
-        overheadTitle="Exploration"
-        title="User Flows"
-        description="Detailed user flows improve illustrations for usability and accessibility."
+        overheadTitle="EXPLORATION"
+        title="Sitemap"
+        description="The sitemap provides a comprehensive overview of the design system website's structure, ensuring clear navigation and accessibility for all users. It outlines key sections, such as component libraries, patterns, and documentation, enabling designers, developers, and other stakeholders to quickly find the resources they need while maintaining consistency across projects."
         images={[
           {
-            path: '/images/process/sofia-userjourney.png',
+            path: '/images/process/moe-designsystem/moe-design-system-sitemap.png',
             tabName: 'Beginner Userflow',
-            caption: 'This is the beginner flow.',
-          },
-          {
-            path: '/images/process/mark-userjourney.png',
-            tabName: 'Intermediate Userflow',
-            caption: 'This is the intermediate flow.',
-          },
-          {
-            path: '/images/process/javier-userjourney.png',
-            tabName: 'Advanced Userflow',
-            caption: 'This is the advanced flow.',
-          },
-          {
-            path: '/images/process/carla-userjourney.png',
-            tabName: 'Instructor Userflow',
-            caption: 'This is the advanced flow.',
-          },
-          {
-            path: '/images/process/ritmo-mvp-technical-journey map.png',
-            tabName: 'Technical Journey Map',
-            caption: 'This is the advanced flow.',
+            caption: `The design system website sitemap visually maps out the site's structure, detailing how components, patterns, and documentation are organized for seamless navigation and usability.`,
           },
         ]}
         overheadTitleColor={'moe'}
       />
       <WireframesSection
-        subtitle="Refinement"
+        subtitle="REFINEMENT"
         title="Wireframes"
-        description="To ensure our design system met industry standards and organizational needs, I conducted thorough research on existing government and private sector design systems. This included analyzing their structure, key features, and content strategies to identify best practices and gaps."
+        description="The wireframing process for the design system website focused on creating a user-friendly structure that prioritised clarity and accessibility. By mapping out key sections like component libraries, patterns, and documentation, the wireframes ensured seamless navigation for designers, developers, and stakeholders. This iterative process allowed us to refine layouts, address user needs, and align the design with the project's overall strategy."
         image={{
-          src: '/images/process/ritmo-wireframes.png',
+          src: '/images/process/moe-designsystem/moe-design-system-wireframes.png',
           alt: 'Analysis of dance libraries',
         }}
         subtitleColor={'moe'}
@@ -274,24 +250,24 @@ const MOEDesignSystem = () => {
         title="Achievements"
         achievements={[
           {
-            title: 'Contributed to research initiative:',
+            title: 'Created the agencies first design system:',
             description:
-              'Allow the wider company to learn insights around how customer education can be implemented.',
+              'Took the initiative to learn about how to establish one, created buy-in for it’s usage across the agency.',
           },
           {
-            title: 'Owning the first IA-focused feature:',
+            title: 'Enhanced Team Collaboration:',
             description:
-              'Designed the company’s first IA-focused feature after the new product strategy was introduced.',
+              'Facilitated improved collaboration between designers and engineers.',
           },
           {
-            title: 'New Study details feature:',
+            title: 'Effective Vendor & Stakeholder Engagement:',
             description:
-              'Practitioners now had a way to document the purpose and requirements of studies.',
+              'Enhanced communication  with stakeholders and third-parties by providing a concrete reference for design decisions.',
           },
           {
-            title: 'Increased customer retention:',
+            title: 'Elevated Design Standards:',
             description:
-              'There was an increase in users sticking around for longer than previously, due to users utilizing multi-studies.',
+              'Raised the overall design standards within the organisation.',
           },
         ]}
       />
@@ -300,9 +276,10 @@ const MOEDesignSystem = () => {
       <LessonsLearnedSection
         title="Lessons Learned"
         lessons={[
-          'Iterative testing uncovered critical pain points early.',
-          'Accessibility compliance enhanced usability for all users.',
-          'User feedback refined the final designs.',
+          'Design systems only work if everyone is using it.',
+          'There needs to be a process and criteria.',
+          'There are right and wrong ways to document.',
+          '40% reduction in design & development time.',
         ]}
       />
     </div>

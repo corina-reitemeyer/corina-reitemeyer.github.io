@@ -57,8 +57,8 @@ const ResearchSection: React.FC<ResearchSectionProps> = ({
           )}
           <h2 className="mt-2 text-4xl font-bold text-gray-900">{title}</h2>
           <p className="mb-12 mt-6 text-lg text-gray-700">{description}</p>
-          <p className="mt-4 text-lg text-gray-900">
-            <strong>Result:</strong> {result}
+          <p className="mt-4 text-lg font-bold text-gray-900">
+            Result: {result}
           </p>
           {note && <p className="text-md mt-4 italic text-gray-500">{note}</p>}
         </div>

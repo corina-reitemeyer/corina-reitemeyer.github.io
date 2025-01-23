@@ -15,13 +15,13 @@ const AchievementsSection: React.FC<AchievementsSectionProps> = ({
   achievements,
 }) => {
   return (
-    <section className="py-16">
+    <section className="pb-16 pt-24">
       <div className="container mx-auto max-w-4xl">
         {/* Title */}
         <h2 className="mb-8 text-4xl font-bold text-gray-900">{title}</h2>
 
         {/* Two-Column Layout */}
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-16 sm:grid-cols-2">
           {achievements.map((achievement, index) => (
             <div key={index} className="achievement-item">
               <h3 className="text-lg font-semibold text-gray-900">

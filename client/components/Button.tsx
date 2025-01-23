@@ -5,17 +5,15 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ url, label, className = '' }) => {
-  const handleClick = () => {
-    window.open(url, '_blank')
-  }
-
   return (
-    <button
-      className={`mr-4 mt-4 flex rounded-md bg-blue-500 px-4 py-2 text-sm text-white ${className} hover:bg-blue-600`}
-      onClick={handleClick}
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`inline-block rounded-md bg-blue-500 px-6 py-2 text-center text-sm text-white hover:bg-blue-600 ${className}`}
     >
       {label}
-    </button>
+    </a>
   )
 }
 

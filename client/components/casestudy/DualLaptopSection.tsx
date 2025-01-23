@@ -15,7 +15,7 @@ const DualLaptopsSection: React.FC<DualLaptopsSectionProps> = ({
   backgroundColor = '#FFF4B0',
 }) => {
   return (
-    <section className="relative w-screen py-16" style={{ backgroundColor }}>
+    <section className="relative py-16" style={{ backgroundColor }}>
       <div className="grid h-auto w-full grid-cols-2 items-center">
         {/* Left Laptop */}
         <div className="relative flex justify-start">

@@ -1,6 +1,5 @@
 import React from 'react'
-import TabbedImageViewer from './TabbedImageViewer' // Assuming the tabbed viewer is imported here
-import '../../styles/DiscoverySection.css'
+import TabbedImageViewer from './TabbedImageViewer'
 
 interface ColumnData {
   title: string
@@ -42,23 +41,39 @@ const DiscoverySection: React.FC<DiscoverySectionProps> = ({
     moe: '#5452F6',
   }
 
+  // Default side image within the component
+  const defaultSideImage = '/images/Yuppies Sitting.png'
+  const defaultSideImageAlt = 'Woman sitting with magnifying glass'
+
   return (
-    <section className=" my-20">
+    <section className="my-36">
       <div className="container mx-auto max-w-4xl space-y-12">
-        {/* Top Section: Text Content */}
-        <div>
-          <p
-            className="text-lg font-semibold"
-            style={{ color: subtitleColorMap[subtitleColor] }}
-          >
-            {subtitle}
-          </p>
-          <h2 className="mt-2 text-4xl font-bold text-gray-900">{title}</h2>
-          <p className="mt-6 text-lg text-gray-700">{description}</p>
+        {/* Top Section: Text Content and Side Image */}
+        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
+          {/* Text Content */}
+          <div>
+            <p
+              className="text-lg font-semibold"
+              style={{ color: subtitleColorMap[subtitleColor] }}
+            >
+              {subtitle}
+            </p>
+            <h2 className="mt-2 text-4xl font-bold text-gray-900">{title}</h2>
+            <p className="mt-6 text-lg text-gray-700">{description}</p>
+          </div>
+
+          {/* Side Image */}
+          <div className="flex justify-center">
+            <img
+              src={defaultSideImage} // Default image set here
+              alt={defaultSideImageAlt}
+              className="w-full max-w-md rounded-lg object-cover"
+            />
+          </div>
         </div>
 
         {/* Visual Section */}
-        {variant === 'default' && (
+        {variant === 'default' && imageSrc && (
           <img
             src={imageSrc}
             alt={imageAlt}
@@ -71,19 +86,21 @@ const DiscoverySection: React.FC<DiscoverySectionProps> = ({
           </div>
         )}
 
-        {/* Additional Visuals for Three Columns */}
-        {variant === 'threeColumns' && threeColumnData && (
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-            {threeColumnData.map((column, index) => (
-              <div key={index} className="rounded-lg bg-gray-100 p-4">
-                <h3 className="text-xl font-bold text-gray-900">
-                  {column.title}
-                </h3>
-                <p className="mt-2 text-gray-700">{column.description}</p>
-              </div>
-            ))}
-          </div>
-        )}
+        {/* Three-Column Section */}
+        {variant === 'threeColumns' &&
+          threeColumnData &&
+          threeColumnData.length > 0 && (
+            <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+              {threeColumnData.map((column, index) => (
+                <div key={index} className="rounded-lg py-8">
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {column.title}
+                  </h3>
+                  <p className="mt-2 text-gray-700">{column.description}</p>
+                </div>
+              ))}
+            </div>
+          )}
       </div>
     </section>
   )

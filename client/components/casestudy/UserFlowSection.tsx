@@ -47,7 +47,7 @@ const UserFlow: React.FC<UserFlowProps> = ({
 
         {/* Render TabbedImageViewer if multiple images, or single image with caption */}
         {images.length > 1 ? (
-          <div className="mt-8">
+          <div className="mt-24">
             <TabbedImageViewer images={images} />
           </div>
         ) : (
@@ -58,7 +58,7 @@ const UserFlow: React.FC<UserFlowProps> = ({
               className="mx-auto w-full max-w-3xl rounded-lg"
             />
             {images[0].caption && (
-              <p className="mt-4 text-center text-sm text-gray-600">
+              <p className="mt-16 text-center text-sm text-gray-600">
                 {images[0].caption}
               </p>
             )}

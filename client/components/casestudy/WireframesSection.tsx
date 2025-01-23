@@ -28,7 +28,7 @@ const WireframesSection: React.FC<WireframesSectionProps> = ({
 
   return (
     <section className="bg-[#E6F8FF] py-24">
-      <div className="container mx-auto flex h-[600px] max-w-4xl flex-col justify-between">
+      <div className="container mx-auto flex h-[780px] max-w-4xl flex-col justify-between">
         {/* Header Section */}
         <div>
           <p
@@ -46,7 +46,7 @@ const WireframesSection: React.FC<WireframesSectionProps> = ({
           <img
             src={image.src}
             alt={image.alt}
-            className="mt-20 max-w-full rounded-lg object-contain"
+            className="mt-16 max-w-full rounded-lg object-contain"
           />
         </div>
       </div>

@@ -22,10 +22,10 @@ const CompetitiveAnalysisSection: React.FC<CompetitiveAnalysisSectionProps> = ({
   }
 
   return (
-    <section className="bg-[#E6F8FF] py-16">
-      <div className="container mx-auto flex max-w-4xl flex-col justify-between">
+    <section className="relative overflow-hidden bg-[#E6F8FF] py-16">
+      <div className="relative mx-auto max-w-4xl">
         {/* Text Content */}
-        <div>
+        <div className="relative z-10 max-w-sm">
           <p
             className="text-lg font-semibold"
             style={{ color: subtitleColorMap[subtitleColor] }}
@@ -36,12 +36,18 @@ const CompetitiveAnalysisSection: React.FC<CompetitiveAnalysisSectionProps> = ({
           <p className="my-6 text-lg text-gray-700">{description}</p>
         </div>
 
-        {/* Image Content */}
-        <div className="flex h-full justify-center pt-10">
+        {/* Positioned Image */}
+        <div
+          className="absolute"
+          style={{
+            bottom: '9rem', // Space from the bottom
+            right: '-20rem', // Space from the right
+          }}
+        >
           <img
             src={image.src}
             alt={image.alt}
-            className="w-auto max-w-full object-contain"
+            className="h-auto w-[50vw] object-contain" // Set width and maintain aspect ratio
           />
         </div>
       </div>

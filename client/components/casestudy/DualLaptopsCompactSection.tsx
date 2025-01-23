@@ -15,7 +15,7 @@ const DualLaptopsCompactSection: React.FC<DualLaptopsCompactSectionProps> = ({
   backgroundColor = '#FFF4B0',
 }) => {
   return (
-    <section className="relative w-screen py-36" style={{ backgroundColor }}>
+    <section className="relative py-36" style={{ backgroundColor }}>
       <div className="flex h-auto w-full items-center justify-between">
         {laptops.map((laptop, index) => (
           <img

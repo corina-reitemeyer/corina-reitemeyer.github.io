@@ -14,14 +14,14 @@ const Contact = () => {
             <p className="font-body text-lg leading-relaxed text-gray-800">
               Send me an{' '}
               <a
-                href="mailto:"
+                href="mailto:corina@corina.org"
                 className="text-black underline decoration-4 hover:text-purple-500"
               >
                 email
               </a>{' '}
               or connect with me on{' '}
               <a
-                href=""
+                href="https://www.linkedin.com/in/corinareitemeyer/"
                 target="_blank"
                 className="text-black underline decoration-4 hover:text-purple-500"
                 rel="noreferrer"

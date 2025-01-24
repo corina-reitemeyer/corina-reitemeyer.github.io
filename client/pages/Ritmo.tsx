@@ -34,8 +34,8 @@ const Ritmo = () => {
           role: 'UI/UX Designer & Full Stack Web Developer',
           company: 'Personal Project',
           date: 'July 2024 - present',
-          projectImage: '/images/portfolio/ritmo-cover.png',
-          headerImage: '/images/banner-images/ritmo-banner.png',
+          projectImage: '/images/portfolio/ritmo-cover.webp',
+          headerImage: '/images/banner-images/ritmo-banner.webp',
           githubLink:
             'https://github.com/corina-reitemeyer/ritmo-dance-library',
         }}
@@ -45,15 +45,15 @@ const Ritmo = () => {
       <ThreeScreensSection
         screens={[
           {
-            src: '/images/product/ritmo-mobile-1.png',
+            src: '/images/product/ritmo-mobile-1.webp',
             alt: 'Ritmo Library Screen',
           },
           {
-            src: '/images/product/ritmo-mobile-2.png',
+            src: '/images/product/ritmo-mobile-2.webp',
             alt: 'Ritmo Homepage Screen',
           },
           {
-            src: '/images/product/ritmo-mobile-3.png',
+            src: '/images/product/ritmo-mobile-3.webp',
             alt: 'Ritmo Moves Screen',
           },
         ]}
@@ -69,19 +69,19 @@ const Ritmo = () => {
         subtitleColor="ritmo"
         tabbedImages={[
           {
-            path: '/images/process/ritmo/UX Persona - Beginner.png',
+            path: '/images/process/ritmo/UX Persona - Beginner.webp',
             tabName: 'Persona - Beginner',
           },
           {
-            path: '/images/process/ritmo/UX Persona - Improvers.png',
+            path: '/images/process/ritmo/UX Persona - Improvers.webp',
             tabName: 'Persona - Improvers',
           },
           {
-            path: '/images/process/ritmo/UX Persona - Intermediate.png',
+            path: '/images/process/ritmo/UX Persona - Intermediate.webp',
             tabName: 'Persona - Intermediate',
           },
           {
-            path: '/images/process/ritmo/UX Persona - Instructor.png',
+            path: '/images/process/ritmo/UX Persona - Instructor.webp',
             tabName: 'Persona - Instructor',
           },
         ]}
@@ -229,7 +229,7 @@ const Ritmo = () => {
         title="Dance Libraries Analysis"
         description="To understand the landscape of existing resources for dance enthusiasts, I conducted a detailed competitive analysis of similar platforms. While some offered extensive dance libraries, only one included Cuban Salsa content—a significant gap for this niche. Additionally, many platforms lacked intuitive search engines and specific filtering options, making it difficult for users to find the exact moves they were looking for. These findings highlighted opportunities for Ritmo to provide a more focused, user-friendly, and comprehensive solution tailored to the needs of Cuban Salsa dancers and instructors."
         image={{
-          src: '/images/process/ritmo/ritmo-competitors.png',
+          src: '/images/process/ritmo/ritmo-competitors.webp',
           alt: 'Analysis of dance libraries',
         }}
         subtitleColor={'ritmo'}
@@ -242,31 +242,31 @@ const Ritmo = () => {
         description="User flows are meticulously crafted to ensure a seamless experience for every type of user, from beginners to advanced dancers and instructors. By mapping out detailed journeys, I address the unique needs and challenges of each group, promoting usability and accessibility at every step. These flows not only enhance user engagement but also ensure the app’s design aligns with real-world scenarios, providing an intuitive and effective solution for learning and teaching."
         images={[
           {
-            path: '/images/process/ritmo/sofia-userjourney.png',
+            path: '/images/process/ritmo/sofia-userjourney.webp',
             tabName: 'Beginner Userflow',
             caption:
               'A streamlined journey designed to guide new users through their first steps, focusing on onboarding, learning fundamental skills, and building confidence with intuitive support at every stage',
           },
           {
-            path: '/images/process/ritmo/mark-userjourney.png',
+            path: '/images/process/ritmo/mark-userjourney.webp',
             tabName: 'Intermediate Userflow',
             caption:
               'A tailored flow for users with some experience, emphasizing skill refinement, progress tracking, and advanced practice opportunities to bridge the gap to mastery.',
           },
           {
-            path: '/images/process/ritmo/javier-userjourney.png',
+            path: '/images/process/ritmo/javier-userjourney.webp',
             tabName: 'Advanced Userflow',
             caption:
               'A detailed path for experienced users, enabling them to explore high-level techniques, personalize their practice, and achieve their specific goals efficiently.',
           },
           {
-            path: '/images/process/ritmo/carla-userjourney.png',
+            path: '/images/process/ritmo/carla-userjourney.webp',
             tabName: 'Instructor Userflow',
             caption:
               'A comprehensive journey for instructors, integrating lesson planning, student management, and feedback tools to streamline teaching and elevate the learning experience',
           },
           {
-            path: '/images/process/ritmo/ritmo-mvp-technical-journeymap.png',
+            path: '/images/process/ritmo/ritmo-mvp-technical-journeymap.webp',
             tabName: 'Technical Journey Map',
             caption:
               'A high-level overview of the app’s technical flow, showcasing key system interactions and backend processes to ensure a smooth and robust user experience across all features.',
@@ -280,7 +280,7 @@ const Ritmo = () => {
         title="Wireframes"
         description="The wireframes served as a crucial step in translating research insights into a tangible design. By focusing on simplicity and user-centered functionality, the wireframes outlined the app's core structure and navigation, ensuring an intuitive experience for students, instructors, and social dancers. Each screen was thoughtfully designed to prioritise accessibility, effective filtering, and seamless content discovery—addressing gaps identified in the competitive analysis and discovery phase. These wireframes provided a solid foundation for refining the app’s usability and aligning it with the needs of Cuban Salsa enthusiasts."
         image={{
-          src: '/images/process/ritmo/ritmo-wireframes.png',
+          src: '/images/process/ritmo/ritmo-wireframes.webp',
           alt: 'Analysis of dance libraries',
         }}
         subtitleColor={'ritmo'}
@@ -289,7 +289,7 @@ const Ritmo = () => {
       {/* Mobile Screens Showcase */}
       <MobileScreensShowcase
         image={{
-          src: '/images/process/ritmo/ritmo-showcase.png',
+          src: '/images/process/ritmo/ritmo-showcase.webp',
           alt: 'Showcase of mobile screens',
         }}
       />

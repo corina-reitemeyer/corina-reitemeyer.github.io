@@ -42,7 +42,7 @@ const DiscoverySection: React.FC<DiscoverySectionProps> = ({
   }
 
   // Default side image within the component
-  const defaultSideImage = '/images/Yuppies Sitting.png'
+  const defaultSideImage = '/images/Yuppies Sitting.webp'
   const defaultSideImageAlt = 'Woman sitting with magnifying glass'
 
   return (

@@ -27,7 +27,7 @@ const About = () => {
             {/* Image Section */}
             <div className="text-center md:text-left">
               <img
-                src="/images/corina-about-picture.png"
+                src="/images/corina-about-picture.webp"
                 alt="Smiling woman"
                 className="profile-image mx-auto"
               />
@@ -109,7 +109,7 @@ const About = () => {
                 <div className="absolute top-[20px] h-0.5 w-full bg-slate-200"></div>
 
                 {/* Circle Positioned on the Line */}
-                <div className="bg-customTeal absolute top-[8px] z-10 h-6 w-6 rounded-full border-4 border-white"></div>
+                <div className="absolute top-[8px] z-10 h-6 w-6 rounded-full border-4 border-white bg-customTeal"></div>
 
                 {/* Step Content */}
                 <div className="relative mt-10 flex-1 px-4 text-center">
@@ -135,7 +135,7 @@ const About = () => {
               <div className="relative flex items-start justify-between">
                 {firstRowSteps.map((step, index) => (
                   <div key={index} className="relative flex-1 px-4 text-left">
-                    <div className="bg-customTeal absolute left-[10px] top-[8px] z-10 h-6 w-6 rounded-full border-4 border-white"></div>
+                    <div className="absolute left-[10px] top-[8px] z-10 h-6 w-6 rounded-full border-4 border-white bg-customTeal"></div>
                     <div className="font-body mt-10 text-sm text-gray-700">
                       {step.step}
                     </div>
@@ -156,7 +156,7 @@ const About = () => {
               <div className="relative flex items-start justify-between">
                 {secondRowSteps.map((step, index) => (
                   <div key={index} className="relative flex-1 px-4 text-left">
-                    <div className="bg-customTeal absolute left-[10px] top-[8px] z-10 h-6 w-6 rounded-full border-4 border-white"></div>
+                    <div className="absolute left-[10px] top-[8px] z-10 h-6 w-6 rounded-full border-4 border-white bg-customTeal"></div>
                     <div className="font-body mt-10 text-sm text-gray-700">
                       {step.step}
                     </div>

@@ -38,7 +38,7 @@ const Lightbox = ({
         aria-label="Close lightbox"
         tabIndex={0}
       >
-        <img src="/images/Close.png" alt="Close" className="h-8 w-8" />
+        <img src="/images/Close.webp" alt="Close" className="h-8 w-8" />
       </button>
 
       {/* Lightbox Image */}

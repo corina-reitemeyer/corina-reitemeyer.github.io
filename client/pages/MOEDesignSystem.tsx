@@ -34,8 +34,8 @@ const MOEDesignSystem = () => {
           role: 'Senior UI/UX Designer',
           company: 'Ministry of Education (New Zealand)',
           date: '2020 - 2022',
-          projectImage: '/images/portfolio/moe-design-system-cover.png',
-          headerImage: '/images/banner-images/moe-design-system.png',
+          projectImage: '/images/portfolio/moe-design-system-cover.webp',
+          headerImage: '/images/banner-images/moe-design-system.webp',
         }}
       />
 
@@ -43,11 +43,11 @@ const MOEDesignSystem = () => {
       <OverlappingImagesSection
         images={[
           {
-            src: '/images/product/moe-design-system-right.png',
+            src: '/images/product/moe-design-system-right.webp',
             alt: 'Top Image',
           },
           {
-            src: '/images/product/moe-design-system-left.png',
+            src: '/images/product/moe-design-system-left.webp',
             alt: 'Bottom Image',
           },
         ]}
@@ -84,7 +84,7 @@ const MOEDesignSystem = () => {
         title="Learning from Home"
         date="Website | 2020 - 2021"
         description="During the COVID-19 pandemic, my team was tasked with delivering the 'Learning from Home' website as part of an emergency response. I initiated the Design System project due to the learnings we had from Learning from Home, bringing a fresh perspective to our existing processes. The fast-paced nature of the project and tight deadlines exposed significant pain points, particularly the lack of a cohesive design system and streamlined workflows for design and development. These challenges underscored the need for consistency, scalability, and efficiency, which ultimately informed the foundation for our design system."
-        imageSrc="/images/process/moe-designsystem/moe-learningfromhome.png"
+        imageSrc="/images/process/moe-designsystem/moe-learningfromhome.webp"
         imageAlt="Mockup of Learning from Home website"
         subtitleColor={'moe'}
       />
@@ -194,7 +194,7 @@ const MOEDesignSystem = () => {
         title="Design Systems in the wild"
         description="To inform the development of our design system, I conducted secondary research into existing systems, with a focus on NZ/AUS government design systems. While these provided valuable insights into components, patterns, and guidance, they didn’t align with our brand guidelines or specific use cases. Recognizing this gap, I involved all primary users in the process through regular discussions, progress updates, and workshops. These sessions allowed the team to analyse existing components and patterns, assess their alignment with our design strategy, and provide feedback to ensure the system met their needs while addressing potential risks and benefits."
         image={{
-          src: '/images/process/moe-designsystem/moe-design-system-competitors.png',
+          src: '/images/process/moe-designsystem/moe-design-system-competitors.webp',
           alt: 'Analysis of design systems',
         }}
         subtitleColor={'moe'}
@@ -207,7 +207,7 @@ const MOEDesignSystem = () => {
         description="The sitemap provides a comprehensive overview of the design system website's structure, ensuring clear navigation and accessibility for all users. It outlines key sections, such as component libraries, patterns, and documentation, enabling designers, developers, and other stakeholders to quickly find the resources they need while maintaining consistency across projects."
         images={[
           {
-            path: '/images/process/moe-designsystem/moe-design-system-sitemap.png',
+            path: '/images/process/moe-designsystem/moe-design-system-sitemap.webp',
             tabName: 'Beginner Userflow',
             caption: `The design system website sitemap visually maps out the site's structure, detailing how components, patterns, and documentation are organized for seamless navigation and usability.`,
           },
@@ -219,27 +219,27 @@ const MOEDesignSystem = () => {
         title="Wireframes"
         description="The wireframing process for the design system website focused on creating a user-friendly structure that prioritised clarity and accessibility. By mapping out key sections like component libraries, patterns, and documentation, the wireframes ensured seamless navigation for designers, developers, and stakeholders. This iterative process allowed us to refine layouts, address user needs, and align the design with the project's overall strategy."
         image={{
-          src: '/images/process/moe-designsystem/moe-design-system-wireframes.png',
+          src: '/images/process/moe-designsystem/moe-design-system-wireframes.webp',
           alt: 'Analysis of dance libraries',
         }}
         subtitleColor={'moe'}
       />
       <TwoRowsImagesSection
         desktopImage={{
-          src: '/images/product/moe-ds-desktop-allscreens.png', // Replace with your combined desktop image path
+          src: '/images/product/moe-ds-desktop-allscreens.webp', // Replace with your combined desktop image path
           alt: 'Combined desktop images',
         }}
         bottomRowImages={[
           {
-            src: '/images/product/moe-ds-mobile-menu.png',
+            src: '/images/product/moe-ds-mobile-menu.webp',
             alt: 'Mobile Image 1',
           },
           {
-            src: '/images/product/moe-ds-mobile-hpg.png',
+            src: '/images/product/moe-ds-mobile-hpg.webp',
             alt: 'Mobile Image 2',
           },
           {
-            src: '/images/product/moe-ds-mobile-content.png',
+            src: '/images/product/moe-ds-mobile-content.webp',
             alt: 'Mobile Image 3',
           },
         ]}

@@ -33,8 +33,8 @@ const OWTemplates = () => {
           role: 'Product Designer',
           company: 'Optimal Workshop',
           date: 'August 2023 - June 2024',
-          projectImage: '/images/portfolio/ow-templates-cover.png',
-          headerImage: '/images/banner-images/ow-templates.png',
+          projectImage: '/images/portfolio/ow-templates-cover.webp',
+          headerImage: '/images/banner-images/ow-templates.webp',
         }}
       />
 
@@ -42,16 +42,16 @@ const OWTemplates = () => {
       <DualLaptopsSection
         laptops={[
           {
-            src: '/images/product/ow-duallaptop-1.png',
+            src: '/images/product/ow-duallaptop-1.webp',
             alt: 'User Dashboard View',
           },
           {
-            src: '/images/product/ow-duallaptop-2.png',
+            src: '/images/product/ow-duallaptop-2.webp',
             alt: 'Community Interaction View',
           },
         ]}
         backgroundColor="#FFEAA1"
-        backgroundImage="/images/OW-Squiggles.svg"
+        backgroundImage="/images/OW-Squiggles.webp"
       />
 
       {/* Discovery Section */}
@@ -180,7 +180,7 @@ const OWTemplates = () => {
         title="TEMPLATE FEATURES IN OTHER PRODUCTS"
         description="To better understand how to support practitioners effectively, I analysed competitors and similar tools commonly used in daily workflows, such as productivity apps, project management platforms, and design tools. This analysis provided insights into how workflows and best practices are introduced and adopted by their customer base, informing the design of a system that aligns with user expectations and enhances their experience."
         image={{
-          src: '/images/process/ow/ow-competitors.png',
+          src: '/images/process/ow/ow-competitors.webp',
           alt: 'Analysis of dance libraries',
         }}
       />
@@ -192,7 +192,7 @@ const OWTemplates = () => {
         description="User flows were carefully designed to visualize how practitioners interact with templates, ensuring an intuitive and efficient experience. These flows highlight key touchpoints, from discovering templates to integrating them into their workflows, addressing usability challenges and promoting seamless navigation. By focusing on accessibility and logical structure, the flows support users in maximizing the value of the templates."
         images={[
           {
-            path: '/images/process/ow/ow-sitemap.png',
+            path: '/images/process/ow/ow-sitemap.webp',
             caption:
               'The MVP user flow highlights the step-by-step process users follow to access and implement templates effectively. It ensures a logical progression and simplifies complex actions, providing a smooth experience for both first-time and returning users.',
             tabName: 'Template - Userflow',
@@ -208,7 +208,7 @@ const OWTemplates = () => {
         title="Wireframes"
         description="These wireframes were designed to integrate a new feature into a legacy product, balancing user needs with technical constraints. A key challenge was accounting for existing areas built with different frameworks, requiring thoughtful planning to ensure the new component could be seamlessly added without necessitating a complete rebuild of the page. This delicate process involved careful consideration of both usability and development feasibility."
         image={{
-          src: '/images/process/ow/ow-wireframes.png',
+          src: '/images/process/ow/ow-wireframes.webp',
           alt: 'Wireframes for user interaction',
         }}
       />
@@ -217,16 +217,16 @@ const OWTemplates = () => {
       <DualLaptopsCompactSection
         laptops={[
           {
-            src: '/images/product/ow-duallaptop-compact-2.png',
+            src: '/images/product/ow-duallaptop-compact-2.webp',
             alt: 'Compact View of Feature A',
           },
           {
-            src: '/images/product/ow-duallaptop-compact-1.png',
+            src: '/images/product/ow-duallaptop-compact-1.webp',
             alt: 'Compact View of Feature B',
           },
         ]}
         backgroundColor="#FFEAA1"
-        backgroundImage="/images/OW-Squiggles.svg"
+        backgroundImage="/images/OW-Squiggles.webp"
       />
 
       {/* Research Section */}
@@ -236,7 +236,7 @@ const OWTemplates = () => {
         subtitleColor="ow"
         description="We launched the MVP feature to a small subgroup of users. This included 6 use cases for multi-study project templates, and for testing purposes, also single studies from each project to see what users prefer to use."
         result="Customers gravitated towards the multi-study templates with an increased user adaption rate. But the launched-study rate per customer remained unchanged."
-        imageSrc="/images/process/ow/ow-abtesting.png"
+        imageSrc="/images/process/ow/ow-abtesting.webp"
         imageAlt="Mockup of research process"
         backgroundColor="#E6F8FF"
       />

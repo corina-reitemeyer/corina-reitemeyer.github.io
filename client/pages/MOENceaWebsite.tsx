@@ -36,8 +36,8 @@ const MOENceaWebsite = () => {
           role: 'UI/UX Designer',
           company: 'Ministry of Education',
           date: '2019 - 2021',
-          projectImage: '/images/portfolio/moe-ncea-cover.png',
-          headerImage: '/images/banner-images/moe-ncea.png',
+          projectImage: '/images/portfolio/moe-ncea-cover.webp',
+          headerImage: '/images/banner-images/moe-ncea.webp',
         }}
       />
 
@@ -46,11 +46,11 @@ const MOENceaWebsite = () => {
         backgroundColor="#90AEFF"
         laptops={[
           {
-            src: '/images/product/ncea-desktop-left.png',
+            src: '/images/product/ncea-desktop-left.webp',
             alt: 'Screen of Learning tab',
           },
           {
-            src: '/images/product/ncea-desktop-right.png',
+            src: '/images/product/ncea-desktop-right.webp',
             alt: 'Screen of Assessment Standard',
           },
         ]}
@@ -192,7 +192,7 @@ const MOENceaWebsite = () => {
         title="Previous NCEA resources and guidelines"
         description="To better understand how teachers currently access NCEA standards and resources, I conducted an analysis of existing websites frequently used by educators. This research highlighted strengths, weaknesses, and gaps in these platforms, providing insights to inform the design of a more user-friendly and efficient system tailored to their needs."
         image={{
-          src: '/images/process/moe-ncea/moe-ncea-competitor.png',
+          src: '/images/process/moe-ncea/moe-ncea-competitor.webp',
           alt: 'TKI and NZQA are two of the most widely used official websites for NCEA standards prior to the NCEA Education website',
         }}
       />
@@ -204,7 +204,7 @@ const MOENceaWebsite = () => {
         description="The sitemap for the NCEA website was designed to provide a clear and intuitive structure, ensuring teachers, students, and Ministry staff could easily find key resources and information. It incorporated both the Māori and English curriculums, organising content in a way that respected and supported both languages. Critical sections such as curriculum updates, teaching materials, and support tools were prioritised, enhancing usability and accessibility to streamline navigation and improve the overall user experience."
         images={[
           {
-            path: '/images/process/moe-ncea/ncea-sitemap.png',
+            path: '/images/process/moe-ncea/ncea-sitemap.webp',
             caption:
               'The sitemap includes the Information Architecture for both the NZ Curriculum, Te Marautanga o Aotearoa, and NCEA Change Programme related content.',
             tabName: 'NCEA Website - Sitemap',
@@ -220,7 +220,7 @@ const MOENceaWebsite = () => {
         title="Wireframes"
         description="The wireframing process for the NCEA Change Programme website was a collaborative and iterative effort, involving multiple designers working together to tackle the complexity of such a large-scale project. Due to the size and scope of the website, the content and wireframe processes often evolved in parallel rather than in a strictly chronological order. This dynamic approach allowed design and content to inspire and inform each other, ensuring the final product was both visually cohesive and content-rich, tailored to meet user needs effectively."
         image={{
-          src: '/images/process/moe-ncea/ncea-website-wireframes.png',
+          src: '/images/process/moe-ncea/ncea-website-wireframes.webp',
           alt: 'Mid-fidelity wireframes of the recent changes and news pages',
         }}
       />
@@ -231,11 +231,11 @@ const MOENceaWebsite = () => {
         description="The visual design for the NCEA Change Programme website was developed in close alignment with the in-house branding team to maintain consistency with organizational guidelines. However, we often needed to adjust colors and source images ourselves to meet the unique needs of the project. The design process was led by the lead designer, ensuring that the visuals not only adhered to brand standards but also effectively supported the website’s content and functionality."
         images={[
           {
-            src: '/images/process/moe-ncea/ncea-website-visualdesign-1.png',
+            src: '/images/process/moe-ncea/ncea-website-visualdesign-1.webp',
             alt: 'NCEA Mega menus - English and Maori Version',
           },
           {
-            src: '/images/process/moe-ncea/moe-ncea-visual-design-2.png',
+            src: '/images/process/moe-ncea/moe-ncea-visual-design-2.webp',
             alt: 'Banners with different Brand Colours depending on Subjectmatter',
           },
         ]}
@@ -245,7 +245,7 @@ const MOENceaWebsite = () => {
       {/* TwoRowsImages Section */}
       <TwoRowsImagesSection
         desktopImage={{
-          src: '/images/product/moe-ncea-desktop.png',
+          src: '/images/product/moe-ncea-desktop.webp',
           alt: 'Combined desktop images',
         }}
       />

@@ -3,28 +3,28 @@
     "id": 1,
     "projectTitle": "Ritmo",
     "slug": "ritmo",
-    "projectImage": "/images/portfolio/ritmo-cover.png",
+    "projectImage": "/images/portfolio/ritmo-cover.webp",
     "company": "Personal Project"
   },
   {
     "id": 2,
     "projectTitle": "Templates",
     "slug": "ow-templates",
-    "projectImage": "/images/portfolio/ow-templates-cover.png",
+    "projectImage": "/images/portfolio/ow-templates-cover.webp",
     "company": "Optimal Workshop"
   },
   {
     "id": 3,
     "projectTitle": "Design System",
     "slug": "moe-design-system",
-    "projectImage": "/images/portfolio/moe-design-system-cover.png",
+    "projectImage": "/images/portfolio/moe-design-system-cover.webp",
     "company": "Ministry of Education (New Zealand)"
   },
   {
     "id": 4,
     "projectTitle": "NCEA Website",
     "slug": "moe-ncea-website",
-    "projectImage": "/images/portfolio/moe-ncea-cover.png",
+    "projectImage": "/images/portfolio/moe-ncea-cover.webp",
     "company": "Ministry of Education (New Zealand)"
   }
 ]

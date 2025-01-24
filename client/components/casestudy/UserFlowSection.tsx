@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TabbedImageViewer from './TabbedImageViewer'
+import LightBox from './LightBox' // Import your LightBox component
 
 interface TabbedImage {
   path: string
@@ -22,10 +23,23 @@ const UserFlow: React.FC<UserFlowProps> = ({
   images,
   overheadTitleColor,
 }) => {
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false)
+  const [lightboxImage, setLightboxImage] = useState<TabbedImage | null>(null)
+
   const overheadTitleColorMap = {
     ritmo: '#40B0C8',
     ow: '#C7A000',
     moe: '#5452F6',
+  }
+
+  const handleLightboxOpen = (image: TabbedImage) => {
+    setLightboxImage(image)
+    setIsLightboxOpen(true)
+  }
+
+  const handleLightboxClose = () => {
+    setIsLightboxOpen(false)
+    setLightboxImage(null)
   }
 
   return (
@@ -52,17 +66,31 @@ const UserFlow: React.FC<UserFlowProps> = ({
           </div>
         ) : (
           <div className="mt-8">
-            <img
-              src={images[0].path}
-              alt={images[0].caption || 'User flow image'}
-              className="mx-auto w-full max-w-3xl rounded-lg"
-            />
+            <button
+              className="focus:outline-none"
+              onClick={() => handleLightboxOpen(images[0])}
+            >
+              <img
+                src={images[0].path}
+                alt={images[0].caption || 'User flow image'}
+                className="mx-auto w-full max-w-3xl cursor-pointer rounded-lg"
+              />
+            </button>
             {images[0].caption && (
               <p className="mt-16 text-center text-sm text-gray-600">
                 {images[0].caption}
               </p>
             )}
           </div>
+        )}
+
+        {/* Lightbox */}
+        {isLightboxOpen && lightboxImage && (
+          <LightBox
+            src={lightboxImage.path}
+            alt={lightboxImage.caption || 'User flow image'}
+            onClose={handleLightboxClose}
+          />
         )}
       </div>
     </section>

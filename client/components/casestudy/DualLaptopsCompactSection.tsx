@@ -8,15 +8,37 @@ interface LaptopImage {
 interface DualLaptopsCompactSectionProps {
   laptops: LaptopImage[]
   backgroundColor?: string
+  backgroundImage?: string // Added backgroundImage to the interface
 }
 
 const DualLaptopsCompactSection: React.FC<DualLaptopsCompactSectionProps> = ({
   laptops,
   backgroundColor = '#FFF4B0',
+  backgroundImage,
 }) => {
   return (
-    <section className="relative py-36" style={{ backgroundColor }}>
-      <div className="flex h-auto w-full items-center justify-between">
+    <section
+      className="relative py-36"
+      style={{
+        backgroundColor,
+      }}
+    >
+      {/* Background Image */}
+      {backgroundImage && (
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover', // Adjust as needed
+            zIndex: 1, // Ensure it's behind the laptop images
+          }}
+        />
+      )}
+
+      {/* Content (Laptops) */}
+      <div className="relative z-10 flex h-auto w-full items-center justify-between">
         {laptops.map((laptop, index) => (
           <img
             key={index}
@@ -24,7 +46,7 @@ const DualLaptopsCompactSection: React.FC<DualLaptopsCompactSectionProps> = ({
             alt={laptop.alt}
             className={`h-auto object-contain ${index === 0 ? 'ml-0' : 'mr-0'}`}
             style={{
-              width: 'auto', // Each laptop image takes ~48% of the viewport width
+              width: 'auto',
               height: '30vw',
             }}
           />

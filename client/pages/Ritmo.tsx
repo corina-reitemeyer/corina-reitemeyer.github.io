@@ -7,7 +7,7 @@ import LessonsLearnedSection from '../components/casestudy/LessonsLearned'
 import MobileScreensShowcase from '../components/casestudy/MobileShowCase'
 import PrimaryUsersSection from '../components/casestudy/PrimaryUsers'
 import PrincipleSection from '../components/casestudy/PrinciplesSection'
-import ThreeMobile from '../components/casestudy/ThreeMobile'
+import ThreeScreensSection from '../components/casestudy/ThreeMobile'
 import UserFlow from '../components/casestudy/UserFlowSection'
 import WireframesSection from '../components/casestudy/WireframesSection'
 
@@ -37,12 +37,12 @@ const Ritmo = () => {
           projectImage: '/images/portfolio/ritmo-cover.png',
           headerImage: '/images/banner-images/ritmo-banner.png',
           githubLink:
-            'https://github.com/corina-reitemeyer/corina-reitemeyer.github.io',
+            'https://github.com/corina-reitemeyer/ritmo-dance-library',
         }}
       />
 
       {/* Three Mobile Showcase */}
-      <ThreeMobile
+      <ThreeScreensSection
         screens={[
           {
             src: '/images/product/ritmo-mobile-1.png',
@@ -57,6 +57,7 @@ const Ritmo = () => {
             alt: 'Ritmo Moves Screen',
           },
         ]}
+        backgroundImage="/images/ritmo-circles.svg"
       />
 
       {/* Discovery Section */}
@@ -265,7 +266,7 @@ const Ritmo = () => {
               'A comprehensive journey for instructors, integrating lesson planning, student management, and feedback tools to streamline teaching and elevate the learning experience',
           },
           {
-            path: '/images/process/ritmo/ritmo-mvp-technical-journey map.png',
+            path: '/images/process/ritmo/ritmo-mvp-technical-journeymap.png',
             tabName: 'Technical Journey Map',
             caption:
               'A high-level overview of the app’s technical flow, showcasing key system interactions and backend processes to ensure a smooth and robust user experience across all features.',

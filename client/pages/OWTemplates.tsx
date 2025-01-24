@@ -50,6 +50,8 @@ const OWTemplates = () => {
             alt: 'Community Interaction View',
           },
         ]}
+        backgroundColor="#FFEAA1"
+        backgroundImage="/images/OW-Squiggles.svg"
       />
 
       {/* Discovery Section */}
@@ -223,6 +225,8 @@ const OWTemplates = () => {
             alt: 'Compact View of Feature B',
           },
         ]}
+        backgroundColor="#FFEAA1"
+        backgroundImage="/images/OW-Squiggles.svg"
       />
 
       {/* Research Section */}

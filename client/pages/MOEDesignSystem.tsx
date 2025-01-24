@@ -84,7 +84,7 @@ const MOEDesignSystem = () => {
         title="Learning from Home"
         date="Website | 2020 - 2021"
         description="During the COVID-19 pandemic, my team was tasked with delivering the 'Learning from Home' website as part of an emergency response. I initiated the Design System project due to the learnings we had from Learning from Home, bringing a fresh perspective to our existing processes. The fast-paced nature of the project and tight deadlines exposed significant pain points, particularly the lack of a cohesive design system and streamlined workflows for design and development. These challenges underscored the need for consistency, scalability, and efficiency, which ultimately informed the foundation for our design system."
-        imageSrc="/images/process/moe-learningfromhome.png"
+        imageSrc="/images/process/moe-designsystem/moe-learningfromhome.png"
         imageAlt="Mockup of Learning from Home website"
         subtitleColor={'moe'}
       />

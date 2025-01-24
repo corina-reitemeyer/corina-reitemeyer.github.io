@@ -7,16 +7,38 @@ interface LaptopImage {
 
 interface DualLaptopsSectionProps {
   laptops: LaptopImage[]
-  backgroundColor?: string
+  backgroundColor?: string // Optional prop for dynamic background color
+  backgroundImage?: string // Optional prop for background image
 }
 
 const DualLaptopsSection: React.FC<DualLaptopsSectionProps> = ({
   laptops,
-  backgroundColor = '#FFF4B0',
+  backgroundColor = '#FFF4B0', // Default background color
+  backgroundImage, // Optional background image
 }) => {
   return (
-    <section className="relative py-16" style={{ backgroundColor }}>
-      <div className="grid h-auto w-full grid-cols-2 items-center">
+    <section
+      className="relative w-screen py-16"
+      style={{
+        backgroundColor,
+      }}
+    >
+      {/* Background Image */}
+      {backgroundImage && (
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            zIndex: 1,
+          }}
+        />
+      )}
+
+      {/* Content (Laptops) */}
+      <div className="relative z-10 grid h-auto w-full grid-cols-2 items-center">
         {/* Left Laptop */}
         <div className="relative flex justify-start">
           <img

@@ -50,7 +50,7 @@ const TwoRowsImagesSection: React.FC<TwoRowsImagesSectionProps> = ({
                 index === 0
                   ? 'mt-36' // Lower alignment for the left mobile
                   : index === 1
-                    ? 'mt-0' // Centered alignment for the middle mobile
+                    ? 'mt-10' // Centered alignment for the middle mobile
                     : 'mt-[-36px]' // Higher alignment for the right mobile
               }`}
             >

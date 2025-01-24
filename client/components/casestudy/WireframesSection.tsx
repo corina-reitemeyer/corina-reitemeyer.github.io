@@ -9,7 +9,7 @@ interface WireframesSectionProps {
   subtitle: string
   title: string
   description: string
-  image: WireframeImage // Change to accept a single image
+  image: WireframeImage // Single image
   subtitleColor: 'ritmo' | 'ow' | 'moe' // Dynamic subtitle color options
 }
 
@@ -27,9 +27,9 @@ const WireframesSection: React.FC<WireframesSectionProps> = ({
   }
 
   return (
-    <section className="bg-[#E6F8FF] py-24">
-      <div className="container mx-auto flex h-[780px] max-w-4xl flex-col justify-between">
-        {/* Header Section */}
+    <section className="bg-[#E6F8FF] pt-24">
+      <div className="container mx-auto max-w-4xl">
+        {/* Text Content */}
         <div>
           <p
             className="text-lg font-semibold"
@@ -42,11 +42,11 @@ const WireframesSection: React.FC<WireframesSectionProps> = ({
         </div>
 
         {/* Image Section */}
-        <div className="flex h-full items-end justify-center">
+        <div className="mt-8">
           <img
             src={image.src}
             alt={image.alt}
-            className="mt-16 max-w-full rounded-lg object-contain"
+            className="w-full max-w-full rounded-lg object-contain"
           />
         </div>
       </div>

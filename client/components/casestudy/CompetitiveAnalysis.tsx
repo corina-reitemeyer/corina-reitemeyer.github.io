@@ -26,7 +26,7 @@ const CompetitiveAnalysisSection: React.FC<CompetitiveAnalysisSectionProps> = ({
       <div className="relative mx-auto flex max-w-4xl px-6 sm:px-8">
         {/* Text Content */}
         <div
-          className="relative z-10 px-4"
+          className="relative z-10"
           style={{
             maxWidth: '50%', // Adjust the text box width explicitly to 60% of the container
           }}

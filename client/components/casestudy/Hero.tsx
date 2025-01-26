@@ -33,7 +33,7 @@ const Hero: React.FC<HeroProps> = ({ project }) => {
       </div>
 
       <div className="container mx-auto mt-24 flex max-w-4xl flex-col gap-6 px-6 sm:px-12 lg:px-24">
-        <h1 className="-mb-2 text-6xl font-bold text-gray-900">
+        <h1 className="-mb-2 text-5xl font-bold text-gray-900">
           {projectTitle}
         </h1>
         <p className="-mt-4 mb-8 text-lg font-light text-gray-500">

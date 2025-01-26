@@ -127,7 +127,7 @@ const MOEDesignSystem = () => {
             title: 'Insight #1',
             description:
               'Public users (Teachers, students, schools) encounter varying interfaces and interactions across different parts of the product.',
-            highlights: ['varying interfaces and interactions'],
+            highlights: ['varying interfaces', 'interactions'],
           },
           {
             id: 2,

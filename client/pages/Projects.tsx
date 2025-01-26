@@ -11,10 +11,10 @@ const Projects: React.FC<ProjectsProps> = () => {
 
   return (
     <>
-      <header className="relative mx-auto flex min-h-[50vh] flex-col items-start justify-center px-8 sm:min-h-[70vh] sm:max-w-5xl sm:px-8">
+      <header className="relative mx-auto flex min-h-[40vh] flex-col items-start justify-center px-8 sm:min-h-[60vh] sm:max-w-5xl sm:px-8">
         {/* Background Gradient Circles */}
         <div
-          className="absolute right-[-25%] top-[-20%] h-[1000px] w-[1000px] rounded-full"
+          className="absolute right-[-25%] top-[-20%] h-[1000px] w-[1000px] overflow-hidden rounded-full"
           style={{
             background:
               'radial-gradient(circle, rgba(187,181,255,0.6) 0%, transparent 50%)',
@@ -57,7 +57,7 @@ const Projects: React.FC<ProjectsProps> = () => {
         </div>
       </header>
 
-      <div className="flex justify-center px-4 py-10 sm:px-8 sm:py-6">
+      <div className="flex justify-center py-10 sm:py-6 lg:px-4">
         <div className="w-full max-w-7xl p-4 sm:p-8">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
             {projects

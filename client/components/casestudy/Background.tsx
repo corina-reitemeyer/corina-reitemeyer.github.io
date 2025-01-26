@@ -29,7 +29,7 @@ const BackgroundSection: React.FC<BackgroundSectionProps> = ({
 
   return (
     <section className="py-24" style={{ backgroundColor }}>
-      <div className="container mx-auto grid max-w-4xl grid-cols-1 items-center gap-16 lg:grid-cols-2">
+      <div className="container mx-auto grid max-w-4xl grid-cols-1 items-center gap-16 px-6 sm:px-8 lg:grid-cols-2">
         {/* Left: Text Content */}
         <div>
           <p

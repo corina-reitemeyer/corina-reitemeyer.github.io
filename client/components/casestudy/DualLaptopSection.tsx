@@ -18,7 +18,7 @@ const DualLaptopsSection: React.FC<DualLaptopsSectionProps> = ({
 }) => {
   return (
     <section
-      className="relative w-screen py-16"
+      className="relative w-screen py-12 sm:py-16"
       style={{
         backgroundColor,
       }}
@@ -38,28 +38,22 @@ const DualLaptopsSection: React.FC<DualLaptopsSectionProps> = ({
       )}
 
       {/* Content (Laptops) */}
-      <div className="relative z-10 grid h-auto w-full grid-cols-2 items-center">
+      <div className="relative z-10 grid h-auto w-full grid-cols-1 items-center gap-y-6 sm:grid-cols-2 sm:gap-y-0">
         {/* Left Laptop */}
-        <div className="relative flex justify-start">
+        <div className="relative flex justify-center sm:justify-start">
           <img
             src={laptops[0]?.src}
             alt={laptops[0]?.alt}
-            className="h-auto w-[48vw] object-contain"
-            style={{
-              marginTop: '100px', // Lower the left laptop
-            }}
+            className="h-auto w-[75vw] object-contain sm:w-[48vw]"
           />
         </div>
 
         {/* Right Laptop */}
-        <div className="relative flex justify-end">
+        <div className="relative flex justify-center sm:justify-end">
           <img
             src={laptops[1]?.src}
             alt={laptops[1]?.alt}
-            className="h-auto w-[48vw] object-contain"
-            style={{
-              marginBottom: '100px', // Raise the right laptop
-            }}
+            className="h-auto w-[75vw] object-contain sm:w-[48vw]"
           />
         </div>
       </div>

@@ -41,7 +41,7 @@ const ThreeScreensSection: React.FC<ThreeScreensSectionProps> = ({
       )}
 
       {/* Mobile Screens */}
-      <div className="container relative mx-auto h-[600px]">
+      <div className="container relative mx-auto sm:h-[700px] lg:h-[800px]">
         {/* Left Screen */}
         <img
           src={screens[0]?.src}

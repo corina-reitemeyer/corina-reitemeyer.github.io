@@ -59,7 +59,7 @@ const Projects: React.FC<ProjectsProps> = () => {
 
       <div className="flex justify-center px-4 py-10 sm:px-8 sm:py-6">
         <div className="w-full max-w-7xl p-4 sm:p-8">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
             {projects
               .filter(
                 (project) =>
@@ -86,13 +86,13 @@ const Projects: React.FC<ProjectsProps> = () => {
                     } relative transform overflow-hidden transition-transform duration-300 ease-in-out hover:-translate-y-2`}
                   >
                     {/* Text Content */}
-                    <div className="relative z-10 mt-6 p-4 text-right sm:p-6">
+                    <div className="relative z-10 mt-6 p-4 text-right md:p-6">
                       {project.company && (
                         <p className="font-body mb-2 text-sm uppercase text-black">
                           {project.company}
                         </p>
                       )}
-                      <h3 className="font-heading text-3xl font-bold sm:text-4xl">
+                      <h3 className="font-heading text-2xl font-bold md:text-3xl">
                         {project.projectTitle}
                       </h3>
                     </div>

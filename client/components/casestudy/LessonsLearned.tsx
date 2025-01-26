@@ -11,7 +11,7 @@ const LessonsLearnedSection: React.FC<LessonsLearnedSectionProps> = ({
 }) => {
   return (
     <section className="py-24">
-      <div className="container mx-auto grid max-w-4xl grid-cols-1 gap-8 sm:grid-cols-2">
+      <div className="container mx-auto grid max-w-4xl grid-cols-1 gap-8 px-6 sm:grid-cols-2 sm:px-8">
         {/* Title Column */}
         <div className="title-column">
           <h2 className="text-left text-3xl font-bold text-gray-900">

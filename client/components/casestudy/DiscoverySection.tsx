@@ -47,7 +47,7 @@ const DiscoverySection: React.FC<DiscoverySectionProps> = ({
 
   return (
     <section className="my-36">
-      <div className="container mx-auto max-w-4xl space-y-12">
+      <div className="container mx-auto max-w-4xl space-y-12 px-6 sm:px-8">
         {/* Top Section: Text Content and Side Image */}
         <div className="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
           {/* Text Content */}

@@ -23,7 +23,7 @@ const CompetitiveAnalysisSection: React.FC<CompetitiveAnalysisSectionProps> = ({
 
   return (
     <section className="relative bg-[#E6F8FF] py-16">
-      <div className="relative mx-auto flex max-w-4xl">
+      <div className="relative mx-auto flex max-w-4xl px-6 sm:px-8">
         {/* Text Content */}
         <div
           className="relative z-10 px-4"

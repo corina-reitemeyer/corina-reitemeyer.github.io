@@ -44,7 +44,7 @@ const UserFlow: React.FC<UserFlowProps> = ({
 
   return (
     <section className="py-28">
-      <div className="container mx-auto max-w-4xl">
+      <div className="container mx-auto max-w-4xl px-6 sm:px-8">
         {/* Overhead Title */}
         <p
           className="text-lg font-semibold"

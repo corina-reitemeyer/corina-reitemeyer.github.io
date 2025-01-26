@@ -31,7 +31,7 @@ const PrinciplesSection: React.FC<PrinciplesSectionProps> = ({
 
   return (
     <section className="py-16">
-      <div className="container mx-auto max-w-4xl py-8">
+      <div className="container mx-auto max-w-4xl px-6 py-8 sm:px-8">
         {/* Text Container */}
         <div className="text-container mb-12">
           <p

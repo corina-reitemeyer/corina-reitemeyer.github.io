@@ -58,7 +58,7 @@ const Hero: React.FC<HeroProps> = ({ project }) => {
         </div>
 
         {/* Right Column */}
-        <div className="rounded-lg px-6">
+        <div className="rounded-lg sm:px-0 lg:px-6">
           <div className="mb-8">
             <h3 className="text-lg font-bold text-gray-900">
               Company / Client

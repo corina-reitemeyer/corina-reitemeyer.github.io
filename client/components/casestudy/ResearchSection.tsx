@@ -31,25 +31,25 @@ const ResearchSection: React.FC<ResearchSectionProps> = ({
 
   return (
     <section className="py-24" style={{ backgroundColor }}>
-      <div className="container mx-auto grid max-w-4xl grid-cols-1 items-center gap-16 lg:grid-cols-2">
+      <div className="relative mx-auto max-w-4xl px-6 sm:px-8 lg:flex lg:items-center lg:justify-center">
         {/* Left: Image */}
-        <div className="relative left-[100%] -ml-[50vw] w-screen lg:w-[50vw]">
+        <div className="lg:w-[50%] lg:flex-shrink-0 lg:text-left">
           <img
             src={imageSrc}
             alt={imageAlt}
-            className="h-auto w-full object-cover"
+            className="h-auto w-full lg:max-h-[400px] lg:object-contain"
           />
         </div>
 
         {/* Right: Text Content */}
-        <div>
+        <div className="sm: mt-16 max-w-[40rem] lg:w-[50%] lg:pl-12">
           {subtitle && (
             <p
               className="text-lg font-semibold"
               style={{
                 color: subtitleColor
                   ? subtitleColorMap[subtitleColor]
-                  : '#6B7280', // Fallback to gray
+                  : '#6B7280',
               }}
             >
               {subtitle}

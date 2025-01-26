@@ -75,13 +75,13 @@ const About = () => {
           <h2 className="font-heading mb-12 text-center text-3xl font-extrabold">
             What I Do
           </h2>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             {data.roles.map((role, index) => (
               <div
                 key={index}
                 className="rounded-3xl border-4 border-black bg-white p-6"
               >
-                <h3 className="font-heading text-2xl font-bold text-black">
+                <h3 className="font-heading break-words text-xl font-bold text-black md:text-2xl">
                   {role.title}
                 </h3>
                 <p className="font-body pb-4 text-sm italic text-gray-700">
@@ -183,7 +183,7 @@ const About = () => {
           <h2 className="font-heading mb-12 text-center text-3xl font-extrabold">
             My Philosophy
           </h2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
             {data.values.map((value, index) => {
               // Fixed color pattern for rows
               const rowColors = [
@@ -200,7 +200,7 @@ const About = () => {
                   key={index}
                   className={`rounded-3xl border-4 border-black p-6 ${rowColors[rowIndex][colIndex]}`}
                 >
-                  <h3 className="font-heading text-xl font-bold text-black">
+                  <h3 className="font-heading break-words text-lg font-bold text-black sm:text-xl">
                     {value.title}
                   </h3>
                   <p className="mt-4 text-gray-800">{value.description}</p>

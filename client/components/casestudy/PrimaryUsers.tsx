@@ -38,9 +38,9 @@ const PrimaryUsersSection: React.FC<PrimaryUserSectionProps> = ({
     >
       <div className="container mx-auto max-w-6xl">
         {/* White Container */}
-        <div className="rounded-lg bg-white p-12">
+        <div className="rounded-lg bg-white">
           {/* Inner Content Wrapper */}
-          <div className="inner-container mx-auto max-w-4xl py-12">
+          <div className="inner-container mx-auto max-w-4xl px-6 py-32 sm:px-8 ">
             {/* Text Container */}
             <div className="text-container mb-8">
               <p

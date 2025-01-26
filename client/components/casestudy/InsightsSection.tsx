@@ -30,7 +30,7 @@ const InsightsSection: React.FC<InsightsSectionProps> = ({
 
   return (
     <section className="py-16">
-      <div className="container mx-auto max-w-4xl py-12">
+      <div className="container mx-auto max-w-4xl px-6 py-12 sm:px-8">
         {/* Header Section */}
         <div className="mb-12">
           <p

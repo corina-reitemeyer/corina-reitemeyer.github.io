@@ -9,7 +9,14 @@ export default function Header() {
     <nav className="z-20 flex items-center justify-between bg-white px-6 py-6 sm:px-10">
       {/* Logo */}
       <div className="flex items-center">
-        <img src="/images/weblogo.PNG" alt="Logo of website" className="h-10" />
+        <img
+          src="/images/corina-logo.png"
+          alt="Logo of website"
+          className="h-12"
+        />
+        <span className="mx-4 text-xl font-bold text-gray-900">
+          Corina Reitemeyer
+        </span>
       </div>
 
       {/* Hamburger/Close Button */}

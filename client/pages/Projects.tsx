@@ -1,6 +1,7 @@
 import ProjectData from '../../src/projectsdata.json'
 import { Link } from 'react-router-dom'
 import Project from '../../models/projectdata.ts'
+import HeroSection from '../components/HeroSection.tsx'
 
 interface ProjectsProps {
   images: string
@@ -12,49 +13,7 @@ const Projects: React.FC<ProjectsProps> = () => {
   return (
     <>
       <header className="relative mx-auto flex min-h-[40vh] flex-col items-start justify-center px-8 sm:min-h-[60vh] sm:max-w-5xl sm:px-8">
-        {/* Background Gradient Circles */}
-        <div
-          className="absolute right-[-25%] top-[-20%] h-[1000px] w-[1000px] overflow-hidden rounded-full"
-          style={{
-            background:
-              'radial-gradient(circle, rgba(187,181,255,0.6) 0%, transparent 50%)',
-          }}
-        ></div>
-        <div
-          className="absolute bottom-[-50%] left-[-25%] h-[1000px] w-[1000px] rounded-full"
-          style={{
-            background:
-              'radial-gradient(circle, rgba(181,255,250,0.6) 0%, transparent 60%)',
-          }}
-        ></div>
-
-        {/* Header Text */}
-        <div className="z-10 w-full gap-4 text-left sm:gap-6">
-          <div className="flex items-center">
-            {/* Title Section */}
-            <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
-              Hi! I&apos;m Corina
-            </h1>
-
-            {/* Image Section */}
-            <div className="-ml-2 mb-6 h-20 w-20 flex-shrink-0 sm:-mr-20 sm:mb-4 sm:ml-0 sm:h-24 sm:w-24">
-              <img
-                src="/images/my-notion-face-transparent.png"
-                alt="Corina illustration"
-                className="h-full w-full object-contain"
-              />
-            </div>
-          </div>
-
-          {/* Description Section */}
-          <p className="-mt-2 max-w-2xl text-left text-lg leading-relaxed text-gray-700 sm:mt-6 sm:text-xl">
-            I enjoy creating user-centric and delightful experiences, with a
-            technical and thoughtful approach that brings clarity to complexity.
-            Whether it&apos;s simplifying workflows, improving usability, or
-            crafting consistent interfaces, I love blending logic with a touch
-            of creativity to build intuitive designs that feel effortless.
-          </p>
-        </div>
+        <HeroSection />
       </header>
 
       <div className="flex justify-center py-10 sm:py-6 lg:px-4">

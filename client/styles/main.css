@@ -3,38 +3,51 @@
 @tailwind utilities;
 
 /* Custom Typography */
+
 @font-face {
-  font-family: 'Getai Grotesk Display';
-  src: url('/fonts/GetaiGroteskDisplay/DTGetaiGroteskDisplay-Black.woff2')
-    format('woff2');
+  font-family: 'Sofia Pro';
+  src: url('/fonts/SofiaPro/SofiaPro-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Sofia Pro';
-  src: url('/fonts/SofiaPro/SofiaPro.woff2') format('woff2');
-  font-weight: 400;
+  src: url('/fonts/SofiaPro/SofiaPro-Bold.woff2') format('woff2');
   font-style: normal;
 }
 
-/* Applying fonts to headings and body */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Getai Grotesk Display', sans-serif;
-  text-transform: uppercase;
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/SofiaPro/SofiaPro-Light.woff2') format('woff2');
+  font-weight: 300;
 }
 
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/SofiaPro/SofiaPro-Medium.woff2') format('woff2');
+  font-weight: 500;
+}
+
+/* Apply the default font weight for body text */
 body,
 p,
 span,
 a,
 li {
   font-family: 'Sofia Pro', sans-serif;
+  color: #2d334a;
+}
+
+/* Apply a thicker font weight for headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Sofia Pro', sans-serif;
+  color: #272343;
 }
 
 /* Header Section */

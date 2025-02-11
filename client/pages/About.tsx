@@ -147,7 +147,7 @@ const About = () => {
               <div className="relative flex items-start justify-between">
                 {firstRowSteps.map((step, index) => (
                   <div key={index} className="relative flex-1 px-4 text-left">
-                    <div className="absolute left-[10px] top-[8px] z-10 h-6 w-6 rounded-full border-4 border-white bg-customTeal"></div>
+                    <div className="bg-customYellow absolute left-[10px] top-[8px] z-10 h-6 w-6 rounded-full border-4 border-white"></div>
                     <div className="font-body mt-10 text-sm text-gray-700">
                       {step.step}
                     </div>
@@ -168,7 +168,7 @@ const About = () => {
               <div className="relative flex items-start justify-between">
                 {secondRowSteps.map((step, index) => (
                   <div key={index} className="relative flex-1 px-4 text-left">
-                    <div className="absolute left-[10px] top-[8px] z-10 h-6 w-6 rounded-full border-4 border-white bg-customTeal"></div>
+                    <div className="bg-customYellow absolute left-[10px] top-[8px] z-10 h-6 w-6 rounded-full border-4 border-white"></div>
                     <div className="font-body mt-10 text-sm text-gray-700">
                       {step.step}
                     </div>

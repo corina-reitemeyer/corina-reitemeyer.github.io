@@ -33,12 +33,12 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="mx-auto flex max-w-6xl items-start justify-between px-8 py-32">
-      {/* Left Side - Dynamic Paragraph with Fade Effect */}
-      <div className="w-2/4 text-left">
+    <section className="mx-auto flex max-w-6xl flex-col items-start justify-between space-y-8 px-8 py-24 md:flex-row md:space-y-0 md:py-32">
+      {/* Left Side - Dynamic Paragraph (Appears First on All Screens) */}
+      <div className="w-full text-left md:w-2/4">
         <motion.p
           key={selectedRole}
-          className="text-3xl font-medium leading-snug text-[#272343]"
+          className="text-2xl font-medium leading-snug text-[#272343] md:text-3xl"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
@@ -46,10 +46,52 @@ export default function HeroSection() {
         >
           {paragraphs[selectedRole]}
         </motion.p>
+
+        {/* On mobile, display links below the paragraph */}
+        <div className="mt-6 flex w-full flex-col space-y-3 md:hidden">
+          <button
+            className={`text-left text-lg transition-all duration-300 ${
+              selectedRole === 'default'
+                ? 'font-normal text-[#272343]'
+                : 'font-light text-[#8B8A8A]'
+            }`}
+            onClick={() => setSelectedRole('default')}
+          >
+            For anyone
+          </button>
+
+          {(
+            [
+              'recruiters',
+              'productDesigners',
+              'productManagers',
+              'engineers',
+            ] as Role[]
+          ).map((role) => (
+            <button
+              key={role}
+              className="relative text-left text-lg transition-all duration-300"
+              onClick={() => setSelectedRole(role)}
+            >
+              <span className="invisible absolute font-normal">
+                {formatRoleName(role)}
+              </span>
+              <span
+                className={`transition-colors ${
+                  selectedRole === role
+                    ? 'font-normal text-[#272343]'
+                    : 'font-light text-[#8B8A8A]'
+                }`}
+              >
+                {formatRoleName(role)}
+              </span>
+            </button>
+          ))}
+        </div>
       </div>
 
-      {/* Right Side - Clickable Menu */}
-      <div className="flex w-1/3 flex-col space-y-3">
+      {/* Right Side - Clickable Menu (Only for Desktop) */}
+      <div className="hidden w-1/3 flex-col space-y-3 md:flex">
         <button
           className={`text-left text-lg transition-all duration-300 ${
             selectedRole === 'default'
@@ -74,7 +116,6 @@ export default function HeroSection() {
             className="relative text-left text-lg transition-all duration-300"
             onClick={() => setSelectedRole(role)}
           >
-            {/* Invisible placeholder to prevent shifting */}
             <span className="invisible absolute font-normal">
               {formatRoleName(role)}
             </span>

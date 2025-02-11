@@ -1,5 +1,8 @@
+import { ReactNode } from 'react'
+
 // models/projectdata.ts
 export default interface Project {
+  description: ReactNode
   id: number
   projectImage: string
   projectTitle: string

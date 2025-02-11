@@ -36,6 +36,7 @@ span,
 a,
 li {
   font-family: 'Sofia Pro', sans-serif;
+  font-weight: 400;
   color: #2d334a;
 }
 
@@ -137,7 +138,7 @@ h6 {
 .nav-item.active::before {
   opacity: 1;
   transform: scaleX(1) translateY(50%);
-  background: #bbb5ff; /* Purple color for active state */
+  background: #ffd803; /* Purple color for active state */
 }
 
 h1 {

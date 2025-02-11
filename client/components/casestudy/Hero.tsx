@@ -60,7 +60,7 @@ const Hero: React.FC<HeroProps> = ({ project }) => {
         {/* Right Column */}
         <div className="rounded-lg sm:px-0 lg:px-6">
           <div className="mb-8">
-            <h3 className="text-lg font-bold text-gray-900">
+            <h3 className="-mb-2 text-lg font-bold text-gray-900">
               Company / Client
             </h3>
             <p className="text-base text-gray-700">
@@ -68,18 +68,20 @@ const Hero: React.FC<HeroProps> = ({ project }) => {
             </p>
           </div>
           <div className="mb-8">
-            <h3 className="text-lg font-bold text-gray-900">Role</h3>
+            <h3 className="-mb-2 text-lg font-bold text-gray-900">Role</h3>
             <p className="text-base text-gray-700">{role}</p>
           </div>
           <div className="mb-8">
-            <h3 className="text-lg font-bold text-gray-900">Date</h3>
+            <h3 className="-mb-2  text-lg font-bold text-gray-900">Date</h3>
             <p className="text-base text-gray-700">{date}</p>
           </div>
 
           {/* Links */}
           {githubLink || deployedSiteLink || bestAwardsSiteLink ? (
             <div>
-              <h3 className="my-2 text-lg font-bold text-gray-900">Links</h3>
+              <h3 className="my-2 -mb-2 text-lg font-bold text-gray-900">
+                Links
+              </h3>
               <div className="space-y-4">
                 {githubLink && (
                   <Button url={githubLink} label="GitHub Repository" />

@@ -32,7 +32,7 @@ const OpportunitySpace: React.FC<OpportunitySpaceProps> = ({
         <div className="container mx-auto max-w-4xl px-6 text-left sm:px-8">
           {/* Header Section */}
           <p
-            className="text-lg font-semibold"
+            className="text-lg"
             style={{ color: subtitleColorMap[subtitleColor] }}
           >
             {subtitle}
@@ -41,9 +41,9 @@ const OpportunitySpace: React.FC<OpportunitySpaceProps> = ({
           <p className="mt-4 text-lg text-gray-700">{description}</p>
         </div>
 
-        {/* KPI Cards */}
-        <div className="relative mx-auto mt-16 flex max-w-4xl justify-center">
-          <div className="-bottom-26 absolute mb-32 grid grid-cols-1 gap-6 sm:grid-cols-3">
+        {/* ✅ KPI Cards - Fix Mobile Overflow */}
+        <div className="relative mx-auto mt-16 max-w-4xl px-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
             {kpis.map((kpi, index) => (
               <div
                 key={index}
@@ -56,6 +56,7 @@ const OpportunitySpace: React.FC<OpportunitySpaceProps> = ({
           </div>
         </div>
       </section>
+
       {/* Ensure extra spacing to the next section */}
       <div className="mt-28"></div>
     </>

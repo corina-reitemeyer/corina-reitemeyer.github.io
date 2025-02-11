@@ -44,7 +44,7 @@ const PrimaryUsersSection: React.FC<PrimaryUserSectionProps> = ({
             {/* Text Container */}
             <div className="text-container mb-8">
               <p
-                className="pb-2 text-lg font-semibold"
+                className="pb-2 text-lg"
                 style={{ color: subtitleColorMap[subtitleColor] }} // Dynamic subtitle color
               >
                 {subtitle}

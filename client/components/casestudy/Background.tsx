@@ -33,7 +33,7 @@ const BackgroundSection: React.FC<BackgroundSectionProps> = ({
         {/* Left: Text Content */}
         <div>
           <p
-            className="text-lg font-semibold"
+            className="text-lg"
             style={{ color: subtitleColorMap[subtitleColor] }}
           >
             {subtitle}

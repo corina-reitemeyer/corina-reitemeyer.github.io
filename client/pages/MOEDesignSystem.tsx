@@ -262,7 +262,7 @@ const MOEDesignSystem = () => {
           {
             title: 'Effective Vendor & Stakeholder Engagement:',
             description:
-              'Enhanced communication  with stakeholders and third-parties by providing a concrete reference for design decisions.',
+              'Enhanced communication with stakeholders and third-parties by providing a concrete reference for design decisions.',
           },
           {
             title: 'Elevated Design Standards:',

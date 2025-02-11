@@ -45,7 +45,7 @@ const ResearchSection: React.FC<ResearchSectionProps> = ({
         <div className="sm: mt-16 max-w-[40rem] lg:w-[50%] lg:pl-12">
           {subtitle && (
             <p
-              className="text-lg font-semibold"
+              className="text-lg"
               style={{
                 color: subtitleColor
                   ? subtitleColorMap[subtitleColor]

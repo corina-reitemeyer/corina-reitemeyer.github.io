@@ -35,7 +35,7 @@ const PrinciplesSection: React.FC<PrinciplesSectionProps> = ({
         {/* Text Container */}
         <div className="text-container mb-12">
           <p
-            className="text-lg font-semibold"
+            className="text-lg"
             style={{ color: subtitleColorMap[subtitleColor] }}
           >
             {subtitle}
@@ -51,7 +51,7 @@ const PrinciplesSection: React.FC<PrinciplesSectionProps> = ({
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
               {principles.map((principle) => (
                 <div key={principle.number} className="flex flex-col">
-                  <span className="text-5xl font-bold text-gray-900">
+                  <span className="mt-8 text-5xl font-bold text-gray-900">
                     {principle.number}.
                   </span>
                   {principle.title && (
@@ -81,7 +81,7 @@ const PrinciplesSection: React.FC<PrinciplesSectionProps> = ({
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
               {principles.map((principle) => (
                 <div key={principle.number} className="flex flex-col">
-                  <span className="text-5xl font-bold text-gray-900">
+                  <span className="mt-8 text-5xl font-bold text-gray-900">
                     {principle.number}.
                   </span>
                   {principle.title && (
@@ -89,7 +89,7 @@ const PrinciplesSection: React.FC<PrinciplesSectionProps> = ({
                       {principle.title}
                     </h4>
                   )}
-                  <p className="mt-2 text-left text-gray-700">
+                  <p className="mt-8 text-left text-gray-700">
                     {principle.description}
                   </p>
                 </div>

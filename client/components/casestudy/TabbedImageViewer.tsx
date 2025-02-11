@@ -29,14 +29,14 @@ const TabbedImageViewer: React.FC<TabbedImageViewerProps> = ({ images }) => {
       )}
 
       {/* Tabs */}
-      <div className="flex border-b border-gray-200">
+      <div className="custom-scrollbar-hide flex w-full overflow-x-auto scroll-smooth border-b border-gray-200 sm:overflow-hidden lg:min-w-max">
         {images.map((image, index) => (
           <button
             key={index}
-            className={`text-md px-4 py-2 font-semibold ${
+            className={`text-md font-[Sofia Pro] whitespace-nowrap px-4 py-2 font-normal ${
               selectedTab === index
                 ? 'border-b-2 border-black text-black'
-                : 'text-gray-500 hover:text-black'
+                : 'text-[#8B8A8A] hover:text-black'
             }`}
             onClick={() => setSelectedTab(index)}
           >

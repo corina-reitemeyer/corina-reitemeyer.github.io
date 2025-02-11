@@ -168,3 +168,13 @@ h6 {
 p {
   @apply text-base leading-relaxed text-gray-700;
 }
+
+/* Completely Hide Horizontal Scrollbar */
+.custom-scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome, Safari, and Edge */
+}
+
+.custom-scrollbar-hide {
+  -ms-overflow-style: none; /* Hides scrollbar in IE and Edge */
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+}

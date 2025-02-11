@@ -38,26 +38,16 @@ const OWTemplates = () => {
         }}
       />
 
-      {/* Dual Laptop Section */}
       <DualLaptopsSection
-        laptops={[
-          {
-            src: '/images/product/ow-duallaptop-1.webp',
-            alt: 'User Dashboard View',
-          },
-          {
-            src: '/images/product/ow-duallaptop-2.webp',
-            alt: 'Community Interaction View',
-          },
-        ]}
+        laptopsImage="/images/product/ow-duallaptop-2.webp" // ✅ One image for both laptops
         backgroundColor="#FFEAA1"
-        backgroundImage="/images/OW-Squiggles.webp"
+        backgroundImage="/images/OW-Squiggles.webp" // ✅ Background separate
       />
 
       {/* Discovery Section */}
       <DiscoverySection
-        subtitle="DISCOVERY"
-        title="FIRST PHASE RESEARCH"
+        subtitle="Discovery"
+        title="First Phase Research"
         description="As part of the first phase of research, I joined the team while two projects were already underway. My initial focus was on understanding the core challenges and opportunities within the product. Through a detailed exploration of IA use cases and customer value perceptions, I identified key insights that informed the direction of the templates project."
         variant="threeColumns"
         subtitleColor="ow"
@@ -77,7 +67,7 @@ const OWTemplates = () => {
 
       {/* Primary Users Section */}
       <PrimaryUsersSection
-        subtitle="DISCOVERY"
+        subtitle="Discovery"
         title="Primary Users"
         description="During the discovery phase, I identified the primary users as professionals working in products, marketing, and related areas such as UX design, research, content strategy, and information architecture. By analysing their goals, challenges, and workflows, I consolidated these insights into detailed user personas and journey flowcharts to ensure the app meets their needs effectively."
         principles={[
@@ -101,7 +91,7 @@ const OWTemplates = () => {
 
       {/* Insights Section */}
       <InsightsSection
-        subtitle="DISCOVERY"
+        subtitle="Discovery"
         title="What is holding the research practitioners back?"
         subtitleColor="ow"
         description="Through the discovery phase, we identified key barriers that research practitioners face in their workflows. Some practitioners struggle with where to begin, while others are locked into rigid ways of working that limit flexibility. Additionally, many only engage with single studies instead of leveraging multiple studies together for more comprehensive and actionable insights. These insights emphasise the need for tools and strategies that support both novice and experienced practitioners in achieving more effective research outcomes."
@@ -124,10 +114,10 @@ const OWTemplates = () => {
 
       {/* Opportunity Space Section */}
       <OpportunitySpace
-        subtitle="OPPORTUNITY SPACE"
+        subtitle="Opportunity Space"
         title="Defining the Problem and Opportunities"
         subtitleColor="ow"
-        description="We identified opportunities to simplify practice workflows, enhance progress tracking, and foster community interactions among musicians."
+        description="We identified key opportunities to streamline research workflows, improve accessibility to insights, and increase adoption of standardised research templates among teams. Our team also established key metrics to track adoption, efficiency, and impact after the MVP launch, ensuring data-driven improvements."
         kpis={[
           {
             value: '< 10',
@@ -146,7 +136,7 @@ const OWTemplates = () => {
 
       {/* Principles Section */}
       <PrinciplesSection
-        subtitle="GOALS & STRATEGY"
+        subtitle="Goals & Strategy"
         subtitleColor="ow"
         title="Principles"
         description="These principles were crafted to tackle the specific challenges users face when working with templates in a flexible, multi-study research setting. By emphasising simplicity, adaptability, and intuitive organisation, the goal is to help users seamlessly navigate, learn, and apply the tools to enhance their workflows and achieve better outcomes."
@@ -165,7 +155,7 @@ const OWTemplates = () => {
           },
           {
             number: 3,
-            title: 'Discoverability and Categorisation',
+            title: 'Discoverability',
             description:
               'Help users find the right template quickly and efficiently.',
           },
@@ -175,9 +165,9 @@ const OWTemplates = () => {
 
       {/* Competitive Analysis Section */}
       <CompetitiveAnalysisSection
-        subtitle="EXPLORATION"
+        subtitle="Exploration"
         subtitleColor="ow"
-        title="TEMPLATE FEATURES IN OTHER PRODUCTS"
+        title="Template features in other products"
         description="To better understand how to support practitioners effectively, I analysed competitors and similar tools commonly used in daily workflows, such as productivity apps, project management platforms, and design tools. This analysis provided insights into how workflows and best practices are introduced and adopted by their customer base, informing the design of a system that aligns with user expectations and enhances their experience."
         image={{
           src: '/images/process/ow/ow-competitors.webp',
@@ -187,7 +177,7 @@ const OWTemplates = () => {
 
       {/* User Flows Section */}
       <UserFlow
-        overheadTitle="EXPLORATION"
+        overheadTitle="Exploration"
         title="User Flow"
         description="User flows were carefully designed to visualize how practitioners interact with templates, ensuring an intuitive and efficient experience. These flows highlight key touchpoints, from discovering templates to integrating them into their workflows, addressing usability challenges and promoting seamless navigation. By focusing on accessibility and logical structure, the flows support users in maximizing the value of the templates."
         images={[
@@ -203,7 +193,7 @@ const OWTemplates = () => {
 
       {/* Wireframes Section */}
       <WireframesSection
-        subtitle="REFINEMENT"
+        subtitle="Refinement"
         subtitleColor="ow"
         title="Wireframes"
         description="These wireframes were designed to integrate a new feature into a legacy product, balancing user needs with technical constraints. A key challenge was accounting for existing areas built with different frameworks, requiring thoughtful planning to ensure the new component could be seamlessly added without necessitating a complete rebuild of the page. This delicate process involved careful consideration of both usability and development feasibility."
@@ -231,8 +221,8 @@ const OWTemplates = () => {
 
       {/* Research Section */}
       <ResearchSection
-        title="A/B TESTING"
-        subtitle="SECOND-PHASE RESEARCH"
+        title="A/B Testing"
+        subtitle="Second-Phase Research"
         subtitleColor="ow"
         description="We launched the MVP feature to a small subgroup of users. This included 6 use cases for multi-study project templates, and for testing purposes, also single studies from each project to see what users prefer to use."
         result="Customers gravitated towards the multi-study templates with an increased user adaption rate. But the launched-study rate per customer remained unchanged."
@@ -243,9 +233,9 @@ const OWTemplates = () => {
 
       {/* Principles Section */}
       <PrinciplesSection
-        subtitle="USER INTERVIEWS & CLICK TESTING"
+        subtitle="User Interviews & Click Testing"
         subtitleColor="ow"
-        title="HOW PRACTITIONERS USED THE TEMPLATES"
+        title="How Practicioners used the templates"
         description="High-traction data revealed that the template placement successfully captured user curiosity and attention. However, our insights uncovered a key limitation: the MVP feature lacked the granularity and flexibility users needed to adapt templates to their specific research methods. Instead, users often used templates as inspiration before creating their own customised projects. This highlighted the need for more versatile and user-driven template options in future iterations. Through user research, we identified three main ways practitioners engaged with templates."
         principles={[
           {
@@ -298,7 +288,7 @@ const OWTemplates = () => {
         lessons={[
           'Templates as a standalone feature are not the one solution to all product challenges.',
           'They do however give you great insights in how customers use your product!',
-          'Different users get different benefits out  of them.',
+          'Different users get different benefits out of them.',
         ]}
       />
     </div>

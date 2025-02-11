@@ -35,7 +35,7 @@ export default function HeroSection() {
   return (
     <section className="mx-auto flex max-w-6xl flex-col items-start justify-between space-y-8 px-8 py-24 md:flex-row md:space-y-0 md:py-32">
       {/* Left Side - Dynamic Paragraph (Appears First on All Screens) */}
-      <div className="w-full text-left md:w-2/4">
+      <div className="w-full text-left md:w-3/4">
         <motion.p
           key={selectedRole}
           className="text-2xl font-medium leading-snug text-[#272343] md:text-3xl"
@@ -47,8 +47,8 @@ export default function HeroSection() {
           {paragraphs[selectedRole]}
         </motion.p>
 
-        {/* On mobile, display links below the paragraph */}
-        <div className="mt-6 flex w-full flex-col space-y-3 md:hidden">
+        {/* On mobile, display links below the paragraph with added top margin */}
+        <div className="mt-8 flex w-full flex-col space-y-3 md:hidden">
           <button
             className={`text-left text-lg transition-all duration-300 ${
               selectedRole === 'default'
@@ -90,8 +90,8 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Right Side - Clickable Menu */}
-      <div className="hidden w-1/3 flex-col space-y-3 md:flex">
+      {/* Right Side - Clickable Menu (Desktop Only) */}
+      <div className="ml-24 hidden w-1/3 flex-col space-y-3 md:flex">
         <button
           className={`text-left text-lg transition-all duration-300 ${
             selectedRole === 'default'

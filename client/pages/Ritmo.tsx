@@ -43,27 +43,14 @@ const Ritmo = () => {
 
       {/* Three Mobile Showcase */}
       <ThreeScreensSection
-        screens={[
-          {
-            src: '/images/product/ritmo-mobile-1.webp',
-            alt: 'Ritmo Library Screen',
-          },
-          {
-            src: '/images/product/ritmo-mobile-2.webp',
-            alt: 'Ritmo Homepage Screen',
-          },
-          {
-            src: '/images/product/ritmo-mobile-3.webp',
-            alt: 'Ritmo Moves Screen',
-          },
-        ]}
-        backgroundImage="/images/ritmo-circles.svg"
+        screensImage="/images/product/ritmo-threemobiles.webp"
+        backgroundImage="/images/product/ritmo-circle.webp"
       />
 
       {/* Discovery Section */}
       <DiscoverySection
         subtitle="Discovery"
-        title="INTERVIEWS & OBSERVATIONS"
+        title="Interviews & Observations"
         description="During dance practicas or socials, I often encounter leads asking about specific moves they’re trying to recall and recreate. Typically, they provide a vague description focusing on a key feature that distinguishes the move. Since most of the moves are named in Spanish, it can be challenging for New Zealand-based students to locate them online, even if they remember the original name."
         variant="tabbed"
         subtitleColor="ritmo"

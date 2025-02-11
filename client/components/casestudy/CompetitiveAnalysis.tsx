@@ -23,16 +23,11 @@ const CompetitiveAnalysisSection: React.FC<CompetitiveAnalysisSectionProps> = ({
 
   return (
     <section className="relative bg-[#E6F8FF] py-16">
-      <div className="relative mx-auto flex max-w-4xl px-6 sm:px-8">
-        {/* Text Content */}
-        <div
-          className="relative z-10"
-          style={{
-            maxWidth: '50%', // Adjust the text box width explicitly to 60% of the container
-          }}
-        >
+      <div className="relative mx-auto flex max-w-5xl flex-col px-6 sm:px-8 md:flex-row">
+        {/* Text Content - Left Column on Desktop, Stacked on Mobile */}
+        <div className="relative z-10 w-full md:w-1/2">
           <p
-            className="text-lg font-semibold"
+            className="text-lg"
             style={{ color: subtitleColorMap[subtitleColor] }}
           >
             {subtitle}
@@ -41,19 +36,12 @@ const CompetitiveAnalysisSection: React.FC<CompetitiveAnalysisSectionProps> = ({
           <p className="my-6 text-lg text-gray-700">{description}</p>
         </div>
 
-        {/* Positioned Image */}
-        <div className="relative flex-grow">
+        {/* Positioned Image - Moves Below on Mobile, Further Right on Desktop */}
+        <div className="relative mt-8 flex w-full justify-center md:mt-0 md:w-1/2 md:justify-end">
           <img
             src={image.src}
             alt={image.alt}
-            className="absolute right-0 object-contain"
-            style={{
-              height: 'auto',
-              maxWidth: '170%',
-              top: '50%', // Vertically centers the image
-              right: '-90%',
-              transform: 'translateY(-50%)', // Correct centering due to top alignment
-            }}
+            className="w-full max-w-[450px] object-contain sm:max-w-[500px] md:absolute md:right-[-10%] md:top-1/2 md:max-w-[700px] md:-translate-y-1/2 md:transform lg:max-w-[800px] xl:max-w-[900px]"
           />
         </div>
       </div>

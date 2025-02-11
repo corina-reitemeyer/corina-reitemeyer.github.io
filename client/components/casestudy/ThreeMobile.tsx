@@ -1,71 +1,41 @@
 import React from 'react'
 import { useInView } from 'react-intersection-observer'
 
-interface MobileScreen {
-  src: string
-  alt: string
-}
-
 interface ThreeScreensSectionProps {
-  screens: MobileScreen[]
-  backgroundColor?: string // Optional dynamic background color
-  backgroundImage?: string // Optional background image
+  screensImage: string
+  backgroundColor?: string
+  backgroundImage?: string
 }
 
 const ThreeScreensSection: React.FC<ThreeScreensSectionProps> = ({
-  screens,
-  backgroundColor = '#9EEEFF', // Default background color
-  backgroundImage, // Optional background image
+  screensImage,
+  backgroundColor = '#9EEEFF',
+  backgroundImage,
 }) => {
   const { ref: sectionRef, inView } = useInView({ triggerOnce: true })
 
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden py-24"
-      style={{
-        backgroundColor,
-      }}
+      className="relative flex min-h-[600px] items-center justify-center py-24"
+      style={{ backgroundColor }}
     >
-      {/* Background Image */}
+      {/* ✅ Background Image (Ritmo Circles) - Positioned Directly Behind Phones */}
       {backgroundImage && (
-        <div
-          className="absolute inset-0 -z-10"
-          style={{
-            backgroundImage: `url(${backgroundImage})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-          }}
+        <img
+          src={backgroundImage}
+          alt="Background Circles"
+          className="absolute z-0 w-[90%] max-w-[800px] opacity-100 md:max-w-[1000px] xl:max-w-[1700px]"
         />
       )}
 
-      {/* Mobile Screens */}
-      <div className="container relative mx-auto sm:h-[700px] lg:h-[800px]">
-        {/* Left Screen */}
+      {/* ✅ Mobile Screens Layer - Centered on Top */}
+      <div className="relative z-10 mx-auto flex items-center justify-center">
         <img
-          src={screens[0]?.src}
-          alt={screens[0]?.alt}
-          className={`absolute left-[15%] top-32 w-[20%] max-w-[300px] transform transition-transform delay-200 duration-700 ease-in-out ${
-            inView ? 'translate-y-0' : 'translate-y-24'
-          }`}
-        />
-
-        {/* Center Screen */}
-        <img
-          src={screens[1]?.src}
-          alt={screens[1]?.alt}
-          className={`delay-400 absolute left-1/2 top-10 w-[20%] max-w-[300px] -translate-x-1/2 transform transition-transform duration-700 ease-in-out ${
-            inView ? 'translate-y-0' : 'translate-y-24'
-          }`}
-        />
-
-        {/* Right Screen */}
-        <img
-          src={screens[2]?.src}
-          alt={screens[2]?.alt}
-          className={`delay-600 absolute right-[15%] top-24 w-[20%] max-w-[300px] transform transition-transform duration-700 ease-in-out ${
-            inView ? 'translate-y-0' : 'translate-y-24'
+          src={screensImage}
+          alt="Mobile Screens"
+          className={`w-full max-w-[600px] transform transition-all duration-700 ease-in-out sm:max-w-[700px] md:max-w-[850px] lg:max-w-[1000px] xl:max-w-[1200px] ${
+            inView ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
           }`}
         />
       </div>

@@ -49,11 +49,11 @@ const DiscoverySection: React.FC<DiscoverySectionProps> = ({
     <section className="my-36">
       <div className="container mx-auto max-w-4xl space-y-12 px-6 sm:px-8">
         {/* Top Section: Text Content and Side Image */}
-        <div className="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
+        <div className="grid grid-cols-1 items-center gap-12 sm:gap-16 lg:grid-cols-2 lg:gap-24">
           {/* Text Content */}
           <div>
             <p
-              className="text-lg font-semibold"
+              className="text-lg"
               style={{ color: subtitleColorMap[subtitleColor] }}
             >
               {subtitle}
@@ -67,7 +67,7 @@ const DiscoverySection: React.FC<DiscoverySectionProps> = ({
             <img
               src={defaultSideImage} // Default image set here
               alt={defaultSideImageAlt}
-              className="w-full max-w-md rounded-lg object-cover"
+              className="w-[80%] max-w-xs rounded-lg object-cover sm:max-w-sm md:w-full"
             />
           </div>
         </div>

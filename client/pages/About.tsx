@@ -200,10 +200,10 @@ const About = () => {
               <motion.div
                 key={index}
                 className="mx-4 rounded-3xl bg-white p-8 sm:mx-0"
-                initial={{ opacity: 0, y: 20 }} // Start slightly below & invisible
-                whileInView={{ opacity: 1, y: 0 }} // Fade in & move up
-                transition={{ duration: 0.6, delay: index * 0.1 }} // Staggered effect
-                viewport={{ once: true, amount: 0.2 }} // Animate only once when visible
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true, amount: 0.2 }}
               >
                 <h3 className="font-heading break-words text-lg font-bold text-[#272343] sm:text-xl">
                   {value.title}

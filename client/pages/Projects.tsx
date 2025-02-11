@@ -54,7 +54,7 @@ const Projects: React.FC<ProjectsProps> = () => {
                     </h3>
                     {/* Project Description */}
                     {project.description && (
-                      <p className="mt-4 text-base font-light leading-[30px] text-[#272343]">
+                      <p className="mt-4 text-base font-medium leading-[30px] text-[#272343]">
                         {project.description}
                       </p>
                     )}

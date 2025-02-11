@@ -30,15 +30,10 @@ const Ideation: React.FC<IdeationProps> = ({
     <div className="bg-[#EAF4FA] px-8 py-20">
       {/* Header Section */}
       <div className="mx-auto mb-12 max-w-4xl text-left">
-        <p
-          className="text-lg font-bold"
-          style={{ color: titleColorMap[titleColor] }}
-        >
+        <p className="text-lg" style={{ color: titleColorMap[titleColor] }}>
           {title}
         </p>
-        <h2 className="mt-2 text-4xl font-extrabold text-gray-900">
-          {subtitle}
-        </h2>
+        <h2 className="mt-2 text-4xl font-bold text-gray-900">{subtitle}</h2>
         <p className="mt-6 pb-12 text-lg text-gray-700">{description}</p>
       </div>
 

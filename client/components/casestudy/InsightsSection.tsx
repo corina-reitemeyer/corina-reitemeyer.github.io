@@ -34,14 +34,12 @@ const InsightsSection: React.FC<InsightsSectionProps> = ({
         {/* Header Section */}
         <div className="mb-12">
           <p
-            className="text-lg font-bold"
+            className="text-lg"
             style={{ color: subtitleColorMap[subtitleColor] }}
           >
             {subtitle}
           </p>
-          <h2 className="mt-2 text-4xl font-extrabold text-gray-900">
-            {title}
-          </h2>
+          <h2 className="mt-2 text-4xl font-bold text-gray-900">{title}</h2>
           <p className="my-6 pb-8 text-lg text-gray-700">{description}</p>
         </div>
 

@@ -47,7 +47,7 @@ const UserFlow: React.FC<UserFlowProps> = ({
       <div className="container mx-auto max-w-4xl px-6 sm:px-8">
         {/* Overhead Title */}
         <p
-          className="text-lg font-semibold"
+          className="text-lg"
           style={{ color: overheadTitleColorMap[overheadTitleColor] }}
         >
           {overheadTitle}

@@ -1,62 +1,47 @@
 import React from 'react'
-
-interface LaptopImage {
-  src: string
-  alt: string
-}
+import { motion } from 'framer-motion'
 
 interface DualLaptopsSectionProps {
-  laptops: LaptopImage[]
-  backgroundColor?: string // Optional prop for dynamic background color
-  backgroundImage?: string // Optional prop for background image
+  laptopsImage: string
+  backgroundColor?: string
+  backgroundImage?: string
 }
 
 const DualLaptopsSection: React.FC<DualLaptopsSectionProps> = ({
-  laptops,
-  backgroundColor = '#FFF4B0', // Default background color
-  backgroundImage, // Optional background image
+  laptopsImage,
+  backgroundColor = '#FFEAA1',
+  backgroundImage,
 }) => {
   return (
     <section
-      className="relative w-screen py-12 sm:py-16"
-      style={{
-        backgroundColor,
-      }}
+      className="relative flex min-h-[600px] w-screen items-center justify-center py-12 sm:py-16"
+      style={{ backgroundColor }}
     >
-      {/* Background Image */}
+      {/* ✅ Background Layer (Squiggles) - Expands & Centers Behind Laptops */}
       {backgroundImage && (
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url(${backgroundImage})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            zIndex: 1,
-          }}
+        <motion.img
+          src={backgroundImage}
+          alt="Background Vectors"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: 'easeOut' }}
+          className="absolute left-1/2 top-1/2 -z-10 w-[120%] max-w-[1600px] -translate-x-1/2 -translate-y-1/2 object-cover"
         />
       )}
 
-      {/* Content (Laptops) */}
-      <div className="relative z-10 grid h-auto w-full grid-cols-1 items-center gap-y-6 sm:grid-cols-2 sm:gap-y-0">
-        {/* Left Laptop */}
-        <div className="relative flex justify-center sm:justify-start">
-          <img
-            src={laptops[0]?.src}
-            alt={laptops[0]?.alt}
-            className="h-auto w-[75vw] object-contain sm:w-[48vw]"
-          />
-        </div>
-
-        {/* Right Laptop */}
-        <div className="relative flex justify-center sm:justify-end">
-          <img
-            src={laptops[1]?.src}
-            alt={laptops[1]?.alt}
-            className="h-auto w-[75vw] object-contain sm:w-[48vw]"
-          />
-        </div>
-      </div>
+      {/* ✅ Foreground Layer (Laptops) - Positioned on Top */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+        className="relative z-10 mx-auto flex items-center justify-center"
+      >
+        <img
+          src={laptopsImage}
+          alt="Laptop Screens"
+          className="w-full max-w-[900px] sm:max-w-[1000px] md:max-w-[1100px] lg:max-w-[1200px] xl:max-w-[1800px]"
+        />
+      </motion.div>
     </section>
   )
 }

@@ -43,18 +43,11 @@ const MOENceaWebsite = () => {
 
       {/* Dual Laptop Section */}
       <DualLaptopsSection
+        laptopsImage="/images/product/moe-ncea-duallaptop.webp" // ✅ One image for both laptops
         backgroundColor="#90AEFF"
-        laptops={[
-          {
-            src: '/images/product/ncea-desktop-left.webp',
-            alt: 'Screen of Learning tab',
-          },
-          {
-            src: '/images/product/ncea-desktop-right.webp',
-            alt: 'Screen of Assessment Standard',
-          },
-        ]}
+        backgroundImage="/images/OW-Squiggles.webp" // ✅ Background separate
       />
+
       {/* Discovery Section */}
       <DiscoverySection
         subtitle="DISCOVERY"

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import aboutData from '../../src/about.json'
 import AboutData from '../../models/aboutdata'
+import { motion } from 'framer-motion'
 
 const About = () => {
   const [data, setData] = useState<AboutData | null>(null)
@@ -39,18 +40,25 @@ const About = () => {
                 Hi! I&apos;m Corina 👋
               </h2>
               <p className="font-body text-lg leading-relaxed text-gray-700">
-                I’m a UX/UI Designer with 6+ years of experience delivering
-                user-centered solutions that look great and drive results. My
-                work blends creativity, technical expertise, and data-driven
-                insights to help businesses meet their goals. Over time, I
-                expanded my skill set to include full stack development and data
-                analytics, enabling me to craft holistic solutions that balance
-                user needs with business objectives. Beyond design and code, I
-                enjoy Latin dancing, Reformer Pilates, and cozy games. Let’s
-                chat if you’re looking for a designer with curiosity, strategy,
-                and a collaborative mindset!
+                A Senior Product Designer who loves making digital experiences
+                simple, intuitive, and scalable. With 6+ years of experience, I
+                specialise in AI-driven UX and design systems that help products
+                grow smoothly.
               </p>
-              <h3 className="font-heading mb-4 mt-10 text-2xl font-bold">
+              <p className="font-body mt-6 text-lg leading-relaxed text-gray-700">
+                I also have a background in full-stack development and data
+                analytics, which means I understand both the design and
+                technical sides of building products. I enjoy working with
+                cross-functional teams to turn user needs into smart, practical
+                solutions.
+              </p>
+              <p className="font-body mt-6 text-lg leading-relaxed text-gray-700">
+                When I’m not designing, you’ll find me dancing, doing Reformer
+                Pilates, or playing cozy games. If you’re looking for a designer
+                who’s curious, strategic, and loves solving problems, let’s
+                connect!
+              </p>
+              <h3 className="font-heading mt-10 text-2xl font-bold">
                 Accolades:
               </h3>
               <p className="font-body text-lg">
@@ -70,25 +78,29 @@ const About = () => {
       </div>
 
       {/* Section 2: What I Do */}
-      <section className="relative overflow-hidden rounded-3xl bg-white py-16">
-        <div className="mx-auto max-w-7xl px-8">
-          <h2 className="font-heading mb-12 text-center text-3xl font-extrabold">
+      <section className="relative overflow-hidden bg-white py-16">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="font-heading mb-12 text-center text-3xl font-extrabold text-[#272343]">
             What I Do
           </h2>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             {data.roles.map((role, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="rounded-3xl border-4 border-black bg-white p-6"
+                className="mx-4 rounded-3xl bg-[#E3F6F5] p-10 sm:mx-0"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true, amount: 0.2 }}
               >
-                <h3 className="font-heading break-words text-xl font-bold text-black md:text-2xl">
+                <h3 className="font-heading break-words text-xl font-bold text-[#272343] md:text-2xl">
                   {role.title}
                 </h3>
-                <p className="font-body pb-4 text-sm italic text-gray-700">
+                <p className="font-body pb-4 text-sm italic text-[#272343]">
                   {role.subtitle}
                 </p>
-                <p className="mt-4 text-gray-800">{role.description}</p>
-              </div>
+                <p className="mt-4 text-[#272343]">{role.description}</p>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -178,35 +190,27 @@ const About = () => {
       </section>
 
       {/* Section 4: My Philosophy */}
-      <section className="bg-white py-24">
-        <div className="mx-auto max-w-6xl px-8">
-          <h2 className="font-heading mb-12 text-center text-3xl font-extrabold">
+      <section className="bg-[#E3F6F5] py-24">
+        <div className="mx-auto max-w-7xl px-8">
+          <h2 className="font-heading mb-12 text-center text-3xl font-extrabold text-[#272343]">
             My Philosophy
           </h2>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
-            {data.values.map((value, index) => {
-              // Fixed color pattern for rows
-              const rowColors = [
-                ['bg-[#FFB5DE]', 'bg-[#B5FFFA]', 'bg-[#BBB5FF]'], // Row 1: Raspberry Pink, Grape, Plum
-                ['bg-[#FFF4B0]', 'bg-[#BBB5FF]', 'bg-[#FFB5DE]'], // Row 2: Lemon, Plum, Raspberry Pink
-              ]
-
-              // Determine row and column position
-              const rowIndex = Math.floor(index / 3) % 2 // 0 or 1 (alternates between row patterns)
-              const colIndex = index % 3 // 0, 1, or 2 (column position)
-
-              return (
-                <div
-                  key={index}
-                  className={`rounded-3xl border-4 border-black p-6 ${rowColors[rowIndex][colIndex]}`}
-                >
-                  <h3 className="font-heading break-words text-lg font-bold text-black sm:text-xl">
-                    {value.title}
-                  </h3>
-                  <p className="mt-4 text-gray-800">{value.description}</p>
-                </div>
-              )
-            })}
+            {data.values.map((value, index) => (
+              <motion.div
+                key={index}
+                className="mx-4 rounded-3xl bg-white p-8 sm:mx-0"
+                initial={{ opacity: 0, y: 20 }} // Start slightly below & invisible
+                whileInView={{ opacity: 1, y: 0 }} // Fade in & move up
+                transition={{ duration: 0.6, delay: index * 0.1 }} // Staggered effect
+                viewport={{ once: true, amount: 0.2 }} // Animate only once when visible
+              >
+                <h3 className="font-heading break-words text-lg font-bold text-[#272343] sm:text-xl">
+                  {value.title}
+                </h3>
+                <p className="mt-4 text-[#272343]">{value.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

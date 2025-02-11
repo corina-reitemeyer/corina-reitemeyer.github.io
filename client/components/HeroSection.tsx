@@ -90,7 +90,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Right Side - Clickable Menu (Only for Desktop) */}
+      {/* Right Side - Clickable Menu */}
       <div className="hidden w-1/3 flex-col space-y-3 md:flex">
         <button
           className={`text-left text-lg transition-all duration-300 ${

@@ -1,24 +1,24 @@
 {
   "roles": [
     {
-      "title": "User-Centered Design",
-      "subtitle": "Crafting intuitive and delightful user experiences",
-      "description": "I create intuitive and delightful user experiences by focusing on user needs. I love turning complex problems into simple, elegant solutions."
+      "title": "AI-Driven Product Design",
+      "subtitle": "Crafting seamless, intelligent experiences",
+      "description": "Designing intuitive, ethical, and scalable AI-powered experiences that enhance automation, decision-making, and human-AI interaction."
     },
     {
-      "title": "Design Systems",
-      "subtitle": "Building scalable and cohesive design systems",
-      "description": "I build scalable design systems that help maintain a consistent and cohesive user experience across large-scale applications."
+      "title": "Scalable UX & Design Systems",
+      "subtitle": "Bringing structure and consistency to design",
+      "description": "Building and maintaining structured design systems that ensure consistency, efficiency, and seamless collaboration between design and engineering."
     },
     {
-      "title": "Full Stack Development",
-      "subtitle": "Delivering end-to-end solutions",
-      "description": "I develop full-stack web applications, bringing ideas to life by combining thoughtful design with clean, efficient code."
+      "title": "Strategy & Research",
+      "subtitle": "Balancing user needs, business goals, and technical feasibility.",
+      "description": "Aligning user needs, business goals, and technical feasibility through UX strategy, research, and data-driven insights to create impactful experiences."
     },
     {
-      "title": "Data-Driven Design",
-      "subtitle": "Leveraging data for informed design decisions",
-      "description": "I use data-driven insights to inform my design decisions, continuously improving products to deliver real value and measurable results."
+      "title": "Full Stack Web Development",
+      "subtitle": "Bridging design and development with a strong technical foundation",
+      "description": "Bridging design and development by collaborating with engineers, applying front-end knowledge, and ensuring scalable, high-performance UI execution."
     }
   ],
   "process": [

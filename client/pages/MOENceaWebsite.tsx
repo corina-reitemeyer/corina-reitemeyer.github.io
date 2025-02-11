@@ -50,9 +50,9 @@ const MOENceaWebsite = () => {
 
       {/* Discovery Section */}
       <DiscoverySection
-        subtitle="DISCOVERY"
+        subtitle="Discovery"
         title="Teacher workshops and it's challenges"
-        description="Due to business constraints, conducting direct research with teachers proved challenging, as maintaining the relationship between the business and teachers was a key concern. Instead, we leveraged observational research by attending focus groups and workshops run by advisors working on the assessment standards, where we were permitted to observe but not directly engage. To supplement this, we utilized survey data, website analytics, and competitor analysis of platforms teachers had previously relied on. This multi-faceted approach allowed us to gather insights while respecting the boundaries set by the business."
+        description="Due to business constraints, conducting direct research with teachers proved challenging, as maintaining the relationship between the business and teachers was a key concern. Instead, we leveraged observational research by attending focus groups and workshops run by advisors working on the assessment standards, where we were permitted to observe but not directly engage. To supplement this, we utilised survey data, website analytics, and competitor analysis of platforms teachers had previously relied on. This multi-faceted approach allowed us to gather insights while respecting the boundaries set by the business."
         variant="tabbed"
         subtitleColor="moe"
       />
@@ -65,7 +65,7 @@ const MOENceaWebsite = () => {
 
       {/* Primary Users Section */}
       <PrimaryUsersSection
-        subtitle="DISCOVERY"
+        subtitle="Discovery"
         title="Primary Users"
         description="The primary users of the NCEA Change Programme website were a combination of Ministry staff and NCEA teachers. Ministry staff, including ex-teachers, were responsible for creating the new materials and resources, while NCEA teachers needed to incorporate these changes into their classrooms. Balancing the needs of both user groups was critical, as the website needed to serve as a bridge, providing clear, accessible resources and guidance to support the transition effectively."
         principles={[
@@ -73,7 +73,7 @@ const MOENceaWebsite = () => {
             number: 1,
             title: 'NCEA Teachers',
             description:
-              'Ceachers needed accessible, user-friendly resources to implement curriculum changes effectively in their classrooms.',
+              'Teachers needed accessible, user-friendly resources to implement curriculum changes effectively in their classrooms.',
           },
           {
             number: 2,
@@ -89,7 +89,7 @@ const MOENceaWebsite = () => {
 
       {/* Insights Section */}
       <InsightsSection
-        subtitle="DISCOVERY"
+        subtitle="Discovery"
         title="What is holding the teachers and Ministry staff back?"
         subtitleColor="moe"
         description="After feedback from teachers and staff, as well as insights from the workshops and focus groups, we identified key challenges: teachers need clear resources, timely updates, and practical guidance for real-world application, while Ministry staff require efficient tools for developing and distributing consistent resources."
@@ -126,7 +126,7 @@ const MOENceaWebsite = () => {
       />
       {/* Opportunity Space Section */}
       <OpportunitySpace
-        subtitle="OPPORTUNITY SPACE"
+        subtitle="Opportunity Space"
         title="Defining the Problem and Opportunities"
         subtitleColor="moe"
         description="These initial KPIs were set at the beginning of the project to measure the website's success in providing accessible resources, timely updates, and increased engagement. However, as the NCEA Change Programme evolved over the course of three years, these KPIs were revisited and refined to align with new priorities, address emerging challenges, and ensure the goals remained relevant to the needs of both teachers and Ministry staff."
@@ -151,7 +151,7 @@ const MOENceaWebsite = () => {
 
       {/* Principles Section */}
       <PrinciplesSection
-        subtitle="GOALS & STRATEGY"
+        subtitle="Goals & Strategy"
         subtitleColor="moe"
         title="Principles"
         description="These design principles were established to address the unique challenges of the NCEA Change Programme website. Consistency was essential to create a cohesive experience for users navigating between resources, ensuring clarity and trust. Accessibility was prioritized to meet WCAG standards, making the platform inclusive and usable for all teachers and staff, regardless of their abilities. Modularity allowed for the creation of reusable components, streamlining development and enabling flexibility to adapt to evolving user needs and project requirements."
@@ -180,7 +180,7 @@ const MOENceaWebsite = () => {
 
       {/* Competitive Analysis Section */}
       <CompetitiveAnalysisSection
-        subtitle="EXPLORATION"
+        subtitle="Exploration"
         subtitleColor="moe"
         title="Previous NCEA resources and guidelines"
         description="To better understand how teachers currently access NCEA standards and resources, I conducted an analysis of existing websites frequently used by educators. This research highlighted strengths, weaknesses, and gaps in these platforms, providing insights to inform the design of a more user-friendly and efficient system tailored to their needs."
@@ -192,7 +192,7 @@ const MOENceaWebsite = () => {
 
       {/* User Flows Section */}
       <UserFlow
-        overheadTitle="EXPLORATION"
+        overheadTitle="Exploration"
         title="User Flows"
         description="The sitemap for the NCEA website was designed to provide a clear and intuitive structure, ensuring teachers, students, and Ministry staff could easily find key resources and information. It incorporated both the Māori and English curriculums, organising content in a way that respected and supported both languages. Critical sections such as curriculum updates, teaching materials, and support tools were prioritised, enhancing usability and accessibility to streamline navigation and improve the overall user experience."
         images={[
@@ -219,9 +219,9 @@ const MOENceaWebsite = () => {
       />
       {/* VisualDesign Section */}
       <VisualDesignSection
-        subtitle="REFINEMENT"
+        subtitle="Refinement"
         title="Visual Design"
-        description="The visual design for the NCEA Change Programme website was developed in close alignment with the in-house branding team to maintain consistency with organizational guidelines. However, we often needed to adjust colors and source images ourselves to meet the unique needs of the project. The design process was led by the lead designer, ensuring that the visuals not only adhered to brand standards but also effectively supported the website’s content and functionality."
+        description="The visual design for the NCEA Change Programme website was developed in close alignment with the in-house branding team to maintain consistency with organisational guidelines. However, we often needed to adjust colors and source images ourselves to meet the unique needs of the project. The design process was led by the lead designer, ensuring that the visuals not only adhered to brand standards but also effectively supported the website’s content and functionality."
         images={[
           {
             src: '/images/process/moe-ncea/ncea-website-visualdesign-1.webp',

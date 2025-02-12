@@ -23,7 +23,7 @@ const VisualDesignSection: React.FC<VisualDesignSectionProps> = ({
 
   return (
     <section className="py-32">
-      <div className="container mx-auto max-w-4xl space-y-16">
+      <div className="container mx-auto max-w-3xl space-y-16 px-6 sm:px-8 lg:max-w-4xl">
         {/* Top Text Section */}
         <div>
           <p
@@ -38,8 +38,8 @@ const VisualDesignSection: React.FC<VisualDesignSectionProps> = ({
 
         {/* Top Image */}
         {images.length > 0 && (
-          <div className="relative">
-            <div className="absolute left-8 top-8 h-[70%] w-[80%]"></div>
+          <div className="relative overflow-hidden rounded-lg">
+            <div className="absolute left-4 top-4 h-[70%] w-[80%]"></div>
             <img
               src={images[0].src}
               alt={images[0].alt}
@@ -55,8 +55,8 @@ const VisualDesignSection: React.FC<VisualDesignSectionProps> = ({
 
           {/* Bottom Image */}
           {images.length > 1 && (
-            <div className="relative mt-12">
-              <div className="absolute left-8 top-8 h-[70%] w-[80%]"></div>
+            <div className="relative mt-12 overflow-hidden rounded-lg">
+              <div className="absolute left-4 top-4 h-[70%] w-[80%]"></div>
               <img
                 src={images[1].src}
                 alt={images[1].alt}

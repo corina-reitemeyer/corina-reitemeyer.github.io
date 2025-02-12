@@ -45,7 +45,7 @@ const MOENceaWebsite = () => {
       <DualLaptopsSection
         laptopsImage="/images/product/moe-ncea-duallaptop.webp" // ✅ One image for both laptops
         backgroundColor="#90AEFF"
-        backgroundImage="/images/OW-Squiggles.webp" // ✅ Background separate
+        backgroundImage="/images/product/moe-ncea-triangles-1.webp" // ✅ Background separate
       />
 
       {/* Discovery Section */}
@@ -239,8 +239,10 @@ const MOENceaWebsite = () => {
       <TwoRowsImagesSection
         desktopImage={{
           src: '/images/product/moe-ncea-desktop.webp',
-          alt: 'Combined desktop images',
+          alt: 'NCEA three desktop screens',
         }}
+        backgroundColor="#90AEFF"
+        bottomBackgroundImage="/images/product/moe-triangles-.webp"
       />
 
       {/* Achievements Section */}

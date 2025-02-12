@@ -20,7 +20,7 @@ export default function HeroSection() {
     productManagers:
       'I turn complex problems into scalable, intuitive user experiences. With expertise in AI-Driven UX & Design Systems, I bridge user needs, business strategy, and technical feasibility—delivering designs that enhance usability, drive engagement, and support product growth.',
     engineers:
-      'I create scalable, structured designs that align with development workflows. With a strong understanding of AI-Driven UX, Design Systems, and front-end development, I collaborate closely with engineers to ensure feasible, consistent, and performance-optimised interfaces.',
+      'I create scalable, structured designs that align with development workflows. With a strong understanding of full stack web development, I collaborate closely with engineers to ensure feasible, consistent, and performance-optimised interfaces.',
   }
 
   // Helper function to convert camelCase to Regular Case (First letter uppercase, rest lowercase)

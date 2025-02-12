@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 
 export default function Header() {
@@ -9,14 +9,16 @@ export default function Header() {
     <nav className="z-20 flex items-center justify-between bg-white px-6 py-6 sm:px-10">
       {/* Logo */}
       <div className="flex items-center">
-        <img
-          src="/images/corina-logo.png"
-          alt="Logo of website"
-          className="h-12"
-        />
-        <span className="mx-4 text-xl font-medium text-gray-900">
-          Corina Reitemeyer
-        </span>
+        <Link to="/projects" className="flex items-center">
+          <img
+            src="/images/corina-logo.png"
+            alt="Logo of website"
+            className="h-12 cursor-pointer"
+          />
+          <span className="mx-4 text-xl font-medium text-gray-900">
+            Corina Reitemeyer
+          </span>
+        </Link>
       </div>
 
       {/* Hamburger/Close Button */}

@@ -41,17 +41,11 @@ const MOEDesignSystem = () => {
 
       {/* Overlapping ImagesSection */}
       <OverlappingImagesSection
-        images={[
-          {
-            src: '/images/product/moe-design-system-right.webp',
-            alt: 'Top Image',
-          },
-          {
-            src: '/images/product/moe-design-system-left.webp',
-            alt: 'Bottom Image',
-          },
-        ]}
+        productImage="/images/product/moe-ds-overlap.webp"
+        backgroundColor="#90AEFF"
+        backgroundImage="/images/product/moe-designsystem-triangle1.webp"
       />
+
       {/* Discovery Section */}
       <DiscoverySection
         subtitle="Discovery"
@@ -226,23 +220,18 @@ const MOEDesignSystem = () => {
       />
       <TwoRowsImagesSection
         desktopImage={{
-          src: '/images/product/moe-ds-desktop-allscreens.webp', // Replace with your combined desktop image path
-          alt: 'Combined desktop images',
+          src: '/images/product/moe-ds-desktop-allscreens.webp',
+          alt: 'Design System three desktop screens',
         }}
         bottomRowImages={[
           {
-            src: '/images/product/moe-ds-mobile-menu.webp',
-            alt: 'Mobile Image 1',
-          },
-          {
-            src: '/images/product/moe-ds-mobile-hpg.webp',
-            alt: 'Mobile Image 2',
-          },
-          {
-            src: '/images/product/moe-ds-mobile-content.webp',
-            alt: 'Mobile Image 3',
+            src: '/images/product/moe-ds-mobiles.webp',
+            alt: 'Left Mobile Image',
           },
         ]}
+        backgroundColor="#90AEFF"
+        topBackgroundImage="/images/product/moe-triangles-2.webp"
+        bottomBackgroundImage="/images/product/moe-triangles-3.webp"
       />
 
       {/* Achievements Section */}

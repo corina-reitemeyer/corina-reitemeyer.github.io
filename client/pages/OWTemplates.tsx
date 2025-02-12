@@ -41,7 +41,7 @@ const OWTemplates = () => {
       <DualLaptopsSection
         laptopsImage="/images/product/ow-duallaptop-2.webp" // ✅ One image for both laptops
         backgroundColor="#FFEAA1"
-        backgroundImage="/images/OW-Squiggles.webp" // ✅ Background separate
+        backgroundImage="/images/product/ow-squiggles-1.webp" // ✅ Background separate
       />
 
       {/* Discovery Section */}
@@ -205,18 +205,9 @@ const OWTemplates = () => {
 
       {/* Dual Laptop Compact Section */}
       <DualLaptopsCompactSection
-        laptops={[
-          {
-            src: '/images/product/ow-duallaptop-compact-2.webp',
-            alt: 'Compact View of Feature A',
-          },
-          {
-            src: '/images/product/ow-duallaptop-compact-1.webp',
-            alt: 'Compact View of Feature B',
-          },
-        ]}
+        laptopsImage="/images/product/ow-duallaptop-1.webp" // Single dual laptop image
         backgroundColor="#FFEAA1"
-        backgroundImage="/images/OW-Squiggles.webp"
+        backgroundImage="/images/product/ow-squiggles-1.webp" // Background vector image
       />
 
       {/* Research Section */}

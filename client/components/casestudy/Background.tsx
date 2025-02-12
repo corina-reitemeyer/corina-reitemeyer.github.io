@@ -44,7 +44,7 @@ const BackgroundSection: React.FC<BackgroundSectionProps> = ({
         </div>
 
         {/* Right: Image */}
-        <div className="relative right-[-10%] ml-auto w-screen lg:w-[50vw]">
+        <div className="relative right-[10%] ml-auto w-screen lg:w-[50vw]">
           <img
             src={imageSrc}
             alt={imageAlt}

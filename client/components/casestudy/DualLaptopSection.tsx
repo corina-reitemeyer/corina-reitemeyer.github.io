@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 interface DualLaptopsSectionProps {
   laptopsImage: string
@@ -12,36 +12,33 @@ const DualLaptopsSection: React.FC<DualLaptopsSectionProps> = ({
   backgroundColor = '#FFEAA1',
   backgroundImage,
 }) => {
+  const { ref: sectionRef, inView } = useInView({ triggerOnce: true })
+
   return (
     <section
-      className="relative flex min-h-[600px] w-screen items-center justify-center py-12 sm:py-16"
+      ref={sectionRef}
+      className="relative flex min-h-[600px] items-center justify-center py-24"
       style={{ backgroundColor }}
     >
-      {/* ✅ Background Layer (Squiggles) - Expands & Centers Behind Laptops */}
+      {/* ✅ Background Image (Squiggles) - Positioned Directly Behind Laptops */}
       {backgroundImage && (
-        <motion.img
+        <img
           src={backgroundImage}
           alt="Background Vectors"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2, ease: 'easeOut' }}
-          className="absolute left-1/2 top-1/2 -z-10 w-[120%] max-w-[1600px] -translate-x-1/2 -translate-y-1/2 object-cover"
+          className="absolute z-0 w-[90%] max-w-[800px] opacity-100 md:max-w-[1000px] xl:max-w-[2000px]"
         />
       )}
 
-      {/* ✅ Foreground Layer (Laptops) - Positioned on Top */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: 'easeOut' }}
-        className="relative z-10 mx-auto flex items-center justify-center"
-      >
+      {/* ✅ Laptop Screens Layer - Centered on Top */}
+      <div className="relative z-10 mx-auto flex items-center justify-center">
         <img
           src={laptopsImage}
           alt="Laptop Screens"
-          className="w-full max-w-[900px] sm:max-w-[1000px] md:max-w-[1100px] lg:max-w-[1200px] xl:max-w-[1800px]"
+          className={`w-full max-w-[900px] transform transition-all duration-700 ease-in-out sm:max-w-[1000px] md:max-w-[1100px] lg:max-w-[1400px] xl:max-w-[1800px] ${
+            inView ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
+          }`}
         />
-      </motion.div>
+      </div>
     </section>
   )
 }

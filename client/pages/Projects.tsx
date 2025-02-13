@@ -33,7 +33,7 @@ const Projects: React.FC<ProjectsProps> = () => {
               >
                 {/* Motion Wrapper for Scroll Animation */}
                 <motion.div
-                  className="relative mx-4 flex h-auto flex-col rounded-3xl border border-gray-200 bg-white sm:mx-8 md:flex-row lg:mx-24"
+                  className="relative mx-auto flex h-auto flex-col rounded-3xl border border-gray-200 bg-white sm:mx-8 md:flex-row lg:mx-auto lg:max-w-7xl"
                   initial={{ opacity: 0, y: 50 }} // Start off-screen
                   whileInView={{ opacity: 1, y: 0 }} // Animate into position
                   transition={{ duration: 0.6, delay: index * 0.15 }} // Staggered effect

@@ -40,23 +40,22 @@ const About = () => {
                 Hi! I&apos;m Corina 👋
               </h2>
               <p className="font-body text-lg leading-relaxed text-gray-700">
-                A Senior Product Designer who loves making digital experiences
-                simple, intuitive, and scalable. With 6+ years of experience, I
-                specialise in AI-driven UX and design systems that help products
-                grow smoothly.
+                I’m a Senior Product Designer who loves creating digital
+                experiences that feel simple, intuitive, and scalable. With 6+
+                years of experience, I specialise in AI-driven UX and Design
+                Systems that help products grow and adapt seamlessly.
               </p>
               <p className="font-body mt-6 text-lg leading-relaxed text-gray-700">
-                I also have a background in full-stack development and data
-                analytics, which means I understand both the design and
-                technical sides of building products. I enjoy working with
-                cross-functional teams to turn user needs into smart, practical
+                My skill-set in full-stack development and data analytics gives
+                me a strong understanding of both product design and technical
+                constraints. I enjoy collaborating with cross-functional teams
+                to turn complex challenges into practical, user-friendly
                 solutions.
               </p>
               <p className="font-body mt-6 text-lg leading-relaxed text-gray-700">
-                When I’m not designing, you’ll find me dancing, doing Reformer
-                Pilates, or playing cozy games. If you’re looking for a designer
-                who’s curious, strategic, and loves solving problems, let’s
-                connect!
+                If I’m not behind my keyboard or deep in design discussions,
+                you’ll probably find me dancing, doing Reformer Pilates, or
+                playing cozy games.
               </p>
               <h3 className="font-heading mt-10 text-2xl font-bold">
                 Accolades:
@@ -193,7 +192,7 @@ const About = () => {
       <section className="bg-[#E3F6F5] py-24">
         <div className="mx-auto max-w-7xl px-8">
           <h2 className="font-heading mb-12 text-center text-3xl font-extrabold text-[#272343]">
-            My Philosophy
+            What Drives My Work
           </h2>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
             {data.values.map((value, index) => (

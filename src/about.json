@@ -3,85 +3,85 @@
     {
       "title": "AI-Driven Product Design",
       "subtitle": "Crafting seamless, intelligent experiences",
-      "description": "Designing intuitive, ethical, and scalable AI-powered experiences that enhance automation, decision-making, and human-AI interaction."
+      "description": "Designing intuitive and scalable AI-powered experiences that enhance decision-making, automation, and human-AI interaction — with ethics and usability in mind."
     },
     {
       "title": "Scalable UX & Design Systems",
       "subtitle": "Bringing structure and consistency to design",
-      "description": "Building and maintaining structured design systems that ensure consistency, efficiency, and seamless collaboration between design and engineering."
+      "description": "Building and evolving structured design systems that create consistency, improve efficiency, and streamline collaboration between design and engineering."
     },
     {
       "title": "Strategy & Research",
       "subtitle": "Balancing user needs, business goals, and technical feasibility.",
-      "description": "Aligning user needs, business goals, and technical feasibility through UX strategy, research, and data-driven insights to create impactful experiences."
+      "description": "Aligning product strategy with user needs and business goals by leveraging UX research and data-driven insights to create meaningful, scalable experiences that drive impact and improve key product metrics."
     },
     {
       "title": "Full Stack Web Development",
       "subtitle": "Bridging design and development with a strong technical foundation",
-      "description": "Bridging design and development by collaborating with engineers, applying front-end knowledge, and ensuring scalable, high-performance UI execution."
+      "description": "Collaborating closely with engineers to bridge design and development, applying front-end knowledge to ensure scalable, high-performance interfaces."
     }
   ],
   "process": [
     {
       "step": "Step 1",
       "title": "Research",
-      "description": "Discovering and understanding the problem space and learning about the user. Bonus: I can use data analytics to gain insights from datasets."
+      "description": "I dive into customer needs and business challenges to uncover insights. Bonus: I can analyse datasets to support research with data-driven insights."
     },
     {
       "step": "Step 2",
       "title": "Principles & Strategy",
-      "description": "Creating design principles to help guide the project and UX decisions. Ensures alignment across the team."
+      "description": "I create guiding principles that shape UX decisions and keep teams aligned throughout the project."
     },
     {
       "step": "Step 3",
       "title": "User Journey",
-      "description": "Diving deep into user journey, user stories, and user decision making."
+      "description": "I break down user journeys, stories, and decision-making patterns to create seamless, intuitive experiences."
     },
     {
       "step": "Step 4",
       "title": "Exploration",
-      "description": "Exploring a wide range of possible solutions. Testing, iterating, discussing and working through the problem."
+      "description": "I explore a wide range of possibilities—testing, discussing, and working through challenges to find the best approach."
     },
     {
       "step": "Step 5",
       "title": "Refinement",
-      "description": "Refining a chosen solution, polishing until it’s ready for handover to the developers. Documenting design decisions."
+      "description": "I refine and document the final design, ensuring it’s ready for development with all the necessary details."
     },
     {
       "step": "Step 6",
       "title": "Handover",
-      "description": "Working closely with the dev team to ensure a successful handover and implementation process. I can be an extra pair of hands for front-end implementation."
+      "description": "I work closely with developers to ensure a smooth handover and implementation. I can also jump in to support front-end development when needed."
     },
     {
       "step": "Step 7",
       "title": "Supporting",
-      "description": "Keep monitoring implementation process, in case improvements need to be made."
+      "description": "I stay involved during implementation, making adjustments if needed to refine the final experience."
     }
   ],
   "values": [
     {
       "title": "Making a Positive Impact",
-      "description": "I believe in creating designs and products that make a positive difference in the world. Every decision I make aims to create meaningful, accessible, and inclusive experiences."
+      "description": "Every decision I make aims to create products that are useful, inclusive, and make a real difference. I believe design should solve problems and improve people's lives, even in small ways."
     },
     {
       "title": "Curiosity & Iteration",
-      "description": "I approach design with an experimentation mindset, asking myself 'What if?', and continuously testing and iterating to learn faster and drive innovation. I value data-driven decisions to solve complex user challenges."
+      "description": "I approach design with an experimental mindset, asking 'What if?' and iterating quickly to drive innovation. I value data-driven decisions that solve complex user challenges."
     },
     {
       "title": "Collaboration & Versatility",
-      "description": "I thrive in collaborative environments—whether it’s working with centralised design teams or cross-functional teams. My experience across various industries, including education, SaaS, and emerging tech, helps me bring a well-rounded perspective to every project."
+      "description": "I thrive in collaborative environments, whether working within centralised design teams or cross-functional groups. My experience across education, SaaS, and emerging tech helps me adapt quickly and bring fresh perspectives to every project."
     },
     {
-      "title": "Attention to Detail",
-      "description": "Great design is in the details. I’m meticulous about ensuring that every element works harmoniously, whether it’s pixel-perfect UI, clean code, or a smooth user flow."
+      "title": "Designing with Precision",
+      "description": "I focus on the small things that make a big impact—whether it’s pixel-perfect UI, a seamless user flow, or ensuring consistency across a design system."
     },
     {
       "title": "Balancing Creativity & Logic",
-      "description": "I believe great solutions emerge when creativity meets logic. I love blending imaginative ideas with a solid technical foundation to create designs that are not only beautiful but also functional and scalable."
+      "description": "I believe the best designs come from balancing creativity with logic. I love combining bold ideas with a solid technical foundation to create products that are beautiful, functional, and scalable."
     },
     {
       "title": "Lifelong Learning",
-      "description": "I’m always curious and eager to learn. Whether it’s a new design approach, a coding framework, or an analytics tool, I embrace continuous learning to stay ahead and improve my craft."
+      "description": "I love learning — whether it’s a new design approach, a coding framework, or an analytics tool. Staying adaptable helps me push my skills forward and build better experiences."
     }
   ]
 }

@@ -7,20 +7,23 @@ export default function HeroSection() {
     | 'recruiters'
     | 'productDesigners'
     | 'productManagers'
+    | 'userResearchers'
     | 'engineers'
   const [selectedRole, setSelectedRole] = useState<Role>('default')
 
   const paragraphs: Record<Role, string> = {
     default:
-      'I design digital experiences that feel simple and natural. Whether it’s making technology easier to use, improving everyday tools, or creating clear, user-friendly interfaces, my goal is to remove frustration and make things work effortlessly.',
+      'I design digital experiences that feel intuitive and easy to use. Whether it’s simplifying technology, improving everyday tools, or creating interfaces, my goal is to make things feel simple and natural.',
     recruiters:
-      'Senior Product Designer with AI-Driven UX & Design Systems expertise, bridging user experience, business strategy, and technical feasibility. I specialise in scalable, user-centric design for complex workflows, crafting intuitive interfaces that drive engagement and efficiency. I’m currently looking for new opportunities.',
+      'Senior Product Designer specialising in AI-Driven UX and Design Systems. I bring together user experience, business strategy, and technical feasibility to create intuitive, scalable designs for complex workflows. I’m currently exploring new opportunities.',
     productDesigners:
-      'Passionate about creating scalable design solutions, I specialise in AI-Driven UX and Design Systems that simplify complexity. Whether designing for automation, improving usability, or refining interaction models, I love finding the balance between logic, creativity, and accessibility.',
+      'I design scalable, user-centric solutions that simplify complexity. Specialising in AI-Driven UX and Design Systems, I focus on intelligent interactions, usability, and interaction models—balancing logic, creativity, and accessibility to build seamless experiences.',
     productManagers:
-      'I turn complex problems into scalable, intuitive user experiences. With expertise in AI-Driven UX & Design Systems, I bridge user needs, business strategy, and technical feasibility—delivering designs that enhance usability, drive engagement, and support product growth.',
+      'I turn complex problems into structured, intuitive experiences. I connect customer needs, business goals, and technical feasibility to create designs that drive engagement, retention, and product growth.',
+    userResearchers:
+      'I design with a data-informed approach, leveraging UX research insights to create intuitive, research-backed experiences. I collaborate closely with researchers and data teams to ensure design decisions are grounded in real user needs.',
     engineers:
-      'I create scalable, structured designs that align with development workflows. With a strong understanding of full stack web development, I collaborate closely with engineers to ensure feasible, consistent, and performance-optimised interfaces.',
+      'I create structured, scalable designs that fit seamlessly into development workflows. With a skill-set in full-stack web development, I collaborate closely with engineers to ensure designs are clear, consistent, and performance-optimised.',
   }
 
   // Helper function to convert camelCase to Regular Case (First letter uppercase, rest lowercase)

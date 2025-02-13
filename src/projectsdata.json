@@ -5,7 +5,7 @@
     "slug": "ritmo",
     "projectImage": "/images/portfolio/ritmo-cover.webp",
     "company": "Personal Project",
-    "description": "A dance learning app that helps users practice Latin dance moves through guided video tutorials and step-by-step lessons. Designed to complement live classes, it makes learning engaging and accessible."
+    "description": "A dance learning app that helps users practice Latin dance moves through guided tutorials and step-by-step lessons. Designed to complement live classes, it makes learning more engaging, structured, and accessible."
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "slug": "ow-templates",
     "projectImage": "/images/portfolio/ow-templates-cover.webp",
     "company": "Optimal Workshop",
-    "description": "A set of pre-built templates that simplify user research and information architecture. They help users set up studies faster while learning best practices, making research more efficient for both beginners and experts."
+    "description": "A set of pre-built templates that simplify user research and information architecture. They help users set up studies faster while following best practices—making research more efficient for beginners and experts alike."
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "slug": "moe-design-system",
     "projectImage": "/images/portfolio/moe-design-system-cover.webp",
     "company": "Ministry of Education (New Zealand)",
-    "description": "A design system created to ensure consistency and accessibility across government education platforms. It provides a structured framework with reusable components and guidelines to streamline digital development."
+    "description": "A design system built to ensure consistency and accessibility across government education platforms. With reusable components and clear guidelines, it streamlines digital development while maintaining a cohesive user experience."
   },
   {
     "id": 4,
@@ -29,6 +29,6 @@
     "slug": "moe-ncea-website",
     "projectImage": "/images/portfolio/moe-ncea-cover.webp",
     "company": "Ministry of Education (New Zealand)",
-    "description": "A centralised platform for teachers to access new assessment standards, subject materials, and updates. Designed for clarity and ease of use, it simplifies navigation and improves access to essential resources."
+    "description": "A centralised platform where teachers can access new assessment standards, subject materials, and updates. Designed for clarity and ease of use, it simplifies navigation and improves access to essential resources."
   }
 ]

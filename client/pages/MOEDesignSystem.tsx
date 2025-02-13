@@ -22,7 +22,7 @@ const MOEDesignSystem = () => {
           id: 1,
           projectTitle: 'Design System',
           slug: 'moe-design-system',
-          projectSubtitle: 'Building Consistency and Efficiency Across Teams',
+          projectSubtitle: 'Streamlining Workflows with Ready-Made Studies.',
           overview:
             'The Ministry of Education Design System was developed to address the need for a consistent, accessible, and efficient design framework following the rapid creation of a website during the COVID-19 lockdown. This design system includes a comprehensive component library and design guidelines aimed at ensuring uniformity and adherence to accessibility standards across digital platforms.',
           objectiveGoals: [

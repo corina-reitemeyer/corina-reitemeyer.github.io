@@ -134,11 +134,11 @@ h6 {
   transform: scaleX(1) translateY(50%);
 }
 
-/* Active state highlighter (purple) */
+/* Active state highlighter */
 .nav-item.active::before {
   opacity: 1;
   transform: scaleX(1) translateY(50%);
-  background: #ffd803; /* Purple color for active state */
+  background: #ffd803;
 }
 
 h1 {

@@ -55,7 +55,7 @@ const InsightsSection: React.FC<InsightsSectionProps> = ({
                 const regex = new RegExp(`(${highlight})`, 'gi') // Case-insensitive match
                 highlightedDescription = highlightedDescription.replace(
                   regex,
-                  '<span class="relative inline-block rounded-lg bg-[#CBBDFF] px-1">$1</span>',
+                  '<span class="relative inline-block rounded-lg bg-[#fff4b0] px-1">$1</span>',
                 )
               })
             }

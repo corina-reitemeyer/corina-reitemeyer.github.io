@@ -1,35 +1,42 @@
-import React, { useEffect, useState } from 'react'
+import { useInView } from 'react-intersection-observer'
 
 interface MobileScreensShowcaseProps {
   image: { src: string; alt: string }
+  backgroundImage?: string // ✅ New: Optional background image
+  backgroundColor?: string // ✅ New: Optional background color
 }
 
 const MobileScreensShowcase: React.FC<MobileScreensShowcaseProps> = ({
   image,
+  backgroundImage,
+  backgroundColor = '#9EEEFF', // Default light blue
 }) => {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    // Trigger fade-in after component mounts
-    const timer = setTimeout(() => {
-      setIsVisible(true)
-    }, 100) // Delay to ensure smooth transition
-    return () => clearTimeout(timer)
-  }, [])
+  const { ref: sectionRef, inView } = useInView({ triggerOnce: true })
 
   return (
-    <section className="bg-[#9EEEFF] py-16">
-      <div className="max-w-8xl container mx-auto flex flex-col justify-between">
-        {/* Image Section */}
-        <div className="flex h-full items-end justify-center overflow-hidden">
-          <img
-            src={image.src}
-            alt={image.alt}
-            className={`h-auto max-h-full max-w-full object-contain transition-opacity duration-1000 ${
-              isVisible ? 'opacity-100' : 'opacity-0'
-            }`}
-          />
-        </div>
+    <section
+      ref={sectionRef}
+      className="relative flex items-center justify-center py-24"
+      style={{ backgroundColor }}
+    >
+      {/* ✅ Background Image (if provided) */}
+      {backgroundImage && (
+        <img
+          src={backgroundImage}
+          alt="Background Pattern"
+          className="absolute z-0 w-full max-w-[1200px] opacity-100 md:max-w-[1400px] xl:max-w-[1600px]"
+        />
+      )}
+
+      {/* ✅ Mobile Screens Layer */}
+      <div className="relative z-10 mx-auto flex items-center justify-center">
+        <img
+          src={image.src}
+          alt={image.alt}
+          className={`h-auto max-h-full max-w-7xl object-contain transition-all duration-700 ease-in-out ${
+            inView ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
+          }`}
+        />
       </div>
     </section>
   )

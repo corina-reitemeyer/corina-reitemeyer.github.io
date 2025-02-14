@@ -290,6 +290,7 @@ To dig deeper, I spoke with students and teachers across different skill levels 
           src: '/images/process/ritmo/ritmo-showcase.webp',
           alt: 'Showcase of mobile screens',
         }}
+        backgroundImage="/images/product/ritmo-circle.webp"
       />
 
       {/* Lessons Learned Section */}

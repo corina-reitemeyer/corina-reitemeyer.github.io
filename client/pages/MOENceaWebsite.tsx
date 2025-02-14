@@ -307,7 +307,7 @@ const MOENceaWebsite = () => {
         ]}
       />
       <KeyOutcomes
-        title="Impact & Iterations"
+        title="Product Impact & Iterations"
         outcomes={[
           {
             icon: '📚',

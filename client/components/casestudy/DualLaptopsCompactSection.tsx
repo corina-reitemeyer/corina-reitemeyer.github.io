@@ -20,21 +20,21 @@ const DualLaptopsCompactSection: React.FC<DualLaptopsCompactSectionProps> = ({
       className="relative flex min-h-[600px] items-center justify-center overflow-hidden py-24"
       style={{ backgroundColor }}
     >
-      {/* ✅ Background Image (Squiggles) - Positioned Behind Laptops */}
+      {/* ✅ Background Image (if provided) */}
       {backgroundImage && (
         <img
           src={backgroundImage}
           alt="Background Vectors"
-          className="absolute z-0 w-[90%] max-w-[800px] opacity-100 md:max-w-[1000px] xl:max-w-[2000px]"
+          className="absolute z-0 w-[90%] max-w-[1200px] opacity-100 md:max-w-[1400px] xl:max-w-[2200px]"
         />
       )}
 
-      {/* ✅ Laptop Screens Layer - Positioned on Top with Animation */}
+      {/* ✅ Laptop Screens Layer - Enlarged for Large Screens */}
       <div className="relative z-10 mx-auto flex items-center justify-center">
         <img
           src={laptopsImage}
           alt="Dual Laptop Screens"
-          className={`w-full max-w-[900px] transform transition-all duration-700 ease-in-out sm:max-w-[1000px] md:max-w-[1100px] lg:max-w-[1400px] xl:max-w-[1800px] ${
+          className={`w-full max-w-[1000px] transform transition-all duration-700 ease-in-out sm:max-w-[1200px] md:max-w-[1400px] lg:max-w-[1800px] xl:max-w-[2600px] ${
             inView ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
           }`}
         />

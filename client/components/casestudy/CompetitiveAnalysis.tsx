@@ -4,6 +4,7 @@ interface CompetitiveAnalysisSectionProps {
   subtitle: string
   title: string
   description: string
+  bulletPoints?: string[] // Optional bullet list
   image: { src: string; alt: string } // Single image
   subtitleColor: 'ritmo' | 'ow' | 'moe' // Dynamic subtitle color options
 }
@@ -12,6 +13,7 @@ const CompetitiveAnalysisSection: React.FC<CompetitiveAnalysisSectionProps> = ({
   subtitle,
   title,
   description,
+  bulletPoints, // Accepting optional bullet points
   image,
   subtitleColor,
 }) => {
@@ -34,6 +36,15 @@ const CompetitiveAnalysisSection: React.FC<CompetitiveAnalysisSectionProps> = ({
           </p>
           <h2 className="mt-2 text-4xl font-bold text-gray-900">{title}</h2>
           <p className="my-6 text-lg text-gray-700">{description}</p>
+
+          {/* Render bullet list if it exists */}
+          {bulletPoints && bulletPoints.length > 0 && (
+            <ul className="mb-6 list-disc pl-6 text-lg text-gray-700">
+              {bulletPoints.map((point, index) => (
+                <li key={index}>{point}</li>
+              ))}
+            </ul>
+          )}
         </div>
 
         {/* Positioned Image - Moves Below on Mobile, Further Right on Desktop */}

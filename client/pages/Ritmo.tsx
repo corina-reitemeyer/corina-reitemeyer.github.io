@@ -23,7 +23,7 @@ const Ritmo = () => {
           projectSubtitle:
             'A personal library and progress tracker for Latin dancers.',
           overview:
-            'Ritmo is an interactive app designed to help dancers organize, review, and track their progress on Latin dance moves. Through video tutorials and step-by-step guides, it supports dancers looking to practice between live classes and reinforce what they’ve learned.',
+            'Ritmo is an interactive app designed to help dancers organise, review, and track their progress on Latin dance moves. Through video tutorials and step-by-step guides, it supports dancers looking to practice between live classes and reinforce what they’ve learned.',
           objectiveGoals: [
             'Design an intuitive, easy-to-use interface that encourages engagement.',
             'Develop a structured dance move library that breaks down steps clearly for different skill levels.',

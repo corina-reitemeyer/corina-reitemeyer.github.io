@@ -308,7 +308,7 @@ To dig deeper, I spoke with students and teachers across different skill levels 
       />
 
       <KeyOutcomes
-        title="Expected Impact & Iterations"
+        title="Expected Product Impact & Iterations"
         outcomes={[
           {
             icon: '🔍',

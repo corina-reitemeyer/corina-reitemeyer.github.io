@@ -29,12 +29,12 @@ const OverlappingImagesSection: React.FC<OverlappingImagesSectionProps> = ({
         />
       )}
 
-      {/* ✅ Product Image - Now Covers the Section */}
-      <div className="relative z-10 h-full w-full">
+      {/* ✅ Product Image - Scales Nicely */}
+      <div className="relative z-10 flex w-full justify-center">
         <img
           src={productImage}
           alt="Product Screens"
-          className={`absolute left-0 top-0 h-full w-full transform object-cover transition-all duration-700 ease-in-out ${
+          className={`w-[90%] max-w-[600px] object-contain transition-all duration-700 ease-in-out sm:max-w-[700px] md:max-w-[1000px] lg:max-w-[1200px] xl:max-w-[1600px] ${
             inView ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
           }`}
         />

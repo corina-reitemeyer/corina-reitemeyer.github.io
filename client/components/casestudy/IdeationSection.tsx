@@ -27,7 +27,9 @@ const Ideation: React.FC<IdeationProps> = ({
   }
 
   return (
-    <div className="bg-[#E3F6F5] py-20">
+    <div className="bg-[#E3F6F5] px-6 py-20">
+      {' '}
+      {/* Added px-6 for left & right padding */}
       {/* Header Section */}
       <div className="mx-auto mb-12 max-w-3xl text-left">
         <p className="text-lg" style={{ color: titleColorMap[titleColor] }}>
@@ -36,10 +38,9 @@ const Ideation: React.FC<IdeationProps> = ({
         <h2 className="mt-2 text-4xl font-bold text-gray-900">{subtitle}</h2>
         <p className="mt-6 pb-12 text-lg text-gray-700">{description}</p>
       </div>
-
       {/* Points Section */}
       <div
-        className={`mx-auto grid max-w-3xl ${
+        className={`mx-auto grid max-w-3xl px-4 ${
           points.length === 2
             ? 'grid-cols-1 md:grid-cols-2'
             : 'grid-cols-1 md:grid-cols-3'

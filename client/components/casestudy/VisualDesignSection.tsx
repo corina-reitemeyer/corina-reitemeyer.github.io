@@ -4,6 +4,7 @@ interface VisualDesignSectionProps {
   subtitle: string
   title: string
   description: string
+  descriptionSecond?: string // New optional prop
   images: { src: string; alt: string }[]
   subtitleColor: 'ritmo' | 'ow' | 'moe' // Keys for mapping colors
 }
@@ -12,6 +13,7 @@ const VisualDesignSection: React.FC<VisualDesignSectionProps> = ({
   subtitle,
   title,
   description,
+  descriptionSecond,
   images,
   subtitleColor,
 }) => {
@@ -50,8 +52,10 @@ const VisualDesignSection: React.FC<VisualDesignSectionProps> = ({
 
         {/* Bottom Section */}
         <div>
-          {/* Second Paragraph */}
-          <p className="mt-6 text-lg text-gray-700">{description}</p>
+          {/* Second Paragraph (if provided) */}
+          {descriptionSecond && (
+            <p className="mt-6 text-lg text-gray-700">{descriptionSecond}</p>
+          )}
 
           {/* Bottom Image */}
           {images.length > 1 && (

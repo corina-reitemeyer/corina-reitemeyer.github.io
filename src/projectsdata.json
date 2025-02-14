@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "projectTitle": "Ritmo",
-    "slug": "ritmo",
-    "projectImage": "/images/portfolio/ritmo-cover.webp",
-    "company": "Personal Project",
-    "description": "A dance learning app that helps users practice Latin dance moves through guided tutorials and step-by-step lessons. Designed to complement live classes, it makes learning more engaging, structured, and accessible."
+    "projectTitle": "Design System",
+    "slug": "moe-design-system",
+    "projectImage": "/images/portfolio/moe-design-system-cover.webp",
+    "company": "Ministry of Education (New Zealand)",
+    "description": "A design system built to ensure consistency and accessibility across government education platforms. With reusable components and clear guidelines, it streamlines digital development while maintaining a cohesive user experience."
   },
   {
     "id": 2,
@@ -17,18 +17,18 @@
   },
   {
     "id": 3,
-    "projectTitle": "Design System",
-    "slug": "moe-design-system",
-    "projectImage": "/images/portfolio/moe-design-system-cover.webp",
-    "company": "Ministry of Education (New Zealand)",
-    "description": "A design system built to ensure consistency and accessibility across government education platforms. With reusable components and clear guidelines, it streamlines digital development while maintaining a cohesive user experience."
-  },
-  {
-    "id": 4,
     "projectTitle": "NCEA Website",
     "slug": "moe-ncea-website",
     "projectImage": "/images/portfolio/moe-ncea-cover.webp",
     "company": "Ministry of Education (New Zealand)",
     "description": "A centralised platform where teachers can access new assessment standards, subject materials, and updates. Designed for clarity and ease of use, it simplifies navigation and improves access to essential resources."
+  },
+  {
+    "id": 4,
+    "projectTitle": "Ritmo",
+    "slug": "ritmo",
+    "projectImage": "/images/portfolio/ritmo-cover.webp",
+    "company": "Personal Project",
+    "description": "A dance learning app that helps users practice Latin dance moves through guided tutorials and step-by-step lessons. Designed to complement live classes, it makes learning more engaging, structured, and accessible."
   }
 ]

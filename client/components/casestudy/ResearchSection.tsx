@@ -21,7 +21,7 @@ const ResearchSection: React.FC<ResearchSectionProps> = ({
   note,
   imageSrc,
   imageAlt,
-  backgroundColor = '#E3F3FF', // Default light blue
+  backgroundColor = '#E3F6F5', // Default light blue
 }) => {
   const subtitleColorMap: Record<'ritmo' | 'ow' | 'moe', string> = {
     ritmo: '#40B0C8',

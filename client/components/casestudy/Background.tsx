@@ -18,7 +18,7 @@ const BackgroundSection: React.FC<BackgroundSectionProps> = ({
   description,
   imageSrc,
   imageAlt,
-  backgroundColor = '#E3F3FF', // Default light blue
+  backgroundColor = '#E3F6F5', // Default light blue
   subtitleColor,
 }) => {
   const subtitleColorMap: Record<'ritmo' | 'ow' | 'moe', string> = {

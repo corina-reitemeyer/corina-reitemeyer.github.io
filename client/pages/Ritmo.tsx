@@ -3,6 +3,7 @@ import DiscoverySection from '../components/casestudy/DiscoverySection'
 import Hero from '../components/casestudy/Hero'
 import Ideation from '../components/casestudy/IdeationSection'
 import InsightsSection from '../components/casestudy/InsightsSection'
+import KeyOutcomes from '../components/casestudy/KeyOutcomes'
 import LessonsLearnedSection from '../components/casestudy/LessonsLearned'
 import MobileScreensShowcase from '../components/casestudy/MobileShowCase'
 import PrimaryUsersSection from '../components/casestudy/PrimaryUsers'
@@ -302,6 +303,36 @@ To dig deeper, I spoke with students and teachers across different skill levels 
           'Addressing gaps in competitive platforms solidified Ritmo’s unique value proposition.',
           'Scalability was built into the design, preparing the app for future growth and feature expansion (more dance styles, moves etc).',
           'Testing in real-world scenarios ensured that the app is practical and valuable for users.',
+        ]}
+      />
+
+      <KeyOutcomes
+        title="Expected Impact & Iterations"
+        outcomes={[
+          {
+            icon: '🔍',
+            title: 'Improved Searchability',
+            description:
+              'Enable dancers to find moves easily, even if they don’t know the exact name.',
+          },
+          {
+            icon: '📈',
+            title: 'Increased Engagement',
+            description:
+              'Encourage regular practice with personalised tracking and structured lessons.',
+          },
+          {
+            icon: '🎥',
+            title: 'Enhanced Learning Experience',
+            description:
+              'Provide clear video tutorials and instructions for both leads and followers.',
+          },
+          {
+            icon: '🔄',
+            title: 'Iterative Refinements',
+            description:
+              'Continuously test and adapt the UX based on dancer feedback and usage data.',
+          },
         ]}
       />
     </div>

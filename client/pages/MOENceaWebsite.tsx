@@ -4,6 +4,7 @@ import DiscoverySection from '../components/casestudy/DiscoverySection'
 import DualLaptopsSection from '../components/casestudy/DualLaptopSection'
 import Hero from '../components/casestudy/Hero'
 import InsightsSection from '../components/casestudy/InsightsSection'
+import KeyOutcomes from '../components/casestudy/KeyOutcomes'
 import LessonsLearnedSection from '../components/casestudy/LessonsLearned'
 import OpportunitySpace from '../components/casestudy/OpportunitySpace'
 import PrimaryUsersSection from '../components/casestudy/PrimaryUsers'
@@ -267,7 +268,6 @@ const MOENceaWebsite = () => {
           alt: 'NCEA three desktop screens',
         }}
         backgroundColor="#90AEFF"
-        bottomBackgroundImage="/images/product/moe-triangles-.webp"
       />
 
       {/* Achievements Section */}
@@ -291,7 +291,7 @@ const MOENceaWebsite = () => {
           {
             title: 'Expanding My Leadership Role',
             description:
-              'While the Lead Designer had primary responsibility, this project provided me with early exposure to leadership opportunities. I played a key role in supporting the business unit, helping them understand their needs, co-facilitating content strategy workshops, and consulting on Information Architecture. I also helped visualize content placement, ensuring it was structured for clarity and usability within the website.',
+              'While the Lead Designer had primary responsibility, this project provided me with early exposure to leadership opportunities. I played a key role in supporting the business unit, helping them understand their needs, co-facilitating content strategy workshops, and consulting on Information Architecture. I also helped visualise content placement, ensuring it was structured for clarity and usability within the website.',
           },
         ]}
       />
@@ -304,6 +304,35 @@ const MOENceaWebsite = () => {
           'Collaboration Bridges Standards & Needs – Close collaboration with the branding team and lead designer emphasised the value of regular communication to balance organisational standards with project-specific requirements, ensuring alignment without sacrificing usability.',
           'Iterative Feedback Strengthens Outcomes – Engaging in collaborative, multi-stage design iterations created opportunities for continuous refinement, leading to a more polished, effective, and user-centred experience.',
           'Direct Access to Users Is Crucial – Limited direct user engagement slowed down the design process and increased the risk of missing critical insights. This reinforced the importance of user validation at every stage to ensure solutions effectively address real-world challenges.',
+        ]}
+      />
+      <KeyOutcomes
+        title="Impact & Iterations"
+        outcomes={[
+          {
+            icon: '📚',
+            title: '70% Easier Navigation',
+            description:
+              'Teachers reported improved access to resources after consolidating all content into one central platform.',
+          },
+          {
+            icon: '📈',
+            title: 'Higher Teacher Retention',
+            description:
+              'Increased repeat visits over the first 6 months as teachers returned for updates.',
+          },
+          {
+            icon: '🔄',
+            title: 'Refined Content Strategy',
+            description:
+              'Adjusted structure based on teacher feedback to better support real-world application.',
+          },
+          {
+            icon: '🛠️',
+            title: 'Reduced Support Needs',
+            description:
+              'Fewer inquiries from teachers due to clearer, more accessible documentation.',
+          },
         ]}
       />
     </div>

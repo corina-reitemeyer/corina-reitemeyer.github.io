@@ -27,7 +27,7 @@ const WireframesSection: React.FC<WireframesSectionProps> = ({
   }
 
   return (
-    <section className="bg-[#E6F8FF] pt-24">
+    <section className="bg-[#E3F6F5] pt-24">
       <div className="container mx-auto max-w-4xl px-6 sm:px-8">
         {/* Text Content */}
         <div>

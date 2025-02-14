@@ -27,9 +27,9 @@ const Ideation: React.FC<IdeationProps> = ({
   }
 
   return (
-    <div className="bg-[#EAF4FA] px-8 py-20">
+    <div className="bg-[#E3F6F5] py-20">
       {/* Header Section */}
-      <div className="mx-auto mb-12 max-w-4xl text-left">
+      <div className="mx-auto mb-12 max-w-3xl text-left">
         <p className="text-lg" style={{ color: titleColorMap[titleColor] }}>
           {title}
         </p>
@@ -39,7 +39,7 @@ const Ideation: React.FC<IdeationProps> = ({
 
       {/* Points Section */}
       <div
-        className={`mx-auto grid max-w-4xl ${
+        className={`mx-auto grid max-w-3xl ${
           points.length === 2
             ? 'grid-cols-1 md:grid-cols-2'
             : 'grid-cols-1 md:grid-cols-3'

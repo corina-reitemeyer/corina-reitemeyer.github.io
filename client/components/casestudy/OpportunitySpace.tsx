@@ -28,7 +28,7 @@ const OpportunitySpace: React.FC<OpportunitySpaceProps> = ({
 
   return (
     <>
-      <section className="relative bg-[#E6F8FF] py-24">
+      <section className="relative bg-[#E3F6F5] py-24">
         <div className="container mx-auto max-w-4xl px-6 text-left sm:px-8">
           {/* Header Section */}
           <p

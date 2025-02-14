@@ -5,6 +5,7 @@ import DualLaptopsCompactSection from '../components/casestudy/DualLaptopsCompac
 import DualLaptopsSection from '../components/casestudy/DualLaptopSection'
 import Hero from '../components/casestudy/Hero'
 import InsightsSection from '../components/casestudy/InsightsSection'
+import KeyOutcomes from '../components/casestudy/KeyOutcomes'
 import LessonsLearnedSection from '../components/casestudy/LessonsLearned'
 import OpportunitySpace from '../components/casestudy/OpportunitySpace'
 import PrimaryUsersSection from '../components/casestudy/PrimaryUsers'
@@ -219,7 +220,6 @@ const OWTemplates = () => {
         result="Users gravitated toward multi-study templates, leading to an increased adoption rate. However, the launched-study rate per customer remained unchanged, indicating that while users embraced the templates, it did not immediately translate into more studies being conducted."
         imageSrc="/images/process/ow/ow-abtesting.webp"
         imageAlt="Mockup of research process"
-        backgroundColor="#E6F8FF"
       />
 
       {/* Principles Section */}
@@ -293,6 +293,35 @@ const OWTemplates = () => {
           'Different users derive different benefits – Novices use templates for guidance, while experienced practitioners adapt them to fit their workflows.',
           'Adoption doesn’t always mean engagement – While multi-study templates increased retention, they didn’t directly impact study launch rates, highlighting the need for further refinement to drive deeper usage.',
           'Flexibility & customisation are key – Users need more control over templates to fully integrate them into their workflows.',
+        ]}
+      />
+      <KeyOutcomes
+        title="Product Impact & Iterations"
+        outcomes={[
+          {
+            icon: '⚡',
+            title: '20% Faster Study Setup',
+            description:
+              'Reduced time spent configuring research studies by offering pre-built templates.',
+          },
+          {
+            icon: '📈',
+            title: 'Increased Multi-Study Adoption',
+            description:
+              'Encouraged practitioners to use multiple studies together for richer insights.',
+          },
+          {
+            icon: '🔄',
+            title: 'Refined Customisation Options',
+            description:
+              'Iterated on templates to better match different research methodologies and practitioner workflows.',
+          },
+          {
+            icon: '🛠️',
+            title: 'Lower Barrier to Entry',
+            description:
+              'Simplified research setup for both new and experienced practitioners, reducing friction in the learning process.',
+          },
         ]}
       />
     </div>

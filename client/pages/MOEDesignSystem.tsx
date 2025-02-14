@@ -5,6 +5,7 @@ import DiscoverySection from '../components/casestudy/DiscoverySection'
 import Hero from '../components/casestudy/Hero'
 import Ideation from '../components/casestudy/IdeationSection'
 import InsightsSection from '../components/casestudy/InsightsSection'
+import KeyOutcomes from '../components/casestudy/KeyOutcomes'
 import LessonsLearnedSection from '../components/casestudy/LessonsLearned'
 import OverlappingImagesSection from '../components/casestudy/OverlappingImagesSection'
 import PrimaryUsersSection from '../components/casestudy/PrimaryUsers'
@@ -277,16 +278,6 @@ const MOEDesignSystem = () => {
         title="Achievements"
         achievements={[
           {
-            title: '40% Faster Design & Development:',
-            description:
-              'Standardised components and guidelines cut design and development time by 40%, reducing inefficiencies and improving workflow speed.',
-          },
-          {
-            title: 'Reduced design debt - 60% reduced duplicate components:',
-            description:
-              'Reduced duplicate components by 60%, streamlining the UI library and improving consistency across 50+ digital products.',
-          },
-          {
             title: 'Established the Organisations’s First Design System:',
             description:
               'I took the initiative to research, define, and implement the organisation’s first design system, securing buy-in across teams and ensuring adoption at scale.',
@@ -317,6 +308,33 @@ const MOEDesignSystem = () => {
           'Process & Criteria Matter - Defining clear contribution guidelines and governance ensures the system remains scalable and maintainable.',
           'Documentation Drives Success - Good documentation is more than just writing things down—structured, accessible documentation helps teams adopt and apply the system correctly.',
           'Scaling a design system requires ongoing iteration — not just initial setup but continuous refinement based on real-world usage.',
+        ]}
+      />
+      <KeyOutcomes
+        title="Product Impact & Iterations"
+        outcomes={[
+          {
+            icon: '🚀',
+            title: '40% Faster Dev/Design Time',
+            description: 'Standardised components reduced redundant work.',
+          },
+          {
+            icon: '📈',
+            title: 'Increased Adoption',
+            description:
+              'Teams actively used the system across 50+ sites, new and existing products.',
+          },
+          {
+            icon: '⏳',
+            title: 'Reduced Design Debt',
+            description: 'Standardised patterns simplified workflows.',
+          },
+          {
+            icon: '📖',
+            title: 'Improved Documentation',
+            description:
+              'Updated guidance to reflect real-world developer needs.',
+          },
         ]}
       />
     </div>

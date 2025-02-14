@@ -24,8 +24,8 @@ const CompetitiveAnalysisSection: React.FC<CompetitiveAnalysisSectionProps> = ({
   }
 
   return (
-    <section className="relative bg-[#E6F8FF] py-16">
-      <div className="relative mx-auto flex max-w-5xl flex-col px-6 sm:px-8 md:flex-row">
+    <section className="relative bg-[#E3F6F5] py-16">
+      <div className="relative mx-auto flex max-w-4xl flex-col px-6 sm:px-8 md:flex-row">
         {/* Text Content - Left Column on Desktop, Stacked on Mobile */}
         <div className="relative z-10 w-full md:w-1/2">
           <p

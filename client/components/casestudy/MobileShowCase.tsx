@@ -16,7 +16,7 @@ const MobileScreensShowcase: React.FC<MobileScreensShowcaseProps> = ({
   return (
     <section
       ref={sectionRef}
-      className="relative flex items-center justify-center py-24"
+      className="relative flex items-center justify-center px-6 py-24 md:px-12" // ✅ Added padding for left/right margins
       style={{ backgroundColor }}
     >
       {/* ✅ Background Image (if provided) */}
@@ -33,7 +33,7 @@ const MobileScreensShowcase: React.FC<MobileScreensShowcaseProps> = ({
         <img
           src={image.src}
           alt={image.alt}
-          className={`h-auto max-h-full max-w-7xl object-contain transition-all duration-700 ease-in-out ${
+          className={`h-auto max-w-[90%] object-contain transition-all duration-700 ease-in-out sm:max-w-[80%] md:max-w-[70%] lg:max-w-7xl ${
             inView ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
           }`}
         />

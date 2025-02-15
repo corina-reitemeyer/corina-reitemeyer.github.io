@@ -27,7 +27,7 @@ const AchievementsSection: React.FC<AchievementsSectionProps> = ({
               <h3 className="text-lg font-semibold text-gray-900">
                 {achievement.title}
               </h3>
-              <p className="mt-2 text-gray-700">{achievement.description}</p>
+              <p className="-mt-2 text-gray-700">{achievement.description}</p>
             </div>
           ))}
         </div>

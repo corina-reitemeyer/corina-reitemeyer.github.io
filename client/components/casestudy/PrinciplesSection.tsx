@@ -10,6 +10,7 @@ interface PrinciplesSectionProps {
   subtitle: string
   title?: string
   description?: string
+  descriptionSecondary?: string // New optional secondary description
   principles: Principle[]
   subtitleColor: 'ritmo' | 'ow' | 'moe' // Use keys to map specific colors
   reversedLayout?: boolean // Control the order dynamically
@@ -19,6 +20,7 @@ const PrinciplesSection: React.FC<PrinciplesSectionProps> = ({
   subtitle,
   title,
   description,
+  descriptionSecondary, // New prop
   principles,
   subtitleColor,
   reversedLayout = false,
@@ -68,10 +70,15 @@ const PrinciplesSection: React.FC<PrinciplesSectionProps> = ({
           </div>
         )}
 
-        {/* Description Paragraph */}
+        {/* Description Paragraphs */}
         {description && (
           <div className={`mb-12 ${reversedLayout ? '' : 'order-first'}`}>
             <p className="mt-16 text-lg text-gray-700">{description}</p>
+            {descriptionSecondary && (
+              <p className="mt-4 text-lg text-gray-700">
+                {descriptionSecondary}
+              </p>
+            )}
           </div>
         )}
 

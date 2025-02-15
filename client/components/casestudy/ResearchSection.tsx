@@ -31,9 +31,9 @@ const ResearchSection: React.FC<ResearchSectionProps> = ({
 
   return (
     <section className="py-24" style={{ backgroundColor }}>
-      <div className="relative mx-auto max-w-4xl px-6 sm:px-8 lg:flex lg:items-center lg:justify-center">
+      <div className="relative mx-auto max-w-5xl px-6 sm:px-8 lg:flex lg:items-center lg:justify-center">
         {/* Left: Image */}
-        <div className="lg:w-[50%] lg:flex-shrink-0 lg:text-left">
+        <div className="lg:w-[55%] lg:flex-shrink-0 lg:text-left">
           <img
             src={imageSrc}
             alt={imageAlt}

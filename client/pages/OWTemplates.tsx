@@ -218,7 +218,7 @@ const OWTemplates = () => {
         subtitleColor="ow"
         description="To validate the impact of the MVP, we launched the feature to a small subgroup of users, testing six multi-study project templates alongside single-study versions from each project. This allowed us to assess user preference and adoption behaviour. The findings highlighted the need to further investigate usage patterns and refine strategies to drive deeper engagement with launched studies."
         result="Users gravitated toward multi-study templates, leading to an increased adoption rate. However, the launched-study rate per customer remained unchanged, indicating that while users embraced the templates, it did not immediately translate into more studies being conducted."
-        imageSrc="/images/process/ow/ow-abtesting.webp"
+        imageSrc="/images/Lightbulb.webp"
         imageAlt="Mockup of research process"
       />
 
@@ -227,7 +227,8 @@ const OWTemplates = () => {
         subtitle="User Interviews & Click Testing"
         subtitleColor="ow"
         title="How Practicioners used the templates"
-        description="High-traction data confirmed that the template placement effectively captured user curiosity and engagement. However, our insights revealed a key limitation: while users found the templates valuable, the MVP lacked the granularity and flexibility needed to fully align with their specific research methods. Rather than using templates as-is, many practitioners treated them as a starting point for inspiration, later customizing their own projects. This highlighted an opportunity to develop more adaptable, user-driven template options in future iterations. Through user research, we identified three primary ways practitioners engaged with templates:"
+        description="A/B testing confirmed that the template placement captured user curiosity and engagement but didn’t drive immediate usage. To understand why, I partnered with a User Researcher to investigate. We launched a survey to identify who was using the feature, why, and whether they could easily find it. At the same time, we gathered insights from customer support and feedback channels. The survey helped us select a diverse group of participants for follow-up interviews."
+        descriptionSecondary="Through interviews and usability tasks, we observed how users discovered and interacted with templates. While they found them valuable, the MVP lacked the flexibility needed to fully align with their research methods. Instead of using templates as-is, most treated them as inspiration, customising their own projects. This revealed an opportunity to make templates more adaptable in future iterations. Our research identified three primary ways practitioners engaged with templates:"
         principles={[
           {
             number: 1,

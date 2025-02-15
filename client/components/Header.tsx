@@ -15,7 +15,7 @@ export default function Header() {
             alt="Logo of website"
             className="h-12 cursor-pointer"
           />
-          <span className="mx-4 text-xl font-medium text-gray-900">
+          <span className="mx-4 text-xl font-medium text-gray-900 sm:font-semibold md:font-medium lg:font-medium">
             Corina Reitemeyer
           </span>
         </Link>

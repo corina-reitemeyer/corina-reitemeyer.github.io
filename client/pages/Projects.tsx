@@ -40,8 +40,8 @@ const Projects: React.FC<ProjectsProps> = () => {
                   viewport={{ once: true, amount: 0.2 }} // Ensures animation happens only once
                   whileHover={{ y: -8 }} // Hover effect
                 >
-                  {/* Left Column - Text Content */}
-                  <div className="flex w-full flex-col justify-center p-10 sm:p-12 md:w-1/2 lg:p-16">
+                  {/* Left Column - Text Content (Increased Padding for More Space) */}
+                  <div className="sm: flex w-full flex-col justify-center px-10 py-14 pt-24 sm:px-12 sm:py-16 sm:pb-16 md:w-1/2 lg:px-16 lg:py-20">
                     {/* Overhead Text */}
                     {project.company && (
                       <p className="text-lg font-normal capitalize text-[#7BBCBC]">

@@ -21,9 +21,9 @@ const MOEDesignSystem = () => {
       <Hero
         project={{
           id: 1,
-          projectTitle: 'Design System',
+          projectTitle: 'Building Consistency and Efficiency Across Teams',
           slug: 'moe-design-system',
-          projectSubtitle: 'Building Consistency and Efficiency Across Teams',
+          projectSubtitle: 'Ministry of Education Design System',
           overview:
             'The Ministry of Education Design System was developed to establish consistency, accessibility, and efficiency across digital platforms. Following the rapid creation of a website during the COVID-19 lockdown, it became clear that a structured, scalable design framework was needed to support future development. This design system includes a comprehensive component library and detailed design guidelines, ensuring uniformity while adhering to accessibility and usability standards.',
           objectiveGoals: [

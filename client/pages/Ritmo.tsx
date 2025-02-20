@@ -19,10 +19,10 @@ const Ritmo = () => {
       <Hero
         project={{
           id: 1,
-          projectTitle: 'Ritmo',
+          projectTitle:
+            'A personal library and progress tracker for Latin dancers',
           slug: 'ritmo',
-          projectSubtitle:
-            'A personal library and progress tracker for Latin dancers.',
+          projectSubtitle: 'Ritmo - Latin Dance Move Library',
           overview:
             'Ritmo is an interactive app designed to help dancers organise, review, and track their progress on Latin dance moves. Through video tutorials and step-by-step guides, it supports dancers looking to practice between live classes and reinforce what they’ve learned.',
           objectiveGoals: [

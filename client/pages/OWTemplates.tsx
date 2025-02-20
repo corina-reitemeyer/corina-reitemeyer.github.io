@@ -21,9 +21,9 @@ const OWTemplates = () => {
       <Hero
         project={{
           id: 1,
-          projectTitle: 'Templates',
+          projectTitle: 'Streamlining Workflows with Ready-Made Studies',
           slug: 'ow-templates',
-          projectSubtitle: 'Streamlining Workflows with Ready-Made Studies.',
+          projectSubtitle: 'Optimal Workshop Templates',
           overview: `Optimal Workshop Templates is a collection of pre-built templates designed to streamline user research and information architecture workflows. The MVP was developed to educate users on best practices while reducing setup time, catering to both novice and experienced researchers using Optimal Workshop's tools.`,
           objectiveGoals: [
             'Provide pre-built templates that demonstrate best practices in user research and information architecture.',

@@ -22,10 +22,10 @@ const MOENceaWebsite = () => {
       <Hero
         project={{
           id: 1,
-          projectTitle: 'NCEA Education',
+          projectTitle:
+            'Resources and Guidance for the NCEA Assessment Standards',
           slug: 'moe-ncea-website',
-          projectSubtitle:
-            'Resources and Guidance for the NCEA Assessment Standards.',
+          projectSubtitle: 'NCEA Education Website',
           overview:
             'I co-led the UX design for the NCEA Website project, working closely with educators, policy teams, and developers from the early discovery phase through to delivery. I was involved in workshops with the business unit, collaborating on content strategy and shaping the platform from the ground up. My focus was on designing a clear, accessible, and user-friendly platform that simplified navigation and improved access to crucial assessment standards, subject materials, and updates.',
           objectiveGoals: [

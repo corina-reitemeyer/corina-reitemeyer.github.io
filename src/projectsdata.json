@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "projectTitle": "Design System",
+    "projectTitle": "Building Consistency and Efficiency Across Teams",
     "slug": "moe-design-system",
     "projectImage": "/images/portfolio/moe-design-system-cover.webp",
     "company": "Ministry of Education (New Zealand)",
@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "projectTitle": "Templates",
+    "projectTitle": "Streamlining Workflows with Ready-Made Studies",
     "slug": "ow-templates",
     "projectImage": "/images/portfolio/ow-templates-cover.webp",
     "company": "Optimal Workshop",
@@ -17,7 +17,7 @@
   },
   {
     "id": 3,
-    "projectTitle": "NCEA Website",
+    "projectTitle": "Resources and Guidance for the NCEA Assessment Standards",
     "slug": "moe-ncea-website",
     "projectImage": "/images/portfolio/moe-ncea-cover.webp",
     "company": "Ministry of Education (New Zealand)",
@@ -25,7 +25,7 @@
   },
   {
     "id": 4,
-    "projectTitle": "Ritmo",
+    "projectTitle": "A personal library and progress tracker for Latin dancers",
     "slug": "ritmo",
     "projectImage": "/images/portfolio/ritmo-cover.webp",
     "company": "Personal Project",

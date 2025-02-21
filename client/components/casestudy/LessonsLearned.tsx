@@ -1,8 +1,13 @@
 import React from 'react'
 
+interface Lesson {
+  heading: string
+  description: string
+}
+
 interface LessonsLearnedSectionProps {
   title: string
-  lessons: string[]
+  lessons: Lesson[]
 }
 
 const LessonsLearnedSection: React.FC<LessonsLearnedSectionProps> = ({
@@ -10,28 +15,25 @@ const LessonsLearnedSection: React.FC<LessonsLearnedSectionProps> = ({
   lessons,
 }) => {
   return (
-    <section className="py-24">
+    <section className="pb-24 pt-24">
+      {' '}
       <div className="container mx-auto grid max-w-4xl grid-cols-1 gap-8 px-6 sm:grid-cols-2 sm:px-8">
-        {/* Title Column */}
+        {/* Left Column - Title */}
         <div className="title-column">
-          <h2 className="text-left text-3xl font-bold text-gray-900">
-            {title}
-          </h2>
+          <h2 className="text-3xl font-bold text-gray-900">{title}</h2>
         </div>
 
-        {/* Lessons Column */}
-        <div className="lessons-column">
-          <ul className="list-disc space-y-4 pl-6 text-left text-lg text-gray-700">
-            {lessons.map((lesson, index) => (
-              <li
-                key={index}
-                className="ml-4" // Adds proper indentation for the lines
-                style={{ textIndent: '-0.1em', paddingLeft: '1em' }} // Ensures alignment with the first line
-              >
-                {lesson}
-              </li>
-            ))}
-          </ul>
+        {/* Right Column - Lessons List */}
+        <div className="lessons-column space-y-8">
+          {' '}
+          {lessons.map((lesson, index) => (
+            <div key={index} className="lesson-item">
+              <h3 className="-mb-2 text-lg font-semibold text-gray-900">
+                {lesson.heading}
+              </h3>
+              <p className="text-gray-700">{lesson.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

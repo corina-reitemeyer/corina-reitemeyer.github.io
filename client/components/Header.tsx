@@ -98,7 +98,7 @@ export default function Header() {
             </li>
             <li>
               <a
-                href="/files/CV.pdf"
+                href="/files/Corina-Reitemeyer-CV-2025.pdf"
                 className="nav-item"
                 download="CV_2024"
                 onClick={() => setIsMobileMenuOpen(false)}

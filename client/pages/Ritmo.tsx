@@ -17,6 +17,7 @@ const Ritmo = () => {
     <div>
       {/* Hero Section */}
       <Hero
+        hook="Imagine a dance app that remembers your moves better than you do."
         project={{
           id: 1,
           projectTitle:
@@ -24,13 +25,13 @@ const Ritmo = () => {
           slug: 'ritmo',
           projectSubtitle: 'Ritmo - Latin Dance Move Library',
           overview:
-            'Ritmo is an interactive app designed to help dancers organise, review, and track their progress on Latin dance moves. Through video tutorials and step-by-step guides, it supports dancers looking to practice between live classes and reinforce what they’ve learned.',
+            'Ritmo is an interactive app designed to help Latin dancers organize, review, and track their progress on dance moves. Whether refining technique, reinforcing lessons, or practicing between live classes, Ritmo provides step-by-step guides and video tutorials to support dancers at every level.',
           objectiveGoals: [
-            'Design an intuitive, easy-to-use interface that encourages engagement.',
-            'Develop a structured dance move library that breaks down steps clearly for different skill levels.',
-            'Make navigation and search effortless so users can quickly find the moves they need.',
-            'Incorporate feedback from dancers to refine and improve the experience.',
-            'Ensure instructions cater to both lead and follow dancers.',
+            'Create an intuitive, easy-to-use interface that encourages dancers to stay engaged and motivated.',
+            'Develop a structured dance move library, breaking down steps clearly for different skill levels.',
+            'Streamline navigation and search, allowing users to quickly find and review moves when they need them.',
+            'Integrate dancer feedback to refine and enhance the experience based on real-world usage.',
+            'Ensure inclusive instructions for both lead and follow dancers, making learning accessible for all roles.',
           ],
           role: 'UI/UX Designer & Full Stack Web Developer',
           company: 'Personal Project',
@@ -52,11 +53,13 @@ const Ritmo = () => {
       <DiscoverySection
         subtitle="Discovery"
         title="Interviews & Observations"
-        description="During dance practicas and socials, I noticed a common challenge: leads often struggle to recall and recreate specific moves. They usually describe them based on a distinctive feature rather than the official name.
+        description="How do you practice when you can’t remember the name of the move?
 
-Since most Latin dance moves are named in Spanish, New Zealand-based students often have difficulty searching for them online—even if they remember the correct name. This creates a barrier to self-learning outside of classes.
+During dance practicas and socials, I noticed a common challenge: leads often struggle to recall and recreate specific moves. Instead of using official names, they typically describe moves based on a distinctive feature, making it harder to search for them later.
 
-To dig deeper, I spoke with students and teachers across different skill levels and backgrounds to understand the challenges they face and identify common patterns.
+Adding to this challenge, most Latin dance moves are named in Spanish, which can be a barrier for New Zealand-based students—even when they remember the correct name. This limits self-learning outside of class and makes online searchability difficult.
+
+To dig deeper, I conducted interviews with students and teachers across different skill levels and backgrounds. These conversations helped uncover common pain points and patterns, shaping Ritmo’s approach to organising and labeling dance moves for better recall and accessibility.
 
 "
         variant="tabbed"
@@ -84,26 +87,26 @@ To dig deeper, I spoke with students and teachers across different skill levels 
       {/* Primary Users Section */}
       <PrimaryUsersSection
         subtitle="Discovery"
-        title="Primary Users"
-        description="As I am frequently surrounded by dancers, I conducted semi-informal interviews with a few students in the community as well as fellow instructors, who shared their experiences with me. I consolidated their goals, needs, and pain points into detailed user personas and created user journey flowcharts."
+        title="Primary Users: From Newcomers to Pros"
+        description="Being actively involved in the dance community, I conducted semi-informal interviews with students, instructors, and social dancers to gain deeper insights into their goals, challenges, and motivations. By consolidating their feedback into detailed user personas and journey flowcharts, I identified key user groups and their unique needs:"
         principles={[
           {
             number: 1,
             title: 'Students',
             description:
-              'Students aim to develop their skills, track their improvement, and gain confidence in their dancing journey. They range from absolute beginners to seasoned community members.',
+              'Seeking skill development, progress tracking, and confidence-building in their dance journey. This group ranges from absolute beginners to seasoned community members looking to refine their technique.',
           },
           {
             number: 2,
             title: 'Teachers',
             description:
-              'Teachers focus on helping students progress, structuring lessons efficiently, and adapting their teaching to different skill levels. This group includes trainee instructors to senior teachers.',
+              'Focused on helping students progress, structuring lessons efficiently, and adapting instruction to different skill levels. This group includes trainee instructors to senior teachers who shape the learning experience.',
           },
           {
             number: 3,
             title: 'Social Dancers',
             description:
-              'Social dancers are not regular students but are engaged in the social dance scene. They value connection, exploration, and the freedom to develop their skills at their own pace.',
+              'Not regular students but actively engaged in the social dance scene. They prioritise connection, exploration, and the freedom to improve at their own pace outside of structured lessons.',
           },
         ]}
         backgroundColor="#9EEEFF" // Blue background for "Discovery"
@@ -115,7 +118,7 @@ To dig deeper, I spoke with students and teachers across different skill levels 
       <InsightsSection
         subtitle="Discovery"
         title="What is holding the dance students back?"
-        description="Through in-depth interviews with students, teachers, and social dancers, I uncovered key barriers that impact their learning and growth. Students struggle to track progress and reference moves because there’s no structured way to log their practice outside of class. Teachers need more efficient ways to plan lessons and share knowledge, as current methods rely on fragmented resources. Social dancers seek ways to stay engaged with the community, but without regular classes, it’s harder to stay connected and keep improving. These insights shape Ritmo’s design, ensuring it provides practical, user-focused solutions that empower every dancer’s journey."
+        description="Learning doesn’t stop when class ends, but without the right tools, progress stalls. Through in-depth interviews with students, teachers, and social dancers, I uncovered key barriers that make it difficult for them to improve outside of class. Students struggle to track progress and reference moves, as there’s no structured way to log their practice. Teachers rely on fragmented resources, making lesson planning and knowledge-sharing inefficient. Social dancers lack ways to stay engaged with the community, making it harder to stay connected and keep improving without regular classes. These insights shaped Ritmo’s design, ensuring it delivers practical, user-focused solutions that empower every dancer’s journey."
         insights={[
           {
             id: 1,
@@ -171,22 +174,24 @@ To dig deeper, I spoke with students and teachers across different skill levels 
       <Ideation
         title="Discovery"
         subtitle="Ideating Based on Insights"
-        description="Based on my findings and observations, I brainstormed features to address the key challenges faced by students and instructors, particularly the lack of accessible tools during classes and prácticas."
+        description="Bridging the gap between learning and practice with smarter tools.
+
+Drawing from my findings and observations, I brainstormed features to tackle the biggest pain points faced by students and instructors—particularly the lack of accessible tools during classes and prácticas."
         points={[
           {
             title: 'Quick Access',
             description:
-              'Students often needed fast access to learning materials, making save functionality and a mobile-first design essential for usability.',
+              'Students needed fast access to learning materials, making save functionality and a mobile-first design essential for usability.',
           },
           {
             title: 'Visual Material',
             description:
-              'A structured video library was proposed to help users reference and review moves easily, reducing reliance on memory alone.',
+              'A structured video library was proposed to help users reference and review moves easily, reducing their reliance on memory alone.',
           },
           {
             title: 'Descriptive Search',
             description:
-              'Since users struggled to recall move names in class, a descriptive search feature was introduced to allow lookups based on key characteristics.',
+              'Since users struggled to recall move names in class, a descriptive search feature was introduced, allowing lookups based on key characteristics instead of official names.',
           },
         ]}
         titleColor={'ritmo'}
@@ -195,26 +200,26 @@ To dig deeper, I spoke with students and teachers across different skill levels 
       {/* Principles Section */}
       <PrincipleSection
         subtitle="Goals & Strategy"
-        title="Principles"
-        description="These principles were established to address the unique challenges faced by students and instructors in a dynamic learning environment. They ensure the app remains practical, intuitive, and adaptable—whether in lessons, prácticas, or self-paced practice."
+        title="Guiding Principles"
+        description="These principles were established to address the unique challenges faced by students and instructors. They ensure the app remains practical, intuitive, and adaptable, supporting dancers whether in lessons, prácticas, or self-paced practice."
         principles={[
           {
             number: 1,
             title: 'Accessibility & Usability First',
             description:
-              'Prioritising accessibility ensures the app is easy to navigate and effective for all users, regardless of their tech proficiency or physical abilities. Usability focuses on intuitive interactions that support real-world scenarios, like lessons, prácticas, or on-the-go learning. The goal is to enhance the user experience without adding complexity—ensuring no dancer is left behind.',
+              'A dance app should be easy to navigate and effective for all users, regardless of tech proficiency or physical abilities. This principle ensures intuitive interactions that support real-world scenarios—from lessons to prácticas and on-the-go learning. The goal is to enhance the experience without adding complexity, making sure no dancer is left behind.',
           },
           {
             number: 2,
-            title: 'Support for Active Learning',
+            title: 'Active Learning & Retention',
             description:
-              'Encouraging hands-on practice for better retention. Active learning is at the heart of skill mastery. This principle emphasises features that engage users in real practice, reinforce learning through interactive feedback, and support the real-world application of techniques. By designing for active participation, the app helps users develop confidence and long-term proficiency.',
+              'Dance is learned by doing. Hands-on practice leads to better retention, so the app prioritises features that engage users in real practice, provide interactive feedback, and support the real-world application of techniques. By designing for active participation, Ritmo helps dancers build confidence and long-term proficiency.',
           },
           {
             number: 3,
             title: 'Scalability & Flexibility',
             description:
-              'A dynamic learning environment demands a product that adapts to evolving needs. This principle focuses on creating a robust, future-ready foundation, allowing for new features, user-generated content, and expanding functionality over time. Scalability ensures long-term sustainability, while flexibility keeps the app relevant in an ever-changing ecosystem.',
+              'A dynamic learning environment requires a product that adapts to evolving needs. This principle focuses on building a future-ready foundation, allowing for new features, user-generated content, and expanded functionality over time. Scalability ensures long-term sustainability, while flexibility keeps the app relevant in an ever-changing dance ecosystem.',
           },
         ]}
         reversedLayout={true} // Switches the layout order
@@ -225,7 +230,11 @@ To dig deeper, I spoke with students and teachers across different skill levels 
       <CompetitiveAnalysisSection
         subtitle="Exploration"
         title="Dance Libraries Analysis"
-        description="To understand the existing landscape of resources available to dance enthusiasts, I conducted a detailed competitive analysis of similar platforms. While some offered extensive dance libraries, only one included Cuban Salsa content—highlighting a significant gap in the market. Beyond content limitations, many platforms lacked intuitive search functionality and effective filtering options, making it difficult for users to find specific moves. These findings revealed key opportunities for Ritmo to deliver a more focused, user-friendly, and comprehensive solution, specifically tailored to the needs of Cuban Salsa dancers and instructors."
+        description="The right tools for Cuban Salsa dancers are hard to find—so I set out to identify why.
+
+To understand the existing landscape of dance resources, I conducted a detailed competitive analysis of similar platforms. While some offered extensive dance libraries, only one included Cuban Salsa content—highlighting a significant gap in the market.
+
+Beyond content limitations, many platforms lacked intuitive search functionality and effective filtering, making it difficult for users to find specific moves. These findings revealed key opportunities for Ritmo to stand out by delivering a focused, user-friendly, and comprehensive solution, specifically tailored to the needs of Cuban Salsa dancers and instructors."
         image={{
           src: '/images/process/ritmo/ritmo-competitors.webp',
           alt: 'Analysis of dance libraries',
@@ -237,7 +246,9 @@ To dig deeper, I spoke with students and teachers across different skill levels 
       <UserFlow
         overheadTitle="Exploration"
         title="User Flows"
-        description="User flows are carefully designed to create a seamless experience for every type of dancer—from beginners to advanced students and instructors. By mapping out detailed user journeys, I ensure that the app accommodates different learning styles, skill levels, and real-world use cases. These flows help address key usability and accessibility challenges, making it easier for users to navigate, engage with content, and achieve their goals efficiently. They also ensure that Ritmo’s design supports real-world learning and teaching scenarios, creating an intuitive, structured experience."
+        description="Ritmo’s user flows are carefully designed to create a seamless experience for every type of dancer—from beginners to advanced students and instructors. By mapping out detailed user journeys, I ensured the app accommodates different learning styles, skill levels, and real-world use cases.
+
+These flows address key usability and accessibility challenges, making it easier for users to navigate, engage with content, and track their progress efficiently. They also ensure Ritmo supports real-world learning and teaching scenarios, creating an intuitive, structured experience that helps dancers build skills with confidence."
         images={[
           {
             path: '/images/process/ritmo/sofia-userjourney.webp',
@@ -276,7 +287,9 @@ To dig deeper, I spoke with students and teachers across different skill levels 
       <WireframesSection
         subtitle="Refinement"
         title="Wireframes"
-        description="Wireframes were a crucial step in translating research insights into a tangible design. Focusing on simplicity and user-centered functionality, they defined the app’s core structure and navigation, ensuring an intuitive experience for students, instructors, and social dancers. Each screen was thoughtfully designed to prioritise accessibility, effective filtering, and seamless content discovery—directly addressing the gaps identified in the competitive analysis and discovery phase. These wireframes provided a strong foundation for refining the app’s usability and aligning it with the needs of Cuban Salsa enthusiasts."
+        description="Wireframes were a crucial step in translating research insights into a tangible design. Focusing on simplicity and user-centered functionality, they shaped the app’s core structure and navigation, ensuring an intuitive experience for students, instructors, and social dancers.
+
+Each screen was thoughtfully designed to prioritise accessibility, intuitive filtering, and seamless content discovery—directly addressing gaps identified in the competitive analysis and discovery phase. These wireframes provided a strong foundation for refining the app’s usability and aligning it with the needs of Cuban Salsa enthusiasts, ensuring the experience felt smooth, natural, and purpose-driven."
         image={{
           src: '/images/process/ritmo/ritmo-wireframes.webp',
           alt: 'Analysis of dance libraries',
@@ -297,13 +310,41 @@ To dig deeper, I spoke with students and teachers across different skill levels 
       <LessonsLearnedSection
         title="Lessons Learned"
         lessons={[
-          'Early testing uncovered critical pain points, allowing for quick iterations and refinements',
-          'Regular conversations with users ensured alignment between user needs and design priorities.',
-          'Understanding niche user needs—like those of Cuban Salsa dancers—reinforced the value of targeted solutions.',
-          'Streamlined navigation improved content discovery, reducing frustration and enhancing usability.',
-          'Addressing gaps in competitive platforms solidified Ritmo’s unique value proposition.',
-          'Scalability was built into the design, preparing the app for future growth and feature expansion (more dance styles, moves etc).',
-          'Testing in real-world scenarios ensured that the app is practical and valuable for users.',
+          {
+            heading: 'Early Testing Drives Smarter Design',
+            description:
+              'User testing uncovered critical pain points early in the process, enabling quick iterations and refinements that improved usability.',
+          },
+          {
+            heading: 'User Conversations Ensure the Right Focus',
+            description:
+              'Regular engagement with dancers kept the design aligned with real user needs, ensuring features were practical and valuable.',
+          },
+          {
+            heading: 'Niche Needs Require Tailored Solutions',
+            description:
+              'Designing for Cuban Salsa dancers highlighted the importance of targeted solutions that address specific learning challenges.',
+          },
+          {
+            heading: 'Intuitive Navigation Transforms User Experience',
+            description:
+              'Streamlined navigation improved content discovery, reducing frustration and making it easier for dancers to find what they need.',
+          },
+          {
+            heading: 'Competitive Gaps Create Unique Opportunities',
+            description:
+              'By addressing gaps in existing platforms, Ritmo established a distinct value proposition that set it apart in the market.',
+          },
+          {
+            heading: 'Scalability Future-Proofs the Product',
+            description:
+              'The design was built with flexibility in mind, allowing for easy expansion into more dance styles, moves, and features.',
+          },
+          {
+            heading: 'Real-World Testing Validates Practicality',
+            description:
+              'Testing in real dance settings confirmed that the app supports real-world learning and enhances skill development.',
+          },
         ]}
       />
 

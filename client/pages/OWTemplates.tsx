@@ -19,17 +19,18 @@ const OWTemplates = () => {
     <div>
       {/* Hero Section */}
       <Hero
+        hook="Setting up research shouldn’t be a barrier to insights. The right study combinations can unlock richer findings, but without guidance, researchers risk wasted effort and incomplete data."
         project={{
           id: 1,
           projectTitle: 'Streamlining Workflows with Ready-Made Studies',
           slug: 'ow-templates',
           projectSubtitle: 'Optimal Workshop Templates',
-          overview: `Optimal Workshop Templates is a collection of pre-built templates designed to streamline user research and information architecture workflows. The MVP was developed to educate users on best practices while reducing setup time, catering to both novice and experienced researchers using Optimal Workshop's tools.`,
+          overview: `Optimal Workshop Templates is a collection of pre-built templates designed to streamline user research and information architecture workflows. The MVP was developed to reduce setup time, guide researchers in selecting effective study combinations, and educate users on best practices. By simplifying setup and promoting smarter research strategies, the system ensures both novice and experienced researchers can gather more meaningful, actionable insights.`,
           objectiveGoals: [
-            'Provide pre-built templates that demonstrate best practices in user research and information architecture.',
-            'Enhance user learning with well-documented templates that guide users through effective techniques.',
+            'Provide pre-built templates that showcase best practices in user research and information architecture.',
+            'Enhance user learning with well-documented templates that guide users through effective research techniques.',
             'Speed up the setup process by offering customisable templates that reduce manual configuration for experienced users.',
-            'Ensure versatility by designing templates that adapt to a wide range of project needs, from simple studies to complex research initiatives.',
+            'Ensure versatility by designing templates that adapt to a wide range of project needs, from quick studies to complex research initiatives.',
           ],
           role: 'Product Designer',
           company: 'Optimal Workshop',
@@ -49,19 +50,19 @@ const OWTemplates = () => {
       <DiscoverySection
         subtitle="Discovery"
         title="First Phase Research"
-        description="When I joined the team, two research projects were already underway. While I didn’t lead these initiatives, they provided valuable insights that helped me quickly get up to speed on the product, its users, and business goals. During this phase, my focus was on understanding core challenges and opportunities within the product. By exploring IA use cases and customer value perceptions, I identified key insights that shaped the direction of the Templates project. This early research accelerated my onboarding and allowed me to make informed design decisions as the project progressed."
+        description="When I joined the team, two research projects were already in progress. While I didn’t lead these initiatives, they provided critical insights into user needs, pain points, and business goals, allowing me to ramp up quickly. This research helped shape the Templates project, ensuring it addressed real user challenges and improved the research experience. By analysing IA use cases and customer value perceptions, I identified key opportunities to enhance usability, refine template offerings, and align the system with actual research workflows. These early insights not only accelerated my onboarding but also shaped key design decisions, ensuring the Templates project was grounded in real user needs and contributed to a more effective research process."
         variant="threeColumns"
         subtitleColor="ow"
         threeColumnData={[
           {
             title: 'IA Use Cases',
             description:
-              'One research initiative focused on identifying the types of user research projects customers were conducting or needed support with. These insights later shaped the template use cases, ensuring that the studies offered were practical, relevant, and aligned with real customer workflows.',
+              'One research initiative focused on how customers conducted user research and where they needed support. These insights directly informed the template structure, ensuring the offerings were relevant, actionable, and seamlessly integrated into research workflows—reducing setup time and improving study effectiveness.',
           },
           {
             title: 'Value of Customer',
             description:
-              'The second initiative examined how customers perceived the product’s value, uncovering critical opportunities and pain points. Many users felt a disconnect between what they were paying for and the benefits they received, highlighting a need for better alignment between product value, pricing, and user expectations. This research accelerated my onboarding and provided a strong foundation for the Templates project, allowing me to make informed design decisions as the project progressed.',
+              'The second study examined how users perceived the product’s value, surfacing gaps between cost and expected benefits. Many users struggled to see how the product met their needs, highlighting the need for clearer value communication and improved feature alignment. This understanding helped refine the Templates project to better support user goals.',
           },
         ]}
       />
@@ -69,20 +70,20 @@ const OWTemplates = () => {
       {/* Primary Users Section */}
       <PrimaryUsersSection
         subtitle="Discovery"
-        title="Primary Users"
-        description="During the discovery phase, research identified the primary users as professionals working in product, marketing, and related fields, including UX designers, researchers, content strategists, and information architects. The findings also revealed insights into how practitioners approached Information Architecture — whether consciously or not. To deepen my understanding of how users set up their studies and the challenges they faced, I consolidated these insights into detailed journey flowcharts, mapping their workflows and identifying key pain points. Understanding these differences was critical in shaping the experience, ensuring that both new and experienced users could navigate the tool efficiently."
+        title="Primary Users: Designing for Different Skill Levels"
+        description="Not all researchers work the same way—but the right system should support them all. During the discovery phase, research identified product, marketing, and UX professionals—including UX designers, researchers, content strategists, and information architects—as the primary users. While their backgrounds varied, the findings uncovered a key insight: users approached Information Architecture in different ways—sometimes without even realising it. To bridge these gaps, I mapped detailed journey flowcharts, visualising how different users set up studies, where they faced challenges, and what improvements could streamline their workflows. This ensured both beginners and experienced users could navigate the tool efficiently without friction."
         principles={[
           {
             number: 1,
             title: 'User Research Skills',
             description:
-              'Users range from beginners learning the fundamentals of research to experienced professionals refining their methodologies. The product needed to accommodate both groups, ensuring accessibility for newcomers while providing depth and flexibility for advanced users.',
+              'Users ranged from beginners learning research fundamentals to experienced professionals refining their methodologies. The product needed to be intuitive for newcomers while providing depth and flexibility for advanced users.',
           },
           {
             number: 2,
             title: 'Software Proficiency',
             description:
-              'Users also varied in their familiarity with the tool—some were just getting started, while others were long-term users looking for advanced features and optimisations. The challenge was to create an experience that supported onboarding while allowing experienced users to work efficiently.',
+              'Users also varied in familiarity with the tool—some were just starting out, while others were long-term users seeking advanced features and optimisations. The challenge was to design an experience that supported smooth onboarding without slowing down experienced users.',
           },
         ]}
         backgroundColor="#FFEAA1"
@@ -93,9 +94,11 @@ const OWTemplates = () => {
       {/* Insights Section */}
       <InsightsSection
         subtitle="Discovery"
-        title="What is holding the research practitioners back?"
+        title="What’s Holding Research Practitioners Back?"
         subtitleColor="ow"
-        description="During the discovery phase, we identified key barriers that research practitioners face in their workflows. Some practitioners struggle with where to begin, lacking structured guidance, while others are locked into rigid ways of working, making it difficult to adapt or experiment with new methods. Additionally, many practitioners only engage with single studies, rather than leveraging multiple research methods together to generate more comprehensive and actionable insights. These findings highlight the need for tools and strategies that support both novice and experienced practitioners, enabling more flexible, scalable, and effective research workflows."
+        description="Great research starts with the right approach—but many practitioners struggle to set up studies that truly drive impact. During the discovery phase, we identified key barriers limiting research effectiveness. Some practitioners struggle with where to begin, lacking structured guidance. Others are locked into rigid workflows, making it difficult to adapt or experiment with new methods. Additionally, many practitioners rely on single studies rather than combining multiple research methods, limiting the depth of their insights. These findings highlight the need for tools and strategies that empower both novice and experienced researchers—enabling more flexible, scalable, and effective workflows.
+
+"
         insights={[
           {
             id: 1,
@@ -118,7 +121,7 @@ const OWTemplates = () => {
         subtitle="Opportunity Space"
         title="Defining the Problem and Opportunities"
         subtitleColor="ow"
-        description="We identified key opportunities to streamline research workflows, improve accessibility to insights, and increase the adoption of standardised research templates across teams. By addressing these challenges, we aimed to make research more efficient and scalable, ensuring both novice and experienced practitioners could benefit. Prior to my involvement, the Product Owner and Information Architect had already explored the idea of templates at a high level, framing it within the broader business goals, which aligned with the findings in the research. Building on their initial vision, I further refined the approach—translating it into a structured, user-centered design that aligned with both product strategy and user needs. To measure success, our team established key metrics to track adoption, efficiency, and impact after the MVP launch:"
+        description="Making research more efficient starts with removing friction—both in workflows and accessibility to insights. We identified key opportunities to streamline research workflows, improve access to insights, and increase adoption of standardised research templates across teams. Addressing these challenges meant creating a more efficient, scalable system that benefited both novice and experienced practitioners. Prior to my involvement, the Product Owner and Information Architect had already explored templates at a high level, aligning them with broader business goals. Building on their initial vision, I refined the approach—translating it into a structured, user-centered design that balanced product strategy with real user needs. To measure success, our team established key metrics to track adoption, efficiency, and impact after the MVP launch."
         kpis={[
           {
             value: '< 10',
@@ -139,26 +142,26 @@ const OWTemplates = () => {
       <PrinciplesSection
         subtitle="Goals & Strategy"
         subtitleColor="ow"
-        title="Principles"
-        description="These principles were crafted to address the specific challenges users face when working with templates in a flexible, multi-study research setting. By emphasising simplicity, adaptability, and intuitive organisation, the goal is to help users seamlessly navigate, learn, and apply the tools to enhance their workflows and achieve better research outcomes."
+        title="Guiding Principles"
+        description="Creating an effective research workflow isn’t just about providing templates—it’s about making them intuitive, adaptable, and easy to discover. These principles were designed to eliminate friction, support flexibility, and help users seamlessly integrate templates into their research process, ensuring both novice and experienced practitioners can work efficiently."
         principles={[
           {
             number: 1,
             title: 'User-Centred Simplicity',
             description:
-              'Making research tools easy to learn and apply. Simplicity ensures that users can quickly grasp the tools and integrate them into a multi-study workflow without unnecessary friction.',
+              'Making research tools easy to learn and apply. A simple, intuitive experience ensures users can grasp the tools quickly and integrate them into a multi-study workflow—without friction.',
           },
           {
             number: 2,
             title: 'Flexibility and Adaptibility',
             description:
-              'Designing for growth and iteration. The MVP was built with scalability in mind, allowing the system to evolve as we gain insights into how users interact with templates in practice.',
+              'Designing for growth and iteration. The MVP was built for scalability, allowing the system to evolve as we gain insights into real user interactions with templates.',
           },
           {
             number: 3,
             title: 'Discoverability',
             description:
-              'Helping users find the right template efficiently. Ensuring that users can quickly locate and select the best template for their research needs—reducing setup time and improving usability.',
+              'Helping users find the right template effortlessly. Clear organisation ensures users can quickly locate, select, and apply the best template for their research—reducing setup time and improving usability.',
           },
         ]}
         reversedLayout={true}
@@ -169,7 +172,7 @@ const OWTemplates = () => {
         subtitle="Exploration"
         subtitleColor="ow"
         title="Template features in other products"
-        description="To better understand how to support research practitioners effectively, I conducted a competitive analysis of similar tools commonly used in daily workflows, including productivity apps, project management platforms, and design tools. This analysis provided key insights into how workflows and best practices are introduced and adopted by users. By examining how other products guide, educate, and streamline user onboarding, I was able to design a system that aligns with user expectations while enhancing their experience within our platform."
+        description="How do the best tools introduce and integrate templates seamlessly into user workflows? To better support research practitioners, I conducted a competitive analysis of similar tools commonly used in daily workflows—spanning productivity apps, project management platforms, and design tools. This research revealed how top products guide, educate, and streamline user onboarding, offering valuable insights into workflow adoption and best practices. By analysing how these platforms introduce templates, I designed a system that aligns with user expectations, reduces friction, and enhances the research experience within our platform."
         image={{
           src: '/images/process/ow/ow-competitors.webp',
           alt: 'Analysis of dance libraries',
@@ -180,7 +183,7 @@ const OWTemplates = () => {
       <UserFlow
         overheadTitle="Exploration"
         title="User Flow"
-        description="User flows were carefully designed to map how practitioners interact with templates, ensuring an intuitive and efficient experience. These flows outline key touchpoints—from discovering templates to integrating them into their workflows—addressing usability challenges and promoting seamless navigation. By focusing on accessibility, logical structure, and ease of use, the flows support users in maximising the value of templates while maintaining flexibility for different research approaches."
+        description="A well-designed user flow ensures templates aren’t just available—but effortlessly integrated into research workflows. User flows were designed to map how practitioners interact with templates, ensuring an intuitive, efficient experience. These flows define key touchpoints—from discovering templates to seamlessly integrating them into workflows—while addressing usability challenges. By focusing on accessibility, logical structure, and ease of use, the flows help users maximise the value of templates, streamline research, and adapt to different methodologies with flexibility."
         images={[
           {
             path: '/images/process/ow/ow-sitemap.webp',
@@ -197,7 +200,7 @@ const OWTemplates = () => {
         subtitle="Refinement"
         subtitleColor="ow"
         title="Wireframes"
-        description="These wireframes were designed to integrate a new feature into a legacy product, balancing user needs with technical constraints. A key challenge was ensuring that the new component could be seamlessly added without disrupting existing functionality—especially given that different sections of the product were built on multiple frameworks. To overcome this, the wireframing process required thoughtful planning and collaboration with engineering to ensure that the design was both user-friendly and technically feasible. The goal was to introduce new functionality without requiring a complete page rebuild, maintaining efficiency while improving usability."
+        description="Integrating new functionality into a legacy product requires more than just design—it demands strategic problem-solving. These wireframes were designed to seamlessly integrate a new feature into a legacy product while balancing user needs and technical constraints. A key challenge was ensuring the new component fit within an existing system built on multiple frameworks—without disrupting functionality. To address this, I worked closely with engineering to ensure the design was user-friendly, technically feasible, and adaptable without requiring a full page rebuild. This approach maintained efficiency, minimised development overhead, and enhanced usability without compromising existing workflows"
         image={{
           src: '/images/process/ow/ow-wireframes.webp',
           alt: 'Wireframes for user interaction',
@@ -213,11 +216,11 @@ const OWTemplates = () => {
 
       {/* Research Section */}
       <ResearchSection
-        title="A/B Testing"
+        title="A/B Testing the MVP"
         subtitle="Second-Phase Research"
         subtitleColor="ow"
-        description="To validate the impact of the MVP, we launched the feature to a small subgroup of users, testing six multi-study project templates alongside single-study versions from each project. This allowed us to assess user preference and adoption behaviour. The findings highlighted the need to further investigate usage patterns and refine strategies to drive deeper engagement with launched studies."
-        result="Users gravitated toward multi-study templates, leading to an increased adoption rate. However, the launched-study rate per customer remained unchanged, indicating that while users embraced the templates, it did not immediately translate into more studies being conducted."
+        description="Do multi-study templates encourage more research, or just easier setup? We put it to the test. To validate the MVP’s impact, we launched the feature to a small subgroup of users, testing six multi-study project templates against their single-study counterparts. This experiment helped us assess user preferences and adoption behavior, revealing key insights into engagement."
+        result="Users gravitated toward multi-study templates, leading to higher adoption rates. However, the number of launched studies per customer remained unchanged, suggesting that while templates streamlined setup, they didn’t immediately drive an increase in research activity. These findings highlighted the need to further investigate usage patterns and refine engagement strategies to encourage deeper adoption."
         imageSrc="/images/Lightbulb.webp"
         imageAlt="Mockup of research process"
       />
@@ -227,58 +230,58 @@ const OWTemplates = () => {
         subtitle="User Interviews & Click Testing"
         subtitleColor="ow"
         title="How Practicioners used the templates"
-        description="A/B testing confirmed that the template placement captured user curiosity and engagement but didn’t drive immediate usage. To understand why, I partnered with a User Researcher to investigate. We launched a survey to identify who was using the feature, why, and whether they could easily find it. At the same time, we gathered insights from customer support and feedback channels. The survey helped us select a diverse group of participants for follow-up interviews."
-        descriptionSecondary="Through interviews and usability tasks, we observed how users discovered and interacted with templates. While they found them valuable, the MVP lacked the flexibility needed to fully align with their research methods. Instead of using templates as-is, most treated them as inspiration, customising their own projects. This revealed an opportunity to make templates more adaptable in future iterations. Our research identified three primary ways practitioners engaged with templates:"
+        description="Engagement was high—but were templates truly meeting users’ needs? We set out to find out. After observing strong interest in templates during A/B testing, we wanted to understand how users interacted with them in real workflows. Partnering with a User Researcher, we launched a survey to uncover who was using templates, why, and whether they were easy to find. Insights from customer support and feedback channels further shaped our investigation."
+        descriptionSecondary="Follow-up interviews and usability tasks revealed that while users saw value in templates, they rarely used them as-is. Instead, most treated them as inspiration, adapting them to better fit their specific research methods. The findings showed that rigidity limited adoption, reinforcing the need for more flexible, customisable templates. Through this research, we identified three primary ways practitioners engaged with templates:"
         principles={[
           {
             number: 1,
             description:
-              'Users referenced templates as learning resources, helping them structure their research with best practices in mind.',
+              'Learning Resource – Users referenced templates as structured guidance, using best practices to inform, rather than dictate, their approach.',
           },
           {
             number: 2,
             description:
-              'Practitioners used templates to streamline project setup, reducing manual work and repetitive configurations. However, challenges emerged: limited flexibility prevented full customisation, many used templates as inspiration rather than direct tools, and contextual gaps left users needing more guidance to adapt templates to different methodologies. These insights underscored the need for more adaptable, user-driven solutions in future iterations.',
+              'Project Setup Tool – Practitioners streamlined setup with templates but found limited flexibility frustrating—many preferred to customise their own projects rather than rely on pre-defined structures. Some struggled with contextual gaps, needing more guidance to tailor templates to different methodologies.',
           },
           {
             number: 3,
             description:
-              'Senior researchers leveraged templates as recommendations for junior colleagues, ensuring alignment with established research methodologies.',
+              'Mentorship & Standardisation – Senior researchers recommended templates to junior colleagues, using them to establish consistent research practices across teams.',
           },
         ]}
         reversedLayout={false}
       />
 
       <AchievementsSection
-        title="Achievements"
+        title="Key Achievements"
         achievements={[
           {
-            title: 'Contributed to research initiative:',
+            title: 'Shaping Customer Education Strategy',
             description:
-              'Helped the company gain key insights on how customer education can be effectively implemented.',
+              'Contributed to a research initiative that helped the company gain key insights into effective customer education implementation.',
           },
           {
-            title: 'Owning the first IA-focused feature:',
+            title: 'Pioneering the First IA-Focused Feature',
             description:
-              'Designed the company’s first IA-focused feature following the introduction of the new product strategy to be an industry leader in the Information Architecture space.',
+              'Designed the company’s first IA-focused feature, aligning with the new product strategy to position the company as an industry leader in Information Architecture.',
           },
           {
-            title: 'New Study details feature:',
+            title: 'Enhancing Study Documentation',
             description:
-              'Provided practitioners with a dedicated space to document the purpose and requirements of their studies.',
+              'Developed the New Study Details feature, providing practitioners with a dedicated space to document study purpose and requirements.',
           },
           {
-            title: 'Increased customer retention:',
+            title: 'Boosting Customer Retention',
             description:
               'Users engaged with multi-study workflows, leading to a measurable increase in retention.',
           },
           {
-            title: 'Iterative Product Thinking:',
+            title: 'Driving Iterative Product Thinking',
             description:
-              'Identified gaps in flexibility and engagement, influencing future iterations of the feature.',
+              'Identified gaps in flexibility and engagement, directly influencing future iterations of the feature.',
           },
           {
-            title: ' Data-Informed Decision Making:',
+            title: 'Leveraging Data for Impact',
             description:
               'Used research insights and A/B testing to refine the MVP and drive user adoption strategies.',
           },
@@ -289,13 +292,34 @@ const OWTemplates = () => {
       <LessonsLearnedSection
         title="Lessons Learned"
         lessons={[
-          'Templates are not a one-size-fits-all solution – While valuable, they do not solve all product challenges on their own.',
-          'Templates provide deep insights into user behavior – Observing how practitioners engage with them reveals broader patterns in product usage and needs.',
-          'Different users derive different benefits – Novices use templates for guidance, while experienced practitioners adapt them to fit their workflows.',
-          'Adoption doesn’t always mean engagement – While multi-study templates increased retention, they didn’t directly impact study launch rates, highlighting the need for further refinement to drive deeper usage.',
-          'Flexibility & customisation are key – Users need more control over templates to fully integrate them into their workflows.',
+          {
+            heading: 'Templates Are a Starting Point, Not a Complete Solution',
+            description:
+              'While templates add value, they don’t solve all research challenges on their own. Users need flexibility to tailor them to their unique workflows.',
+          },
+          {
+            heading: 'Templates Reveal Deeper User Behavior Patterns',
+            description:
+              'Observing how practitioners engage with templates provided valuable insights into broader product usage, pain points, and workflow needs.',
+          },
+          {
+            heading: 'Different Users, Different Needs',
+            description:
+              'Novices rely on templates for guidance and structure, while experienced practitioners see them as inspiration—customizing them to fit their approach.',
+          },
+          {
+            heading: 'Adoption Doesn’t Equal Engagement',
+            description:
+              'Multi-study templates increased retention, but study launch rates remained unchanged—indicating that ease of setup alone isn’t enough to drive deeper research engagement.',
+          },
+          {
+            heading: 'Flexibility & Customisation Drive Adoption',
+            description:
+              'Users need more control over templates to seamlessly integrate them into their research process, highlighting the need for adaptable, user-driven solutions.',
+          },
         ]}
       />
+
       <KeyOutcomes
         title="Product Impact & Iterations"
         outcomes={[

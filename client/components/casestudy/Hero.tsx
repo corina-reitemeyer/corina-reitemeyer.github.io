@@ -4,9 +4,10 @@ import Button from '../../components/Button' // Import the Button component
 
 interface HeroProps {
   project: Project
+  hook: string // Hook paragraph
 }
 
-const Hero: React.FC<HeroProps> = ({ project }) => {
+const Hero: React.FC<HeroProps> = ({ project, hook }) => {
   const {
     projectTitle,
     projectSubtitle,
@@ -22,7 +23,8 @@ const Hero: React.FC<HeroProps> = ({ project }) => {
   } = project
 
   return (
-    <section className="w-full bg-white pb-28">
+    <section className="w-full bg-white pb-32">
+      {' '}
       {/* Banner */}
       <div className="bg-light-blue relative flex h-full w-full items-center justify-center">
         <img
@@ -31,7 +33,7 @@ const Hero: React.FC<HeroProps> = ({ project }) => {
           className="h-full w-full object-cover"
         />
       </div>
-
+      {/* Title + Subtitle */}
       <div className="container mx-auto mt-24 flex max-w-4xl flex-col gap-6 px-6 sm:px-12 lg:px-24">
         <h1 className="-mb-2 text-5xl font-bold text-gray-900">
           {projectTitle}
@@ -40,48 +42,52 @@ const Hero: React.FC<HeroProps> = ({ project }) => {
           {projectSubtitle}
         </p>
       </div>
-
-      {/* Content */}
-      <div className="container mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-12 px-6 sm:px-12 lg:grid-cols-2 lg:px-24">
-        {/* Left Column */}
+      {/* Content Section */}
+      <div className="container mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-12 px-6 sm:px-12 lg:grid-cols-[2fr_1fr] lg:px-24">
+        {/* Left Column: Overview + Goals */}
         <div>
+          {/* Overview Section */}
           <h2 className="mb-2 text-2xl font-bold text-gray-900">Overview</h2>
+          <p className="mb-4 text-xl text-gray-500">{hook}</p>
           <p className="mb-16 text-base text-gray-700">{overview}</p>
-          <h2 className="mb-2 text-2xl font-bold text-gray-900">Goals</h2>
-          <ul className="list-disc space-y-2 pl-6 text-gray-700">
+          {/* Goals Section (Grid layout for better readability) */}
+          <h2 className="mb-4 text-2xl font-bold text-gray-900">Goals</h2>{' '}
+          {/* Added `mb-4` */}
+          <div className="mb-16 grid grid-cols-1 gap-4 md:grid-cols-2">
+            {' '}
+            {/* Increased `mb-16` */}
             {objectiveGoals.map((goal, index) => (
-              <li key={index} className="text-base">
-                {goal}
-              </li>
+              <div key={index} className="flex items-start">
+                <span className="mr-2 text-gray-500">•</span>
+                <p className="text-base text-gray-700">{goal}</p>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
 
-        {/* Right Column */}
-        <div className="rounded-lg sm:px-0 lg:px-6">
-          <div className="mb-8">
-            <h3 className="-mb-2 text-lg font-bold text-gray-900">
+        {/* Right Column: Company, Role, Date, Links */}
+        <div className="ml-8 mt-2 space-y-8 rounded-lg">
+          <div>
+            <h3 className="text-lg font-bold text-gray-900">
               Company / Client
             </h3>
             <p className="text-base text-gray-700">
               {company || 'Personal Project'}
             </p>
           </div>
-          <div className="mb-8">
-            <h3 className="-mb-2 text-lg font-bold text-gray-900">Role</h3>
+          <div>
+            <h3 className="text-lg font-bold text-gray-900">Role</h3>
             <p className="text-base text-gray-700">{role}</p>
           </div>
-          <div className="mb-8">
-            <h3 className="-mb-2  text-lg font-bold text-gray-900">Date</h3>
+          <div>
+            <h3 className="text-lg font-bold text-gray-900">Date</h3>
             <p className="text-base text-gray-700">{date}</p>
           </div>
 
           {/* Links */}
-          {githubLink || deployedSiteLink || bestAwardsSiteLink ? (
+          {(githubLink || deployedSiteLink || bestAwardsSiteLink) && (
             <div>
-              <h3 className="my-2 -mb-2 text-lg font-bold text-gray-900">
-                Links
-              </h3>
+              <h3 className="text-lg font-bold text-gray-900">Links</h3>
               <div className="space-y-4">
                 {githubLink && (
                   <Button url={githubLink} label="GitHub Repository" />
@@ -94,7 +100,7 @@ const Hero: React.FC<HeroProps> = ({ project }) => {
                 )}
               </div>
             </div>
-          ) : null}
+          )}
         </div>
       </div>
     </section>

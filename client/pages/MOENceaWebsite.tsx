@@ -50,11 +50,19 @@ const MOENceaWebsite = () => {
         backgroundImage="/images/product/moe-ncea-triangles-1.webp" // ✅ Background separate
       />
 
+      <SimpleTextSection
+        text={
+          'The NCEA Website was developed in response to the NCEA Change Programme, launched in 2019 to digitise resources and improve access to updated assessment standards. Previously, teachers had to navigate a fragmented system to find assessment criteria, new subjects, and supporting materials. This initiative aimed to streamline access, creating a single source of truth for NCEA updates. From the outset, it was clear that this website would become the Ministry’s primary communication channel between NCEA teachers and curriculum developers. To support both immediate needs and long-term digital transformation, the platform needed to be structured, accessible, and scalable—ensuring that teachers could easily find, understand, and implement the latest changes.'
+        }
+      />
+
       {/* Discovery Section */}
       <DiscoverySection
         subtitle="Discovery"
         title="Teacher workshops and it's challenges"
-        description="How do you design for teachers when direct research isn’t an option? By observing, listening, and analysing every touchpoint available. Due to business constraints, conducting direct research with teachers was not feasible, as maintaining the business-educator relationship was a priority. To work within these limitations, I leveraged observational research, attending focus groups and workshops led by assessment advisors. While I couldn’t engage directly, these sessions provided firsthand insights into teachers’ needs, concerns, and workflows. By taking a multi-faceted approach, we gathered meaningful insights while respecting business constraints, ensuring the platform was aligned with real teacher needs despite limited direct engagement. To ensure a data-driven approach, my team and I combined multiple research methods to build a deeper understanding of how teachers interacted with assessment resources:"
+        description="Due to business constraints, conducting direct research with teachers was not feasible, as maintaining the business-educator relationship was a priority. To work within these limitations, I relied on assessment advisors—many of whom were former NCEA teachers—who regularly interacted with current educators. While their insights provided valuable perspectives on teachers’ needs, concerns, and workflows, my team and I remained mindful of potential biases in secondhand reporting.
+
+To ensure a data-driven approach, we combined multiple research methods—including observational research, historical data analysis, and secondary insights—to build a more well-rounded understanding of how teachers interacted with assessment resources. This multi-faceted strategy helped us navigate research constraints while ensuring the platform was aligned with real teacher needs despite limited direct engagement."
         variant="threeColumns"
         subtitleColor="moe"
         threeColumnData={[
@@ -68,13 +76,12 @@ const MOENceaWebsite = () => {
             description:
               'Evaluated external platforms teachers previously relied on, identifying best practices and improvement areas.',
           },
+          {
+            title: 'Expert Insights',
+            description:
+              'Leveraged assessment advisors’ knowledge and firsthand experiences to understand common teacher challenges while remaining mindful of potential biases.',
+          },
         ]}
-      />
-
-      <SimpleTextSection
-        text={
-          'The NCEA Website was developed in response to the NCEA Change Programme, launched in 2019 to digitise resources and improve access to updated assessment standards. Previously, teachers had to navigate a fragmented system to find assessment criteria, new subjects, and supporting materials. This initiative aimed to streamline access, creating a single source of truth for NCEA updates. From the outset, it was clear that this website would become the Ministry’s primary communication channel between NCEA teachers and curriculum developers. To support both immediate needs and long-term digital transformation, the platform needed to be structured, accessible, and scalable—ensuring that teachers could easily find, understand, and implement the latest changes.'
-        }
       />
 
       {/* Primary Users Section */}
@@ -204,7 +211,7 @@ const MOENceaWebsite = () => {
         subtitle="Exploration"
         subtitleColor="moe"
         title="Previous NCEA resources and guidelines"
-        description="Before designing a better system, we needed to understand the gaps in the old one. To better understand how teachers accessed NCEA standards and resources, I analyzed existing platforms frequently used by educators. This research revealed critical gaps in discoverability, accessibility, and content structure, directly shaping the approach for a more intuitive and efficient platform tailored to teachers’ needs."
+        description="Before designing a better system, we needed to understand the gaps in the old one. To better understand how teachers accessed NCEA standards and resources, I analysed existing platforms frequently used by educators. This research revealed critical gaps in discoverability, accessibility, and content structure, directly shaping the approach for a more intuitive and efficient platform tailored to teachers’ needs."
         image={{
           src: '/images/process/moe-ncea/moe-ncea-competitor.webp',
           alt: 'TKI and NZQA are two of the most widely used official websites for NCEA standards prior to the NCEA Education website',
@@ -220,7 +227,7 @@ const MOENceaWebsite = () => {
       <UserFlow
         overheadTitle="Exploration"
         title="User Flows"
-        description="A well-structured platform means less searching and more learning. I designed the NCEA website sitemap to provide a clear, intuitive structure, ensuring that teachers and Ministry staff could quickly navigate key resources. The information architecture incorporated both the Māori and English curriculums, structuring content to respect and support both languages while maintaining seamless accessibility. To enhance usability, the sitemap prioritised high-impact areas such as curriculum updates, teaching materials, and support tools, reducing friction in content discovery. By structuring content effectively, the website streamlined navigation, improved accessibility, and created a seamless user experience, ensuring educators could easily find the latest resources and guidance."
+        description="A well-structured platform means less searching and more learning. The NCEA website sitemap provides a clear, intuitive structure, ensuring that teachers and Ministry staff could quickly navigate key resources. The information architecture incorporated both the Māori and English curriculums, structuring content to respect and support both languages while maintaining seamless accessibility. To enhance usability, the sitemap prioritised high-impact areas such as curriculum updates, teaching materials, and support tools, reducing friction in content discovery. By structuring content effectively, the website streamlined navigation, improved accessibility, and created a seamless user experience, ensuring educators could easily find the latest resources and guidance."
         images={[
           {
             path: '/images/process/moe-ncea/ncea-sitemap.webp',
@@ -247,7 +254,7 @@ const MOENceaWebsite = () => {
       <VisualDesignSection
         subtitle="Refinement"
         title="Visual Design"
-        description="More than aesthetics—designing a platform that informs, includes, and respects cultural identity. The visual design for the NCEA Change Programme website was developed in close collaboration with the in-house branding team to maintain alignment with organisational guidelines. However, the project’s unique requirements meant we frequently adjusted colors and sourced images to ensure the visuals enhanced both content and functionality. While the lead designer oversaw the design process, I contributed by refining the user experience and accessibility of visual elements, ensuring the final product was on-brand, user-friendly, and optimised for educators navigating complex curriculum changes."
+        description="The visual design for the NCEA Change Programme website was developed in close collaboration with the in-house branding team to maintain alignment with organisational guidelines. However, the project’s unique requirements meant we frequently adjusted colors and sourced images to ensure the visuals enhanced both content and functionality. While the lead designer oversaw the design process, I contributed by refining the user experience and accessibility of visual elements, ensuring the final product was on-brand, user-friendly, and optimised for educators navigating complex curriculum changes."
         descriptionSecond="A key focus was honoring both the New Zealand English curriculum and Te Mātauranga o Aotearoa curriculum. Our team worked closely with branding specialists, content developers, and cultural advisors to integrate visual elements that reflected the values and structure of each curriculum. This included thoughtful use of typography, color, and imagery to balance cultural integrity, readability, and usability. By embedding these considerations into the design, we created an inclusive experience that respected cultural identity and diverse learning needs, ensuring the website served all educators effectively."
         images={[
           {
@@ -277,7 +284,7 @@ const MOENceaWebsite = () => {
         achievements={[
           {
             title: 'Empowering Stakeholder Collaboration',
-            description: `Fostered strong relationships with in-house teams, content developers, and branding experts by driving open communication and collaboration. This enabled teams to better understand and adopt design system principles, ensuring long-term alignment and usability.`,
+            description: `Worked closely with in-house teams, content developers, and branding experts to align design decisions with project needs. By fostering open communication, I ensured that UX and content strategy were closely integrated, creating a structured, user-friendly platform. This collaboration helped simplify complex information, improve resource discoverability, and maintain consistency across the website.`,
           },
           {
             title: 'Driving Agile Problem-Solving',

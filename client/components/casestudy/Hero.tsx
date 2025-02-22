@@ -34,7 +34,7 @@ const Hero: React.FC<HeroProps> = ({ project, hook }) => {
         />
       </div>
       {/* Title + Subtitle */}
-      <div className="container mx-auto mt-24 flex max-w-4xl flex-col gap-6 px-6 sm:px-12 lg:px-24">
+      <div className="container mx-auto mt-24 flex max-w-5xl flex-col gap-6 px-6 sm:px-12 lg:px-24">
         <h1 className="-mb-2 text-5xl font-bold text-gray-900">
           {projectTitle}
         </h1>
@@ -43,7 +43,7 @@ const Hero: React.FC<HeroProps> = ({ project, hook }) => {
         </p>
       </div>
       {/* Content Section */}
-      <div className="container mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-12 px-6 sm:px-12 lg:grid-cols-[2fr_1fr] lg:px-24">
+      <div className="container mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-12 px-6 sm:px-12 lg:grid-cols-[2fr_1fr] lg:px-24">
         {/* Left Column: Overview + Goals */}
         <div>
           {/* Overview Section */}

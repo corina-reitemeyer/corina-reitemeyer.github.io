@@ -172,7 +172,7 @@ const OWTemplates = () => {
         subtitle="Exploration"
         subtitleColor="ow"
         title="Template features in other products"
-        description="How do the best tools introduce and integrate templates seamlessly into user workflows? To better support research practitioners, I conducted a competitive analysis of similar tools commonly used in daily workflows—spanning productivity apps, project management platforms, and design tools. This research revealed how top products guide, educate, and streamline user onboarding, offering valuable insights into workflow adoption and best practices. By analysing how these platforms introduce templates, I designed a system that aligns with user expectations, reduces friction, and enhances the research experience within our platform."
+        description="How do the best tools introduce and integrate templates seamlessly into user workflows? To better support research practitioners, I conducted a competitive analysis of similar tools commonly used in daily workflows—spanning productivity apps, project management platforms, and design tools. This research revealed how top products guide, educate, and streamline user onboarding, offering valuable insights into workflow adoption and best practices. By analysing these platforms, I recognised familiar patterns—such as library pages, overviews, and preview features—which shape user expectations when interacting with templates."
         image={{
           src: '/images/process/ow/ow-competitors.webp',
           alt: 'Analysis of dance libraries',
@@ -183,7 +183,7 @@ const OWTemplates = () => {
       <UserFlow
         overheadTitle="Exploration"
         title="User Flow"
-        description="A well-designed user flow ensures templates aren’t just available—but effortlessly integrated into research workflows. User flows were designed to map how practitioners interact with templates, ensuring an intuitive, efficient experience. These flows define key touchpoints—from discovering templates to seamlessly integrating them into workflows—while addressing usability challenges. By focusing on accessibility, logical structure, and ease of use, the flows help users maximise the value of templates, streamline research, and adapt to different methodologies with flexibility."
+        description="A well-designed user flow ensures templates aren’t just available—they’re seamlessly integrated into research workflows. To create an intuitive, efficient experience, I designed user flows that mapped key touchpoints—from discovering templates to incorporating them effortlessly into research. My goal was to keep interactions simple and fast, ensuring users could access and apply templates without unnecessary steps or friction. By focusing on accessibility, logical structure, and ease of use, these flows help practitioners maximise the value of templates, streamline research, and adapt to different methodologies with flexibility."
         images={[
           {
             path: '/images/process/ow/ow-sitemap.webp',
@@ -200,7 +200,9 @@ const OWTemplates = () => {
         subtitle="Refinement"
         subtitleColor="ow"
         title="Wireframes"
-        description="Integrating new functionality into a legacy product requires more than just design—it demands strategic problem-solving. These wireframes were designed to seamlessly integrate a new feature into a legacy product while balancing user needs and technical constraints. A key challenge was ensuring the new component fit within an existing system built on multiple frameworks—without disrupting functionality. To address this, I worked closely with engineering to ensure the design was user-friendly, technically feasible, and adaptable without requiring a full page rebuild. This approach maintained efficiency, minimised development overhead, and enhanced usability without compromising existing workflows"
+        description="Integrating new functionality into a legacy product requires more than just design—it demands strategic problem-solving. These wireframes were designed to seamlessly introduce a new feature while balancing user needs and technical constraints. A key challenge was ensuring the new component fit within an existing system built on multiple frameworks—without disrupting functionality.
+
+To address this, I worked closely with engineering to ensure the design was user-friendly, technically feasible, and adaptable without requiring a full page rebuild. While I leveraged existing componentry wherever possible to maintain efficiency, I also identified areas where improvements were necessary—such as introducing a new layout version for the modal that didn’t previously exist. This approach allowed us to validate the feature’s success while ensuring a scalable foundation for future iterations."
         image={{
           src: '/images/process/ow/ow-wireframes.webp',
           alt: 'Wireframes for user interaction',
@@ -230,7 +232,7 @@ const OWTemplates = () => {
         subtitle="User Interviews & Click Testing"
         subtitleColor="ow"
         title="How Practicioners used the templates"
-        description="Engagement was high—but were templates truly meeting users’ needs? We set out to find out. After observing strong interest in templates during A/B testing, we wanted to understand how users interacted with them in real workflows. Partnering with a User Researcher, we launched a survey to uncover who was using templates, why, and whether they were easy to find. Insights from customer support and feedback channels further shaped our investigation."
+        description="Engagement was high—but were templates truly meeting users’ needs? After observing strong interest in templates during A/B testing, we wanted to understand how users interacted with them in real workflows. Partnering with a User Researcher, we launched a survey to uncover who was using templates, why, and whether they were easy to find. Insights from customer support and feedback channels further shaped our investigation."
         descriptionSecondary="Follow-up interviews and usability tasks revealed that while users saw value in templates, they rarely used them as-is. Instead, most treated them as inspiration, adapting them to better fit their specific research methods. The findings showed that rigidity limited adoption, reinforcing the need for more flexible, customisable templates. Through this research, we identified three primary ways practitioners engaged with templates:"
         principles={[
           {
@@ -305,7 +307,7 @@ const OWTemplates = () => {
           {
             heading: 'Different Users, Different Needs',
             description:
-              'Novices rely on templates for guidance and structure, while experienced practitioners see them as inspiration—customizing them to fit their approach.',
+              'Novices rely on templates for guidance and structure, while experienced practitioners see them as inspiration—customising them to fit their approach.',
           },
           {
             heading: 'Adoption Doesn’t Equal Engagement',

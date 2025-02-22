@@ -53,7 +53,7 @@ const MOEDesignSystem = () => {
         subtitle="Discovery"
         title="Learning from Home"
         date="Website | 2020 - 2021"
-        description="How do you build a government website under extreme time pressure — without sacrificing usability? During the COVID-19 pandemic, my team launched the Learning from Home website as part of an emergency response. Tight deadlines exposed critical challenges—most notably, the lack of a cohesive design system and streamlined workflows. Recognising these gaps, I initiated the Design System project, working closely with designers, developers, and web advisors to create a scalable framework. This system improved consistency, accessibility, and efficiency — ensuring future projects had the right tools from the start."
+        description="How do you build a government website under extreme time pressure — without sacrificing usability? During the COVID-19 pandemic, my team launched the Learning from Home website as part of an emergency response. Tight deadlines exposed critical challenges—most notably, the lack of a cohesive design system and streamlined workflows. Recognising these gaps, I had the opportunity to initiate the Design System project at a time when the pain points were top of mind for teams. This timing helped secure stronger buy-in and support, allowing me to work closely with designers, developers, and web advisors to create a scalable framework."
         imageSrc="/images/process/moe-designsystem/moe-learningfromhome.webp"
         imageAlt="Mockup of Learning from Home website"
         subtitleColor={'moe'}
@@ -63,7 +63,7 @@ const MOEDesignSystem = () => {
       <DiscoverySection
         subtitle="Discovery"
         title="Understanding User Needs"
-        description="To build a design system that truly supported teams, I collaborated with key stakeholders through interviews, project retrospectives, and vendor feedback analysis. These discussions revealed critical workflow, collaboration, and implementation challenges that impacted efficiency and consistency across projects. By co-designing solutions with the team, we ensured the system addressed both internal and external needs—streamlining processes and improving alignment across teams.
+        description="To build a design system that truly supported teams, I collaborated with key stakeholders through interviews, project retrospectives, and vendor feedback analysis. These discussions revealed critical workflow, collaboration, and implementation challenges that impacted efficiency and consistency across projects.
 
 "
         variant="threeColumns"
@@ -72,17 +72,17 @@ const MOEDesignSystem = () => {
           {
             title: 'Team Interviews',
             description:
-              'I worked closely with designers, developers, and content strategists to uncover workflow challenges and role-specific pain points.',
+              'I interviewed designers, developers, and content strategists to uncover workflow challenges and role-specific pain points.',
           },
           {
             title: 'Project Retro',
             description:
-              'We analysed lessons learned from building the Learning from Home website, identifying scalability and efficiency gaps.',
+              'I analysed lessons learned from building the Learning from Home website, identifying scalability and efficiency gaps.',
           },
           {
             title: 'Vendor Feedback',
             description:
-              'By reviewing insights from third-party designers and developers, we addressed collaboration and implementation challenges, ensuring external teams could seamlessly align with the new system.',
+              'By reviewing insights from third-party designers and developers, I addressed collaboration and implementation challenges, ensuring external teams could seamlessly align with the new system.',
           },
         ]}
       />
@@ -91,7 +91,7 @@ const MOEDesignSystem = () => {
       <PrimaryUsersSection
         subtitle="Discovery"
         title="Who needs the Design System?"
-        description="A design system is only as effective as the teams using it. So, who were we designing for? To support 50+ websites and a growing ecosystem, the design system needed to streamline workflows, reduce inefficiencies, and empower teams to work smarter. By collaborating with designers, developers, and web advisors, I built a system with the team that made their work faster, more consistent, and more accessible—allowing them to focus on what mattered most."
+        description="A design system is only as effective as the teams using it. So, who were we designing for? To support 50+ websites and a growing ecosystem, the design system needed to streamline workflows, reduce inefficiencies, and empower teams to work smarter. While the primary users were designers, developers, and web advisors, the solution also had to support secondary users—such as third-party vendors and cross-functional teams like project managers—who needed to be informed on our work to ensure alignment and consistency across projects."
         principles={[
           {
             number: 1,
@@ -126,7 +126,7 @@ const MOEDesignSystem = () => {
             id: 1,
             title: 'Insight #1',
             description:
-              'Designers and developers across 100+ websites were forced to recreate UI components due to the lack of a standardised design system.',
+              'Designers and developers across 50+ websites were forced to recreate UI components due to the lack of a standardised design system.',
             highlights: [
               'recreate UI components',
               'lack of a standardised design',
@@ -168,7 +168,7 @@ const MOEDesignSystem = () => {
       <Ideation
         title="Ideation"
         subtitle="Painpoints: Where Work Kept Breaking Down"
-        description="Without clear workflows or documentation, teams spent more time fixing mistakes than moving forward. As a team, we pinpointed major challenges that slowed down productivity, introduced inconsistencies, and made scaling difficult—especially under tight deadlines. Developers struggled with unclear workflows, while designers had no standardised way to review or guide vendor work. The result? A cycle of rework and misalignment that made it nearly impossible to deliver cohesive, high-quality results at speed."
+        description="Without clear workflows or documentation, teams spent more time fixing mistakes than moving forward. As a team, we pinpointed major challenges that slowed down productivity, introduced inconsistencies, and made scaling difficult—especially under tight deadlines. Developers struggled with unclear workflows, while designers had no standardised way to review or guide vendor work. The result? A cycle of rework and misalignment that made it nearly impossible to deliver cohesive, high-quality results at speed. I facilitated discussions and workshops to establish agreement on essential components, patterns, and best practice standards. By regularly aligning with designers and developers, we ensured that these building blocks were not only integrated into our design software but also seamlessly implemented in the developers' component library—creating a shared foundation for consistency and scalability."
         points={[
           {
             title: 'Developers',
@@ -187,7 +187,7 @@ const MOEDesignSystem = () => {
       {/* Principles Section */}
       <PrinciplesSection
         subtitle="Goals & Strategy"
-        title="Guiding Principles: Building for Scale, Speed, and Usability"
+        title="Guiding Principles"
         description="A design system is only as strong as the principles guiding it. These core principles were built to address real-world challenges in a fast-paced, large-scale environment—ensuring consistency, scalability, and efficiency. By prioritising adaptability and seamless collaboration, the system empowers teams to work faster, reduce friction, and build with confidence—now and in the future."
         principles={[
           {
@@ -217,7 +217,7 @@ const MOEDesignSystem = () => {
       <CompetitiveAnalysisSection
         subtitle="Exploration"
         title="Design Systems in the Wild: Learning from Others, Tailoring for Ours"
-        description="Great design systems don’t start from scratch—they build on what works and adapt to real needs. To inform our approach, I researched NZ/AUS government design systems, gaining insights into components, patterns, and best practices. While useful, they didn’t fully align with our brand or specific use cases. By combining industry best practices with user-driven insights, I built a system together with the team that was tailored to our needs and workflows. Through discussions, progress updates, and workshops, the team:"
+        description="Great design systems don’t start from scratch—they build on what works and adapt to real needs. To inform our approach, I researched NZ/AUS government design systems, gaining insights into components, patterns, and best practices. While useful, they didn’t fully align with our brand or specific use cases. By combining industry best practices with user-driven insights, I built a system together with the team that was tailored to our needs and workflows. Through discussions, progress updates, and workshops, the team and I:"
         bulletPoints={[
           'Analysed existing components and patterns – Assessed relevance to our needs and identified what to adopt or adapt.',
           'Evaluated alignment with our design strategy – Pinpointed gaps and areas requiring customisation.',

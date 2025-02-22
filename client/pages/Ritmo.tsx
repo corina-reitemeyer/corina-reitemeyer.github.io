@@ -25,7 +25,7 @@ const Ritmo = () => {
           slug: 'ritmo',
           projectSubtitle: 'Ritmo - Latin Dance Move Library',
           overview:
-            'Ritmo is an interactive app designed to help Latin dancers organize, review, and track their progress on dance moves. Whether refining technique, reinforcing lessons, or practicing between live classes, Ritmo provides step-by-step guides and video tutorials to support dancers at every level.',
+            'Ritmo is an interactive app designed to help Latin dancers organise, review, and track their progress on dance moves. Whether refining technique, reinforcing lessons, or practicing between live classes, Ritmo provides step-by-step guides and video tutorials to support dancers at every level.',
           objectiveGoals: [
             'Create an intuitive, easy-to-use interface that encourages dancers to stay engaged and motivated.',
             'Develop a structured dance move library, breaking down steps clearly for different skill levels.',

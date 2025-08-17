@@ -100,7 +100,7 @@ export default function Header() {
               <a
                 href="/files/Resumé_Corina_Reitemeyer_2025"
                 className="nav-item"
-                download="CV_2024"
+                download="Resumé_Corina_Reitemeyer_2025"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Resume
@@ -149,9 +149,9 @@ export default function Header() {
 
         <li>
           <a
-            href="/files/Corina-Reitemeyer-CV-2025.pdf"
+            href="/files/Resumé_Corina_Reitemeyer_2025.pdf"
             className="nav-item"
-            download="Corina-Reitemeyer-CV-2025"
+            download="Resumé_Corina_Reitemeyer_2025"
           >
             Resume
           </a>

@@ -17,17 +17,16 @@ const KeyOutcomes: React.FC<KeyOutcomesProps> = ({
       ref={sectionRef}
       className="relative flex flex-col items-center justify-center bg-[#E3F6F5] px-6 py-24"
     >
-      {/* ✅ Section Title */}
+      {/* Section Title */}
       <h2 className="mb-12 text-center text-4xl font-bold text-gray-900">
         {title}
       </h2>
 
-      {/* ✅ Outcome Cards Grid */}
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 justify-center gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {outcomes.map((outcome, index) => (
           <div
             key={index}
-            className={`flex transform flex-col items-center rounded-lg bg-white p-6 text-center transition-all duration-700 ease-in-out ${
+            className={`flex transform flex-col items-center rounded-lg bg-white px-14 py-14 text-center transition-all duration-700 ease-in-out ${
               inView ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
             }`}
           >

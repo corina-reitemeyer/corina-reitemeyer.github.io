@@ -12,7 +12,6 @@ export default interface Project {
   role: string
   date: string
   overview: string
-  objectiveGoals: string[]
   deployedSiteLink?: string
   bestAwardsSiteLink?: string
   headerImage: string

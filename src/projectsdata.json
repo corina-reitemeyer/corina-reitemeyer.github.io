@@ -22,13 +22,5 @@
     "projectImage": "/images/portfolio/moe-ncea-cover.webp",
     "company": "Ministry of Education (New Zealand)",
     "description": "A centralised platform where teachers can access new assessment standards, subject materials, and updates. Designed for clarity and ease of use, it simplifies navigation and improves access to essential resources."
-  },
-  {
-    "id": 4,
-    "projectTitle": "A personal library and progress tracker for Latin dancers",
-    "slug": "ritmo",
-    "projectImage": "/images/portfolio/ritmo-cover.webp",
-    "company": "Personal Project",
-    "description": "A dance learning app that helps users practice Latin dance moves through guided tutorials and step-by-step lessons. Designed to complement live classes, it makes learning more engaging, structured, and accessible."
   }
 ]

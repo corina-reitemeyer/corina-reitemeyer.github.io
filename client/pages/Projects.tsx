@@ -44,7 +44,7 @@ const Projects: React.FC<ProjectsProps> = () => {
                   <div className="sm: flex w-full flex-col justify-center px-10 py-14 pt-24 sm:px-12 sm:py-16 sm:pb-16 md:w-1/2 lg:px-16 lg:py-20">
                     {/* Overhead Text */}
                     {project.company && (
-                      <p className="text-lg font-normal capitalize text-[#7BBCBC]">
+                      <p className="text-lg font-normal capitalize text-[#629F9F]">
                         {project.company}
                       </p>
                     )}

@@ -21,7 +21,7 @@ const ResearchSection: React.FC<ResearchSectionProps> = ({
   note,
   imageSrc,
   imageAlt,
-  backgroundColor = '#E3F6F5', // Default light blue
+  backgroundColor = '#FFFF',
 }) => {
   const subtitleColorMap: Record<'ritmo' | 'ow' | 'moe', string> = {
     ritmo: '#40B0C8',
@@ -30,7 +30,7 @@ const ResearchSection: React.FC<ResearchSectionProps> = ({
   }
 
   return (
-    <section className="py-24" style={{ backgroundColor }}>
+    <section className="py-32" style={{ backgroundColor }}>
       <div className="relative mx-auto max-w-5xl px-6 sm:px-8 lg:flex lg:items-center lg:justify-center">
         {/* Left: Image */}
         <div className="lg:w-[55%] lg:flex-shrink-0 lg:text-left">
@@ -42,7 +42,7 @@ const ResearchSection: React.FC<ResearchSectionProps> = ({
         </div>
 
         {/* Right: Text Content */}
-        <div className="sm: mt-16 max-w-[40rem] lg:w-[50%] lg:pl-12">
+        <div className="max-w-[40rem] lg:w-[50%] lg:pl-12">
           {subtitle && (
             <p
               className="text-lg"
@@ -56,11 +56,9 @@ const ResearchSection: React.FC<ResearchSectionProps> = ({
             </p>
           )}
           <h2 className="mt-2 text-4xl font-bold text-gray-900">{title}</h2>
-          <p className="mb-12 mt-6 text-lg text-gray-700">{description}</p>
-          <p className="mt-4 text-lg font-bold text-gray-900">
-            Result: {result}
-          </p>
-          {note && <p className="text-md mt-4 italic text-gray-500">{note}</p>}
+          <p className="mb-12 mt-2 text-lg text-gray-700">{description}</p>
+          <p className="text-lg font-bold text-gray-900">Result: {result}</p>
+          {note && <p className="text-md italic text-gray-500">{note}</p>}
         </div>
       </div>
     </section>

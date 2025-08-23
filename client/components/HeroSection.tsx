@@ -36,12 +36,12 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="mx-auto flex max-w-6xl flex-col items-start justify-between space-y-8 px-8 py-24 md:flex-row md:space-y-0 md:py-32">
+    <section className="mx-auto flex max-w-6xl flex-col items-start justify-between space-y-8 bg-[#08082a] px-8 py-24 md:flex-row md:space-y-0 md:py-28">
       {/* Left Side - Dynamic Paragraph (Appears First on All Screens) */}
-      <div className="w-full text-left md:w-3/4">
+      <div className="w-full pb-16 text-left md:w-3/4">
         <motion.p
           key={selectedRole}
-          className="text-2xl font-medium leading-snug text-[#272343] md:text-3xl"
+          className="text-2xl font-medium leading-snug text-white md:text-3xl"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
@@ -55,8 +55,8 @@ export default function HeroSection() {
           <button
             className={`text-left text-lg transition-all duration-300 ${
               selectedRole === 'default'
-                ? 'font-normal text-[#272343]'
-                : 'font-light text-[#8B8A8A]'
+                ? 'font-normal text-white'
+                : 'font-light text-white/60'
             }`}
             onClick={() => setSelectedRole('default')}
           >
@@ -82,8 +82,8 @@ export default function HeroSection() {
               <span
                 className={`transition-colors ${
                   selectedRole === role
-                    ? 'font-normal text-[#272343]'
-                    : 'font-light text-[#8B8A8A]'
+                    ? 'font-normal text-white'
+                    : 'font-light text-white/60'
                 }`}
               >
                 {formatRoleName(role)}
@@ -98,8 +98,8 @@ export default function HeroSection() {
         <button
           className={`text-left text-lg transition-all duration-300 ${
             selectedRole === 'default'
-              ? 'font-normal text-[#272343]'
-              : 'font-light text-[#8B8A8A]'
+              ? 'font-normal text-white'
+              : 'font-light text-white/70'
           }`}
           onClick={() => setSelectedRole('default')}
         >
@@ -125,8 +125,8 @@ export default function HeroSection() {
             <span
               className={`transition-colors ${
                 selectedRole === role
-                  ? 'font-normal text-[#272343]'
-                  : 'font-light text-[#8B8A8A]'
+                  ? 'font-normal text-white'
+                  : 'font-light text-white/70'
               }`}
             >
               {formatRoleName(role)}

@@ -17,60 +17,72 @@ const Projects: React.FC<ProjectsProps> = () => {
         <HeroSection />
       </header>
 
-      <section className="bg-[#E3F6F5] py-10 sm:py-16">
-        <div className="flex w-full flex-col space-y-8 sm:space-y-10 lg:space-y-8">
-          {projects
-            .filter(
-              (project) =>
-                project.projectTitle && project.slug && project.projectImage,
-            )
-            .map((project, index) => (
-              <Link
-                to={`/projects/${project.slug}`}
-                key={project.id}
-                className="block"
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              >
-                {/* Motion Wrapper for Scroll Animation */}
-                <motion.div
-                  className="relative mx-auto flex h-auto flex-col rounded-3xl border border-gray-200 bg-white sm:mx-8 md:flex-row lg:mx-auto lg:max-w-7xl"
-                  initial={{ opacity: 0, y: 50 }} // Start off-screen
-                  whileInView={{ opacity: 1, y: 0 }} // Animate into position
-                  transition={{ duration: 0.6, delay: index * 0.15 }} // Staggered effect
-                  viewport={{ once: true, amount: 0.2 }} // Ensures animation happens only once
-                  whileHover={{ y: -8 }} // Hover effect
-                >
-                  {/* Left Column - Text Content (Increased Padding for More Space) */}
-                  <div className="sm: flex w-full flex-col justify-center px-10 py-14 pt-24 sm:px-12 sm:py-16 sm:pb-16 md:w-1/2 lg:px-16 lg:py-20">
-                    {/* Overhead Text */}
-                    {project.company && (
-                      <p className="text-lg font-normal capitalize text-[#629F9F]">
-                        {project.company}
-                      </p>
-                    )}
-                    {/* Project Title */}
-                    <h3 className="mt-2 text-4xl font-semibold text-[#272343]">
-                      {project.projectTitle}
-                    </h3>
-                    {/* Project Description */}
-                    {project.description && (
-                      <p className="mt-4 text-base font-medium leading-[30px] text-[#272343]">
-                        {project.description}
-                      </p>
-                    )}
-                  </div>
+      {/* Selected Works */}
+      <section className="relative bg-[#08082a] py-16 sm:py-24">
+        {/* left vertical label (sticky) */}
+        <div className="pointer-events-none absolute left-0 top-0 -ml-6 hidden h-full md:block">
+          <div className="sticky top-24 flex h-[60vh] items-start">
+            <span
+              className="text-xs uppercase tracking-[0.2em] text-white/70"
+              style={{ writingMode: 'vertical-rl' }}
+            >
+              <span className="inline-block -rotate-180">Selected Works</span>
+            </span>
+          </div>
+        </div>
 
-                  {/* Right Column - Image (Sits Below Text on Mobile) */}
-                  <div className="flex h-full w-full items-center justify-center md:h-[550px] md:w-1/2">
-                    <img
-                      src={project.projectImage}
-                      alt={project.projectTitle}
-                      className="h-full w-full object-cover lg:rounded-br-3xl lg:rounded-tr-3xl"
-                    />
-                  </div>
-                </motion.div>
-              </Link>
-            ))}
+        <div className="mx-auto grid max-w-6xl auto-rows-[14rem] grid-cols-1 gap-8 px-6 sm:auto-rows-[16rem] md:grid-cols-2 lg:px-0">
+          {projects
+            .filter((p) => p.projectTitle && p.slug && p.projectImage)
+            .slice(0, 4) // show 4 like the wireframe
+            .map((project, i) => {
+              // grid layout: 0 = wide hero, 1 = left regular, 2 = right tall, 3 = left regular
+              const layout =
+                i === 0
+                  ? 'md:col-span-2 md:row-span-2'
+                  : i === 2
+                    ? 'row-span-3'
+                    : 'row-span-2'
+
+              return (
+                <Link
+                  to={`/projects/${project.slug}`}
+                  key={project.id}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                  }
+                  className={`group relative block overflow-hidden rounded-2xl ${layout}`}
+                >
+                  {/* image */}
+                  <motion.img
+                    src={project.projectImage}
+                    alt={project.projectTitle}
+                    className="h-full w-full object-cover"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{
+                      duration: 0.6,
+                      ease: [0.22, 1, 0.36, 1],
+                      delay: i * 0.08,
+                    }}
+                  />
+
+                  {/* navy overlay on hover */}
+                  <span className="pointer-events-none absolute inset-0 bg-[#08082a]/0 transition duration-300 group-hover:bg-[#08082a]/80" />
+
+                  {/* caption bottom-left */}
+                  <span className="pointer-events-none absolute bottom-4 left-4 translate-y-3 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                    <span className="block text-lg font-extrabold leading-tight text-white sm:text-xl">
+                      {project.company || 'Company'}
+                    </span>
+                    <span className="block text-lg font-extrabold text-white sm:text-xl">
+                      {project.projectTitle}
+                    </span>
+                  </span>
+                </Link>
+              )
+            })}
         </div>
       </section>
     </>

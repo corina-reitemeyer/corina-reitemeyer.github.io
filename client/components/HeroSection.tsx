@@ -38,7 +38,7 @@ export default function HeroSection() {
   return (
     <section className="mx-auto flex max-w-6xl flex-col items-start justify-between space-y-8 bg-[#08082a] px-8 py-24 md:flex-row md:space-y-0 md:py-28">
       {/* Left Side - Dynamic Paragraph (Appears First on All Screens) */}
-      <div className="w-full pb-16 text-left md:w-3/4">
+      <div className="w-full text-left md:w-3/4">
         <motion.p
           key={selectedRole}
           className="text-2xl font-medium leading-snug text-white md:text-3xl"

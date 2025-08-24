@@ -69,11 +69,11 @@ const Projects: React.FC<ProjectsProps> = () => {
                   />
 
                   {/* navy overlay on hover */}
-                  <span className="pointer-events-none absolute inset-0 bg-[#08082a]/0 transition duration-300 group-hover:bg-[#08082a]/80" />
+                  <span className="pointer-events-none absolute inset-0 bg-[#08082a]/0 transition duration-300 group-hover:bg-[#08082a]/70" />
 
                   {/* caption bottom-left */}
-                  <span className="pointer-events-none absolute bottom-4 left-4 translate-y-3 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                    <span className="block text-lg font-extrabold leading-tight text-white sm:text-xl">
+                  <span className="pointer-events-none absolute bottom-6 left-9 translate-y-3 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                    <span className="block text-lg font-bold leading-tight text-white sm:text-xl">
                       {project.company || 'Company'}
                     </span>
                     <span className="block text-lg font-extrabold text-white sm:text-xl">

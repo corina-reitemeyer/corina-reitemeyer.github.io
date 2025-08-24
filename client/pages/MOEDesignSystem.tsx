@@ -1,88 +1,18 @@
 import AchievementsSection from '../components/casestudy/Achievements'
-import BackgroundSection from '../components/casestudy/Background'
-import DiscoverySection from '../components/casestudy/DiscoverySection'
-import Hero from '../components/casestudy/Hero'
+import CaseStudyNavy from '../components/casestudy/Hero'
 import KeyOutcomes from '../components/casestudy/KeyOutcomes'
-import OverlappingImagesSection from '../components/casestudy/OverlappingImagesSection'
-import TwoRowsImagesSection from '../components/casestudy/TwoRowsImagesSection'
 
 const MOEDesignSystem = () => {
   return (
     <div>
-      <Hero
-        hook="When the Ministry of Education rushed out a COVID-19 site without a design system, the result was inconsistency, accessibility gaps, and scalability issues. I created the organisation’s first design system to bring clarity, efficiency, and WCAG compliance across 50+ products."
-        project={{
-          id: 1,
-          projectTitle: 'Building Consistency and Efficiency Across Teams',
-          slug: 'moe-design-system',
-          projectSubtitle: 'Ministry of Education Design System',
-          overview:
-            'After the emergency launch of a critical website during lockdown, it was clear a structured framework was needed to avoid design debt. I led the creation of a scalable design system with reusable components and clear guidelines—driving consistency, accessibility, and efficiency across 50+ platforms.',
-          role: 'Senior UI/UX Designer',
-          company: 'Ministry of Education (New Zealand)',
-          date: '2020 – 2022',
-          projectImage: '/images/portfolio/moe-design-system-cover.webp',
-          headerImage: '/images/banner-images/moe-design-system.webp',
-        }}
-      />
-
-      {/* Overlapping ImagesSection */}
-      <OverlappingImagesSection
-        productImage="/images/product/moe-ds-overlap.webp"
-        backgroundColor="#90AEFF"
-        backgroundImage="/images/product/moe-designsystem-triangle1.webp"
-      />
-
-      <BackgroundSection
-        subtitle="Discovery"
-        title="Learning from Home"
-        date="Website | 2020 – 2021"
-        description="During COVID-19, we launched the Learning from Home site under extreme time pressure. The rushed build exposed major gaps: no design system, inconsistent UI, and accessibility risks. With these pain points fresh, I secured buy-in to create the Ministry’s first design system—partnering with designers, developers, and advisors to lay the foundation for scalable, accessible platforms."
-        imageSrc="/images/process/moe-designsystem/moe-learningfromhome.webp"
-        imageAlt="Mockup of Learning from Home website"
-        subtitleColor={'moe'}
-      />
-
-      {/* Discovery Section */}
-      <DiscoverySection
-        subtitle="Discovery"
-        title="What a Crisis Revealed"
-        description="Digging into team workflows and project retros, it became clear: without a design system, every project felt like starting from zero. The pain points were loud and consistent."
-        variant="threeColumns"
-        subtitleColor="moe"
-        threeColumnData={[
-          {
-            title: 'Reinventing UI, Again and Again',
-            description:
-              'Designers and devs rebuilt the same buttons and forms across 50+ sites—burning time and creating visual drift.',
-          },
-          {
-            title: 'Fragmented UX & Accessibility Gaps',
-            description:
-              'Inconsistent patterns left users guessing, while WCAG compliance slipped without shared rules.',
-          },
-          {
-            title: 'Scaling Pains & Vendor Drift',
-            description:
-              'New projects slowed to a crawl, and external vendors delivered off-brand work without clear documentation.',
-          },
-        ]}
-      />
-
-      <TwoRowsImagesSection
-        desktopImage={{
-          src: '/images/product/moe-ds-desktop-allscreens.webp',
-          alt: 'Design System three desktop screens',
-        }}
-        bottomRowImages={[
-          {
-            src: '/images/product/moe-ds-mobiles.webp',
-            alt: 'Left Mobile Image',
-          },
-        ]}
-        backgroundColor="#90AEFF"
-        topBackgroundImage="/images/product/moe-triangles-2.webp"
-        bottomBackgroundImage="/images/product/moe-triangles-3.webp"
+      <CaseStudyNavy
+        intro="Establishing, designing, and documenting digital brand guidelines and a design system…"
+        company="Company"
+        project="Project"
+        imageSrc="/images/product/moe-ds-desktop-allscreens.webp"
+        scope="Microsoft To-Do is the easiest way to get stuff done…"
+        involvement="Product design, system architecture, prototyping"
+        meta={{ date: '2025', type: 'Product Design', specialisation: 'AI' }}
       />
 
       {/* Achievements Section */}

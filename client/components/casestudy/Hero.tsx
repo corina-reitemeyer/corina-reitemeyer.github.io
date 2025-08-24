@@ -1,96 +1,107 @@
-import React from 'react'
-import Project from '../../../models/projectdata' // Import the Project interface
-import Button from '../../components/Button' // Import the Button component
+// CaseStudyNavy.tsx
+import { motion } from 'framer-motion'
 
-interface HeroProps {
-  project: Project
-  hook: string // Hook paragraph
+type Props = {
+  intro: string
+  company: string // e.g., "Company"
+  project: string // e.g., "Project"
+  imageSrc: string
+  imageAlt?: string
+  scope: string // long paragraph
+  involvement: string // sentence or comma-separated list
+  meta: {
+    // shows as: 2025 • Product Design • AI
+    date: string
+    type: string
+    specialisation: string
+  }
 }
 
-const Hero: React.FC<HeroProps> = ({ project, hook }) => {
-  const {
-    projectTitle,
-    projectSubtitle,
-    overview,
-    role,
-    company,
-    date,
-    githubLink,
-    deployedSiteLink,
-    bestAwardsSiteLink,
-    headerImage,
-  } = project
-
+export default function CaseStudyNavy({
+  intro,
+  company,
+  project,
+  imageSrc,
+  imageAlt = '',
+  scope,
+  involvement,
+  meta,
+}: Props) {
   return (
-    <section className="w-full bg-white pb-32">
-      {' '}
-      {/* Banner */}
-      <div className="bg-light-blue relative flex h-full w-full items-center justify-center">
-        <img
-          src={headerImage}
-          alt="Project Banner"
-          className="h-full w-full object-cover"
-        />
-      </div>
-      {/* Title + Subtitle */}
-      <div className="container mx-auto mt-32 flex max-w-5xl flex-col gap-6 px-6 sm:px-12 lg:px-24">
-        <p className="-mb-2 text-lg font-medium text-gray-500">
-          {projectSubtitle}
-        </p>
-        <h1 className="-mb-2 mb-8 text-5xl font-bold text-gray-900">
-          {projectTitle}
-        </h1>
-      </div>
-      {/* Content Section */}
-      <div className="container mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-12 px-6 sm:px-12 lg:grid-cols-[2fr_1fr] lg:px-24">
-        {/* Left Column: Overview + Goals */}
-        <div>
-          {/* Overview Section */}
-          <h2 className="mb-2 text-2xl font-bold text-gray-900">Overview</h2>
-          <p className="mb-4 text-xl text-gray-500">{hook}</p>
-          <p className="mb-16 text-base text-gray-700">{overview}</p>
-        </div>
+    <section className="w-full bg-[#08082a] text-white">
+      <div className="container mx-auto max-w-6xl px-6 py-16 sm:px-8 sm:py-24">
+        {/* 1) Large intro */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-4xl pb-14 text-2xl font-medium text-white sm:text-3xl md:text-4xl"
+        >
+          {intro}
+        </motion.h2>
 
-        {/* Right Column: Company, Role, Date, Links */}
-        <div className="ml-8 mt-2 space-y-8 rounded-lg">
-          <div>
-            <h3 className="text-lg font-bold text-gray-900">
-              Company / Client
-            </h3>
-            <p className="text-base text-gray-700">
-              {company || 'Personal Project'}
+        {/* 2) Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="mt-10 sm:mt-14"
+        >
+          <img
+            src={imageSrc}
+            alt={imageAlt}
+            className="w-full rounded-md object-cover"
+          />
+        </motion.div>
+
+        {/* 3) Details */}
+        <div className="mt-32 grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-12">
+          {/* Left */}
+          <div className="md:col-span-4">
+            <p className="text-3xl font-bold leading-tight text-[#CBEDE8]">
+              {company}
+              <br />
+              <span className="font-bold text-white">{project}</span>
             </p>
           </div>
-          <div>
-            <h3 className="text-lg font-bold text-gray-900">Role</h3>
-            <p className="text-base text-gray-700">{role}</p>
-          </div>
-          <div>
-            <h3 className="text-lg font-bold text-gray-900">Date</h3>
-            <p className="text-base text-gray-700">{date}</p>
-          </div>
 
-          {/* Links */}
-          {(githubLink || deployedSiteLink || bestAwardsSiteLink) && (
-            <div>
-              <h3 className="text-lg font-bold text-gray-900">Links</h3>
-              <div className="space-y-4">
-                {githubLink && (
-                  <Button url={githubLink} label="GitHub Repository" />
-                )}
-                {deployedSiteLink && (
-                  <Button url={deployedSiteLink} label="Deployed Site" />
-                )}
-                {bestAwardsSiteLink && (
-                  <Button url={bestAwardsSiteLink} label="Best Awards Site" />
-                )}
-              </div>
+          {/* Right */}
+          <div className="md:col-span-8">
+            <h3 className="-mb-2 text-lg font-semibold uppercase text-white/70">
+              Scope
+            </h3>
+            <p className="max-w-prose text-white/85">{scope}</p>
+
+            <h3 className="-mb-2 mt-8 text-lg font-semibold uppercase tracking-wide text-white/70">
+              Involvement
+            </h3>
+            <p className="max-w-prose text-white/85">{involvement}</p>
+
+            <div className="mt-12 flex flex-wrap items-center gap-x-4 gap-y-2 font-semibold">
+              {meta.date}
+              <MetaDot>{meta.type}</MetaDot>
+              <MetaDot>{meta.specialisation}</MetaDot>
             </div>
-          )}
+          </div>
         </div>
       </div>
     </section>
   )
 }
 
-export default Hero
+/** Meta item with a dot separator to the left (except first in row) */
+function MetaDot({ children }: { children: React.ReactNode }) {
+  return (
+    <span className="relative pl-4 text-white">
+      <span
+        aria-hidden
+        className="absolute left-0 top-1/2 -translate-y-1/2 text-white"
+      >
+        •
+      </span>
+      {children}
+    </span>
+  )
+}

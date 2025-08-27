@@ -2,183 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom Typography */
-
+/* =========================
+   Fonts
+   ========================= */
 @font-face {
   font-family: 'Sofia Pro';
   src: url('/fonts/SofiaPro/SofiaPro-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
-
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/SofiaPro/SofiaPro-Bold.woff2') format('woff2');
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/SofiaPro/SofiaPro-Light.woff2') format('woff2');
-  font-weight: 300;
-}
-
 @font-face {
   font-family: 'Sofia Pro';
   src: url('/fonts/SofiaPro/SofiaPro-Medium.woff2') format('woff2');
   font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/SofiaPro/SofiaPro-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/SofiaPro/SofiaPro-Bold.woff2') format('woff2');
+  font-weight: 700; /* <-- add this so font-bold works */
+  font-style: normal;
+  font-display: swap;
 }
 
-/* Apply the default font weight for body text */
-body,
-p,
-span,
-a,
-li {
-  font-family: 'Sofia Pro', sans-serif;
-  font-weight: 400;
-  color: #2d334a;
-}
-
+/* Base font family only (no global color/line-height) */
+html,
 body {
-  background-color: #08082a; /* navy background */
+  font-family:
+    'Sofia Pro',
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    'Apple Color Emoji',
+    'Segoe UI Emoji';
+  background-color: #08082a; /* navy site background */
 }
 
-/* Apply a thicker font weight for headings */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Sofia Pro', sans-serif;
-  color: #272343;
-}
+/* Remove global color overrides on text elements.
+   Let Tailwind classes (text-white, text-white/70, etc.) control color per section. */
 
-/* Header Section */
-.header-section {
-  @apply border-black bg-white py-32 text-center;
-}
+/* =========================
+   Optional utilities you still use
+   ========================= */
 
-.main-heading {
-  @apply mb-2 text-7xl font-bold;
-}
-
-.sub-heading {
-  @apply mb-6 text-2xl text-slate-400;
-}
-
-.intro-text {
-  @apply mx-auto max-w-2xl text-base leading-relaxed text-gray-700;
-}
-
-/* Projects Grid */
-.projects-grid {
-  @apply mx-auto grid max-w-7xl grid-cols-1 gap-8 px-8 py-10 sm:grid-cols-2;
-}
-
-.project-link {
-  @apply block border-4 border-black p-4 transition-transform duration-300;
-}
-
-.project-link:hover {
-  @apply -translate-y-1 transform;
-  background-color: #bbb5ff; /* Accent color on hover */
-  border-color: #b5fffa;
-}
-
-/* Grid Item Wrapper */
-.grid-item-wrapper {
-  @apply aspect-h-9 aspect-w-16 relative overflow-hidden;
-}
-
-/* Profile Image (Optional) */
-.profile-image {
-  @apply mx-auto max-h-[450px] max-w-full;
-}
-
-/* Base nav item styles */
-.nav-item {
-  position: relative;
-  display: inline-block;
-  padding: 4px 12px;
-  font-weight: 500;
-  color: #6b7280; /* Dark grey for non-active links */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-/* Active link text color */
-.nav-item.active {
-  color: black !important;
-}
-
-/* Highlighter effect (peach on hover, purple on active) */
-.nav-item::before {
-  content: '';
-  position: absolute;
-  bottom: 55%;
-  left: 0;
-  right: 0;
-  height: 70%; /* Adjust height for centering */
-  background: #fff4b0; /* Lemon color for hover */
-  border-radius: 12px;
-  z-index: -1;
-  opacity: 0;
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
-  transform: scaleX(0) translateY(50%);
-  transform-origin: left;
-}
-
-/* Hover effect */
-.nav-item:hover::before {
-  opacity: 1;
-  transform: scaleX(1) translateY(50%);
-}
-
-/* Active state highlighter */
-.nav-item.active::before {
-  opacity: 1;
-  transform: scaleX(1) translateY(50%);
-  background: #ffd803;
-}
-
-h1 {
-  @apply pb-4 text-5xl text-black;
-}
-
-h2 {
-  @apply pb-4 text-4xl text-black;
-}
-
-h3 {
-  @apply pb-4 text-3xl text-black;
-}
-
-h4 {
-  @apply text-2xl text-black;
-}
-
-h5 {
-  @apply text-xl text-black;
-}
-
-h6 {
-  @apply text-lg text-black;
-}
-
-p {
-  @apply text-base leading-relaxed text-gray-700;
-}
-
-/* Completely Hide Horizontal Scrollbar */
+/* Hide scrollbars on specific containers if needed */
 .custom-scrollbar-hide::-webkit-scrollbar {
-  display: none; /* Hides scrollbar in Chrome, Safari, and Edge */
+  display: none;
 }
-
 .custom-scrollbar-hide {
-  -ms-overflow-style: none; /* Hides scrollbar in IE and Edge */
-  scrollbar-width: none; /* Hides scrollbar in Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

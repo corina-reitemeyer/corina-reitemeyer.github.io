@@ -1,18 +1,51 @@
 import AchievementsSection from '../components/casestudy/Achievements'
 import CaseStudyNavy from '../components/casestudy/Hero'
+import ImageStrip from '../components/casestudy/ImageStrip'
 import KeyOutcomes from '../components/casestudy/KeyOutcomes'
 
 const MOEDesignSystem = () => {
   return (
     <div>
       <CaseStudyNavy
-        intro="Establishing, designing, and documenting digital brand guidelines and a design system…"
-        company="Company"
-        project="Project"
+        intro="Designing and maintaining an accessible design system with reusable components and guidelines for government education platforms."
+        company="Ministry of Education"
+        project="Design System"
         imageSrc="/images/product/moe-ds-desktop-allscreens.webp"
         scope="Microsoft To-Do is the easiest way to get stuff done…"
-        involvement="Product design, system architecture, prototyping"
-        meta={{ date: '2025', type: 'Product Design', specialisation: 'AI' }}
+        involvement="Senior UX/UI Designer, Product Leadership"
+        meta={{
+          date: '2020 - 2021',
+          type: 'Design System, Website',
+        }}
+      />
+
+      <ImageStrip
+        images={[
+          {
+            src: 'https://picsum.photos/600/400?random=1',
+            alt: 'Placeholder 1',
+          },
+          {
+            src: 'https://picsum.photos/500/600?random=2',
+            alt: 'Placeholder 2',
+          },
+          {
+            src: 'https://picsum.photos/700/500?random=3',
+            alt: 'Placeholder 3',
+          },
+          {
+            src: 'https://picsum.photos/600/600?random=4',
+            alt: 'Placeholder 4',
+          },
+          {
+            src: 'https://picsum.photos/800/500?random=5',
+            alt: 'Placeholder 5',
+          },
+          {
+            src: 'https://picsum.photos/500/500?random=6',
+            alt: 'Placeholder 6',
+          },
+        ]}
       />
 
       {/* Achievements Section */}

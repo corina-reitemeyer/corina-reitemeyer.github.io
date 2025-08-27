@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import aboutData from '../../src/about.json'
 import AboutData from '../../models/aboutdata'
 import { motion } from 'framer-motion'
+import AboutIntro from '../components/AboutIntro'
+import ExperienceSection from '../components/Experience'
 
 const About = () => {
   const [data, setData] = useState<AboutData | null>(null)
@@ -12,202 +14,74 @@ const About = () => {
 
   if (!data) return <p>Loading...</p>
 
-  const firstRowSteps = Array.isArray(data.process)
-    ? data.process.slice(0, 4)
-    : []
-  const secondRowSteps = Array.isArray(data.process)
-    ? data.process.slice(4)
-    : []
+  const left = [
+    {
+      company: 'SuiteFiles',
+      title: 'Senior Product Designer',
+      dates: '2025 – Present',
+    },
+    { company: 'Dev Academy', title: 'Technical Facilitator', dates: '2024' },
+    {
+      company: 'Optimal Workshop',
+      title: 'Product Designer',
+      dates: '2022 - 2023',
+    },
+    {
+      company: 'Ministry of Education',
+      title: 'Senior UX/UI Designer',
+      dates: '2021 - 2022',
+    },
+  ]
+
+  const right = [
+    {
+      company: 'Ministry of Education',
+      title: 'UX/UI Designer',
+      dates: '2019 - 2021',
+    },
+    { company: 'Frankie AI', title: 'Web Designer', dates: '2018 - 2019' },
+    {
+      company: 'Blackeye VR',
+      title: 'Digital Product Designer',
+      dates: '2018',
+    },
+  ]
 
   return (
-    <div className="bg-gray-50">
-      {/* Section 1: Hero */}
-      <div className="flex min-h-screen items-center justify-center">
-        <div className="mx-auto max-w-6xl px-6 py-12">
-          <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
-            {/* Image Section */}
-            <div className="text-center md:text-left">
-              <img
-                src="/images/corina-about-picture.webp"
-                alt="Smiling woman"
-                className="profile-image mx-auto"
-              />
-            </div>
+    <div>
+      <AboutIntro
+        imageSrc="/images/corina-about.png"
+        imageAlt="Portrait"
+        title="My journey"
+        paragraphs={[
+          'I’m a Senior UX/UI Designer who loves creating digital experiences that feel simple, intuitive, and scalable. With 7+ years of experience, I specialise in AI-driven UX and Design Systems that help products grow and adapt seamlessly.',
+          'My skill-set in full-stack development and data analytics gives me a strong understanding of both product design and technical constraints. I enjoy collaborating with cross-functional teams to turn complex challenges into practical, user-friendly solutions.',
+        ]}
+        accoladeText="Best Awards, 2018"
+        accoladeHref="https://bestawards.co.nz/digital/student-digital/massey-university-college-of-creative-arts/infinite/"
+      />
 
-            {/* Text Section */}
-            <div>
-              <h2 className="font-heading py-4 text-3xl font-extrabold">
-                Hi! I&apos;m Corina 👋
-              </h2>
-              <p className="font-body text-lg leading-relaxed text-gray-700">
-                I’m a Senior Product Designer who loves creating digital
-                experiences that feel simple, intuitive, and scalable. With 6+
-                years of experience, I specialise in AI-driven UX and Design
-                Systems that help products grow and adapt seamlessly.
-              </p>
-              <p className="font-body mt-6 text-lg leading-relaxed text-gray-700">
-                My skill-set in full-stack development and data analytics gives
-                me a strong understanding of both product design and technical
-                constraints. I enjoy collaborating with cross-functional teams
-                to turn complex challenges into practical, user-friendly
-                solutions.
-              </p>
-              <p className="font-body mt-6 text-lg leading-relaxed text-gray-700">
-                If I’m not behind my keyboard or deep in design discussions,
-                you’ll probably find me dancing, doing Reformer Pilates, or
-                playing cozy games.
-              </p>
-              <h3 className="font-heading mt-10 text-2xl font-bold">
-                Accolades:
-              </h3>
-              <p className="font-body text-lg">
-                <a
-                  href="https://bestawards.co.nz/digital/student-digital/massey-university-college-of-creative-arts/infinite/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-black underline decoration-4 hover:text-purple-500"
-                >
-                  <strong>Best Awards:</strong>
-                </a>{' '}
-                Bronze Award, 2018
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ExperienceSection leftBlock={left} rightBlock={right} />
 
-      {/* Section 2: What I Do */}
-      <section className="relative overflow-hidden bg-white py-16">
-        <div className="mx-auto max-w-7xl">
-          <h2 className="font-heading mb-12 text-center text-3xl font-extrabold text-[#272343]">
-            What I Do
-          </h2>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {data.roles.map((role, index) => (
-              <motion.div
-                key={index}
-                className="mx-4 rounded-3xl bg-[#E3F6F5] p-10 sm:mx-0"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true, amount: 0.2 }}
-              >
-                <h3 className="font-heading break-words text-xl font-bold text-[#272343] md:text-2xl">
-                  {role.title}
-                </h3>
-                <p className="font-body pb-4 text-sm italic text-[#272343]">
-                  {role.subtitle}
-                </p>
-                <p className="mt-4 text-[#272343]">{role.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Section 3: How I Work */}
-      <section className="py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="font-heading mb-12 text-center text-3xl font-extrabold">
-            How I Work
-          </h2>
-
-          {/* Mobile Layout: Stacked Steps */}
-          <div className="block space-y-16 sm:hidden">
-            {[...firstRowSteps, ...secondRowSteps].map((step, index) => (
-              <div key={index} className="relative flex flex-col items-center">
-                {/* Grey Line */}
-                <div className="absolute top-[20px] h-0.5 w-full bg-slate-200"></div>
-
-                {/* Circle Positioned on the Line */}
-                <div className="absolute top-[8px] z-10 h-6 w-6 rounded-full border-4 border-white bg-customYellow"></div>
-
-                {/* Step Content */}
-                <div className="relative mt-10 flex-1 px-4 text-center">
-                  <div className="font-body text-sm text-gray-700">
-                    {step.step}
-                  </div>
-                  <h3 className="font-heading mt-2 text-lg font-bold text-black">
-                    {step.title}
-                  </h3>
-                  <p className="font-body mt-2 text-sm leading-relaxed text-gray-800">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Desktop Layout: Two Rows */}
-          <div className="hidden sm:block">
-            {/* Row 1 */}
-            <div className="relative mb-14">
-              <div className="absolute left-0 top-[20px] h-0.5 w-full bg-slate-200"></div>
-              <div className="relative flex items-start justify-between">
-                {firstRowSteps.map((step, index) => (
-                  <div key={index} className="relative flex-1 px-4 text-left">
-                    <div className="absolute left-[10px] top-[8px] z-10 h-6 w-6 rounded-full border-4 border-white bg-customYellow"></div>
-                    <div className="font-body mt-10 text-sm text-gray-700">
-                      {step.step}
-                    </div>
-                    <h3 className="font-heading mt-2 text-lg font-bold text-black">
-                      {step.title}
-                    </h3>
-                    <p className="font-body mt-2 text-sm leading-relaxed text-gray-800">
-                      {step.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Row 2 */}
-            <div className="relative">
-              <div className="absolute left-0 top-[20px] h-0.5 w-full bg-slate-200"></div>
-              <div className="relative flex items-start justify-between">
-                {secondRowSteps.map((step, index) => (
-                  <div key={index} className="relative flex-1 px-4 text-left">
-                    <div className="absolute left-[10px] top-[8px] z-10 h-6 w-6 rounded-full border-4 border-white bg-customYellow"></div>
-                    <div className="font-body mt-10 text-sm text-gray-700">
-                      {step.step}
-                    </div>
-                    <h3 className="font-heading mt-2 text-lg font-bold text-black">
-                      {step.title}
-                    </h3>
-                    <p className="font-body mt-2 text-sm leading-relaxed text-gray-800">
-                      {step.description}
-                    </p>
-                  </div>
-                ))}
-
-                {/* Dummy Invisible Element for Alignment */}
-                <div className="invisible relative flex-1 px-4"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 4: My Philosophy */}
-      <section className="bg-[#E3F6F5] py-24">
+      <section className="bg-[#08082a] py-24">
         <div className="mx-auto max-w-7xl px-8">
-          <h2 className="font-heading mb-12 text-center text-3xl font-extrabold text-[#272343]">
+          <h2 className="font-heading mb-12 text-center text-3xl font-semibold text-white">
             What Drives My Work
           </h2>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
             {data.values.map((value, index) => (
               <motion.div
                 key={index}
-                className="mx-4 rounded-3xl bg-white p-8 sm:mx-0"
+                className="mx-4 rounded-3xl bg-[#0f0f3a] p-8 sm:mx-0"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <h3 className="font-heading break-words text-lg font-bold text-[#272343] sm:text-xl">
+                <h3 className="font-heading break-words text-lg font-semibold text-white sm:text-xl">
                   {value.title}
                 </h3>
-                <p className="mt-4 text-[#272343]">{value.description}</p>
+                <p className="mt-4 text-white/60">{value.description}</p>
               </motion.div>
             ))}
           </div>

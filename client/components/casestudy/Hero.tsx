@@ -13,7 +13,7 @@ type Props = {
     // shows as: 2025 • Product Design • AI
     date: string
     type: string
-    specialisation: string
+    specialisation?: string
   }
 }
 
@@ -29,14 +29,20 @@ export default function CaseStudyNavy({
 }: Props) {
   return (
     <section className="w-full bg-[#08082a] text-white">
-      <div className="container mx-auto max-w-6xl px-6 py-16 sm:px-8 sm:py-24">
+      <div className="sm:py-18 container mx-auto max-w-6xl px-6 py-14 sm:px-8">
         {/* 1) Large intro */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl pb-14 text-2xl font-medium text-white sm:text-3xl md:text-4xl"
+          className="
+    max-w-4xl pb-14 text-2xl font-semibold
+    leading-[1.4] text-white
+    sm:text-3xl sm:leading-[1.4]
+    md:text-4xl md:leading-[1.3]
+    lg:text-5xl lg:leading-[1.25]
+  "
         >
           {intro}
         </motion.h2>
@@ -57,7 +63,7 @@ export default function CaseStudyNavy({
         </motion.div>
 
         {/* 3) Details */}
-        <div className="mt-32 grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-12">
+        <div className="md:gap-18 mt-32 grid grid-cols-1 gap-10 md:grid-cols-12">
           {/* Left */}
           <div className="md:col-span-4">
             <p className="text-3xl font-bold leading-tight text-[#CBEDE8]">
@@ -69,15 +75,15 @@ export default function CaseStudyNavy({
 
           {/* Right */}
           <div className="md:col-span-8">
-            <h3 className="-mb-2 text-lg font-semibold uppercase text-white/70">
+            <h3 className=" text-md font-semibold uppercase text-white/100">
               Scope
             </h3>
-            <p className="max-w-prose text-white/85">{scope}</p>
+            <p className="max-w-prose text-white/70">{scope}</p>
 
-            <h3 className="-mb-2 mt-8 text-lg font-semibold uppercase tracking-wide text-white/70">
+            <h3 className="text-md mt-8 font-semibold uppercase tracking-wide text-white/100">
               Involvement
             </h3>
-            <p className="max-w-prose text-white/85">{involvement}</p>
+            <p className="max-w-prose text-white/70">{involvement}</p>
 
             <div className="mt-12 flex flex-wrap items-center gap-x-4 gap-y-2 font-semibold">
               {meta.date}

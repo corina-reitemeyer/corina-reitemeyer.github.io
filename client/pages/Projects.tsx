@@ -73,10 +73,10 @@ const Projects: React.FC<ProjectsProps> = () => {
 
                   {/* caption bottom-left */}
                   <span className="pointer-events-none absolute bottom-6 left-9 translate-y-3 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                    <span className="block text-2xl font-semibold leading-tight text-white sm:text-xl">
+                    <span className="block text-3xl font-semibold leading-tight text-white sm:text-2xl">
                       {project.company || 'Company'}
                     </span>
-                    <span className="block text-2xl font-semibold text-white sm:text-xl">
+                    <span className="block text-3xl font-semibold text-white sm:text-2xl">
                       {project.projectTitle}
                     </span>
                   </span>

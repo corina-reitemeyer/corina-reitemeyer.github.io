@@ -1,9 +1,18 @@
 import React from 'react'
 import { useInView } from 'react-intersection-observer'
 
+type Outcome = {
+  iconSrc?: string
+  iconAlt?: string
+  iconNode?: React.ReactNode
+  icon?: string
+  title: string
+  description: string
+}
+
 interface KeyOutcomesProps {
   title?: string
-  outcomes: { icon: string; title: string; description: string }[]
+  outcomes: Outcome[]
 }
 
 const KeyOutcomes: React.FC<KeyOutcomesProps> = ({
@@ -23,18 +32,35 @@ const KeyOutcomes: React.FC<KeyOutcomesProps> = ({
       </h2>
 
       <div className="mx-auto grid max-w-6xl grid-cols-1 justify-center gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {outcomes.map((outcome, index) => (
+        {outcomes.map((o, index) => (
           <div
             key={index}
             className={`flex transform flex-col items-center rounded-lg bg-[#0f0f3a] px-14 py-16 text-center transition-all duration-700 ease-in-out ${
               inView ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
             }`}
           >
-            <span className="text-3xl text-[#CBEDE8]">{outcome.icon}</span>
-            <h3 className="mt-3 text-lg font-semibold text-white">
-              {outcome.title}
-            </h3>
-            <p className="mt-2 text-white/70">{outcome.description}</p>
+            {/* ICON */}
+            {o.iconNode ? (
+              <span
+                aria-hidden
+                className="grid h-7 w-7 place-items-center text-[#CBEDE8]"
+              >
+                {o.iconNode}
+              </span>
+            ) : o.iconSrc ? (
+              <img
+                src={o.iconSrc}
+                alt={o.iconAlt ?? ''}
+                className="h-7 w-7"
+                aria-hidden={o.iconAlt ? undefined : true}
+              />
+            ) : o.icon ? (
+              <span className="text-3xl text-[#CBEDE8]">{o.icon}</span>
+            ) : null}
+
+            {/* TEXT */}
+            <h3 className="mt-3 text-lg font-semibold text-white">{o.title}</h3>
+            <p className="mt-2 text-white/70">{o.description}</p>
           </div>
         ))}
       </div>

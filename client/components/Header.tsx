@@ -13,10 +13,14 @@ export default function Header() {
 
   return (
     <header className="z-50 w-full bg-[#08082a]">
-      <nav className="mx-auto flex max-w-6xl items-end justify-between px-6 py-12 pb-16 sm:px-10">
+      <nav className="mx-auto flex max-w-6xl items-end justify-between px-6 py-12 pb-6 sm:px-10">
         {/* Left: Logo above Name/Title */}
         <Link to="/projects" className="flex flex-col items-start">
-          <img src="/images/cr-logo.png" alt="Logo" className="h-12 w-auto" />
+          <img
+            src="/images/cr-reverse-logo.svg"
+            alt="Logo"
+            className="mb-2 h-6 w-auto"
+          />
           <div className="flex flex-col">
             <span className="text-xl font-semibold text-white">
               Corina Reitemeyer

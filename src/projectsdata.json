@@ -1,26 +1,30 @@
 [
   {
     "id": 1,
-    "projectTitle": "Design System",
-    "slug": "moe-design-system",
-    "projectImage": "/images/portfolio/moe-design-system-cover.webp",
-    "company": "Ministry of Education",
-    "description": "A design system built to ensure consistency and accessibility across government education platforms. With reusable components and clear guidelines, it streamlines digital development while maintaining a cohesive user experience."
+    "projectTitle": "AI Document Summarizer",
+    "slug": "suitefiles-ai-summary",
+    "projectImage": "public/images/portfolio/suitefiles-ai-summary-cover.png",
+    "company": "SuiteFiles"
   },
   {
     "id": 2,
     "projectTitle": "Templates",
     "slug": "ow-templates",
-    "projectImage": "/images/portfolio/ow-templates-cover.webp",
-    "company": "Optimal Workshop",
-    "description": "A set of pre-built templates that simplify user research and information architecture. They help users set up studies faster while following best practices—making research more efficient for beginners and experts alike."
+    "projectImage": "/images/portfolio/optimal-homepage-cover.png",
+    "company": "Optimal Workshop"
+  },
+{
+    "id": 3,
+    "projectTitle": "Design System",
+    "slug": "moe-design-system",
+    "projectImage": "/images/portfolio/moe-design-system-cover.png",
+    "company": "Ministry of Education"
   },
   {
-    "id": 3,
-    "projectTitle": "NCEA Education Website",
-    "slug": "moe-ncea-website",
-    "projectImage": "/images/portfolio/moe-ncea-cover.webp",
-    "company": "Ministry of Education",
-    "description": "A centralised platform where teachers can access new assessment standards, subject materials, and updates. Designed for clarity and ease of use, it simplifies navigation and improves access to essential resources."
+    "id": 4,
+    "projectTitle": "Design System",
+    "slug": "suitefiles-design-system",
+    "projectImage": "/images/portfolio/suitefiles-design-system-cover.png",
+    "company": "SuiteFiles"
   }
 ]

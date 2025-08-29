@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 
 export default function HeroSection() {
   type Role =
@@ -13,17 +13,17 @@ export default function HeroSection() {
 
   const paragraphs: Record<Role, string> = {
     default:
-      'I design digital experiences that feel intuitive and easy to use. Whether it’s making everyday tools more user-friendly, streamlining complex tasks, or creating clean, simple interfaces, I love finding ways to make technology work better for people.',
+      'I design digital experiences that feel intuitive and easy to use. Whether it’s making everyday tools more user-friendly, or creating clean, simple interfaces, I love finding ways to make technology work better for people.',
     recruiters:
-      'A Senior Product Designer specialising in AI-Driven UX and Design Systems. I create intuitive, scalable experiences that simplify complex tools and make technology easier to use. I’m looking for opportunities with teams building products that have a meaningful, positive impact on people’s lives.',
+      'I’m a Senior UX/UI Designer with expertise in AI-driven UX and scalable design systems. In the past 7 years, I’ve helped teams simplify complex workflows, improve product adoption, and deliver seamless user experiences at scale.',
     productDesigners:
-      'I love transforming complexity into clarity. Specialising in AI-Driven UX and Design Systems, I craft intelligent, user-centric solutions that feel seamless and scalable. My work balances logic, creativity, and accessibility—ensuring experiences that just make sense.',
+      'I thrive on collaboration, value constructive critique, and bring clarity to complex problems. Working with me means clear, open communication, curiosity, and a genuine focus on making the team stronger.',
     productManagers:
-      'I turn ambiguity into structured, intuitive experiences. By aligning user needs, business goals, and technical constraints, I design products that not only solve problems but also drive engagement, retention, and long-term growth.',
+      'I turn ambiguity into structured, intuitive experiences that align with vision and strategy. By connecting user needs, business goals, and technical realities, I influence product direction and design solutions that drive engagement, retention, and long-term growth.',
     userResearchers:
       'I design with intent, ensuring every decision is rooted in research. By closely collaborating with researchers and data teams, I translate insights into meaningful, user-driven experiences that are intuitive, scalable, and backed by real-world needs.',
     engineers:
-      'I craft structured, scalable designs that integrate smoothly into development. With a background in full-stack web development, I collaborate closely with engineers to create clear, consistent, and performance-optimised experiences that are a joy to build and use.',
+      'I design structured, scalable systems that integrate seamlessly into development. With a background in full-stack web, I speak the language of code and collaborate closely to deliver clear, consistent, and performance-ready experiences that are rewarding to build.',
   }
 
   // Helper function to convert camelCase to Regular Case (First letter uppercase, rest lowercase)
@@ -36,103 +36,110 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="mx-auto flex max-w-6xl flex-col items-start justify-between space-y-8 bg-[#08082a] px-8 py-24 md:flex-row md:space-y-0 ">
-      {/* Left Side - Dynamic Paragraph (Appears First on All Screens) */}
-      <div className="w-full text-left md:w-3/4">
-        <motion.p
-          key={selectedRole}
-          className="text-2xl font-medium leading-snug text-white md:text-3xl"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.4 }}
-        >
-          {paragraphs[selectedRole]}
-        </motion.p>
+    <section className="bg-[#08082a]">
+      <div className="mx-auto max-w-6xl px-8 py-24 md:py-24">
+        {/* 3/4 | 1/4 */}
+        <div className="grid grid-cols-1 gap-y-10 md:grid-cols-12 md:gap-x-24">
+          {/* LEFT */}
+          <div className="text-left md:col-span-7">
+            {/* fixed stage so height doesn't jump */}
+            <div className="relative min-h-[6.75rem] sm:min-h-[7.5rem] md:min-h-[8.25rem] md:max-w-[58ch] lg:max-w-[58ch]">
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.p
+                  key={selectedRole}
+                  className="absolute inset-0 text-2xl font-medium leading-snug text-white md:text-3xl"
+                  initial={{ opacity: 0, y: 8, filter: 'blur(4px)' }}
+                  animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                  exit={{ opacity: 0, y: -8, filter: 'blur(4px)' }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {paragraphs[selectedRole] ?? paragraphs.default}
+                </motion.p>
+              </AnimatePresence>
+            </div>
 
-        {/* On mobile, display links below the paragraph with added top margin */}
-        <div className="mt-8 flex w-full flex-col space-y-3 md:hidden">
-          <button
-            className={`text-left text-lg transition-all duration-300 ${
-              selectedRole === 'default'
-                ? 'font-normal text-white'
-                : 'font-light text-white/60'
-            }`}
-            onClick={() => setSelectedRole('default')}
-          >
-            For anyone
-          </button>
-
-          {(
-            [
-              'recruiters',
-              'productDesigners',
-              'productManagers',
-              'engineers',
-            ] as Role[]
-          ).map((role) => (
-            <button
-              key={role}
-              className="relative text-left text-lg transition-all duration-300"
-              onClick={() => setSelectedRole(role)}
-            >
-              <span className="invisible absolute font-normal">
-                {formatRoleName(role)}
-              </span>
-              <span
-                className={`transition-colors ${
-                  selectedRole === role
+            {/* mobile buttons */}
+            <div className="mt-8 flex w-full flex-col space-y-3 md:hidden">
+              <button
+                className={`text-left text-lg transition-all duration-300 ${
+                  selectedRole === 'default'
                     ? 'font-normal text-white'
                     : 'font-light text-white/60'
                 }`}
+                onClick={() => setSelectedRole('default')}
               >
-                {formatRoleName(role)}
-              </span>
-            </button>
-          ))}
-        </div>
-      </div>
+                For anyone
+              </button>
 
-      {/* Right Side - Clickable Menu (Desktop Only) */}
-      <div className="ml-24 hidden w-1/3 flex-col space-y-3 md:flex">
-        <button
-          className={`text-left text-lg transition-all duration-300 ${
-            selectedRole === 'default'
-              ? 'font-normal text-white'
-              : 'font-light text-white/70'
-          }`}
-          onClick={() => setSelectedRole('default')}
-        >
-          For anyone
-        </button>
+              {(
+                [
+                  'recruiters',
+                  'productDesigners',
+                  'productManagers',
+                  'engineers',
+                ] as Role[]
+              ).map((role) => (
+                <button
+                  key={role}
+                  className="relative text-left text-lg transition-all duration-300"
+                  onClick={() => setSelectedRole(role)}
+                >
+                  <span className="invisible absolute font-normal">
+                    {formatRoleName(role)}
+                  </span>
+                  <span
+                    className={`transition-colors ${
+                      selectedRole === role
+                        ? 'font-normal text-white'
+                        : 'font-light text-white/60'
+                    }`}
+                  >
+                    {formatRoleName(role)}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
 
-        {(
-          [
-            'recruiters',
-            'productDesigners',
-            'productManagers',
-            'engineers',
-          ] as Role[]
-        ).map((role) => (
-          <button
-            key={role}
-            className="relative text-left text-lg transition-all duration-300"
-            onClick={() => setSelectedRole(role)}
-          >
-            <span className="invisible absolute font-normal">
-              {formatRoleName(role)}
-            </span>
-            <span
-              className={`transition-colors ${
-                selectedRole === role
+          {/* RIGHT (sticky) */}
+          <aside className="hidden flex-col space-y-3 self-start md:sticky md:top-24 md:col-span-3 md:flex">
+            <button
+              className={`text-left text-lg transition-all duration-300 ${
+                selectedRole === 'default'
                   ? 'font-normal text-white'
                   : 'font-light text-white/70'
               }`}
+              onClick={() => setSelectedRole('default')}
             >
-              {formatRoleName(role)}
-            </span>
-          </button>
-        ))}
+              For anyone
+            </button>
+
+            {(
+              [
+                'recruiters',
+                'productDesigners',
+                'productManagers',
+                'engineers',
+              ] as Role[]
+            ).map((role) => (
+              <button
+                key={role}
+                className="text-left text-lg transition-all duration-300"
+                onClick={() => setSelectedRole(role)}
+              >
+                <span
+                  className={`transition-colors ${
+                    selectedRole === role
+                      ? 'font-normal text-white'
+                      : 'font-light text-white/70'
+                  }`}
+                >
+                  {formatRoleName(role)}
+                </span>
+              </button>
+            ))}
+          </aside>
+        </div>
       </div>
     </section>
   )

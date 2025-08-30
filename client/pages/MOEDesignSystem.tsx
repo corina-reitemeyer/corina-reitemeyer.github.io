@@ -10,7 +10,7 @@ const MOEDesignSystem = () => {
         intro="From crisis website to best-practice framework—defining design standards at scale."
         company="Ministry of Education"
         project="Design System"
-        imageSrc="/images/product/moe-ds-desktop-allscreens.webp"
+        imageSrc="/images/product/moe-designsystem-hero.png"
         scope="When the Ministry of Education rushed out a critical COVID-19 website without a design system, the result was inconsistency, accessibility gaps, and scalability issues. I led the creation of the organisation’s first design system—conducting product audits and internal interviews, then iteratively implementing reusable components and WCAG-compliant guidelines. Collaborating with designers, engineers, and web advisors, I drove alignment and streamlined workflows across teams. The system established organisation-wide best practices, reduced design debt, and set a new standard for accessibility and scalability—becoming the foundation for how digital products are now designed and built across 50+ platforms."
         involvement="Design system lead, product design lead, cross-functional partner"
         meta={{
@@ -23,27 +23,27 @@ const MOEDesignSystem = () => {
       <ImageStrip
         images={[
           {
-            src: 'https://picsum.photos/600/400?random=1',
+            src: '/images/product/moe-designsystem-hero.png',
             alt: 'Placeholder 1',
           },
           {
-            src: 'https://picsum.photos/500/600?random=2',
+            src: '/images/product/moe-designsystem-hero.png',
             alt: 'Placeholder 2',
           },
           {
-            src: 'https://picsum.photos/700/500?random=3',
+            src: '/images/product/moe-designsystem-hero.png',
             alt: 'Placeholder 3',
           },
           {
-            src: 'https://picsum.photos/600/600?random=4',
+            src: '/images/product/moe-designsystem-hero.png',
             alt: 'Placeholder 4',
           },
           {
-            src: 'https://picsum.photos/800/500?random=5',
+            src: '/images/product/moe-designsystem-hero.png',
             alt: 'Placeholder 5',
           },
           {
-            src: 'https://picsum.photos/500/500?random=6',
+            src: '/images/product/moe-designsystem-hero.png',
             alt: 'Placeholder 6',
           },
         ]}

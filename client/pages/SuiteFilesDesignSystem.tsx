@@ -1,4 +1,5 @@
 import AchievementsSection from '../components/casestudy/Achievements'
+import TwoColumnDetail from '../components/casestudy/DetailColumn'
 import CaseStudyNavy from '../components/casestudy/Hero'
 import ImageStrip from '../components/casestudy/ImageStrip'
 import KeyOutcomes from '../components/casestudy/KeyOutcomes'
@@ -10,7 +11,7 @@ const SuiteFilesDesignSystem = () => {
         intro="Evolving a design system to integrate the startup's new branding and enable faster product scaling."
         company="SuiteFiles"
         project="Design System"
-        imageSrc="/images/product/moe-ds-desktop-allscreens.webp"
+        imageSrc="/images/product/suitefiles-design-system-hero.png"
         scope="The early beginnings of a design system had been initiated by a previous lead, but with a major rebrand underway and the product scaling quickly, it needed to evolve. I took ownership of the system’s next phase—updating it to align with the new brand, expanding its component library, and ensuring it could support a rapidly growing product. In parallel, I partnered with developers to build out the codebase, closing the gap between design and engineering. The result was a more robust, scalable design system that balanced brand consistency with product velocity, enabling teams to move faster without sacrificing quality."
         involvement="Design system lead, brand integration, cross-functional partner"
         meta={{
@@ -23,28 +24,40 @@ const SuiteFilesDesignSystem = () => {
       <ImageStrip
         images={[
           {
-            src: 'https://picsum.photos/600/400?random=1',
+            src: '/images/product/suitefiles-design-system-hero.png',
             alt: 'Placeholder 1',
           },
           {
-            src: 'https://picsum.photos/500/600?random=2',
+            src: '/images/product/suitefiles-design-system-hero.png',
             alt: 'Placeholder 2',
           },
           {
-            src: 'https://picsum.photos/700/500?random=3',
+            src: '/images/product/suitefiles-design-system-hero.png',
             alt: 'Placeholder 3',
           },
           {
-            src: 'https://picsum.photos/600/600?random=4',
+            src: '/images/product/suitefiles-design-system-hero.png',
             alt: 'Placeholder 4',
           },
           {
-            src: 'https://picsum.photos/800/500?random=5',
+            src: '/images/product/suitefiles-design-system-hero.png',
             alt: 'Placeholder 5',
           },
           {
-            src: 'https://picsum.photos/500/500?random=6',
+            src: '/images/product/suitefiles-design-system-hero.png',
             alt: 'Placeholder 6',
+          },
+        ]}
+      />
+
+      <TwoColumnDetail
+        heading="Context"
+        subtitle="Where this sits in the product"
+        body="The feature integrates with the core workflow and surfaces insights at the right moment."
+        images={[
+          {
+            src: '/images/portfolio/suitefiles-ai-summary-cover.png',
+            alt: 'Feature context',
           },
         ]}
       />

@@ -29,7 +29,7 @@ export default function CaseStudyNavy({
 }: Props) {
   return (
     <section className="w-full bg-[#08082a] text-white">
-      <div className="sm:py-18 container mx-auto max-w-6xl px-6 py-14 sm:px-8">
+      <div className="sm:py-18 container mx-auto max-w-6xl px-6 py-14 pt-28 sm:px-8">
         {/* 1) Large intro */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -53,7 +53,7 @@ export default function CaseStudyNavy({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mt-10 sm:mt-14"
+          className="mt-18 sm:mt-14"
         >
           <img
             src={imageSrc}
@@ -66,10 +66,10 @@ export default function CaseStudyNavy({
         <div className="md:gap-18 mt-32 grid grid-cols-1 gap-10 md:grid-cols-12">
           {/* Left */}
           <div className="md:col-span-4">
-            <p className="text-3xl font-bold leading-tight text-[#CBEDE8]">
+            <p className="text-3xl font-semibold leading-tight text-[#CBEDE8]">
               {company}
               <br />
-              <span className="font-bold text-white">{project}</span>
+              <span className="font-semibold text-white">{project}</span>
             </p>
           </div>
 

@@ -12,7 +12,7 @@ type GalleryImage = {
 
 type Props = {
   images: GalleryImage[]
-  showCaptions?: boolean // default false
+  showCaptions?: boolean
 }
 
 export default function ImageGallery({ images, showCaptions = false }: Props) {
@@ -38,17 +38,26 @@ export default function ImageGallery({ images, showCaptions = false }: Props) {
 
   if (items.length === 0) return null
 
+  // Reusable in-view props for a nice pop
+  const inViewProps = {
+    initial: { opacity: 0, y: 16, scale: 0.98 },
+    whileInView: { opacity: 1, y: 0, scale: 1 },
+    transition: { duration: 0.45, ease: 'easeOut' },
+    viewport: { once: true, amount: 0.35 }, // animate when ~35% is visible
+  } as const
+
   return (
     <section className="bg-[#08082a] py-10 sm:py-14">
       <div className="container mx-auto max-w-6xl px-6 sm:px-8">
+        {/* MOBILE HEADING (aligns with images) */}
+        <div className="mx-auto w-full max-w-5xl md:hidden">
+          <h2 className="mb-6 text-3xl font-extrabold text-white">Work</h2>
+        </div>
+
         {/* MOBILE/TABLET (<= md): horizontal strip with snap */}
         <div className="relative md:hidden">
-          <motion.ul
+          <ul
             ref={scrollerRef}
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.45 }}
             className="
               custom-scrollbar-hide flex touch-pan-x snap-x snap-mandatory
               overflow-x-auto [-webkit-overflow-scrolling:touch]
@@ -57,7 +66,11 @@ export default function ImageGallery({ images, showCaptions = false }: Props) {
             aria-label="Project image strip"
           >
             {items.map((img, i) => (
-              <li key={i} className="shrink-0 snap-start">
+              <motion.li
+                key={i}
+                className="shrink-0 snap-start"
+                {...inViewProps}
+              >
                 <figure className="w-[84vw] sm:w-[70vw]">
                   <button
                     type="button"
@@ -81,9 +94,9 @@ export default function ImageGallery({ images, showCaptions = false }: Props) {
                     </figcaption>
                   )}
                 </figure>
-              </li>
+              </motion.li>
             ))}
-          </motion.ul>
+          </ul>
 
           {items.length > 1 && (
             <>
@@ -107,17 +120,18 @@ export default function ImageGallery({ images, showCaptions = false }: Props) {
           )}
         </div>
 
-        {/* DESKTOP (>= md): stacked images in the same container width */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.45 }}
-          className="hidden md:block"
-        >
-          <div className="mx-auto w-full max-w-5xl space-y-10">
+        {/* DESKTOP (>= md): heading + stacked images in the same container width */}
+        <div className="hidden md:block">
+          {/* Heading aligned to image left edge */}
+          <div className="mx-auto w-full max-w-6xl">
+            <h2 className="mb-6 text-left text-4xl font-bold text-white">
+              Work
+            </h2>
+          </div>
+
+          <div className="mx-auto mb-12 w-full max-w-6xl space-y-10">
             {items.map((img, i) => (
-              <figure key={i} className="w-full">
+              <motion.figure key={i} className="w-full" {...inViewProps}>
                 <button
                   type="button"
                   onClick={() => openLightbox(i)}
@@ -139,10 +153,10 @@ export default function ImageGallery({ images, showCaptions = false }: Props) {
                     {img.caption}
                   </figcaption>
                 )}
-              </figure>
+              </motion.figure>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Lightbox shows current image */}

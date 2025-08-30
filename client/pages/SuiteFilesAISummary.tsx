@@ -1,4 +1,5 @@
 import AchievementsSection from '../components/casestudy/Achievements'
+import TwoColumnDetail from '../components/casestudy/DetailColumn'
 import CaseStudyNavy from '../components/casestudy/Hero'
 import ImageStrip from '../components/casestudy/ImageStrip'
 import KeyOutcomes from '../components/casestudy/KeyOutcomes'
@@ -10,7 +11,7 @@ const SuiteFilesAISummary = () => {
         intro="Bringing clarity and efficiency to multi-document signing through AI-driven summarisation."
         company="SuiteFiles"
         project="AI Summaries"
-        imageSrc="/images/product/moe-ds-desktop-allscreens.webp"
+        imageSrc="/images/portfolio/suitefiles-ai-summary-cover.png"
         scope="Lengthy, multi-document signing requests created friction—recipients struggled to understand what they were signing, while senders had to provide context separately through emails or briefings, leaving it disconnected from the documents themselves. I led the strategy and redesign of this feature by shaping the AI approach from a UX perspective—defining how it should behave within the workflow and ensuring users retained transparency and control. The result was an AI-powered summarisation tool that streamlined the signing process: recipients could quickly grasp context, and senders could personalise summaries without starting from scratch. Beyond this feature, the work set a model for the company’s AI-first direction, influencing how AI is integrated across the product suite."
         involvement="Feature design lead, UX strategy for AI integration, cross-functional partner"
         meta={{
@@ -23,28 +24,40 @@ const SuiteFilesAISummary = () => {
       <ImageStrip
         images={[
           {
-            src: 'https://picsum.photos/600/400?random=1',
+            src: '/images/portfolio/suitefiles-ai-summary-cover.png',
             alt: 'Placeholder 1',
           },
           {
-            src: 'https://picsum.photos/500/600?random=2',
+            src: '/images/portfolio/suitefiles-ai-summary-cover.png',
             alt: 'Placeholder 2',
           },
           {
-            src: 'https://picsum.photos/700/500?random=3',
+            src: '/images/portfolio/suitefiles-ai-summary-cover.png',
             alt: 'Placeholder 3',
           },
           {
-            src: 'https://picsum.photos/600/600?random=4',
+            src: '/images/portfolio/suitefiles-ai-summary-cover.png',
             alt: 'Placeholder 4',
           },
           {
-            src: 'https://picsum.photos/800/500?random=5',
+            src: '/images/portfolio/suitefiles-ai-summary-cover.png',
             alt: 'Placeholder 5',
           },
           {
-            src: 'https://picsum.photos/500/500?random=6',
+            src: '/images/portfolio/suitefiles-ai-summary-cover.png',
             alt: 'Placeholder 6',
+          },
+        ]}
+      />
+
+      <TwoColumnDetail
+        heading="Context"
+        subtitle="Where this sits in the product"
+        body="The feature integrates with the core workflow and surfaces insights at the right moment."
+        images={[
+          {
+            src: '/images/portfolio/suitefiles-ai-summary-cover.png',
+            alt: 'Feature context',
           },
         ]}
       />

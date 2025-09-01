@@ -1,8 +1,8 @@
 import ProjectData from '../../src/projectsdata.json'
 import { Link } from 'react-router-dom'
 import Project from '../../models/projectdata.ts'
-import HeroSection from '../components/HeroSection.tsx'
 import { motion } from 'framer-motion'
+import ImpactStatement from '../components/ImpactStatement.tsx'
 
 interface ProjectsProps {
   images: string
@@ -13,8 +13,11 @@ const Projects: React.FC<ProjectsProps> = () => {
 
   return (
     <>
-      <header className="relative mx-auto flex min-h-[40vh] flex-col items-start justify-center px-8 sm:min-h-[60vh] sm:max-w-5xl sm:px-8">
-        <HeroSection />
+      <header className="relative flex min-h-[40vh] w-full flex-col items-start justify-center bg-[#08082a] sm:min-h-[60vh]">
+        <ImpactStatement
+          padded={false} // important: no extra padding from the component
+          lines={['Crafting AI-powered digital experiences that help people.']}
+        />
       </header>
 
       {/* Selected Works */}
@@ -25,9 +28,7 @@ const Projects: React.FC<ProjectsProps> = () => {
             <span
               className="text-xs uppercase tracking-[0.2em] text-white/70"
               style={{ writingMode: 'vertical-rl' }}
-            >
-              <span className="inline-block -rotate-180">Selected Works</span>
-            </span>
+            ></span>
           </div>
         </div>
 

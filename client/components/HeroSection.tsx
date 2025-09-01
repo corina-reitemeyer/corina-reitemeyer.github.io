@@ -61,7 +61,7 @@ export default function HeroSection() {
                 <motion.p
                   key={selectedRole}
                   className="
-                    text-2xl font-medium leading-snug text-white md:absolute
+                    text-2xl font-medium text-white md:absolute
                     md:inset-0 md:text-3xl
                   "
                   initial={{ opacity: 0, y: 8, filter: 'blur(4px)' }}

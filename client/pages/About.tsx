@@ -50,7 +50,7 @@ const About = () => {
   return (
     <div>
       <AboutIntro
-        imageSrc="/images/corina-about.png"
+        imageSrc="/images/corina-about.webp"
         imageAlt="Portrait"
         title="Guten Tag. Kia Ora. Hello!"
         paragraphs={[

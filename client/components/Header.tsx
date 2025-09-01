@@ -157,7 +157,7 @@ export default function Header() {
             </li>
             <li>
               <a
-                href="/files/mycv.pdf"
+                href="/files/Resumé_Corina_Reitemeyer_2025.pdf"
                 className="block rounded-lg px-3 py-2 text-base font-medium text-white/70 transition hover:text-white"
                 download="mycv"
               >

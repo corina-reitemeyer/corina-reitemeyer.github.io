@@ -12,10 +12,9 @@ type GalleryImage = {
 
 type Props = {
   images: GalleryImage[]
-  showCaptions?: boolean
 }
 
-export default function ImageGallery({ images, showCaptions = false }: Props) {
+export default function ImageGallery({ images }: Props) {
   const scrollerRef = useRef<HTMLUListElement | null>(null)
   const [isOpen, setIsOpen] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
@@ -38,19 +37,19 @@ export default function ImageGallery({ images, showCaptions = false }: Props) {
 
   if (items.length === 0) return null
 
-  // Reusable in-view props for a nice pop
+  // Each image animates when it enters the viewport
   const inViewProps = {
     initial: { opacity: 0, y: 16, scale: 0.98 },
     whileInView: { opacity: 1, y: 0, scale: 1 },
     transition: { duration: 0.45, ease: 'easeOut' },
-    viewport: { once: true, amount: 0.35 }, // animate when ~35% is visible
+    viewport: { once: true, amount: 0.35 },
   } as const
 
   return (
     <section className="bg-[#08082a] py-10 sm:py-14">
       <div className="container mx-auto max-w-6xl px-6 sm:px-8">
         {/* MOBILE HEADING (aligns with images) */}
-        <div className="mx-auto w-full max-w-5xl md:hidden">
+        <div className="mx-auto w-full max-w-6xl md:hidden">
           <h2 className="mb-6 text-3xl font-extrabold text-white">Work</h2>
         </div>
 
@@ -88,8 +87,8 @@ export default function ImageGallery({ images, showCaptions = false }: Props) {
                       height={img.height}
                     />
                   </button>
-                  {showCaptions && img.caption && (
-                    <figcaption className="mt-2 text-sm text-white/70">
+                  {img.caption && (
+                    <figcaption className="mt-2 text-left text-sm text-white/70">
                       {img.caption}
                     </figcaption>
                   )}
@@ -148,8 +147,8 @@ export default function ImageGallery({ images, showCaptions = false }: Props) {
                     height={img.height}
                   />
                 </button>
-                {showCaptions && img.caption && (
-                  <figcaption className="mt-2 text-sm text-white/70">
+                {img.caption && (
+                  <figcaption className="mb-16 mt-2 text-left text-sm text-white/70">
                     {img.caption}
                   </figcaption>
                 )}

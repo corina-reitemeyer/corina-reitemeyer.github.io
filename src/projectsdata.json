@@ -8,12 +8,12 @@
   },
   {
     "id": 2,
-    "projectTitle": "Templates",
-    "slug": "ow-templates",
-    "projectImage": "/images/portfolio/optimal-homepage-cover.png",
-    "company": "Optimal Workshop"
+    "projectTitle": "Design System",
+    "slug": "suitefiles-design-system",
+    "projectImage": "/images/portfolio/suitefiles-design-system-cover.png",
+    "company": "SuiteFiles"
   },
-{
+  {
     "id": 3,
     "projectTitle": "Design System",
     "slug": "moe-design-system",
@@ -22,9 +22,9 @@
   },
   {
     "id": 4,
-    "projectTitle": "Design System",
-    "slug": "suitefiles-design-system",
-    "projectImage": "/images/portfolio/suitefiles-design-system-cover.png",
-    "company": "SuiteFiles"
+    "projectTitle": "Templates",
+    "slug": "ow-templates",
+    "projectImage": "/images/portfolio/optimal-homepage-cover.png",
+    "company": "Optimal Workshop"
   }
 ]

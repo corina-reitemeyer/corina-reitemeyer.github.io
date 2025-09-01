@@ -12,52 +12,44 @@ const SuiteFilesAISummary = () => {
         company="SuiteFiles"
         project="AI Summaries"
         imageSrc="/images/portfolio/suitefiles-ai-summary-cover.png"
-        scope="Lengthy, multi-document signing requests created friction—recipients struggled to understand what they were signing, while senders had to provide context separately through emails or briefings, leaving it disconnected from the documents themselves. I led the strategy and redesign of this feature by shaping the AI approach from a UX perspective—defining how it should behave within the workflow and ensuring users retained transparency and control. The result was an AI-powered summarisation tool that streamlined the signing process: recipients could quickly grasp context, and senders could personalise summaries without starting from scratch. Beyond this feature, the work set a model for the company’s AI-first direction, influencing how AI is integrated across the product suite."
+        scope="Lengthy, multi-document signing requests created friction—recipients struggled to understand what they were signing, while senders had to provide context separately through emails or briefings, leaving it disconnected from the documents themselves. But what if GenAI could take the heavy lifting, leaving users to do what matters most—signing and preparing documents? I led the strategy and redesign of this feature by shaping the AI approach from a UX perspective—defining how it should behave within the workflow and ensuring users retained transparency and control. The result was an AI-powered summarisation tool that streamlined the signing process: recipients could quickly grasp context, and senders could personalise summaries without starting from scratch. Beyond this feature, the work set a model for the company’s AI-first direction, influencing how AI is integrated across the product."
         involvement="Feature design lead, UX strategy for AI integration, cross-functional partner"
         meta={{
           date: '2025',
           type: 'SaaS Proaduct (B2B), Product Design',
-          specialisation: 'Generative AI',
+          specialisation: 'Generative AI, product feature',
         }}
       />
 
       <ImageStrip
         images={[
           {
-            src: '/images/portfolio/suitefiles-ai-summary-cover.png',
-            alt: 'Placeholder 1',
+            src: '/images/product/sfai-mobile.png',
+            alt: 'Mobile screens showing AI Summarizer feature',
+            caption: 'Mobile screens of the AI Summarizer',
           },
           {
-            src: '/images/portfolio/suitefiles-ai-summary-cover.png',
-            alt: 'Placeholder 2',
+            src: '/images/product/sfai-desktop-panel-anatomy.png',
+            alt: 'a desktop screen with components pointing towards it with arrows',
+            caption: 'Anatomy of the feature',
           },
           {
-            src: '/images/portfolio/suitefiles-ai-summary-cover.png',
-            alt: 'Placeholder 3',
-          },
-          {
-            src: '/images/portfolio/suitefiles-ai-summary-cover.png',
-            alt: 'Placeholder 4',
-          },
-          {
-            src: '/images/portfolio/suitefiles-ai-summary-cover.png',
-            alt: 'Placeholder 5',
-          },
-          {
-            src: '/images/portfolio/suitefiles-ai-summary-cover.png',
-            alt: 'Placeholder 6',
+            src: '/images/product/sfai-desktop-slides.png',
+            alt: 'two desktop screens showing the parts of the ai summarizer',
+            caption: 'Signing wizard from the recipient view - desktop',
           },
         ]}
       />
 
       <TwoColumnDetail
-        heading="Context"
-        subtitle="Where this sits in the product"
-        body="The feature integrates with the core workflow and surfaces insights at the right moment."
+        heading="Process"
+        subtitle="From UX Principles to AI-Driven Strategy"
+        body="I approached the feature by reframing the problem at a system level: how could AI reduce friction in the signing journey while preserving trust and control? I defined the human–AI interaction principles—transparency, editability, and user agency—that guided every design decision. Rather than treating AI as an add-on, I positioned it as a strategic layer in the workflow, prototyping and testing interaction models that balanced automation with human judgment. The process established a model for responsible, user-centred AI that the company continues to build on."
         images={[
           {
-            src: '/images/portfolio/suitefiles-ai-summary-cover.png',
-            alt: 'Feature context',
+            src: '/images/process/sfai-userflow-recipient.png',
+            alt: 'useflow diagram showing recipient flow comparison with and without feature',
+            caption: 'Userflow of recipient using AI summarizer.',
           },
         ]}
       />

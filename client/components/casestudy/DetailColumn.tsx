@@ -25,20 +25,35 @@ export default function TwoColumnDetail({
 }: TwoColumnDetailProps) {
   const bodyItems = Array.isArray(body) ? body : body ? [body] : []
 
-  // keep images predictable (0–3)
+  // 0–3 images
   const pics = images.slice(0, 3)
-  const cols =
-    pics.length === 1
-      ? 'grid-cols-1'
-      : pics.length === 2
-        ? 'grid-cols-1 sm:grid-cols-2'
-        : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+
+  const listVariants = {
+    hidden: { opacity: 1 }, // keep container visible, we only animate children
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.18,
+        delayChildren: 0.1,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 16, scale: 0.98 },
+    show: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.45, ease: 'easeOut' },
+    },
+  }
 
   return (
     <section className={`w-full bg-[#08082a] text-white ${className}`}>
-      <div className="py-18 container mx-auto my-24 max-w-6xl px-6 sm:px-8">
+      <div className="container mx-auto my-24 max-w-6xl px-6 sm:px-8">
         {/* Two columns */}
-        <div className="md:gap-18 grid grid-cols-1 gap-10 md:grid-cols-12">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-16">
           {/* Left: heading */}
           <div className="md:col-span-4">
             <h2 className="text-3xl font-extrabold leading-tight text-white">
@@ -64,33 +79,34 @@ export default function TwoColumnDetail({
           </div>
         </div>
 
-        {/* Optional images (0–3) */}
         {pics.length > 0 && (
           <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.45 }}
-            className="mt-16"
+            variants={listVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+            className="mt-16 space-y-10"
           >
-            <div className={`grid gap-6 ${cols}`}>
-              {pics.map((img, i) => (
-                <figure key={`${img.src}-${i}`} className="w-full">
-                  <img
-                    src={img.src}
-                    alt={img.alt ?? ''}
-                    className="w-full rounded-md object-cover"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  {img.caption && (
-                    <figcaption className="mt-2 text-sm text-white/70">
-                      {img.caption}
-                    </figcaption>
-                  )}
-                </figure>
-              ))}
-            </div>
+            {pics.map((img, i) => (
+              <motion.figure
+                key={`${img.src}-${i}`}
+                className="w-full"
+                variants={itemVariants}
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt ?? ''}
+                  className="w-full rounded-md object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+                {img.caption && (
+                  <figcaption className="mt-2 text-left text-sm text-white/70">
+                    {img.caption}
+                  </figcaption>
+                )}
+              </motion.figure>
+            ))}
           </motion.div>
         )}
       </div>

@@ -24,40 +24,38 @@ const SuiteFilesDesignSystem = () => {
       <ImageStrip
         images={[
           {
-            src: '/images/product/suitefiles-design-system-hero.png',
+            src: '/images/product/sfds-desktop-examples.png',
+            alt: 'desktop examples of the product after the rebranding',
+            caption: 'The system applied in the product - desktop',
+          },
+          {
+            src: '/images/product/sfds-component-product-diagram.png',
+            alt: 'Diagram of exemplar components used in the design',
+            caption: 'Example of components applied in the product',
+          },
+          {
+            src: '/images/product/sfds-components.png',
             alt: 'Placeholder 1',
+            caption: 'The design system components in Figma',
           },
           {
-            src: '/images/product/suitefiles-design-system-hero.png',
+            src: '/images/product/sfds-brandtokens.png',
             alt: 'Placeholder 2',
-          },
-          {
-            src: '/images/product/suitefiles-design-system-hero.png',
-            alt: 'Placeholder 3',
-          },
-          {
-            src: '/images/product/suitefiles-design-system-hero.png',
-            alt: 'Placeholder 4',
-          },
-          {
-            src: '/images/product/suitefiles-design-system-hero.png',
-            alt: 'Placeholder 5',
-          },
-          {
-            src: '/images/product/suitefiles-design-system-hero.png',
-            alt: 'Placeholder 6',
+            caption: 'Brand assets and token system in Figma',
           },
         ]}
       />
 
       <TwoColumnDetail
-        heading="Context"
-        subtitle="Where this sits in the product"
-        body="The feature integrates with the core workflow and surfaces insights at the right moment."
+        heading="Process"
+        subtitle="From Brand Rollout to Scalable Evolution"
+        body="I began by auditing the existing system to identify gaps, redundancies, and opportunities for scale. I prioritised the most critical components to expand first, balancing immediate product needs with long-term scalability. To integrate the new brand, I translated updated visual guidelines into systemised tokens and components—ensuring the identity worked consistently across multiple use cases. In parallel, I partnered with engineers to evolve the coded library, aligning naming, behaviours, and documentation so that design and development remained in sync. By approaching the work iteratively, I was able to keep teams shipping features while steadily maturing the system into a stable, brand-aligned foundation."
         images={[
           {
-            src: '/images/portfolio/suitefiles-ai-summary-cover.png',
-            alt: 'Feature context',
+            src: '/images/process/sfds-brand-application.png',
+            alt: 'Before and after of the signing wizard design',
+            caption:
+              'Before / After of the product after the design system rebrand update',
           },
         ]}
       />

@@ -1,4 +1,5 @@
 import AchievementsSection from '../components/casestudy/Achievements'
+import TwoColumnDetail from '../components/casestudy/DetailColumn'
 import CaseStudyNavy from '../components/casestudy/Hero'
 import ImageStrip from '../components/casestudy/ImageStrip'
 import KeyOutcomes from '../components/casestudy/KeyOutcomes'
@@ -23,28 +24,50 @@ const MOEDesignSystem = () => {
       <ImageStrip
         images={[
           {
-            src: '/images/product/moe-designsystem-hero.png',
-            alt: 'Placeholder 1',
+            src: '/images/product/moe-desktop-screens.png',
+            alt: 'three screen mockups of the design system website',
+            caption:
+              'Selection of desktop screens of the design system website - component, case study, and guidance page',
           },
           {
-            src: '/images/product/moe-designsystem-hero.png',
-            alt: 'Placeholder 2',
+            src: '/images/product/moe-mobile-screens.png',
+            alt: 'Design system website - mobile',
+            caption: 'Selection of mobile screens of the design system website',
           },
           {
-            src: '/images/product/moe-designsystem-hero.png',
-            alt: 'Placeholder 3',
+            src: '/images/product/moe-responsive.png',
+            alt: 'Design system website - responsive',
+            caption:
+              'Designs include responsive sizes from mobile to large desktop',
           },
           {
-            src: '/images/product/moe-designsystem-hero.png',
-            alt: 'Placeholder 4',
+            src: '/images/product/moe-components-example.png',
+            alt: 'Figma / Adobe XD components',
+            caption: 'Component guidelines in Adobe XD',
           },
           {
-            src: '/images/product/moe-designsystem-hero.png',
-            alt: 'Placeholder 5',
+            src: '/images/product/moe-brand-assets.png',
+            alt: 'Figma / Adobe XD brand assets',
+            caption: 'Brand assets and tokens Adobe XD',
+          },
+        ]}
+      />
+
+      <TwoColumnDetail
+        heading="Process"
+        subtitle="From Exploration to System Alignment"
+        body="I led the definition of the system by mapping the ecosystem, reviewing competitors, and guiding the evolution from wireframes to final components. A central challenge was aligning both our internal web team and external vendors across 100+ sites, each with its own brand nuances. I ensured the system struck the right balance—flexible enough to support variation, but structured enough to drive consistency through shared patterns and components."
+        images={[
+          {
+            src: '/images/process/moe-sitemap.png',
+            alt: 'The sitemap of the Design System website',
+            caption:
+              'The sitemap of the Design System website - balancing guidance with case studies',
           },
           {
-            src: '/images/product/moe-designsystem-hero.png',
-            alt: 'Placeholder 6',
+            src: '/images/process/moe-desktop-wireframe.png',
+            alt: 'Screens from low fidelity wireframes, adding more detail to a full design',
+            caption: 'From wireframe to final design',
           },
         ]}
       />

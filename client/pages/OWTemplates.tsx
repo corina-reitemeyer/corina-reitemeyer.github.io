@@ -1,4 +1,5 @@
 import AchievementsSection from '../components/casestudy/Achievements'
+import TwoColumnDetail from '../components/casestudy/DetailColumn'
 import CaseStudyNavy from '../components/casestudy/Hero'
 import ImageStrip from '../components/casestudy/ImageStrip'
 import KeyOutcomes from '../components/casestudy/KeyOutcomes'
@@ -16,35 +17,54 @@ const OWTemplates = () => {
         meta={{
           date: '2023',
           type: 'Product Design, SaaS Product (B2B)',
-          specialisation: 'Growth design',
+          specialisation: 'Growth design, product feature',
         }}
       />
 
       <ImageStrip
         images={[
           {
-            src: '/images/product/optimal-case-study-hero.png',
-            alt: 'Placeholder 1',
+            src: '/images/product/ow-desktop-1.png',
+            alt: 'Two laptops showing the template library and overview modal',
+            caption: 'Desktop - template library and overview modal.',
           },
           {
-            src: '/images/product/optimal-case-study-hero.png',
-            alt: 'Placeholder 2',
+            src: '/images/product/ow-desktop-2.png',
+            alt: 'Two laptops showing the create study modal and details tab',
+            caption:
+              'Users can access the library from their usual workflows. Details add more context for the study.',
           },
           {
-            src: '/images/product/optimal-case-study-hero.png',
-            alt: 'Placeholder 3',
+            src: '/images/product/ow-template-types.png',
+            alt: 'Six templates with their study types',
+            caption:
+              'Tbhe first iteration had six variation of multi-study templates, which aided users in conducting IA focused research.',
+          },
+        ]}
+      />
+
+      <TwoColumnDetail
+        heading="Process"
+        subtitle="From Exploration to System Alignment"
+        body="I led the definition of the system by mapping the ecosystem, reviewing competitors, and guiding the evolution from wireframes to final components. A central challenge was aligning both our internal web team and external vendors across 100+ sites, each with its own brand nuances. I ensured the system struck the right balance—flexible enough to support variation, but structured enough to drive consistency through shared patterns and components."
+        images={[
+          {
+            src: '/images/process/ow-userflow.png',
+            alt: 'An interaction map how a user can access and use the templates inside the product',
+            caption:
+              'An interaction map how users can access and use the templates inside the product.',
           },
           {
-            src: '/images/product/optimal-case-study-hero.png',
-            alt: 'Placeholder 4',
+            src: '/images/process/ow-fulllibrary-future.png',
+            alt: 'Two screens showing slightly different iterations of a fullpage library design',
+            caption:
+              'Snippets of blue sky thinking of what it could be in the future.',
           },
           {
-            src: '/images/product/optimal-case-study-hero.png',
-            alt: 'Placeholder 5',
-          },
-          {
-            src: '/images/product/optimal-case-study-hero.png',
-            alt: 'Placeholder 6',
+            src: '/images/process/ow-wireframes.png',
+            alt: 'Two laptops showing the create study modal and details tab',
+            caption:
+              'Even if we just had 6 templates to start with, scalability was a main concern for the first iteration of the design.',
           },
         ]}
       />
@@ -54,24 +74,24 @@ const OWTemplates = () => {
         title="Key Achievements"
         achievements={[
           {
-            title: 'Defined Human-AI Interaction Principles',
+            title: 'Shaped the Templates Strategy',
             description:
-              'Set the UX strategy for how AI should behave within the signing workflow, ensuring transparency, editability, and user trust.',
+              'Defined how ready-made templates could streamline research setup, guiding the first iteration of the feature from concept to delivery.',
           },
           {
-            title: 'Designed a New AI-Powered Feature',
+            title: 'Improved Research Efficiency and Confidence',
             description:
-              'Created the AI feature in form of a document summarizer in the product, enabling senders and recipients to work more efficiently with multi-document requests.',
+              'Enabled teams to launch studies faster and uncover richer insights by reducing wasted setup time and making methods more discoverable.',
           },
           {
-            title: 'Improved Efficiency and Clarity Across the Signing Flow',
+            title: 'Supported Product Strategy Shift',
             description:
-              'Enabled senders to adapt AI-generated summaries instead of drafting from scratch, while giving recipients quick, clear context for lengthy, multi-document requests—all within the signing experience.',
+              'Aligned the feature with the company’s focus on Information Architecture testing, helping reposition the product for growth.',
           },
           {
-            title: 'Influenced AI-First Product Strategy',
+            title: 'Designed the First Multi-Study Templates Feature',
             description:
-              'Delivered a feature that became a reference point for the company’s AI-first approach, guiding future AI-driven design.',
+              'Created pre-built, customisable study combinations that made setup intuitive while surfacing the full range of research methods.',
           },
         ]}
       />

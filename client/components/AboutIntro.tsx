@@ -16,28 +16,18 @@ export default function AboutIntro({
   paragraphs,
   accoladeText,
   accoladeHref,
-  ribbon = 'The obstacle is the way',
 }: Props) {
   return (
     <section className="bg-[#08082a]">
-      <div className="py-26 container mx-auto max-w-6xl px-8 md:pb-36 md:pt-24">
+      <div className="container mx-auto max-w-6xl px-8 py-20 pb-12 sm:pb-36 sm:pt-24">
         <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-12 md:gap-12">
           {/* Left: image — square at all sizes */}
-          <div className="relative md:col-span-6">
-            {/* Vertical ribbon text (top-aligned) */}
-            <span
-              aria-hidden="true"
-              className="absolute -left-10 top-0 rotate-180 text-xs
-               font-semibold leading-none tracking-widest text-white/80 [writing-mode:vertical-rl] md:block"
-            >
-              {ribbon}
-            </span>
-
+          <div className="px-full relative md:col-span-6">
             {/* Square wrapper with responsive max width (so height matches width) */}
             <div
               className="
       relative mx-auto aspect-[1/1]
-      w-full max-w-[340px] overflow-hidden rounded-2xl bg-white/10
+      w-full max-w-6xl overflow-hidden rounded-2xl bg-white/10
       sm:max-w-[420px] md:mx-0 md:max-w-[560px] lg:max-w-[620px]
     "
             >

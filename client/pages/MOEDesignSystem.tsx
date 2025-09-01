@@ -11,7 +11,7 @@ const MOEDesignSystem = () => {
         intro="From crisis website to best-practice framework—defining design standards at scale."
         company="Ministry of Education"
         project="Design System"
-        imageSrc="/images/product/moe-designsystem-hero.png"
+        imageSrc="/images/product/moe-designsystem-hero.webp"
         scope="When the Ministry of Education rushed out a critical COVID-19 website without a design system, the result was inconsistency, accessibility gaps, and scalability issues. I led the creation of the organisation’s first design system—conducting product audits and internal interviews, then iteratively implementing reusable components and WCAG-compliant guidelines. Collaborating with designers, engineers, and web advisors, I drove alignment and streamlined workflows across teams. The system established organisation-wide best practices, reduced design debt, and set a new standard for accessibility and scalability—becoming the foundation for how digital products are now designed and built across 50+ platforms."
         involvement="Design system lead, product design lead, cross-functional partner"
         meta={{
@@ -24,29 +24,29 @@ const MOEDesignSystem = () => {
       <ImageStrip
         images={[
           {
-            src: '/images/product/moe-desktop-screens.png',
+            src: '/images/product/moe-desktop-screens.webp',
             alt: 'three screen mockups of the design system website',
             caption:
               'Selection of desktop screens of the design system website - component, case study, and guidance page',
           },
           {
-            src: '/images/product/moe-mobile-screens.png',
+            src: '/images/product/moe-mobile-screens.webp',
             alt: 'Design system website - mobile',
             caption: 'Selection of mobile screens of the design system website',
           },
           {
-            src: '/images/product/moe-responsive.png',
+            src: '/images/product/moe-responsive.webp',
             alt: 'Design system website - responsive',
             caption:
               'Designs include responsive sizes from mobile to large desktop',
           },
           {
-            src: '/images/product/moe-components-example.png',
+            src: '/images/product/moe-components-example.webp',
             alt: 'Figma / Adobe XD components',
             caption: 'Component guidelines in Adobe XD',
           },
           {
-            src: '/images/product/moe-brand-assets.png',
+            src: '/images/product/moe-brand-assets.webp',
             alt: 'Figma / Adobe XD brand assets',
             caption: 'Brand assets and tokens Adobe XD',
           },
@@ -59,13 +59,13 @@ const MOEDesignSystem = () => {
         body="I led the definition of the system by mapping the ecosystem, reviewing competitors, and guiding the evolution from wireframes to final components. A central challenge was aligning both our internal web team and external vendors across 100+ sites, each with its own brand nuances. I ensured the system struck the right balance—flexible enough to support variation, but structured enough to drive consistency through shared patterns and components."
         images={[
           {
-            src: '/images/process/moe-sitemap.png',
+            src: '/images/process/moe-sitemap.webp',
             alt: 'The sitemap of the Design System website',
             caption:
               'The sitemap of the Design System website - balancing guidance with case studies',
           },
           {
-            src: '/images/process/moe-desktop-wireframe.png',
+            src: '/images/process/moe-desktop-wireframe.webp',
             alt: 'Screens from low fidelity wireframes, adding more detail to a full design',
             caption: 'From wireframe to final design',
           },

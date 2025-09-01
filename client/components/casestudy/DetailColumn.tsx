@@ -1,6 +1,7 @@
 // components/TwoColumnDetail.tsx
-import React from 'react'
+import React, { useCallback, useState } from 'react'
 import { motion } from 'framer-motion'
+import Lightbox from '../casestudy/LightBox'
 
 type DetailImage = {
   src: string
@@ -25,11 +26,23 @@ export default function TwoColumnDetail({
 }: TwoColumnDetailProps) {
   const bodyItems = Array.isArray(body) ? body : body ? [body] : []
 
-  // 0–3 images
+  // only show up to 3 images
   const pics = images.slice(0, 3)
 
+  // --- Lightbox state ---
+  const [isOpen, setIsOpen] = useState(false)
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  const openLightbox = useCallback((idx: number) => {
+    setActiveIndex(idx)
+    setIsOpen(true)
+  }, [])
+
+  const closeLightbox = useCallback(() => setIsOpen(false), [])
+
+  // --- Animations ---
   const listVariants = {
-    hidden: { opacity: 1 }, // keep container visible, we only animate children
+    hidden: { opacity: 1 },
     show: {
       opacity: 1,
       transition: {
@@ -51,7 +64,7 @@ export default function TwoColumnDetail({
 
   return (
     <section className={`w-full bg-[#08082a] text-white ${className}`}>
-      <div className="container mx-auto my-24 max-w-6xl px-6 sm:px-8">
+      <div className="container mx-auto my-16 max-w-6xl px-6 sm:my-24 sm:px-8">
         {/* Two columns */}
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-16">
           {/* Left: heading */}
@@ -62,11 +75,10 @@ export default function TwoColumnDetail({
           </div>
 
           {/* Right: subtitle + body */}
-          <div className="mb-4 md:col-span-8">
+          <div className="-mb-4 sm:mb-4 md:col-span-8">
             {subtitle && (
               <h3 className="text-lg font-semibold text-white">{subtitle}</h3>
             )}
-
             {bodyItems.length > 0 && (
               <div className={subtitle ? 'mt-4 space-y-4' : 'space-y-4'}>
                 {bodyItems.map((para, i) => (
@@ -79,6 +91,7 @@ export default function TwoColumnDetail({
           </div>
         </div>
 
+        {/* Images (0–3) with stagger + lightbox */}
         {pics.length > 0 && (
           <motion.div
             variants={listVariants}
@@ -93,13 +106,21 @@ export default function TwoColumnDetail({
                 className="w-full"
                 variants={itemVariants}
               >
-                <img
-                  src={img.src}
-                  alt={img.alt ?? ''}
-                  className="w-full rounded-md object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <button
+                  type="button"
+                  onClick={() => openLightbox(i)}
+                  className="group block w-full focus:outline-none"
+                  aria-label={`Open image ${i + 1}`}
+                >
+                  <img
+                    src={img.src}
+                    alt={img.alt ?? ''}
+                    className="w-full cursor-zoom-in rounded-md object-cover transition group-hover:opacity-90"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+
                 {img.caption && (
                   <figcaption className="mt-2 text-left text-sm text-white/70">
                     {img.caption}
@@ -110,6 +131,15 @@ export default function TwoColumnDetail({
           </motion.div>
         )}
       </div>
+
+      {/* Lightbox */}
+      {isOpen && (
+        <Lightbox
+          src={pics[activeIndex]?.src || ''}
+          alt={pics[activeIndex]?.alt || ''}
+          onClose={closeLightbox}
+        />
+      )}
     </section>
   )
 }

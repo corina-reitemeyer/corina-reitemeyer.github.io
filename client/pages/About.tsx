@@ -52,10 +52,12 @@ const About = () => {
       <AboutIntro
         imageSrc="/images/corina-about.png"
         imageAlt="Portrait"
-        title="My journey"
+        title="Guten Tag. Kia Ora. Hello!"
         paragraphs={[
-          'I’m a Senior UX/UI Designer who loves creating digital experiences that feel simple, intuitive, and scalable. With 7+ years of experience, I specialise in AI-driven UX and Design Systems that help products grow and adapt seamlessly.',
-          'My skill-set in full-stack development and data analytics gives me a strong understanding of both product design and technical constraints. I enjoy collaborating with cross-functional teams to turn complex challenges into practical, user-friendly solutions.',
+          'I’m Corina - a Senior UX/UI Designer who loves creating digital experiences that feel simple, intuitive, and scalable. With 7+ years of experience, I specialise in AI-driven UX and Design Systems that help products grow and adapt seamlessly.',
+          'My skill-set in full-stack developmentgives me a strong understanding of both product design and technical constraints. I enjoy collaborating with cross-functional teams to turn complex challenges into practical, user-friendly solutions.',
+          'I’m currently based in New Zealand, but always curious to see other places in the world.',
+          'If I’m not tinkering around in some designing escapades, you can usually find me teaching Cuban Salsa, learn new languages (Korean 🇰🇷 has got me hooked at the moment!), and completing my TEFL certificate. ',
         ]}
         accoladeText="Best Awards, 2018"
         accoladeHref="https://bestawards.co.nz/digital/student-digital/massey-university-college-of-creative-arts/infinite/"
@@ -63,8 +65,8 @@ const About = () => {
 
       <ExperienceSection leftBlock={left} rightBlock={right} />
 
-      <section className="bg-[#08082a] py-24">
-        <div className="mx-auto max-w-7xl px-8">
+      <section className="bg-[#08082a] py-16 sm:py-24">
+        <div className="mx-auto max-w-6xl sm:max-w-7xl sm:px-8">
           <h2 className="font-heading mb-12 text-center text-3xl font-semibold text-white">
             What Drives My Work
           </h2>

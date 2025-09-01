@@ -7,7 +7,7 @@ export default interface AboutData {
 interface Role {
   title?: string
   subtitle?: string
-  description: string
+  description: string | string[]
 }
 
 interface ProcessStep {

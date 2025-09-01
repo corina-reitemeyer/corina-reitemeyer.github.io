@@ -37,17 +37,33 @@ export default function HeroSection() {
 
   return (
     <section className="bg-[#08082a]">
-      <div className="mx-auto max-w-6xl px-8 py-24 md:py-24">
-        {/* 3/4 | 1/4 */}
-        <div className="grid grid-cols-1 gap-y-10 md:grid-cols-12 md:gap-x-24">
+      <div className="mx-auto w-full max-w-6xl px-6 py-16 sm:px-8 md:py-24 lg:py-16">
+        <div
+          className="
+            grid grid-cols-1
+            gap-y-8 sm:gap-y-9 md:grid-cols-12
+            md:gap-x-24
+            md:gap-y-10
+            xl:gap-x-20 2xl:gap-x-16
+          "
+        >
           {/* LEFT */}
           <div className="text-left md:col-span-7">
-            {/* fixed stage so height doesn't jump */}
-            <div className="relative min-h-[6.75rem] sm:min-h-[7.5rem] md:min-h-[8.25rem] md:max-w-[58ch] lg:max-w-[58ch]">
+            <div
+              className="
+                md:relative
+                md:min-h-[8.25rem]
+                md:max-w-[58ch] lg:max-w-[58ch]
+                xl:max-w-[54ch] 2xl:max-w-[52ch]
+              "
+            >
               <AnimatePresence mode="wait" initial={false}>
                 <motion.p
                   key={selectedRole}
-                  className="absolute inset-0 text-2xl font-medium leading-snug text-white md:text-3xl"
+                  className="
+                    text-2xl font-medium leading-snug text-white md:absolute
+                    md:inset-0 md:text-3xl
+                  "
                   initial={{ opacity: 0, y: 8, filter: 'blur(4px)' }}
                   animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                   exit={{ opacity: 0, y: -8, filter: 'blur(4px)' }}
@@ -58,8 +74,8 @@ export default function HeroSection() {
               </AnimatePresence>
             </div>
 
-            {/* mobile buttons */}
-            <div className="mt-8 flex w-full flex-col space-y-3 md:hidden">
+            {/* MOBILE MENU */}
+            <div className="mt-8 flex w-full flex-col space-y-3 bg-[#08082a] md:hidden">
               <button
                 className={`text-left text-lg transition-all duration-300 ${
                   selectedRole === 'default'
@@ -101,8 +117,15 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* RIGHT (sticky) */}
-          <aside className="hidden flex-col space-y-3 self-start md:sticky md:top-24 md:col-span-3 md:flex">
+          {/* RIGHT (sticky on desktop) */}
+          <aside
+            className="
+              hidden flex-col space-y-3
+              self-start md:sticky md:top-24
+              md:col-span-3 md:flex
+              xl:top-20 2xl:top-16
+            "
+          >
             <button
               className={`text-left text-lg transition-all duration-300 ${
                 selectedRole === 'default'

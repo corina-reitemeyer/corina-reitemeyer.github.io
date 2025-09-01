@@ -87,7 +87,7 @@ export default function ExperienceSection({
         </div>
 
         {/* Mobile/Tablet: fall back to two separate two-column lists */}
-        <div className="grid grid-cols-1 gap-16 lg:hidden">
+        <div className="grid grid-cols-1 lg:hidden">
           {[leftBlock, rightBlock].map((block, idx) => (
             <div key={idx} className="grid grid-cols-[1fr_auto] gap-x-10">
               {block.map((item, i) => (

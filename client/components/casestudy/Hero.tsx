@@ -37,8 +37,8 @@ export default function CaseStudyNavy({
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           className="
-    max-w-4xl pb-14 text-2xl font-semibold
-    leading-[1.4] text-white
+    max-w-4xl pb-8 text-3xl font-semibold leading-[1.4]
+    text-white sm:pb-14
     sm:text-3xl sm:leading-[1.4]
     md:text-4xl md:leading-[1.3]
     lg:text-5xl lg:leading-[1.25]
@@ -53,7 +53,7 @@ export default function CaseStudyNavy({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mt-18 sm:mt-14"
+          className="sm:mt-18 sm:mt-14"
         >
           <img
             src={imageSrc}
@@ -63,7 +63,7 @@ export default function CaseStudyNavy({
         </motion.div>
 
         {/* 3) Details */}
-        <div className="md:gap-18 mt-32 grid grid-cols-1 gap-10 md:grid-cols-12">
+        <div className="md:gap-18 mt-28 grid grid-cols-1 gap-10 sm:mt-32 md:grid-cols-12">
           {/* Left */}
           <div className="md:col-span-4">
             <p className="text-3xl font-semibold leading-tight text-[#CBEDE8]">

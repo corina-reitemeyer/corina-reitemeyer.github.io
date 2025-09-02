@@ -8,20 +8,12 @@ export default function Footer() {
         {/* links */}
         <div className="flex flex-wrap gap-8">
           <a
-            href="https://www.linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/corinareitemeyer"
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold text-white transition hover:text-white/70"
           >
             LinkedIn.
-          </a>
-          <a
-            href="https://medium.com/@yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-white transition hover:text-white/70"
-          >
-            Medium.
           </a>
         </div>
       </div>

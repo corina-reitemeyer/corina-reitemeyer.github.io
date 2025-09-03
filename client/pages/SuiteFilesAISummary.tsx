@@ -16,8 +16,8 @@ const SuiteFilesAISummary = () => {
         involvement="Feature design lead, UX strategy for AI integration, cross-functional partner"
         meta={{
           date: '2025',
-          type: 'SaaS Proaduct (B2B), Product Design',
-          specialisation: 'Generative AI, product feature',
+          type: 'SaaS Product (B2B), Product Design',
+          specialisation: 'Generative AI',
         }}
       />
 

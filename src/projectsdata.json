@@ -3,7 +3,7 @@
     "id": 1,
     "projectTitle": "AI Document Summarizer",
     "slug": "suitefiles-ai-summary",
-    "projectImage": "public/images/portfolio/suitefiles-ai-summary-cover.webp",
+    "projectImage": "/images/portfolio/suitefiles-ai-summary-cover.webp",
     "company": "SuiteFiles"
   },
   {

@@ -44,7 +44,7 @@ const SuiteFilesAISummary = () => {
       <TwoColumnDetail
         heading="Process"
         subtitle="From UX Principles to AI-Driven Strategy"
-        body="I approached the feature by reframing the problem at a system level: how could AI reduce friction in the signing journey while preserving trust and control? I defined the human–AI interaction principles—transparency, editability, and user agency—that guided every design decision. Rather than treating AI as an add-on, I positioned it as a strategic layer in the workflow, prototyping and testing interaction models that balanced automation with human judgment. The process established a model for responsible, user-centred AI that the company continues to build on."
+        body="I approached the feature by reframing the problem at a system level: how could AI reduce friction in the signing journey while preserving trust and control? I defined the human–AI interaction principles—transparency, editability, and user agency—that guided every design decision. Rather than treating AI as an add-on, I positioned it as a strategic layer in the workflow — designing interaction patterns that balanced automation with human judgment. Working within a lean startup environment, I focused on embedding responsible, user-centred principles into the first release, ensuring the feature could ship quickly while setting a model for how AI would be integrated across the product. I prioritised clarity over complexity — focusing on a simple, shippable model that could evolve with user feedback after release."
         images={[
           {
             src: '/images/process/sfai-userflow-recipient.webp',

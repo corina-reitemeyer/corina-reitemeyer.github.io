@@ -45,6 +45,11 @@ const About = () => {
       title: 'Digital Product Designer',
       dates: '2018',
     },
+    {
+      company: 'Umajin',
+      title: 'Mobile Creative Designer',
+      dates: '2016 - 2017',
+    },
   ]
 
   return (

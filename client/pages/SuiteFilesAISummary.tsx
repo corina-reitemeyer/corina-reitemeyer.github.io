@@ -49,7 +49,14 @@ const SuiteFilesAISummary = () => {
           {
             src: '/images/process/sfai-userflow-recipient.webp',
             alt: 'useflow diagram showing recipient flow comparison with and without feature',
-            caption: 'Userflow of recipient using AI summarizer.',
+            caption:
+              'Userflow of the recipient using the AI summarizer feature. It highlights the pain-points without the summarizer in the workflow.',
+          },
+          {
+            src: '/images/process/sfai-ai-principles.webp',
+            alt: 'Triangle diagram showing the three main principles that informed the design.',
+            caption:
+              'These principles ensured the AI felt trustworthy and supportive — speeding up the signing process while keeping people in control.',
           },
         ]}
       />

@@ -22,7 +22,7 @@ export default function ExperienceSection({
 
   return (
     <section className="bg-[#08082a]">
-      <div className="container mx-auto max-w-6xl px-8 py-16 md:pb-28 md:pt-20">
+      <div className="md:pb-22 container mx-auto max-w-6xl px-8 py-16 md:pt-10">
         <h2 className="mb-10 text-2xl font-semibold text-white sm:text-3xl">
           {heading}
         </h2>

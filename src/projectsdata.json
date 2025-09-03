@@ -1,23 +1,30 @@
 [
   {
-    "id": 2,
-    "projectTitle": "Design System",
-    "slug": "suitefiles-design-system",
-    "projectImage": "/images/product/suitefiles-design-system-hero.webp",
+    "id": 1,
+    "projectTitle": "AI Document Summarizer",
+    "slug": "suitefiles-ai-summary",
+    "projectImage": "public/images/portfolio/suitefiles-ai-summary-cover.webp",
     "company": "SuiteFiles"
   },
-   {
-    "id": 3,
+  {
+    "id": 2,
     "projectTitle": "Templates",
     "slug": "ow-templates",
     "projectImage": "/images/portfolio/optimal-homepage-cover.webp",
     "company": "Optimal Workshop"
   },
   {
-    "id": 4,
+    "id": 3,
     "projectTitle": "Design System",
     "slug": "moe-design-system",
     "projectImage": "/images/portfolio/moe-design-system-cover.webp",
     "company": "Ministry of Education"
+  },
+  {
+    "id": 4,
+    "projectTitle": "Design System",
+    "slug": "suitefiles-design-system",
+    "projectImage": "/images/product/suitefiles-design-system-hero.webp",
+    "company": "SuiteFiles"
   }
 ]

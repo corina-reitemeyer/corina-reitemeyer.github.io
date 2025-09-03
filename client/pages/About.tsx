@@ -55,7 +55,7 @@ const About = () => {
         title="Guten Tag. Kia Ora. Hello!"
         paragraphs={[
           'I’m Corina - a Senior UX/UI Designer who loves creating digital experiences that feel simple, intuitive, and scalable. With 7+ years of experience, I specialise in AI-driven UX and Design Systems that help products grow and adapt seamlessly.',
-          'My skill-set in full-stack developmentgives me a strong understanding of both product design and technical constraints. I enjoy collaborating with cross-functional teams to turn complex challenges into practical, user-friendly solutions.',
+          'My skill-set in full-stack development gives me a strong understanding of both product design and technical constraints. I enjoy collaborating with cross-functional teams to turn complex challenges into practical, user-friendly solutions.',
           'I’m currently based in New Zealand, but always curious to see other places in the world.',
           'If I’m not tinkering around in some designing escapades, you can usually find me teaching Cuban Salsa, learn new languages (Korean 🇰🇷 has got me hooked at the moment!), and completing my TEFL certificate. ',
         ]}

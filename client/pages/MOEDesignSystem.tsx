@@ -8,12 +8,12 @@ const MOEDesignSystem = () => {
   return (
     <div>
       <CaseStudyNavy
-        intro="From crisis website to best-practice framework—defining design standards at scale."
+        intro="From COVID crisis site to scaling design standards across 50+ platforms."
         company="Ministry of Education"
         project="Design System"
         imageSrc="/images/product/moe-designsystem-hero.webp"
-        scope="When the Ministry of Education rushed out a critical COVID-19 website without a design system, the result was inconsistency, accessibility gaps, and scalability issues. I led the creation of the organisation’s first design system—conducting product audits and internal interviews, then iteratively implementing reusable components and WCAG-compliant guidelines. Collaborating with designers, engineers, and web advisors, I drove alignment and streamlined workflows across teams. The system established organisation-wide best practices, reduced design debt, and set a new standard for accessibility and scalability—becoming the foundation for how digital products are now designed and built across 50+ platforms."
-        involvement="Design system lead, product design lead, cross-functional partner"
+        scope="The rushed launch of a critical COVID-19 website revealed cracks in the process — inconsistent design, accessibility issues, and a lack of shared standards. I led the creation of the Ministry of Education’s first design system to address these gaps. I began with product audits and staff interviews, then built reusable components and accessibility guidelines based on WCAG standards. Working with designers, engineers, and web advisors, I aligned teams and streamlined workflows. The system reduced design problems, improved accessibility, and created a shared set of standards for all future projects — now used across 50+ digital platforms."
+        involvement="Design system and product design lead"
         meta={{
           date: '2020 - 2021',
           type: 'Design System, Website',
@@ -27,28 +27,27 @@ const MOEDesignSystem = () => {
             src: '/images/product/moe-desktop-screens.webp',
             alt: 'three screen mockups of the design system website',
             caption:
-              'Selection of desktop screens of the design system website - component, case study, and guidance page',
+              'Desktop screens — components, case studies, and guidance pages.',
           },
           {
             src: '/images/product/moe-mobile-screens.webp',
             alt: 'Design system website - mobile',
-            caption: 'Selection of mobile screens of the design system website',
+            caption: 'Mobile screens — design system website.',
           },
           {
             src: '/images/product/moe-responsive.webp',
             alt: 'Design system website - responsive',
-            caption:
-              'Designs include responsive sizes from mobile to large desktop',
+            caption: 'Responsive designs — from mobile to large desktop.',
           },
           {
             src: '/images/product/moe-components-example.webp',
             alt: 'Figma / Adobe XD components',
-            caption: 'Component guidelines in Adobe XD',
+            caption: 'Component guidelines in Adobe XD.',
           },
           {
             src: '/images/product/moe-brand-assets.webp',
             alt: 'Figma / Adobe XD brand assets',
-            caption: 'Brand assets and tokens Adobe XD',
+            caption: 'Brand assets and tokens in Adobe XD.',
           },
         ]}
       />
@@ -56,18 +55,18 @@ const MOEDesignSystem = () => {
       <TwoColumnDetail
         heading="Process"
         subtitle="From Exploration to System Alignment"
-        body="I led the definition of the system by mapping the ecosystem, reviewing competitors, and guiding the evolution from wireframes to final components. A central challenge was aligning both our internal web team and external vendors across 100+ sites, each with its own brand nuances. I ensured the system struck the right balance—flexible enough to support variation, but structured enough to drive consistency through shared patterns and components."
+        body="I defined the design system by mapping existing sites, reviewing competitors, and guiding the evolution from wireframes to final components. The components themselves were agreed through facilitated workshops, while I designed the website from scratch and set up the design tokens in our design tool. A key challenge was aligning our internal web team and external vendors across more than 100 sites, each with its own brand style. I made sure the system struck the right balance — flexible enough for variation, but structured enough to bring consistency through shared patterns and components."
         images={[
           {
             src: '/images/process/moe-sitemap.webp',
             alt: 'The sitemap of the Design System website',
             caption:
-              'The sitemap of the Design System website - balancing guidance with case studies',
+              'Design system sitemap — balancing guidance with case studies.',
           },
           {
             src: '/images/process/moe-desktop-wireframe.webp',
             alt: 'Screens from low fidelity wireframes, adding more detail to a full design',
-            caption: 'From wireframe to final design',
+            caption: 'From wireframe to final designs.',
           },
         ]}
       />
@@ -79,22 +78,22 @@ const MOEDesignSystem = () => {
           {
             title: 'Built the Organisation’s First Design System',
             description:
-              'Led research, definition, and implementation of the first-ever design system, securing buy-in and adoption across teams at scale.',
+              'Led research, workshops, and implementation to create a shared system, securing adoption across teams.',
           },
           {
-            title: 'Elevated Accessibility Standards',
+            title: 'Ensured Application of Accessibility Standards',
             description:
-              'Embedded WCAG compliance into the system, reducing risk and ensuring more inclusive digital services.',
+              'Embedded WCAG compliance into the system, ensuring consistent application and more inclusive services.',
           },
           {
-            title: 'Enhanced Cross-Team Collaboration',
+            title: 'Improved Collaboration',
             description:
-              'Streamlined workflows between designers and engineers, cutting friction in design-to-dev handoff.',
+              'Streamlined workflows between designers and engineers, making handoff smoother and faster.',
           },
           {
-            title: 'Raised Design Standards Across 50+ Products',
+            title: 'Set Standards Across 50+ Products',
             description:
-              'Brought consistency and scalability to an ecosystem of websites, shaping long-term digital strategy.',
+              'Brought consistency and scalability to dozens of websites, shaping the organisation’s long-term digital strategy.',
           },
         ]}
       />
@@ -109,33 +108,35 @@ const MOEDesignSystem = () => {
             iconAlt: 'Rocket',
             iconNode: null,
             title: '40% Faster Dev/Design Time',
-            description: 'Standardised components reduced redundant work.',
+            description:
+              'Standardised components cut duplicate work and sped up delivery.',
           },
           {
             icon: '📈',
             iconSrc: '/icons/increase.svg',
             iconAlt: 'Increase',
             iconNode: null,
-            title: 'Increased Adoption',
+            title: 'Broad System Use',
             description:
-              'Teams actively used the system across 50+ sites, new and existing products.',
+              'Teams applied the system across 50+ sites, both new builds and existing products.',
           },
           {
             icon: '⏳',
             iconSrc: '/icons/speedometer.svg',
             iconAlt: 'Speed',
             iconNode: null,
-            title: 'Reduced Design Debt',
-            description: 'Standardised patterns simplified workflows.',
+            title: 'Simpler Workflows',
+            description:
+              'Shared patterns reduced rework and made design processes easier.',
           },
           {
             icon: '📖',
             iconSrc: '/icons/book.svg',
             iconAlt: 'Book',
             iconNode: null,
-            title: 'Improved Documentation',
+            title: 'Clearer Documentation',
             description:
-              'Updated guidance to reflect real-world developer needs.',
+              'Guidelines were updated to reflect real developer needs.',
           },
           {
             icon: '🎨',
@@ -144,7 +145,7 @@ const MOEDesignSystem = () => {
             iconNode: null,
             title: 'Consistent User Experience',
             description:
-              'Unified visual language reduced usability issues and boosted trust in digital platforms.',
+              'A unified visual language reduced usability issues and built trust in digital platforms.',
           },
           {
             icon: '🤝',
@@ -153,7 +154,7 @@ const MOEDesignSystem = () => {
             iconNode: null,
             title: 'Better Vendor Alignment',
             description:
-              'Clear standards made it easier for external teams to deliver consistent work.',
+              'Clear standards helped external teams deliver consistent work.',
           },
         ]}
       />

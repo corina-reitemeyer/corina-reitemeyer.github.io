@@ -8,16 +8,16 @@ const OWTemplates = () => {
   return (
     <div>
       <CaseStudyNavy
-        intro="Making research setup effortless with pre-built, customisable templates."
+        intro="Research made easy with customisable templates."
         company="Optimal Workshop"
         project="Templates"
         imageSrc="/images/product/optimal-case-study-hero.webp"
-        scope="Research setup was slow and inconsistent, frustrating teams and delaying insights—raising churn risk when learnings arrived too late to act on. Meanwhile, the product already supported diverse study types, including Information Architecture testing, but most users were unaware of this potential. I designed the first iteration of the templates feature to solve both problems: pre-built, customisable study combinations that made setup intuitive while surfacing the full breadth of research methods. The work drew on user research, cross-functional collaboration with PMs and engineers, and iterative design to balance flexibility with speed. The result enabled researchers at all levels to launch studies faster, explore methods with confidence, and generate richer insights—while advancing the company’s shift toward an IA-focused product strategy."
-        involvement="Product design, research collaborator"
+        scope="Research setup was often slow and inconsistent, frustrating teams and delaying insights. This meant findings sometimes came too late to act on. At the same time, the product already supported many types of studies — like Information Architecture (IA) testing, a way to check how people understand structure and navigation — but most users didn’t realise this was possible. I designed the first version of the templates feature to solve both problems: ready-made, customisable study setups that made starting easier and showed the full range of research methods. It also encouraged researchers to try combining studies, moving beyond single methods to get stronger results. The work drew on user research, close collaboration with product owners and engineers, and iterative design to balance flexibility with speed. The result: researchers at all levels could launch studies faster, explore methods with confidence, and generate richer insights — while also guiding the product toward a stronger focus on IA."
+        involvement="Led product design of the feature and collaborated with researchers to inform and validate the solution"
         meta={{
           date: '2023',
           type: 'Product Design, SaaS Product (B2B)',
-          specialisation: 'Growth design, product feature',
+          specialisation: 'Growth design',
         }}
       />
 
@@ -26,19 +26,19 @@ const OWTemplates = () => {
           {
             src: '/images/product/ow-desktop-1.webp',
             alt: 'Two laptops showing the template library and overview modal',
-            caption: 'Desktop - template library and overview modal.',
+            caption: 'Desktop — template library and overview modal.',
           },
           {
             src: '/images/product/ow-desktop-2.webp',
             alt: 'Two laptops showing the create study modal and details tab',
             caption:
-              'Users can access the library from their usual workflows. Details add more context for the study.',
+              'Template library accessed from core workflows, with study details for added context.',
           },
           {
             src: '/images/product/ow-template-types.webp',
             alt: 'Six templates with their study types',
             caption:
-              'Tbhe first iteration had six variation of multi-study templates, which aided users in conducting IA focused research.',
+              'First iteration: six multi-study templates supporting IA-focused research.',
           },
         ]}
       />
@@ -46,25 +46,25 @@ const OWTemplates = () => {
       <TwoColumnDetail
         heading="Process"
         subtitle="From Experiment to Scalable Feature"
-        body="What if setting up research could be faster and more intuitive? I shaped the first iteration of our multi-study research templates by drawing on insights from in-flight projects, ensuring the feature addressed real, recurring setup pain points. As the first workstream under the new product strategy, I approached it as an experiment—prioritising scalability while limiting engineering investment until user value was proven. After launch, I partnered with a researcher to evaluate how the first six templates fit into user workflows, uncovering positives such as teams using them for inspiration as well as shortcomings like gaps in content. These insights guided refinements to both content and functionality for the next iteration. This iterative, evidence-driven process established templates as a scalable feature that accelerated setup and aligned with the broader product vision."
+        body="What if setting up research could be faster and easier? Using insights from ongoing projects, I designed the first version of multi-study research templates to tackle common setup challenges. Because this was the first project under the new strategy, I treated it as an experiment — focusing on a design that could grow over time while keeping engineering effort low until we proved user value. After launch, I worked with a researcher to see how the first six templates fit into real workflows. We found positives (teams using them for inspiration and trying new combinations) and gaps (missing content, limited features). These findings guided improvements to both content and features in the next release. This iterative, evidence-driven process turned templates into a repeatable feature that sped up setup and fit the product’s bigger direction."
         images={[
           {
             src: '/images/process/ow-userflow.webp',
             alt: 'An interaction map how a user can access and use the templates inside the product',
             caption:
-              'An interaction map how users can access and use the templates inside the product.',
+              'Interaction map showing how users access and use templates.',
           },
           {
             src: '/images/process/ow-fulllibrary-future.webp',
             alt: 'Two screens showing slightly different iterations of a fullpage library design',
             caption:
-              'Snippets of blue sky thinking of what it could be in the future.',
+              'Explorations — blue-sky concepts for future template evolution.',
           },
           {
             src: '/images/process/ow-wireframes.webp',
             alt: 'Two laptops showing the create study modal and details tab',
             caption:
-              'Even if we just had 6 templates to start with, scalability was a main concern for the first iteration of the design.',
+              'First release included six templates, designed with scalability in mind.',
           },
         ]}
       />
@@ -76,22 +76,22 @@ const OWTemplates = () => {
           {
             title: 'Shaped the Templates Strategy',
             description:
-              'Defined how ready-made templates could streamline research setup, guiding the first iteration of the feature from concept to delivery.',
+              'Defined how ready-made templates could streamline research setup, guiding the feature from concept to delivery.',
           },
           {
-            title: 'Improved Research Efficiency and Confidence',
+            title: 'Improved Efficiency and Confidence',
             description:
-              'Enabled teams to launch studies faster and uncover richer insights by reducing wasted setup time and making methods more discoverable.',
+              'Helped teams set up studies faster and uncover richer insights by reducing setup time and making methods easier to find.',
           },
           {
-            title: 'Supported Product Strategy Shift',
+            title: 'Aligned with Product Strategy Shift',
             description:
-              'Aligned the feature with the company’s focus on Information Architecture testing, helping reposition the product for growth.',
+              'Made templates a key part of the company’s new focus on Information Architecture.',
           },
           {
             title: 'Designed the First Multi-Study Templates Feature',
             description:
-              'Created pre-built, customisable study combinations that made setup intuitive while surfacing the full range of research methods.',
+              'Created pre-built, customisable study combinations that made setup intuitive while surfacing a broader range of methods.',
           },
         ]}
       />
@@ -106,7 +106,7 @@ const OWTemplates = () => {
             iconNode: null,
             title: '20% faster setup',
             description:
-              'Pre-built, customisable templates cut time to configure studies—freeing researchers to spend more time analysing insights, not fiddling with setup.',
+              'Pre-built, customisable templates cut setup time, letting researchers focus on insights instead of configuration.',
           },
           {
             icon: '📈',
@@ -115,16 +115,16 @@ const OWTemplates = () => {
             iconNode: null,
             title: 'More multi-study use',
             description:
-              'Practitioners combined methods more often for deeper insight—driving higher-quality outputs for teams and more product stickiness.',
+              'Teams combined methods more often, leading to deeper insights and stronger outcomes.',
           },
           {
             icon: '🚀',
             iconSrc: '/icons/rocket.svg',
-            iconAlt: '',
+            iconAlt: 'Rocket',
             iconNode: null,
             title: 'Lower barrier to entry',
             description:
-              'Onboarding eased for novices while staying fast for experts—reducing drop-off at a critical early stage of adoption.',
+              'Onboarding became easier for beginners while staying efficient for experts — reducing drop-off at a critical early stage.',
           },
           {
             icon: '🧭',
@@ -133,7 +133,7 @@ const OWTemplates = () => {
             iconNode: null,
             title: 'First IA-focused feature',
             description:
-              'Pioneered an IA-led templates MVP that shaped product direction—cementing OW’s position as an IA leader in the market.',
+              'Introduced the first IA-led templates, setting the direction for future product growth.',
           },
           {
             icon: '🔁',
@@ -142,7 +142,7 @@ const OWTemplates = () => {
             iconNode: null,
             title: 'Retention lift',
             description:
-              'Template adoption correlated with higher customer retention post-launch—key for improving CLTV and reducing sales pressure.',
+              'After launch, more customers stayed with the product — boosting long-term value and easing pressure on new sales.',
           },
         ]}
       />

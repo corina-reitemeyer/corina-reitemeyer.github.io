@@ -8,10 +8,10 @@
   },
   {
     "id": 2,
-    "projectTitle": "Templates",
-    "slug": "ow-templates",
-    "projectImage": "/images/portfolio/optimal-homepage-cover.webp",
-    "company": "Optimal Workshop"
+    "projectTitle": "Design System",
+    "slug": "suitefiles-design-system",
+    "projectImage": "/images/product/suitefiles-design-system-hero.webp",
+    "company": "SuiteFiles"
   },
   {
     "id": 3,
@@ -22,9 +22,9 @@
   },
   {
     "id": 4,
-    "projectTitle": "Design System",
-    "slug": "suitefiles-design-system",
-    "projectImage": "/images/product/suitefiles-design-system-hero.webp",
-    "company": "SuiteFiles"
+    "projectTitle": "Templates",
+    "slug": "ow-templates",
+    "projectImage": "/images/portfolio/optimal-homepage-cover.webp",
+    "company": "Optimal Workshop"
   }
 ]

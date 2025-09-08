@@ -8,12 +8,12 @@ const SuiteFilesDesignSystem = () => {
   return (
     <div>
       <CaseStudyNavy
-        intro="Evolving a design system to integrate the startup's new branding and enable faster product scaling."
+        intro="From rebrand to rapid growth — evolving the design system."
         company="SuiteFiles"
         project="Design System"
         imageSrc="/images/product/suitefiles-design-system-hero.webp"
-        scope="The early beginnings of a design system had been initiated by a previous lead, but with a major rebrand underway and the product scaling quickly, it needed to evolve. I took ownership of the system’s next phase—updating it to align with the new brand, expanding its component library, and ensuring it could support a rapidly growing product. In parallel, I partnered with developers to build out the codebase, closing the gap between design and engineering. The result was a more robust, scalable design system that balanced brand consistency with product velocity, enabling teams to move faster without sacrificing quality."
-        involvement="Design system lead, brand integration, cross-functional partner"
+        scope="The design system had been started by a previous lead, but with a major rebrand underway and the product growing fast, it needed to evolve. I took ownership of its next phase — updating it to match the new brand, expanding the component library, and making sure it could support a rapidly growing product. In parallel, I worked with developers to build out the system in code, keeping design and engineering in sync. The result was a stronger, more flexible design system that kept the brand consistent while letting teams move faster without losing quality."
+        involvement="Led the evolution of the design system, integrating the new brand and collaborating across design and engineering teams."
         meta={{
           date: '2025',
           type: 'Design System',
@@ -49,7 +49,7 @@ const SuiteFilesDesignSystem = () => {
       <TwoColumnDetail
         heading="Process"
         subtitle="From Brand Rollout to Scalable Evolution"
-        body="I began by auditing the existing system to identify gaps, redundancies, and opportunities for scale. I prioritised the most critical components to expand first, balancing immediate product needs with long-term scalability. To integrate the new brand, I translated updated visual guidelines into systemised tokens and components—ensuring the identity worked consistently across multiple use cases. In parallel, I partnered with engineers to evolve the coded library, aligning naming, behaviours, and documentation so that design and development remained in sync. By approaching the work iteratively, I was able to keep teams shipping features while steadily maturing the system into a stable, brand-aligned foundation."
+        body="I started by auditing the existing system to spot gaps, overlaps, and opportunities to grow. I focused first on the most critical components, balancing immediate product needs with long-term scalability. To integrate the new brand, I updated components and guidelines so the identity worked consistently across different contexts. I also evolved the system so it could support future products — creating consistent patterns that could scale across the portfolio. At the same time, I partnered with engineers to expand the coded library — aligning names, behaviours, and documentation so design and development stayed in sync. By working iteratively, I kept teams shipping features while steadily maturing the system into a stable, brand-aligned foundation."
         images={[
           {
             src: '/images/process/sfds-brand-application.webp',
@@ -65,24 +65,24 @@ const SuiteFilesDesignSystem = () => {
         title="Key Achievements"
         achievements={[
           {
-            title: 'Design System Leadership',
+            title: 'Led the Design System Evolution',
             description:
-              'Took ownership of an early-stage system and drove its evolution into a robust, scalable foundation.',
+              'Took ownership of an early-stage system and grew it into a stable foundation that could scale across products.',
           },
           {
-            title: 'Brand Integration',
+            title: 'Integrated the New Brand',
             description:
-              'Adapted and embedded the new brand identity directly into the design system, ensuring visual consistency across the product.',
+              'Adapted the updated identity into the design system, ensuring consistent visuals across the product.',
           },
           {
-            title: 'Expanded Component Library',
+            title: 'Expanded the Component Library',
             description:
-              'Designed and documented new components to keep pace with rapid product growth and feature demands.',
+              'Designed and documented new components to keep pace with rapid product growth.',
           },
           {
-            title: 'Cross-Functional Collaboration',
+            title: 'Improved Design–Engineering Collaboration',
             description:
-              'Partnered closely with engineers to mature the codebase in parallel, maintaining alignment between design and development.',
+              'Partnered with engineers to mature the system in code, keeping design and development in sync.',
           },
         ]}
       />
@@ -96,9 +96,9 @@ const SuiteFilesDesignSystem = () => {
             iconSrc: '/icons/color-bucket.svg',
             iconAlt: 'Color Bucket',
             iconNode: null,
-            title: 'Brand Consistency at Scale',
+            title: 'Brand Consistency',
             description:
-              'Rolled out the new brand seamlessly across the product ecosystem via the design system.',
+              'Rolled out the new brand across products through the design system.',
           },
           {
             icon: '⚡',
@@ -107,7 +107,7 @@ const SuiteFilesDesignSystem = () => {
             iconNode: null,
             title: 'Faster Product Delivery',
             description:
-              'Expanded reusable components enabled teams to ship new features more quickly.',
+              'Reusable components helped teams ship features more quickly.',
           },
           {
             icon: '✅',
@@ -116,7 +116,7 @@ const SuiteFilesDesignSystem = () => {
             iconNode: null,
             title: 'Improved Quality and Trust',
             description:
-              'Consistent patterns reduced UI drift and boosted user confidence in the product.',
+              'Consistent patterns reduced design drift and built user confidence.',
           },
           {
             icon: '🤝',
@@ -125,7 +125,7 @@ const SuiteFilesDesignSystem = () => {
             iconNode: null,
             title: 'Stronger Design–Dev Alignment',
             description:
-              'Parallel build with engineers reduced friction and ensured system parity in code.',
+              'Working in parallel with engineers reduced friction and kept design and code in sync.',
           },
           {
             icon: '🛠️',
@@ -134,7 +134,7 @@ const SuiteFilesDesignSystem = () => {
             iconNode: null,
             title: 'Scalable Foundation',
             description:
-              'Established a design system flexible enough to evolve with future product needs.',
+              'Established a flexible system ready to support current and future products.',
           },
         ]}
       />

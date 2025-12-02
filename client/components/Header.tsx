@@ -65,9 +65,9 @@ export default function Header() {
           </li>
           <li>
             <a
-              href="/files/Resumé_Corina_Reitemeyer_2025.pdf"
+              href="/files/Corina_Reitemeyer_Senior_UX_UI_Designer_CV_2025.pdf"
               className="text-base font-medium text-white/60 transition hover:text-white/80"
-              download="mycv"
+              download="Corina_Reitemeyer_Senior UX_UI Designer_CV_2025"
             >
               Resume
             </a>
@@ -157,9 +157,9 @@ export default function Header() {
             </li>
             <li>
               <a
-                href="/files/Resumé_Corina_Reitemeyer_2025.pdf"
+                href="/files/Corina_Reitemeyer_Senior_UX_UI_Designer_CV_2025.pdf"
                 className="block rounded-lg px-3 py-2 text-base font-medium text-white/70 transition hover:text-white"
-                download="mycv"
+                download="Corina_Reitemeyer_Senior UX_UI Designer_CV_2025"
               >
                 Resume
               </a>

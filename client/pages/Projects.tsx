@@ -16,7 +16,9 @@ const Projects: React.FC<ProjectsProps> = () => {
       <header className="relative flex min-h-[40vh] w-full flex-col items-start justify-center bg-[#08082a] sm:min-h-[60vh]">
         <ImpactStatement
           padded={false} // important: no extra padding from the component
-          lines={['Crafting AI-powered experiences for real humans.']}
+          lines={[
+            'Crafting intelligent, human-centred products powered by design systems.',
+          ]}
         />
       </header>
 

@@ -1,0 +1,25 @@
+<svg width="1427" height="995" viewBox="0 0 1427 995" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_716_12600)">
+<rect x="0.279297" y="719" width="886.72" height="637.96" rx="20" transform="rotate(15 0.279297 719)" fill="url(#pattern0_716_12600)" fill-opacity="0.5"/>
+<rect x="738.793" y="-420" width="886.72" height="637.96" rx="20" transform="rotate(12.6425 738.793 -420)" fill="url(#pattern1_716_12600)" fill-opacity="0.5"/>
+</g>
+<defs>
+<clipPath id="clip0_716_12600">
+<rect width="1427" height="995" fill="white"/>
+</clipPath>
+<pattern id="pattern0_716_12600" patternUnits="userSpaceOnUse" patternTransform="matrix(24 0 0 12 439.639 1033.98)" preserveAspectRatio="none" viewBox="0 0 24 12" width="1" height="1">
+<use xlink:href="#pattern0_716_12600_inner" transform="translate(0 -12)"/>
+<use xlink:href="#pattern0_716_12600_inner" transform="translate(12 -6)"/>
+<g id="pattern0_716_12600_inner">
+<circle cx="4" cy="4" r="2" fill="#747380"/>
+</g>
+<use xlink:href="#pattern0_716_12600_inner" transform="translate(12 6)"/>
+</pattern><pattern id="pattern1_716_12600" patternUnits="userSpaceOnUse" patternTransform="matrix(24 0 0 12 1178.15 -105.02)" preserveAspectRatio="none" viewBox="0 0 24 12" width="1" height="1">
+<use xlink:href="#pattern1_716_12600_inner" transform="translate(0 -12)"/>
+<use xlink:href="#pattern1_716_12600_inner" transform="translate(12 -6)"/>
+<g id="pattern1_716_12600_inner">
+<circle cx="4" cy="4" r="2" fill="#747380"/>
+</g>
+<use xlink:href="#pattern1_716_12600_inner" transform="translate(12 6)"/>
+</pattern></defs>
+</svg>

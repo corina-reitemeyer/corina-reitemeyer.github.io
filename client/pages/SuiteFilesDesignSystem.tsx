@@ -13,7 +13,8 @@ const SuiteFilesDesignSystem = () => {
         project="Design System"
         imageSrc="/images/product/suitefiles-design-system-hero.webp"
         scope="The design system had been started by a previous lead, but with a major rebrand underway and the product growing fast, it needed to evolve. I took ownership of its next phase — updating it to match the new brand, expanding the component library, and making sure it could support a rapidly growing product. In parallel, I worked with developers to build out the system in code, keeping design and engineering in sync. The result was a stronger, more flexible design system that kept the brand consistent while letting teams move faster without losing quality."
-        involvement="Led the evolution of the design system, integrating the new brand and collaborating across design and engineering teams."
+        involvement=" Senior Product Designer - Led the evolution of the design system, integrating the new brand and collaborating across design and engineering teams."
+        team="Worked with product designers, frontend engineers, and product stakeholders to evolve the design system alongside active feature development."
         meta={{
           date: '2025',
           type: 'Design System',
@@ -48,8 +49,16 @@ const SuiteFilesDesignSystem = () => {
 
       <TwoColumnDetail
         heading="Process"
-        subtitle="From Brand Rollout to Scalable Evolution"
-        body="I started by auditing the existing system to spot gaps, overlaps, and opportunities to grow. I focused first on the most critical components, balancing immediate product needs with long-term scalability. To integrate the new brand, I updated components and guidelines so the identity worked consistently across different contexts. I also evolved the system so it could support future products — creating consistent patterns that could scale across the portfolio. At the same time, I partnered with engineers to expand the coded library — aligning names, behaviours, and documentation so design and development stayed in sync. By working iteratively, I kept teams shipping features while steadily maturing the system into a stable, brand-aligned foundation."
+        sections={[
+          {
+            subtitle: 'From Brand Rollout to Scalable Evolution',
+            body: 'I started by auditing the existing system to spot gaps, overlaps, and opportunities to grow. I focused first on the most critical components, balancing immediate product needs with long-term scalability. To integrate the new brand, I updated components and guidelines so the identity worked consistently across different contexts. I also evolved the system so it could support future products — creating consistent patterns that could scale across the portfolio. At the same time, I partnered with engineers to expand the coded library — aligning names, behaviours, and documentation so design and development stayed in sync. By working iteratively, I kept teams shipping features while steadily maturing the system into a stable, brand-aligned foundation.',
+          },
+          {
+            subtitle: 'Tradeoffs and constraints',
+            body: 'The biggest risk was trying to perfect the system upfront. A clean-slate rebuild would have delayed product delivery and reduced trust in the system. I chose to optimise for adoption and continuity instead, evolving the system in place and letting real product needs guide its growth.',
+          },
+        ]}
         images={[
           {
             src: '/images/process/sfds-brand-application.webp',
@@ -86,6 +95,49 @@ const SuiteFilesDesignSystem = () => {
           },
         ]}
       />
+
+      {/* Reflections Section */}
+      <section
+        className="relative z-0 flex min-h-[90vh]
+    w-full items-center overflow-hidden bg-[#08003B] text-white"
+      >
+        <div className="absolute inset-0 z-[-1]">
+          <img
+            src="/images/portfolio/reflections-bg.svg"
+            alt=""
+            aria-hidden="true"
+            className="h-full w-full object-cover opacity-80"
+          />
+        </div>
+
+        {/* Content */}
+        <div className="container relative mx-auto max-w-6xl px-6 py-20 sm:px-8 sm:py-28">
+          <div className="mx-auto max-w-2xl text-left">
+            <h2 className="text-3xl font-extrabold">Reflections & Learnings</h2>
+
+            <div className="mt-8 space-y-6 text-white/70">
+              <p>
+                This project reinforced that design systems are living products,
+                not static libraries. Trying to “finish” the system would have
+                slowed teams down at the moment they needed speed most.
+              </p>
+              <p>
+                Working through a rebrand while the product was actively growing
+                taught me the value of evolving systems incrementally —
+                prioritising the most critical components first and letting the
+                system mature alongside real product work.
+              </p>
+              <p>
+                Partnering closely with engineers also reshaped how I think
+                about design systems: alignment on naming, behaviour, and
+                documentation matters as much as visual consistency. The system
+                is now actively used and continues to evolve as the product
+                scales.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Key Outcomes Section */}
       <KeyOutcomes

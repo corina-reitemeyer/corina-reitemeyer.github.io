@@ -91,6 +91,48 @@ const SuiteFilesAISummary = () => {
         ]}
       />
 
+      {/* Reflections Section */}
+      <section
+        className="relative z-0 flex min-h-[90vh]
+    w-full items-center overflow-hidden bg-[#08003B] text-white"
+      >
+        <div className="absolute inset-0 z-[-1]">
+          <img
+            src="/images/portfolio/reflections-bg.svg"
+            alt=""
+            aria-hidden="true"
+            className="h-full w-full object-cover opacity-80"
+          />
+        </div>
+
+        {/* Content */}
+        <div className="container relative mx-auto max-w-6xl px-6 py-20 sm:px-8 sm:py-28">
+          <div className="mx-auto max-w-2xl text-left">
+            <h2 className="text-3xl font-extrabold">Reflections & Learnings</h2>
+
+            <div className="mt-8 space-y-6 text-white/70">
+              <p>
+                This project reminded me that designing AI isn’t about making
+                systems feel smarter — it’s about making people feel more
+                confident in their decisions.
+              </p>
+              <p>
+                Early on, I was tempted to push further toward automation.
+                Slowing down and working closely with engineers helped clarify
+                where AI added real value, and where it risked removing
+                accountability in a high-stakes workflow.
+              </p>
+              <p>
+                Shipping this feature reinforced the importance of restraint,
+                clear guardrails, and honest communication with users. It also
+                shaped how I now approach AI work: start small, make intent
+                visible, and earn trust before scale.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Key Outcomes Section */}
       <KeyOutcomes
         title="Product Impact"
@@ -124,44 +166,6 @@ const SuiteFilesAISummary = () => {
           },
         ]}
       />
-
-      <section className="relative w-full overflow-hidden border-white/10 text-white">
-        {/* Radial gradient background */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              'radial-gradient(85% 85% at 50% 50%, rgba(59, 30, 157, 0.35), rgba(8, 8, 42, 0.9) 50%)',
-          }}
-        />
-
-        {/* Content */}
-        <div className="container relative mx-auto mb-20 max-w-6xl px-6 sm:my-28 sm:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-2xl font-extrabold">Reflections & Learnings</h2>
-
-            <div className="mt-8 space-y-6 text-white/70">
-              <p>
-                This project reminded me that designing AI isn’t about making
-                systems feel smarter — it’s about making people feel more
-                confident in their decisions.
-              </p>
-              <p>
-                Early on, I was tempted to push further toward automation.
-                Slowing down and working closely with engineers helped clarify
-                where AI added real value, and where it risked removing
-                accountability in a high-stakes workflow.
-              </p>
-              <p>
-                Shipping this feature reinforced the importance of restraint,
-                clear guardrails, and honest communication with users. It also
-                shaped how I now approach AI work: start small, make intent
-                visible, and earn trust before scale.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

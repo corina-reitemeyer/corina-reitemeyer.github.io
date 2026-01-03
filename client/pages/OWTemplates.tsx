@@ -13,7 +13,8 @@ const OWTemplates = () => {
         project="Templates"
         imageSrc="/images/product/optimal-case-study-hero.webp"
         scope="Research setup was often slow and inconsistent, frustrating teams and delaying insights. This meant findings sometimes came too late to act on. At the same time, the product already supported many types of studies — like Information Architecture (IA) testing, a way to check how people understand structure and navigation — but most users didn’t realise this was possible. I designed the first version of the templates feature to solve both problems: ready-made, customisable study setups that made starting easier and showed the full range of research methods. It also encouraged researchers to try combining studies, moving beyond single methods to get stronger results. The work drew on user research, close collaboration with product owners and engineers, and iterative design to balance flexibility with speed. The result: researchers at all levels could launch studies faster, explore methods with confidence, and generate richer insights — while also guiding the product toward a stronger focus on IA."
-        involvement="Led product design of the feature and collaborated with researchers to inform and validate the solution"
+        involvement="Product Designer - Led product design of the feature and collaborated with researchers to inform and validate the solution."
+        team="Worked with product managers, engineers, and UX researchers to design and validate the templates feature."
         meta={{
           date: '2023',
           type: 'Product Design, SaaS Product (B2B)',
@@ -45,8 +46,16 @@ const OWTemplates = () => {
 
       <TwoColumnDetail
         heading="Process"
-        subtitle="From Experiment to Scalable Feature"
-        body="What if setting up research could be faster and easier? Using insights from ongoing projects, I designed the first version of multi-study research templates to tackle common setup challenges. Because this was the first project under the new strategy, I treated it as an experiment — focusing on a design that could grow over time while keeping engineering effort low until we proved user value. After launch, I worked with a researcher to see how the first six templates fit into real workflows. We found positives (teams using them for inspiration and trying new combinations) and gaps (missing content, limited features). These findings guided improvements to both content and features in the next release. This iterative, evidence-driven process turned templates into a repeatable feature that sped up setup and fit the product’s bigger direction."
+        sections={[
+          {
+            subtitle: 'From Experiment to Scalable Feature',
+            body: 'What if setting up research could be faster and easier? Using insights from ongoing projects, I designed the first version of multi-study research templates to tackle common setup challenges. Because this was the first project under the new strategy, I treated it as an experiment — focusing on a design that could grow over time while keeping engineering effort low until we proved user value. After launch, I worked with a researcher to see how the first six templates fit into real workflows. We found positives (teams using them for inspiration and trying new combinations) and gaps (missing content, limited features). These findings guided improvements to both content and features in the next release. This iterative, evidence-driven process turned templates into a repeatable feature that sped up setup and fit the product’s bigger direction.',
+          },
+          {
+            subtitle: 'Balancing guidance without rigidity',
+            body: 'The main risk was over-prescribing research workflows. Templates that were too rigid would limit experienced researchers, while too much flexibility would fail to reduce setup friction. I focused on creating adaptable starting points — offering structure without locking users into a single way of working — so the feature could support researchers at different levels of experience.',
+          },
+        ]}
         images={[
           {
             src: '/images/process/ow-userflow.webp',
@@ -95,6 +104,56 @@ const OWTemplates = () => {
           },
         ]}
       />
+
+      {/* Reflections Section */}
+      <section className="relative z-0 flex min-h-[90vh] w-full items-center overflow-hidden bg-[#08003B] text-white">
+        {/* Background */}
+        <div className="absolute inset-0 z-[-1]">
+          <img
+            src="/images/portfolio/reflections-bg.svg"
+            alt=""
+            aria-hidden="true"
+            className="h-full w-full object-cover opacity-80"
+          />
+        </div>
+
+        {/* Content */}
+        <div className="container relative mx-auto max-w-6xl px-6 py-20 sm:px-8 sm:py-28">
+          {/* Aligned content block */}
+          <div className="mx-auto max-w-2xl text-left">
+            {/* Icon */}
+            <img
+              src="/images/portfolio/lightbulb-icon.svg"
+              alt=""
+              aria-hidden="true"
+              className="mb-6 h-20 w-20 opacity-80"
+            />
+
+            {/* Heading */}
+            <h2 className="text-3xl font-bold">Reflections & Learnings</h2>
+
+            {/* Body */}
+            <div className="mt-8 space-y-6 text-white/70">
+              <p>
+                This project reinforced that good research tools don’t just
+                enable methods — they teach them. Helping teams move faster
+                required more than pre-filled setups; it meant surfacing
+                possibilities and guiding better decisions without being
+                prescriptive.
+              </p>
+              <p>
+                Designing the templates feature sharpened how I think about
+                scaffolding in product design: offering just enough structure to
+                build confidence, while leaving room for expertise and
+                experimentation. It also highlighted the value of using product
+                features to gently shift behaviour — in this case, encouraging
+                richer, more connected research practices over single-method
+                studies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <KeyOutcomes
         title="Product Impact"

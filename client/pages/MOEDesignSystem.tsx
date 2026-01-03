@@ -13,7 +13,8 @@ const MOEDesignSystem = () => {
         project="Design System"
         imageSrc="/images/product/moe-designsystem-hero.webp"
         scope="The rushed launch of a critical COVID-19 website revealed cracks in the process — inconsistent design, accessibility issues, and a lack of shared standards. I led the creation of the Ministry of Education’s first design system to address these gaps. I began with product audits and staff interviews, then built reusable components and accessibility guidelines based on WCAG standards. Working with designers, engineers, and web advisors, I aligned teams and streamlined workflows. The system reduced design problems, improved accessibility, and created a shared set of standards for all future projects — now used across 50+ digital platforms."
-        involvement="Design system and product design lead"
+        involvement="Senior UX/UI Designer - Led the establishment and continous progression of the Design system site and Adobe XD library"
+        team="Worked with designers, engineers, content teams, and web accessibility advisors across the organisation to align standards and delivery."
         meta={{
           date: '2020 - 2021',
           type: 'Design System, Website',
@@ -54,8 +55,16 @@ const MOEDesignSystem = () => {
 
       <TwoColumnDetail
         heading="Process"
-        subtitle="From Exploration to System Alignment"
-        body="I defined the design system by mapping existing sites, reviewing competitors, and guiding the evolution from wireframes to final components. The components themselves were agreed through facilitated workshops, while I designed the website from scratch and set up the design tokens in our design tool. A key challenge was aligning our internal web team and external vendors across more than 100 sites, each with its own brand style. I made sure the system struck the right balance — flexible enough for variation, but structured enough to bring consistency through shared patterns and components."
+        sections={[
+          {
+            subtitle: 'From Exploration to System Alignment',
+            body: 'I defined the design system by mapping existing sites, reviewing competitors, and guiding the evolution from wireframes to final components. The components themselves were agreed through facilitated workshops, while I designed the website from scratch and set up the design tokens in our design tool. A key challenge was aligning our internal web team and external vendors across more than 100 sites, each with its own brand style. I made sure the system struck the right balance — flexible enough for variation, but structured enough to bring consistency through shared patterns and components.',
+          },
+          {
+            subtitle: 'Designing under pressure',
+            body: 'The main risk was treating the design system as a post-crisis clean-up exercise. Without shared standards, teams would have continued duplicating work and repeating accessibility issues across new sites. I focused on creating pragmatic, adoptable patterns rather than a perfect system, prioritising speed, clarity, and accessibility in a high-stakes government environment.',
+          },
+        ]}
         images={[
           {
             src: '/images/process/moe-sitemap.webp',
@@ -97,6 +106,49 @@ const MOEDesignSystem = () => {
           },
         ]}
       />
+
+      {/* Reflections Section */}
+      <section
+        className="relative z-0 flex min-h-[90vh]
+    w-full items-center overflow-hidden bg-[#08003B] text-white"
+      >
+        <div className="absolute inset-0 z-[-1]">
+          <img
+            src="/images/portfolio/reflections-bg.svg"
+            alt=""
+            aria-hidden="true"
+            className="h-full w-full object-cover opacity-80"
+          />
+        </div>
+
+        {/* Content */}
+        <div className="container relative mx-auto max-w-6xl px-6 py-20 sm:px-8 sm:py-28">
+          <div className="mx-auto max-w-2xl text-left">
+            <h2 className="text-3xl font-extrabold">Reflections & Learnings</h2>
+
+            <div className="mt-8 space-y-6 text-white/70">
+              <p>
+                This project reinforced how critical shared standards are in
+                high-pressure environments. When speed is prioritised without
+                structure, accessibility and consistency are often the first
+                things to break.
+              </p>
+              <p>
+                Leading this work during a crisis taught me to design for
+                adoption over perfection — creating clear, usable patterns that
+                teams could pick up quickly without slowing delivery. It also
+                deepened my understanding of accessibility as a foundational
+                requirement, not a compliance checkbox.
+              </p>
+              <p>
+                The system continues to be used across 50+ platforms even after
+                my depature, and shaped how I approach design systems in
+                complex, multi-team organisations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Key Outcomes Section */}
       <KeyOutcomes

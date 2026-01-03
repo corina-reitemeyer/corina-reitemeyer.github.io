@@ -24,7 +24,7 @@ const KeyOutcomes: React.FC<KeyOutcomesProps> = ({
   return (
     <section
       ref={sectionRef}
-      className="relative mb-20 flex flex-col items-center justify-center bg-[#08082a] px-6 py-16 sm:py-28"
+      className="relative mb-10 flex flex-col items-center justify-center bg-[#08082a] px-6 py-16 sm:py-28"
     >
       {/* Section Title */}
       <h2 className="mb-12 text-center text-4xl font-bold text-white">

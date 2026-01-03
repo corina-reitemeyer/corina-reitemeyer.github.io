@@ -8,7 +8,8 @@ type Props = {
   imageSrc: string
   imageAlt?: string
   scope: string // long paragraph
-  involvement: string // sentence or comma-separated list
+  involvement: string // sentence or comma-separated list'
+  team: string
   meta: {
     // shows as: 2025 • Product Design • AI
     date: string
@@ -25,6 +26,7 @@ export default function CaseStudyNavy({
   imageAlt = '',
   scope,
   involvement,
+  team,
   meta,
 }: Props) {
   return (
@@ -81,9 +83,13 @@ export default function CaseStudyNavy({
             <p className="max-w-prose text-white/70">{scope}</p>
 
             <h3 className="text-md mt-8 font-semibold uppercase tracking-wide text-white/100">
-              Involvement
+              Role / Involvement
             </h3>
             <p className="max-w-prose text-white/70">{involvement}</p>
+            <h3 className="text-md mt-8 font-semibold uppercase tracking-wide text-white/100">
+              Team & Stakeholders
+            </h3>
+            <p className="max-w-prose text-white/70">{team}</p>
 
             <div className="mt-12 flex flex-wrap items-center gap-x-4 gap-y-2 font-semibold">
               {meta.date}

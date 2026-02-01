@@ -43,6 +43,56 @@ const OWTemplates = () => {
           },
         ]}
       />
+      <KeyOutcomes
+        title="Product Impact"
+        outcomes={[
+          {
+            icon: '⚡',
+            iconSrc: '/icons/Bolt.svg',
+            iconAlt: 'Zap',
+            iconNode: null,
+            title: '20% faster setup',
+            description:
+              'Pre-built, customisable templates cut setup time, letting researchers focus on insights instead of configuration.',
+          },
+          {
+            icon: '📈',
+            iconSrc: '/icons/increase.svg',
+            iconAlt: 'Increase',
+            iconNode: null,
+            title: 'More multi-study use',
+            description:
+              'Teams combined methods more often, leading to deeper insights and stronger outcomes.',
+          },
+          {
+            icon: '🚀',
+            iconSrc: '/icons/rocket.svg',
+            iconAlt: 'Rocket',
+            iconNode: null,
+            title: 'Lower barrier to entry',
+            description:
+              'Onboarding became easier for beginners while staying efficient for experts — reducing drop-off at a critical early stage.',
+          },
+          {
+            icon: '🧭',
+            iconSrc: '/icons/compass.svg',
+            iconAlt: 'Compass',
+            iconNode: null,
+            title: 'First IA-focused feature',
+            description:
+              'Introduced the first IA-led templates, setting the direction for future product growth.',
+          },
+          {
+            icon: '🔁',
+            iconSrc: '/icons/cycle.svg',
+            iconAlt: 'Cycle',
+            iconNode: null,
+            title: 'Retention lift',
+            description:
+              'After launch, more customers stayed with the product — boosting long-term value and easing pressure on new sales.',
+          },
+        ]}
+      />
 
       <TwoColumnDetail
         heading="Process"
@@ -74,33 +124,6 @@ const OWTemplates = () => {
             alt: 'Two laptops showing the create study modal and details tab',
             caption:
               'First release included six templates, designed with scalability in mind.',
-          },
-        ]}
-      />
-
-      {/* Achievements Section */}
-      <AchievementsSection
-        title="Key Achievements"
-        achievements={[
-          {
-            title: 'Shaped the Templates Strategy',
-            description:
-              'Defined how ready-made templates could streamline research setup, guiding the feature from concept to delivery.',
-          },
-          {
-            title: 'Improved Efficiency and Confidence',
-            description:
-              'Helped teams set up studies faster and uncover richer insights by reducing setup time and making methods easier to find.',
-          },
-          {
-            title: 'Aligned with Product Strategy Shift',
-            description:
-              'Made templates a key part of the company’s new focus on Information Architecture.',
-          },
-          {
-            title: 'Designed the First Multi-Study Templates Feature',
-            description:
-              'Created pre-built, customisable study combinations that made setup intuitive while surfacing a broader range of methods.',
           },
         ]}
       />
@@ -154,54 +177,29 @@ const OWTemplates = () => {
           </div>
         </div>
       </section>
-
-      <KeyOutcomes
-        title="Product Impact"
-        outcomes={[
+      {/* Achievements Section */}
+      <AchievementsSection
+        title="Key Achievements"
+        achievements={[
           {
-            icon: '⚡',
-            iconSrc: '/icons/Bolt.svg',
-            iconAlt: 'Zap',
-            iconNode: null,
-            title: '20% faster setup',
+            title: 'Shaped the Templates Strategy',
             description:
-              'Pre-built, customisable templates cut setup time, letting researchers focus on insights instead of configuration.',
+              'Defined how ready-made templates could streamline research setup, guiding the feature from concept to delivery.',
           },
           {
-            icon: '📈',
-            iconSrc: '/icons/increase.svg',
-            iconAlt: 'Increase',
-            iconNode: null,
-            title: 'More multi-study use',
+            title: 'Improved Efficiency and Confidence',
             description:
-              'Teams combined methods more often, leading to deeper insights and stronger outcomes.',
+              'Helped teams set up studies faster and uncover richer insights by reducing setup time and making methods easier to find.',
           },
           {
-            icon: '🚀',
-            iconSrc: '/icons/rocket.svg',
-            iconAlt: 'Rocket',
-            iconNode: null,
-            title: 'Lower barrier to entry',
+            title: 'Aligned with Product Strategy Shift',
             description:
-              'Onboarding became easier for beginners while staying efficient for experts — reducing drop-off at a critical early stage.',
+              'Made templates a key part of the company’s new focus on Information Architecture.',
           },
           {
-            icon: '🧭',
-            iconSrc: '/icons/compass.svg',
-            iconAlt: 'Compass',
-            iconNode: null,
-            title: 'First IA-focused feature',
+            title: 'Designed the First Multi-Study Templates Feature',
             description:
-              'Introduced the first IA-led templates, setting the direction for future product growth.',
-          },
-          {
-            icon: '🔁',
-            iconSrc: '/icons/cycle.svg',
-            iconAlt: 'Cycle',
-            iconNode: null,
-            title: 'Retention lift',
-            description:
-              'After launch, more customers stayed with the product — boosting long-term value and easing pressure on new sales.',
+              'Created pre-built, customisable study combinations that made setup intuitive while surfacing a broader range of methods.',
           },
         ]}
       />

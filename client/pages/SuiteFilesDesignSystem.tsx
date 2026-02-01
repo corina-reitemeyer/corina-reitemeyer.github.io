@@ -46,6 +46,57 @@ const SuiteFilesDesignSystem = () => {
           },
         ]}
       />
+      {/* Key Outcomes Section */}
+      <KeyOutcomes
+        title="Product Impact"
+        outcomes={[
+          {
+            icon: '🎨',
+            iconSrc: '/icons/color-bucket.svg',
+            iconAlt: 'Color Bucket',
+            iconNode: null,
+            title: 'Brand Consistency',
+            description:
+              'Rolled out the new brand across products through the design system.',
+          },
+          {
+            icon: '⚡',
+            iconSrc: '/icons/Bolt.svg',
+            iconAlt: 'Zap',
+            iconNode: null,
+            title: 'Faster Product Delivery',
+            description:
+              'Reusable components helped teams ship features more quickly.',
+          },
+          {
+            icon: '✅',
+            iconSrc: '/icons/check.svg',
+            iconAlt: 'Check',
+            iconNode: null,
+            title: 'Improved Quality and Trust',
+            description:
+              'Consistent patterns reduced design drift and built user confidence.',
+          },
+          {
+            icon: '🤝',
+            iconSrc: '/icons/handshake.svg',
+            iconAlt: 'Handshake',
+            iconNode: null,
+            title: 'Stronger Design–Dev Alignment',
+            description:
+              'Working in parallel with engineers reduced friction and kept design and code in sync.',
+          },
+          {
+            icon: '🛠️',
+            iconSrc: '/icons/puzzle.svg',
+            iconAlt: 'Puzzle',
+            iconNode: null,
+            title: 'Scalable Foundation',
+            description:
+              'Established a flexible system ready to support current and future products.',
+          },
+        ]}
+      />
 
       <TwoColumnDetail
         heading="Process"
@@ -65,33 +116,6 @@ const SuiteFilesDesignSystem = () => {
             alt: 'Before and after of the signing wizard design',
             caption:
               'Before / After of the product after the design system rebrand update',
-          },
-        ]}
-      />
-
-      {/* Achievements Section */}
-      <AchievementsSection
-        title="Key Achievements"
-        achievements={[
-          {
-            title: 'Led the Design System Evolution',
-            description:
-              'Took ownership of an early-stage system and grew it into a stable foundation that could scale across products.',
-          },
-          {
-            title: 'Integrated the New Brand',
-            description:
-              'Adapted the updated identity into the design system, ensuring consistent visuals across the product.',
-          },
-          {
-            title: 'Expanded the Component Library',
-            description:
-              'Designed and documented new components to keep pace with rapid product growth.',
-          },
-          {
-            title: 'Improved Design–Engineering Collaboration',
-            description:
-              'Partnered with engineers to mature the system in code, keeping design and development in sync.',
           },
         ]}
       />
@@ -148,54 +172,29 @@ const SuiteFilesDesignSystem = () => {
         </div>
       </section>
 
-      {/* Key Outcomes Section */}
-      <KeyOutcomes
-        title="Product Impact"
-        outcomes={[
+      {/* Achievements Section */}
+      <AchievementsSection
+        title="Key Achievements"
+        achievements={[
           {
-            icon: '🎨',
-            iconSrc: '/icons/color-bucket.svg',
-            iconAlt: 'Color Bucket',
-            iconNode: null,
-            title: 'Brand Consistency',
+            title: 'Led the Design System Evolution',
             description:
-              'Rolled out the new brand across products through the design system.',
+              'Took ownership of an early-stage system and grew it into a stable foundation that could scale across products.',
           },
           {
-            icon: '⚡',
-            iconSrc: '/icons/Bolt.svg',
-            iconAlt: 'Zap',
-            iconNode: null,
-            title: 'Faster Product Delivery',
+            title: 'Integrated the New Brand',
             description:
-              'Reusable components helped teams ship features more quickly.',
+              'Adapted the updated identity into the design system, ensuring consistent visuals across the product.',
           },
           {
-            icon: '✅',
-            iconSrc: '/icons/check.svg',
-            iconAlt: 'Check',
-            iconNode: null,
-            title: 'Improved Quality and Trust',
+            title: 'Expanded the Component Library',
             description:
-              'Consistent patterns reduced design drift and built user confidence.',
+              'Designed and documented new components to keep pace with rapid product growth.',
           },
           {
-            icon: '🤝',
-            iconSrc: '/icons/handshake.svg',
-            iconAlt: 'Handshake',
-            iconNode: null,
-            title: 'Stronger Design–Dev Alignment',
+            title: 'Improved Design–Engineering Collaboration',
             description:
-              'Working in parallel with engineers reduced friction and kept design and code in sync.',
-          },
-          {
-            icon: '🛠️',
-            iconSrc: '/icons/puzzle.svg',
-            iconAlt: 'Puzzle',
-            iconNode: null,
-            title: 'Scalable Foundation',
-            description:
-              'Established a flexible system ready to support current and future products.',
+              'Partnered with engineers to mature the system in code, keeping design and development in sync.',
           },
         ]}
       />

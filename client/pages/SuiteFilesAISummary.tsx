@@ -41,6 +41,39 @@ const SuiteFilesAISummary = () => {
           },
         ]}
       />
+      {/* Key Outcomes Section */}
+      <KeyOutcomes
+        title="Product Impact"
+        outcomes={[
+          {
+            icon: '⚡',
+            iconSrc: '/icons/Bolt.svg',
+            iconAlt: 'Zap',
+            iconNode: null,
+            title: 'Faster Deal Cycles',
+            description:
+              'AI-powered summaries streamlined multi-document requests, reducing time-to-sign.',
+          },
+          {
+            icon: '✅',
+            iconSrc: '/icons/check.svg',
+            iconAlt: 'Check',
+            iconNode: null,
+            title: 'Greater Recipient Confidence',
+            description:
+              'Clear summaries gave recipients instant understanding of what they were signing.',
+          },
+          {
+            icon: '🤖',
+            iconSrc: '/icons/sparkle.svg',
+            iconAlt: 'AI Sparkle',
+            iconNode: null,
+            title: 'AI-First Differentiation',
+            description:
+              'Positioned the product competitively with practical, human-centered AI.',
+          },
+        ]}
+      />
 
       <TwoColumnDetail
         heading="Process"
@@ -65,28 +98,6 @@ const SuiteFilesAISummary = () => {
             src: '/images/process/sfai-ai-principles.webp',
             alt: 'Diagram showing three human-AI principles',
             caption: 'Human–AI design principles guiding the feature.',
-          },
-        ]}
-      />
-
-      {/* Achievements Section */}
-      <AchievementsSection
-        title="Key Achievements"
-        achievements={[
-          {
-            title: 'Defined Human–AI Interaction Principles',
-            description:
-              'Set UX guardrails for using AI in high-risk signing workflows.',
-          },
-          {
-            title: 'Led the Company’s First AI Feature',
-            description:
-              'Designed an AI summarisation feature that improved clarity across multi-document requests.',
-          },
-          {
-            title: 'Shaped AI-First Product Direction',
-            description:
-              'Established a reusable model for how AI is integrated across the product.',
           },
         ]}
       />
@@ -140,36 +151,24 @@ const SuiteFilesAISummary = () => {
         </div>
       </section>
 
-      {/* Key Outcomes Section */}
-      <KeyOutcomes
-        title="Product Impact"
-        outcomes={[
+      {/* Achievements Section */}
+      <AchievementsSection
+        title="Key Achievements"
+        achievements={[
           {
-            icon: '⚡',
-            iconSrc: '/icons/Bolt.svg',
-            iconAlt: 'Zap',
-            iconNode: null,
-            title: 'Faster Deal Cycles',
+            title: 'Defined Human–AI Interaction Principles',
             description:
-              'AI-powered summaries streamlined multi-document requests, reducing time-to-sign.',
+              'Set UX guardrails for using AI in high-risk signing workflows.',
           },
           {
-            icon: '✅',
-            iconSrc: '/icons/check.svg',
-            iconAlt: 'Check',
-            iconNode: null,
-            title: 'Greater Recipient Confidence',
+            title: 'Led the Company’s First AI Feature',
             description:
-              'Clear summaries gave recipients instant understanding of what they were signing.',
+              'Designed an AI summarisation feature that improved clarity across multi-document requests.',
           },
           {
-            icon: '🤖',
-            iconSrc: '/icons/sparkle.svg',
-            iconAlt: 'AI Sparkle',
-            iconNode: null,
-            title: 'AI-First Differentiation',
+            title: 'Shaped AI-First Product Direction',
             description:
-              'Positioned the product competitively with practical, human-centered AI.',
+              'Established a reusable model for how AI is integrated across the product.',
           },
         ]}
       />

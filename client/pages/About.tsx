@@ -59,8 +59,8 @@ const About = () => {
         imageAlt="Portrait"
         title="Guten Tag. Kia Ora. Hello!"
         paragraphs={[
-          'I’m Corina, a Senior UX/UI Designer (currently based in New Zealand) who loves creating digital experiences that feel simple, intuitive, and built to last. With 7+ years of experience, I specialise in AI-driven UX and Design Systems that help products scale with ease.',
-          'My background in full-stack development gives me a solid grasp of both design and technical realities. I enjoy collaborating with cross-functional teams to turn complex challenges into clear, user-friendly solutions.',
+          'I’m Corina, a Senior Product Designer with 8+ years’ experience, relocating to Melbourne in late February.',
+          'I work end-to-end, but I’m strongest in delivery — turning complex problems into clear, production-ready UX/UI and design systems that teams can actually ship. I also have a full-stack background, so I’m comfortable working closely with engineers and real technical constraints.',
           'When I’m not designing, you’ll probably find me teaching Cuban Salsa, learning new languages (Korean 🇰🇷 is my current obsession), or working on my TEFL certificate.',
         ]}
         accoladeText="Best Awards, 2018"

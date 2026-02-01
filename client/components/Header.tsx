@@ -26,7 +26,7 @@ export default function Header() {
               Corina Reitemeyer
             </span>
             <span className="-mt-1 text-xl text-white/70">
-              Senior UX/UI Designer.
+              Senior Product Designer.
             </span>
           </div>
         </Link>

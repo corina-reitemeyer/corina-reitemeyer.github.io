@@ -18,7 +18,7 @@ const About = () => {
     {
       company: 'SuiteFiles',
       title: 'Senior Product Designer',
-      dates: '2025 – Present',
+      dates: '2025 – 2026',
     },
     { company: 'Dev Academy', title: 'Technical Facilitator', dates: '2024' },
     {
@@ -59,9 +59,10 @@ const About = () => {
         imageAlt="Portrait"
         title="Guten Tag. Kia Ora. Hello!"
         paragraphs={[
-          'I’m Corina, a Senior Product Designer with 8+ years’ experience, relocating to Melbourne in late February.',
-          'I work end-to-end, but I’m strongest in delivery — turning complex problems into clear, production-ready UX/UI and design systems that teams can actually ship. I also have a full-stack background, so I’m comfortable working closely with engineers and real technical constraints.',
-          'When I’m not designing, you’ll probably find me teaching Cuban Salsa, learning new languages (Korean 🇰🇷 is my current obsession), or working on my TEFL certificate.',
+          'I’m Corina, a Melbourne-based Senior Product Designer specialising in design systems, scalable UX, and accessible digital products.',
+          'I’ve worked end-to-end across product environments, though I’m strongest in delivery. I enjoy bringing structure and clarity to complex or legacy platforms, whether that’s supporting transformation projects, redesigning key journeys, or building and evolving design systems so teams can ship with greater consistency and confidence. I work closely with engineers and product teams to ensure what’s designed is practical, considered, and ready to implement.',
+          'I have 8+ years’ experience across government, education, and B2B SaaS teams, including products with AI-enabled features, and I’m known for being reliable, thorough, and easy to work with.',
+          'Fun Fact: I’m a former Cuban Salsa instructor who taught for 4 years in New Zealand and still dance for the fun and community aspect!',
         ]}
         accoladeText="Best Awards, 2018"
         accoladeHref="https://bestawards.co.nz/digital/student-digital/massey-university-college-of-creative-arts/infinite/"

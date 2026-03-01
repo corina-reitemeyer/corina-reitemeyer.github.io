@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <header className="z-50 w-full bg-[#08082a]">
-      <nav className="mx-auto flex max-w-6xl items-end justify-between px-6 py-12 pb-6 sm:px-10">
+      <nav className="mx-auto flex max-w-6xl items-end justify-between py-12 pb-6">
         {/* Left: Logo above Name/Title */}
         <Link to="/projects" className="flex flex-col items-start">
           <img
@@ -65,9 +65,9 @@ export default function Header() {
           </li>
           <li>
             <a
-              href="/files/Corina_Reitemeyer_Senior_UX_UI_Designer_CV_2025.pdf"
+              href="/files/Corina-Reitemeyer-Designer-Resume.pdf"
               className="text-base font-medium text-white/60 transition hover:text-white/80"
-              download="Corina_Reitemeyer_Senior UX_UI Designer_CV_2025"
+              download="Corina-Reitemeyer-Designer-Resume"
             >
               Resume
             </a>
@@ -157,9 +157,9 @@ export default function Header() {
             </li>
             <li>
               <a
-                href="/files/Corina_Reitemeyer_Senior_UX_UI_Designer_CV_2025.pdf"
+                href="/files/Corina-Reitemeyer-Designer-Resume.pdf"
                 className="block rounded-lg px-3 py-2 text-base font-medium text-white/70 transition hover:text-white"
-                download="Corina_Reitemeyer_Senior UX_UI Designer_CV_2025"
+                download="Corina-Reitemeyer-Designer-Resume"
               >
                 Resume
               </a>

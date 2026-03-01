@@ -37,7 +37,7 @@ const SuiteFilesDesignSystem = () => {
           {
             src: '/images/product/sfds-components.webp',
             alt: 'Placeholder 1',
-            caption: 'The design system components in Figma',
+            caption: 'Selected component sets in Figma Library',
           },
           {
             src: '/images/product/sfds-brandtokens.webp',

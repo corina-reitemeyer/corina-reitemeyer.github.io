@@ -12,7 +12,7 @@ export default function Header() {
     p === '/projects' || p.startsWith('/projects')
 
   return (
-    <header className="z-50 w-full bg-[#08082a]">
+    <header className="z-50 w-full bg-[#08082a] px-6">
       <nav className="mx-auto flex max-w-6xl items-end justify-between py-12 pb-6">
         {/* Left: Logo above Name/Title */}
         <Link to="/projects" className="flex flex-col items-start">

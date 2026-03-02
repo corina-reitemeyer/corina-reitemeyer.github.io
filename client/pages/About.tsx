@@ -60,7 +60,7 @@ const About = () => {
         title="Guten Tag. Kia Ora. Hello!"
         paragraphs={[
           'Hi, I’m Corina, a Melbourne-based Senior Product Designer specialising in design systems, scalable UX, and accessible digital products.',
-          'Growing up between Germany and New Zealand gave me a structured but practical way of thinking, which shows up a lot in how I work. I do my best work in delivery. I like taking complex or messy platforms and making them clearer, whether that’s rebuilding a design system, reworking a key journey, or helping a team ship more consistently. I stay close to engineers and product throughout, because good design only works if it’s actually buildable.',
+          'Growing up between Germany and New Zealand gave me a structured but practical way of thinking, which shows up a lot in how I work. I do my best work in delivery. I like taking complex or messy platforms and making them clearer, whether that’s rebuilding a design system, reworking a key journey, or helping a team ship more consistently.',
           'I have 8+ years across government, education, and B2B SaaS, including products with AI-enabled features. I’m known for being reliable, thorough, and easy to work with.',
           'Fun Fact: I’m a former Cuban Salsa instructor who taught for 4 years in New Zealand and still dance for the fun and community aspect!',
         ]}

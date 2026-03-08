@@ -3,21 +3,70 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#08082a" />
+
+    <!-- GitHub Pages SPA redirect decode — must run before React -->
+    <script>
+      const params = new URLSearchParams(window.location.search)
+      const redirect = params.get('redirect')
+      if (redirect) {
+        const url = new URL(window.location.href)
+        url.search = ''
+        window.history.replaceState(
+          null,
+          '',
+          url.pathname.replace(/\/$/, '') + decodeURIComponent(redirect),
+        )
+      }
+    </script>
 
     <title>
-      Corina Reitemeyer - Senior Product Designer | AI & Design Systems
+      Corina Reitemeyer| Product Design, Design Systems, Accessibility
     </title>
-    <link rel="stylesheet" href="./client/styles/main.css" />
+    <meta
+      name="description"
+      content="Portfolio of Corina Reitemeyer — Senior Product Designer specialising in AI products, design systems, and accessibility."
+    />
 
-    <!-- Basic favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicons/favicon_32x32.png" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://[username].github.io/" />
+    <meta
+      property="og:title"
+      content="Corina Reitemeyer — Senior Product Designer"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio of Corina Reitemeyer — Product Design, Design Systems, Accessibility."
+    />
+    <meta
+      property="og:image"
+      content="https://[username].github.io/og-preview.png"
+    />
 
-    <!-- Alternative high-resolution icons -->
+    <!-- Twitter/X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Corina Reitemeyer — Senior Product Designer"
+    />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Corina Reitemeyer — Senior Product Designer specialising in AI products, design systems, and accessibility."
+    />
+    <meta
+      name="twitter:image"
+      content="https://[username].github.io/og-preview.png"
+    />
+
+    <!-- Favicons — SVG preferred, then largest PNG first -->
+    <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" />
     <link
       rel="icon"
       type="image/png"
-      sizes="16x16"
-      href="/favicons/favicon_16x16.png"
+      sizes="64x64"
+      href="/favicons/favicon_64x64.png"
     />
     <link
       rel="icon"
@@ -28,9 +77,17 @@
     <link
       rel="icon"
       type="image/png"
-      sizes="64x64"
-      href="/favicons/favicon_64x64.png"
+      sizes="32x32"
+      href="/favicons/favicon_32x32.png"
     />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicons/favicon_16x16.png"
+    />
+
+    <link rel="stylesheet" href="./client/styles/main.css" />
   </head>
   <body>
     <div id="app"></div>

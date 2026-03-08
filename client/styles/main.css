@@ -29,7 +29,7 @@
 @font-face {
   font-family: 'Sofia Pro';
   src: url('/fonts/SofiaPro/SofiaPro-Bold.woff2') format('woff2');
-  font-weight: 700; /* <-- add this so font-bold works */
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -48,11 +48,9 @@ body {
     Arial,
     'Apple Color Emoji',
     'Segoe UI Emoji';
-  background-color: #08082a; /* navy site background */
+  background-color: #08082a;
+  margin: 0;
 }
-
-/* Remove global color overrides on text elements.
-   Let Tailwind classes (text-white, text-white/70, etc.) control color per section. */
 
 /* =========================
    Optional utilities you still use

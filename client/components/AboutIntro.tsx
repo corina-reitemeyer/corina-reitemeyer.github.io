@@ -25,11 +25,14 @@ export default function AboutIntro({
       <div className="container mx-auto max-w-6xl px-8 pb-12 pt-20 sm:pb-36 sm:pt-24">
         <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-6">
-            {/* ✅ img in normal flow with aspect-square — no absolute positioning needed */}
             <img
               src={imageSrc}
               alt={imageAlt}
-              className="aspect-square mx-auto w-full max-w-[420px] rounded-2xl object-cover md:mx-0 md:max-w-[560px] lg:max-w-[620px]"
+              className="
+                aspect-square motion-safe:animate-fade-in-up mx-auto w-full max-w-[420px] rounded-2xl
+                object-cover md:mx-0 md:max-w-[560px]
+                lg:max-w-[620px]
+              "
             />
           </div>
 

@@ -1,128 +1,118 @@
-import { useMemo, useState, useCallback } from 'react'
-import { motion } from 'framer-motion'
+import { useId, useRef, useState } from 'react'
+import { motion, useReducedMotion, type Variants } from 'framer-motion'
 import Lightbox from '../casestudy/LightBox'
 
 type GalleryImage = {
+  id: string
   src: string
-  alt?: string
+  alt: string
   caption?: string
   width?: number
   height?: number
 }
 
-type Props = {
+type ImageGalleryProps = {
   images: GalleryImage[]
+  title?: string
+  className?: string
 }
 
-export default function ImageGallery({ images }: Props) {
-  const [isOpen, setIsOpen] = useState(false)
-  const [activeIndex, setActiveIndex] = useState(0)
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 16, scale: 0.98 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.45, ease: 'easeOut' },
+  },
+}
 
-  const items = useMemo(() => images?.filter(Boolean) ?? [], [images])
+const sharedViewport = { once: true, amount: 0.35 } as const
 
-  const openLightbox = useCallback((idx: number) => {
-    setActiveIndex(idx)
-    setIsOpen(true)
-  }, [])
+function getImageLabel(image: GalleryImage, index: number): string {
+  return image.caption || image.alt || `Image ${index + 1}`
+}
 
-  const closeLightbox = useCallback(() => setIsOpen(false), [])
+export default function ImageGallery({
+  images,
+  title = 'Work',
+  className = '',
+}: ImageGalleryProps) {
+  const headingId = useId()
+  const shouldReduceMotion = useReducedMotion()
+  const [activeIndex, setActiveIndex] = useState<number | null>(null)
+  const triggerRefs = useRef<(HTMLButtonElement | null)[]>([])
+
+  const items = images.filter((image) => Boolean(image?.src))
+  const activeImage = activeIndex !== null ? items[activeIndex] : undefined
 
   if (items.length === 0) return null
 
-  // Each image animates when it enters the viewport
-  const inViewProps = {
-    initial: { opacity: 0, y: 16, scale: 0.98 },
-    whileInView: { opacity: 1, y: 0, scale: 1 },
-    transition: { duration: 0.45, ease: 'easeOut' },
-    viewport: { once: true, amount: 0.35 },
-  } as const
-
   return (
-    <section className="bg-[#08082a] py-10 sm:py-14">
-      <div className="container mx-auto max-w-6xl px-6 sm:px-8">
-        {/* MOBILE HEADING (aligns with images) */}
-        <div className="mx-auto w-full max-w-6xl md:hidden">
-          <h2 className="mb-6 text-3xl font-extrabold text-white">Work</h2>
-        </div>
+    <>
+      <section
+        aria-labelledby={headingId}
+        className={`bg-[#08082a] py-10 sm:py-14 ${className}`}
+      >
+        <div className="container mx-auto max-w-6xl px-6 sm:px-8">
+          <h2
+            id={headingId}
+            className="mb-6 text-3xl font-extrabold text-white md:text-4xl"
+          >
+            {title}
+          </h2>
 
-        {/* MOBILE/TABLET (<= md): stacked images (show them all) */}
-        <div className="md:hidden">
-          <div className="mx-auto w-full max-w-6xl space-y-8">
-            {items.map((img, i) => (
-              <motion.figure key={i} className="w-full" {...inViewProps}>
-                <button
-                  type="button"
-                  onClick={() => openLightbox(i)}
-                  className="group block w-full focus:outline-none"
-                  aria-label={`Open image ${i + 1}`}
+          {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
+          <ul role="list" className="space-y-8 md:space-y-10">
+            {items.map((image, index) => (
+              <li key={image.id}>
+                <motion.figure
+                  className="w-full"
+                  variants={shouldReduceMotion ? undefined : itemVariants}
+                  initial={shouldReduceMotion ? false : 'hidden'}
+                  whileInView={shouldReduceMotion ? undefined : 'visible'}
+                  viewport={sharedViewport}
                 >
-                  <img
-                    src={img.src}
-                    alt={img.alt || ''}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full cursor-zoom-in rounded-xl object-cover transition group-hover:opacity-90"
-                    width={img.width}
-                    height={img.height}
-                  />
-                </button>
-                {img.caption && (
-                  <figcaption className="mt-2 text-left text-sm text-white/70">
-                    {img.caption}
-                  </figcaption>
-                )}
-              </motion.figure>
+                  <button
+                    ref={(el) => {
+                      triggerRefs.current[index] = el
+                    }}
+                    type="button"
+                    onClick={() => setActiveIndex(index)}
+                    aria-label={`Open enlarged image: ${getImageLabel(image, index)}`}
+                    className="group block w-full rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-[#08082a]"
+                  >
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      loading="lazy"
+                      decoding="async"
+                      width={image.width}
+                      height={image.height}
+                      className="w-full cursor-zoom-in rounded-xl object-cover transition group-hover:opacity-90"
+                    />
+                  </button>
+
+                  {image.caption && (
+                    <figcaption className="mt-2 text-left text-sm text-slate-300">
+                      {image.caption}
+                    </figcaption>
+                  )}
+                </motion.figure>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
+      </section>
 
-        {/* DESKTOP (>= md): heading + stacked images in the same container width */}
-        <div className="hidden md:block">
-          {/* Heading aligned to image left edge */}
-          <div className="mx-auto w-full max-w-6xl">
-            <h2 className="mb-6 text-left text-4xl font-bold text-white">
-              Work
-            </h2>
-          </div>
-
-          <div className="mx-auto mb-12 w-full max-w-6xl space-y-10">
-            {items.map((img, i) => (
-              <motion.figure key={i} className="w-full" {...inViewProps}>
-                <button
-                  type="button"
-                  onClick={() => openLightbox(i)}
-                  className="group block w-full focus:outline-none"
-                  aria-label={`Open image ${i + 1}`}
-                >
-                  <img
-                    src={img.src}
-                    alt={img.alt || ''}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full cursor-zoom-in rounded-xl object-cover transition group-hover:opacity-90"
-                    width={img.width}
-                    height={img.height}
-                  />
-                </button>
-                {img.caption && (
-                  <figcaption className="mb-16 mt-2 text-left text-sm text-white/70">
-                    {img.caption}
-                  </figcaption>
-                )}
-              </motion.figure>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Lightbox shows current image */}
-      {isOpen && (
+      {activeImage && (
         <Lightbox
-          src={items[activeIndex]?.src || ''}
-          alt={items[activeIndex]?.alt || ''}
-          onClose={closeLightbox}
+          src={activeImage.src}
+          alt={activeImage.alt}
+          onClose={() => setActiveIndex(null)}
+          triggerRef={{ current: triggerRefs.current[activeIndex ?? 0] }}
         />
       )}
-    </section>
+    </>
   )
 }

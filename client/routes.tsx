@@ -6,8 +6,8 @@ import CaseStudy from './pages/CaseStudy'
 
 const routes = createRoutesFromElements(
   <Route path="/" element={<App />}>
-    <Route index element={<Projects images={''} />} />
-    <Route path="projects" element={<Projects images={''} />} />
+    <Route index element={<Projects />} />
+    <Route path="projects" element={<Projects />} />
     <Route path="projects/:slug" element={<CaseStudy />} />
     <Route path="about" element={<About />} />
   </Route>,

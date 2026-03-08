@@ -1,11 +1,5 @@
-import Layout from './Layout.tsx'
+import Layout from './Layout'
 
-function App() {
-  return (
-    <>
-      <Layout />
-    </>
-  )
+export default function App(): JSX.Element {
+  return <Layout />
 }
-
-export default App

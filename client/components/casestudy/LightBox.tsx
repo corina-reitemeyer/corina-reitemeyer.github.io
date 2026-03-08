@@ -1,17 +1,36 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
-const Lightbox = ({
-  src,
-  alt,
-  onClose,
-}: {
+interface LightboxProps {
   src: string
   alt: string
   onClose: () => void
-}) => {
-  const [zoom, setZoom] = useState(false)
+  triggerRef?: React.RefObject<HTMLElement>
+}
 
-  // Close on Esc
+export default function Lightbox({
+  src,
+  alt,
+  onClose,
+  triggerRef,
+}: LightboxProps) {
+  const [zoom, setZoom] = useState(false)
+  const dialogRef = useRef<HTMLDivElement>(null)
+  const closeButtonRef = useRef<HTMLButtonElement>(null)
+
+  // Move focus into dialog on open
+  useEffect(() => {
+    closeButtonRef.current?.focus()
+  }, [])
+
+  // Restore focus to trigger element on close
+  useEffect(() => {
+    const trigger = triggerRef?.current
+    return () => {
+      trigger?.focus()
+    }
+  }, [triggerRef])
+
+  // Close on Escape
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose()
@@ -20,24 +39,61 @@ const Lightbox = ({
     return () => document.removeEventListener('keydown', onKey)
   }, [onClose])
 
+  // Focus trap — keep Tab and Shift+Tab within the dialog
+  useEffect(() => {
+    const dialog = dialogRef.current
+    if (!dialog) return
+
+    const focusable = dialog.querySelectorAll<HTMLElement>(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+    )
+    const first = focusable[0]
+    const last = focusable[focusable.length - 1]
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return
+      if (focusable.length === 0) {
+        e.preventDefault()
+        return
+      }
+
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault()
+          last.focus()
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault()
+          first.focus()
+        }
+      }
+    }
+
+    dialog.addEventListener('keydown', onKeyDown)
+    return () => dialog.removeEventListener('keydown', onKeyDown)
+  }, [])
+
   return (
     <div
-      className="fixed inset-0 z-50 bg-black/80"
+      ref={dialogRef}
       role="dialog"
       aria-modal="true"
-      aria-label="Image lightbox"
+      aria-label={alt || 'Image lightbox'}
+      className="fixed inset-0 z-50 bg-black/80"
     >
-      {/* Close button */}
+      <div className="absolute inset-0" aria-hidden="true" onClick={onClose} />
+
       <button
+        ref={closeButtonRef}
         type="button"
         onClick={onClose}
-        className="absolute right-5 top-5 z-50 p-2"
         aria-label="Close lightbox"
+        className="absolute right-5 top-5 z-50 p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
       >
-        <img src="/images/Close.webp" alt="Close" className="h-8 w-8" />
+        <img src="/images/Close.webp" alt="" className="h-8 w-8" />
       </button>
 
-      {/* Fit container (zoom off) OR scroll/pan container (zoom on) */}
       <div
         className={
           zoom
@@ -45,13 +101,12 @@ const Lightbox = ({
             : 'grid h-screen w-screen place-items-center'
         }
       >
-        {/* Use a button for toggling zoom -> keyboard accessible */}
         <button
           type="button"
           onClick={() => setZoom((z) => !z)}
           aria-pressed={zoom}
           aria-label={zoom ? 'Zoom out' : 'Zoom in'}
-          className={zoom ? 'cursor-zoom-out' : 'cursor-zoom-in'}
+          className={`relative z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white ${zoom ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
         >
           <img
             src={src}
@@ -63,5 +118,3 @@ const Lightbox = ({
     </div>
   )
 }
-
-export default Lightbox

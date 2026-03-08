@@ -1,7 +1,7 @@
 export default interface AboutData {
-  roles: Role[]
-  process: ProcessStep[]
   values: Value[]
+  roles?: Role[]
+  process?: ProcessStep[]
 }
 
 interface Role {

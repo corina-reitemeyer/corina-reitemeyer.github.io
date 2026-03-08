@@ -1,6 +1,7 @@
-import React from 'react'
+import { useId } from 'react'
 
-interface Achievement {
+type Achievement = {
+  id: string
   title: string
   description: string
 }
@@ -8,32 +9,49 @@ interface Achievement {
 interface AchievementsSectionProps {
   title: string
   achievements: Achievement[]
+  className?: string
 }
 
-const AchievementsSection: React.FC<AchievementsSectionProps> = ({
+export default function AchievementsSection({
   title,
   achievements,
-}) => {
-  return (
-    <section className="bg-[#08082a] py-32 sm:pb-40 sm:pt-40">
-      <div className="container mx-auto max-w-6xl px-6 sm:px-8">
-        {/* Title */}
-        <h2 className="mb-8 text-4xl font-bold text-white">{title}</h2>
+  className = '',
+}: AchievementsSectionProps) {
+  const headingId = useId()
 
-        {/* Two-Column Layout */}
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-16">
-          {achievements.map((achievement, index) => (
-            <div key={index} className="achievement-item">
+  if (achievements.length === 0) return null
+
+  return (
+    <section
+      aria-labelledby={headingId}
+      className={`bg-[#08082a] py-32 sm:py-40 ${className}`}
+    >
+      <div className="container mx-auto max-w-6xl px-6 sm:px-8">
+        <h2 id={headingId} className="mb-8 text-4xl font-bold text-white">
+          {title}
+        </h2>
+
+        {/* role="list" restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
+        {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
+        <ul
+          role="list"
+          className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-16"
+        >
+          {achievements.map((achievement) => (
+            <li
+              key={achievement.id}
+              className="border-l-2 border-white/20 pl-5"
+            >
               <h3 className="text-lg font-semibold text-white">
                 {achievement.title}
               </h3>
-              <p className="mt-2 text-white/70">{achievement.description}</p>
-            </div>
+              <p className="mt-2 max-w-prose text-slate-300">
+                {achievement.description}
+              </p>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   )
 }
-
-export default AchievementsSection

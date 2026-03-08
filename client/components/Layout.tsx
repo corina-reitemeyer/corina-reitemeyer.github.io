@@ -14,12 +14,12 @@ export default function Layout() {
       </a>
 
       <Header />
-      <ScrollToTop />
       <main
         id="main-content"
         tabIndex={-1}
         className="flex flex-1 flex-col outline-none"
       >
+        <ScrollToTop />
         <Outlet />
       </main>
 

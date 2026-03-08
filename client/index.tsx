@@ -1,18 +1,26 @@
+import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import routes from './routes' // Ensure this import is correct
+import routes from './routes'
 
 const queryClient = new QueryClient()
-
 const router = createBrowserRouter(routes)
 
-document.addEventListener('DOMContentLoaded', () => {
-  createRoot(document.getElementById('app') as HTMLElement).render(
+const rootElement = document.getElementById('app')
+if (!rootElement) {
+  throw new Error(
+    '[main.tsx] Could not find #app root element. ' +
+      'Ensure your index.html contains <div id="app"></div>.',
+  )
+}
+
+createRoot(rootElement).render(
+  <StrictMode>
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
-      <ReactQueryDevtools />
-    </QueryClientProvider>,
-  )
-})
+      {import.meta.env.DEV && <ReactQueryDevtools initialIsOpen={false} />}
+    </QueryClientProvider>
+  </StrictMode>,
+)

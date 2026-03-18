@@ -83,7 +83,7 @@ export default function KeyOutcomes({
     <section
       ref={sectionRef}
       aria-labelledby={headingId}
-      className={`relative mb-10 bg-[#08082a] px-6 py-16 sm:py-32 ${className}`}
+      className={`relative bg-[#08082a] px-6 pb-32 pt-16 sm:pb-40 sm:pt-16 ${className}`}
     >
       <div className="mx-auto max-w-6xl">
         <h2

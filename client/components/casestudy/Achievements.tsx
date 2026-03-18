@@ -24,7 +24,7 @@ export default function AchievementsSection({
   return (
     <section
       aria-labelledby={headingId}
-      className={`bg-[#08082a] py-32 sm:py-40 ${className}`}
+      className={`bg-[#08082a] py-28 sm:py-28 ${className}`}
     >
       <div className="container mx-auto max-w-6xl px-6 sm:px-8">
         <h2 id={headingId} className="mb-8 text-4xl font-bold text-white">

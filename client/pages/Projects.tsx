@@ -38,8 +38,8 @@ export default function Projects() {
           bgSvgSrc="/images/Impact-statement-bg.svg"
           greeting="Hi, I'm Corina,"
           lines={[
-            'Product Designer crafting accessible, scalable products',
-            'by combining systems thinking with technical craft.',
+            'Product Designer creating accessible, scalable products',
+            'by combining systems thinking with technical craft and detail.',
           ]}
           pills={[
             { label: '8+ years experience' },

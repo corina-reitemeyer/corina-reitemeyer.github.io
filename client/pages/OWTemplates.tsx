@@ -215,7 +215,7 @@ export default function OWTemplates() {
 
       {/* 6. Product Outcomes */}
       <KeyOutcomes
-        title="Product Outcomes"
+        title="Results"
         outcomes={[
           {
             id: 'faster-setup',

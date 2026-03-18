@@ -143,6 +143,23 @@ export default function CaseStudyNavy({
           )}
         </motion.figure>
 
+        {/* Overview + Role/Involvement */}
+        <div className="mt-16 grid grid-cols-1 gap-10 sm:mt-20 md:grid-cols-12 md:gap-16">
+          <div className="md:col-span-4">
+            <p className="text-3xl font-semibold leading-tight antialiased">
+              <span className="block text-[#CBEDE8]">{company}</span>
+              <span className="block text-white">{project}</span>
+            </p>
+          </div>
+
+          <div className="md:col-span-8">
+            <dl className="space-y-8">
+              <DetailItem term="Overview" description={overview} />
+              <DetailItem term="Involvement" description={involvement} />
+            </dl>
+          </div>
+        </div>
+
         {/* Metadata strip */}
         {meta && meta.length > 0 && (
           <dl className="mt-12 grid grid-cols-2 gap-x-0 gap-y-6 rounded-2xl border border-white/20 p-6 sm:mt-14 sm:grid-cols-4 sm:p-8">
@@ -163,23 +180,6 @@ export default function CaseStudyNavy({
             ))}
           </dl>
         )}
-
-        {/* Overview + Role/Involvement */}
-        <div className="mt-16 grid grid-cols-1 gap-10 sm:mt-20 md:grid-cols-12 md:gap-16">
-          <div className="md:col-span-4">
-            <p className="text-3xl font-semibold leading-tight antialiased">
-              <span className="block text-[#CBEDE8]">{company}</span>
-              <span className="block text-white">{project}</span>
-            </p>
-          </div>
-
-          <div className="md:col-span-8">
-            <dl className="space-y-8">
-              <DetailItem term="Overview" description={overview} />
-              <DetailItem term="Involvement" description={involvement} />
-            </dl>
-          </div>
-        </div>
       </div>
     </section>
   )

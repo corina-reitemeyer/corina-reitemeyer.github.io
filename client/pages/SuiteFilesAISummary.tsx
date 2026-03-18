@@ -93,8 +93,8 @@ export default function SuiteFilesAISummary() {
             id: 'approach-principles',
             heading: 'Principles before pixels',
             body: [
-              'Before opening Figma, I defined three human-AI principles to guide every decision: transparency, editability, and user agency. Rather than treating AI as an add-on, I designed it as a supporting layer: automation where it helped, human judgment where it mattered.',
-              'Having a framework meant design decisions could be evaluated against something concrete, not just instinct. It also gave the team a shared language for discussing trade-offs as constraints changed throughout the project.',
+              'Before opening Figma, I defined three human-AI principles to guide every decision: transparency, editability, and user agency. Rather than treating AI as an add-on, I designed it as a supporting layer — automation where it helped, human judgment where it mattered.',
+              'Having a framework meant design decisions could be evaluated against something concrete, not just instinct — and gave the team a shared language for trade-offs as constraints changed.',
             ],
             image: {
               id: 'sfai-principles',
@@ -108,17 +108,23 @@ export default function SuiteFilesAISummary() {
             id: 'approach-research-mitigation',
             heading: 'Finding signal without formal research',
             body: [
-              "Research wasn't always an option, whether due to limited participant availability or time constraints. So I found signal elsewhere. I audited existing AI summarisation tools and competing e-signing platforms to understand established conventions and what users would likely expect based on products they already used.",
-              'I also worked with customer success and sales to understand what they were hearing from customers and prospects. That surfaced something important: accountants are curious about AI but not always tech-literate, and there was real anxiety about trusting AI output in a legal context.',
-              "That insight directly shaped one of the key design decisions: adding a settings toggle so customers who weren't yet comfortable with AI could opt out entirely. User agency wasn't just a principle on a diagram. It became a feature.",
+              "Research wasn't always an option — whether due to limited participant availability or time constraints. So I found signal elsewhere. I audited existing AI summarisation tools and competing e-signing platforms to understand established conventions and what users would likely expect.",
+              "I also worked with customer success and sales to understand what they were hearing. That surfaced something important: accountants are curious about AI but not always tech-literate, and there was real anxiety about trusting AI output in a legal context. That insight directly shaped the settings toggle — so customers who weren't yet comfortable with AI could opt out entirely. User agency wasn't just a principle on a diagram. It became a feature.",
             ],
+            image: {
+              id: 'sfai-competitors',
+              src: '/images/process/sf-ai-summariser-competitors.webp',
+              alt: 'Screenshots of competitor AI summarisation tools and e-signing platforms reviewed during research',
+              caption:
+                'Exploring competitor and comparable products, understanding established AI conventions before designing.',
+            },
           },
           {
             id: 'approach-constraints',
             heading: 'Designing alongside a moving target',
             body: [
-              'The AI model was being finalised in parallel with the design work. That meant consistent check-ins with engineers. Mainly to inform and test whether ideas were technically feasible as the model evolved.',
-              "The prompt that drove the summaries wasn't quite right initially. After sales tested an early version with a few prospects, the feedback helped refine the prompt significantly. It was a lean feedback loop that replaced what formal user testing would have given us: imperfect, but grounded in real reactions from real people in the target audience.",
+              'The AI model was being finalised in parallel with the design work — which meant consistent check-ins with engineers to test whether ideas were feasible as the model evolved.',
+              "The prompt that drove the summaries wasn't right initially. After sales tested an early version with prospects, their feedback helped refine it significantly — a lean feedback loop that replaced what formal user testing would have given us.",
             ],
             image: {
               id: 'sfai-userflow',
@@ -132,17 +138,25 @@ export default function SuiteFilesAISummary() {
             id: 'approach-placement',
             heading: 'Finding the right moment in the flow',
             body: [
-              "One of the key interaction decisions was where in the signing wizard the feature would live. Too early and it disrupts the flow before the user is oriented. Too late and it's missed entirely.",
-              "We landed on surfacing it during the document review step: when the user is already in the document and considering what they're about to sign. That's the moment where a summary has the most value and the least friction.",
-              'The third-party PDF platform introduced its own technical constraints. We had to keep the implementation simple for v1, which reinforced the decision to focus on clarity and trust rather than feature depth.',
+              "We landed on surfacing the summary during the document review step — when the user is already in the document and considering what they're about to sign. That's the moment where a summary has the most value and the least friction.",
+              'The third-party PDF platform introduced technical constraints that kept the implementation simple for v1 — which reinforced the decision to focus on clarity and trust rather than feature depth.',
+            ],
+          },
+          {
+            id: 'approach-disclaimer',
+            heading:
+              'Designing the disclaimer as a guardrail, not an afterthought',
+            body: [
+              'In a legal and financial context, AI output that feels authoritative is a liability. I added a clear in-context disclaimer to signal that summaries should be treated as a starting point — reviewed critically, not accepted at face value.',
+              "The feedback mechanism I originally intended didn't make it to v1. Losing it pushed me toward the disclaimer as the primary trust signal — a constraint that removed one solution and surfaced a better one.",
             ],
           },
           {
             id: 'approach-v1',
             heading: 'Shipping a deliberate, limited v1',
             body: [
-              'Summary generation was limited to recipients only at launch. A technical constraint that created an uneven value exchange. The person already under pressure to review and sign was also doing the work of generating context.',
-              'I acknowledged that as a real risk but prioritised the more critical problem first: recipients interpreting AI output incorrectly in a high-stakes workflow. The first phase was designed to be expandable without requiring a rebuild, so trust could be earned incrementally rather than promised upfront. We also communicated with document senders / customers up front that the feature was in an early testing phase.',
+              'Summary generation was limited to recipients only at launch — a known trade-off, managed by prioritising the most critical problem first: recipients interpreting AI output incorrectly in a high-stakes workflow.',
+              'The first phase was designed to be expandable without requiring a rebuild — so trust could be earned incrementally rather than promised upfront.',
             ],
           },
         ]}
@@ -156,26 +170,26 @@ export default function SuiteFilesAISummary() {
             id: 'no-research-safety-net',
             title: 'No direct access to users',
             description:
-              "Customer success and sales conversations provided useful signal, but they're not a substitute for talking directly to recipients — the people actually doing the signing. That gap meant some assumptions about user behaviour remained untested at launch.",
+              "Customer success and sales conversations provided useful signal, but they're not a substitute for talking directly to recipients. Some assumptions about user behaviour remained untested at launch.",
           },
           {
             id: 'lost-feature-to-feasibility',
             title: 'Lost a feedback mechanism to feasibility',
             description:
-              "A way for recipients to flag inaccurate or misleading summaries was part of the original intent but didn't make v1. The disclaimer compensated, but a feedback loop would have given the team real data on model accuracy over time. It was scoped for the next sprint to ensure it made it into the intended design.",
+              "A way for recipients to flag inaccurate summaries didn't make v1. The disclaimer compensated, but a feedback loop would have given the team real data on model accuracy over time. It was scoped for the next sprint.",
           },
           {
             id: 'shipped-with-uneven-value',
             title: 'Uneven value at launch',
             description:
-              'Limiting summary generation to recipients only created an imbalance — the person already under pressure to sign was also generating the context. It was a known trade-off, managed by prioritising the most critical risk first and designing for expansion in the next iteration.',
+              'Limiting summary generation to recipients only created an imbalance — the person already under pressure to sign was also generating context. It was a known trade-off, with sender-side generation scoped for the next sprint.',
           },
         ]}
       />
 
       {/* 6. Product Outcomes */}
       <KeyOutcomes
-        title="Product Outcomes"
+        title="Results"
         outcomes={[
           {
             id: 'faster-deals',

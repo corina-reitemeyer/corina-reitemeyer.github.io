@@ -10,7 +10,7 @@ export default function Takeaways({ paragraphs }: TakeawaysProps) {
   return (
     <section
       aria-labelledby={headingId}
-      className="relative z-0 flex min-h-[90vh] w-full items-center overflow-hidden bg-[#08003B] text-white"
+      className="relative z-0 flex min-h-[90vh] w-full items-center overflow-hidden bg-[#08082a] text-white"
     >
       <div className="absolute inset-0 z-[-1]">
         <img

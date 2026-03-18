@@ -54,7 +54,7 @@ export default function ApproachSection({ items }: ApproachSectionProps) {
                 </div>
 
                 {item.image && (
-                  <figure className="mt-8">
+                  <figure className="relative left-1/2 mt-8 w-screen max-w-6xl -translate-x-1/2 px-6 lg:px-0">
                     <button
                       ref={triggerRef as React.RefObject<HTMLButtonElement>}
                       type="button"

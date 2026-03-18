@@ -52,7 +52,7 @@ export default function ImageGallery({
     <>
       <section
         aria-labelledby={headingId}
-        className={`bg-[#08082a] py-10 sm:py-14 ${className}`}
+        className={`bg-[#08082a] py-10 sm:pt-28 ${className}`}
       >
         <div className="container mx-auto max-w-6xl px-6 sm:px-8">
           <h2

@@ -16,7 +16,7 @@ export default function SuiteFilesAISummary() {
         project="AI Summaries"
         imageSrc="/images/portfolio/suitefiles-ai-summary-cover.webp"
         imageAlt="SuiteFiles AI Summaries feature hero"
-        overview="SuiteFiles is a document management and e-signing platform built for accounting professionals. When I joined the team, the entire product was in the midst of a platform migration and redesign project, starting with the e-signing platform. Alongside improvements highlighted by user research and modernisation of UX patterns, the company was beginning to explore AI as a strategic direction."
+        overview="SuiteFiles is a document management and e-signing platform built for accounting professionals. The product was in the midst of a platform migration and redesign when the company began exploring AI as a strategic direction. I was given end-to-end ownership of the AI summarisation feature, from defining the approach to shipping the first version, within a cross-functional product team."
         involvement="Led feature strategy and end-to-end UX/UI design for the company's first AI capability."
         meta={[
           { label: 'Domain', value: 'SaaS (B2B)' },
@@ -36,19 +36,22 @@ export default function SuiteFilesAISummary() {
             id: 'sfai-mobile',
             src: '/images/product/sfai-mobile.webp',
             alt: 'Mobile screens showing AI summariser feature',
-            caption: 'Final shipped AI summary experience (mobile).',
-          },
-          {
-            id: 'sfai-desktop-anatomy',
-            src: '/images/product/sfai-desktop-panel-anatomy.webp',
-            alt: 'Desktop screen showing AI summariser feature anatomy',
-            caption: 'Feature anatomy and key components.',
+            caption:
+              'The summary panel on mobile — designed to sit within the signing flow without interrupting it.',
           },
           {
             id: 'sfai-desktop-slides',
             src: '/images/product/sfai-desktop-slides.webp',
             alt: 'Desktop screens showing AI summary feature',
-            caption: 'Final shipped AI summary experience (desktop).',
+            caption:
+              'The full desktop experience in a multi-document signing request.',
+          },
+          {
+            id: 'sfai-desktop-anatomy',
+            src: '/images/product/sfai-desktop-panel-anatomy.webp',
+            alt: 'Desktop screen showing AI summariser feature anatomy',
+            caption:
+              'Feature anatomy — showing the transparency indicators, disclaimer, and user controls.',
           },
         ]}
       />
@@ -63,7 +66,7 @@ export default function SuiteFilesAISummary() {
             body: [
               'In a platform used by accountants and financial professionals, signing requests often involved multiple lengthy documents. Recipients had no way to quickly grasp what they were agreeing to.',
               {
-                text: "Senders were filling the gap outside the product — through emails, calls, and briefings — because the product wasn't helping enough at the moment that mattered most.",
+                text: "Senders were compensating outside the product: through emails, calls, and briefings, because the product wasn't helping enough at the moment that mattered most.",
                 bold: true,
               },
             ],
@@ -71,11 +74,11 @@ export default function SuiteFilesAISummary() {
           {
             id: 'challenge-ai',
             heading:
-              'Introducing AI into a high-stakes, trust-sensitive workflow',
+              'AI could help — but in the wrong hands, it could also mislead',
             body: [
-              'AI summarisation had real potential to help — but in a legal and financial context, a poorly designed AI feature could do more harm than good.',
+              'In a legal and financial context, an AI summary that feels authoritative can be more dangerous than no summary at all. Recipients could easily mistake generated output for verified fact.',
               {
-                text: "The challenge wasn't just building an AI feature. It was building one that users could trust, that didn't remove accountability, and that could be shipped responsibly without formal user research.",
+                text: "The real challenge wasn't building an AI feature. It was building one that improved understanding without removing accountability and doing it without formal user research to validate the approach.",
                 bold: true,
               },
             ],
@@ -90,55 +93,56 @@ export default function SuiteFilesAISummary() {
             id: 'approach-principles',
             heading: 'Principles before pixels',
             body: [
-              'Before opening Figma, I defined three human-AI principles to guide every decision: transparency, editability, and user agency. Rather than treating AI as an add-on, I designed it as a supporting layer — automation where it helped, human judgment where it mattered.',
-              'This gave the team a framework to evaluate design decisions against, and ensured the feature stayed grounded in responsible implementation even as constraints changed.',
+              'Before opening Figma, I defined three human-AI principles to guide every decision: transparency, editability, and user agency. Rather than treating AI as an add-on, I designed it as a supporting layer: automation where it helped, human judgment where it mattered.',
+              'Having a framework meant design decisions could be evaluated against something concrete, not just instinct. It also gave the team a shared language for discussing trade-offs as constraints changed throughout the project.',
             ],
             image: {
               id: 'sfai-principles',
               src: '/images/process/sfai-ai-principles.webp',
               alt: 'Diagram showing three human-AI design principles',
-              caption: 'Human-AI design principles guiding the feature.',
+              caption:
+                'Human-AI design principles defined before any design work began.',
             },
           },
           {
-            id: 'approach-engineers',
-            heading: 'Working within model constraints',
+            id: 'approach-research-mitigation',
+            heading: 'Finding signal without formal research',
             body: [
-              "I worked closely with engineers to understand what the model could and couldn't do. That shaped what we could ship immediately and what needed more exploration.",
-              'Understanding the technical constraints early meant design decisions were grounded in reality — not aspirational features that would hit a wall at implementation.',
+              "Research wasn't always an option, whether due to limited participant availability or time constraints. So I found signal elsewhere. I audited existing AI summarisation tools and competing e-signing platforms to understand established conventions and what users would likely expect based on products they already used.",
+              'I also worked with customer success and sales to understand what they were hearing from customers and prospects. That surfaced something important: accountants are curious about AI but not always tech-literate, and there was real anxiety about trusting AI output in a legal context.',
+              "That insight directly shaped one of the key design decisions: adding a settings toggle so customers who weren't yet comfortable with AI could opt out entirely. User agency wasn't just a principle on a diagram. It became a feature.",
+            ],
+          },
+          {
+            id: 'approach-constraints',
+            heading: 'Designing alongside a moving target',
+            body: [
+              'The AI model was being finalised in parallel with the design work. That meant consistent check-ins with engineers. Mainly to inform and test whether ideas were technically feasible as the model evolved.',
+              "The prompt that drove the summaries wasn't quite right initially. After sales tested an early version with a few prospects, the feedback helped refine the prompt significantly. It was a lean feedback loop that replaced what formal user testing would have given us: imperfect, but grounded in real reactions from real people in the target audience.",
             ],
             image: {
               id: 'sfai-userflow',
               src: '/images/process/sfai-userflow-recipient.webp',
               alt: 'Workflow comparison with and without AI summariser',
               caption:
-                'Before/after workflow showing reduced recipient friction.',
+                'Before and after workflow — showing where AI reduced friction in the signing journey.',
             },
           },
           {
-            id: 'approach-research-mitigation',
-            heading: 'Mitigating the lack of research',
+            id: 'approach-placement',
+            heading: 'Finding the right moment in the flow',
             body: [
-              "Without formal user research, I needed another way to ground design decisions in real user expectations. I looked at comparable products and established AI patterns to understand what users would likely bring to the experience — applying Jakob's Law: users spend most of their time on other products, so their mental model is shaped by those experiences.",
-              "This meant auditing how other tools handled AI-generated content — things like awareness indicators, feedback mechanisms, copy to clipboard, and disclaimer copy. Even if we couldn't ship all of those patterns at v1, understanding the expected language and conventions helped ensure the feature felt familiar and trustworthy rather than foreign.",
-              'It also gave me a defensible rationale for design decisions in the absence of primary research — grounded in established conventions rather than assumption.',
-            ],
-          },
-          {
-            id: 'approach-disclaimer',
-            heading:
-              'Designing the disclaimer as a guardrail, not an afterthought',
-            body: [
-              'In a legal and financial context, AI summaries could easily be mistaken for authoritative. I added a clear in-context disclaimer to signal that output should be treated as a starting point and reviewed critically.',
-              "A feedback mechanism was part of the original intent — but wasn't feasible for the first release. That constraint pushed me toward the disclaimer instead. A constraint that removed one solution and surfaced a better one.",
+              "One of the key interaction decisions was where in the signing wizard the feature would live. Too early and it disrupts the flow before the user is oriented. Too late and it's missed entirely.",
+              "We landed on surfacing it during the document review step: when the user is already in the document and considering what they're about to sign. That's the moment where a summary has the most value and the least friction.",
+              'The third-party PDF platform introduced its own technical constraints. We had to keep the implementation simple for v1, which reinforced the decision to focus on clarity and trust rather than feature depth.',
             ],
           },
           {
             id: 'approach-v1',
             heading: 'Shipping a deliberate, limited v1',
             body: [
-              'Summary generation was limited to recipients only at launch due to technical constraints. That created an uneven value exchange — acknowledged as a real risk, but managed by prioritising the most critical issue first.',
-              "The first phase was designed to be expandable without compromising the trust we'd built. Start small, make intent visible, earn trust before scaling.",
+              'Summary generation was limited to recipients only at launch. A technical constraint that created an uneven value exchange. The person already under pressure to review and sign was also doing the work of generating context.',
+              'I acknowledged that as a real risk but prioritised the more critical problem first: recipients interpreting AI output incorrectly in a high-stakes workflow. The first phase was designed to be expandable without requiring a rebuild, so trust could be earned incrementally rather than promised upfront. We also communicated with document senders / customers up front that the feature was in an early testing phase.',
             ],
           },
         ]}
@@ -150,21 +154,21 @@ export default function SuiteFilesAISummary() {
         achievements={[
           {
             id: 'no-research-safety-net',
-            title: 'Designed without a research safety net',
+            title: 'No direct access to users',
             description:
-              'No formal user research existed to validate whether AI summaries would resonate or raise concerns with financial professionals. I defined three human-AI principles upfront — transparency, editability, and user agency — and used them as the decision-making framework throughout.',
+              "Customer success and sales conversations provided useful signal, but they're not a substitute for talking directly to recipients — the people actually doing the signing. That gap meant some assumptions about user behaviour remained untested at launch.",
           },
           {
             id: 'lost-feature-to-feasibility',
-            title: 'Lost a key feature to feasibility',
+            title: 'Lost a feedback mechanism to feasibility',
             description:
-              "A feedback mechanism for flagging inaccurate summaries was part of the original intent but wasn't feasible for the first release. That constraint pushed me toward the in-context disclaimer instead — a constraint that removed one solution and surfaced a better one.",
+              "A way for recipients to flag inaccurate or misleading summaries was part of the original intent but didn't make v1. The disclaimer compensated, but a feedback loop would have given the team real data on model accuracy over time. It was scoped for the next sprint to ensure it made it into the intended design.",
           },
           {
             id: 'shipped-with-uneven-value',
-            title: 'Shipped with uneven value by design',
+            title: 'Uneven value at launch',
             description:
-              'Summary generation was limited to recipients only at launch, meaning the person already under pressure to sign was also generating context. I acknowledged the risk, prioritised recipient interpretation in a high-stakes legal workflow, and designed for expansion later without compromising trust.',
+              'Limiting summary generation to recipients only created an imbalance — the person already under pressure to sign was also generating the context. It was a known trade-off, managed by prioritising the most critical risk first and designing for expansion in the next iteration.',
           },
         ]}
       />
@@ -178,27 +182,27 @@ export default function SuiteFilesAISummary() {
             iconSrc: '/icons/Bolt.svg',
             iconAlt: 'Bolt',
             iconEmoji: '⚡',
-            title: 'Faster Deal Cycles',
+            title: 'Reduced friction at signing',
             description:
-              'AI-powered summaries streamlined multi-document requests, reducing time-to-sign.',
+              'Recipients could understand what they were signing without needing external context from senders, keeping the workflow inside the product where it belongs.',
           },
           {
             id: 'recipient-confidence',
             iconSrc: '/icons/check.svg',
             iconAlt: 'Check',
             iconEmoji: '✅',
-            title: 'Greater Recipient Confidence',
+            title: 'Trust built into the experience',
             description:
-              'Clear summaries gave recipients instant understanding of what they were signing.',
+              'Transparency indicators, in-context disclaimers, and an opt-out setting on the document senders end, gave users control over how they engaged with AI feature, rather than having it imposed on them.',
           },
           {
             id: 'ai-differentiation',
             iconSrc: '/icons/sparkle.svg',
             iconAlt: 'AI Sparkle',
             iconEmoji: '🤖',
-            title: 'AI-First Differentiation',
+            title: 'A foundation for future AI work',
             description:
-              'Positioned the product competitively with practical, human-centered AI.',
+              'The principles and patterns established in this feature became the reference point for how AI would be approached across the product going forward.',
           },
         ]}
       />
@@ -207,8 +211,8 @@ export default function SuiteFilesAISummary() {
       <Takeaways
         paragraphs={[
           "This project reinforced that good AI design isn't about making systems feel smarter. It's about helping people feel more confident in the decisions they're making.",
-          'Taking a step back and working closely with engineers helped clarify where AI genuinely added value, and where it risked removing accountability in a high-stakes workflow.',
-          'Shipping this feature strengthened my belief in restraint, clear guardrails, and honest communication with users. It also shaped how I now approach AI work more broadly: start small, make intent visible, and earn trust before scaling.',
+          "Working closely with engineers from the start — not just at handoff — was what made responsible shipping possible. It surfaced the model's real limitations early enough to design with them, rather than discovering them after decisions had already been made.",
+          'Designing for trust in a high-stakes context is less about what you add and more about what you are willing to hold back. Whilst not flashy, the restraint in this feature (the opt-out, the disclaimer, the limited v1) was intentional. It shaped how I think about responsible design more broadly.',
         ]}
       />
     </>

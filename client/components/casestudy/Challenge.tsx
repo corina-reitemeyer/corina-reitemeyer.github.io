@@ -30,7 +30,7 @@ export default function ChallengeSection({
     <>
       <section
         aria-label="Challenge"
-        className="w-full bg-[#08082a] py-16 sm:py-24"
+        className="w-full bg-[#08082a] py-16 sm:pt-32"
       >
         <div className="mx-auto max-w-2xl px-6 lg:px-0">
           <h2 className="mb-12 text-4xl font-bold text-white antialiased sm:text-5xl">

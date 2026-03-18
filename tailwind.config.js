@@ -3,6 +3,10 @@ export default {
   content: ['./index.html', './client/**/*.tsx'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['sofia-pro', 'sans-serif'],
+      },
+
       colors: {
         customYellow: '#ffd803',
       },

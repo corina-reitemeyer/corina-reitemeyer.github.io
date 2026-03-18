@@ -11,14 +11,14 @@ export default function MOEDesignSystem() {
   return (
     <>
       <CaseStudyNavy
-        intro="From a COVID crisis site to shared design standards across 50+ platforms."
+        intro="From a COVID crisis site to shared design standards across 100+ platforms."
         company="Ministry of Education"
         project="Design System"
         imageSrc="/images/product/moe-designsystem-hero.webp"
         imageAlt="Ministry of Education design system hero"
-        scope="The rushed launch of a critical COVID-19 website exposed gaps in the organisation's design and implementation process. Inconsistent design, accessibility issues, and a lack of shared standards made it difficult for teams to work efficiently and deliver inclusive experiences. I led the creation of the organisation's first design system to address these problems. I started with product audits and staff interviews to understand where teams were struggling, then designed reusable components and accessibility guidelines aligned with WCAG standards. By working closely with designers, engineers, and web advisors, I helped align teams and streamline delivery. The result was a shared set of standards that reduced design issues, improved accessibility, and supported future projects. The design system is now used across more than 50 digital platforms."
-        involvement="Senior UX/UI Designer - Led the establishment and ongoing evolution of the design system site and Adobe XD component library."
-        team="Worked with designers, engineers, content teams, and web accessibility advisors across the organisation to align standards and delivery."
+        scope="The rushed launch of a critical COVID-19 website exposed what happened when speed came without structure. Inconsistent design, accessibility failures, and no shared standards across a sprawling network of sites. The problem wasn't one website, it was an entire organisation building digital products without a common language. I led the creation of the organisation's first design system. Not as a post-crisis cleanup, but as a genuine attempt to change how over 100 digital platforms were designed and built going forward. That meant bringing together designers, engineers, content teams, web advisors, and feedback provided by external vendors — each with their own tools, philosophies, and constraints — and finding standards everyone could actually adopt. Accessibility wasn't an add-on. In a government context with mandatory WCAG compliance, it was the foundation everything else was built on."
+        involvement="Senior UX/UI Designer — led the research, design, and establishment of the organisation's first design system, including the component library and the design system website."
+        team="Worked across a large, distributed organisation — internal designers, engineers, content teams, web advisors, and external vendors, each with their own tools, brand constraints, and ways of working."
         meta={{
           date: '2020 - 2021',
           type: 'Design System, Website',
@@ -63,61 +63,43 @@ export default function MOEDesignSystem() {
       />
 
       <KeyOutcomes
-        title="Product Impact"
+        title="Product Outcomes"
         outcomes={[
           {
             id: 'faster-delivery',
-            iconSrc: '/icons/rocket.svg',
-            iconAlt: 'Rocket',
-            iconEmoji: '🚀',
-            title: '40% Faster Dev/Design Time',
+            iconSrc: '/icons/Bolt.svg',
+            iconAlt: 'Bolt',
+            iconEmoji: '⚡',
+            title: 'Faster Design and Development',
             description:
-              'Standardised components cut duplicate work and sped up delivery.',
+              'Teams reported significantly faster delivery after adoption — with one estimate putting time savings at around 40% for design and development work.',
           },
           {
-            id: 'broad-use',
-            iconSrc: '/icons/increase.svg',
-            iconAlt: 'Increase',
-            iconEmoji: '📈',
-            title: 'Broad System Use',
+            id: 'broad-adoption',
+            iconSrc: '/icons/puzzle.svg',
+            iconAlt: 'Puzzle',
+            iconEmoji: '🛠️',
+            title: 'Adopted Across 100+ Platforms',
             description:
-              'Teams applied the system across 50+ sites, both new builds and existing products.',
+              'The system was applied across new builds and existing products, surviving a rebrand and continuing to evolve after my departure.',
           },
           {
-            id: 'simpler-workflows',
-            iconSrc: '/icons/speedometer.svg',
-            iconAlt: 'Speedometer',
-            iconEmoji: '⏳',
-            title: 'Simpler Workflows',
+            id: 'accessibility',
+            iconSrc: '/icons/check.svg',
+            iconAlt: 'Check',
+            iconEmoji: '✅',
+            title: 'Accessibility Embedded at Scale',
             description:
-              'Shared patterns reduced rework and made design processes easier.',
-          },
-          {
-            id: 'clearer-docs',
-            iconSrc: '/icons/book.svg',
-            iconAlt: 'Book',
-            iconEmoji: '📖',
-            title: 'Clearer Documentation',
-            description:
-              'Guidelines were updated to reflect real developer needs.',
-          },
-          {
-            id: 'consistent-ux',
-            iconSrc: '/icons/color-bucket.svg',
-            iconAlt: 'Colour bucket',
-            iconEmoji: '🎨',
-            title: 'Consistent User Experience',
-            description:
-              'A unified visual language reduced usability issues and built trust in digital platforms.',
+              'WCAG-aligned components and guidelines were applied consistently across government platforms, reducing accessibility issues that had been repeated across sites.',
           },
           {
             id: 'vendor-alignment',
             iconSrc: '/icons/handshake.svg',
             iconAlt: 'Handshake',
             iconEmoji: '🤝',
-            title: 'Better Vendor Alignment',
+            title: 'Vendors and Internal Teams Aligned',
             description:
-              'Clear standards helped external teams deliver consistent work.',
+              'Shared standards gave external vendors and internal teams a common reference point, reducing inconsistency and rework across a complex multi-team environment.',
           },
         ]}
       />
@@ -126,14 +108,14 @@ export default function MOEDesignSystem() {
         heading="Process"
         sections={[
           {
-            id: 'process-exploration',
-            subtitle: 'From exploration to system alignment',
-            body: 'I began by mapping existing sites and reviewing comparable platforms to understand where inconsistency and duplication were creeping in. From there, I guided the work from early wireframes through to final components. The components were shaped and agreed through facilitated workshops, while I designed the design system website from scratch and set up the design tokens in our design tool. One of the biggest challenges was alignment. The system needed to work across more than 100 sites, involving an internal web team and multiple external vendors, each with their own brand styles and constraints. I focused on finding the right balance: flexible enough to allow variation, but structured enough to create consistency through shared patterns and components.',
+            id: 'process-research',
+            subtitle: 'Starting with the organisation, not the components',
+            body: 'Before designing anything, I mapped existing sites, revisted feedback provided by external vendors, and conducted staff interviews to understand where teams were actually struggling. The problem was not just visual inconsistency, it was duplicated effort, unclear handoff, and accessibility issues being repeated across new builds because there was no shared reference point. That research shaped everything that followed. Components were workshopped and agreed collaboratively rather than handed down or decided by one person, which meant teams felt ownership over the system from the start.',
           },
           {
-            id: 'process-pressure',
-            subtitle: 'Designing under pressure',
-            body: 'The main risk was treating the design system as a post-crisis clean-up task. Without shared standards, teams would have continued duplicating effort and repeating the same accessibility issues across new sites. Instead of aiming for a perfect system, I prioritised pragmatic, easy-to-adopt patterns. This approach allowed teams to move quickly while improving accessibility and consistency in a high-stakes government environment.',
+            id: 'process-building',
+            subtitle: 'Building for adoption, not perfection',
+            body: 'I designed the design system website from scratch and established the component library and documentation in parallel. The priority was pragmatic, easy-to-adopt patterns — not a fully polished system that would take months to ship. Accessibility was embedded from the foundation up, aligned with mandatory WCAG standards, rather than added at the end. The system needed to work across 100+ sites with different brand styles and external vendors, so flexibility within structure was the core design challenge throughout.',
           },
         ]}
         images={[
@@ -153,6 +135,35 @@ export default function MOEDesignSystem() {
         ]}
       />
 
+      <AchievementsSection
+        title="Constraints & Trade-offs"
+        achievements={[
+          {
+            id: 'constraint-engineers',
+            title: 'Engineers with conflicting implementation philosophies',
+            description:
+              'The engineering team had different views on how components should be built and structured. Getting alignment required patience, compromise, and finding common ground between design intent and technical preference — without diluting the system in the process.',
+          },
+          {
+            id: 'constraint-vendors',
+            title: 'Aligning external vendors to shared standards',
+            description:
+              'With 100+ sites involving multiple external vendors at different stages and projects, each had their own tools, brand interpretations, and ways of working. Mandatory accessibility legislation and brand regulations provided the clearest framework for alignment where general guidance was not enough. A selected works section also allowed for guided inspiration sites, rather than them finding outdated platforms on their own.',
+          },
+          {
+            id: 'constraint-adoption',
+            title: 'Designing for adoption across a sprawling organisation',
+            description:
+              'A system that teams could not pick up quickly would not get used. Pragmatic, easy-to-adopt patterns were prioritised over a perfect system — because the biggest risk was not imperfection, it was irrelevance.',
+          },
+          {
+            id: 'constraint-scope',
+            title: 'Scope that kept growing',
+            description:
+              'The system started as a response to one crisis site and grew to cover 50+ platforms. Keeping the system flexible enough to accommodate different brand styles while structured enough to create real consistency was a constant balancing act.',
+          },
+        ]}
+      />
       <section
         aria-labelledby={reflectionsId}
         className="relative z-0 flex min-h-[90vh] w-full items-center overflow-hidden bg-[#08003B] text-white"
@@ -180,57 +191,38 @@ export default function MOEDesignSystem() {
             </h2>
 
             <div className="mt-8 space-y-6 text-slate-300">
-              <p>
-                This project reinforced how critical shared standards are in
-                high-pressure environments. When speed is prioritised without
-                structure, accessibility and consistency are often the first
-                things to suffer.
-              </p>
-              <p>
-                Leading this work after a national emergency response taught me
-                to design for adoption rather than perfection. Creating clear,
-                usable patterns that teams could pick up quickly proved more
-                valuable than aiming for a fully polished system.
-              </p>
-              <p>
-                The design system continues to be used across more than 50
-                platforms after my departure, and it shaped how I now approach
-                design systems in complex, multi-team organisations.
-              </p>
+              <div className="mt-8 space-y-6 text-slate-300">
+                <p>
+                  This was the project that taught me the difference between
+                  designing a system and designing for adoption. In a large
+                  organisation under pressure, a beautiful system nobody uses is
+                  worthless. The patterns had to be clear enough to pick up
+                  without a workshop, flexible enough to work across different
+                  brands, and grounded enough in accessibility law to survive
+                  stakeholder pushback.
+                </p>
+                <p>
+                  Working in a government context also changed how I think about
+                  accessibility. It stopped being a compliance checklist and
+                  became the strongest design argument in the room. When the law
+                  requires it, the conversation shifts from "should we" to "how
+                  do we" — and that is a much more productive place to work
+                  from.
+                </p>
+                <p>
+                  The system is still used across 100+ platforms after my
+                  departure. That is the metric I am most proud of. Not the
+                  components, not the documentation — the fact that teams kept
+                  using it without me there to advocate for it. It survived a
+                  rebrand, the launch of new services, and the retirement of
+                  others. That is what a design system that was built for
+                  adoption looks like.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
-      <AchievementsSection
-        title="Key Achievements"
-        achievements={[
-          {
-            id: 'first-design-system',
-            title: "Built the Organisation's First Design System",
-            description:
-              'Led research, workshops, and implementation to create a shared system, securing adoption across teams.',
-          },
-          {
-            id: 'accessibility-standards',
-            title: 'Ensured Application of Accessibility Standards',
-            description:
-              'Embedded WCAG compliance into the system, ensuring consistent application and more inclusive services.',
-          },
-          {
-            id: 'collaboration',
-            title: 'Improved Collaboration',
-            description:
-              'Streamlined workflows between designers and engineers, making handoff smoother and faster.',
-          },
-          {
-            id: 'standards-scale',
-            title: 'Set Standards Across 50+ Products',
-            description:
-              "Brought consistency and scalability to dozens of websites, shaping the organisation's long-term digital strategy.",
-          },
-        ]}
-      />
     </>
   )
 }

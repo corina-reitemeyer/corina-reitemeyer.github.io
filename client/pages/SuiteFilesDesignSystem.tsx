@@ -11,14 +11,14 @@ export default function SuiteFilesDesignSystem() {
   return (
     <>
       <CaseStudyNavy
-        intro="Evolving a design system through rebrand and rapid growth."
+        intro="The brand was still being defined, but the product wasn't waiting."
         company="SuiteFiles"
         project="Design System"
         imageSrc="/images/product/suitefiles-design-system-hero.webp"
         imageAlt="SuiteFiles design system hero"
-        scope="The design system had been started earlier by a previous design lead. When a major rebrand began and the product started growing quickly, it became clear the system needed to evolve. Components no longer fully reflected the new brand, and the system wasn't keeping pace with active product development. I took ownership of the next phase of the design system. I updated it to align with the new brand, expanded the component library to support current product needs, and ensured it could scale as the product continued to grow. In parallel, I worked closely with developers to build and refine the system in code, keeping design and engineering aligned. The result was a more flexible and reliable design system that maintained brand consistency while enabling teams to move faster without compromising quality."
-        involvement="Senior Product Designer - Led the evolution of the design system, integrating the new brand and collaborating closely across design and engineering."
-        team="Worked with product designers, frontend engineers, and product stakeholders to evolve the design system alongside active feature development."
+        scope="A design system existed when I joined, started by a previous design lead and functional enough for where the product was at the time. But the product wasn't staying still. A major rebrand was underway, the team was growing, and features were shipping faster than the system could keep up with. The challenge was that the brand guidelines were being developed alongside the redesign and there was no finished bible to implement from. I had to stress-test the brand inside real product context, flag where it wasn't working, and feed that back to the brand consultant who was still shaping it. Building the system and defining the brand inside the product were happening simultaneously. My approach throughout was simple: don't try to complete the system upfront. Let real design needs surface what's required, build what's proven itself, and keep documenting. A system that grows with the product is more useful than a perfect one nobody's waiting for."
+        involvement="Senior Product Designer — took ownership of the design system evolution, stress-tested the brand in product, and partnered closely with engineering to keep design and code in sync."
+        team="Worked within a cross-functional team of frontend engineers and product stakeholders. Collaborated closely with the brand consultant who was developing the visual identity in parallel, feeding back where guidelines needed refinement based on real product application. Developer involvement shifted over time as the team grew and priorities changed, which shaped how the system needed to be documented and communicated to stay useful across different working styles."
         meta={{
           date: '2025',
           type: 'Design System',
@@ -56,52 +56,52 @@ export default function SuiteFilesDesignSystem() {
       />
 
       <KeyOutcomes
-        title="Product Impact"
+        title="Product Outcomes"
         outcomes={[
           {
             id: 'brand-consistency',
             iconSrc: '/icons/color-bucket.svg',
             iconAlt: 'Colour bucket',
             iconEmoji: '🎨',
-            title: 'Brand Consistency',
+            title: 'Brand Applied Consistently',
             description:
-              'Rolled out the new brand across products through the design system.',
+              'The rebrand rolled out through the system rather than component by component, ensuring visual consistency without requiring every designer to interpret the guidelines independently.',
           },
           {
             id: 'faster-delivery',
             iconSrc: '/icons/Bolt.svg',
             iconAlt: 'Bolt',
             iconEmoji: '⚡',
-            title: 'Faster Product Delivery',
+            title: 'Teams Kept Shipping',
             description:
-              'Reusable components helped teams ship features more quickly.',
+              'By evolving the system iteratively rather than rebuilding from scratch, product development never stopped. The system grew alongside delivery, not ahead of it.',
           },
           {
             id: 'quality-trust',
             iconSrc: '/icons/check.svg',
             iconAlt: 'Check',
             iconEmoji: '✅',
-            title: 'Improved Quality and Trust',
+            title: 'Reduced Design Drift',
             description:
-              'Consistent patterns reduced design drift and built user confidence.',
+              'Consistent patterns and documented components meant less interpretation, fewer inconsistencies, and a more cohesive product experience as the team scaled.',
           },
           {
             id: 'design-dev-alignment',
             iconSrc: '/icons/handshake.svg',
             iconAlt: 'Handshake',
             iconEmoji: '🤝',
-            title: 'Stronger Design–Dev Alignment',
+            title: 'Shared Design and Dev Language',
             description:
-              'Working in parallel with engineers reduced friction and kept design and code in sync.',
+              'Aligned component naming, behaviour, and documentation meant engineers could work from the system confidently, reducing back-and-forth and keeping design and code in sync.',
           },
           {
             id: 'scalable-foundation',
             iconSrc: '/icons/puzzle.svg',
             iconAlt: 'Puzzle',
             iconEmoji: '🛠️',
-            title: 'Scalable Foundation',
+            title: 'A Foundation Ready to Scale',
             description:
-              'Established a flexible system ready to support current and future products.',
+              'Foundational components were established first, giving every new pattern something solid to inherit from as the product and team continued to grow.',
           },
         ]}
       />
@@ -111,13 +111,13 @@ export default function SuiteFilesDesignSystem() {
         sections={[
           {
             id: 'process-brand-rollout',
-            subtitle: 'From Brand Rollout to Scalable Evolution',
-            body: 'I began by auditing the existing system to understand where it was helping us as a team and where it was starting to break down because the product evolved beyond the original foundations. I prioritised the most critical components first, balancing immediate product needs with the longer-term goal of scalability. To integrate the new brand, I updated components and guidelines so the identity applied consistently across different contexts. At the same time, I evolved the system to support future products by establishing patterns that could scale across the wider portfolio. In parallel, I worked closely with engineers to expand the coded library. We aligned component names, behaviours, and documentation so design and development stayed in sync. By taking an iterative approach, teams could continue shipping features while the system steadily matured into a stable, brand-aligned foundation.',
+            subtitle: 'From moving target to scalable foundation',
+            body: 'I started with an audit. Not to plan a full rebuild, but to understand where the system was already breaking down under the weight of a faster-moving product. The harder problem was that the brand guidelines were still being developed alongside the redesign. Rather than wait, I tested the brand directly in product context, worked closely with the brand designer to flag where the identity was not holding up, and kept a running record of areas that needed revisiting as the guidelines matured. One of the frontend engineers and I jumped on a call and mapped out how changes could be introduced through updated semantics and tokens in Figma, and how newly created and updated components could be rolled out on an ongoing basis. I started with foundational components first — buttons, toggles, checkboxes — then used those brand-aligned foundations to evolve more complex patterns and introduce new elements. Building from the ground up meant every new component had something solid to inherit from.',
           },
           {
-            id: 'process-tradeoffs',
-            subtitle: 'Tradeoffs and constraints',
-            body: 'The biggest risk was trying to perfect the system upfront. A clean-slate rebuild would have slowed product delivery and reduced trust at a time when teams needed momentum. Instead, I focused on adoption and continuity, evolving the system in place and allowing real product needs to guide its growth over time.',
+            id: 'process-philosophy',
+            subtitle: 'Let the product lead the system',
+            body: "The guiding principle throughout: don't try to finish the system before the product needs it. Let real design work surface what's required, build what's proven itself, and keep documenting. A system that grows with the product is more useful than a perfect one nobody is waiting for.",
           },
         ]}
         images={[
@@ -131,6 +131,35 @@ export default function SuiteFilesDesignSystem() {
         ]}
       />
 
+      <AchievementsSection
+        title="Constraints & Trade-offs"
+        achievements={[
+          {
+            id: 'constraint-moving-brand',
+            title: "Building from a brand that wasn't finished yet",
+            description:
+              'The brand guidelines were being developed alongside the redesign, not before it. There was no finished reference to implement from, which meant testing the identity in real product context and feeding gaps back to the brand designer while simultaneously building the system.',
+          },
+          {
+            id: 'constraint-tailwind',
+            title: 'The system had to live inside Tailwind',
+            description:
+              'Working within an existing Tailwind library meant some design decisions had to bend to technical feasibility. Achieving alignment on component naming, behaviour, and documentation became as critical as the visual consistency itself.',
+          },
+          {
+            id: 'constraint-developer-silos',
+            title: 'Developer buy-in shifted over time',
+            description:
+              'Early developer collaboration on implementation was strong. As the team grew and time pressure increased, that alignment broke down and silos formed. The system had to be documented well enough to work without a conversation in real time.',
+          },
+          {
+            id: 'constraint-pace',
+            title: 'The product always moved faster than the system',
+            description:
+              'By the time there was space to update anything, there were already eight new components waiting. Trying to keep pace meant accepting the system would never be complete and designing principles around that reality rather than fighting it.',
+          },
+        ]}
+      />
       <section
         aria-labelledby={reflectionsId}
         className="relative z-0 flex min-h-[90vh] w-full items-center overflow-hidden bg-[#08003B] text-white"
@@ -159,54 +188,35 @@ export default function SuiteFilesDesignSystem() {
 
             <div className="mt-8 space-y-6 text-slate-300">
               <p>
-                {
-                  'This project reinforced that design systems are living products, not static libraries. Trying to "finish" the system would have slowed teams down at the moment they needed speed most.'
-                }
+                This project was different from building a design system from
+                scratch. I inherited foundations someone else had established,
+                which meant understanding the reasoning behind existing
+                decisions before changing anything. Evolving a system
+                responsibly is a different challenge to starting fresh, you have
+                to bring the existing work forward, not replace it.
               </p>
               <p>
-                {
-                  'Working through a rebrand while the product was actively growing highlighted the value of evolving systems incrementally. Prioritising the most critical components first allowed the system to mature alongside real product work, rather than becoming a blocker to delivery.'
-                }
+                It reshaped how I think about system ownership. A system that
+                tries to be complete before the product needs it will always
+                lose. The more useful question is: what does the product need
+                right now, and what foundation does that require?
               </p>
               <p>
-                {
-                  'Partnering closely with engineers also reshaped how I think about design systems. Alignment on naming, behaviour, and documentation proved just as important as visual consistency. The system is now actively used and continues to evolve as the product scales.'
-                }
+                Working through a live rebrand also showed me that brand and
+                system work are not sequential — they inform each other. Some of
+                the best brand refinements came from stress-testing guidelines
+                in real product context, not from a style guide review.
+              </p>
+              <p>
+                Alignment with engineering on naming, behaviour, and
+                documentation turned out to matter as much as visual
+                consistency. The system only works if everyone can navigate it
+                without asking.
               </p>
             </div>
           </div>
         </div>
       </section>
-
-      <AchievementsSection
-        title="Key Achievements"
-        achievements={[
-          {
-            id: 'ds-evolution',
-            title: 'Led the Design System Evolution',
-            description:
-              'Took ownership of an early-stage system and grew it into a stable foundation that could scale across products.',
-          },
-          {
-            id: 'brand-integration',
-            title: 'Integrated the New Brand',
-            description:
-              'Adapted the updated identity into the design system, ensuring consistent visuals across the product.',
-          },
-          {
-            id: 'component-library',
-            title: 'Expanded the Component Library',
-            description:
-              'Designed and documented new components to keep pace with rapid product growth.',
-          },
-          {
-            id: 'design-eng-collab',
-            title: 'Improved Design–Engineering Collaboration',
-            description:
-              'Partnered with engineers to mature the system in code, keeping design and development in sync.',
-          },
-        ]}
-      />
     </>
   )
 }

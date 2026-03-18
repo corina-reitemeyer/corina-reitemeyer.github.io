@@ -1,28 +1,28 @@
 [
   {
     "id": 1,
-    "projectTitle": "AI Document Summariser",
+    "projectTitle": "Helping recipients understand what they're signing — with a little help from AI.",
     "slug": "suitefiles-ai-summary",
     "projectImage": "/images/portfolio/suitefiles-ai-summary-cover.webp",
     "company": "SuiteFiles"
   },
   {
     "id": 2,
-    "projectTitle": "Design System",
+    "projectTitle": "A live rebrand. A fast-moving product. One design system that had to keep up with both.",
     "slug": "suitefiles-design-system",
     "projectImage": "/images/product/suitefiles-design-system-hero.webp",
     "company": "SuiteFiles"
   },
   {
     "id": 3,
-    "projectTitle": "Design System",
+    "projectTitle": "Building the first design system for a government organisation — now used across 100+ platforms.",
     "slug": "moe-design-system",
     "projectImage": "/images/portfolio/moe-design-system-cover.webp",
     "company": "Ministry of Education"
   },
   {
     "id": 4,
-    "projectTitle": "Templates",
+    "projectTitle": "Helping researchers start studies faster, and discover methods they didn't know existed.",
     "slug": "ow-templates",
     "projectImage": "/images/portfolio/optimal-homepage-cover.webp",
     "company": "Optimal Workshop"

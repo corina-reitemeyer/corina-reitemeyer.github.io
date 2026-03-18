@@ -16,9 +16,9 @@ export default function SuiteFilesAISummary() {
         project="AI Summaries"
         imageSrc="/images/portfolio/suitefiles-ai-summary-cover.webp"
         imageAlt="SuiteFiles AI Summaries feature hero"
-        scope="The real challenge wasn't signing multiple documents. It was helping people understand them quickly. In a B2B document management platform used by accountants and financial professionals, recipients often struggled to grasp what they were being asked to sign. Senders filled the gaps by explaining context through emails or briefings, outside the product. I led the strategy and design to introduce AI in a way that supported understanding without removing responsibility. The outcome was an AI-powered summarisation feature that improved clarity at the point of signing, while keeping users in control. This work also set the foundation for how AI would be approached across the product going forward."
+        scope="The real challenge wasn't signing multiple documents. It was helping people understand them. In a B2B document management platform used by accountants and financial professionals, their recipients often struggled to grasp what they were being asked to sign. Senders filled the gap outside the product — through emails, calls, briefings. The product wasn't broken. It just wasn't helping enough at the moment that mattered most especially when signing request involved multiple lengthy documents. I led strategy and design for the company's first AI feature: a summarisation tool that improved clarity at the point of signing, without removing human responsibility from the process."
         involvement="Senior Product Designer - Led feature strategy and end-to-end UX/UI design for the company's first AI capability."
-        team="Worked within a cross-functional product team including product management, frontend and backend engineers, and internal stakeholders responsible for risk and rollout. I partnered closely with engineers to align on feasibility, model constraints, and what AI should and should not automate."
+        team="Worked within a cross-functional product team including product management, frontend and backend engineers, and internal stakeholders responsible for risk and rollout. I partnered closely with engineers to align on feasibility, model constraints, and what AI should and should not automate in the flow."
         meta={{
           date: '2025',
           type: 'SaaS Product (B2B)',
@@ -50,7 +50,7 @@ export default function SuiteFilesAISummary() {
       />
 
       <KeyOutcomes
-        title="Product Impact"
+        title="Product Outcomes"
         outcomes={[
           {
             id: 'faster-deals',
@@ -88,12 +88,12 @@ export default function SuiteFilesAISummary() {
           {
             id: 'process-principles',
             subtitle: 'From UX principles to responsible AI',
-            body: "I stepped back and looked at the problem as a system. The question wasn't how to add AI to signing, but how AI could reduce friction without undermining trust or control. To guide decisions, I defined three human–AI principles: transparency, editability, and user agency. Instead of treating AI as an add-on, I designed it as a supporting layer in the workflow. Automation was used where it helped, and human judgment stayed in the loop where it mattered. I worked closely with engineers to understand the model's capabilities and limits, which helped clarify what we could ship immediately and what needed more exploration. This collaboration kept the work grounded while still pushing the product forward. In a lean startup environment, I prioritised clarity over complexity. We shipped a first phase release that users could trust, and it became a reference point for how AI would be designed across the product.",
+            body: "I stepped back and looked at the problem as a system. The question wasn't how to add AI to signing, it was how AI could reduce friction without undermining trust or control. Recipients could be anyone: a retiree, a small business owner, someone signing on behalf of a family member. Designing for the wide range of digital literacy and legal understanding made responsible AI not a nice-to-have, but the only viable approach. To guide every decision, I defined three human-AI principles upfront: transparency, editability, and user agency. Rather than treating AI as an add-on, I designed it as a supporting layer in the workflow. Automation where it helped, human judgment where it mattered. I worked closely with engineers to understand the model's capabilities and limits, which shaped what we could ship immediately and what needed more exploration. We shipped a first phase that users could trust and it became the reference point for how AI would be designed across the product going forward.",
           },
           {
-            id: 'process-constraints',
-            subtitle: 'Designing for real constraints',
-            body: 'At launch, summary creation was limited to recipients due to time and technical constraints. This introduced a risk of uneven value: the effort of generating context sat with the person already reviewing and signing, while senders saw less immediate benefit from the feature. To address the more critical risk, I focused on how recipients interpret AI output. In a legal and financial workflow, summaries can easily be mistaken for authoritative. I added a clear, in-context disclaimer to signal that AI output should be treated as a starting point and reviewed with a critical eye. This reinforced accountability and reduced the risk of over-reliance at the point of signing. This approach made it possible to ship a responsible first version within constraints, while leaving room to expand capability later without undermining trust.',
+            id: 'process-future',
+            subtitle: 'What we saw coming next',
+            body: "Two things stayed with me after launch. The first was hallucination risk: AI summaries in a legal context carry a real risk of inaccurate or misleading output. The disclaimer aimed to address a possible over-reliance at v1 from the recipients end, but a more robust solution would require flagging low-confidence summaries or human review before delivery. The second was sender-generated summaries. Senders already know what's in the documents, and giving them the option to generate and review a summary on behalf of recipients would reduce hallucination risk, solve the uneven value problem from launch, and keep a human in the loop at the most critical point.",
           },
         ]}
         images={[
@@ -113,6 +113,29 @@ export default function SuiteFilesAISummary() {
         ]}
       />
 
+      <AchievementsSection
+        title="Constraints & Trade-offs"
+        achievements={[
+          {
+            id: 'no-research-safety-net',
+            title: 'Designed without a research safety net',
+            description:
+              'No formal user research existed to validate whether AI summaries would resonate or raise concerns with financial professionals. I defined three human-AI principles upfront — transparency, editability, and user agency — and used them as the decision-making framework throughout.',
+          },
+          {
+            id: 'lost-feature-to-feasibility',
+            title: 'Lost a key feature to feasibility',
+            description:
+              "A feedback mechanism for flagging inaccurate summaries was part of the original intent but wasn't feasible for the first release. That constraint pushed me toward the in-context disclaimer instead — a constraint that removed one solution and surfaced a better one.",
+          },
+          {
+            id: 'shipped-with-uneven-value',
+            title: 'Shipped with uneven value by design',
+            description:
+              'Summary generation was limited to recipients only at launch, meaning the person already under pressure to sign was also generating context. I acknowledged the risk, prioritised recipient interpretation in a high-stakes legal workflow, and designed for expansion later without compromising trust.',
+          },
+        ]}
+      />
       <section
         aria-labelledby={reflectionsId}
         className="relative z-0 flex min-h-[90vh] w-full items-center overflow-hidden bg-[#08003B] text-white"
@@ -159,30 +182,6 @@ export default function SuiteFilesAISummary() {
           </div>
         </div>
       </section>
-
-      <AchievementsSection
-        title="Key Achievements"
-        achievements={[
-          {
-            id: 'ai-principles',
-            title: 'Defined Human–AI Interaction Principles',
-            description:
-              'Set UX guardrails for using AI in high-risk signing workflows.',
-          },
-          {
-            id: 'first-ai-feature',
-            title: "Led the Company's First AI Feature",
-            description:
-              'Designed an AI summarisation feature that improved clarity across multi-document requests.',
-          },
-          {
-            id: 'ai-direction',
-            title: 'Shaped AI-First Product Direction',
-            description:
-              'Established a reusable model for how AI is integrated across the product.',
-          },
-        ]}
-      />
     </>
   )
 }

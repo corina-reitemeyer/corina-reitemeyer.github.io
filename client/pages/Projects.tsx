@@ -36,7 +36,16 @@ export default function Projects() {
           align="left"
           padded
           bgSvgSrc="/images/Impact-statement-bg.svg"
-          lines={['Crafting clear,', 'scalable digital experiences.']}
+          greeting="Hi, I'm Corina,"
+          lines={[
+            'Product Designer crafting accessible, scalable products',
+            'by combining systems thinking with technical craft.',
+          ]}
+          pills={[
+            { label: '8+ years experience' },
+            { label: 'B2B SaaS · Government · Education' },
+            { label: 'Melbourne', emoji: '🇦🇺', emojiLabel: 'Australia' },
+          ]}
         />
       </div>
 
@@ -66,7 +75,8 @@ export default function Projects() {
               >
                 <motion.img
                   src={project.projectImage}
-                  alt={project.projectTitle}
+                  alt=""
+                  aria-hidden="true"
                   className="h-full w-full object-cover"
                   custom={i}
                   variants={shouldReduceMotion ? undefined : cardVariants}
@@ -75,7 +85,6 @@ export default function Projects() {
                   viewport={sharedViewport}
                 />
 
-                {/* Decorative hover overlay */}
                 <span
                   aria-hidden="true"
                   className="pointer-events-none absolute inset-0 bg-[#08082a]/0 transition duration-300 group-hover:bg-[#08082a]/70"
@@ -83,15 +92,20 @@ export default function Projects() {
 
                 <span
                   aria-hidden="true"
-                  className="pointer-events-none absolute bottom-6 left-9 translate-y-3 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+                  className="pointer-events-none absolute bottom-6 left-6 right-6 z-10 translate-y-3 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100"
                 >
-                  <span className="block text-3xl font-semibold leading-tight text-white sm:text-2xl">
+                  <span className="mb-2 block text-[11px] font-semibold uppercase tracking-[0.2em] text-white/60">
                     {project.company ?? 'Company'}
                   </span>
-                  <span className="block text-3xl font-semibold text-white sm:text-2xl">
+                  <span className="block text-lg font-semibold leading-snug text-white sm:text-xl">
                     {project.projectTitle}
                   </span>
                 </span>
+
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 bg-[#08082a]/0 transition duration-300 group-focus-within:bg-[#08082a]/50 group-hover:bg-[#08082a]/50"
+                />
               </Link>
             )
           })}

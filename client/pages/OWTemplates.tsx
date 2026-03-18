@@ -11,14 +11,14 @@ export default function OWTemplates() {
   return (
     <>
       <CaseStudyNavy
-        intro="Making research easier with customisable templates."
+        intro="A feature built to speed up research setup. It ended up revealing how users actually thought about their work."
         company="Optimal Workshop"
         project="Templates"
         imageSrc="/images/product/optimal-case-study-hero.webp"
         imageAlt="Optimal Workshop templates feature hero"
-        scope="Setting up research studies was often slow and inconsistent. Teams spent too much time getting started, and insights sometimes arrived too late to influence decisions. At the same time, the product already supported a wide range of study types, including Information Architecture (IA) testing, but many users weren't aware these options existed or how to use them effectively. I designed the first version of the templates feature to address both problems. The goal was to make starting research easier while also surfacing the full range of methods the product supported. I created ready-made, customisable study setups that reduced setup time and helped researchers understand what was possible. The feature also encouraged teams to combine methods, moving beyond single-study approaches to generate stronger insights. The work was informed by user research and close collaboration with product owners and engineers, and evolved through iterative design to balance speed with flexibility. The result was a feature that helped researchers at all levels launch studies faster, explore methods with confidence, and produce richer insights. It also nudged the product toward a stronger and more intentional focus on IA."
-        involvement="Product Designer - Led the product design of the feature and collaborated closely with researchers to inform and validate the solution."
-        team="Worked with product managers, engineers, and UX researchers to design, test, and refine the templates feature."
+        scope="The product was experiencing churn. After completing a single study, users were dropping off: not because the product had failed them, but because they hadn't seen enough of its value to stay. The business wanted to find a way to keep researchers engaged for longer and demonstrate what the product could really do. The hypothesis the team had was simple: if users combined studies rather than running one in isolation, they'd get stronger insights and be more likely to stick around. The problem was that most users didn't know combination was possible, and setting up even a single study was slower than it needed to be. I designed the first version of the templates feature to address both problems — reducing setup friction and surfacing the breadth of what the product supported, including IA testing which had been underused despite being a core capability. What the feature became was slightly different to what it was designed to be. A details page — added based on observed collaboration patterns in usage data — turned the feature into an unexpected source of insight about how users thought about their research and whether they were choosing the right tools for the outcomes they wanted."
+        involvement="Product Designer — led the design of the templates feature from user testing, concept to delivery, collaborating closely with researchers, product managers, and engineers to validate and evolve the solution across two iterations."
+        team="Worked with product managers, engineers, and UX researchers across two phases. The feature originated from a PM and IA lead responding to a churn problem with a hypothesis — my role was to take that idea and design a solution that balanced business intent with real researcher needs. Post-launch, I worked closely with a researcher to observe how the first six templates were used in practice, turning that observation into direct input for the second iteration."
         meta={{
           date: '2023',
           type: 'Product Design, SaaS Product (B2B)',
@@ -52,52 +52,52 @@ export default function OWTemplates() {
       />
 
       <KeyOutcomes
-        title="Product Impact"
+        title="Product Outcomes"
         outcomes={[
           {
             id: 'faster-setup',
             iconSrc: '/icons/Bolt.svg',
             iconAlt: 'Bolt',
             iconEmoji: '⚡',
-            title: '20% faster setup',
+            title: 'Faster Study Setup',
             description:
-              'Pre-built, customisable templates cut setup time, letting researchers focus on insights instead of configuration.',
+              'Teams reported faster configuration after launch — estimated at around 10% reduction in setup time, letting researchers focus on insights rather than admin.',
           },
           {
             id: 'multi-study',
-            iconSrc: '/icons/increase.svg',
-            iconAlt: 'Increase',
-            iconEmoji: '📈',
-            title: 'More multi-study use',
+            iconSrc: '/icons/puzzle.svg',
+            iconAlt: 'Puzzle',
+            iconEmoji: '🔗',
+            title: 'More Teams Combining Methods',
             description:
-              'Teams combined methods more often, leading to deeper insights and stronger outcomes.',
+              'Researchers who had previously run single studies started combining methods, generating stronger and more connected insights from their work.',
           },
           {
-            id: 'lower-barrier',
-            iconSrc: '/icons/rocket.svg',
-            iconAlt: 'Rocket',
-            iconEmoji: '🚀',
-            title: 'Lower barrier to entry',
+            id: 'barrier-to-entry',
+            iconSrc: '/icons/check.svg',
+            iconAlt: 'Check',
+            iconEmoji: '✅',
+            title: 'Lower Barrier for New Researchers',
             description:
-              'Onboarding became easier for beginners while staying efficient for experts — reducing drop-off at a critical early stage.',
+              'Ready-made templates reduced the intimidation of getting started, making the product more accessible to researchers with less experience without slowing down experts.',
           },
           {
-            id: 'ia-focus',
+            id: 'ia-direction',
             iconSrc: '/icons/compass.svg',
             iconAlt: 'Compass',
             iconEmoji: '🧭',
-            title: 'First IA-focused feature',
+            title: 'Set the Direction for IA-Focused Features',
             description:
-              'Introduced the first IA-led templates, setting the direction for future product growth.',
+              'The first IA-led templates surfaced an underused but high-value capability, nudging the product toward a stronger and more intentional focus on information architecture.',
           },
           {
             id: 'retention',
-            iconSrc: '/icons/cycle.svg',
-            iconAlt: 'Cycle',
-            iconEmoji: '🔁',
-            title: 'Retention lift',
+            iconSrc: '/icons/increase.svg',
+            iconAlt: 'Increase Graph',
+            iconEmoji: '📈',
+            title: 'Contributed to Retention Improvement',
             description:
-              'After launch, more customers stayed with the product — boosting long-term value and easing pressure on new sales.',
+              'Retention improved in the period following launch, suggesting the feature helped users find enough value to stay beyond their first study.',
           },
         ]}
       />
@@ -107,13 +107,18 @@ export default function OWTemplates() {
         sections={[
           {
             id: 'process-experiment',
-            subtitle: 'From experiment to scalable feature',
-            body: "I started by asking a simple question: what if setting up research could be faster and easier? Drawing on insights from ongoing projects, I designed the first version of multi-study research templates to address the most common setup challenges. Because this was the first project under a new product strategy, I treated it deliberately as an experiment. The focus was on proving user value first, with a design that could grow over time while keeping initial engineering effort low. After launch, I worked closely with a researcher to observe how the first six templates were used in real workflows. We saw clear positives, such as teams using templates for inspiration and experimenting with new combinations of methods. We also identified gaps, including missing content and limited functionality. These insights directly informed improvements to both the templates themselves and the surrounding features in the next release. This iterative, evidence-led approach helped turn templates into a repeatable feature that reduced setup time and aligned with the product's broader direction.",
+            subtitle: 'Treating v1 as an experiment, not a finished product',
+            body: 'Because this was the first project under a new product strategy, I treated it deliberately as a low-risk experiment. The priority was proving user value with minimal engineering investment — not shipping a complete feature. I designed six ready-made in collaboration with the brand designer and IA specialist, customisable templates that surfaced the range of study types the product supported, including IA testing, and made combining methods feel approachable rather than overwhelming. The focus was on getting something real in front of users quickly so we could learn from actual behaviour rather than assumptions.',
           },
           {
-            id: 'process-balance',
-            subtitle: 'Balancing guidance without rigidity',
-            body: 'The main risk was either over-prescribing or under-prescribing research workflows. Templates that were too rigid would frustrate experienced researchers, while too much flexibility would fail to reduce setup friction for those with less confidence. I focused on creating adaptable starting points that provided enough structure to help people get moving, without locking them into a single way of working. This approach supported researchers with different levels of experience and allowed the team to learn how templates were actually used, informing where deeper customisation would add the most value in the next iteration. The trade-off was launching a lightweight first version. In hindsight, this left complete beginners with less guidance than they needed. However, those gaps proved valuable. Treating the initial release as a soft experiment helped reveal where users struggled and how templates fit into day-to-day workflows, directly shaping the next iteration of the feature.',
+            id: 'process-details-page',
+            subtitle: 'One page added on instinct',
+            body: 'The product was not deeply designed for collaboration at the time. Context, decisions, and changes often got lost unless teams had a separate system in place to track them. I noticed this gap in usage patterns and added a details page that let users document the purpose of their study directly inside the product. It was not in the original brief. The data it generated gave the team a window into how users thought about their research — what they were trying to learn, whether they were choosing the right tools for their goals, and what types of templates were missing from the product. That information fed directly into leadership conversations about product direction.',
+          },
+          {
+            id: 'process-iteration',
+            subtitle: 'What we learned from watching real use',
+            body: 'Post-launch, I worked closely with a researcher to observe how the first six templates were used in real workflows. Teams were using templates for inspiration and experimenting with method combinations — which validated the core hypothesis. But gaps were also clear. Complete beginners had less guidance than they needed, and some functionality was missing. Those observations shaped the second iteration directly. The feature evolved from a setup shortcut into something that actively taught researchers what better research could look like.',
           },
         ]}
         images={[
@@ -137,6 +142,37 @@ export default function OWTemplates() {
             alt: 'Two laptops showing the create study modal and details tab',
             caption:
               'First release included six templates, designed with scalability in mind.',
+          },
+        ]}
+      />
+
+      <AchievementsSection
+        title="Constraints & Trade-offs"
+        achievements={[
+          {
+            id: 'constraint-churn',
+            title:
+              'Designing against a churn problem without a proven solution',
+            description:
+              'The hypothesis — that combining studies would keep users engaged for longer — was unproven at the start. There was no guarantee templates would change behaviour. The design had to make the value of combining methods feel obvious without being prescriptive about how researchers should work.',
+          },
+          {
+            id: 'constraint-rigid-vs-flexible',
+            title: 'Balancing guidance with flexibility',
+            description:
+              'Templates that were too rigid would frustrate experienced researchers. Too much flexibility would fail to reduce friction for those with less confidence. The solution had to work as a starting point for beginners and a time-saver for experts before customisation options could be added — without compromising either.',
+          },
+          {
+            id: 'constraint-beginners',
+            title: 'V1 underserved complete beginners',
+            description:
+              'The first release prioritised proving value quickly over comprehensive guidance. After testing the feature with customers, users with the least research experience had less support than they needed. That gap was only visible after a soft launch — and became one of the clearest inputs into the second iteration.',
+          },
+          {
+            id: 'constraint-collaboration',
+            title: 'Context and decisions were getting lost',
+            description:
+              'The product was not deeply designed for collaboration. Without a way to document study purpose and intent inside the tool, teams were losing context between sessions. The details page addressed this gap — but it was not in the original brief and required making the case for its inclusion.',
           },
         ]}
       />
@@ -168,50 +204,42 @@ export default function OWTemplates() {
             </h2>
 
             <div className="mt-8 space-y-6 text-slate-300">
-              <p>
-                {
-                  "This project reinforced that good research tools don't just enable methods, they help people learn how to use them well. Making teams faster wasn't only about pre-filled setups. It required surfacing possibilities and guiding better decisions without being prescriptive."
-                }
-              </p>
-              <p>
-                {
-                  'Designing the templates feature sharpened how I think about scaffolding in product design. Providing just enough structure helped build confidence, while still leaving room for expertise and experimentation. It also highlighted how product features can gently shift behaviour, in this case encouraging more connected research practices instead of relying on single methods.'
-                }
-              </p>
+              <div className="mt-8 space-y-6 text-slate-300">
+                <p>
+                  This project sharpened how I think about scaffolding in
+                  product design. Providing just enough structure builds
+                  confidence without removing agency. Too much guidance and
+                  experienced users feel constrained. Too little and beginners
+                  are lost before they start. Getting that balance right
+                  required watching real people use the feature after launch,
+                  not just testing assumptions before it shipped.
+                </p>
+                <p>
+                  The details page was the biggest personal lesson. Adding it
+                  was an instinct based on something I noticed in usage patterns
+                  — not a brief, not a research finding, not a stakeholder
+                  request. It helped that the team had an experimental mindset
+                  culture where trying things and learning from them was
+                  genuinely encouraged. That environment gave me the room to act
+                  on the instinct. It ended up being one of the most valuable
+                  parts of the feature from a product intelligence perspective —
+                  and reinforced that paying close attention to how people
+                  actually use a product, and acting on what you notice, is a
+                  design skill in itself.
+                </p>
+                <p>
+                  It also showed me how a single feature can shift behaviour
+                  quietly. Teams started combining methods who never had before.
+                  Researchers who came in for speed stayed because they
+                  discovered new possibilities. That is what good product design
+                  can do when it is built around real workflow needs rather than
+                  just feature requirements.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
-      <AchievementsSection
-        title="Key Achievements"
-        achievements={[
-          {
-            id: 'templates-strategy',
-            title: 'Shaped the Templates Strategy',
-            description:
-              'Defined how ready-made templates could streamline research setup, guiding the feature from concept to delivery.',
-          },
-          {
-            id: 'efficiency',
-            title: 'Improved Efficiency and Confidence',
-            description:
-              'Helped teams set up studies faster and uncover richer insights by reducing setup time and making methods easier to find.',
-          },
-          {
-            id: 'product-strategy',
-            title: 'Aligned with Product Strategy Shift',
-            description:
-              "Made templates a key part of the company's new focus on Information Architecture.",
-          },
-          {
-            id: 'multi-study-feature',
-            title: 'Designed the First Multi-Study Templates Feature',
-            description:
-              'Created pre-built, customisable study combinations that made setup intuitive while surfacing a broader range of methods.',
-          },
-        ]}
-      />
     </>
   )
 }

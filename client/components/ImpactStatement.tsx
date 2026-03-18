@@ -33,7 +33,7 @@ export default function ImpactStatement({
   const alignClasses = isCenter
     ? 'text-center items-center'
     : 'text-left items-start'
-  const padY = padded ? 'py-24 md:py-32' : ''
+  const padY = padded ? 'py-8 md:py-16' : ''
 
   return (
     <section

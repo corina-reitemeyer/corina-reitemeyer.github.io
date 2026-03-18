@@ -16,7 +16,7 @@ export default function SuiteFilesDesignSystem() {
         project="Design System"
         imageSrc="/images/product/suitefiles-design-system-hero.webp"
         imageAlt="SuiteFiles design system hero"
-        overview="SuiteFiles is a document management and e-signing platform built for accounting professionals. When I joined, a design system existed - started by a previous design lead and functional enough for where the product was at the time. But the product wasn't staying still. A major rebrand was underway, the team was changing and growing, and features were shipping faster than the system could keep up with."
+        overview="SuiteFiles is a document management and e-signing platform built for accounting professionals. When I joined, a design system existed, started by a previous design lead and functional enough for where the product was at the time. But the product wasn't staying still. A major rebrand was underway, the team was changing and growing, and features were shipping faster than the system could keep up with."
         involvement="Inherited, evolved, and scaled the design system, stress-tested the brand in product, and partnered closely with engineering to keep design and code in sync."
         meta={[
           { label: 'Domain', value: 'SaaS (B2B)' },
@@ -109,31 +109,33 @@ export default function SuiteFilesDesignSystem() {
             id: 'approach-audit',
             heading: 'Starting with an audit, not a rebuild',
             body: [
-              'My first move was to map what existed — not to plan a full rebuild, but to understand where the inherited system was breaking down and why. That meant reading the decisions made before I arrived, not overwriting them.',
-              'Foundational components first — buttons, toggles, checkboxes — because everything else inherits from them. Getting those right under the new brand meant every more complex pattern that followed had something solid to build on.',
+              'My first move was to map what existed, not to plan a full rebuild, but to understand where the inherited system was breaking down and why. That meant reading the decisions made before I arrived, not overwriting them.',
+              'Foundational components first (buttons, toggles, checkboxes) because everything else inherits from them. Getting those right under the new brand meant every more complex pattern that followed had something solid to build on.',
             ],
           },
           {
             id: 'approach-brand',
             heading: 'Stress-testing the brand in product',
             body: [
-              "Because the brand guidelines weren't finished, I treated the product as a testing ground — validating whether brand decisions held up in a real interface, not just a style guide.",
-              "I kept a running record of gaps and fed those back to the brand consultant. That loop went both ways — some brand decisions came back stronger because they'd been tested in product first. And when the brand wasn't applied as intended, revisions had to be made quickly to keep the system and product aligned.",
+              "Because the brand guidelines weren't finished, I treated the product as a testing ground, validating whether brand decisions held up in a real interface, not just a style guide.",
+              "I kept a running record of gaps and fed those back to the brand consultant. That loop went both ways: some brand decisions came back stronger because they'd been tested in product first. And when the brand wasn't applied as intended, revisions had to be made quickly to keep the system and product aligned.",
             ],
-            image: {
-              id: 'sfds-brand-application',
-              src: '/images/process/sfds-brand-application.webp',
-              alt: 'Before and after of the signing wizard after the design system rebrand update',
-              caption:
-                'Before and after — the signing wizard before and after the design system rebrand update.',
-            },
+            images: [
+              {
+                id: 'sfds-brand-application',
+                src: '/images/process/sfds-brand-application.webp',
+                alt: 'Before and after of the signing wizard after the design system rebrand update',
+                caption:
+                  'Before and after — the signing wizard before and after the design system rebrand update.',
+              },
+            ],
           },
           {
             id: 'approach-engineering',
             heading: 'Keeping design and engineering in sync',
             body: [
               'Early on, one of the frontend engineers and I mapped out how changes would be introduced — through updated tokens and semantics in Figma, rolling out new and updated components on an ongoing basis.',
-              'As the team grew and priorities shifted, direct collaboration became harder. The documentation had to fill the gap — specific enough that engineers could implement confidently without needing intent explained every time.',
+              'As the team grew and priorities shifted, direct collaboration became harder. The documentation had to fill the gap, specific enough that engineers could implement confidently without needing intent explained every time.',
             ],
           },
           {
@@ -163,7 +165,7 @@ export default function SuiteFilesDesignSystem() {
             id: 'constraint-solo',
             title: 'One designer, two jobs',
             description:
-              'System work had to happen alongside feature delivery — not instead of it. Some components got documented thoroughly. Others got shipped and documented later.',
+              'System work had to happen alongside feature delivery, not instead of it. Some components got documented thoroughly. Others got shipped and documented later.',
           },
           {
             id: 'constraint-tailwind',
@@ -181,7 +183,7 @@ export default function SuiteFilesDesignSystem() {
             id: 'constraint-pace',
             title: 'The product always moved faster than the system',
             description:
-              'By the time there was space to update anything, there were already new components waiting. Accepting that the system would never be complete — and designing around that reality — was the only viable approach.',
+              'By the time there was space to update anything, there were already new components waiting. Accepting that the system would never be complete and designing around that reality, was the only viable approach.',
           },
         ]}
       />
@@ -232,8 +234,8 @@ export default function SuiteFilesDesignSystem() {
       {/* 7. Takeaways */}
       <Takeaways
         paragraphs={[
-          "Inheriting a system mid-rebrand taught me that evolving someone else's work responsibly takes longer than starting fresh — but produces better outcomes. You have to understand why things are the way they are before you change them.",
-          'Brand and system work are not sequential — they inform each other. Some of the best brand refinements in this project came from stress-testing guidelines in product, not from a style guide review.',
+          "Inheriting a system mid-rebrand taught me that evolving someone else's work responsibly takes longer than starting fresh, but produces better outcomes. You have to understand why things are the way they are before you change them.",
+          'Brand and system work are not sequential they inform each other. Some of the best brand refinements in this project came from stress-testing guidelines in product, not from a style guide review.',
           "Being the sole designer on a system changes how you write documentation. You stop writing for yourself and start writing for someone you haven't met yet.",
         ]}
       />

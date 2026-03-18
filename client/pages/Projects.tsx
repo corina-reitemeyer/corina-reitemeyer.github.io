@@ -44,7 +44,11 @@ export default function Projects() {
           pills={[
             { label: '8+ years experience' },
             { label: 'B2B SaaS · Government · Education' },
-            { label: 'Melbourne', emoji: '🇦🇺', emojiLabel: 'Australia' },
+            {
+              label: 'Based in Melbourne',
+              emoji: '🇦🇺',
+              emojiLabel: 'Australia',
+            },
           ]}
         />
       </div>

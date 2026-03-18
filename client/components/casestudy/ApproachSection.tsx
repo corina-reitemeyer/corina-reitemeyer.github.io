@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import Lightbox from '../../components/casestudy/LightBox'
+import Lightbox from '../casestudy/LightBox'
 
 type ApproachImage = {
   id: string
@@ -12,7 +12,7 @@ type ApproachItem = {
   id: string
   heading: string
   body: string[]
-  image?: ApproachImage
+  images?: ApproachImage[]
 }
 
 type ApproachSectionProps = {
@@ -53,30 +53,37 @@ export default function ApproachSection({ items }: ApproachSectionProps) {
                   ))}
                 </div>
 
-                {item.image && (
-                  <figure className="relative left-1/2 mt-8 w-screen max-w-6xl -translate-x-1/2 px-6 lg:px-0">
-                    <button
-                      ref={triggerRef as React.RefObject<HTMLButtonElement>}
-                      type="button"
-                      onClick={() => {
-                        setLightboxSrc(item.image!.src)
-                        setLightboxAlt(item.image!.alt)
-                      }}
-                      className="w-full cursor-zoom-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-                      aria-label={`View larger: ${item.image.alt}`}
-                    >
-                      <img
-                        src={item.image.src}
-                        alt={item.image.alt}
-                        className="w-full rounded-xl object-cover transition duration-200 hover:opacity-90"
-                      />
-                    </button>
-                    {item.image.caption && (
-                      <figcaption className="mt-3 text-sm text-slate-400 antialiased">
-                        {item.image.caption}
-                      </figcaption>
-                    )}
-                  </figure>
+                {item.images && item.images.length > 0 && (
+                  <div className="mt-8 space-y-6">
+                    {item.images.map((image) => (
+                      <figure
+                        key={image.id}
+                        className="relative left-1/2 w-screen max-w-6xl -translate-x-1/2 px-6 lg:px-0"
+                      >
+                        <button
+                          ref={triggerRef as React.RefObject<HTMLButtonElement>}
+                          type="button"
+                          onClick={() => {
+                            setLightboxSrc(image.src)
+                            setLightboxAlt(image.alt)
+                          }}
+                          className="w-full cursor-zoom-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                          aria-label={`View larger: ${image.alt}`}
+                        >
+                          <img
+                            src={image.src}
+                            alt={image.alt}
+                            className="w-full rounded-xl object-cover transition duration-200 hover:opacity-90"
+                          />
+                        </button>
+                        {image.caption && (
+                          <figcaption className="mt-3 text-sm text-slate-400 antialiased">
+                            {image.caption}
+                          </figcaption>
+                        )}
+                      </figure>
+                    ))}
+                  </div>
                 )}
               </div>
             ))}

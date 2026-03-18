@@ -176,7 +176,7 @@ export default function CaseStudyNavy({
           <div className="md:col-span-8">
             <dl className="space-y-8">
               <DetailItem term="Overview" description={overview} />
-              <DetailItem term="Role / Involvement" description={involvement} />
+              <DetailItem term="Involvement" description={involvement} />
             </dl>
           </div>
         </div>

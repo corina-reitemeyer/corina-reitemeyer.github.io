@@ -16,7 +16,7 @@ export default function SuiteFilesAISummary() {
         project="AI Summaries"
         imageSrc="/images/portfolio/suitefiles-ai-summary-cover.webp"
         imageAlt="SuiteFiles AI Summaries feature hero"
-        overview="SuiteFiles is a B2B document management and e-signing platform built for accounting professionals. When I joined the team, the entire product was in the midst of a platform migration and redesign project, starting with the e-signing platform. Alongside improvements highlighted by user research and modernisation of UX patterns, the company was beginning to explore AI as a strategic direction."
+        overview="SuiteFiles is a document management and e-signing platform built for accounting professionals. When I joined the team, the entire product was in the midst of a platform migration and redesign project, starting with the e-signing platform. Alongside improvements highlighted by user research and modernisation of UX patterns, the company was beginning to explore AI as a strategic direction."
         involvement="Led feature strategy and end-to-end UX/UI design for the company's first AI capability."
         meta={[
           { label: 'Domain', value: 'SaaS (B2B)' },

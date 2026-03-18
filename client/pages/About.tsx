@@ -4,6 +4,7 @@ import type AboutData from '../../models/aboutdata'
 import { motion, useReducedMotion, type Variants } from 'framer-motion'
 import AboutIntro from '../components/AboutIntro'
 import ExperienceSection from '../components/Experience'
+import NonDesignPassions from '../components/NonDesignPassions'
 
 const left = [
   {
@@ -83,10 +84,9 @@ export default function About() {
         imageAlt="Corina Reitemeyer, Melbourne-based Senior Product Designer"
         title="Guten Tag. Kia Ora. Hello!"
         paragraphs={[
-          "Hi, I'm Corina, a Melbourne-based Senior Product Designer specialising in design systems, scalable UX, and accessible digital products.",
-          "Growing up between Germany and New Zealand gave me a structured but practical way of thinking, which shows up a lot in how I work. I do my best work in delivery. I like taking complex or messy platforms and making them clearer, whether that's rebuilding a design system, reworking a key journey, or helping a team ship more consistently.",
-          "I have 8+ years across government, education, and B2B SaaS, including products with AI-enabled features. I'm known for being reliable, thorough, and easy to work with.",
-          "Fun Fact: I'm a former Cuban Salsa instructor who taught for 4 years in New Zealand and still dance for the fun and community aspect!",
+          'Senior Product Designer based in Melbourne 🇦🇺 — originally from Germany and New Zealand, which gave me a structured but practical way of thinking.',
+          "I do my best work in delivery, specialising in accessibility and bringing systems thinking with a technical lens. Give me a complex, messy platform and I'll make it clearer, more consistent, and easier to ship with.",
+          '8+ years across government, education, and B2B SaaS. Former Cuban Salsa instructor. Still dancing for the love of it!',
         ]}
         accoladeText="Best Awards, 2018"
         accoladeHref="https://bestawards.co.nz/digital/student-digital/massey-university-college-of-creative-arts/infinite/"
@@ -130,6 +130,56 @@ export default function About() {
           </ul>
         </div>
       </section>
+      <NonDesignPassions
+        passions={[
+          {
+            id: 'coffee',
+            iconSrc: '/icons/hobby-icons/coffee.svg',
+            iconAlt: '',
+            title: 'Exploring cafés',
+            description: 'Usually a classic flatwhite or iced matcha.',
+          },
+          {
+            id: 'pilates',
+            iconSrc: '/icons/hobby-icons/fitness.svg',
+            iconAlt: '',
+            title: 'Sweet and steady @ Pilates',
+            description: 'Reformer for 3 years. Lagree is next (hopefully!).',
+          },
+          {
+            id: 'dancing',
+            iconSrc: '/icons/hobby-icons/dance.svg',
+            iconAlt: '',
+            title: 'Salsa',
+            description:
+              'Salsa instructor for the past 4 years in NZ, now dancing when I feel like it.',
+          },
+          {
+            id: 'games',
+            iconSrc: '/icons/hobby-icons/games.svg',
+            iconAlt: '',
+            title: 'Cozy pixel games',
+            description:
+              'Ploughing virtual acres and planting carrots is somehow both destressing and productive.',
+          },
+          {
+            id: 'photography',
+            iconSrc: '/icons/hobby-icons/camera.svg',
+            iconAlt: '',
+            title: 'Travel & Urban photography',
+            description:
+              'Wherever I go in the world, my camera comes too. Travelled to 16+ countries.',
+          },
+          {
+            id: 'books',
+            iconSrc: '/icons/hobby-icons/book.svg',
+            iconAlt: '',
+            title: 'From Sci-Fi to productivity',
+            description:
+              'Current rabbit hole: wherever the algorithm or bookstore aisle takes me.',
+          },
+        ]}
+      />
     </>
   )
 }

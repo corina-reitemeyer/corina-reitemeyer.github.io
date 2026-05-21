@@ -49,14 +49,18 @@ export default function ImpactStatement({
         />
       )}
 
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 sm:px-10 lg:px-0">
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 sm:px-10 xl:px-0">
         <div className={`flex w-full flex-col gap-6 ${alignClasses}`}>
           <motion.h1
             id={headingId}
             initial={shouldReduceMotion ? false : { opacity: 0, y: 10 }}
             animate={shouldReduceMotion ? false : { opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="w-full text-[28px] font-bold leading-[1.25] tracking-tight sm:text-[48px] sm:leading-[1.2] md:text-[64px] md:leading-[1.15] lg:text-[48px] lg:leading-[1.1] xl:text-[80px] xl:leading-[1.08] 2xl:text-[96px] 2xl:leading-[1.2]"
+            className="w-full text-[28px] font-bold leading-[1.25] tracking-tight 
+  sm:text-[48px] sm:leading-[1.2] 
+  md:text-[64px] md:leading-[1.15] 
+  xl:text-[72px] xl:leading-[1.1] 
+  2xl:text-[96px] 2xl:leading-[1.2]"
           >
             {greeting && (
               <span className="block w-full text-white/70">{greeting}</span>

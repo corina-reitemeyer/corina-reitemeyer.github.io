@@ -30,6 +30,17 @@ export default function Footer() {
                 Medium.
               </a>
             </li>
+            <li>
+              <a
+                href="https://github.com/corina-reitemeyer"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub (opens in a new tab)"
+                className="font-semibold text-white transition hover:text-slate-400"
+              >
+                GitHub.
+              </a>
+            </li>
           </ul>
         </nav>
       </div>

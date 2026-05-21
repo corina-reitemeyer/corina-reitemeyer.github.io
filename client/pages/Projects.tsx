@@ -38,8 +38,7 @@ export default function Projects() {
           bgSvgSrc="/images/Impact-statement-bg.svg"
           greeting="Hi, I'm Corina,"
           lines={[
-            'Product Designer creating accessible, scalable products',
-            'by combining systems thinking with technical craft and detail.',
+            'Product Designer creating accessible, scalable products by combining systems thinking with technical craft and detail.',
           ]}
           pills={[
             { label: '8+ years experience' },
@@ -61,7 +60,7 @@ export default function Projects() {
           Selected works
         </h2>
 
-        <div className="mx-auto grid max-w-6xl auto-rows-[14rem] grid-cols-1 gap-8 px-6 sm:auto-rows-[16rem] md:grid-cols-2 lg:px-0">
+        <div className="mx-auto grid max-w-6xl auto-rows-[14rem] grid-cols-1 gap-8 px-6 sm:auto-rows-[16rem] md:grid-cols-2 xl:px-0">
           {visibleProjects.map((project, i) => {
             const layout =
               i === 0

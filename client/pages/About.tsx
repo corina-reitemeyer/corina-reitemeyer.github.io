@@ -81,12 +81,14 @@ export default function About() {
     <>
       <AboutIntro
         imageSrc="/images/corina-about.webp"
-        imageAlt="Corina Reitemeyer, Melbourne-based Senior Product Designer"
+        imageAlt="Corina Reitemeyer, Melbourne-based Product Designer & Learning Experience Designer"
         title="Guten Tag. Kia Ora. Hello!"
         paragraphs={[
-          'Senior Product Designer based in Melbourne 🇦🇺 — originally from Germany and New Zealand, which gave me a structured but practical way of thinking.',
-          "I do my best work in delivery, specialising in accessibility and bringing systems thinking with a technical lens. Give me a complex, messy platform and I'll make it clearer, more consistent, and easier to ship with.",
-          '8+ years across government, education, and B2B SaaS. Former Cuban Salsa instructor. Still dancing for the love of it!',
+          'A Product & Learning Experience Designer based in Melbourne 🇦🇺 — originally from Germany and New Zealand, which gave me a structured but practical way of thinking.',
+
+          "I specialise in making complexity feel simple — whether that's a messy digital platform or a difficult concept that needs to become learnable. Accessibility is at the core of everything I design, because good design and good learning should work for everyone.",
+
+          '8+ years across government, education, and B2B SaaS. TEFL certified. Former Cuban Salsa instructor. 💃',
         ]}
         accoladeText="Best Awards, 2018"
         accoladeHref="https://bestawards.co.nz/digital/student-digital/massey-university-college-of-creative-arts/infinite/"

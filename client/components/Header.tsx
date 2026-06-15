@@ -16,8 +16,7 @@ export default function Header() {
         aria-label="Main navigation"
         className="mx-auto flex max-w-6xl items-end justify-between py-12 pb-6"
       >
-        {/* Logo — alt="" since the text next to it already identifies it */}
-        <Link to="/projects" className="flex flex-col items-start">
+        <Link to="/" className="flex flex-col items-start">
           <img
             src="/images/cr-reverse-logo.svg"
             alt=""
@@ -29,7 +28,7 @@ export default function Header() {
               Corina Reitemeyer
             </span>
             <span className="-mt-1 text-xl text-slate-400">
-              Senior Product Designer.
+              Product & Learning Designer.
             </span>
           </div>
         </Link>
@@ -39,17 +38,33 @@ export default function Header() {
         <ul role="list" className="hidden items-end gap-10 text-lg sm:flex">
           <li>
             <NavLink
-              to="/projects"
+              to="/digital-products"
               className={({ isActive }) =>
                 [
                   'text-base transition',
-                  isActive || location.pathname.startsWith('/projects')
+                  isActive || location.pathname.startsWith('/digital-products')
                     ? 'font-semibold text-white'
                     : 'font-medium text-slate-400 hover:text-white',
                 ].join(' ')
               }
             >
-              Projects
+              Digital Products
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/learning-experiences"
+              className={({ isActive }) =>
+                [
+                  'text-base transition',
+                  isActive ||
+                  location.pathname.startsWith('/learning-experiences')
+                    ? 'font-semibold text-white'
+                    : 'font-medium text-slate-400 hover:text-white',
+                ].join(' ')
+              }
+            >
+              Learning Experiences
             </NavLink>
           </li>
           <li>
@@ -137,17 +152,33 @@ export default function Header() {
           <ul role="list" className="space-y-2">
             <li>
               <NavLink
-                to="/projects"
+                to="/digital-products"
                 className={({ isActive }) =>
                   [
                     'block rounded-lg px-3 py-2 text-base transition',
-                    isActive || location.pathname.startsWith('/projects')
+                    isActive ||
+                    location.pathname.startsWith('/digital-products')
                       ? 'font-semibold text-white'
                       : 'font-medium text-slate-400 hover:text-white',
                   ].join(' ')
                 }
               >
-                Projects
+                Digital Products
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/learning-design"
+                className={({ isActive }) =>
+                  [
+                    'text-base transition',
+                    isActive || location.pathname.startsWith('/learning-design')
+                      ? 'font-semibold text-white'
+                      : 'font-medium text-slate-400 hover:text-white',
+                  ].join(' ')
+                }
+              >
+                Learning Experiences
               </NavLink>
             </li>
             <li>

@@ -71,7 +71,7 @@ export default function Projects() {
 
             return (
               <Link
-                to={`/projects/${project.slug}`}
+                to={`/digital-product/${project.slug}`}
                 key={project.id}
                 aria-label={`${project.company ?? 'Project'} — ${project.projectTitle}`}
                 className={`group relative block overflow-hidden rounded-2xl ${layout}`}

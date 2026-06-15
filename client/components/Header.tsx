@@ -42,13 +42,13 @@ export default function Header() {
               className={({ isActive }) =>
                 [
                   'text-base transition',
-                  isActive || location.pathname.startsWith('/digital-products')
+                  isActive || location.pathname.startsWith('/digital-product')
                     ? 'font-semibold text-white'
                     : 'font-medium text-slate-400 hover:text-white',
                 ].join(' ')
               }
             >
-              Digital Products
+              designing.
             </NavLink>
           </li>
           <li>
@@ -58,13 +58,28 @@ export default function Header() {
                 [
                   'text-base transition',
                   isActive ||
-                  location.pathname.startsWith('/learning-experiences')
+                  location.pathname.startsWith('/learning-experience')
                     ? 'font-semibold text-white'
                     : 'font-medium text-slate-400 hover:text-white',
                 ].join(' ')
               }
             >
-              Learning Experiences
+              teaching.
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/making"
+              className={({ isActive }) =>
+                [
+                  'text-base transition',
+                  isActive || location.pathname.startsWith('/making')
+                    ? 'font-semibold text-white'
+                    : 'font-medium text-slate-400 hover:text-white',
+                ].join(' ')
+              }
+            >
+              making.
             </NavLink>
           </li>
           <li>
@@ -79,7 +94,7 @@ export default function Header() {
                 ].join(' ')
               }
             >
-              About
+              about.
             </NavLink>
           </li>
           <li>
@@ -88,7 +103,7 @@ export default function Header() {
               className="text-base font-medium text-slate-400 transition hover:text-white"
               download="Corina-Reitemeyer-Designer-Resume"
             >
-              Resume
+              resume.
             </a>
           </li>
         </ul>
@@ -156,29 +171,44 @@ export default function Header() {
                 className={({ isActive }) =>
                   [
                     'block rounded-lg px-3 py-2 text-base transition',
-                    isActive ||
-                    location.pathname.startsWith('/digital-products')
+                    isActive || location.pathname.startsWith('/digital-product')
                       ? 'font-semibold text-white'
                       : 'font-medium text-slate-400 hover:text-white',
                   ].join(' ')
                 }
               >
-                Digital Products
+                designing.
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/learning-design"
+                to="/learning-experiences"
                 className={({ isActive }) =>
                   [
-                    'text-base transition',
-                    isActive || location.pathname.startsWith('/learning-design')
+                    'block rounded-lg px-3 py-2 text-base transition',
+                    isActive ||
+                    location.pathname.startsWith('/learning-experience')
                       ? 'font-semibold text-white'
                       : 'font-medium text-slate-400 hover:text-white',
                   ].join(' ')
                 }
               >
-                Learning Experiences
+                teaching.
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/making"
+                className={({ isActive }) =>
+                  [
+                    'block rounded-lg px-3 py-2 text-base transition',
+                    isActive || location.pathname.startsWith('/making')
+                      ? 'font-semibold text-white'
+                      : 'font-medium text-slate-400 hover:text-white',
+                  ].join(' ')
+                }
+              >
+                making.
               </NavLink>
             </li>
             <li>
@@ -193,7 +223,7 @@ export default function Header() {
                   ].join(' ')
                 }
               >
-                About
+                about.
               </NavLink>
             </li>
             <li>
@@ -202,7 +232,7 @@ export default function Header() {
                 className="block rounded-lg px-3 py-2 text-base font-medium text-slate-400 transition hover:text-white"
                 download="Corina-Reitemeyer-Designer-Resume"
               >
-                Resume
+                resume.
               </a>
             </li>
           </ul>

@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "PrettyCheapHouses.com",
+    "description":
+      "My biggest passion project: A platform for uncovering affordable, character-filled homes across Europe for renovation. Using a little AI, a few too many APIs, and a lot of love. (in the making)",
+    "image": "/images/corina-about.webp",
+    "href": "#"
+  },
+  {
+    "id": 2,
+    "title": "Alpine Crossing Planner",
+    "description":
+      "Built out of personal frustration while planning an alpine crossing. A simple tool to filter and compare routes and providers, built simply with Lovable, Supabase and the Perplexity API.",
+    "image": "/images/corina-about.webp",
+    "href": "#"
+  }
+]

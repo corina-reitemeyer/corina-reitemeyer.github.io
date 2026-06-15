@@ -88,7 +88,7 @@ export default function About() {
 
           "I specialise in making complexity feel simple — whether that's a messy digital platform or a difficult concept that needs to become learnable. Accessibility is at the core of everything I design, because good design and good learning should work for everyone.",
 
-          '8+ years across government, education, and B2B SaaS. TEFL certified. Former Cuban Salsa instructor. 💃',
+          '8+ years across government, education, and B2B SaaS. TEFL certified. Former Cuban Salsa instructor and Code Bootcamp teaching facilitator.',
         ]}
         accoladeText="Best Awards, 2018"
         accoladeHref="https://bestawards.co.nz/digital/student-digital/massey-university-college-of-creative-arts/infinite/"

@@ -38,7 +38,7 @@ export default function Projects() {
           bgSvgSrc="/images/Impact-statement-bg.svg"
           greeting="Hi, I'm Corina,"
           lines={[
-            'Product Designer creating accessible, scalable products by combining systems thinking with technical craft and detail.',
+            ' I design products and learning experiences that are simpler, clearer, and accessible to everyone who needs them.',
           ]}
           pills={[
             { label: '8+ years experience' },
@@ -56,7 +56,10 @@ export default function Projects() {
         aria-labelledby={sectionId}
         className="relative bg-[#08082a] py-16 sm:py-24"
       >
-        <h2 id={sectionId} className="sr-only">
+        <h2
+          id={sectionId}
+          className="mx-auto mb-10 max-w-6xl px-6 text-3xl font-semibold text-white sm:mb-8 sm:text-3xl xl:px-0"
+        >
           Selected works
         </h2>
 

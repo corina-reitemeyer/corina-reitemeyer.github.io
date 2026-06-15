@@ -2,9 +2,9 @@ import { useId } from 'react'
 import aboutData from '../../src/about.json'
 import type AboutData from '../../models/aboutdata'
 import { motion, useReducedMotion, type Variants } from 'framer-motion'
-import AboutIntro from '../components/AboutIntro'
-import ExperienceSection from '../components/Experience'
-import NonDesignPassions from '../components/NonDesignPassions'
+import AboutIntro from '../components/about/AboutIntro'
+import ExperienceSection from '../components/about/Experience'
+import NonDesignPassions from '../components/about/NonDesignPassions'
 
 const left = [
   {

@@ -3,12 +3,43 @@ import { useEffect, useRef, useState } from 'react'
 
 const mobileNavId = 'mobile-nav-panel'
 
+const resumes = [
+  {
+    label: 'Product Designer CV',
+    href: '/files/Corina-Reitemeyer-Product-Designer-CV.pdf',
+    download: 'Corina-Reitemeyer-Product-Designer-CV',
+  },
+  {
+    label: 'Learning Designer CV',
+    href: '/files/Corina-Reitemeyer-Learning-Designer-CV.pdf',
+    download: 'Corina-Reitemeyer-Learning-Designer-CV',
+  },
+]
+
 export default function Header() {
   const location = useLocation()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isResumeMenuOpen, setIsResumeMenuOpen] = useState(false)
   const mobileNavRef = useRef<HTMLDivElement>(null)
+  const resumeMenuRef = useRef<HTMLLIElement>(null)
 
-  useEffect(() => setIsMobileMenuOpen(false), [location.pathname])
+  useEffect(() => {
+    setIsMobileMenuOpen(false)
+    setIsResumeMenuOpen(false)
+  }, [location.pathname])
+
+  useEffect(() => {
+    if (!isResumeMenuOpen) return
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (!resumeMenuRef.current?.contains(event.target as Node)) {
+        setIsResumeMenuOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [isResumeMenuOpen])
 
   return (
     <header className="z-50 w-full bg-[#08082a] px-6">
@@ -97,14 +128,50 @@ export default function Header() {
               about.
             </NavLink>
           </li>
-          <li>
-            <a
-              href="/files/Corina-Reitemeyer-Designer-Resume.pdf"
+          <li ref={resumeMenuRef} className="relative">
+            <button
+              type="button"
+              onClick={() => setIsResumeMenuOpen((v) => !v)}
+              aria-haspopup="true"
+              aria-expanded={isResumeMenuOpen}
               className="text-base font-medium text-slate-400 transition hover:text-white"
-              download="Corina-Reitemeyer-Designer-Resume"
             >
               resume.
-            </a>
+            </button>
+
+            {isResumeMenuOpen && (
+              <ul
+                role="list"
+                className="absolute right-0 top-full z-10 mt-4 min-w-[14rem] rounded-lg border border-white/10 bg-[#0f0f3a] py-2 shadow-lg"
+              >
+                {resumes.map((resume) => (
+                  <li key={resume.href}>
+                    <a
+                      href={resume.href}
+                      download={resume.download}
+                      className="flex items-center gap-3 px-4 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"
+                        />
+                      </svg>
+                      {resume.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
           </li>
         </ul>
 
@@ -226,15 +293,32 @@ export default function Header() {
                 about.
               </NavLink>
             </li>
-            <li>
-              <a
-                href="/files/Corina-Reitemeyer-Designer-Resume.pdf"
-                className="block rounded-lg px-3 py-2 text-base font-medium text-slate-400 transition hover:text-white"
-                download="Corina-Reitemeyer-Designer-Resume"
-              >
-                resume.
-              </a>
-            </li>
+            {resumes.map((resume) => (
+              <li key={resume.href}>
+                <a
+                  href={resume.href}
+                  download={resume.download}
+                  className="flex items-center gap-3 rounded-lg px-3 py-2 text-base font-medium text-slate-400 transition hover:text-white"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"
+                    />
+                  </svg>
+                  {resume.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

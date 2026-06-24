@@ -1,36 +1,40 @@
-# Boilerplate: Fullstack with Sass
+# Corina Reitemeyer — Portfolio
 
-## Setup
+Personal portfolio site for Corina Reitemeyer, Product & Learning Designer. Live at [corina-reitemeyer.github.io](https://corina-reitemeyer.github.io/).
 
-### What's included
+## Stack
 
-This repo includes:
+- React + TypeScript, built with Vite
+- React Router (`createBrowserRouter`)
+- Tailwind CSS, with Framer Motion for animation
+- Sofia Pro (Adobe Fonts/Typekit)
 
-* a single, simple API endpoint (`/api/v1/fruits`)
-* frontend routing via react-router
-* an auth0 setup waiting to be configured
-* an example database module (`server/db/fruits.js`)
-* an API client module (`client/apis/fruits.js`)
-* configuration for Vitest and testing library
-* configuration for server-side debugging in VS Code
-* configuration for preprocessing css with tailwind support
+## Pages
 
-### Installation
+- **Home** (`/`) — landing page
+- **Designing** (`/digital-products`) — product design case studies
+- **Elearning** (`/learning-experiences`) — learning experience design case studies
+- **Making** (`/making`) — side projects and experiments
+- **About** (`/about`)
+- Individual case studies live at `/digital-product/:slug` and `/learning-experience/:slug`
 
-#### **From the Github UI**
-
-See the instructions [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) to use Github's feature to create a new repo from a template.
-
-#### **From the command line**
+## Local development
 
 ```
-git clone https://github.com/dev-academy-challenges/boilerplate-fullstack [your-project-name]
-cd [your-project-name]
-npm install # to install dependencies
-npm run dev # to start the dev server
+npm install
+npm run dev
 ```
 
-You can find the server running on [http://localhost:3000](http://localhost:3000) and the client running on [http://localhost:5173](http://localhost:5173).
+This starts the Vite dev server at [http://localhost:5173](http://localhost:5173).
 
----
-[Provide feedback on this repo](https://docs.google.com/forms/d/e/1FAIpQLSfw4FGdWkLwMLlUaNQ8FtP2CTJdGDUv6Xoxrh19zIrJSkvT4Q/viewform?usp=pp_url&entry.1958421517=boilerplate-fullstack)
+## Other scripts
+
+```
+npm run build    # production build
+npm run lint      # eslint
+npm run format    # prettier
+```
+
+## Deployment
+
+The site is static and deploys automatically via GitHub Actions (`.github/workflows/static.yml`) on every push to `main` — no manual deploy step needed. A custom `public/404.html` handles deep-linking on GitHub Pages by redirecting unmatched paths back through `index.html` so client-side routing can take over.

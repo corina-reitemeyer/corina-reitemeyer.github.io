@@ -26,7 +26,7 @@ export default function ExperienceSection({
       <div className="container mx-auto max-w-6xl px-8 py-16 md:pb-24 md:pt-10">
         <h2
           id={headingId}
-          className="mb-10 text-2xl font-semibold text-white sm:text-3xl"
+          className="mb-10 text-2xl font-bold text-white sm:text-3xl"
         >
           {heading}
         </h2>

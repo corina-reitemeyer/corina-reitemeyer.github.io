@@ -39,7 +39,7 @@ export default function AboutIntro({
           <div className="md:col-span-6">
             <h2
               id={headingId}
-              className="mb-5 text-2xl font-semibold leading-snug text-white sm:text-3xl"
+              className="mb-5 text-2xl font-bold leading-snug text-white sm:text-3xl"
             >
               {title}
             </h2>

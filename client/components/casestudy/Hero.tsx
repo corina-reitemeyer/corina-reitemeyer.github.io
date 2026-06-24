@@ -132,7 +132,7 @@ export default function CaseStudyNavy({
           <img
             src={imageSrc}
             alt={imageAlt}
-            className="w-full rounded-md object-cover"
+            className="w-full rounded-xl object-cover"
             loading="eager"
             decoding="async"
           />

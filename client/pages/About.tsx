@@ -103,7 +103,7 @@ export default function About() {
         <div className="mx-auto max-w-6xl px-6 sm:px-8">
           <h2
             id={valuesHeadingId}
-            className="mb-12 text-center text-3xl font-semibold text-white"
+            className="mb-12 text-center text-3xl font-bold text-white"
           >
             What Drives My Work
           </h2>

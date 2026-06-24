@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <script>
+      // GitHub Pages serves this for any unmatched path. Re-encode the
+      // attempted URL as a query param on the real index.html so the
+      // SPA router (see index.html's redirect-decoding script) can
+      // take over and render the correct route.
+      const path = window.location.pathname + window.location.search + window.location.hash
+      window.location.replace('/?redirect=' + encodeURIComponent(path))
+    </script>
+  </head>
+  <body></body>
+</html>

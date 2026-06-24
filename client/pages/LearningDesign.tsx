@@ -36,7 +36,7 @@ export default function Projects() {
       >
         <h2
           id={sectionId}
-          className="mx-auto mb-16 max-w-6xl px-6 text-3xl font-semibold text-white sm:mb-8 sm:text-3xl xl:px-0"
+          className="mx-auto mb-16 max-w-6xl px-6 text-3xl font-bold text-white sm:mb-8 sm:text-3xl xl:px-0"
         >
           Learning Experiences
         </h2>

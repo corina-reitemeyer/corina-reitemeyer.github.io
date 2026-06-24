@@ -14,7 +14,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn (opens in a new tab)"
-                className="font-semibold text-white transition hover:text-slate-400"
+                className="font-semibold text-slate-400 transition hover:text-white"
               >
                 LinkedIn.
               </a>
@@ -25,7 +25,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Medium (opens in a new tab)"
-                className="font-semibold text-white transition hover:text-slate-400"
+                className="font-semibold text-slate-400 transition hover:text-white"
               >
                 Medium.
               </a>
@@ -36,7 +36,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub (opens in a new tab)"
-                className="font-semibold text-white transition hover:text-slate-400"
+                className="font-semibold text-slate-400 transition hover:text-white"
               >
                 GitHub.
               </a>

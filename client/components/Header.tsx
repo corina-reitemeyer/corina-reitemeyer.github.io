@@ -3,6 +3,21 @@ import { useEffect, useRef, useState } from 'react'
 
 const mobileNavId = 'mobile-nav-panel'
 
+const navItems = [
+  {
+    to: '/digital-products',
+    label: 'designing.',
+    matchPrefix: '/digital-product',
+  },
+  {
+    to: '/learning-experiences',
+    label: 'elearning.',
+    matchPrefix: '/learning-experience',
+  },
+  { to: '/making', label: 'making.' },
+  { to: '/about', label: 'about.' },
+]
+
 const resumes = [
   {
     label: 'Product Designer CV',
@@ -16,11 +31,30 @@ const resumes = [
   },
 ]
 
+function DownloadIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-5 w-5"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"
+      />
+    </svg>
+  )
+}
+
 export default function Header() {
   const location = useLocation()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isResumeMenuOpen, setIsResumeMenuOpen] = useState(false)
-  const mobileNavRef = useRef<HTMLDivElement>(null)
   const resumeMenuRef = useRef<HTMLLIElement>(null)
 
   useEffect(() => {
@@ -40,6 +74,9 @@ export default function Header() {
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [isResumeMenuOpen])
+
+  const isNavItemActive = (isActive: boolean, matchPrefix?: string) =>
+    isActive || (matchPrefix ? location.pathname.startsWith(matchPrefix) : false)
 
   return (
     <header className="z-50 w-full bg-[#08082a] px-6">
@@ -67,67 +104,23 @@ export default function Header() {
         {/* Desktop nav */}
         {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
         <ul role="list" className="hidden items-end gap-10 text-lg sm:flex">
-          <li>
-            <NavLink
-              to="/digital-products"
-              className={({ isActive }) =>
-                [
-                  'text-base transition',
-                  isActive || location.pathname.startsWith('/digital-product')
-                    ? 'font-semibold text-white'
-                    : 'font-medium text-slate-400 hover:text-white',
-                ].join(' ')
-              }
-            >
-              designing.
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/learning-experiences"
-              className={({ isActive }) =>
-                [
-                  'text-base transition',
-                  isActive ||
-                  location.pathname.startsWith('/learning-experience')
-                    ? 'font-semibold text-white'
-                    : 'font-medium text-slate-400 hover:text-white',
-                ].join(' ')
-              }
-            >
-              elearning.
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/making"
-              className={({ isActive }) =>
-                [
-                  'text-base transition',
-                  isActive || location.pathname.startsWith('/making')
-                    ? 'font-semibold text-white'
-                    : 'font-medium text-slate-400 hover:text-white',
-                ].join(' ')
-              }
-            >
-              making.
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                [
-                  'text-base transition',
-                  isActive
-                    ? 'font-semibold text-white'
-                    : 'font-medium text-slate-400 hover:text-white',
-                ].join(' ')
-              }
-            >
-              about.
-            </NavLink>
-          </li>
+          {navItems.map((item) => (
+            <li key={item.to}>
+              <NavLink
+                to={item.to}
+                className={({ isActive }) =>
+                  [
+                    'text-base transition',
+                    isNavItemActive(isActive, item.matchPrefix)
+                      ? 'font-semibold text-white'
+                      : 'font-medium text-slate-400 hover:text-white',
+                  ].join(' ')
+                }
+              >
+                {item.label}
+              </NavLink>
+            </li>
+          ))}
           <li ref={resumeMenuRef} className="relative">
             <button
               type="button"
@@ -151,21 +144,7 @@ export default function Header() {
                       download={resume.download}
                       className="flex items-center gap-3 px-4 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white"
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"
-                        />
-                      </svg>
+                      <DownloadIcon />
                       {resume.label}
                     </a>
                   </li>
@@ -222,7 +201,6 @@ export default function Header() {
       {/* Mobile panel */}
       <div
         id={mobileNavId}
-        ref={mobileNavRef}
         aria-hidden={!isMobileMenuOpen}
         {...(!isMobileMenuOpen ? { inert: '' } : {})}
         className={`transition-[max-height,opacity] duration-200 sm:hidden ${
@@ -232,67 +210,23 @@ export default function Header() {
         <div className="border-t border-white/10 bg-[#08082a] px-6 pb-6 pt-2 sm:px-10">
           {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
           <ul role="list" className="space-y-2">
-            <li>
-              <NavLink
-                to="/digital-products"
-                className={({ isActive }) =>
-                  [
-                    'block rounded-lg px-3 py-2 text-base transition',
-                    isActive || location.pathname.startsWith('/digital-product')
-                      ? 'font-semibold text-white'
-                      : 'font-medium text-slate-400 hover:text-white',
-                  ].join(' ')
-                }
-              >
-                designing.
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/learning-experiences"
-                className={({ isActive }) =>
-                  [
-                    'block rounded-lg px-3 py-2 text-base transition',
-                    isActive ||
-                    location.pathname.startsWith('/learning-experience')
-                      ? 'font-semibold text-white'
-                      : 'font-medium text-slate-400 hover:text-white',
-                  ].join(' ')
-                }
-              >
-                elearning.
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/making"
-                className={({ isActive }) =>
-                  [
-                    'block rounded-lg px-3 py-2 text-base transition',
-                    isActive || location.pathname.startsWith('/making')
-                      ? 'font-semibold text-white'
-                      : 'font-medium text-slate-400 hover:text-white',
-                  ].join(' ')
-                }
-              >
-                making.
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  [
-                    'block rounded-lg px-3 py-2 text-base transition',
-                    isActive
-                      ? 'font-semibold text-white'
-                      : 'font-medium text-slate-400 hover:text-white',
-                  ].join(' ')
-                }
-              >
-                about.
-              </NavLink>
-            </li>
+            {navItems.map((item) => (
+              <li key={item.to}>
+                <NavLink
+                  to={item.to}
+                  className={({ isActive }) =>
+                    [
+                      'block rounded-lg px-3 py-2 text-base transition',
+                      isNavItemActive(isActive, item.matchPrefix)
+                        ? 'font-semibold text-white'
+                        : 'font-medium text-slate-400 hover:text-white',
+                    ].join(' ')
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              </li>
+            ))}
             {resumes.map((resume) => (
               <li key={resume.href}>
                 <a
@@ -300,21 +234,7 @@ export default function Header() {
                   download={resume.download}
                   className="flex items-center gap-3 rounded-lg px-3 py-2 text-base font-medium text-slate-400 transition hover:text-white"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"
-                    />
-                  </svg>
+                  <DownloadIcon />
                   {resume.label}
                 </a>
               </li>

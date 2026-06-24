@@ -166,14 +166,14 @@ export default function TwoColumnDetail({
                     type="button"
                     onClick={() => setActiveIndex(index)}
                     aria-label={`Open enlarged image: ${getImageLabel(image, index)}`}
-                    className="group block w-full rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-[#08082a]"
+                    className="group block w-full rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-[#08082a]"
                   >
                     <img
                       src={image.src}
                       alt={image.alt}
                       loading="lazy"
                       decoding="async"
-                      className="w-full cursor-zoom-in rounded-md object-cover transition group-hover:opacity-90"
+                      className="w-full cursor-zoom-in rounded-xl object-cover transition group-hover:opacity-90"
                     />
                   </button>
 

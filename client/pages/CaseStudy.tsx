@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom'
+import { useParams, useLocation, Link } from 'react-router-dom'
 import OWTemplates from './OWTemplates'
 import MOEDesignSystem from './MOEDesignSystem'
 import SuiteFilesDesignSystem from './SuiteFilesDesignSystem'
@@ -7,6 +7,12 @@ import ScrollToTopButton from '../components/casestudy/ScrollToTopButton'
 
 export default function CaseStudy() {
   const { slug } = useParams()
+  const location = useLocation()
+  const backToProjectsPath = location.pathname.startsWith(
+    '/learning-experience',
+  )
+    ? '/learning-experiences'
+    : '/digital-products'
 
   const renderCaseStudy = () => {
     switch (slug) {
@@ -28,7 +34,7 @@ export default function CaseStudy() {
               {"The page you're looking for doesn't exist or has been moved."}
             </p>
             <Link
-              to="/projects"
+              to={backToProjectsPath}
               className="mt-8 rounded-md bg-white px-6 py-3 text-sm font-semibold text-[#08082a] transition hover:bg-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#08082a]"
             >
               Back to projects

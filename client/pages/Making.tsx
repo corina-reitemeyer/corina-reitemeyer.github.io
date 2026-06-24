@@ -7,9 +7,9 @@ export default function Making() {
   return (
     <section className="relative bg-[#08082a] py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-6 xl:px-0">
-        <h1 className="mb-12 text-3xl font-semibold text-white sm:mb-16">
+        <h2 className="mx-auto mb-10 max-w-6xl px-6 text-3xl font-semibold text-white sm:mb-8 sm:text-3xl xl:px-0">
           Side Projects & Fun Experiments
-        </h1>
+        </h2>
 
         <ul role="list" className="grid grid-cols-1 gap-12 md:grid-cols-2">
           {projects.map((project) => (
@@ -26,7 +26,7 @@ export default function Making() {
               <p className="mb-5 flex-1 text-base leading-relaxed text-slate-400">
                 {project.description}
               </p>
-              <a
+              {/* <a
                 href={project.href}
                 aria-label={`Find out more about ${project.title}`}
                 className="group inline-flex items-center gap-2 text-base font-bold text-white transition hover:text-slate-300"
@@ -38,7 +38,7 @@ export default function Making() {
                 >
                   →
                 </span>
-              </a>
+              </a> */}
             </li>
           ))}
         </ul>

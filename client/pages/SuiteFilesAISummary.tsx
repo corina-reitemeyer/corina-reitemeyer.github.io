@@ -14,7 +14,7 @@ export default function SuiteFilesAISummary() {
         intro="Making multi-document signing faster and clearer with AI."
         company="SuiteFiles"
         project="AI Summaries"
-        imageSrc="/images/portfolio/suitefiles-ai-summary-cover.webp"
+        imageSrc="/images/portfolio/product/suitefiles-ai-summary-cover.webp"
         imageAlt="SuiteFiles AI Summaries feature hero"
         overview="SuiteFiles is a document management and e-signing platform built for accounting professionals. The product was in the midst of a platform migration and redesign when the company began exploring AI as a strategic direction. I was given end-to-end ownership of the AI summarisation feature, from defining the approach to shipping the first version, within a cross-functional product team."
         involvement="Led feature strategy and end-to-end UX/UI design for the company's first AI capability."

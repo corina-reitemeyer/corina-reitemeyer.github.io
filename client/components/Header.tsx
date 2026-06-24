@@ -64,7 +64,7 @@ export default function Header() {
                 ].join(' ')
               }
             >
-              teaching.
+              elearning.
             </NavLink>
           </li>
           <li>
@@ -193,7 +193,7 @@ export default function Header() {
                   ].join(' ')
                 }
               >
-                teaching.
+                elearning.
               </NavLink>
             </li>
             <li>

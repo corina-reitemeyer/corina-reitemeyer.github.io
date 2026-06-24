@@ -1,6 +1,6 @@
 import { useId } from 'react'
 import LXDData from '../../src/lxddata.json'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import LXD from '../../models/lxddata.ts'
 import { motion, useReducedMotion, type Variants } from 'framer-motion'
 
@@ -34,8 +34,11 @@ export default function Projects() {
         aria-labelledby={sectionId}
         className="relative bg-[#08082a] py-16 sm:py-24"
       >
-        <h2 id={sectionId} className="sr-only">
-          Selected works
+        <h2
+          id={sectionId}
+          className="mx-auto mb-16 max-w-6xl px-6 text-3xl font-semibold text-white sm:mb-8 sm:text-3xl xl:px-0"
+        >
+          Learning Experiences
         </h2>
 
         <div className="mx-auto grid max-w-6xl auto-rows-[14rem] grid-cols-1 gap-8 px-6 sm:auto-rows-[16rem] md:grid-cols-2 xl:px-0">
@@ -48,8 +51,8 @@ export default function Projects() {
                   : 'row-span-2'
 
             return (
-              <Link
-                to={`/learning-experience/${project.slug}`}
+              <div
+                // to={`/learning-experience/${project.slug}`}
                 key={project.id}
                 aria-label={`${project.company ?? 'Project'} — ${project.projectTitle}`}
                 className={`group relative block overflow-hidden rounded-2xl ${layout}`}
@@ -87,7 +90,7 @@ export default function Projects() {
                   aria-hidden="true"
                   className="pointer-events-none absolute inset-0 bg-[#08082a]/0 transition duration-300 group-focus-within:bg-[#08082a]/50 group-hover:bg-[#08082a]/50"
                 />
-              </Link>
+              </div>
             )
           })}
         </div>

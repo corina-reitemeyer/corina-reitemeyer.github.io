@@ -34,8 +34,11 @@ export default function Projects() {
         aria-labelledby={sectionId}
         className="relative bg-[#08082a] py-16 sm:py-24"
       >
-        <h2 id={sectionId} className="sr-only">
-          Selected works
+        <h2
+          id={sectionId}
+          className="mx-auto mb-10 max-w-6xl px-6 text-3xl font-semibold text-white sm:mb-8 sm:text-3xl xl:px-0"
+        >
+          Digital Products
         </h2>
 
         <div className="mx-auto grid max-w-6xl auto-rows-[14rem] grid-cols-1 gap-8 px-6 sm:auto-rows-[16rem] md:grid-cols-2 xl:px-0">

@@ -1,5 +1,5 @@
-import { useRef, useState } from 'react'
 import Lightbox from '../../components/casestudy/LightBox'
+import { useLightboxImage } from '../../lib/useLightboxImage'
 
 type ChallengeImage = {
   id: string
@@ -22,9 +22,7 @@ type ChallengeSectionProps = {
 export default function ChallengeSection({
   challenges,
 }: ChallengeSectionProps) {
-  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null)
-  const [lightboxAlt, setLightboxAlt] = useState<string>('')
-  const triggerRef = useRef<HTMLElement>(null)
+  const lightbox = useLightboxImage()
 
   return (
     <>
@@ -68,12 +66,13 @@ export default function ChallengeSection({
                 {challenge.image && (
                   <figure className="mt-8">
                     <button
-                      ref={triggerRef as React.RefObject<HTMLButtonElement>}
                       type="button"
-                      onClick={() => {
-                        setLightboxSrc(challenge.image!.src)
-                        setLightboxAlt(challenge.image!.alt)
-                      }}
+                      onClick={(e) =>
+                        lightbox.open(
+                          { src: challenge.image!.src, alt: challenge.image!.alt },
+                          e,
+                        )
+                      }
                       className="w-full cursor-zoom-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                       aria-label={`View larger: ${challenge.image.alt}`}
                     >
@@ -96,12 +95,12 @@ export default function ChallengeSection({
         </div>
       </section>
 
-      {lightboxSrc && (
+      {lightbox.active && (
         <Lightbox
-          src={lightboxSrc}
-          alt={lightboxAlt}
-          onClose={() => setLightboxSrc(null)}
-          triggerRef={triggerRef}
+          src={lightbox.active.src}
+          alt={lightbox.active.alt}
+          onClose={lightbox.close}
+          triggerRef={lightbox.triggerRef}
         />
       )}
     </>

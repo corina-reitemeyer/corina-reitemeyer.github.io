@@ -2,6 +2,7 @@ import { useId } from 'react'
 import aboutData from '../../src/about.json'
 import type AboutData from '../../models/aboutdata'
 import { motion, useReducedMotion, type Variants } from 'framer-motion'
+import { defaultViewport } from '../lib/motion'
 import AboutIntro from '../components/about/AboutIntro'
 import ExperienceSection from '../components/about/Experience'
 import NonDesignPassions from '../components/about/NonDesignPassions'
@@ -69,8 +70,6 @@ const cardVariants: Variants = {
   }),
 }
 
-const sharedViewport = { once: true, amount: 0.2 } as const
-
 export default function About() {
   const valuesHeadingId = useId()
   const shouldReduceMotion = useReducedMotion()
@@ -120,7 +119,7 @@ export default function About() {
                 variants={shouldReduceMotion ? undefined : cardVariants}
                 initial={shouldReduceMotion ? false : 'hidden'}
                 whileInView={shouldReduceMotion ? undefined : 'visible'}
-                viewport={sharedViewport}
+                viewport={defaultViewport}
                 className="mx-4 rounded-3xl bg-[#0f0f3a] p-8 sm:mx-0"
               >
                 <h3 className="break-words text-lg font-semibold text-white sm:text-xl">

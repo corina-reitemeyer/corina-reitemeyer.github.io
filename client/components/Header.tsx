@@ -1,18 +1,19 @@
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react'
+import { ROUTES } from '../lib/routes'
 
 const mobileNavId = 'mobile-nav-panel'
 
 const navItems = [
   {
-    to: '/digital-products',
+    to: ROUTES.digitalProducts,
     label: 'designing.',
-    matchPrefix: '/digital-product',
+    matchPrefix: ROUTES.digitalProduct,
   },
   {
-    to: '/learning-experiences',
+    to: ROUTES.learningExperiences,
     label: 'elearning.',
-    matchPrefix: '/learning-experience',
+    matchPrefix: ROUTES.learningExperience,
   },
   { to: '/making', label: 'making.' },
   { to: '/about', label: 'about.' },

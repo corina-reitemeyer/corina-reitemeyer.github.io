@@ -1,5 +1,6 @@
 import { useId } from 'react'
 import { motion, useReducedMotion, type Variants } from 'framer-motion'
+import { defaultViewport } from '../../lib/motion'
 
 type Highlight = {
   id: string
@@ -49,8 +50,6 @@ const fadeInUpDelayed: Variants = {
   },
 }
 
-const sharedViewport = { once: true, amount: 0.2 } as const
-
 function DetailItem({ term, description }: DetailItemProps) {
   return (
     <div>
@@ -93,7 +92,7 @@ export default function CaseStudyNavy({
           variants={shouldReduceMotion ? undefined : fadeInUp}
           initial={shouldReduceMotion ? false : 'hidden'}
           whileInView={shouldReduceMotion ? undefined : 'visible'}
-          viewport={sharedViewport}
+          viewport={defaultViewport}
         >
           {intro}
         </motion.h2>
@@ -105,7 +104,7 @@ export default function CaseStudyNavy({
             variants={shouldReduceMotion ? undefined : fadeInUpDelayed}
             initial={shouldReduceMotion ? false : 'hidden'}
             whileInView={shouldReduceMotion ? undefined : 'visible'}
-            viewport={sharedViewport}
+            viewport={defaultViewport}
             className="mt-10 grid list-none grid-cols-1 gap-8 border-t border-white/10 p-0 pt-10 sm:mt-12 sm:grid-cols-3 sm:pt-12"
           >
             {highlights.map((highlight) => (
@@ -127,7 +126,7 @@ export default function CaseStudyNavy({
           variants={shouldReduceMotion ? undefined : fadeInUpDelayed}
           initial={shouldReduceMotion ? false : 'hidden'}
           whileInView={shouldReduceMotion ? undefined : 'visible'}
-          viewport={sharedViewport}
+          viewport={defaultViewport}
         >
           <img
             src={imageSrc}

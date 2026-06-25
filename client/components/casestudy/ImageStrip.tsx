@@ -1,6 +1,7 @@
 import { useId, useRef, useState } from 'react'
 import { motion, useReducedMotion, type Variants } from 'framer-motion'
 import Lightbox from '../casestudy/LightBox'
+import { defaultViewport } from '../../lib/motion'
 
 type GalleryImage = {
   id: string
@@ -27,7 +28,9 @@ const itemVariants: Variants = {
   },
 }
 
-const sharedViewport = { once: true, amount: 0.35 } as const
+// Triggers slightly later than the site default (0.2) since the strip's
+// images are taller and would otherwise animate while mostly off-screen.
+const sharedViewport = { ...defaultViewport, amount: 0.35 } as const
 
 function getImageLabel(image: GalleryImage, index: number): string {
   return image.caption || image.alt || `Image ${index + 1}`

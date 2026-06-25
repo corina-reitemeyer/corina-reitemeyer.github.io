@@ -1,5 +1,5 @@
-import { useRef, useState } from 'react'
 import Lightbox from '../casestudy/LightBox'
+import { useLightboxImage } from '../../lib/useLightboxImage'
 
 type ApproachImage = {
   id: string
@@ -20,9 +20,7 @@ type ApproachSectionProps = {
 }
 
 export default function ApproachSection({ items }: ApproachSectionProps) {
-  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null)
-  const [lightboxAlt, setLightboxAlt] = useState<string>('')
-  const triggerRef = useRef<HTMLElement>(null)
+  const lightbox = useLightboxImage()
 
   return (
     <>
@@ -61,12 +59,13 @@ export default function ApproachSection({ items }: ApproachSectionProps) {
                         className="relative left-1/2 w-screen max-w-6xl -translate-x-1/2 px-6 lg:px-0"
                       >
                         <button
-                          ref={triggerRef as React.RefObject<HTMLButtonElement>}
                           type="button"
-                          onClick={() => {
-                            setLightboxSrc(image.src)
-                            setLightboxAlt(image.alt)
-                          }}
+                          onClick={(e) =>
+                            lightbox.open(
+                              { src: image.src, alt: image.alt },
+                              e,
+                            )
+                          }
                           className="w-full cursor-zoom-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                           aria-label={`View larger: ${image.alt}`}
                         >
@@ -91,12 +90,12 @@ export default function ApproachSection({ items }: ApproachSectionProps) {
         </div>
       </section>
 
-      {lightboxSrc && (
+      {lightbox.active && (
         <Lightbox
-          src={lightboxSrc}
-          alt={lightboxAlt}
-          onClose={() => setLightboxSrc(null)}
-          triggerRef={triggerRef}
+          src={lightbox.active.src}
+          alt={lightbox.active.alt}
+          onClose={lightbox.close}
+          triggerRef={lightbox.triggerRef}
         />
       )}
     </>

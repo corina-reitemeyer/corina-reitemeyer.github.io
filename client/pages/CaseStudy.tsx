@@ -4,15 +4,16 @@ import MOEDesignSystem from './MOEDesignSystem'
 import SuiteFilesDesignSystem from './SuiteFilesDesignSystem'
 import SuiteFilesAISummary from './SuiteFilesAISummary'
 import ScrollToTopButton from '../components/casestudy/ScrollToTopButton'
+import { ROUTES } from '../lib/routes'
 
 export default function CaseStudy() {
   const { slug } = useParams()
   const location = useLocation()
   const backToProjectsPath = location.pathname.startsWith(
-    '/learning-experience',
+    ROUTES.learningExperience,
   )
-    ? '/learning-experiences'
-    : '/digital-products'
+    ? ROUTES.learningExperiences
+    : ROUTES.digitalProducts
 
   const renderCaseStudy = () => {
     switch (slug) {

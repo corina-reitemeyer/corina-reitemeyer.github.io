@@ -9,8 +9,9 @@ type PillTag = {
 
 type ImpactStatementProps = {
   greeting?: string
-  lines: (string | React.ReactNode)[]
+  lines: React.ReactNode[]
   pills?: PillTag[]
+  pillsLabel?: string
   align?: 'left' | 'center'
   className?: string
   padded?: boolean
@@ -21,6 +22,7 @@ export default function ImpactStatement({
   greeting,
   lines,
   pills,
+  pillsLabel = 'Designer profile summary',
   align = 'left',
   className = '',
   padded = false,
@@ -56,11 +58,7 @@ export default function ImpactStatement({
             initial={shouldReduceMotion ? false : { opacity: 0, y: 10 }}
             animate={shouldReduceMotion ? false : { opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="w-full text-[28px] font-bold leading-[1.25] tracking-tight 
-  sm:text-[48px] sm:leading-[1.2] 
-  md:text-[64px] md:leading-[1.15] 
-  xl:text-[72px] xl:leading-[1.1] 
-  2xl:text-[96px] 2xl:leading-[1.2]"
+            className="w-full text-[28px] font-bold leading-[1.25] tracking-tight sm:text-[48px] sm:leading-[1.2] md:text-[64px] md:leading-[1.15] xl:text-[72px] xl:leading-[1.1] 2xl:text-[96px] 2xl:leading-[1.2]"
           >
             {greeting && (
               <span className="block w-full text-white/70">{greeting}</span>
@@ -75,7 +73,7 @@ export default function ImpactStatement({
           {pills && pills.length > 0 && (
             <motion.ul
               role="list"
-              aria-label="Designer profile summary"
+              aria-label={pillsLabel}
               initial={shouldReduceMotion ? false : { opacity: 0, y: 6 }}
               animate={shouldReduceMotion ? false : { opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}

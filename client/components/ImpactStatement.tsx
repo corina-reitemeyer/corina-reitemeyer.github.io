@@ -50,7 +50,7 @@ export default function ImpactStatement({
       )}
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 sm:px-10 xl:px-0">
-        <div className={`flex w-full flex-col gap-6 ${alignClasses}`}>
+        <div className={`flex w-full flex-col gap-12 ${alignClasses}`}>
           <motion.h1
             id={headingId}
             initial={shouldReduceMotion ? false : { opacity: 0, y: 10 }}

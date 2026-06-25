@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { setLightboxOpen } from '../../lib/lightboxVisibility'
 
 interface LightboxProps {
   src: string
@@ -20,6 +21,12 @@ export default function Lightbox({
   // Move focus into dialog on open
   useEffect(() => {
     closeButtonRef.current?.focus()
+  }, [])
+
+  // Signal global open state so other fixed UI (e.g. scroll-to-top) can hide
+  useEffect(() => {
+    setLightboxOpen(true)
+    return () => setLightboxOpen(false)
   }, [])
 
   // Restore focus to trigger element on close
@@ -89,7 +96,7 @@ export default function Lightbox({
         type="button"
         onClick={onClose}
         aria-label="Close lightbox"
-        className="absolute right-5 top-5 z-50 p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+        className="absolute right-5 top-5 z-50 rounded-full p-2 transition duration-200 hover:bg-white/10 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
       >
         <img src="/images/Close.webp" alt="" className="h-8 w-8" />
       </button>

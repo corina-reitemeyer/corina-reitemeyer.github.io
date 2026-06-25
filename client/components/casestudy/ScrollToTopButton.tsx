@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
+import { useIsLightboxOpen } from '../../lib/lightboxVisibility'
 
 export default function ScrollUpButton() {
   const [visible, setVisible] = useState(false)
+  const lightboxOpen = useIsLightboxOpen()
 
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 400)
@@ -16,7 +18,7 @@ export default function ScrollUpButton() {
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       aria-label="Scroll to top"
       className={`fixed bottom-8 right-8 z-50 inline-flex items-center justify-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-[#08082a] shadow-lg transition-all duration-300 hover:scale-110 hover:bg-slate-100 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#08082a] motion-reduce:hover:scale-100 ${
-        visible
+        visible && !lightboxOpen
           ? 'translate-y-0 opacity-100'
           : 'pointer-events-none translate-y-4 opacity-0'
       }`}

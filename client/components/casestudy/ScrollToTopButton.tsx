@@ -36,7 +36,7 @@ export default function ScrollUpButton() {
       >
         <path d="M12 19V5M5 12l7-7 7 7" />
       </svg>
-      <span className="translate-y-px leading-none">Scroll up</span>
+      <span className="-translate-y-px leading-none">Scroll up</span>
     </button>,
     document.body,
   )

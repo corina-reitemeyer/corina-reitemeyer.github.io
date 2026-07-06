@@ -15,6 +15,7 @@ type Outcome = {
 interface KeyOutcomesProps {
   title?: string
   outcomes: Outcome[]
+  columns?: 2 | 3 | 4
   className?: string
 }
 
@@ -64,9 +65,16 @@ function OutcomeIcon({
   return null
 }
 
+const gridCols = {
+  2: 'sm:grid-cols-2',
+  3: 'sm:grid-cols-2 lg:grid-cols-3',
+  4: 'sm:grid-cols-2 lg:grid-cols-4',
+} as const
+
 export default function KeyOutcomes({
   title = 'Key Outcomes',
   outcomes,
+  columns = 3,
   className = '',
 }: KeyOutcomesProps) {
   const headingId = useId()
@@ -96,7 +104,7 @@ export default function KeyOutcomes({
         {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
         <ul
           role="list"
-          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          className={`grid grid-cols-1 gap-6 ${gridCols[columns]}`}
         >
           {outcomes.map((outcome, index) => (
             <li

@@ -1,6 +1,7 @@
 import { useId } from 'react'
 import { motion, useReducedMotion, type Variants } from 'framer-motion'
 import { defaultViewport } from '../../lib/motion'
+import Disclaimer from './Disclaimer'
 
 type Highlight = {
   id: string
@@ -13,6 +14,12 @@ type MetaItem = {
   value: string
 }
 
+type Cta = {
+  label: string
+  href: string
+  external?: boolean
+}
+
 type CaseStudyNavyProps = {
   intro: string
   company: string
@@ -20,10 +27,12 @@ type CaseStudyNavyProps = {
   imageSrc: string
   imageAlt: string
   imageCaption?: string
+  disclaimer?: string
   overview: string
   involvement: string
   meta: MetaItem[]
   highlights?: Highlight[]
+  ctas?: Cta[]
   className?: string
 }
 
@@ -70,10 +79,12 @@ export default function CaseStudyNavy({
   imageSrc,
   imageAlt,
   imageCaption,
+  disclaimer,
   overview,
   involvement,
   meta,
   highlights,
+  ctas,
   className = '',
 }: CaseStudyNavyProps) {
   const headingId = useId()
@@ -142,6 +153,8 @@ export default function CaseStudyNavy({
           )}
         </motion.figure>
 
+        {disclaimer && <Disclaimer className="mt-6">{disclaimer}</Disclaimer>}
+
         {/* Overview + Role/Involvement */}
         <div className="mt-16 grid grid-cols-1 gap-10 sm:mt-20 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-4">
@@ -178,6 +191,22 @@ export default function CaseStudyNavy({
               </div>
             ))}
           </dl>
+        )}
+
+        {/* CTAs */}
+        {ctas && ctas.length > 0 && (
+          <div className="mt-10 flex flex-wrap gap-4">
+            {ctas.map((cta) => (
+              <a
+                key={cta.label}
+                href={cta.href}
+                {...(cta.external ? { target: '_blank', rel: 'noreferrer' } : {})}
+                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#08082a] transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#08082a]"
+              >
+                {cta.label}
+              </a>
+            ))}
+          </div>
         )}
       </div>
     </section>

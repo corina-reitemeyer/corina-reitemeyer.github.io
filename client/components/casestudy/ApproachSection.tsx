@@ -1,5 +1,6 @@
 import Lightbox from '../casestudy/LightBox'
 import { useLightboxImage } from '../../lib/useLightboxImage'
+import NoteBox from './NoteBox'
 
 type ApproachImage = {
   id: string
@@ -8,37 +9,49 @@ type ApproachImage = {
   caption?: string
 }
 
+type ApproachLink = {
+  label: string
+  href: string
+}
+
 type ApproachItem = {
   id: string
-  heading: string
+  heading?: string
   body: string[]
   images?: ApproachImage[]
+  links?: ApproachLink[]
+  note?: string
 }
 
 type ApproachSectionProps = {
   items: ApproachItem[]
+  title?: string
 }
 
-export default function ApproachSection({ items }: ApproachSectionProps) {
+export default function ApproachSection({ items, title = 'Approach' }: ApproachSectionProps) {
   const lightbox = useLightboxImage()
 
   return (
     <>
       <section
-        aria-label="Approach"
+        aria-label={title ?? 'Content section'}
         className="w-full bg-[#08082a] py-16 sm:py-24"
       >
         <div className="mx-auto max-w-2xl px-6 lg:px-0">
-          <h2 className="mb-12 text-4xl font-bold text-white antialiased sm:text-5xl">
-            Approach
-          </h2>
+          {title && (
+            <h2 className="mb-12 text-4xl font-bold text-white antialiased sm:text-5xl">
+              {title}
+            </h2>
+          )}
 
           <div className="space-y-20">
             {items.map((item) => (
               <div key={item.id}>
-                <h3 className="mb-6 text-xl font-bold text-white antialiased sm:text-2xl">
-                  {item.heading}
-                </h3>
+                {item.heading && (
+                  <h3 className="mb-6 text-xl font-bold text-white antialiased sm:text-2xl">
+                    {item.heading}
+                  </h3>
+                )}
 
                 <div className="space-y-4">
                   {item.body.map((paragraph, i) => (
@@ -50,6 +63,24 @@ export default function ApproachSection({ items }: ApproachSectionProps) {
                     </p>
                   ))}
                 </div>
+
+                {item.links && item.links.length > 0 && (
+                  <div className="mt-6 flex flex-wrap gap-4">
+                    {item.links.map((link) => (
+                      <a
+                        key={link.label}
+                        href={link.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-sm font-medium text-[#CBEDE8] underline underline-offset-4 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                      >
+                        {link.label} ↗
+                      </a>
+                    ))}
+                  </div>
+                )}
+
+                {item.note && <NoteBox>{item.note}</NoteBox>}
 
                 {item.images && item.images.length > 0 && (
                   <div className="mt-8 space-y-6">

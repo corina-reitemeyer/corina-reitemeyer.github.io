@@ -3,6 +3,7 @@ import OWTemplates from './OWTemplates'
 import MOEDesignSystem from './MOEDesignSystem'
 import SuiteFilesDesignSystem from './SuiteFilesDesignSystem'
 import SuiteFilesAISummary from './SuiteFilesAISummary'
+import BuildingAdaptiveTeams from './BuildingAdaptiveTeams'
 import ScrollToTopButton from '../components/casestudy/ScrollToTopButton'
 import { ROUTES } from '../lib/routes'
 
@@ -25,6 +26,8 @@ export default function CaseStudy() {
         return <MOEDesignSystem />
       case 'suitefiles-design-system':
         return <SuiteFilesDesignSystem />
+      case 'building-adaptive-teams':
+        return <BuildingAdaptiveTeams />
       default:
         return (
           <section className="flex min-h-screen flex-col items-center justify-center bg-[#08082a] px-6 text-center">

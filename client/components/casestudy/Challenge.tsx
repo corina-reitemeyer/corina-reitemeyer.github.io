@@ -1,5 +1,6 @@
 import Lightbox from '../../components/casestudy/LightBox'
 import { useLightboxImage } from '../../lib/useLightboxImage'
+import NoteBox from './NoteBox'
 
 type ChallengeImage = {
   id: string
@@ -10,37 +11,44 @@ type ChallengeImage = {
 
 type ChallengeItem = {
   id: string
-  heading: string
+  heading?: string
   body: (string | { text: string; bold: boolean })[]
   image?: ChallengeImage
+  note?: string
 }
 
 type ChallengeSectionProps = {
   challenges: ChallengeItem[]
+  title?: string
 }
 
 export default function ChallengeSection({
   challenges,
+  title = 'Challenge',
 }: ChallengeSectionProps) {
   const lightbox = useLightboxImage()
 
   return (
     <>
       <section
-        aria-label="Challenge"
+        aria-label={title || 'Challenge'}
         className="w-full bg-[#08082a] py-16 sm:pt-32"
       >
         <div className="mx-auto max-w-2xl px-6 lg:px-0">
-          <h2 className="mb-12 text-4xl font-bold text-white antialiased sm:text-5xl">
-            Challenge
-          </h2>
+          {title && (
+            <h2 className="mb-12 text-4xl font-bold text-white antialiased sm:text-5xl">
+              {title}
+            </h2>
+          )}
 
           <div className="space-y-16">
             {challenges.map((challenge) => (
               <div key={challenge.id}>
-                <h3 className="mb-6 text-xl font-bold text-white antialiased sm:text-2xl">
-                  {challenge.heading}
-                </h3>
+                {challenge.heading && (
+                  <h3 className="mb-6 text-xl font-bold text-white antialiased sm:text-2xl">
+                    {challenge.heading}
+                  </h3>
+                )}
                 <div className="space-y-4">
                   {challenge.body.map((segment, i) =>
                     typeof segment === 'string' ? (
@@ -62,6 +70,8 @@ export default function ChallengeSection({
                     ),
                   )}
                 </div>
+
+                {challenge.note && <NoteBox>{challenge.note}</NoteBox>}
 
                 {challenge.image && (
                   <figure className="mt-8">

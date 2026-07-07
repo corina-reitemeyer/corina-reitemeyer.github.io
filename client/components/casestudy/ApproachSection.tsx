@@ -18,6 +18,7 @@ type ApproachItem = {
   id: string
   heading?: string
   body: string[]
+  list?: string[]
   images?: ApproachImage[]
   links?: ApproachLink[]
   note?: string
@@ -63,6 +64,14 @@ export default function ApproachSection({ items, title = 'Approach' }: ApproachS
                     </p>
                   ))}
                 </div>
+
+                {item.list && item.list.length > 0 && (
+                  <ul className="mt-4 list-disc space-y-2 pl-5 text-lg leading-relaxed text-slate-300 antialiased">
+                    {item.list.map((entry, i) => (
+                      <li key={i}>{entry}</li>
+                    ))}
+                  </ul>
+                )}
 
                 {item.links && item.links.length > 0 && (
                   <div className="mt-6 flex flex-wrap gap-4">

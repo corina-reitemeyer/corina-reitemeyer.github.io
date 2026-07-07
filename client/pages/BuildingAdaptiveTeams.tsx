@@ -8,7 +8,6 @@ import ImageStrip from '../components/casestudy/ImageStrip'
 import Takeaways from '../components/casestudy/Takeaways'
 import PullQuote from '../components/casestudy/PullQuote'
 import PersonaCard from '../components/casestudy/PersonaCard'
-import NoteBox from '../components/casestudy/NoteBox'
 import ProcessFramework from '../components/casestudy/ProcessFramework'
 
 export default function BuildingAdaptiveTeams() {
@@ -44,7 +43,11 @@ export default function BuildingAdaptiveTeams() {
         src="/files/video/elearning-course-walkthrough.mov"
         title="Course Walkthrough"
         caption="A walkthrough of the full six-lesson course, built in Articulate Rise."
-        cta={{ label: 'Experience the live course', href: '#', external: true }}
+        cta={{
+          label: 'Experience the live course',
+          href: '/files/it-will-click-eventually-course/index.html',
+          external: true,
+        }}
       />
 
       {/* 3. Course screenshots */}
@@ -145,6 +148,8 @@ export default function BuildingAdaptiveTeams() {
             heading: 'The brief',
             body: [
               'For this project, I invented a client: Priya Mehta, Director of Digital Transformation at a fictional Waratah University. She came in with a clear ask, and some data to back it up.',
+              "Waratah is a mid-sized Australian university, around 18,000 students across five faculties. Canvas replaced a Blackboard instance that had been limping along since 2015, and the $2.3 million migration was Priya's project. She'd pushed hard for Canvas over two other shortlisted platforms, so a rollout that landed badly reflected on her, not just IT.",
+              "Semester 2 was six weeks out when we spoke, and the Vice-Chancellor's office had started asking questions. Whatever training existed needed to work, and it needed to work fast.",
             ],
           },
         ]}
@@ -161,8 +166,12 @@ export default function BuildingAdaptiveTeams() {
       </section>
 
       {/* 6. Key stats */}
-      <section className="bg-[#08082a] pb-16 sm:pb-24">
+      <section className="bg-[#08082a]">
         <div className="mx-auto max-w-6xl px-6 lg:px-0">
+          <p className="mb-8 max-w-2xl text-lg leading-relaxed text-slate-300 antialiased">
+            Priya came to that first conversation with data already in hand.
+            Three numbers set the terms for everything that followed:
+          </p>
           <dl className="grid grid-cols-1 gap-8 sm:grid-cols-3">
             {[
               {
@@ -192,10 +201,11 @@ export default function BuildingAdaptiveTeams() {
           {
             id: 'the-brief-analysis',
             body: [
-              'The 78/34 split was the first real signal. Training satisfaction and behaviour change aren\'t the same metric, that\'s Kirkpatrick Level 1 versus Level 3. The data pointed at something other than "staff weren\'t trained." It pointed at "the training didn\'t change anything."',
-              'Before I could design a solution, I needed to understand why.',
+              "From the data alone, the 78/34 split was the first signal that something deeper was going on. Training satisfaction and behaviour change aren't the same metric, in Kirkpatrick's evaluation model that's Level 1 versus Level 3, and the gap between them suggested the problem wasn't that staff hadn't been trained. It was that the training hadn't changed anything.",
+              "The patchiness had a shape to it too. Some faculties had picked up Canvas within weeks. Others were barely using it at all. Priya's assumption was that the training resources were the issue: wrong format, wrong quality, not enough of them.",
+              "That might have been part of it. But it didn't explain why the gap between faculties was so pronounced, or why staff who'd rated the training positively were still not using the tool.",
+              'Before designing anything, I needed to understand why.',
             ],
-            note: "In a real project, I'd bring this observation back to the stakeholder before going any further, and get explicit buy-in to spend time on discovery before committing to a solution. On a six-week timeline, that conversation would need to happen in the first 48 hours.",
           },
         ]}
       />
@@ -206,11 +216,16 @@ export default function BuildingAdaptiveTeams() {
         items={[
           {
             id: 'discovery-approach',
-            heading: 'The approach',
             body: [
-              'Instead of jumping straight to design, I built in a short discovery phase: four interviews across one week, meant to check the actual problem before committing to a solution.',
-              "There's no real university behind this project, so there were no real interviews either. The interview guide is real, built the way I'd actually run this phase with real team leads. What follows it (the findings) is a plausible picture I put together from common patterns in tool adoption and change management, and my own experience of what change fatigue looks like on a team. None of it is a transcript.",
-              "The interview guide itself was structured around three zones: Zone 1 (Their world), role, week, pressures, what good looks like. Zone 2 (Their workflow), how they currently do the things Canvas is supposed to help with. Zone 3 (The tool), what happened, what helped, what didn't.",
+              "I drew on how I'd actually handle this situation from experience: specifically, the stakeholder management challenge of proposing discovery work within an already tight timeline.",
+              "In practice, a formal research phase is rarely in scope on a six-week brief. Proposing one risks sounding like a delay before you've even started. The move is to reframe it: light context gathering, folded into the timeline rather than added on top of it. A handful of short conversations with team leads, positioned as due diligence rather than a research sprint.",
+              'That framing matters. It makes the same work easier to say yes to.',
+              'The interview guide was structured around three zones:',
+            ],
+            list: [
+              'Their world, role, week, pressures, what good looks like.',
+              'Their workflow, how they currently do the things Canvas is supposed to help with.',
+              "The tool, what happened, what helped, what didn't, what's missing.",
             ],
             images: [
               {
@@ -221,12 +236,19 @@ export default function BuildingAdaptiveTeams() {
                   'Interview guide: three zones structured to surface the conditions behind adoption.',
               },
             ],
-            links: [{ label: 'View full interview guide', href: '#' }],
+            links: [
+              {
+                label: 'View full interview guide',
+                href: 'https://docs.google.com/document/d/1Ob2MiiCVruESEkMHlU9-ACbzQaZViDO2RayMAS5AiFQ/edit?usp=sharing',
+              },
+            ],
           },
         ]}
       />
 
       <AchievementsSection
+        title="What those conversations could surface"
+        intro="Conversations like these tend to split into two clear patterns: teams where adoption stuck, and teams where it didn't. Here's the kind of thing each side could plausibly say."
         achievements={[
           {
             id: 'discovery-low-adoption',
@@ -243,23 +265,11 @@ export default function BuildingAdaptiveTeams() {
         ]}
       />
 
-      <section className="bg-[#08082a] px-6 pb-16 sm:pb-24 lg:px-0">
-        <div className="mx-auto max-w-2xl">
-          <NoteBox>
-            In a real project, this would be primary research with actual team
-            leads and staff across multiple faculties, not constructed
-            findings. The interview guide reflects how I&apos;d actually run
-            that phase.
-          </NoteBox>
-        </div>
-      </section>
-
       {/* 8. The dual problem */}
-      {/* Visual opportunity: this section is text-only right now. A simple two-panel
-          diagram (design failure vs. environment failure) would let people see the split
-          instead of reading it in two paragraphs. */}
       <AchievementsSection
         title="The dual problem"
+        variant="cards"
+        className="pb-8 sm:pb-12"
         achievements={[
           {
             id: 'problem-design',
@@ -276,6 +286,26 @@ export default function BuildingAdaptiveTeams() {
         ]}
       />
 
+      <section className="bg-[#08082a] px-6 pb-16 sm:pb-24 lg:px-0">
+        <div className="mx-auto max-w-2xl space-y-4">
+          <p className="text-lg leading-relaxed text-slate-300 antialiased">
+            {
+              "This course leans into Problem 2. Priya's original ask was really aimed at Problem 1: better training content, delivered differently. But discovery pointed at something a training redesign alone wouldn't fix: the conditions team leads were operating in."
+            }
+          </p>
+          <p className="text-lg leading-relaxed text-slate-300 antialiased">
+            {
+              "There's also a practical asymmetry between the two problems. If someone needs to know how to post an announcement in Canvas, that's a five-minute search away: help docs, videos, forums. But no generic resource can teach a team lead how to build psychological safety in their specific team, with its own history and dynamics. That has to be shaped by the organisation's own context. That's where instructional design adds value instead of duplicating what the internet already does well."
+            }
+          </p>
+          <p className="text-lg leading-relaxed text-slate-300 antialiased">
+            {
+              "Both problems are real, and solving only one is a compromise. Six weeks doesn't stretch to both. This course is the first piece of a three-part upskilling strategy, built to address the environment failure. A second piece, sharper on the Canvas specifics, would follow it."
+            }
+          </p>
+        </div>
+      </section>
+
       {/* 9. The learner */}
       <ApproachSection
         title="The learner"
@@ -284,6 +314,7 @@ export default function BuildingAdaptiveTeams() {
             id: 'learner-intro',
             body: [
               'Before designing anything, I needed to know who I was actually designing for. Not a generic team lead. A specific person, with a specific history and specific reasons to be wary of yet another new tool.',
+              "In a real project, that picture would come from conversations with team leads and subject matter experts. Since this one's fictional, it's loosely inspired by team leads I've met in past roles, not built from nothing, but not primary research either.",
             ],
           },
         ]}
@@ -331,11 +362,6 @@ export default function BuildingAdaptiveTeams() {
             ]}
             quote="I have a PhD. I don't need a three-hour workshop to learn how to post an announcement. My students are fine. Why is this suddenly urgent?"
           />
-          <NoteBox>
-            In a real project, I&apos;d validate this persona through interviews
-            with real team leads, instead of building it from general sector
-            knowledge and my own assumptions.
-          </NoteBox>
         </div>
       </section>
 
@@ -344,12 +370,30 @@ export default function BuildingAdaptiveTeams() {
         title="Design decisions"
         items={[
           {
-            id: 'design-narrative',
-            heading: 'Narrative over instruction',
+            id: 'design-planning',
+            heading: 'Planning the experience',
             body: [
-              "Most learning about change management tells people what to do. This course shows what happens when someone doesn't, and lets the learner work out why on their own.",
-              "Carl and Jamie's story leans on vicarious learning theory, Bandura's idea that people learn well by watching someone else navigate a situation and feel the consequences, before they're asked to apply anything themselves.",
-              'The story also creates some distance. Jordan can watch Carl get it wrong without feeling personally attacked. By the time the course asks Jordan to reflect on their own team, most of the emotional groundwork is already done.',
+              'Before opening either tool, the course was mapped out in full: a course outline to establish the lesson structure and logic, a storyboard to plan the story beat by beat, and an interaction map to work out where the learner needed to do something rather than just read.',
+              'That planning phase is where most of the real design decisions happen. The tools come later.',
+            ],
+            images: [
+              {
+                id: 'bat-course-map',
+                src: '/images/lxd/bat-course-map.webp',
+                alt: 'FigJam course map showing six lessons and the Storyline embed point in Lesson 6',
+                caption:
+                  'Course architecture: six lessons in FigJam, with the Storyline embed point marked in Lesson 6.',
+              },
+            ],
+            links: [
+              {
+                label: 'View course outline',
+                href: 'https://www.figma.com/board/G1EEEgnIADUHZ6lOxyb1q6/Course-outline---It-will-click-eventually?node-id=0-1&t=cUSslwPYzLAiaNa0-1',
+              },
+              {
+                label: 'View storyboard',
+                href: 'https://docs.google.com/presentation/d/1rKZ7C1_6iSOq4C9qZTIIUw7ugJNt1l49_ygJwBzqMUA/edit?usp=sharing',
+              },
             ],
           },
           {
@@ -364,37 +408,10 @@ export default function BuildingAdaptiveTeams() {
             id: 'design-tools',
             heading: 'Rise for content, Storyline for interaction',
             body: [
-              "Rise handled the content-heavy narrative lessons: scrolling, readable, works fine on a phone. Storyline handled the branching interaction in Lesson 6, where the learner actually steers Carl's conversation with Jamie.",
-              'The split was deliberate. Rise is good at scrolling narrative. Storyline is good at learner agency and consequence-based feedback. Better to use the right tool for each screen than force one tool to do everything.',
-            ],
-            images: [
-              {
-                id: 'bat-course-map',
-                src: '/images/lxd/bat-course-map.webp',
-                alt: 'FigJam course map showing six lessons and the Storyline embed point in Lesson 6',
-                caption:
-                  'Course architecture: six lessons in FigJam, with the Storyline embed point marked in Lesson 6.',
-              },
-            ],
-            links: [
-              { label: 'View course architecture', href: '#' },
-              { label: 'View storyboard', href: '#' },
-              { label: 'View design document', href: '#' },
-            ],
-          },
-          {
-            id: 'design-consequence',
-            heading: 'Consequence feedback, not right or wrong',
-            body: [
-              'The Storyline interaction gives consequence feedback instead of marking answers correct or incorrect. Jordan sees what happens after Carl makes each choice, not a red cross or a green tick.',
-              "That choice mirrors what the course is actually about. A course on psychological safety shouldn't shame learners for getting an answer wrong. The assessment has to practise what the content teaches.",
-            ],
-          },
-          {
-            id: 'design-attitude',
-            heading: 'Attitude before skill',
-            body: [
-              "The course opens with empathy: Jordan watches Carl and Jamie's conversation play out before being asked to change anything about their own behaviour. That's grounded in Mezirow's transformative learning theory, the idea that a shift in perspective needs emotional engagement before it can take on any cognitive instruction. You can't teach someone to create psychological safety if they haven't first felt what it costs to go without it.",
+              'The original plan was to build the whole course in Storyline. It made sense on paper: more control over every screen, richer interactions, full custom design.',
+              "The reason I moved away from it was responsiveness. A time-poor team lead should be able to pick up the course between meetings on their phone as easily as at their desk. Rise handles that out of the box. Storyline requires significantly more work to get there, and on a six-week timeline that work wasn't justifiable.",
+              "The tradeoff is that Rise has real limitations with complex interactions. It can do simple branching, but not the kind of consequence-driven scenario I wanted for Lesson 6, where the learner actively steers a conversation and sees what happens as a result. That's where Storyline came back in, as a focused embed rather than the primary tool.",
+              'Better to use each tool for what it actually does well.',
             ],
           },
         ]}
@@ -403,6 +420,10 @@ export default function BuildingAdaptiveTeams() {
       {/* 11. Learning theory */}
       <KeyOutcomes
         title="Learning theory"
+        intro={[
+          'These frameworks were not consulted after the course was built to justify decisions already made. They shaped the design from the start, which learning sequence to use, how to structure the reflection prompts, why the assessment works the way it does, and why the course opens with a story instead of an objective.',
+          'What follows is a short account of each one and where it shows up in the course.',
+        ]}
         columns={2}
         outcomes={[
           {
@@ -524,39 +545,43 @@ export default function BuildingAdaptiveTeams() {
       />
 
       {/* 14. Constraints and trade-offs */}
-      {/* Visual opportunity: this reads as a plain list right now. A lightweight icon row
-          or a simple "now vs. version 2" roadmap graphic would show the trade-offs instead
-          of just listing them. */}
       <AchievementsSection
         title="Constraints and trade-offs"
         achievements={[
           {
-            id: 'constraint-speculative',
-            title: 'Speculative brief',
+            id: 'constraint-fictional',
+            title: 'Fictional concept',
             description:
-              "The scenario, the organisation, and the characters are all made up. Primary research with real team leads would do a lot to strengthen the persona, the problem framing, and the discovery findings. The interview guide reflects how I'd actually run that phase on a real project.",
+              "The scenario, the organisation, and the characters are all made up. Primary research with real team leads would strengthen the persona, the problem framing, and the discovery findings considerably. The interview guide reflects how I'd actually run that phase on a real project.",
           },
           {
             id: 'constraint-solo',
             title: 'Solo practitioner',
             description:
-              'No SME access and no real learner testing. Design decisions came from general sector knowledge, learning design theory, and my own experience, rather than primary data.',
+              'No SME access and no real learner testing. Design decisions came from sector knowledge, learning design theory, and my own experience of what change fatigue looks like on a team, rather than primary data.',
           },
           {
-            id: 'constraint-v2',
-            title: 'Version 2 opportunities',
+            id: 'constraint-evaluation',
+            title: 'Evaluation',
+            description: [
+              'Without real learners, the Evaluation phase, the "E" in ADDIE, couldn\'t actually run.',
+              'If it had, it would tell us whether this course moved the needle: adoption rates, manager observation, and a 90-day confidence follow-up with team leads. That data would also answer a question the brief left open, whether a companion onboarding piece for team members is actually needed, or whether shifting the team lead conditions is enough on its own.',
+            ],
+          },
+          {
+            id: 'constraint-tools',
+            title: 'Tools',
             description:
-              'A full branching scenario in Storyline would make for a richer practice experience than the Pick One interaction. A companion piece, a Canvas onboarding intervention for team members, got identified but was descoped. Real learner data would actually make the Likert confidence surveys mean something.',
+              'The course was built during an Articulate 360 and MoodleCloud trial period. The GitHub Pages deployment ensures the live link remains accessible independently of any subscription.',
           },
         ]}
       />
 
-      {/* 15. What I'd do differently */}
+      {/* 15. Takeaways */}
       <Takeaways
         paragraphs={[
-          "Even one real team lead walking through this course would have surfaced assumptions I can't see from inside my own design. Usability testing with the actual target learner is what I'd prioritise first on a real version of this project.",
-          "The Pick One interaction in Lesson 6 works, but a full branching scenario, where Jordan's choices lead to genuinely different conversations, would be a lot more immersive. That's the top priority for a version 2.",
-          "The Likert confidence surveys sit at the start and end of the course. With real learners, the before-and-after data would tell you something real about what the course actually changed. Without real learners, they're structural placeholders, nothing more.",
+          "Coming up with a story that actually lands was harder than I expected. The Carl and Jamie scenario went through several versions before it felt genuinely relatable rather than constructed. The challenge is finding the right level of specificity: too generic and it feels like a training video cliché, too niche and it stops being anyone's story. The gradebook detail, Jamie not raising it a second time, Carl's internal monologue about the next meeting: those small specifics are what make it feel like something that could actually happen, rather than something designed to illustrate a point.",
+          "The other learning curve was embedding theory into the flow without it showing. It's straightforward enough to know that Mezirow says perspective shifts need emotional engagement before cognitive instruction. It's harder to actually build a lesson sequence where that principle is doing the work invisibly, where the learner feels the logic of the order without being told why it's structured that way. That gap between knowing a framework and designing from it is where most of the real ID thinking happened.",
         ]}
       />
     </>

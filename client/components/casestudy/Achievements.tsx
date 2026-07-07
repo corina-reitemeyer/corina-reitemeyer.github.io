@@ -3,18 +3,22 @@ import { useId } from 'react'
 type Achievement = {
   id: string
   title: string
-  description: string
+  description: string | string[]
 }
 
 interface AchievementsSectionProps {
   title?: string
+  intro?: string
   achievements: Achievement[]
+  variant?: 'list' | 'cards'
   className?: string
 }
 
 export default function AchievementsSection({
   title,
+  intro,
   achievements,
+  variant = 'list',
   className = '',
 }: AchievementsSectionProps) {
   const headingId = useId()
@@ -29,9 +33,18 @@ export default function AchievementsSection({
     >
       <div className="container mx-auto max-w-6xl px-6 sm:px-8">
         {title && (
-          <h2 id={headingId} className="mb-8 text-4xl font-bold text-white">
+          <h2
+            id={headingId}
+            className={`text-4xl font-bold text-white ${intro ? 'mb-4' : 'mb-8'}`}
+          >
             {title}
           </h2>
+        )}
+
+        {intro && (
+          <p className="mb-8 max-w-2xl text-lg leading-relaxed text-slate-300 antialiased">
+            {intro}
+          </p>
         )}
 
         {/* role="list" restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
@@ -43,14 +56,23 @@ export default function AchievementsSection({
           {achievements.map((achievement) => (
             <li
               key={achievement.id}
-              className="border-l-2 border-white/20 pl-5"
+              className={
+                variant === 'cards'
+                  ? 'rounded-xl border border-white/10 bg-white/[0.04] p-6 sm:p-8'
+                  : 'border-l-2 border-white/20 pl-5'
+              }
             >
               <h3 className="text-lg font-semibold text-white">
                 {achievement.title}
               </h3>
-              <p className="mt-2 max-w-prose text-slate-300">
-                {achievement.description}
-              </p>
+              <div className="mt-2 max-w-prose space-y-2 text-slate-300">
+                {(Array.isArray(achievement.description)
+                  ? achievement.description
+                  : [achievement.description]
+                ).map((paragraph, i) => (
+                  <p key={i}>{paragraph}</p>
+                ))}
+              </div>
             </li>
           ))}
         </ul>

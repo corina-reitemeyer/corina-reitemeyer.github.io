@@ -16,6 +16,7 @@ type Outcome = {
 
 interface KeyOutcomesProps {
   title?: string
+  intro?: string | string[]
   outcomes: Outcome[]
   columns?: 2 | 3 | 4
   className?: string
@@ -78,6 +79,7 @@ const gridCols = {
 
 export default function KeyOutcomes({
   title = 'Key Outcomes',
+  intro,
   outcomes,
   columns = 3,
   className = '',
@@ -149,6 +151,19 @@ export default function KeyOutcomes({
             </li>
           ))}
         </ul>
+
+        {intro && (
+          <div className="mx-auto mt-12 max-w-2xl space-y-4 text-left">
+            {(Array.isArray(intro) ? intro : [intro]).map((paragraph, i) => (
+              <p
+                key={i}
+                className="text-lg leading-relaxed text-slate-300 antialiased"
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   )

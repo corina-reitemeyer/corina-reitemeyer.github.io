@@ -1,0 +1,57 @@
+{
+  "version": "3.120.37241.0",
+  "course_id": "5YxzQWm6bf7",
+  "title": "Building Adaptive Teams",
+  "thumbnail": "story_content/thumbnail.jpg",
+  "scenes": [
+    {
+      "title": "Practice (Learners helps Carl with Situations)"
+    }
+  ],
+  "slides": [
+    {
+      "id": "5uZgOt3kkjD",
+      "title": "Opening Scene",
+      "scene_index": "1.1"
+    },
+    {
+      "id": "6KXu1sK7UM8",
+      "title": "Pick One - Scenario 1",
+      "scene_index": "1.2"
+    },
+    {
+      "id": "6PFxGBVVZkm",
+      "title": "Dialog 1",
+      "scene_index": "1.3"
+    },
+    {
+      "id": "6ghq2AChtjA",
+      "title": "Pick One - Scenario 2",
+      "scene_index": "1.4"
+    },
+    {
+      "id": "675wiIvTUNk",
+      "title": "Dialog 2",
+      "scene_index": "1.5"
+    },
+    {
+      "id": "5tB5bda64vD",
+      "title": "Pick One - Scenario 3",
+      "scene_index": "1.6"
+    },
+    {
+      "id": "6kqfHdnAtZN",
+      "title": "Closing scene",
+      "scene_index": "1.7"
+    }
+  ],
+  "player": {
+    "name": "unified",
+    "width": 1300,
+    "height": 791
+  },
+  "stage": {
+    "width": 1280,
+    "height": 720
+  }
+}

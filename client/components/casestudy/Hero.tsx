@@ -28,7 +28,7 @@ type CaseStudyNavyProps = {
   imageAlt: string
   imageCaption?: string
   disclaimer?: string
-  overview: string
+  overview: string | string[]
   involvement: string
   meta: MetaItem[]
   highlights?: Highlight[]
@@ -38,7 +38,7 @@ type CaseStudyNavyProps = {
 
 type DetailItemProps = {
   term: string
-  description: string
+  description: string | string[]
 }
 
 const fadeInUp: Variants = {
@@ -65,8 +65,12 @@ function DetailItem({ term, description }: DetailItemProps) {
       <dt className="text-sm font-semibold uppercase tracking-wide text-white antialiased">
         {term}
       </dt>
-      <dd className="mt-2 max-w-prose text-slate-300 antialiased">
-        {description}
+      <dd className="mt-2 max-w-prose space-y-5 text-slate-300 antialiased">
+        {Array.isArray(description) ? (
+          description.map((paragraph, i) => <p key={i}>{paragraph}</p>)
+        ) : (
+          <p>{description}</p>
+        )}
       </dd>
     </div>
   )
@@ -96,8 +100,10 @@ export default function CaseStudyNavy({
       className={`w-full bg-[#08082a] text-white ${className}`}
     >
       <div className="container mx-auto max-w-6xl px-6 pb-14 pt-28 sm:px-8 sm:pb-16">
-        {/* Hook headline */}
-        <motion.h2
+        {/* Hook headline — the page's h1: no other heading on a case study page
+            precedes it, so this is the primary landmark for screen reader users
+            navigating by heading level. */}
+        <motion.h1
           id={headingId}
           className="max-w-4xl text-3xl font-semibold leading-[1.4] text-white antialiased md:text-4xl md:leading-[1.3] lg:text-5xl lg:leading-[1.25]"
           variants={shouldReduceMotion ? undefined : fadeInUp}
@@ -106,7 +112,7 @@ export default function CaseStudyNavy({
           viewport={defaultViewport}
         >
           {intro}
-        </motion.h2>
+        </motion.h1>
 
         {/* Impact highlights — right under headline */}
         {highlights && highlights.length > 0 && (
@@ -182,7 +188,7 @@ export default function CaseStudyNavy({
                   index !== 0 ? 'border-l border-white/10' : ''
                 }`}
               >
-                <dt className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/40 antialiased">
+                <dt className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/60 antialiased">
                   {item.label}
                 </dt>
                 <dd className="text-base font-medium text-white antialiased">
@@ -204,6 +210,7 @@ export default function CaseStudyNavy({
                 className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#08082a] transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#08082a]"
               >
                 {cta.label}
+                {cta.external && <span className="sr-only"> (opens in a new tab)</span>}
               </a>
             ))}
           </div>

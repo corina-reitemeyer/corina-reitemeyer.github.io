@@ -7,7 +7,7 @@ type Achievement = {
 }
 
 interface AchievementsSectionProps {
-  title: string
+  title?: string
   achievements: Achievement[]
   className?: string
 }
@@ -23,13 +23,16 @@ export default function AchievementsSection({
 
   return (
     <section
-      aria-labelledby={headingId}
-      className={`bg-[#08082a] py-28 ${className}`}
+      aria-label={title || undefined}
+      aria-labelledby={title ? headingId : undefined}
+      className={`bg-[#08082a] py-16 sm:py-24 ${className}`}
     >
       <div className="container mx-auto max-w-6xl px-6 sm:px-8">
-        <h2 id={headingId} className="mb-8 text-4xl font-bold text-white">
-          {title}
-        </h2>
+        {title && (
+          <h2 id={headingId} className="mb-8 text-4xl font-bold text-white">
+            {title}
+          </h2>
+        )}
 
         {/* role="list" restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
         {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}

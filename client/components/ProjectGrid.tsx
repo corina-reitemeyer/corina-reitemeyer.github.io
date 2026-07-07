@@ -9,6 +9,9 @@ type ProjectGridItem = {
   projectTitle: string
   company?: string
   slug: string
+  /** Overrides the section-level linkPrefix for this project, e.g. when mixing
+   *  projects from different sections in one grid. */
+  linkPrefix?: string
 }
 
 type ProjectGridProps = {
@@ -46,7 +49,7 @@ export default function ProjectGrid({
 
   const visibleProjects = projects
     .filter((p) => p.projectTitle && p.slug && p.projectImage)
-    .slice(0, 4)
+    .slice(0, 5)
 
   return (
     <section
@@ -107,10 +110,12 @@ export default function ProjectGrid({
             </>
           )
 
-          return linkPrefix ? (
+          const resolvedPrefix = project.linkPrefix ?? linkPrefix
+
+          return resolvedPrefix ? (
             <Link
               key={project.id}
-              to={`${linkPrefix}/${project.slug}`}
+              to={`${resolvedPrefix}/${project.slug}`}
               aria-label={ariaLabel}
               className={wrapperClassName}
             >

@@ -1,8 +1,17 @@
 import ProjectData from '../../src/projectsdata.json'
+import LXDData from '../../src/lxddata.json'
 import Project from '../../models/projectdata'
 import ImpactStatement from '../components/ImpactStatement'
 import ProjectGrid from '../components/ProjectGrid'
 import { ROUTES } from '../lib/routes'
+
+const selectedWorks: Project[] = [
+  ...(ProjectData as Project[]),
+  ...(LXDData as Project[]).map((project) => ({
+    ...project,
+    linkPrefix: ROUTES.learningExperience,
+  })),
+]
 
 export default function Landing() {
   return (
@@ -30,7 +39,7 @@ export default function Landing() {
 
       <ProjectGrid
         heading="Selected works"
-        projects={ProjectData as Project[]}
+        projects={selectedWorks}
         linkPrefix={ROUTES.digitalProduct}
       />
     </>

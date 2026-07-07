@@ -77,7 +77,7 @@ export default function PullQuote({
             <span className="font-semibold text-slate-300">{attribution}</span>
           )}
           {attribution && attributionRole && (
-            <span className="mx-2 text-slate-500">·</span>
+            <span className="mx-2 text-slate-400">·</span>
           )}
           {attributionRole}
         </motion.figcaption>

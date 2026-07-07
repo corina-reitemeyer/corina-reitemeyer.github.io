@@ -1,4 +1,4 @@
-import { useId } from 'react'
+import { useId, useState } from 'react'
 import { useReducedMotion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
@@ -6,6 +6,8 @@ type Outcome = {
   id: string
   title: string
   description: string
+  /** Small uppercase label shown above the title, e.g. a theorist's name. */
+  eyebrow?: string
   iconNode?: React.ReactNode
   iconEmoji?: string
   iconSrc?: string
@@ -32,6 +34,8 @@ function OutcomeIcon({
   iconSrc,
   iconAlt,
 }: OutcomeIconProps) {
+  const [imgFailed, setImgFailed] = useState(false)
+
   if (iconNode) {
     return (
       <span
@@ -43,13 +47,14 @@ function OutcomeIcon({
     )
   }
 
-  if (iconSrc) {
+  if (iconSrc && !imgFailed) {
     return (
       <img
         src={iconSrc}
         alt={iconAlt?.trim() ?? ''}
         aria-hidden={iconAlt?.trim() ? undefined : 'true'}
         className="h-7 w-7"
+        onError={() => setImgFailed(true)}
       />
     )
   }
@@ -91,7 +96,7 @@ export default function KeyOutcomes({
     <section
       ref={sectionRef}
       aria-labelledby={headingId}
-      className={`relative bg-[#08082a] px-6 pb-32 pt-16 sm:pb-40 sm:pt-16 ${className}`}
+      className={`relative bg-[#08082a] px-6 py-16 sm:py-24 ${className}`}
     >
       <div className="mx-auto max-w-6xl">
         <h2
@@ -109,9 +114,13 @@ export default function KeyOutcomes({
           {outcomes.map((outcome, index) => (
             <li
               key={outcome.id}
-              className={`rounded-lg bg-[#0f0f3a] transition-all duration-700 ease-in-out ${
-                inView ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
-              }`}
+              className={
+                shouldReduceMotion
+                  ? 'rounded-lg bg-[#0f0f3a] opacity-100'
+                  : `rounded-lg bg-[#0f0f3a] transition-all duration-700 ease-in-out ${
+                      inView ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
+                    }`
+              }
               style={
                 shouldReduceMotion
                   ? undefined
@@ -125,7 +134,14 @@ export default function KeyOutcomes({
                   iconSrc={outcome.iconSrc}
                   iconAlt={outcome.iconAlt}
                 />
-                <h3 className="mt-3 text-lg font-semibold text-white">
+                {outcome.eyebrow && (
+                  <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#CBEDE8]/80">
+                    {outcome.eyebrow}
+                  </p>
+                )}
+                <h3
+                  className={`text-lg font-semibold text-white ${outcome.eyebrow ? 'mt-1' : 'mt-3'}`}
+                >
                   {outcome.title}
                 </h3>
                 <p className="mt-2 text-slate-300">{outcome.description}</p>

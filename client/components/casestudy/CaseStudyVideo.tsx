@@ -1,6 +1,7 @@
 import { useId } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { defaultViewport } from '../../lib/motion'
+import CtaLink from './CtaLink'
 
 type CaseStudyVideoCta = {
   label: string
@@ -73,19 +74,7 @@ export default function CaseStudyVideo({
         </motion.figure>
         {cta && (
           <div className="mt-8">
-            <a
-              href={cta.href}
-              {...(cta.external ? { target: '_blank', rel: 'noreferrer' } : {})}
-              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#08082a] transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#08082a]"
-            >
-              {cta.label}
-              {cta.external && (
-                <>
-                  <span aria-hidden="true"> ↗</span>
-                  <span className="sr-only"> (opens in a new tab)</span>
-                </>
-              )}
-            </a>
+            <CtaLink label={cta.label} href={cta.href} external={cta.external} />
           </div>
         )}
       </div>

@@ -49,7 +49,7 @@ export default function ProjectGrid({
 
   const visibleProjects = projects
     .filter((p) => p.projectTitle && p.slug && p.projectImage)
-    .slice(0, 5)
+    .slice(0, 4)
 
   return (
     <section

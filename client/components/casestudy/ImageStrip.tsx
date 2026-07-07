@@ -76,6 +76,9 @@ function GifFrame({
     if (!img || !canvas) return
 
     if (!paused) {
+      // Bail if the image hasn't actually loaded yet: freezing now would
+      // snapshot a 0x0 canvas and hide the still-loading GIF behind it.
+      if (!img.naturalWidth || !img.naturalHeight) return
       canvas.width = img.naturalWidth
       canvas.height = img.naturalHeight
       canvas.getContext('2d')?.drawImage(img, 0, 0)

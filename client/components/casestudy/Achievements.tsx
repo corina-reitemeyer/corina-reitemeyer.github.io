@@ -1,4 +1,5 @@
 import { useId } from 'react'
+import Paragraphs from './Paragraphs'
 
 type Achievement = {
   id: string
@@ -66,12 +67,7 @@ export default function AchievementsSection({
                 {achievement.title}
               </h3>
               <div className="mt-2 max-w-prose space-y-2 text-slate-300">
-                {(Array.isArray(achievement.description)
-                  ? achievement.description
-                  : [achievement.description]
-                ).map((paragraph, i) => (
-                  <p key={i}>{paragraph}</p>
-                ))}
+                <Paragraphs>{achievement.description}</Paragraphs>
               </div>
             </li>
           ))}

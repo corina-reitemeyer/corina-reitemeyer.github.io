@@ -1,6 +1,7 @@
 import { useId, useState } from 'react'
 import { useReducedMotion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import Paragraphs from './Paragraphs'
 
 type Outcome = {
   id: string
@@ -154,14 +155,9 @@ export default function KeyOutcomes({
 
         {intro && (
           <div className="mx-auto mt-12 max-w-2xl space-y-4 text-left">
-            {(Array.isArray(intro) ? intro : [intro]).map((paragraph, i) => (
-              <p
-                key={i}
-                className="text-lg leading-relaxed text-slate-300 antialiased"
-              >
-                {paragraph}
-              </p>
-            ))}
+            <Paragraphs className="text-lg leading-relaxed text-slate-300 antialiased">
+              {intro}
+            </Paragraphs>
           </div>
         )}
       </div>

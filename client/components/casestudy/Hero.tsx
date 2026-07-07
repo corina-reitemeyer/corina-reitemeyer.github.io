@@ -2,6 +2,8 @@ import { useId } from 'react'
 import { motion, useReducedMotion, type Variants } from 'framer-motion'
 import { defaultViewport } from '../../lib/motion'
 import Disclaimer from './Disclaimer'
+import CtaLink from './CtaLink'
+import Paragraphs from './Paragraphs'
 
 type Highlight = {
   id: string
@@ -66,11 +68,7 @@ function DetailItem({ term, description }: DetailItemProps) {
         {term}
       </dt>
       <dd className="mt-2 max-w-prose space-y-5 text-slate-300 antialiased">
-        {Array.isArray(description) ? (
-          description.map((paragraph, i) => <p key={i}>{paragraph}</p>)
-        ) : (
-          <p>{description}</p>
-        )}
+        <Paragraphs>{description}</Paragraphs>
       </dd>
     </div>
   )
@@ -203,20 +201,12 @@ export default function CaseStudyNavy({
         {ctas && ctas.length > 0 && (
           <div className="mt-10 flex flex-wrap gap-4">
             {ctas.map((cta) => (
-              <a
+              <CtaLink
                 key={cta.label}
+                label={cta.label}
                 href={cta.href}
-                {...(cta.external ? { target: '_blank', rel: 'noreferrer' } : {})}
-                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#08082a] transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#08082a]"
-              >
-                {cta.label}
-                {cta.external && (
-                  <>
-                    <span aria-hidden="true"> ↗</span>
-                    <span className="sr-only"> (opens in a new tab)</span>
-                  </>
-                )}
-              </a>
+                external={cta.external}
+              />
             ))}
           </div>
         )}

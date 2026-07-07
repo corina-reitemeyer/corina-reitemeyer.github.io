@@ -31,7 +31,7 @@ export default function ChallengeSection({
   return (
     <>
       <section
-        aria-label={title || 'Challenge'}
+        aria-label={title || undefined}
         className="w-full bg-[#08082a] py-16 sm:py-24"
       >
         <div className="mx-auto max-w-2xl px-6 lg:px-0">

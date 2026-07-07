@@ -17,7 +17,7 @@ export default function BuildingAdaptiveTeams() {
       <CaseStudyNavy
         intro="A microlearning course for team leads navigating change, built on the idea that the conditions matter as much as the content."
         company="Concept"
-        project="It will click eventually"
+        project="Building Adaptive Teams - It will click eventually"
         imageSrc="/images/elearning/final-work/building-adaptive-teams-hero.webp"
         imageAlt="Building Adaptive Teams, course opening screen"
         disclaimer="Disclosure: the university, the people, and the numbers in this case study are invented for this concept project."
@@ -379,10 +379,10 @@ export default function BuildingAdaptiveTeams() {
             images: [
               {
                 id: 'bat-course-map',
-                src: '/images/lxd/bat-course-map.webp',
-                alt: 'FigJam course map showing six lessons and the Storyline embed point in Lesson 6',
+                src: '/images/elearning/process/course-outline-figjam.png',
+                alt: 'FigJam course outline showing all six lessons and the embedded Storyline activity in Lesson 6',
                 caption:
-                  'Course architecture: six lessons in FigJam, with the Storyline embed point marked in Lesson 6.',
+                  'Course outline in FigJam: six lessons, with the embedded Storyline activity mapped out underneath Lesson 6.',
               },
             ],
             links: [

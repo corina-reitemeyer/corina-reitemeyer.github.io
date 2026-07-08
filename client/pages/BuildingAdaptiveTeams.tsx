@@ -544,7 +544,30 @@ export default function BuildingAdaptiveTeams() {
         ]}
       />
 
-      {/* 14. Constraints and trade-offs */}
+      {/* 14. Bonus */}
+      <ApproachSection
+        title="Bonus"
+        items={[
+          {
+            id: 'bonus-moodle',
+            heading: 'Deployed to MoodleCloud',
+            body: [
+              "Unlike Carl and Jamie, I wasn't able to get my hands on Canvas, so proving the course works as a real SCORM package meant finding a different LMS. I uploaded the same SCORM 1.2 export to a MoodleCloud site instead, to confirm it launches, tracks, and behaves the way it would inside any real LMS, not just as a preview in Rise.",
+            ],
+            images: [
+              {
+                id: 'bat-moodle-scorm',
+                src: '/images/elearning/process/moodle-cloud-scorm-upload.png',
+                alt: 'MoodleCloud SCORM package page showing "It Will Click Eventually" in preview mode with a Start Course button',
+                caption:
+                  'The SCORM package live in MoodleCloud, previewed and ready to launch.',
+              },
+            ],
+          },
+        ]}
+      />
+
+      {/* 15. Constraints and trade-offs */}
       <AchievementsSection
         title="Constraints and trade-offs"
         achievements={[
@@ -577,7 +600,7 @@ export default function BuildingAdaptiveTeams() {
         ]}
       />
 
-      {/* 15. Takeaways */}
+      {/* 16. Takeaways */}
       <Takeaways
         paragraphs={[
           "Coming up with a story that actually lands was harder than I expected. The Carl and Jamie scenario went through several versions before it felt genuinely relatable rather than constructed. The challenge is finding the right level of specificity: too generic and it feels like a training video cliché, too niche and it stops being anyone's story. The gradebook detail, Jamie not raising it a second time, Carl's internal monologue about the next meeting: those small specifics are what make it feel like something that could actually happen, rather than something designed to illustrate a point.",

@@ -22,7 +22,7 @@ export default function BuildingAdaptiveTeams() {
         imageAlt="Building Adaptive Teams, course opening screen"
         disclaimer="Disclosure: the university, the people, and the numbers in this case study are invented for this concept project."
         overview={[
-          "This is a fictional project. I made up the brief myself, and the point of it is to demonstrate how I'd approach an Instructional Design project end to end.",
+          "This is a fictional project, and the point of it is to demonstrate how I'd approach an Instructional Design project end to end.",
           "The idea came from a conversation with a friend about the best learning and development we'd each experienced in a role. Both answers came back to the same thing: a team lead who gave us time, space, and the safety to try things without worrying how mistakes would reflect on us. I'm not a team lead and I've never managed one, but I know what it feels like when the conditions are right, and when they aren't. That's what shaped the learner's perspective in this course, and what I wanted Carl to understand by the end of it. The result: a six-lesson microlearning course, the first piece of a three-part upskilling strategy to help team leads create the conditions for people to adopt a new tool safely, at their own pace.",
         ]}
         involvement="End to end: discovery, instructional design, visual design, development"
@@ -45,7 +45,7 @@ export default function BuildingAdaptiveTeams() {
         caption="A walkthrough of the full six-lesson course, built in Articulate Rise."
         cta={{
           label: 'Experience the live course',
-          href: '/files/it-will-click-eventually-course/index.html',
+          href: '/courses/building-adaptive-teams/index.html',
           external: true,
         }}
       />

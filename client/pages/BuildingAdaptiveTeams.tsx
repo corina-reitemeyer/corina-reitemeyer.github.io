@@ -390,10 +390,11 @@ export default function BuildingAdaptiveTeams() {
                 label: 'View course outline',
                 href: 'https://www.figma.com/board/G1EEEgnIADUHZ6lOxyb1q6/Course-outline---It-will-click-eventually?node-id=0-1&t=cUSslwPYzLAiaNa0-1',
               },
-              {
-                label: 'View storyboard',
-                href: 'https://docs.google.com/presentation/d/1rKZ7C1_6iSOq4C9qZTIIUw7ugJNt1l49_ygJwBzqMUA/edit?usp=sharing',
-              },
+              // Temporarily disabled: storyboard link not ready yet.
+              // {
+              //   label: 'View storyboard',
+              //   href: 'https://docs.google.com/presentation/d/1rKZ7C1_6iSOq4C9qZTIIUw7ugJNt1l49_ygJwBzqMUA/edit?usp=sharing',
+              // },
             ],
           },
           {

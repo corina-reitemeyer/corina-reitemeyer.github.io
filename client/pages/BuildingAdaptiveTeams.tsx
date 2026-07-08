@@ -61,11 +61,11 @@ export default function BuildingAdaptiveTeams() {
               'The Storyline branching activity. The learner watches a dialog between Carl and Jamie, and at certain points chooses dialog choices for Carl.',
           },
           {
-            id: 'bat-lesson-three-call',
-            src: '/images/elearning/final-work/course-lesson2.gif',
-            alt: 'Lesson 3, "Closing It Off," a video call scene showing Carl\'s spoken dialogue alongside an italicised internal thought',
+            id: 'bat-lesson-two-call',
+            src: '/images/elearning/final-work/course-lesson1.gif',
+            alt: 'Lesson 2, "Twenty Minutes," showing an incoming call prompt on screen',
             caption:
-              'Lesson 3, "Closing It Off." A video call scene pairs what Carl says out loud with what he\'s actually thinking, running side by side.',
+              'Lesson 2, "Twenty Minutes." An interactive call prompt puts the learner in the moment before the conversation even starts.',
             frame: 'browser',
           },
         ]}

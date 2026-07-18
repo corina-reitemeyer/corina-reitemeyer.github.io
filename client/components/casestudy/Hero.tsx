@@ -97,13 +97,13 @@ export default function CaseStudyNavy({
       aria-labelledby={headingId}
       className={`w-full bg-[#08082a] text-white ${className}`}
     >
-      <div className="container mx-auto max-w-6xl px-6 pb-14 pt-28 sm:px-8 sm:pb-16">
+      <div className="container mx-auto max-w-6xl px-6 pb-14 pt-16 sm:px-8 sm:pb-16 sm:pt-24">
         {/* Hook headline — the page's h1: no other heading on a case study page
             precedes it, so this is the primary landmark for screen reader users
             navigating by heading level. */}
         <motion.h1
           id={headingId}
-          className="max-w-4xl text-3xl font-semibold leading-[1.4] text-white antialiased md:text-4xl md:leading-[1.3] lg:text-5xl lg:leading-[1.25]"
+          className="text-[40px] font-extrabold leading-[1.05] tracking-tight text-white antialiased sm:text-[48px] sm:font-bold sm:leading-[1.2] md:text-[64px] md:leading-[1.15] xl:text-[72px] xl:leading-[1.1] 2xl:text-[96px] 2xl:leading-[1.2]"
           variants={shouldReduceMotion ? undefined : fadeInUp}
           initial={shouldReduceMotion ? false : 'hidden'}
           whileInView={shouldReduceMotion ? undefined : 'visible'}
@@ -178,12 +178,12 @@ export default function CaseStudyNavy({
 
         {/* Metadata strip */}
         {meta && meta.length > 0 && (
-          <dl className="mt-12 grid grid-cols-2 gap-x-0 gap-y-6 rounded-2xl border border-white/20 p-6 sm:mt-14 sm:grid-cols-4 sm:p-8">
+          <dl className="mt-12 grid grid-cols-2 gap-4 sm:mt-14 sm:grid-cols-4 lg:gap-x-0 lg:gap-y-6 lg:rounded-2xl lg:border lg:border-white/20 lg:p-6">
             {meta.map((item, index) => (
               <div
                 key={item.label}
-                className={`flex flex-col gap-2 px-6 ${
-                  index !== 0 ? 'border-l border-white/10' : ''
+                className={`flex flex-col gap-2 rounded-xl bg-white/5 p-4 lg:rounded-none lg:bg-transparent lg:p-0 lg:px-6 ${
+                  index !== 0 ? 'lg:border-l lg:border-white/10' : ''
                 }`}
               >
                 <dt className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/60 antialiased">

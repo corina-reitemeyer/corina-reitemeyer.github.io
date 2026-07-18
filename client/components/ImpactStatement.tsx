@@ -35,7 +35,7 @@ export default function ImpactStatement({
   const alignClasses = isCenter
     ? 'text-center items-center'
     : 'text-left items-start'
-  const padY = padded ? 'py-8 md:py-16' : ''
+  const padY = padded ? 'py-4 md:py-16' : ''
 
   return (
     <section
@@ -47,18 +47,18 @@ export default function ImpactStatement({
           src={bgSvgSrc}
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-auto w-screen max-w-none -translate-x-1/2 -translate-y-1/2 select-none"
+          className="pointer-events-none absolute inset-0 z-0 h-full w-full select-none object-cover object-right"
         />
       )}
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 sm:px-10 xl:px-0">
-        <div className={`flex w-full flex-col gap-12 ${alignClasses}`}>
+        <div className={`flex w-full flex-col gap-6 sm:gap-12 ${alignClasses}`}>
           <motion.h1
             id={headingId}
             initial={shouldReduceMotion ? false : { opacity: 0, y: 10 }}
             animate={shouldReduceMotion ? false : { opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="w-full text-[28px] font-bold leading-[1.25] tracking-tight sm:text-[48px] sm:leading-[1.2] md:text-[64px] md:leading-[1.15] xl:text-[72px] xl:leading-[1.1] 2xl:text-[96px] 2xl:leading-[1.2]"
+            className="w-full text-[40px] font-extrabold leading-[1.05] tracking-tight sm:text-[48px] sm:font-bold sm:leading-[1.2] md:text-[64px] md:leading-[1.15] xl:text-[72px] xl:leading-[1.1] 2xl:text-[96px] 2xl:leading-[1.2]"
           >
             {greeting && (
               <span className="block w-full text-white/70">{greeting}</span>
@@ -82,11 +82,11 @@ export default function ImpactStatement({
               {pills.map((pill, i) => (
                 <li
                   key={i}
-                  className="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm text-white backdrop-blur-sm"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/5 px-4 pb-[9px] pt-[7px] text-sm leading-none text-white backdrop-blur-sm"
                 >
                   {pill.emoji ? (
                     <>
-                      {pill.label}{' '}
+                      <span>{pill.label}</span>
                       <span
                         role="img"
                         aria-label={pill.emojiLabel ?? pill.emoji}

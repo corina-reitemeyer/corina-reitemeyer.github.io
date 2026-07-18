@@ -7,7 +7,7 @@ export default function Making() {
   return (
     <section className="relative bg-[#08082a] py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-6 xl:px-0">
-        <h2 className="mx-auto mb-10 max-w-6xl px-6 text-3xl font-bold text-white sm:mb-8 sm:text-3xl xl:px-0">
+        <h2 className="mb-10 text-3xl font-bold text-white sm:mb-8">
           Side Projects & Fun Experiments
         </h2>
 

@@ -89,7 +89,7 @@ export default function ExperienceSection({
         </ul>
 
         {/* Mobile/Tablet: two separate two-column lists */}
-        <div className="grid grid-cols-1 gap-y-8 lg:hidden">
+        <div className="grid grid-cols-1 gap-y-4 lg:hidden">
           {[leftBlock, rightBlock].map((block, idx) => (
             <>
               {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}

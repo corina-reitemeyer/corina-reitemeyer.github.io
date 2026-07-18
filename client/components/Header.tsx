@@ -57,11 +57,37 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isResumeMenuOpen, setIsResumeMenuOpen] = useState(false)
   const resumeMenuRef = useRef<HTMLLIElement>(null)
+  const scrollYRef = useRef(0)
 
   useEffect(() => {
     setIsMobileMenuOpen(false)
     setIsResumeMenuOpen(false)
   }, [location.pathname])
+
+  useEffect(() => {
+    if (!isMobileMenuOpen) return
+
+    const scrollY = scrollYRef.current
+    document.body.style.position = 'fixed'
+    document.body.style.top = `-${scrollY}px`
+    document.body.style.left = '0'
+    document.body.style.right = '0'
+
+    return () => {
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.left = ''
+      document.body.style.right = ''
+      window.scrollTo(0, scrollY)
+    }
+  }, [isMobileMenuOpen])
+
+  const toggleMobileMenu = () => {
+    if (!isMobileMenuOpen) {
+      scrollYRef.current = window.scrollY
+    }
+    setIsMobileMenuOpen((v) => !v)
+  }
 
   useEffect(() => {
     if (!isResumeMenuOpen) return
@@ -80,23 +106,26 @@ export default function Header() {
     isActive || (matchPrefix ? location.pathname.startsWith(matchPrefix) : false)
 
   return (
-    <header className="z-50 w-full bg-[#08082a] px-6">
+    <header className="relative z-50 w-full bg-[#08082a] px-6">
       <nav
         aria-label="Main navigation"
-        className="mx-auto flex max-w-6xl items-end justify-between py-12 pb-6"
+        className="relative z-50 mx-auto flex max-w-6xl items-center justify-between py-6 pb-4 sm:items-end sm:py-12 sm:pb-6"
       >
         <Link to="/" className="flex flex-col items-start">
+          <span className="sr-only sm:hidden">
+            Corina Reitemeyer, Product & Learning Designer
+          </span>
           <img
             src="/images/cr-reverse-logo.svg"
             alt=""
             aria-hidden="true"
-            className="mb-2 h-6 w-auto"
+            className="h-7 w-auto sm:mb-2 sm:h-6"
           />
-          <div className="flex flex-col">
-            <span className="text-xl font-semibold text-white">
+          <div className="hidden flex-col sm:flex">
+            <span className="text-base font-semibold text-white sm:text-xl">
               Corina Reitemeyer
             </span>
-            <span className="-mt-1 text-xl text-slate-400">
+            <span className="-mt-1 text-base text-slate-400 sm:text-xl">
               Product & Learning Designer.
             </span>
           </div>
@@ -157,8 +186,8 @@ export default function Header() {
 
         {/* Mobile toggle */}
         <button
-          className="inline-flex items-center justify-center rounded-md p-2 text-slate-300 ring-1 ring-white/20 transition hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:hidden"
-          onClick={() => setIsMobileMenuOpen((v) => !v)}
+          className="inline-flex items-center justify-center rounded-md p-2 text-slate-300 transition hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:hidden"
+          onClick={toggleMobileMenu}
           aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={isMobileMenuOpen}
           aria-controls={mobileNavId}
@@ -204,11 +233,11 @@ export default function Header() {
         id={mobileNavId}
         aria-hidden={!isMobileMenuOpen}
         {...(!isMobileMenuOpen ? { inert: '' } : {})}
-        className={`transition-[max-height,opacity] duration-200 sm:hidden ${
-          isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        } overflow-hidden`}
+        className={`fixed inset-0 z-40 bg-[#08082a] transition-opacity duration-200 sm:hidden ${
+          isMobileMenuOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
+        }`}
       >
-        <div className="border-t border-white/10 bg-[#08082a] px-6 pb-6 pt-2 sm:px-10">
+        <div className="h-full overflow-y-auto px-6 pb-6 pt-28">
           {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
           <ul role="list" className="space-y-2">
             {navItems.map((item) => (

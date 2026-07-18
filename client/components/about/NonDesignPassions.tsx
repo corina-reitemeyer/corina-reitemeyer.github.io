@@ -19,11 +19,11 @@ export default function NonDesignPassions({
       className="w-full bg-[#08082a] py-16 sm:py-24"
     >
       <div className="mx-auto max-w-6xl px-6 lg:px-0">
-        <h2 className="mb-10 text-3xl font-bold text-white antialiased sm:text-3xl">
+        <h2 className="mb-10 text-center text-3xl font-bold text-white antialiased sm:text-3xl lg:text-left">
           What I love beyond design
         </h2>
 
-        <div className="rounded-2xl border border-white/10 p-8 sm:p-10">
+        <div className="rounded-2xl p-8 sm:p-10">
           <ul className="grid list-none grid-cols-1 gap-10 p-0 sm:grid-cols-2 lg:grid-cols-3">
             {passions.map((passion) => (
               <li key={passion.id} className="flex flex-col gap-3">

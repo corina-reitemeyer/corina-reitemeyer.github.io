@@ -52,7 +52,7 @@ export default function AchievementsSection({
         {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
         <ul
           role="list"
-          className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-16"
+          className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-16"
         >
           {achievements.map((achievement) => (
             <li

@@ -166,12 +166,14 @@ export default function BuildingAdaptiveTeams() {
       </section>
 
       {/* 6. Key stats */}
-      <section className="bg-[#08082a]">
-        <div className="mx-auto max-w-6xl px-6 lg:px-0">
-          <p className="mb-8 max-w-2xl text-lg leading-relaxed text-slate-300 antialiased">
+      <section className="bg-[#08082a] px-6 lg:px-0">
+        <div className="mx-auto max-w-2xl">
+          <p className="mb-20 text-left text-lg leading-relaxed text-slate-300 antialiased">
             Priya came to that first conversation with data already in hand.
             Three numbers set the terms for everything that followed:
           </p>
+        </div>
+        <div className="mx-auto max-w-6xl">
           <dl className="grid grid-cols-1 gap-8 sm:grid-cols-3">
             {[
               {

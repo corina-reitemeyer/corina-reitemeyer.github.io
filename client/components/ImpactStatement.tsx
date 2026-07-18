@@ -1,5 +1,6 @@
 import { useId } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
+import AirbrushGradientBackground from './AirbrushGradientBackground'
 
 type PillTag = {
   label: string
@@ -42,13 +43,17 @@ export default function ImpactStatement({
       aria-labelledby={headingId}
       className={`relative w-full overflow-visible ${padY} ${className}`}
     >
-      {bgSvgSrc && (
+      {/* {bgSvgSrc && (
         <img
           src={bgSvgSrc}
           alt=""
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 z-0 h-full w-full select-none object-cover object-right"
         />
+      )} */}
+
+      {bgSvgSrc && (
+        <AirbrushGradientBackground className="absolute inset-0 z-0 h-full w-full" />
       )}
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 sm:px-10 xl:px-0">

@@ -23,7 +23,7 @@ export default function AboutIntro({
   return (
     <section aria-labelledby={headingId} className="bg-[#08082a]">
       <div className="container mx-auto max-w-6xl px-8 pb-12 pt-20 sm:pb-36 sm:pt-24">
-        <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-12 md:gap-12">
+        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-6">
             <img
               src={imageSrc}
@@ -37,12 +37,12 @@ export default function AboutIntro({
           </div>
 
           <div className="md:col-span-6">
-            <h2
+            <h1
               id={headingId}
-              className="mb-5 text-2xl font-bold leading-snug text-white sm:text-3xl"
+              className="mb-5 text-[40px] font-extrabold leading-[1.05] tracking-tight text-white antialiased sm:text-[48px] sm:font-bold sm:leading-[1.2] md:text-[64px] md:leading-[1.15] xl:text-[72px] xl:leading-[1.1] 2xl:text-[96px] 2xl:leading-[1.2]"
             >
               {title}
-            </h2>
+            </h1>
 
             <div className="space-y-4">
               {paragraphs.map((p) => (

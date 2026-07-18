@@ -7,7 +7,7 @@ import { ROUTES } from '../lib/routes'
 export default function Landing() {
   return (
     <>
-      <div className="relative flex w-full flex-col items-start justify-start bg-[#08082a] pb-10 sm:min-h-[60vh] sm:justify-center sm:pb-0">
+      <div className="relative flex min-h-[calc(100vh-80px)] w-full flex-col items-start justify-center bg-[#08082a] sm:min-h-[calc(100vh-156px)]">
         <ImpactStatement
           align="left"
           padded

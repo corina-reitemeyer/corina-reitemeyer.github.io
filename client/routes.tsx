@@ -2,7 +2,6 @@ import { createRoutesFromElements, Route } from 'react-router-dom'
 import App from './components/App'
 import About from './pages/About'
 import ProductDesign from './pages/ProductDesign'
-import LearningDesign from './pages/LearningDesign'
 import Making from './pages/Making'
 import CaseStudy from './pages/CaseStudy'
 import Home from './pages/Landing'
@@ -13,7 +12,6 @@ const routes = createRoutesFromElements(
     <Route index element={<Home />} />
     <Route path={ROUTES.digitalProducts} element={<ProductDesign />} />
     <Route path={`${ROUTES.digitalProduct}/:slug`} element={<CaseStudy />} />
-    <Route path={ROUTES.learningExperiences} element={<LearningDesign />} />
     <Route
       path={`${ROUTES.learningExperience}/:slug`}
       element={<CaseStudy />}

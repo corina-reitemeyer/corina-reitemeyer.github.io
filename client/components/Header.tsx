@@ -7,15 +7,10 @@ const mobileNavId = 'mobile-nav-panel'
 const navItems = [
   {
     to: ROUTES.digitalProducts,
-    label: 'designing.',
+    label: 'work.',
     matchPrefix: ROUTES.digitalProduct,
   },
-  {
-    to: ROUTES.learningExperiences,
-    label: 'elearning.',
-    matchPrefix: ROUTES.learningExperience,
-  },
-  { to: '/making', label: 'making.' },
+  { to: '/making', label: 'playground.' },
   { to: '/about', label: 'about.' },
 ]
 

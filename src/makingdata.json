@@ -5,5 +5,13 @@
     "description":
       "A test of how far AI can take accessible design systems — built with a fully AI-assisted workflow from Figma Make to Claude to code.",
     "image": "/images/portfolio/making/axon-design-system-case-study.webp"
+  },
+  {
+    "id": 2,
+    "title": "Building Adaptive Teams",
+    "description":
+      "A microlearning course for team leads navigating change, built on the idea that the conditions matter as much as the content.",
+    "image": "/images/elearning/final-work/building-adaptive-teams-hero.webp",
+    "href": "/learning-experience/building-adaptive-teams"
   }
 ]

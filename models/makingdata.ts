@@ -3,5 +3,5 @@ export default interface Making {
   title: string
   description: string
   image: string
-  href: string
+  href?: string
 }

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import MakingData from '../../src/makingdata.json'
 import type MakingProject from '../../models/makingdata'
 
@@ -26,19 +27,21 @@ export default function Making() {
               <p className="mb-5 flex-1 text-base leading-relaxed text-paper-muted">
                 {project.description}
               </p>
-              {/* <a
-                href={project.href}
-                aria-label={`Find out more about ${project.title}`}
-                className="group inline-flex items-center gap-2 text-base font-bold text-white transition hover:text-slate-300"
-              >
-                find out more
-                <span
-                  aria-hidden="true"
-                  className="transition group-hover:translate-x-1"
+              {project.href && (
+                <Link
+                  to={project.href}
+                  aria-label={`Read the case study: ${project.title}`}
+                  className="group inline-flex items-center gap-2 text-base font-semibold text-teal-mid transition-colors duration-200 hover:text-teal-mist"
                 >
-                  →
-                </span>
-              </a> */}
+                  Read the case study
+                  <span
+                    aria-hidden="true"
+                    className="transition-transform duration-200 group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </Link>
+              )}
             </li>
           ))}
         </ul>

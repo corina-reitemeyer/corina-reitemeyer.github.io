@@ -7,11 +7,9 @@ export default function Footer() {
 
   return (
     <footer id="contact" className="w-full bg-ink">
-      {isHome && <TechTicker />}
+      {isHome ? <TechTicker /> : <div className="w-full border-t border-rule" />}
 
-      <div
-        className={`mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-16 sm:grid-cols-2 sm:gap-12 sm:px-8 sm:py-24 lg:grid-cols-3 ${isHome ? '' : 'border-t border-rule'}`}
-      >
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-16 sm:grid-cols-2 sm:gap-12 sm:px-8 sm:py-24 lg:grid-cols-3">
         <div>
           <h2 className="mb-4 font-mono text-[0.72rem] font-medium uppercase tracking-[0.16em] text-paper-muted">
             Elsewhere

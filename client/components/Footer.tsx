@@ -1,12 +1,17 @@
+import { useLocation } from 'react-router-dom'
+import TechTicker from './TechTicker'
+
 export default function Footer() {
   const year = new Date().getFullYear()
+  const isHome = useLocation().pathname === '/'
 
   return (
-    <footer
-      id="contact"
-      className="w-full border-t border-rule bg-ink py-16 sm:py-24"
-    >
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 sm:grid-cols-2 sm:px-8 sm:gap-12 lg:grid-cols-3">
+    <footer id="contact" className="w-full bg-ink">
+      {isHome && <TechTicker />}
+
+      <div
+        className={`mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-16 sm:grid-cols-2 sm:gap-12 sm:px-8 sm:py-24 lg:grid-cols-3 ${isHome ? '' : 'border-t border-rule'}`}
+      >
         <div>
           <h2 className="mb-4 font-mono text-[0.72rem] font-medium uppercase tracking-[0.16em] text-paper-muted">
             Elsewhere

@@ -1,6 +1,7 @@
 import { useId } from 'react'
+import { useScrollReveal } from '../../lib/useScrollReveal'
 
-type ExperienceItem = {
+export type ExperienceItem = {
   id: string
   company: string
   title: string
@@ -8,113 +9,63 @@ type ExperienceItem = {
 }
 
 type Props = {
-  leftBlock: ExperienceItem[]
-  rightBlock: ExperienceItem[]
-  heading?: string
+  items: ExperienceItem[]
 }
 
-export default function ExperienceSection({
-  leftBlock,
-  rightBlock,
-  heading = 'Experience',
-}: Props) {
+export default function ExperienceSection({ items }: Props) {
   const headingId = useId()
-  const rows = Math.max(leftBlock.length, rightBlock.length)
+  const { ref: sectionRef, isInView } = useScrollReveal<HTMLElement>()
+  const revealClass = isInView ? 'is-inview' : ''
 
   return (
-    <section aria-labelledby={headingId} className="bg-ink">
-      <div className="container mx-auto max-w-6xl px-8 py-16 md:pb-24 md:pt-10">
-        <h2
-          id={headingId}
-          className="mb-10 text-2xl font-bold text-paper sm:text-3xl"
+    <section
+      ref={sectionRef}
+      aria-labelledby={headingId}
+      className="bg-ink w-full py-16 sm:py-24"
+    >
+      <div className="mx-auto max-w-6xl px-6 sm:px-10 xl:px-0">
+        <div
+          className={`reveal reveal--1 max-w-measure mb-10 sm:mb-14 ${revealClass}`}
         >
-          {heading}
-        </h2>
-
-        {/* Desktop: single 4-col grid so rows align across both blocks */}
-        {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
-        <ul
-          role="list"
-          className="hidden gap-x-16 gap-y-2 [grid-template-columns:minmax(0,1fr)_auto_minmax(0,1fr)_auto] lg:grid"
-        >
-          {/* Index key is intentional — derived fixed-length array, never reordered */}
-          {Array.from({ length: rows }).map((_, i) => {
-            const L = leftBlock[i] ?? null
-            const R = rightBlock[i] ?? null
-
-            return (
-              <li key={i} className="contents">
-                <div className="py-4">
-                  {L ? (
-                    <>
-                      <p className="font-semibold text-paper">{L.company}</p>
-                      <p className="text-paper-muted">{L.title}</p>
-                    </>
-                  ) : (
-                    <div className="py-6" />
-                  )}
-                </div>
-                <div className="py-4 text-right">
-                  {L ? (
-                    <p className="whitespace-nowrap font-semibold text-paper">
-                      {L.dates}
-                    </p>
-                  ) : (
-                    <div className="py-6" />
-                  )}
-                </div>
-
-                <div className="py-4">
-                  {R ? (
-                    <>
-                      <p className="font-semibold text-paper">{R.company}</p>
-                      <p className="text-paper-muted">{R.title}</p>
-                    </>
-                  ) : (
-                    <div className="py-6" />
-                  )}
-                </div>
-                <div className="py-4 text-right">
-                  {R ? (
-                    <p className="whitespace-nowrap font-semibold text-paper">
-                      {R.dates}
-                    </p>
-                  ) : (
-                    <div className="py-6" />
-                  )}
-                </div>
-              </li>
-            )
-          })}
-        </ul>
-
-        {/* Mobile/Tablet: two separate two-column lists */}
-        <div className="grid grid-cols-1 lg:hidden">
-          {[leftBlock, rightBlock].map((block, idx) => (
-            <>
-              {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
-              <ul
-                key={idx}
-                role="list"
-                className="grid grid-cols-[1fr_auto] gap-x-10"
-              >
-                {block.map((item) => (
-                  <li key={item.id} className="contents">
-                    <div className="py-4">
-                      <p className="font-semibold text-paper">{item.company}</p>
-                      <p className="text-paper-muted">{item.title}</p>
-                    </div>
-                    <div className="py-4 text-right">
-                      <p className="whitespace-nowrap font-semibold text-paper">
-                        {item.dates}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </>
-          ))}
+          <p className="text-teal-mid mb-3 font-mono text-[0.72rem] font-medium uppercase tracking-[0.16em]">
+            (02) Experience
+          </p>
+          <h2
+            id={headingId}
+            className="text-paper mb-4 text-[clamp(2rem,5vw,3rem)] font-bold leading-[0.98] tracking-[-0.03em]"
+          >
+            Government, SaaS products, and a throughline of{' '}
+            <span className="text-teal-mid">teaching</span>
+          </h2>
+          <p className="text-paper-muted">
+            Close to 10 years moving between public-sector UX, B2B SaaS, and the
+            classroom — always in the seam between how something works and how
+            it&rsquo;s explained.
+          </p>
         </div>
+
+        {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
+        <ol
+          role="list"
+          className={`reveal reveal--2 divide-rule border-rule divide-y border-t ${revealClass}`}
+        >
+          {items.map((item) => (
+            <li
+              key={item.id}
+              className="flex flex-col gap-1 py-5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6 sm:py-6"
+            >
+              <div>
+                <p className="text-paper text-lg font-semibold sm:text-xl">
+                  {item.title}
+                </p>
+                <p className="text-paper-muted">{item.company}</p>
+              </div>
+              <p className="text-paper-muted whitespace-nowrap font-mono text-xs">
+                {item.dates}
+              </p>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   )

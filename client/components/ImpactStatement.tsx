@@ -23,13 +23,13 @@ const keywords: Keyword[] = [
     id: 'code',
     label: 'code',
     detail:
-      'Practical front-end fluency — HTML, CSS, React — enough to prototype and ship real interfaces, especially with AI pairing.',
+      'Enough front-end fluency in HTML, CSS, and React to prototype and ship real interfaces, especially with AI pairing.',
   },
   {
     id: 'accessibility',
     label: 'accessibility',
     detail:
-      'Practical experience applying WCAG 2.1 in NZ Government work — designing for everyone, not just the majority.',
+      'Practical experience applying WCAG 2.1 in NZ Government work, designing for everyone, not just the majority.',
   },
 ]
 
@@ -185,7 +185,7 @@ export default function ImpactStatement() {
         >
           Corina is a digital product designer who bridges{' '}
           {renderKeyword(keywords[0])}, {renderKeyword(keywords[1])}, and{' '}
-          {renderKeyword(keywords[2])} — using AI to ship it herself, with{' '}
+          {renderKeyword(keywords[2])}, using AI to ship it herself, with{' '}
           {renderKeyword(keywords[3])} always at the center.
         </p>
       </div>

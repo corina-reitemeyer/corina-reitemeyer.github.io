@@ -57,7 +57,7 @@ export default function SkillSets() {
           <div className="my-6 h-px w-16 bg-rule sm:my-8" aria-hidden="true" />
 
           <p className="max-w-measure text-paper-muted">
-            End-to-end craft across design and code — systems, interfaces,
+            End-to-end craft across design and code: systems, interfaces,
             and the tooling that keeps them honest from sketch to shipped UI.
           </p>
 

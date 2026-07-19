@@ -101,10 +101,11 @@ export default function Header() {
     isActive || (matchPrefix ? location.pathname.startsWith(matchPrefix) : false)
 
   const isHome = location.pathname === '/'
+  const hasOverlayHeader = isHome || location.pathname === '/about'
 
   return (
     <header
-      className={`z-50 w-full px-6 ${isHome ? 'absolute inset-x-0 top-0 bg-transparent' : 'relative bg-ink'}`}
+      className={`z-50 w-full px-6 ${hasOverlayHeader ? 'absolute inset-x-0 top-0 bg-transparent' : 'relative bg-ink'}`}
     >
       <nav
         aria-label="Main navigation"

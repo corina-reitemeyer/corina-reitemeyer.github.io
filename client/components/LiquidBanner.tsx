@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef, useState } from 'react'
+import { useEffect, useId, useRef } from 'react'
 import { useReducedMotion } from 'framer-motion'
 import { AsciiLiquid } from './AsciiLiquid'
 
@@ -13,7 +13,8 @@ const lineWindows: [number, number][] = [
 export default function LiquidBanner() {
   const headingId = useId()
   const trackRef = useRef<HTMLDivElement>(null)
-  const [progress, setProgress] = useState(0)
+  const fieldRef = useRef<HTMLDivElement>(null)
+  const lineRefs = useRef<(HTMLSpanElement | null)[]>([])
   const shouldReduceMotion = useReducedMotion()
 
   useEffect(() => {
@@ -22,33 +23,48 @@ export default function LiquidBanner() {
     const track = trackRef.current
     if (!track) return
 
-    const handleScroll = () => {
+    let frame = 0
+
+    const applyProgress = (progress: number) => {
+      lines.forEach((_, i) => {
+        const [start, end] = lineWindows[i]
+        const p = Math.min(1, Math.max(0, (progress - start) / (end - start)))
+        const el = lineRefs.current[i]
+        if (el) {
+          el.style.transform = `translateX(${(1 - p) * 110}vw)`
+          el.style.opacity = String(p)
+        }
+      })
+
+      const field = fieldRef.current
+      if (field) {
+        field.style.transform = `translateY(${(progress - 0.5) * 48}px)`
+      }
+    }
+
+    const update = () => {
+      frame = 0
       const rect = track.getBoundingClientRect()
       const scrollable = track.offsetHeight - window.innerHeight
-      if (scrollable <= 0) {
-        setProgress(1)
-        return
-      }
-      const scrolled = -rect.top
-      setProgress(Math.min(1, Math.max(0, scrolled / scrollable)))
+      const progress =
+        scrollable <= 0 ? 1 : Math.min(1, Math.max(0, -rect.top / scrollable))
+      applyProgress(progress)
     }
 
-    handleScroll()
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    window.addEventListener('resize', handleScroll)
+    const onScroll = () => {
+      if (frame) return
+      frame = requestAnimationFrame(update)
+    }
+
+    update()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll)
     return () => {
-      window.removeEventListener('scroll', handleScroll)
-      window.removeEventListener('resize', handleScroll)
+      if (frame) cancelAnimationFrame(frame)
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
     }
   }, [shouldReduceMotion])
-
-  const lineProgress = (index: number) => {
-    if (shouldReduceMotion) return 1
-    const [start, end] = lineWindows[index]
-    return Math.min(1, Math.max(0, (progress - start) / (end - start)))
-  }
-
-  const fieldOffset = shouldReduceMotion ? 0 : (progress - 0.5) * 48
 
   return (
     <div ref={trackRef} className="liquid-banner-track relative h-[250vh]">
@@ -57,9 +73,9 @@ export default function LiquidBanner() {
         className="sticky top-0 flex h-[100dvh] w-full items-center justify-center overflow-hidden bg-ink"
       >
         <div
+          ref={fieldRef}
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-0"
-          style={{ transform: `translateY(${fieldOffset}px)` }}
+          className="pointer-events-none absolute inset-0 z-0 will-change-transform"
         >
           <AsciiLiquid className="h-full w-full" />
         </div>
@@ -77,21 +93,20 @@ export default function LiquidBanner() {
           id={headingId}
           className="relative z-20 text-center text-[clamp(2.85rem,7vw,4.75rem)] font-bold leading-[0.92] tracking-[-0.04em] text-paper"
         >
-          {lines.map((line, i) => {
-            const p = lineProgress(i)
-            return (
-              <span
-                key={line}
-                className="block"
-                style={{
-                  transform: `translateX(${(1 - p) * 110}vw)`,
-                  opacity: p,
-                }}
-              >
-                {line}
-              </span>
-            )
-          })}
+          {lines.map((line, i) => (
+            <span
+              key={line}
+              ref={(el) => (lineRefs.current[i] = el)}
+              className="block will-change-transform"
+              style={
+                shouldReduceMotion
+                  ? undefined
+                  : { transform: 'translateX(110vw)', opacity: 0 }
+              }
+            >
+              {line}
+            </span>
+          ))}
         </h2>
       </section>
     </div>

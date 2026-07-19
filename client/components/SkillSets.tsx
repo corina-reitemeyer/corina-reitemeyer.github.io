@@ -67,7 +67,7 @@ export default function SkillSets() {
 
           <Link
             to="/about"
-            className="mt-8 inline-flex items-center gap-1.5 font-mono text-[0.72rem] font-medium uppercase tracking-[0.16em] text-teal-mid transition-colors duration-150 ease-out hover:text-teal-mist"
+            className="mt-8 inline-flex items-center gap-1.5 font-light text-[0.72rem] uppercase tracking-[0.16em] text-teal-mid transition-colors duration-150 ease-out hover:text-teal-mist"
           >
             More about me
             <span aria-hidden="true">→</span>
@@ -81,7 +81,7 @@ export default function SkillSets() {
               className={`reveal reveal--${trackIndex + 2} ${revealClass}`}
             >
               <h3 className="mb-4 flex items-baseline gap-2 border-b border-rule pb-3">
-                <span aria-hidden="true" className="font-mono text-xs text-teal-mid">
+                <span aria-hidden="true" className="font-light text-xs text-teal-mid">
                   ({String(trackIndex + 1).padStart(2, '0')})
                 </span>
                 <span className="text-lg font-semibold text-paper">
@@ -96,7 +96,7 @@ export default function SkillSets() {
                     className="flex items-baseline justify-between gap-3 text-sm text-paper-muted"
                   >
                     <span>{item}</span>
-                    <span aria-hidden="true" className="font-mono text-xs text-paper-muted/70">
+                    <span aria-hidden="true" className="font-light text-xs text-paper-muted/70">
                       {String(i + 1).padStart(2, '0')}
                     </span>
                   </li>

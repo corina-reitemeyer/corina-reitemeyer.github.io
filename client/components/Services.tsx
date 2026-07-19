@@ -49,7 +49,7 @@ export default function Services() {
     >
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 sm:px-10 lg:grid-cols-[1fr_minmax(14rem,22rem)] lg:gap-16 xl:px-0">
         <div className={`reveal reveal--1 relative lg:order-2 ${revealClass}`}>
-          <p className="mb-3 font-mono text-[0.72rem] font-medium uppercase tracking-[0.16em] text-teal-mid">
+          <p className="mb-3 font-light text-[0.72rem] uppercase tracking-[0.16em] text-teal-mid">
             (05) Engagements
           </p>
           <h2
@@ -81,7 +81,7 @@ export default function Services() {
               >
                 <span
                   aria-hidden="true"
-                  className="font-mono text-xs text-teal-mid sm:w-8 sm:shrink-0"
+                  className="font-light text-xs text-teal-mid sm:w-8 sm:shrink-0"
                 >
                   ({String(i + 1).padStart(2, '0')})
                 </span>
@@ -95,7 +95,7 @@ export default function Services() {
                 </span>
                 <span
                   aria-hidden="true"
-                  className="whitespace-nowrap font-mono text-xs uppercase tracking-[0.1em] text-teal-mid opacity-0 transition-opacity duration-150 ease-out group-hover:opacity-100 group-focus-visible:opacity-100"
+                  className="whitespace-nowrap font-light text-xs uppercase tracking-[0.1em] text-teal-mid opacity-0 transition-opacity duration-150 ease-out group-hover:opacity-100 group-focus-visible:opacity-100"
                 >
                   Inquire →
                 </span>

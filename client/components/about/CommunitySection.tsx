@@ -63,7 +63,7 @@ export default function CommunitySection() {
     >
       <div className="mx-auto max-w-6xl px-6 sm:px-10 xl:px-0">
         <div className={`reveal reveal--1 relative mb-10 max-w-measure sm:mb-14 ${revealClass}`}>
-          <p className="mb-3 font-mono text-[0.72rem] font-medium uppercase tracking-[0.16em] text-teal-mid">
+          <p className="mb-3 font-light text-[0.72rem] uppercase tracking-[0.16em] text-teal-mid">
             (05) Community &amp; dance
           </p>
           <h2
@@ -120,7 +120,7 @@ export default function CommunitySection() {
 
           <div
             aria-hidden="true"
-            className="mt-8 flex aspect-video items-center justify-center rounded-2xl border border-dashed border-rule text-center font-mono text-xs uppercase tracking-[0.12em] text-paper-muted"
+            className="mt-8 flex aspect-video items-center justify-center rounded-2xl border border-dashed border-rule text-center font-light text-xs uppercase tracking-[0.12em] text-paper-muted"
           >
             TODO: replace with a real {activeTab.label} photo
           </div>

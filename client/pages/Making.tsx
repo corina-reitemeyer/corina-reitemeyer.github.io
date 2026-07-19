@@ -96,7 +96,7 @@ function ProjectTile({ project, index }: { project: MakingProject; index: number
       </div>
 
       <div className="mt-4">
-        <p className="mb-1.5 flex flex-wrap gap-x-2 font-mono text-[0.68rem] uppercase tracking-[0.08em] text-paper-muted">
+        <p className="mb-1.5 flex flex-wrap gap-x-2 font-light text-[0.68rem] uppercase tracking-[0.08em] text-paper-muted">
           <span>{project.category}</span>
           <span aria-hidden="true">·</span>
           <span className={STATUS_CLASS[project.status]}>

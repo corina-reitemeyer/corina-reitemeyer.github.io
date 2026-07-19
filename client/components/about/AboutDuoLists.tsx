@@ -24,7 +24,7 @@ export default function AboutDuoLists() {
     <section ref={sectionRef} className="bg-ink w-full py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-6 sm:px-10 xl:px-0">
         <p
-          className={`reveal reveal--1 text-teal-mid mb-10 font-mono text-[0.72rem] font-medium uppercase tracking-[0.16em] sm:mb-14 ${revealClass}`}
+          className={`reveal reveal--1 text-teal-mid mb-10 font-light text-[0.72rem] uppercase tracking-[0.16em] sm:mb-14 ${revealClass}`}
         >
           (03) Off the clock
         </p>

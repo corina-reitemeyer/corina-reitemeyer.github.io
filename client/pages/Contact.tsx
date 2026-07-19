@@ -33,7 +33,7 @@ export default function Contact() {
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-16 pt-[112px] sm:px-10 sm:pb-24 sm:pt-[164px] xl:px-0">
         <p
-          className={`reveal reveal--1 text-teal-mid mb-3 font-mono text-[0.72rem] font-medium uppercase tracking-[0.16em] ${revealClass}`}
+          className={`reveal reveal--1 text-teal-mid mb-3 font-light text-[0.72rem] uppercase tracking-[0.16em] ${revealClass}`}
         >
           {data.eyebrow}
         </p>
@@ -55,7 +55,7 @@ export default function Contact() {
           className={`reveal reveal--4 grid max-w-2xl grid-cols-1 gap-10 sm:grid-cols-2 ${revealClass}`}
         >
           <div>
-            <p className="text-paper-muted mb-2 font-mono text-[0.7rem] font-medium uppercase tracking-[0.12em]">
+            <p className="text-paper-muted mb-2 font-light text-[0.7rem] uppercase tracking-[0.12em]">
               Email
             </p>
             <a
@@ -74,7 +74,7 @@ export default function Contact() {
           </div>
 
           <div>
-            <p className="text-paper-muted mb-2 font-mono text-[0.7rem] font-medium uppercase tracking-[0.12em]">
+            <p className="text-paper-muted mb-2 font-light text-[0.7rem] uppercase tracking-[0.12em]">
               {data.meetingLabel}
             </p>
             <a

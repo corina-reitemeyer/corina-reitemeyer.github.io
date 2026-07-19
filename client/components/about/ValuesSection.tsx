@@ -23,7 +23,7 @@ export default function ValuesSection({ values }: Props) {
     >
       <div className="mx-auto max-w-6xl px-6 sm:px-10 xl:px-0">
         <div className={`reveal reveal--1 mb-10 sm:mb-14 ${revealClass}`}>
-          <p className="mb-3 font-mono text-[0.72rem] font-medium uppercase tracking-[0.16em] text-teal-mid">
+          <p className="mb-3 font-light text-[0.72rem] uppercase tracking-[0.16em] text-teal-mid">
             (04) Values
           </p>
           <h2
@@ -41,7 +41,7 @@ export default function ValuesSection({ values }: Props) {
         >
           {values.map((value, i) => (
             <li key={value.title}>
-              <p className="mb-2 font-mono text-xs text-teal-mid">
+              <p className="mb-2 font-light text-xs text-teal-mid">
                 ({String(i + 1).padStart(2, '0')})
               </p>
               <h3 className="mb-2 text-lg font-semibold text-paper">

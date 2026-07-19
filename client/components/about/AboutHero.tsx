@@ -32,7 +32,7 @@ export default function AboutHero() {
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 pb-16 pt-[112px] sm:px-10 sm:pb-24 sm:pt-[164px] xl:px-0">
         <p
-          className={`reveal reveal--1 text-paper-muted mb-3 font-mono text-[0.72rem] font-medium uppercase tracking-[0.16em] ${revealClass}`}
+          className={`reveal reveal--1 text-paper-muted mb-3 font-light text-[0.72rem] uppercase tracking-[0.16em] ${revealClass}`}
         >
           About Corina
         </p>
@@ -59,7 +59,7 @@ export default function AboutHero() {
         >
           {meta.map((item) => (
             <div key={item.label}>
-              <dt className="text-teal-mid font-mono text-[0.7rem] uppercase tracking-[0.12em]">
+              <dt className="text-teal-mid font-light text-[0.7rem] uppercase tracking-[0.12em]">
                 {item.label}
               </dt>
               <dd className="text-paper mt-1">{item.value}</dd>

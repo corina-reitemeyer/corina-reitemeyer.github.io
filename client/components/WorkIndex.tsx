@@ -81,7 +81,7 @@ export default function WorkIndex({ projects, linkPrefix }: WorkIndexProps) {
                 </div>
                 <div className="mt-4">
                   {active.company && (
-                    <p className="mb-1 font-mono text-[0.7rem] uppercase tracking-[0.12em] text-teal-mid">
+                    <p className="mb-1 font-light text-[0.7rem] uppercase tracking-[0.12em] text-teal-mid">
                       {active.company}
                     </p>
                   )}
@@ -111,14 +111,14 @@ export default function WorkIndex({ projects, linkPrefix }: WorkIndexProps) {
                   >
                     <span
                       aria-hidden="true"
-                      className="font-mono text-xs text-teal-mid"
+                      className="font-light text-xs text-teal-mid"
                     >
                       ({String(i + 1).padStart(2, '0')})
                     </span>
                     <span className="flex-1 text-lg sm:text-xl">
                       {project.projectTitle}
                     </span>
-                    <span className="whitespace-nowrap font-mono text-xs text-paper-muted">
+                    <span className="whitespace-nowrap font-light text-xs text-paper-muted">
                       {YEAR_BY_SLUG[project.slug] ?? ''}
                     </span>
                   </Link>

@@ -22,11 +22,11 @@ export default function ExperienceSection({
   const rows = Math.max(leftBlock.length, rightBlock.length)
 
   return (
-    <section aria-labelledby={headingId} className="bg-[#08082a]">
+    <section aria-labelledby={headingId} className="bg-ink">
       <div className="container mx-auto max-w-6xl px-8 py-16 md:pb-24 md:pt-10">
         <h2
           id={headingId}
-          className="mb-10 text-2xl font-bold text-white sm:text-3xl"
+          className="mb-10 text-2xl font-bold text-paper sm:text-3xl"
         >
           {heading}
         </h2>
@@ -47,8 +47,8 @@ export default function ExperienceSection({
                 <div className="py-4">
                   {L ? (
                     <>
-                      <p className="font-semibold text-white">{L.company}</p>
-                      <p className="text-slate-400">{L.title}</p>
+                      <p className="font-semibold text-paper">{L.company}</p>
+                      <p className="text-paper-muted">{L.title}</p>
                     </>
                   ) : (
                     <div className="py-6" />
@@ -56,7 +56,7 @@ export default function ExperienceSection({
                 </div>
                 <div className="py-4 text-right">
                   {L ? (
-                    <p className="whitespace-nowrap font-semibold text-white">
+                    <p className="whitespace-nowrap font-semibold text-paper">
                       {L.dates}
                     </p>
                   ) : (
@@ -67,8 +67,8 @@ export default function ExperienceSection({
                 <div className="py-4">
                   {R ? (
                     <>
-                      <p className="font-semibold text-white">{R.company}</p>
-                      <p className="text-slate-400">{R.title}</p>
+                      <p className="font-semibold text-paper">{R.company}</p>
+                      <p className="text-paper-muted">{R.title}</p>
                     </>
                   ) : (
                     <div className="py-6" />
@@ -76,7 +76,7 @@ export default function ExperienceSection({
                 </div>
                 <div className="py-4 text-right">
                   {R ? (
-                    <p className="whitespace-nowrap font-semibold text-white">
+                    <p className="whitespace-nowrap font-semibold text-paper">
                       {R.dates}
                     </p>
                   ) : (
@@ -101,11 +101,11 @@ export default function ExperienceSection({
                 {block.map((item) => (
                   <li key={item.id} className="contents">
                     <div className="py-4">
-                      <p className="font-semibold text-white">{item.company}</p>
-                      <p className="text-slate-400">{item.title}</p>
+                      <p className="font-semibold text-paper">{item.company}</p>
+                      <p className="text-paper-muted">{item.title}</p>
                     </div>
                     <div className="py-4 text-right">
-                      <p className="whitespace-nowrap font-semibold text-white">
+                      <p className="whitespace-nowrap font-semibold text-paper">
                         {item.dates}
                       </p>
                     </div>

@@ -36,7 +36,7 @@ const cardVariants: Variants = {
 }
 
 const defaultHeadingClassName =
-  'mx-auto mb-10 max-w-6xl px-6 text-3xl font-bold text-white sm:mb-8 sm:text-3xl xl:px-0'
+  'mx-auto mb-10 max-w-6xl px-6 text-3xl font-bold text-paper sm:mb-8 sm:text-3xl xl:px-0'
 
 export default function ProjectGrid({
   heading,
@@ -54,7 +54,7 @@ export default function ProjectGrid({
   return (
     <section
       aria-labelledby={sectionId}
-      className="relative bg-[#08082a] py-16 sm:py-24"
+      className="relative bg-ink py-16 sm:py-24"
     >
       <h2 id={sectionId} className={headingClassName}>
         {heading}
@@ -89,32 +89,32 @@ export default function ProjectGrid({
 
                 <span
                   aria-hidden="true"
-                  className="pointer-events-none absolute inset-0 hidden bg-[#08082a]/0 transition duration-300 lg:block lg:group-hover:bg-[#08082a]/70"
+                  className="pointer-events-none absolute inset-0 hidden bg-ink/0 transition duration-300 lg:block lg:group-hover:bg-ink/70"
                 />
 
                 <span
                   aria-hidden="true"
                   className="pointer-events-none absolute bottom-6 left-6 right-6 z-10 hidden translate-y-3 opacity-0 transition duration-300 lg:block lg:group-hover:translate-y-0 lg:group-hover:opacity-100"
                 >
-                  <span className="mb-2 block text-[11px] font-semibold uppercase tracking-[0.2em] text-white/60">
+                  <span className="mb-2 block text-[11px] font-semibold uppercase tracking-[0.2em] text-paper-muted">
                     {project.company ?? 'Company'}
                   </span>
-                  <span className="block text-lg font-semibold leading-snug text-white sm:text-xl">
+                  <span className="block text-lg font-semibold leading-snug text-paper sm:text-xl">
                     {project.projectTitle}
                   </span>
                 </span>
 
                 <span
                   aria-hidden="true"
-                  className="pointer-events-none absolute inset-0 hidden bg-[#08082a]/0 transition duration-300 lg:block lg:group-focus-within:bg-[#08082a]/50 lg:group-hover:bg-[#08082a]/50"
+                  className="pointer-events-none absolute inset-0 hidden bg-ink/0 transition duration-300 lg:block lg:group-focus-within:bg-ink/50 lg:group-hover:bg-ink/50"
                 />
               </div>
 
               <div className="pt-4 lg:hidden">
-                <span className="mb-1 block text-[11px] font-semibold uppercase tracking-[0.2em] text-white/60">
+                <span className="mb-1 block text-[11px] font-semibold uppercase tracking-[0.2em] text-paper-muted">
                   {project.company ?? 'Company'}
                 </span>
-                <span className="block text-lg font-semibold leading-snug text-white sm:text-xl">
+                <span className="block text-lg font-semibold leading-snug text-paper sm:text-xl">
                   {project.projectTitle}
                 </span>
               </div>

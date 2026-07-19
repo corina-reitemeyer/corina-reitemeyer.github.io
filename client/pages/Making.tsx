@@ -5,9 +5,9 @@ export default function Making() {
   const projects = MakingData as MakingProject[]
 
   return (
-    <section className="relative bg-[#08082a] py-16 sm:py-24">
+    <section className="relative bg-ink py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-6 xl:px-0">
-        <h2 className="mb-10 text-3xl font-bold text-white sm:mb-8">
+        <h2 className="mb-10 text-3xl font-bold text-paper sm:mb-8">
           Side Projects & Fun Experiments
         </h2>
 
@@ -20,10 +20,10 @@ export default function Making() {
                 aria-hidden="true"
                 className="mb-6 w-full rounded-xl object-cover"
               />
-              <span className="mb-3 block text-2xl font-bold text-white">
+              <span className="mb-3 block text-2xl font-bold text-paper">
                 {project.title}
               </span>
-              <p className="mb-5 flex-1 text-base leading-relaxed text-slate-300">
+              <p className="mb-5 flex-1 text-base leading-relaxed text-paper-muted">
                 {project.description}
               </p>
               {/* <a

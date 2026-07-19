@@ -16,10 +16,10 @@ export default function NonDesignPassions({
   return (
     <section
       aria-label="Non-design passions"
-      className="w-full bg-[#08082a] py-16 sm:py-24"
+      className="w-full bg-ink py-16 sm:py-24"
     >
       <div className="mx-auto max-w-6xl px-6 lg:px-0">
-        <h2 className="mb-10 text-center text-3xl font-bold text-white antialiased sm:text-3xl lg:text-left">
+        <h2 className="mb-10 text-center text-3xl font-bold text-paper antialiased sm:text-3xl lg:text-left">
           What I love beyond design
         </h2>
 
@@ -33,10 +33,10 @@ export default function NonDesignPassions({
                   aria-hidden="true"
                   className="h-8 w-8"
                 />
-                <span className="text-[20px] font-semibold text-white antialiased">
+                <span className="text-[20px] font-semibold text-paper antialiased">
                   {passion.title}
                 </span>
-                <span className="text-[16px] font-medium text-slate-300 antialiased">
+                <span className="text-[16px] font-medium text-paper-muted antialiased">
                   {passion.description}
                 </span>
               </li>

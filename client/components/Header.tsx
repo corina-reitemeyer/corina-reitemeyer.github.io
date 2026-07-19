@@ -106,12 +106,12 @@ export default function Header() {
     isActive || (matchPrefix ? location.pathname.startsWith(matchPrefix) : false)
 
   return (
-    <header className="relative z-50 w-full bg-[#08082a] px-6">
+    <header className="relative z-50 w-full bg-ink px-6">
       <nav
         aria-label="Main navigation"
         className="relative z-50 mx-auto flex max-w-6xl items-center justify-between py-6 pb-4 sm:items-end sm:py-12 sm:pb-6"
       >
-        <Link to="/" className="flex flex-col items-start">
+        <Link to="/" className="group flex flex-col items-start">
           <span className="sr-only sm:hidden">
             Corina Reitemeyer, Product & Learning Designer
           </span>
@@ -122,10 +122,10 @@ export default function Header() {
             className="h-7 w-auto sm:mb-2 sm:h-6"
           />
           <div className="hidden flex-col sm:flex">
-            <span className="text-base font-semibold text-white sm:text-xl">
+            <span className="text-base font-semibold text-paper transition-colors duration-200 group-hover:text-teal-mist sm:text-xl">
               Corina Reitemeyer
             </span>
-            <span className="-mt-1 text-base text-slate-400 sm:text-xl">
+            <span className="-mt-1 text-base text-paper-muted sm:text-xl">
               Product & Learning Designer.
             </span>
           </div>
@@ -140,10 +140,10 @@ export default function Header() {
                 to={item.to}
                 className={({ isActive }) =>
                   [
-                    'text-base transition',
+                    'text-base transition-colors duration-200',
                     isNavItemActive(isActive, item.matchPrefix)
-                      ? 'font-semibold text-white'
-                      : 'font-medium text-slate-400 hover:text-white',
+                      ? 'font-semibold text-paper'
+                      : 'font-medium text-paper-muted hover:text-paper',
                   ].join(' ')
                 }
               >
@@ -157,7 +157,7 @@ export default function Header() {
               onClick={() => setIsResumeMenuOpen((v) => !v)}
               aria-haspopup="true"
               aria-expanded={isResumeMenuOpen}
-              className="text-base font-medium text-slate-400 transition hover:text-white"
+              className="text-base font-medium text-paper-muted transition-colors duration-200 hover:text-paper"
             >
               resume.
             </button>
@@ -165,14 +165,14 @@ export default function Header() {
             {isResumeMenuOpen && (
               <ul
                 role="list"
-                className="absolute right-0 top-full z-10 mt-4 min-w-[14rem] rounded-lg border border-white/10 bg-[#0f0f3a] py-2 shadow-lg"
+                className="absolute right-0 top-full z-10 mt-4 min-w-[14rem] rounded-lg border border-rule bg-charcoal-soft py-2 shadow-lg"
               >
                 {resumes.map((resume) => (
                   <li key={resume.href}>
                     <a
                       href={resume.href}
                       download={resume.download}
-                      className="flex items-center gap-3 px-4 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white"
+                      className="flex items-center gap-3 px-4 py-2 text-sm font-medium text-paper-muted transition-colors duration-200 hover:bg-charcoal hover:text-paper"
                     >
                       <DownloadIcon />
                       {resume.label}
@@ -186,7 +186,7 @@ export default function Header() {
 
         {/* Mobile toggle */}
         <button
-          className="inline-flex items-center justify-center rounded-md p-2 text-slate-300 transition hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:hidden"
+          className="inline-flex items-center justify-center rounded-md p-2 text-paper-muted transition-colors duration-200 hover:bg-charcoal-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus sm:hidden"
           onClick={toggleMobileMenu}
           aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={isMobileMenuOpen}
@@ -233,7 +233,7 @@ export default function Header() {
         id={mobileNavId}
         aria-hidden={!isMobileMenuOpen}
         {...(!isMobileMenuOpen ? { inert: '' } : {})}
-        className={`fixed inset-0 z-40 bg-[#08082a] transition-opacity duration-200 sm:hidden ${
+        className={`fixed inset-0 z-40 bg-ink transition-opacity duration-200 sm:hidden ${
           isMobileMenuOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
         }`}
       >
@@ -246,10 +246,10 @@ export default function Header() {
                   to={item.to}
                   className={({ isActive }) =>
                     [
-                      'block rounded-lg px-3 py-2 text-base transition',
+                      'block rounded-lg px-3 py-2 text-base transition-colors duration-200',
                       isNavItemActive(isActive, item.matchPrefix)
-                        ? 'font-semibold text-white'
-                        : 'font-medium text-slate-400 hover:text-white',
+                        ? 'font-semibold text-paper'
+                        : 'font-medium text-paper-muted hover:text-paper',
                     ].join(' ')
                   }
                 >
@@ -262,7 +262,7 @@ export default function Header() {
                 <a
                   href={resume.href}
                   download={resume.download}
-                  className="flex items-center gap-3 rounded-lg px-3 py-2 text-base font-medium text-slate-400 transition hover:text-white"
+                  className="flex items-center gap-3 rounded-lg px-3 py-2 text-base font-medium text-paper-muted transition-colors duration-200 hover:text-paper"
                 >
                   <DownloadIcon />
                   {resume.label}

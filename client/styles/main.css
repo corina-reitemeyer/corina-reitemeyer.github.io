@@ -2,22 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Base font family only (no global color/line-height) */
+/* =========================
+   Design tokens (design.md)
+   ========================= */
+:root {
+  --teal-deep: #243f48;
+  --teal: #3a8f9a;
+  --teal-mid: #6ab8b6;
+  --teal-bright: #b5ddd8;
+  --teal-mist: #c5e6e1;
+  --charcoal: #1c2228;
+  --charcoal-soft: #262d34;
+  --ink: #14181c;
+  --paper: #f2f0eb;
+  --paper-soft: #cfc8bd;
+  --paper-muted: #9a948a;
+  --rule: color-mix(in srgb, var(--teal-mid) 18%, transparent);
+  --focus: #b5ddd8;
+  --note: color-mix(in srgb, var(--teal-mid) 45%, var(--teal-bright));
+
+  --font: 'sofia-pro', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', ui-monospace, monospace;
+  --font-note: 'Caveat', 'Segoe Print', 'Comic Sans MS', cursive;
+
+  --display-weight: 700;
+  --display-leading: 0.92;
+  --display-tracking: -0.04em;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration: 0.85s;
+}
+
+/* Base font family + editorial ink/paper base (no global color/line-height overrides beyond this) */
 html,
 body {
-  font-family:
-    'sofia-pro',
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    Segoe UI,
-    Roboto,
-    Helvetica,
-    Arial,
-    'Apple Color Emoji',
-    'Segoe UI Emoji';
-  background-color: #08082a;
+  font-family: var(--font);
   margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--ink);
+  color: var(--paper);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--teal-bright) 45%, transparent);
+  color: var(--paper);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* =========================
@@ -31,4 +89,22 @@ body {
 .custom-scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Impact statement keyword hover/focus interaction */
+.impact-headline {
+  transition: color 300ms ease;
+}
+
+.impact-headline:has(.kw:hover, .kw:focus-visible) {
+  color: color-mix(in srgb, var(--paper) 35%, transparent);
+}
+
+.impact-headline .kw {
+  transition: opacity 300ms ease;
+}
+
+.impact-headline:has(.kw:hover, .kw:focus-visible)
+  .kw:not(:hover):not(:focus-visible) {
+  opacity: 0.35;
 }

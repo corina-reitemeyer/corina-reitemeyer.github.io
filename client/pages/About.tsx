@@ -97,12 +97,12 @@ export default function About() {
 
       <section
         aria-labelledby={valuesHeadingId}
-        className="bg-[#08082a] py-16 sm:py-24"
+        className="bg-ink py-16 sm:py-24"
       >
         <div className="mx-auto max-w-6xl px-6 sm:px-8">
           <h2
             id={valuesHeadingId}
-            className="mb-12 text-center text-3xl font-bold text-white"
+            className="mb-12 text-center text-3xl font-bold text-paper"
           >
             What Drives My Work
           </h2>
@@ -120,12 +120,12 @@ export default function About() {
                 initial={shouldReduceMotion ? false : 'hidden'}
                 whileInView={shouldReduceMotion ? undefined : 'visible'}
                 viewport={defaultViewport}
-                className="mx-4 rounded-3xl bg-[#0f0f3a] p-8 sm:mx-0"
+                className="mx-4 rounded-3xl bg-charcoal-soft p-8 sm:mx-0"
               >
-                <h3 className="break-words text-lg font-semibold text-white sm:text-xl">
+                <h3 className="break-words text-lg font-semibold text-paper sm:text-xl">
                   {value.title}
                 </h3>
-                <p className="mt-4 text-slate-300">{value.description}</p>
+                <p className="mt-4 text-paper-muted">{value.description}</p>
               </motion.li>
             ))}
           </ul>

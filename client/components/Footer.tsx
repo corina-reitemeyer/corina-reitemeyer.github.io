@@ -1,9 +1,9 @@
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#08082a] py-24">
+    <footer className="w-full border-t border-rule bg-ink py-24">
       <div className="mx-auto flex max-w-6xl flex-col items-start px-8">
         {/* Decorative rule — aria-hidden so screen readers skip it */}
-        <div aria-hidden="true" className="mb-6 h-[3px] w-12 bg-white" />
+        <div aria-hidden="true" className="mb-6 h-[3px] w-12 bg-teal-mid" />
 
         <nav aria-label="Social links">
           {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
@@ -14,7 +14,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn (opens in a new tab)"
-                className="font-semibold text-slate-400 transition hover:text-white"
+                className="font-semibold text-paper-muted transition-colors duration-200 hover:text-paper"
               >
                 LinkedIn.
               </a>
@@ -25,7 +25,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Medium (opens in a new tab)"
-                className="font-semibold text-slate-400 transition hover:text-white"
+                className="font-semibold text-paper-muted transition-colors duration-200 hover:text-paper"
               >
                 Medium.
               </a>
@@ -36,7 +36,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub (opens in a new tab)"
-                className="font-semibold text-slate-400 transition hover:text-white"
+                className="font-semibold text-paper-muted transition-colors duration-200 hover:text-paper"
               >
                 GitHub.
               </a>

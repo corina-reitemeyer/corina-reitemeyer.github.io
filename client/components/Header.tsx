@@ -103,8 +103,8 @@ export default function Header() {
     isActive || (matchPrefix ? location.pathname.startsWith(matchPrefix) : false)
 
   const isHome = location.pathname === '/'
-  const hasOverlayHeader =
-    isHome || location.pathname === '/about' || location.pathname === '/contact'
+  const overlayHeaderPaths = ['/about', '/contact', '/making']
+  const hasOverlayHeader = isHome || overlayHeaderPaths.includes(location.pathname)
 
   return (
     <header

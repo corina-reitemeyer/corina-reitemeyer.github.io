@@ -1,9 +1,12 @@
 import { useLocation } from 'react-router-dom'
+import contactData from '../../src/contactdata.json'
+import type ContactData from '../../models/contactdata'
 import TechTicker from './TechTicker'
 
 export default function Footer() {
   const year = new Date().getFullYear()
   const isHome = useLocation().pathname === '/'
+  const { email, calendlyUrl }: ContactData = contactData
 
   return (
     <footer id="contact" className="w-full bg-ink">
@@ -16,6 +19,25 @@ export default function Footer() {
           </h2>
           {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
           <ul role="list" className="space-y-3">
+            <li>
+              <a
+                href={`mailto:${email}`}
+                className="font-semibold text-paper-muted transition-colors duration-200 hover:text-paper"
+              >
+                {email}
+              </a>
+            </li>
+            <li>
+              <a
+                href={calendlyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Book a meeting (opens in a new tab)"
+                className="font-semibold text-paper-muted transition-colors duration-200 hover:text-paper"
+              >
+                Book a meeting.
+              </a>
+            </li>
             <li>
               <a
                 href="https://www.linkedin.com/in/corinareitemeyer"

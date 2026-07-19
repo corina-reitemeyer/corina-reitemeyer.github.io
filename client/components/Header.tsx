@@ -14,6 +14,8 @@ const navItems = [
   { to: '/about', label: 'about.' },
 ]
 
+const contactItem = { to: '/contact', label: 'contact.' }
+
 const resumes = [
   {
     label: 'Product Designer CV',
@@ -101,7 +103,8 @@ export default function Header() {
     isActive || (matchPrefix ? location.pathname.startsWith(matchPrefix) : false)
 
   const isHome = location.pathname === '/'
-  const hasOverlayHeader = isHome || location.pathname === '/about'
+  const hasOverlayHeader =
+    isHome || location.pathname === '/about' || location.pathname === '/contact'
 
   return (
     <header
@@ -173,6 +176,21 @@ export default function Header() {
                 ))}
               </ul>
             )}
+          </li>
+          <li>
+            <NavLink
+              to={contactItem.to}
+              className={({ isActive }) =>
+                [
+                  'text-base transition-colors duration-200',
+                  isNavItemActive(isActive)
+                    ? 'font-semibold text-paper'
+                    : 'font-medium text-paper-muted hover:text-paper',
+                ].join(' ')
+              }
+            >
+              {contactItem.label}
+            </NavLink>
           </li>
         </ul>
 
@@ -261,6 +279,21 @@ export default function Header() {
                 </a>
               </li>
             ))}
+            <li>
+              <NavLink
+                to={contactItem.to}
+                className={({ isActive }) =>
+                  [
+                    'block rounded-lg px-3 py-2 text-base transition-colors duration-200',
+                    isNavItemActive(isActive)
+                      ? 'font-semibold text-paper'
+                      : 'font-medium text-paper-muted hover:text-paper',
+                  ].join(' ')
+                }
+              >
+                {contactItem.label}
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>

@@ -48,7 +48,7 @@ export default function AboutHero() {
         <p
           className={`reveal reveal--3 max-w-measure text-paper-muted mb-10 text-[clamp(1.1rem,1.8vw,1.25rem)] sm:mb-14 ${revealClass}`}
         >
-          Designer first, builder by necessity — shaping product and learning
+          Designer first, builder by necessity, shaping product and learning
           experiences across Australia and New Zealand, with accessibility
           running through all of it.
         </p>

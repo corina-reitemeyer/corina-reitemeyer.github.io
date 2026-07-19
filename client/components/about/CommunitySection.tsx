@@ -12,13 +12,13 @@ const tabs: Tab[] = [
     id: 'latin-dance',
     label: 'Latin dance',
     detail:
-      'Four years teaching salsa in Aotearoa New Zealand, plus plenty more just dancing — socials and practicas. Rhythm, trust, and shared rooms are the same things that make a good product feel right.',
+      'Four years teaching salsa in Aotearoa New Zealand, plus plenty more just dancing at socials and practicas. Rhythm, trust, and shared rooms are the same things that make a good product feel right.',
   },
   {
     id: 'teaching',
     label: 'Teaching & sharing',
     detail:
-      "As a Technical Facilitator at Dev Academy, I taught career-changers to code. TEFL certified too — teaching dance, language, and code all come down to the same thing: break it down, and make the next step obvious.",
+      'As a Technical Facilitator at Dev Academy, I taught career-changers to code. TEFL certified too. Teaching dance, language, and code all comes down to the same thing: break it down, and make the next step obvious.',
   },
 ]
 
@@ -76,7 +76,7 @@ export default function CommunitySection() {
             aria-hidden="true"
             className="margin-note ink-draw ink-write absolute right-0 top-1 hidden sm:block"
           >
-            more than steps —
+            more than steps
           </p>
         </div>
 
@@ -122,7 +122,7 @@ export default function CommunitySection() {
             aria-hidden="true"
             className="mt-8 flex aspect-video items-center justify-center rounded-2xl border border-dashed border-rule text-center font-mono text-xs uppercase tracking-[0.12em] text-paper-muted"
           >
-            TODO — replace with a real {activeTab.label} photo
+            TODO: replace with a real {activeTab.label} photo
           </div>
         </div>
       </div>

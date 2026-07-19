@@ -2,8 +2,8 @@ import { useId } from 'react'
 import { useScrollReveal } from '../../lib/useScrollReveal'
 
 const interests = [
-  'Café hopping and Pilates reformer sessions — the resets between screens',
-  'Latin dance — salsa and bachata, on the floor whenever I get the chance',
+  'Café hopping and Pilates reformer sessions to reset between screens',
+  'Latin dance: salsa and bachata, whenever I get the chance',
   'Cozy pixel games, travel photography, and a rotating stack of sci-fi and productivity books',
 ]
 

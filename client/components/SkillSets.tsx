@@ -62,7 +62,7 @@ export default function SkillSets() {
           </p>
 
           <p className="margin-note ink-draw ink-write mt-6" aria-hidden="true">
-            ~ p.s. if it's not accessible, it's not done.
+            ~ p.s. if it&rsquo;s not accessible, it&rsquo;s not done.
           </p>
 
           <Link

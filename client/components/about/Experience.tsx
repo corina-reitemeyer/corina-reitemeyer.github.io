@@ -39,7 +39,7 @@ export default function ExperienceSection({ items }: Props) {
           </h2>
           <p className="text-paper-muted">
             Close to 10 years moving between public-sector UX, B2B SaaS, and the
-            classroom — always in the seam between how something works and how
+            classroom, always in the seam between how something works and how
             it&rsquo;s explained.
           </p>
         </div>

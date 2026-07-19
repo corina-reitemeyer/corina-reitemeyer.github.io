@@ -82,6 +82,11 @@ body {
    Optional utilities you still use
    ========================= */
 
+/* Canvas is inline by default, which leaves a baseline gap under its box */
+.ascii-liquid {
+  display: block;
+}
+
 /* Hide scrollbars on specific containers if needed */
 .custom-scrollbar-hide::-webkit-scrollbar {
   display: none;
@@ -91,20 +96,135 @@ body {
   scrollbar-width: none;
 }
 
-/* Impact statement keyword hover/focus interaction */
-.impact-headline {
+/* =========================
+   Shared partials (00-shared-partials.md)
+   ========================= */
+
+/* Scroll / mount reveal -- opacity + rise, staggered via --reveal-delay */
+.reveal {
+  opacity: 0;
+  transform: translateY(1.1rem);
+  transition:
+    opacity var(--duration) var(--ease),
+    transform var(--duration) var(--ease);
+  transition-delay: var(--reveal-delay, 0s);
+}
+.reveal.is-inview {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal--1 {
+  --reveal-delay: 0.06s;
+}
+.reveal--2 {
+  --reveal-delay: 0.16s;
+}
+.reveal--3 {
+  --reveal-delay: 0.26s;
+}
+.reveal--4 {
+  --reveal-delay: 0.36s;
+}
+.reveal--5 {
+  --reveal-delay: 0.46s;
+}
+
+/* Ink / doodle draw -- SVG stroke draws in once on mount (pathLength=1 + dasharray/dashoffset=1 set inline) */
+.ink-stroke {
+  animation: ink-draw-stroke var(--ink-duration, 1.1s) var(--ease)
+    var(--ink-delay, 0s) both;
+}
+@keyframes ink-draw-stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Handwritten note text fades in just after its doodle finishes drawing */
+.ink-write {
+  opacity: 0;
+  animation: ink-write-in 0.6s var(--ease) var(--ink-delay, 0.3s) both;
+}
+@keyframes ink-write-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Margin note -- Caveat, --note color, slight rotation (design.md section 5) */
+.margin-note {
+  font-family: var(--font-note);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  font-weight: 500;
+  color: var(--note);
+  transform: rotate(-2deg);
+  pointer-events: none;
+}
+
+/* Atmosphere layer -- hero / case hero background wash + faint notebook rules (design.md section 1) */
+.atmosphere-wash {
+  background:
+    radial-gradient(
+      ellipse 70% 55% at 12% 18%,
+      color-mix(in srgb, var(--teal-deep) 58%, transparent),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 88% 70%,
+      color-mix(in srgb, var(--teal) 24%, transparent),
+      transparent 65%
+    );
+}
+
+.atmosphere-rules {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--teal-mist) 7%, transparent) 0,
+    color-mix(in srgb, var(--teal-mist) 7%, transparent) 1px,
+    transparent 1px,
+    transparent 1.85rem
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+}
+
+/* Home hero keyword hover/focus interaction (02-home-hero.md) */
+.hero-title {
   transition: color 300ms ease;
 }
 
-.impact-headline:has(.kw:hover, .kw:focus-visible) {
+.hero-title:has(
+    .hero-keyword__trigger:hover,
+    .hero-keyword__trigger:focus-visible
+  ) {
   color: color-mix(in srgb, var(--paper) 35%, transparent);
 }
 
-.impact-headline .kw {
+.hero-title .hero-keyword__trigger {
   transition: opacity 300ms ease;
 }
 
-.impact-headline:has(.kw:hover, .kw:focus-visible)
-  .kw:not(:hover):not(:focus-visible) {
+.hero-title:has(
+    .hero-keyword__trigger:hover,
+    .hero-keyword__trigger:focus-visible
+  )
+  .hero-keyword__trigger:not(:hover):not(:focus-visible) {
   opacity: 0.35;
 }

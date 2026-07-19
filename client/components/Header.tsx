@@ -105,30 +105,26 @@ export default function Header() {
   const isNavItemActive = (isActive: boolean, matchPrefix?: string) =>
     isActive || (matchPrefix ? location.pathname.startsWith(matchPrefix) : false)
 
+  const isHome = location.pathname === '/'
+
   return (
-    <header className="relative z-50 w-full bg-ink px-6">
+    <header
+      className={`z-50 w-full px-6 ${isHome ? 'absolute inset-x-0 top-0 bg-transparent' : 'relative bg-ink'}`}
+    >
       <nav
         aria-label="Main navigation"
         className="relative z-50 mx-auto flex max-w-6xl items-center justify-between py-6 pb-4 sm:items-end sm:py-12 sm:pb-6"
       >
-        <Link to="/" className="group flex flex-col items-start">
-          <span className="sr-only sm:hidden">
-            Corina Reitemeyer, Product & Learning Designer
-          </span>
+        <Link to="/" className="group flex flex-row items-center gap-3">
           <img
             src="/images/cr-reverse-logo.svg"
             alt=""
             aria-hidden="true"
-            className="h-7 w-auto sm:mb-2 sm:h-6"
+            className="h-7 w-auto sm:h-6"
           />
-          <div className="hidden flex-col sm:flex">
-            <span className="text-base font-semibold text-paper transition-colors duration-200 group-hover:text-teal-mist sm:text-xl">
-              Corina Reitemeyer
-            </span>
-            <span className="-mt-1 text-base text-paper-muted sm:text-xl">
-              Product & Learning Designer.
-            </span>
-          </div>
+          <span className="text-base font-semibold text-paper transition-colors duration-200 group-hover:text-teal-mist sm:text-xl">
+            Corina Reitemeyer
+          </span>
         </Link>
 
         {/* Desktop nav */}

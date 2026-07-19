@@ -6,7 +6,7 @@ export default function ScrollToTop() {
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
-    const main = document.getElementById('main-content')
+    const main = document.getElementById('main')
     if (main) {
       main.focus({ preventScroll: true })
     }

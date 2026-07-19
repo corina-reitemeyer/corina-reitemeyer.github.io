@@ -1,191 +1,169 @@
-import { createContext, useContext, useId, useState } from 'react'
-import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
+import { useEffect, useId, useState, type SVGProps } from 'react'
 
-type PillTag = {
-  label: string
-  emoji?: string
-  emojiLabel?: string
-}
-
-type KeywordColor = 'primary' | 'secondary'
-
-type ActiveKeyword = {
+type Keyword = {
   id: string
-  fact: string
-  color: KeywordColor
+  label: string
+  detail: string
 }
 
-type KeywordContextValue = {
-  activate: (keyword: ActiveKeyword) => void
-  deactivate: (id: string) => void
-}
+const keywords: Keyword[] = [
+  {
+    id: 'design-systems',
+    label: 'design systems',
+    detail:
+      'Tokens, components, and shared language so design and engineering stay in sync as the product grows.',
+  },
+  {
+    id: 'interface',
+    label: 'interface',
+    detail:
+      'Clear hierarchy and interaction design that makes the next step feel obvious.',
+  },
+  {
+    id: 'code',
+    label: 'code',
+    detail:
+      'Production UI that ships—responsive, performant, and maintainable beyond the prototype.',
+  },
+  {
+    id: 'accessibility',
+    label: 'accessibility',
+    detail:
+      'Keyboard paths, focus, contrast, and semantic structure—including in learning products, where the UI must never compete with the lesson.',
+  },
+]
 
-const KeywordContext = createContext<KeywordContextValue | null>(null)
-
-const keywordColorClasses: Record<KeywordColor, string> = {
-  primary: 'text-teal-mid',
-  secondary: 'text-teal-bright',
-}
-
-function SparkleIcon(props: React.SVGProps<SVGSVGElement>) {
+function HandAsterisk(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M8 0c.3 2.9 1.1 4.7 2.1 5.9C11.3 6.9 13.1 7.7 16 8c-2.9.3-4.7 1.1-5.9 2.1C8.9 11.3 8.1 13.1 8 16c-.3-2.9-1.1-4.7-2.1-5.9C4.7 9.1 2.9 8.3 0 8c2.9-.3 4.7-1.1 5.9-2.1C6.9 4.7 7.7 2.9 8 0Z" />
+    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false" {...props}>
+      <path
+        className="ink-stroke"
+        d="M16 4v24M6.5 10.5l19 11M6.5 21.5l19-11"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        pathLength={1}
+        strokeDasharray={1}
+        strokeDashoffset={1}
+      />
     </svg>
   )
 }
 
-type ImpactKeywordProps = {
-  id: string
-  color: KeywordColor
-  fact: string
-  children: React.ReactNode
-}
-
-export function ImpactKeyword({ id, color, fact, children }: ImpactKeywordProps) {
-  const ctx = useContext(KeywordContext)
-  if (!ctx) {
-    throw new Error('ImpactKeyword must be rendered inside an ImpactStatement line')
-  }
-  const { activate, deactivate } = ctx
-  const factId = `${id}-fact`
-
+function HandSquiggle(props: SVGProps<SVGSVGElement>) {
   return (
-    <button
-      type="button"
-      className={`kw m-0 inline cursor-pointer border-0 bg-transparent p-0 align-baseline outline-none transition-opacity duration-300 ease-out [font:inherit] [line-height:inherit] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus ${keywordColorClasses[color]}`}
-      onMouseEnter={() => activate({ id, fact, color })}
-      onMouseLeave={() => deactivate(id)}
-      onFocus={() => activate({ id, fact, color })}
-      onBlur={() => deactivate(id)}
-      aria-describedby={factId}
-    >
-      {children}
-      <span id={factId} className="sr-only">
-        {fact}
-      </span>
-    </button>
+    <svg viewBox="0 0 140 24" fill="none" aria-hidden="true" focusable="false" {...props}>
+      <path
+        className="ink-stroke"
+        d="M4 14c12-8 22-8 34-2s22 8 34 2 22-8 34-2 20 7 30 1"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        pathLength={1}
+        strokeDasharray={1}
+        strokeDashoffset={1}
+      />
+    </svg>
   )
 }
 
-type ImpactStatementProps = {
-  greeting?: string
-  lines: React.ReactNode[]
-  pills?: PillTag[]
-  pillsLabel?: string
-  align?: 'left' | 'center'
-  className?: string
-  padded?: boolean
-}
-
-export default function ImpactStatement({
-  greeting,
-  lines,
-  pills,
-  pillsLabel = 'Designer profile summary',
-  align = 'left',
-  className = '',
-  padded = false,
-}: ImpactStatementProps) {
+export default function ImpactStatement() {
   const headingId = useId()
-  const shouldReduceMotion = useReducedMotion()
-  const [active, setActive] = useState<ActiveKeyword | null>(null)
+  const panelId = useId()
+  const [activeId, setActiveId] = useState<string | null>(null)
+  const [isInView, setIsInView] = useState(false)
 
-  const activate = (keyword: ActiveKeyword) => setActive(keyword)
-  const deactivate = (id: string) =>
-    setActive((prev) => (prev?.id === id ? null : prev))
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => setIsInView(true))
+    return () => cancelAnimationFrame(frame)
+  }, [])
 
-  const isCenter = align === 'center'
-  const alignClasses = isCenter
-    ? 'text-center items-center'
-    : 'text-left items-start'
-  const padY = padded ? 'py-4 md:py-16' : ''
+  const activeKeyword = keywords.find((k) => k.id === activeId) ?? null
+  const isRevealing = activeKeyword !== null
+  const revealClass = isInView ? 'is-inview' : ''
+
+  const open = (id: string) => setActiveId(id)
+  const close = (id: string) =>
+    setActiveId((prev) => (prev === id ? null : prev))
+  const toggle = (id: string) =>
+    setActiveId((prev) => (prev === id ? null : id))
+
+  const renderKeyword = (keyword: Keyword) => (
+    <span key={keyword.id} className="hero-keyword">
+      <button
+        type="button"
+        className="hero-keyword__trigger m-0 inline cursor-pointer border-0 bg-transparent p-0 align-baseline text-teal-mid outline-none [font:inherit] [line-height:inherit] hover:text-teal-mist focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus"
+        aria-expanded={activeId === keyword.id}
+        aria-controls={panelId}
+        onMouseEnter={() => open(keyword.id)}
+        onMouseLeave={() => close(keyword.id)}
+        onFocus={() => open(keyword.id)}
+        onBlur={() => close(keyword.id)}
+        onClick={() => toggle(keyword.id)}
+      >
+        {keyword.label}
+      </button>
+    </span>
+  )
 
   return (
     <section
+      id="top"
       aria-labelledby={headingId}
-      className={`relative w-full overflow-visible ${padY} ${className}`}
+      className="relative flex min-h-[100dvh] w-full items-center overflow-hidden bg-ink"
     >
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 sm:px-10 xl:px-0">
-        <div className={`flex w-full flex-col gap-6 sm:gap-12 ${alignClasses}`}>
-          <KeywordContext.Provider value={{ activate, deactivate }}>
-            <motion.h1
-              id={headingId}
-              initial={shouldReduceMotion ? false : { opacity: 0, y: 10 }}
-              animate={shouldReduceMotion ? false : { opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="w-full text-[40px] font-extrabold leading-[1.05] tracking-tight sm:text-[48px] sm:font-bold sm:leading-[1.2] md:text-[64px] md:leading-[1.15] xl:text-[72px] xl:leading-[1.1] 2xl:text-[96px] 2xl:leading-[1.2]"
-            >
-              {greeting && (
-                <span className="block w-full text-paper-muted">
-                  {greeting}
-                </span>
-              )}
-              {lines.map((line, i) => (
-                <span
-                  key={i}
-                  className="impact-headline block w-full text-paper"
-                >
-                  {line}
-                </span>
-              ))}
-            </motion.h1>
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0">
+        <div className="atmosphere-wash absolute inset-0" />
+        <div className="atmosphere-rules absolute inset-0" />
+        <HandSquiggle className="ink-draw absolute bottom-10 left-6 h-6 w-[140px] text-teal-mid/60 sm:left-10" />
+      </div>
 
-            <div
-              aria-live="polite"
-              className={`flex min-h-[20px] w-full items-start sm:min-h-[24px] ${isCenter ? 'justify-center text-center' : 'justify-end text-right'}`}
-            >
-              <AnimatePresence>
-                {active && (
-                  <motion.p
-                    key={active.id}
-                    initial={shouldReduceMotion ? false : { opacity: 0, y: 4 }}
-                    animate={shouldReduceMotion ? false : { opacity: 1, y: 0 }}
-                    exit={shouldReduceMotion ? undefined : { opacity: 0, y: -4 }}
-                    transition={{ duration: 0.2 }}
-                    className="flex max-w-2xl -rotate-1 items-start gap-2 text-left font-note text-[clamp(1.15rem,2vw,1.4rem)] font-medium text-note"
-                  >
-                    <SparkleIcon
-                      className={`mt-1 h-3.5 w-3.5 shrink-0 ${keywordColorClasses[active.color]}`}
-                    />
-                    <span>{active.fact}</span>
-                  </motion.p>
-                )}
-              </AnimatePresence>
-            </div>
-          </KeywordContext.Provider>
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-start gap-6 px-6 pb-16 pt-[80px] sm:gap-12 sm:px-10 sm:pt-[156px] xl:px-0">
+        <h1
+          id={headingId}
+          className={`hero-title reveal reveal--2 w-full text-[40px] font-extrabold leading-[1.05] tracking-tight text-paper sm:text-[48px] sm:font-bold sm:leading-[1.2] md:text-[64px] md:leading-[1.15] xl:text-[72px] xl:leading-[1.1] 2xl:text-[96px] 2xl:leading-[1.2] ${revealClass}`}
+        >
+          Corina is a digital product designer who helps teams bridge{' '}
+          {renderKeyword(keywords[0])}, {renderKeyword(keywords[1])}, and{' '}
+          {renderKeyword(keywords[2])} — with {renderKeyword(keywords[3])} at the center.
+        </h1>
 
-          {pills && pills.length > 0 && (
-            <motion.ul
-              role="list"
-              aria-label={pillsLabel}
-              initial={shouldReduceMotion ? false : { opacity: 0, y: 6 }}
-              animate={shouldReduceMotion ? false : { opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className={`flex list-none flex-wrap gap-3 p-0 ${isCenter ? 'justify-center' : 'justify-start'}`}
-            >
-              {pills.map((pill, i) => (
-                <li
-                  key={i}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-rule bg-charcoal-soft px-4 pb-[9px] pt-[7px] text-sm leading-none text-paper backdrop-blur-sm"
-                >
-                  {pill.emoji ? (
-                    <>
-                      <span>{pill.label}</span>
-                      <span
-                        role="img"
-                        aria-label={pill.emojiLabel ?? pill.emoji}
-                      >
-                        {pill.emoji}
-                      </span>
-                    </>
-                  ) : (
-                    pill.label
-                  )}
-                </li>
-              ))}
-            </motion.ul>
-          )}
+        <div
+          className={`reveal reveal--1 flex w-full items-start justify-end text-right ${revealClass}`}
+        >
+          <div
+            id={panelId}
+            role="note"
+            aria-live="polite"
+            aria-hidden={!isRevealing}
+            className={`max-w-2xl ${isRevealing ? 'is-open' : ''}`}
+          >
+            {activeKeyword && (
+              <>
+                <p className="mb-2 font-mono text-[0.72rem] font-medium uppercase tracking-[0.16em] text-teal-mid">
+                  {activeKeyword.label}
+                </p>
+                <p className="text-base leading-relaxed text-paper-muted">
+                  {activeKeyword.detail}
+                </p>
+              </>
+            )}
+          </div>
+
+          <div
+            aria-hidden={isRevealing}
+            className={`max-w-2xl ${isRevealing ? 'hidden' : ''}`}
+          >
+            <p className="mb-2 flex items-center justify-end gap-2 font-mono text-[0.72rem] font-medium uppercase tracking-[0.16em] text-paper-muted">
+              <HandAsterisk className="ink-draw h-4 w-4 text-teal-mid" />
+              Sidenote¹
+            </p>
+            <p className="text-base leading-relaxed text-paper-muted">
+              Currently taking on select engagements with product teams—including
+              learning and education products. Based in Australia · open to remote.
+            </p>
+          </div>
         </div>
       </div>
     </section>

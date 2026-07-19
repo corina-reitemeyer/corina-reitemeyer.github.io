@@ -70,7 +70,7 @@ export default function LiquidBanner() {
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-ink via-transparent to-ink"
+          className="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(to_bottom,var(--ink)_0%,transparent_30%,transparent_70%,var(--ink)_100%)]"
         />
 
         <h2

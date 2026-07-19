@@ -120,7 +120,7 @@ export function AsciiLiquid({ className = '' }: AsciiLiquidProps) {
 
     const paint = (time: number) => {
       const elapsed = reducedMotion ? 0 : (time - t0) * 0.00028
-      ctx.fillStyle = '#12151a'
+      ctx.fillStyle = '#14181c'
       ctx.fillRect(0, 0, width, height)
 
       const aspect = width / Math.max(height, 1)

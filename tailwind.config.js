@@ -53,6 +53,7 @@ export default {
       animation: {
         'fade-in-up': 'fadeInUp 0.6s ease-out both',
         ticker: 'ticker-scroll 55s linear infinite',
+        'scroll-wheel': 'scroll-wheel 1.6s ease-in-out infinite',
       },
       keyframes: {
         fadeInUp: {
@@ -62,6 +63,11 @@ export default {
         'ticker-scroll': {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
+        },
+        'scroll-wheel': {
+          '0%': { transform: 'translateY(0)', opacity: '1' },
+          '75%': { transform: 'translateY(6px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '0' },
         },
       },
     },

@@ -206,25 +206,19 @@ body {
 }
 
 /* Home hero keyword hover/focus interaction (02-home-hero.md) */
-.hero-title {
-  transition: color 300ms ease;
+.hero-deck {
+  transition: color 80ms ease-out;
 }
 
-.hero-title:has(
-    .hero-keyword__trigger:hover,
-    .hero-keyword__trigger:focus-visible
-  ) {
-  color: color-mix(in srgb, var(--paper) 35%, transparent);
+.hero-deck:has(.hero-keyword button:hover, .hero-keyword button:focus-visible) {
+  color: color-mix(in srgb, var(--paper-muted) 55%, transparent);
 }
 
-.hero-title .hero-keyword__trigger {
-  transition: opacity 300ms ease;
+.hero-deck .hero-keyword button {
+  transition: opacity 80ms ease-out;
 }
 
-.hero-title:has(
-    .hero-keyword__trigger:hover,
-    .hero-keyword__trigger:focus-visible
-  )
-  .hero-keyword__trigger:not(:hover):not(:focus-visible) {
+.hero-deck:has(.hero-keyword button:hover, .hero-keyword button:focus-visible)
+  .hero-keyword button:not(:hover):not(:focus-visible) {
   opacity: 0.35;
 }

@@ -45,9 +45,6 @@ export default function WorkIndex({ projects, linkPrefix }: WorkIndexProps) {
         <header
           className={`reveal reveal--1 relative mb-10 sm:mb-14 ${revealClass}`}
         >
-          <p className="mb-3 font-mono text-[0.72rem] font-medium uppercase tracking-[0.16em] text-teal-mid">
-            (Selected — {String(projects.length).padStart(2, '0')})
-          </p>
           <h2
             id={headingId}
             className="text-[clamp(2.85rem,7vw,4.75rem)] font-bold leading-[0.92] tracking-[-0.04em] text-paper"

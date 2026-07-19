@@ -2,7 +2,7 @@ import ProjectData from '../../src/projectsdata.json'
 import Project from '../../models/projectdata'
 import ImpactStatement from '../components/ImpactStatement'
 import LiquidBanner from '../components/LiquidBanner'
-import ProjectGrid from '../components/ProjectGrid'
+import WorkIndex from '../components/WorkIndex'
 import { ROUTES } from '../lib/routes'
 
 export default function Landing() {
@@ -10,13 +10,12 @@ export default function Landing() {
     <>
       <ImpactStatement />
 
-      <LiquidBanner />
-
-      <ProjectGrid
-        heading="Selected works"
+      <WorkIndex
         projects={ProjectData as Project[]}
         linkPrefix={ROUTES.digitalProduct}
       />
+
+      <LiquidBanner />
     </>
   )
 }

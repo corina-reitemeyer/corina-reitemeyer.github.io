@@ -66,7 +66,7 @@ export default function SkillSets() {
 
           <Link
             to="/about"
-            className="mt-8 inline-flex items-center gap-1.5 text-xs font-normal uppercase tracking-[0.16em] text-teal-mid transition-colors duration-200 ease-out hover:text-teal-mist lg:mt-auto lg:pt-8"
+            className="-my-3 mt-5 inline-flex items-center gap-1.5 py-3 text-xs font-normal uppercase tracking-[0.16em] text-teal-mid transition-colors duration-200 ease-out hover:text-teal-mist lg:mt-auto lg:pt-8"
           >
             More about me
             <span aria-hidden="true">→</span>

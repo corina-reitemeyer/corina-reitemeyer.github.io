@@ -152,15 +152,18 @@ function PhotoCarousel() {
           }`}
         />
 
-        {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions -- draggable scroll viewport, not a discrete control; keyboard/screen-reader users have the arrow buttons */}
+        {/* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/no-noninteractive-tabindex -- draggable scroll region; tabIndex is the standard fix for axe's scrollable-region-focusable rule, letting native arrow-key scrolling work once focused */}
         <div
           ref={scrollRef}
+          role="region"
+          aria-label="Photos, scrollable"
+          tabIndex={0}
           onScroll={updateEdges}
           onMouseDown={handleDragStart}
           onMouseMove={handleDragMove}
           onMouseUp={stopDragging}
           onMouseLeave={stopDragging}
-          className="custom-scrollbar-hide cursor-grab select-none overflow-x-auto active:cursor-grabbing"
+          className="custom-scrollbar-hide cursor-grab select-none overflow-x-auto active:cursor-grabbing focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus"
         >
           <div className="flex gap-6">
             {photos.map((photo) => (
@@ -173,6 +176,7 @@ function PhotoCarousel() {
             ))}
           </div>
         </div>
+        {/* eslint-enable jsx-a11y/no-static-element-interactions, jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/no-noninteractive-tabindex */}
 
         <button
           type="button"

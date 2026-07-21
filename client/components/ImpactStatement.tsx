@@ -14,10 +14,10 @@ const keywords: Keyword[] = [
       'Tokens, components, and shared language so design and engineering stay in sync as the product grows.',
   },
   {
-    id: 'interface',
-    label: 'interface',
+    id: 'product',
+    label: 'product',
     detail:
-      'Clear hierarchy and interaction design that makes the next step feel obvious.',
+      'Turning ambiguous problems into product decisions that hold up under real constraints.',
   },
   {
     id: 'code',
@@ -125,8 +125,6 @@ export default function ImpactStatement() {
   const open = (id: string) => setActiveId(id)
   const close = (id: string) =>
     setActiveId((prev) => (prev === id ? null : prev))
-  const toggle = (id: string) =>
-    setActiveId((prev) => (prev === id ? null : id))
 
   const renderKeyword = (keyword: Keyword) => (
     <span key={keyword.id} className="hero-keyword">
@@ -139,7 +137,7 @@ export default function ImpactStatement() {
         onMouseLeave={() => close(keyword.id)}
         onFocus={() => open(keyword.id)}
         onBlur={() => close(keyword.id)}
-        onClick={() => toggle(keyword.id)}
+        onClick={() => open(keyword.id)}
       >
         {keyword.label}
       </button>

@@ -4,7 +4,6 @@ import MOEDesignSystem from './MOEDesignSystem'
 import SuiteFilesDesignSystem from './SuiteFilesDesignSystem'
 import SuiteFilesAISummary from './SuiteFilesAISummary'
 import BuildingAdaptiveTeams from './BuildingAdaptiveTeams'
-import ScrollToTopButton from '../components/casestudy/ScrollToTopButton'
 import { ROUTES } from '../lib/routes'
 
 export default function CaseStudy() {
@@ -48,10 +47,5 @@ export default function CaseStudy() {
     }
   }
 
-  return (
-    <>
-      {renderCaseStudy()}
-      <ScrollToTopButton />
-    </>
-  )
+  return renderCaseStudy()
 }

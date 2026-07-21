@@ -6,6 +6,7 @@ type WorkItem = {
   id: number
   projectImage: string
   projectTitle: string
+  shortTitle: string
   company?: string
   slug: string
 }
@@ -109,9 +110,14 @@ export default function WorkIndex({ projects, linkPrefix }: WorkIndexProps) {
                       isActive ? 'text-paper' : 'text-paper-muted hover:text-paper'
                     }`}
                   >
-                    <h3 className="flex-1 text-lg sm:text-xl">
-                      {project.projectTitle}
-                    </h3>
+                    <div className="flex-1">
+                      {project.company && (
+                        <p className="text-teal-mid mb-1 font-normal text-xs uppercase tracking-[0.12em]">
+                          {project.company}
+                        </p>
+                      )}
+                      <h3 className="text-lg sm:text-xl">{project.shortTitle}</h3>
+                    </div>
                     <span className="whitespace-nowrap font-normal text-sm text-paper-muted">
                       {YEAR_BY_SLUG[project.slug] ?? ''}
                     </span>

@@ -173,16 +173,19 @@ body {
 }
 
 /* Atmosphere layer -- hero / case hero background wash + faint notebook rules (design.md section 1) */
+/* Opacity capped so text-paper-muted keeps >= 4.5:1 contrast (WCAG AA) even at
+   the hotspot centers, where hero deck copy sometimes sits (verified via
+   color-mix compositing against --ink, not just eyeballed). */
 .atmosphere-wash {
   background:
     radial-gradient(
       ellipse 70% 55% at 12% 18%,
-      color-mix(in srgb, var(--teal-deep) 58%, transparent),
+      color-mix(in srgb, var(--teal-deep) 50%, transparent),
       transparent 70%
     ),
     radial-gradient(
       ellipse 50% 40% at 88% 70%,
-      color-mix(in srgb, var(--teal) 24%, transparent),
+      color-mix(in srgb, var(--teal) 16%, transparent),
       transparent 65%
     );
 }

@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="w-full border-t border-rule" />
       )}
 
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-16 sm:grid-cols-2 sm:gap-12 sm:px-8 sm:py-24 lg:grid-cols-3">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-16 sm:grid-cols-2 sm:gap-12 sm:px-8 sm:py-24">
         <div>
           <h2 className="mb-4 text-xs font-normal uppercase tracking-[0.16em] text-paper-muted">
             Elsewhere
@@ -29,7 +29,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Book a call (opens in a new tab)"
-                className="font-semibold text-paper-muted transition-colors duration-200 hover:text-paper"
+                className="-my-1.5 inline-block py-1.5 font-semibold text-paper-muted transition-colors duration-200 hover:text-paper"
               >
                 Book a call.
               </a>
@@ -40,7 +40,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn (opens in a new tab)"
-                className="font-semibold text-paper-muted transition-colors duration-200 hover:text-paper"
+                className="-my-1.5 inline-block py-1.5 font-semibold text-paper-muted transition-colors duration-200 hover:text-paper"
               >
                 LinkedIn.
               </a>
@@ -51,7 +51,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Medium (opens in a new tab)"
-                className="font-semibold text-paper-muted transition-colors duration-200 hover:text-paper"
+                className="-my-1.5 inline-block py-1.5 font-semibold text-paper-muted transition-colors duration-200 hover:text-paper"
               >
                 Medium.
               </a>
@@ -62,7 +62,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub (opens in a new tab)"
-                className="font-semibold text-paper-muted transition-colors duration-200 hover:text-paper"
+                className="-my-1.5 inline-block py-1.5 font-semibold text-paper-muted transition-colors duration-200 hover:text-paper"
               >
                 GitHub.
               </a>
@@ -78,10 +78,7 @@ export default function Footer() {
             Set in Sofia Pro. Built with TypeScript, React, and Vite. Handled
             with care.
           </p>
-        </div>
-
-        <div className="flex flex-col gap-2 sm:col-span-2 lg:col-span-1">
-          <p className="text-sm text-paper-muted">
+          <p className="mt-4 text-sm text-paper-muted">
             <span className="sr-only">Copyright </span>© {year}
           </p>
         </div>

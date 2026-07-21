@@ -59,8 +59,8 @@ export default function Services() {
             <span className="block text-teal-mid">can help</span>
           </h2>
           <p className="max-w-measure text-paper-muted">
-            Ways I show up for product teams, from systems work to shipped
-            interfaces.
+            These are some of the ways I can support product teams, from
+            product design, to systems work to shipped interfaces.
           </p>
           <p className="margin-note ink-draw ink-write mt-6" aria-hidden="true">
             open to book

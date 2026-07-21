@@ -121,7 +121,7 @@ export default function Header() {
             aria-hidden="true"
             className="h-7 w-auto sm:h-6"
           />
-          <span className="text-base font-semibold text-paper transition-colors duration-200 group-hover:text-teal-mist sm:text-xl">
+          <span className="text-sm font-semibold text-paper transition-colors duration-200 group-hover:text-teal-mist sm:text-lg">
             Corina Reitemeyer
           </span>
         </Link>

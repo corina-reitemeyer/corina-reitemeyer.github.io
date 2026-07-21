@@ -2,6 +2,7 @@
   {
     "id": 1,
     "projectTitle": "Helping recipients understand what they're signing, with a little help from AI.",
+    "shortTitle": "An AI summary feature for a document signing platform",
     "slug": "suitefiles-ai-summary",
     "projectImage": "/images/portfolio/product/suitefiles-ai-summary-cover.webp",
     "company": "SuiteFiles"
@@ -9,6 +10,7 @@
   {
     "id": 2,
     "projectTitle": "A live rebrand. A fast-moving product. One design system that had to keep up with both.",
+    "shortTitle": "An evolving design system for a document management platform",
     "slug": "suitefiles-design-system",
     "projectImage": "/images/product/suitefiles-design-system-hero.webp",
     "company": "SuiteFiles"
@@ -16,6 +18,7 @@
   {
     "id": 3,
     "projectTitle": "Building the first design system for a government organisation, used across 50+ platforms.",
+    "shortTitle": "The first design system for a government education organisation",
     "slug": "moe-design-system",
     "projectImage": "/images/portfolio/product/moe-design-system-cover.webp",
     "company": "Ministry of Education"
@@ -23,6 +26,7 @@
   {
     "id": 4,
     "projectTitle": "Helping researchers start studies faster, and discover methods they didn't know existed.",
+    "shortTitle": "Ready-made templates for a UX research platform",
     "slug": "ow-templates",
     "projectImage": "/images/portfolio/product/optimal-homepage-cover.webp",
     "company": "Optimal Workshop"

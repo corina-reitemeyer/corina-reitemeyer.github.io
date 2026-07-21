@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { useIsLightboxOpen } from '../../lib/lightboxVisibility'
+import { useIsLightboxOpen } from '../lib/lightboxVisibility'
 
-export default function ScrollUpButton() {
+export default function ScrollToTopButton() {
   const [visible, setVisible] = useState(false)
   const lightboxOpen = useIsLightboxOpen()
 

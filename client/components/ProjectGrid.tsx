@@ -74,9 +74,9 @@ function ProjectCard({
           <span className="text-teal-mid mb-2 flex items-center gap-2 font-normal text-xs uppercase tracking-[0.12em]">
             {project.company ?? 'Project'}
           </span>
-          <h2 className="text-paper block text-lg font-semibold leading-snug sm:text-xl">
+          <h3 className="text-paper block text-lg font-semibold leading-snug sm:text-xl">
             {project.projectTitle}
-          </h2>
+          </h3>
         </span>
       </div>
 
@@ -84,9 +84,9 @@ function ProjectCard({
         <span className="text-teal-mid mb-1 flex items-center gap-2 font-normal text-xs uppercase tracking-[0.12em]">
           {project.company ?? 'Project'}
         </span>
-        <h2 className="text-paper block text-lg font-semibold leading-snug sm:text-xl">
+        <h3 className="text-paper block text-lg font-semibold leading-snug sm:text-xl">
           {project.projectTitle}
-        </h2>
+        </h3>
       </div>
     </>
   )

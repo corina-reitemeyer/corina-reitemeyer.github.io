@@ -3,8 +3,9 @@ import { useScrollReveal } from '../../lib/useScrollReveal'
 
 const interests = [
   'Café hopping and Pilates reformer sessions to reset between screens',
-  'Latin dance: salsa and bachata, whenever I get the chance',
-  'Cozy pixel games, travel photography, and a rotating stack of sci-fi and productivity books',
+  'Latin dance: mainly Cuban salsa and a sprinkle of Dominican bachata, whenever I get the chance',
+  'Photography: Mainly when travelling, sometimes for events',
+  'Learning languages, and a rotating stack of sci-fi and productivity books',
 ]
 
 const highlights = [
@@ -28,9 +29,7 @@ export default function AboutDuoLists() {
       className="w-full bg-ink py-16 sm:py-24"
     >
       <div className="mx-auto max-w-6xl px-6 sm:px-10 xl:px-0">
-        <div
-          className={`reveal reveal--1 mb-10 sm:mb-14 ${revealClass}`}
-        >
+        <div className={`reveal reveal--1 mb-10 sm:mb-14 ${revealClass}`}>
           <p className="mb-3 text-xs font-normal uppercase tracking-[0.16em] text-teal-mid">
             Off the clock
           </p>

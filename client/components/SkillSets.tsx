@@ -14,6 +14,7 @@ const tracks: Track[] = [
       'UX/UI Design',
       'Interaction Design',
       'Design Systems',
+      'Design Thinking',
       'Prototyping',
       'Visual Design',
     ],
@@ -28,8 +29,15 @@ const tracks: Track[] = [
     ],
   },
   {
-    label: 'Craft',
-    items: ['Motion', 'Typography', 'Writing', 'Tooling'],
+    label: 'Share',
+    items: [
+      'Facilitation',
+      'Design System Documentation',
+      'Mentoring',
+      'Instructional Design',
+      'Accessibility Advocacy',
+      'Clear Communication',
+    ],
   },
 ]
 
@@ -60,8 +68,8 @@ export default function SkillSets() {
           <div className="my-6 h-px w-16 bg-rule sm:my-8" aria-hidden="true" />
 
           <p className="max-w-measure text-paper-muted">
-            End-to-end craft across design and code: systems, interfaces, and
-            the tooling that keeps them honest from sketch to shipped UI.
+            I work in the gap between design and code, close enough to both
+            to ship interfaces myself, not just hand them off.
           </p>
 
           <Link

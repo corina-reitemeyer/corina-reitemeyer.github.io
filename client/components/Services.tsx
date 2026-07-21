@@ -11,22 +11,27 @@ const services: Service[] = [
   {
     title: 'Design systems',
     summary:
-      'I rebuild the shared language between Figma and code: tokens, components, and contribution rules teams can actually keep.',
+      'I build the shared language between Figma and code, working directly in Storybook: tokens, components, and contribution rules that keep both sides honest.',
   },
   {
-    title: 'Design to front-end support',
+    title: 'Design engineering',
     summary:
-      'I sit in the seam: design reviews that speak in props and PRs, and production UI that still matches the intent.',
-  },
-  {
-    title: 'AI-assisted product design',
-    summary:
-      'For AI features that need trust: clear controls, readable outputs, and flows where people stay in charge of the next step.',
+      "Full-stack fundamentals from a coding bootcamp mean I know what's happening under the hood, with AI in the loop to move fast without cutting corners.",
   },
   {
     title: 'Product design',
     summary:
-      'From paper drafts to shipped interaction, especially learning and editorial products where the UI should never compete with the content.',
+      'AI closes the gap between an idea and something real, prototyping straight in code, but the people in the loop, customers and my team, are what make it worth shipping.',
+  },
+  {
+    title: 'Designing for AI',
+    summary:
+      'For AI features that need trust: clear controls, readable outputs, and flows where people stay in charge of the next step.',
+  },
+  {
+    title: 'Learning design',
+    summary:
+      'Instructional design grounded in real learning theory: microlearning built in Storyline, accessibility-checked, and paced for people who are busy, not captive.',
   },
   {
     title: 'UX/UI audits',
@@ -79,9 +84,9 @@ export default function Services() {
                 className="group flex h-full flex-col gap-4 border border-rule p-6 transition-colors duration-200 ease-out hover:border-teal-mid sm:p-7"
               >
                 <span className="flex-1">
-                  <span className="mb-2 block text-lg font-semibold text-paper">
+                  <h3 className="mb-2 block text-lg font-semibold text-paper">
                     {service.title}
-                  </span>
+                  </h3>
                   <span className="block text-sm leading-relaxed text-paper-muted">
                     {service.summary}
                   </span>

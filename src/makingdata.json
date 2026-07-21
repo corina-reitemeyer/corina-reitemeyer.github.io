@@ -2,7 +2,7 @@
   {
     "id": 3,
     "title": "AXON - Accessible Design system",
-    "description": "A test of how far AI can take accessible design systems, built with a fully AI-assisted workflow from Figma Make to Claude to code.",
+    "description": "A test of how far AI can take accessible design systems, built with a fully AI-assisted workflow from Figma Make to Figma MCP/Claude to Storybook.",
     "category": "Experiment",
     "status": "wip",
     "year": "2025",
@@ -12,7 +12,7 @@
   {
     "id": 4,
     "title": "Building Adaptive Teams",
-    "description": "A microlearning course for team leads navigating change, built on the idea that the conditions matter as much as the content.",
+    "description": "A fictional microlearning course to emulate the ADDIE process of learning design.",
     "category": "Side project",
     "status": "live",
     "year": "2024",

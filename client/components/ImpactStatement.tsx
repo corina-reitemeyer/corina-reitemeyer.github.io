@@ -209,7 +209,7 @@ export default function ImpactStatement() {
         aria-hidden="true"
         className="pointer-events-none absolute bottom-6 right-6 z-10 flex flex-col items-center gap-2 text-paper-muted sm:bottom-10 sm:right-10"
       >
-        <span className="font-normal text-[0.65rem] uppercase tracking-[0.16em]">
+        <span className="font-normal text-xs uppercase tracking-[0.16em]">
           Scroll
         </span>
         <ScrollMouseIcon className="h-7 w-4 sm:h-8 sm:w-5" />

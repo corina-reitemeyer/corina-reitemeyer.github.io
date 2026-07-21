@@ -49,9 +49,8 @@ export default function AboutIntroSection() {
           className={`reveal reveal--2 max-w-measure space-y-5 text-paper-muted ${revealClass}`}
         >
           <p>
-            I&rsquo;m a Product &amp; Learning Experience Designer, originally
-            from Germany and New Zealand and now based in Melbourne, which gave
-            me a structured but practical way of thinking.
+            I&rsquo;m a Senior Product Designer, originally from Germany and New
+            Zealand, which gave me a structured but practical way of thinking.
           </p>
           <p>
             I specialise in making complexity feel simple, whether that&rsquo;s
@@ -60,9 +59,8 @@ export default function AboutIntroSection() {
             because good design and good learning should work for everyone.
           </p>
           <p>
-            Close to 10 years across government, education, and B2B SaaS. TEFL
-            certified. Former Cuban salsa instructor and Code Bootcamp teaching
-            facilitator. Turns out teaching is just design with a live audience.
+            Cuban salsa instructor (on hiatus) and former Code Bootcamp teaching
+            facilitator. Turns out teaching is just design with a live audience!
           </p>
           <p className="flex flex-wrap items-center gap-1.5 text-sm">
             <span className="font-semibold text-paper-muted">Accolades:</span>

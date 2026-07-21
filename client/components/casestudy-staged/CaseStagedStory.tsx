@@ -133,9 +133,9 @@ export default function CaseStagedStory({
                   className="flex flex-col gap-1 py-6 sm:flex-row sm:gap-6 sm:py-7"
                 >
                   <div>
-                    <p className="text-paper mb-1 text-lg font-semibold sm:text-xl">
+                    <h3 className="text-paper mb-1 text-lg font-semibold sm:text-xl">
                       {item.title}
-                    </p>
+                    </h3>
                     <p className="text-paper-muted max-w-measure text-sm leading-relaxed">
                       {item.description}
                     </p>

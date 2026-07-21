@@ -175,17 +175,17 @@ export default function Making() {
               id={headingId}
               className="text-paper text-[clamp(2.75rem,8vw,5.5rem)] font-bold leading-[0.95] tracking-[-0.03em]"
             >
-              <span className="block">Small experiments,</span>
-              <span className="block">tried in the open.</span>
+              <span className="block">Half-built ideas,</span>
+              <span className="block">shipped anyway.</span>
             </h1>
           </div>
 
           <p
             className={`reveal reveal--3 max-w-measure text-paper-soft mt-7 text-[clamp(1.05rem,1.7vw,1.15rem)] ${revealClass}`}
           >
-            Side projects and{' '}
-            <span className="text-teal-mid">half-built ideas</span>, dumping
-            the pieces out and figuring out what wants to stand up.
+            Where I upskill,{' '}
+            <span className="text-teal-mid">test new tools and approaches</span>,
+            and sometimes just want to design and build something cool.
           </p>
         </div>
       </header>
@@ -200,7 +200,9 @@ export default function Making() {
             className={`reveal reveal--1 relative mb-6 flex items-center gap-3 ${gridRevealClass}`}
           >
             <HandAsterisk className="text-teal-mid h-4 w-4 shrink-0" />
-            <p className="margin-note -rotate-2 text-lg">what&rsquo;s on the floor</p>
+            <p className="margin-note -rotate-2 text-lg">
+              gotta remember to commit to GitHub!
+            </p>
           </div>
 
           {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}

@@ -50,34 +50,65 @@ function PlayIcon(props: SVGProps<SVGSVGElement>) {
   )
 }
 
+/** Photos rendered three times so there's always a full screen of images to
+ *  scroll into in either direction; the middle copy is the only one exposed
+ *  to assistive tech, the two flanking copies are aria-hidden clones used
+ *  purely to make the loop visually seamless. */
+const loopedPhotos = [0, 1, 2].flatMap((setIndex) =>
+  photos.map((photo) => ({
+    ...photo,
+    key: `${photo.src}-${setIndex}`,
+    isReal: setIndex === 1,
+  })),
+)
+
 function PhotoCarousel() {
   const scrollRef = useRef<HTMLDivElement>(null)
   const driftPositionRef = useRef(0)
   const isDraggingRef = useRef(false)
   const dragStartXRef = useRef(0)
   const dragStartScrollLeftRef = useRef(0)
-  const [canScrollLeft, setCanScrollLeft] = useState(false)
-  const [canScrollRight, setCanScrollRight] = useState(false)
+  const scrollEndTimeoutRef = useRef<number>()
   const [isHovering, setIsHovering] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
 
-  const updateEdges = () => {
+  /** One third of the (tripled) scroll content -- the width of a single,
+   *  real set of photos. */
+  const getSetWidth = () => {
+    const el = scrollRef.current
+    return el ? el.scrollWidth / 3 : 0
+  }
+
+  /** Once scroll position drifts into a cloned set, silently jump back by
+   *  one set width so it looks like the scroll never stopped. Since the
+   *  clones are pixel-identical to the real set, the jump is invisible. */
+  const wrapIfNeeded = () => {
+    const el = scrollRef.current
+    if (!el || isDraggingRef.current) return
+    const setWidth = getSetWidth()
+    if (setWidth <= 0) return
+    if (el.scrollLeft < setWidth * 0.5) {
+      el.scrollLeft += setWidth
+    } else if (el.scrollLeft > setWidth * 1.5) {
+      el.scrollLeft -= setWidth
+    }
+    driftPositionRef.current = el.scrollLeft
+  }
+
+  const handleScroll = () => {
     const el = scrollRef.current
     if (!el) return
-    driftPositionRef.current = el.scrollLeft
-    setCanScrollLeft(el.scrollLeft > 4)
-    setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 4)
+    if (!isDraggingRef.current) {
+      driftPositionRef.current = el.scrollLeft
+    }
+    window.clearTimeout(scrollEndTimeoutRef.current)
+    scrollEndTimeoutRef.current = window.setTimeout(wrapIfNeeded, 120)
   }
 
   const scrollByStep = (direction: 1 | -1) => {
     const el = scrollRef.current
     if (!el) return
-    const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4
-    if (direction === 1 && atEnd) {
-      el.scrollTo({ left: 0, behavior: 'smooth' })
-    } else {
-      el.scrollBy({ left: direction * TILE_STEP, behavior: 'smooth' })
-    }
+    el.scrollBy({ left: direction * TILE_STEP, behavior: 'smooth' })
   }
 
   const handleDragStart = (e: MouseEvent) => {
@@ -97,18 +128,27 @@ function PhotoCarousel() {
 
   const stopDragging = () => {
     isDraggingRef.current = false
+    const el = scrollRef.current
+    if (el) driftPositionRef.current = el.scrollLeft
+    wrapIfNeeded()
   }
 
   const arrowButtonClass =
-    'bg-ink/80 text-paper flex h-10 w-10 flex-none items-center justify-center rounded-full border border-rule backdrop-blur-sm transition-colors duration-200 hover:border-teal-mid disabled:pointer-events-none disabled:opacity-0'
+    'bg-ink/80 text-paper flex h-10 w-10 flex-none items-center justify-center rounded-full border border-rule backdrop-blur-sm transition-colors duration-200 hover:border-teal-mid'
 
   useEffect(() => {
-    updateEdges()
-    window.addEventListener('resize', updateEdges)
+    const el = scrollRef.current
+    if (!el) return
+    const setWidth = el.scrollWidth / 3
+    el.scrollLeft = setWidth
+    driftPositionRef.current = setWidth
+
+    window.addEventListener('resize', wrapIfNeeded)
     window.addEventListener('mouseup', stopDragging)
     return () => {
-      window.removeEventListener('resize', updateEdges)
+      window.removeEventListener('resize', wrapIfNeeded)
       window.removeEventListener('mouseup', stopDragging)
+      window.clearTimeout(scrollEndTimeoutRef.current)
     }
   }, [])
 
@@ -123,9 +163,9 @@ function PhotoCarousel() {
     const drift = () => {
       const el = scrollRef.current
       if (el) {
-        const atEnd = driftPositionRef.current + el.clientWidth >= el.scrollWidth - 1
-        driftPositionRef.current = atEnd ? 0 : driftPositionRef.current + AUTOPLAY_SPEED
+        driftPositionRef.current += AUTOPLAY_SPEED
         el.scrollLeft = driftPositionRef.current
+        wrapIfNeeded()
       }
       frame = window.requestAnimationFrame(drift)
     }
@@ -141,16 +181,8 @@ function PhotoCarousel() {
       onMouseLeave={() => setIsHovering(false)}
     >
       <div className="relative min-w-0">
-        <div
-          className={`from-ink pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r to-transparent transition-opacity duration-200 ${
-            canScrollLeft ? 'opacity-100' : 'opacity-0'
-          }`}
-        />
-        <div
-          className={`from-ink pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l to-transparent transition-opacity duration-200 ${
-            canScrollRight ? 'opacity-100' : 'opacity-0'
-          }`}
-        />
+        <div className="from-ink pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r to-transparent" />
+        <div className="from-ink pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l to-transparent" />
 
         {/* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/no-noninteractive-tabindex -- draggable scroll region; tabIndex is the standard fix for axe's scrollable-region-focusable rule, letting native arrow-key scrolling work once focused */}
         <div
@@ -158,7 +190,7 @@ function PhotoCarousel() {
           role="region"
           aria-label="Photos, scrollable"
           tabIndex={0}
-          onScroll={updateEdges}
+          onScroll={handleScroll}
           onMouseDown={handleDragStart}
           onMouseMove={handleDragMove}
           onMouseUp={stopDragging}
@@ -166,11 +198,12 @@ function PhotoCarousel() {
           className="custom-scrollbar-hide cursor-grab select-none overflow-x-auto active:cursor-grabbing focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus"
         >
           <div className="flex gap-6">
-            {photos.map((photo) => (
+            {loopedPhotos.map((photo) => (
               <img
-                key={photo.src}
+                key={photo.key}
                 src={photo.src}
-                alt={photo.alt}
+                alt={photo.isReal ? photo.alt : ''}
+                aria-hidden={!photo.isReal}
                 className="aspect-[4/3] w-[26rem] flex-none object-cover sm:w-[28rem]"
               />
             ))}
@@ -181,7 +214,6 @@ function PhotoCarousel() {
         <button
           type="button"
           onClick={() => scrollByStep(-1)}
-          disabled={!canScrollLeft}
           aria-label="Scroll left"
           className="absolute left-4 top-1/2 z-20 -translate-y-1/2 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100"
         >
@@ -201,7 +233,6 @@ function PhotoCarousel() {
         <button
           type="button"
           onClick={() => scrollByStep(1)}
-          disabled={!canScrollRight}
           aria-label="Scroll right"
           className="absolute right-4 top-1/2 z-20 -translate-y-1/2 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100"
         >

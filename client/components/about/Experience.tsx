@@ -21,33 +21,33 @@ export default function ExperienceSection({ items }: Props) {
     <section
       ref={sectionRef}
       aria-labelledby={headingId}
-      className="bg-ink w-full py-16 sm:py-24"
+      className="w-full bg-ink py-16 sm:py-24"
     >
       <div className="mx-auto max-w-6xl px-6 sm:px-10 xl:px-0">
         <div
-          className={`reveal reveal--1 max-w-measure mb-10 sm:mb-14 ${revealClass}`}
+          className={`reveal reveal--1 mb-10 max-w-measure sm:mb-14 ${revealClass}`}
         >
-          <p className="text-teal-mid mb-3 font-normal text-xs uppercase tracking-[0.16em]">
+          <p className="mb-3 text-xs font-normal uppercase tracking-[0.16em] text-teal-mid">
             Experience
           </p>
           <h2
             id={headingId}
-            className="text-paper mb-4 text-[clamp(2rem,5vw,3rem)] font-bold leading-[0.98] tracking-[-0.03em]"
+            className="mb-4 text-[clamp(2rem,5vw,3rem)] font-bold leading-[0.98] tracking-[-0.03em] text-paper"
           >
             Government, SaaS products, and a throughline of{' '}
             <span className="text-teal-mid">teaching</span>
           </h2>
           <p className="text-paper-muted">
-            Close to 10 years moving between public-sector UX, B2B SaaS, and the
-            classroom, always in the seam between how something works and how
-            it&rsquo;s explained.
+            Close to 10 years moving between NZ government, B2B SaaS scale ups,
+            and the classroom, always in the seam between how something works
+            and how it&rsquo;s explained.
           </p>
         </div>
 
         {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
         <ol
           role="list"
-          className={`reveal reveal--2 divide-rule border-rule divide-y border-t ${revealClass}`}
+          className={`reveal reveal--2 divide-y divide-rule border-t border-rule ${revealClass}`}
         >
           {items.map((item) => (
             <li
@@ -55,12 +55,12 @@ export default function ExperienceSection({ items }: Props) {
               className="flex flex-col gap-1 py-5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6 sm:py-6"
             >
               <div>
-                <p className="text-paper text-lg font-semibold sm:text-xl">
+                <h3 className="text-lg font-semibold text-paper sm:text-xl">
                   {item.title}
-                </p>
+                </h3>
                 <p className="text-paper-muted">{item.company}</p>
               </div>
-              <p className="text-paper-muted whitespace-nowrap font-normal text-sm">
+              <p className="whitespace-nowrap text-sm font-normal text-paper-muted">
                 {item.dates}
               </p>
             </li>

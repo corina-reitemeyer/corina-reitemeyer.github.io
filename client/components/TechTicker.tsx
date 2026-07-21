@@ -9,7 +9,9 @@ const tools = [
   'GitHub',
   'Tailwind',
   'WAVE',
+  'axe',
   'VoiceOver',
+  'Storybook',
 ]
 
 function TickerSequence({ suffix }: { suffix: string }) {
@@ -18,7 +20,7 @@ function TickerSequence({ suffix }: { suffix: string }) {
       {tools.map((tool) => (
         <span
           key={`${tool}-${suffix}`}
-          className="flex items-center gap-6 whitespace-nowrap font-normal text-sm uppercase tracking-[0.12em] text-paper-muted"
+          className="flex items-center gap-6 whitespace-nowrap text-sm font-normal uppercase tracking-[0.12em] text-paper-muted"
         >
           <span>{tool}</span>
           <span aria-hidden="true" className="text-teal-mid">

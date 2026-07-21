@@ -18,7 +18,7 @@ export default function Footer() {
 
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-16 sm:grid-cols-2 sm:gap-12 sm:px-8 sm:py-24">
         <div>
-          <h2 className="mb-4 text-xs font-normal uppercase tracking-[0.16em] text-paper-muted">
+          <h2 className="mb-4 text-xs font-normal uppercase tracking-[0.16em] text-teal-mid">
             Elsewhere
           </h2>
           {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
@@ -71,15 +71,17 @@ export default function Footer() {
         </div>
 
         <div>
-          <h2 className="mb-4 text-xs font-normal uppercase tracking-[0.16em] text-paper-muted">
+          <h2 className="mb-4 text-xs font-normal uppercase tracking-[0.16em] text-teal-mid">
             Colophon
           </h2>
           <p className="max-w-[28rem] text-sm leading-relaxed text-paper-muted">
-            Set in Sofia Pro. Built with TypeScript, React, and Vite. Handled
-            with care.
+            Set in Sofia Pro. Built with TypeScript, React, and Vite.
+            <br />
+            Designed and built with care ♥
           </p>
           <p className="mt-4 text-sm text-paper-muted">
-            <span className="sr-only">Copyright </span>© {year}
+            <span className="sr-only">Copyright </span>© {year} Corina
+            Reitemeyer
           </p>
         </div>
       </div>

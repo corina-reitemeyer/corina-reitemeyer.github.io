@@ -2,8 +2,8 @@ import { useEffect, useId, useState } from 'react'
 
 const meta = [
   { label: 'Based', value: 'Melbourne, Australia' },
-  { label: 'Focus', value: 'Product design & front-end build' },
-  { label: 'Availability', value: 'Actively looking' },
+  { label: 'Focus', value: 'Product design & design engineering' },
+  { label: 'Availability', value: 'Actively interviewing' },
 ]
 
 export default function AboutHero() {
@@ -20,7 +20,7 @@ export default function AboutHero() {
   return (
     <header
       aria-labelledby={headingId}
-      className="bg-ink relative w-full overflow-hidden"
+      className="relative w-full overflow-hidden bg-ink"
     >
       <div
         aria-hidden="true"
@@ -32,37 +32,37 @@ export default function AboutHero() {
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 pb-16 pt-[112px] sm:px-10 sm:pb-24 sm:pt-[164px] xl:px-0">
         <p
-          className={`reveal reveal--1 text-teal-mid mb-3 font-normal text-xs uppercase tracking-[0.16em] ${revealClass}`}
+          className={`reveal reveal--1 mb-3 text-xs font-normal uppercase tracking-[0.16em] text-teal-mid ${revealClass}`}
         >
           About
         </p>
 
         <h1
           id={headingId}
-          className={`reveal reveal--2 text-paper mb-6 text-[clamp(2.75rem,8vw,5.5rem)] font-bold leading-[0.95] tracking-[-0.03em] ${revealClass}`}
+          className={`reveal reveal--2 mb-6 text-[clamp(2.75rem,8vw,5.5rem)] font-bold leading-[0.95] tracking-[-0.03em] text-paper ${revealClass}`}
         >
           <span className="block">Structured thinker.</span>
           <span className="block">Practical builder.</span>
         </h1>
 
         <p
-          className={`reveal reveal--3 max-w-measure text-paper-muted mb-10 text-[clamp(1.1rem,1.8vw,1.25rem)] sm:mb-14 ${revealClass}`}
+          className={`reveal reveal--3 mb-10 max-w-measure text-[clamp(1.1rem,1.8vw,1.25rem)] text-paper-muted sm:mb-14 ${revealClass}`}
         >
-          Designer first, builder by necessity, shaping product and learning
-          experiences across Australia and New Zealand, with accessibility
-          running through all of it.
+          Digital product designer, technical enough to build what I design,
+          shaping products across Australia and New Zealand. Also a recovering
+          salsa instructor and never short of a side project.
         </p>
 
         <dl
-          className={`reveal reveal--4 border-rule grid grid-cols-1 gap-x-10 gap-y-6 border-t pt-8 sm:grid-cols-3 ${revealClass}`}
+          className={`reveal reveal--4 grid grid-cols-1 gap-x-10 gap-y-6 border-t border-rule pt-8 sm:grid-cols-3 ${revealClass}`}
           aria-label="At a glance"
         >
           {meta.map((item) => (
             <div key={item.label}>
-              <dt className="text-teal-mid font-normal text-xs uppercase tracking-[0.12em]">
+              <dt className="text-xs font-normal uppercase tracking-[0.12em] text-teal-mid">
                 {item.label}
               </dt>
-              <dd className="text-paper mt-1">{item.value}</dd>
+              <dd className="mt-1 text-paper">{item.value}</dd>
             </div>
           ))}
         </dl>

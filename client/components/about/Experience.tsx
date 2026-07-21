@@ -60,7 +60,7 @@ export default function ExperienceSection({ items }: Props) {
                 </p>
                 <p className="text-paper-muted">{item.company}</p>
               </div>
-              <p className="text-paper-muted whitespace-nowrap font-normal text-xs">
+              <p className="text-paper-muted whitespace-nowrap font-normal text-sm">
                 {item.dates}
               </p>
             </li>

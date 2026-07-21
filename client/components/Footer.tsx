@@ -6,7 +6,7 @@ import TechTicker from './TechTicker'
 export default function Footer() {
   const year = new Date().getFullYear()
   const isHome = useLocation().pathname === '/'
-  const { email, calendlyUrl }: ContactData = contactData
+  const { calendlyUrl }: ContactData = contactData
 
   return (
     <footer id="contact" className="w-full bg-ink">
@@ -23,14 +23,6 @@ export default function Footer() {
           </h2>
           {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
           <ul role="list" className="space-y-3">
-            <li>
-              <a
-                href={`mailto:${email}`}
-                className="font-semibold text-paper-muted transition-colors duration-200 hover:text-paper"
-              >
-                {email}
-              </a>
-            </li>
             <li>
               <a
                 href={calendlyUrl}

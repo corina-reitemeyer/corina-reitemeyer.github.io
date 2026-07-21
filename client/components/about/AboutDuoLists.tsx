@@ -15,28 +15,41 @@ const highlights = [
 ]
 
 export default function AboutDuoLists() {
+  const headingId = useId()
   const interestsHeadingId = useId()
   const highlightsHeadingId = useId()
   const { ref: sectionRef, isInView } = useScrollReveal<HTMLElement>()
   const revealClass = isInView ? 'is-inview' : ''
 
   return (
-    <section ref={sectionRef} className="w-full bg-ink py-16 sm:py-24">
+    <section
+      ref={sectionRef}
+      aria-labelledby={headingId}
+      className="w-full bg-ink py-16 sm:py-24"
+    >
       <div className="mx-auto max-w-6xl px-6 sm:px-10 xl:px-0">
-        <p
-          className={`reveal reveal--1 mb-10 text-xs font-normal uppercase tracking-[0.16em] text-teal-mid sm:mb-14 ${revealClass}`}
+        <div
+          className={`reveal reveal--1 mb-10 sm:mb-14 ${revealClass}`}
         >
-          Off the clock
-        </p>
+          <p className="mb-3 text-xs font-normal uppercase tracking-[0.16em] text-teal-mid">
+            Off the clock
+          </p>
+          <h2
+            id={headingId}
+            className="text-[clamp(2rem,5vw,3rem)] font-bold leading-[0.98] tracking-[-0.03em] text-paper"
+          >
+            Beyond the day job
+          </h2>
+        </div>
 
         <div className="grid grid-cols-1 gap-12 sm:gap-16 lg:grid-cols-2">
           <div className={`reveal reveal--1 ${revealClass}`}>
-            <h2
+            <h3
               id={interestsHeadingId}
               className="mb-6 text-2xl font-bold text-paper"
             >
               What I like to do
-            </h2>
+            </h3>
             {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
             <ul
               role="list"
@@ -52,12 +65,12 @@ export default function AboutDuoLists() {
           </div>
 
           <div className={`reveal reveal--3 ${revealClass}`}>
-            <h2
+            <h3
               id={highlightsHeadingId}
               className="mb-6 text-2xl font-bold text-paper"
             >
               Selected highlights
-            </h2>
+            </h3>
             {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
             <ul
               role="list"

@@ -88,7 +88,7 @@ export default function Services() {
                 </span>
                 <span
                   aria-hidden="true"
-                  className="block whitespace-nowrap text-xs font-normal uppercase tracking-[0.12em] text-teal-mid opacity-0 transition-opacity duration-150 ease-out group-hover:opacity-100 group-focus-visible:opacity-100"
+                  className="block whitespace-nowrap text-right text-xs font-normal uppercase tracking-[0.12em] text-teal-mid opacity-0 transition-opacity duration-150 ease-out group-hover:opacity-100 group-focus-visible:opacity-100"
                 >
                   Inquire →
                 </span>

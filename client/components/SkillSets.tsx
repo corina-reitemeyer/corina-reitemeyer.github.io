@@ -22,7 +22,7 @@ const tracks: Track[] = [
     label: 'Build',
     items: [
       'HTML & CSS',
-      'Modular Frameworks',
+      'React & Vue.js',
       'Design Tokens',
       'Component Architecture',
     ],
@@ -46,7 +46,9 @@ export default function SkillSets() {
       className="w-full bg-ink py-24 sm:py-32"
     >
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-14 px-6 sm:gap-16 sm:px-10 lg:grid-cols-[minmax(18rem,26rem)_1fr] xl:px-0">
-        <div className={`reveal reveal--1 relative flex flex-col ${revealClass}`}>
+        <div
+          className={`reveal reveal--1 relative flex flex-col ${revealClass}`}
+        >
           <h2
             id={headingId}
             className="text-[clamp(2.85rem,7vw,4.75rem)] font-bold leading-[0.92] tracking-[-0.04em] text-paper"
@@ -58,13 +60,13 @@ export default function SkillSets() {
           <div className="my-6 h-px w-16 bg-rule sm:my-8" aria-hidden="true" />
 
           <p className="max-w-measure text-paper-muted">
-            End-to-end craft across design and code: systems, interfaces,
-            and the tooling that keeps them honest from sketch to shipped UI.
+            End-to-end craft across design and code: systems, interfaces, and
+            the tooling that keeps them honest from sketch to shipped UI.
           </p>
 
           <Link
             to="/about"
-            className="mt-8 inline-flex items-center gap-1.5 font-normal text-xs uppercase tracking-[0.16em] text-teal-mid transition-colors duration-200 ease-out hover:text-teal-mist lg:mt-auto lg:pt-8"
+            className="mt-8 inline-flex items-center gap-1.5 text-xs font-normal uppercase tracking-[0.16em] text-teal-mid transition-colors duration-200 ease-out hover:text-teal-mist lg:mt-auto lg:pt-8"
           >
             More about me
             <span aria-hidden="true">→</span>

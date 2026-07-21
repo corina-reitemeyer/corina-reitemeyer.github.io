@@ -112,7 +112,7 @@ export default function WorkIndex({ projects, linkPrefix }: WorkIndexProps) {
                     <h3 className="flex-1 text-lg sm:text-xl">
                       {project.projectTitle}
                     </h3>
-                    <span className="whitespace-nowrap font-normal text-xs text-paper-muted">
+                    <span className="whitespace-nowrap font-normal text-sm text-paper-muted">
                       {YEAR_BY_SLUG[project.slug] ?? ''}
                     </span>
                   </Link>

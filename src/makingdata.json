@@ -1,25 +1,5 @@
 [
   {
-    "id": 1,
-    "title": "ASCII liquid field",
-    "description": "A canvas glyph field that swirls like ink in water, the same atmosphere used across the site's liquid banner.",
-    "category": "Experiment",
-    "status": "live",
-    "year": "2025",
-    "coverWord": "Motion",
-    "coverVariant": "prototypes"
-  },
-  {
-    "id": 2,
-    "title": "Hand-drawn notebook marks",
-    "description": "SVG circles, asterisks, and margin notes that draw themselves in, editorial personality without sticker clutter.",
-    "category": "Study",
-    "status": "live",
-    "year": "2025",
-    "coverWord": "Notebook",
-    "coverVariant": "learning"
-  },
-  {
     "id": 3,
     "title": "AXON - Accessible Design system",
     "description": "A test of how far AI can take accessible design systems, built with a fully AI-assisted workflow from Figma Make to Claude to code.",

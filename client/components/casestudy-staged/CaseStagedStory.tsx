@@ -48,7 +48,6 @@ function RippleDrawing(props: SVGProps<SVGSVGElement>) {
 export type CaseStagedListItem = { title: string; description: string }
 
 type Props = {
-  mark: string
   title: string
   body?: CaseStagedParagraph[]
   items?: CaseStagedListItem[]
@@ -65,7 +64,6 @@ type Props = {
 }
 
 export default function CaseStagedStory({
-  mark,
   title,
   body,
   items,
@@ -90,9 +88,6 @@ export default function CaseStagedStory({
       >
         <div className={`reveal reveal--1 mx-auto max-w-6xl px-6 sm:px-10 xl:px-0 ${revealClass}`}>
           <div className="mb-10 max-w-measure sm:mb-14">
-            <p className="text-teal-mid mb-4 font-normal text-[0.72rem] uppercase tracking-[0.16em]">
-              ({mark})
-            </p>
             <h2
               id={headingId}
               className="text-paper text-[clamp(1.85rem,4vw,2.85rem)] font-bold leading-[1.05] tracking-[-0.02em]"
@@ -120,11 +115,8 @@ export default function CaseStagedStory({
               role="list"
               className="border-rule grid grid-cols-1 gap-x-12 gap-y-10 border-t pt-10 sm:grid-cols-2 lg:grid-cols-3"
             >
-              {items.map((item, i) => (
+              {items.map((item) => (
                 <li key={item.title}>
-                  <p className="text-teal-mid mb-2 font-normal text-xs">
-                    ({String(i + 1).padStart(2, '0')})
-                  </p>
                   <h3 className="text-paper mb-2 text-lg font-semibold">{item.title}</h3>
                   <p className="text-paper-muted text-sm leading-relaxed">
                     {item.description}
@@ -135,14 +127,11 @@ export default function CaseStagedStory({
           ) : (
             /* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */
             <ul role="list" className="divide-rule border-rule divide-y border-t">
-              {items.map((item, i) => (
+              {items.map((item) => (
                 <li
                   key={item.title}
                   className="flex flex-col gap-1 py-6 sm:flex-row sm:gap-6 sm:py-7"
                 >
-                  <span className="text-teal-mid font-normal text-xs sm:w-10 sm:shrink-0">
-                    ({String(i + 1).padStart(2, '0')})
-                  </span>
                   <div>
                     <p className="text-paper mb-1 text-lg font-semibold sm:text-xl">
                       {item.title}
@@ -172,9 +161,6 @@ export default function CaseStagedStory({
         <div
           className={`reveal reveal--1 mx-auto max-w-2xl px-6 text-left sm:px-10 xl:px-0 ${revealClass}`}
         >
-          <p className="text-teal-mid mb-4 font-normal text-[0.72rem] uppercase tracking-[0.16em]">
-            ({mark})
-          </p>
           <h2
             id={headingId}
             className="text-paper mb-6 text-[clamp(1.85rem,4vw,2.85rem)] font-bold leading-[1.05] tracking-[-0.02em]"
@@ -225,9 +211,6 @@ export default function CaseStagedStory({
         } ${revealClass}`}
       >
         <div className={image ? 'lg:order-2' : ''}>
-          <p className="text-teal-mid mb-4 font-normal text-[0.72rem] uppercase tracking-[0.16em]">
-            ({mark})
-          </p>
           <h2
             id={headingId}
             className="text-paper mb-6 max-w-measure text-[clamp(1.85rem,4vw,2.85rem)] font-bold leading-[1.05] tracking-[-0.02em]"
@@ -273,7 +256,7 @@ export default function CaseStagedStory({
                       href={link.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-teal-mid hover:text-teal-bright inline-flex items-center gap-1.5 text-sm font-semibold transition-colors duration-200"
+                      className="text-teal-mid hover:text-teal-mist inline-flex items-center gap-1.5 text-sm font-semibold transition-colors duration-200"
                     >
                       {link.label}
                       <span aria-hidden="true">↗</span>
@@ -285,7 +268,7 @@ export default function CaseStagedStory({
           </figure>
         ) : note ? (
           <aside className="border-rule border-l pl-6">
-            <p className="text-teal-mid mb-2 font-normal text-[0.7rem] uppercase tracking-[0.1em]">
+            <p className="text-teal-mid mb-2 font-normal text-xs uppercase tracking-[0.12em]">
               {note.label}
             </p>
             <p className="text-paper-muted text-sm leading-relaxed">{note.text}</p>

@@ -84,7 +84,6 @@ export default function SuiteFilesDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="02"
         title="Inheriting a system mid-rebrand without a full handover"
         body={[
           'The designer who built the foundations and worked with the brand consultant had left. I inherited their decisions without always knowing the reasoning behind them.',
@@ -96,7 +95,6 @@ export default function SuiteFilesDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="03"
         title="Building with a brand that was still being defined"
         body={[
           'The brand guidelines were being developed alongside the redesign, not before it. There was no finished reference to implement from.',
@@ -108,7 +106,6 @@ export default function SuiteFilesDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="04"
         title="A product moving faster than any system could keep up with"
         body={[
           'Features were shipping constantly. By the time there was space to update anything, there were already new components waiting.',
@@ -120,7 +117,6 @@ export default function SuiteFilesDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="05"
         title="Starting with an audit, not a rebuild"
         body={[
           'My first move was to map what existed, not to plan a full rebuild, but to understand where the inherited system was breaking down and why. That meant reading the decisions made before I arrived, not overwriting them.',
@@ -129,7 +125,6 @@ export default function SuiteFilesDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="06"
         title="Stress-testing the brand in product"
         body={[
           "Because the brand guidelines weren't finished, I treated the product as a testing ground, validating whether brand decisions held up in a real interface, not just a style guide.",
@@ -144,7 +139,6 @@ export default function SuiteFilesDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="07"
         title="Keeping design and engineering in sync"
         body={[
           'Early on, one of the frontend engineers and I mapped out how changes would be introduced, through updated tokens and semantics in Figma, rolling out new and updated components on an ongoing basis.',
@@ -153,7 +147,6 @@ export default function SuiteFilesDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="08"
         title="Designing for a team that didn't exist yet"
         body={[
           "As the sole designer, the system needed to be clear enough that a new designer could onboard quickly and contribute confidently without reverse-engineering decisions I'd already made.",
@@ -162,7 +155,6 @@ export default function SuiteFilesDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="09"
         title="Let the product lead the system"
         body={[
           "The guiding principle throughout: don't try to finish the system before the product needs it. Let real design work surface what's required, build what's proven itself, and keep documenting.",
@@ -171,7 +163,6 @@ export default function SuiteFilesDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="10"
         title="Constraints & trade-offs"
         items={[
           {
@@ -198,7 +189,6 @@ export default function SuiteFilesDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="11"
         title="Results"
         itemsLayout="grid"
         items={[
@@ -226,7 +216,6 @@ export default function SuiteFilesDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="12"
         variant="outcome"
         title="Reflections"
         body={[

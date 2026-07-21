@@ -68,7 +68,6 @@ export default function OWTemplates() {
       />
 
       <CaseStagedStory
-        mark="02"
         title="Users were leaving before they saw the product's real value"
         body={[
           'Most users ran a single study and left. The product supported far more than that: card sorting, tree testing, IA testing, multi-method combinations. But the complexity of getting started meant most users never explored beyond their first study.',
@@ -80,7 +79,6 @@ export default function OWTemplates() {
       />
 
       <CaseStagedStory
-        mark="03"
         title="Setting up research was slower than it needed to be"
         body={[
           'Even experienced researchers spent time on configuration that added no value to their work. For less experienced users, the setup process was a barrier that stopped them from getting started at all.',
@@ -92,7 +90,6 @@ export default function OWTemplates() {
       />
 
       <CaseStagedStory
-        mark="04"
         title="IA testing was underused despite being a core capability"
         body={[
           "Information architecture testing was one of the product's strongest capabilities, but most users didn't know it existed or how to use it effectively.",
@@ -104,7 +101,6 @@ export default function OWTemplates() {
       />
 
       <CaseStagedStory
-        mark="05"
         title="Treating v1 as an experiment, not a finished product"
         body={[
           'The templates concept originated from the IA Lead and PM in my squad, a hypothesis responding to both the churn problem and the new IA strategy. My role was to take that idea and make it real. Before opening Figma, I drew on existing research initiatives (the IA strategy work and the Voice of Customer research) to understand what users actually needed from a templates feature.',
@@ -119,7 +115,6 @@ export default function OWTemplates() {
       />
 
       <CaseStagedStory
-        mark="06"
         title="Mapping where templates fit in the workflow"
         body={[
           "A key design decision was where in the product templates should live. Too buried and they'd be missed. Too prominent and they'd feel like a forced starting point rather than a useful option.",
@@ -134,7 +129,6 @@ export default function OWTemplates() {
       />
 
       <CaseStagedStory
-        mark="07"
         title="One page added on instinct"
         body={[
           "I realised that the product wasn't deeply designed for collaboration. Context, decisions, and changes often got lost unless teams had a separate system in place to track them. I noticed this gap in usage patterns and added a details page that let users document the purpose of their study directly inside the product; it wasn't in the original brief.",
@@ -143,7 +137,6 @@ export default function OWTemplates() {
       />
 
       <CaseStagedStory
-        mark="08"
         title="Learning from real use"
         body={[
           'Post-launch, I worked closely with a researcher to observe how the first six templates were used in real workflows. The churn signal was positive: users were staying longer. But template uptake itself was lower than expected.',
@@ -152,7 +145,6 @@ export default function OWTemplates() {
       />
 
       <CaseStagedStory
-        mark="09"
         title="Constraints & trade-offs"
         items={[
           {
@@ -184,7 +176,6 @@ export default function OWTemplates() {
       />
 
       <CaseStagedStory
-        mark="10"
         title="Results"
         itemsLayout="grid"
         items={[
@@ -217,7 +208,6 @@ export default function OWTemplates() {
       />
 
       <CaseStagedStory
-        mark="11"
         variant="outcome"
         title="Reflections"
         body={[

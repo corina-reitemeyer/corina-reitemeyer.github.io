@@ -70,7 +70,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedVideo
-        mark="02"
         title="Course walkthrough"
         src="/files/video/elearning-course-walkthrough.mov"
         caption="A walkthrough of the full six-lesson course, built in Articulate Rise."
@@ -82,7 +81,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedStory
-        mark="03"
         title="Approach"
         body={[
           "My background is in product design, with teaching as a secondary skill set. The instinct I bring to learning design is the same one I bring to any design problem: understand what's actually going on before you start designing a solution. That means understanding the context, but it also means checking that we're solving the root cause, not a symptom that gets mistaken for the problem.",
@@ -91,7 +89,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedProcess
-        mark="04"
         heading="An ADDIE-informed loop, stretched by UX discovery practice."
         loopLabel="Evaluate feeds back into Discovery. The loop runs continuously, not just once."
         steps={[
@@ -143,7 +140,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedStory
-        mark="05"
         title="The brief"
         body={[
           'For this project, I invented a client: Priya Mehta, Director of Digital Transformation at a fictional Waratah University. She came in with a clear ask, and some data to back it up.',
@@ -153,14 +149,12 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedQuote
-        mark="06"
         quote="We've just finished a $2.3 million rollout of Canvas. It's June now and adoption is patchy. Some faculties are using it well. Others are basically still emailing students PDFs. We need a training program that actually gets our academic staff using Canvas properly."
         attribution="Priya Mehta"
         attributionRole="Director of Digital Transformation (invented for this brief)"
       />
 
       <CaseStagedStats
-        mark="07"
         intro="Priya came to that first conversation with data already in hand. Three numbers set the terms for everything that followed:"
         stats={[
           {
@@ -174,7 +168,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedStory
-        mark="08"
         title="Reading the data"
         body={[
           "From the data alone, the 78/34 split was the first signal that something deeper was going on. Training satisfaction and behaviour change aren't the same metric; in Kirkpatrick's evaluation model that's Level 1 versus Level 3, and the gap between them suggested the problem wasn't that staff hadn't been trained. It was that the training hadn't changed anything.",
@@ -187,7 +180,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedStory
-        mark="09"
         title="Discovery"
         body={[
           "I drew on how I'd actually handle this situation from experience: specifically, the stakeholder management challenge of proposing discovery work within an already tight timeline.",
@@ -209,7 +201,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedStory
-        mark="10"
         title="What those conversations could surface"
         itemsIntro={[
           "Conversations like these tend to split into two clear patterns: teams where adoption stuck, and teams where it didn't. Here's the kind of thing each side could plausibly say.",
@@ -229,7 +220,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedStory
-        mark="11"
         title="The dual problem"
         itemsLayout="grid"
         items={[
@@ -247,7 +237,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedStory
-        mark="12"
         title="Why this course, not a training redesign"
         body={[
           "This course leans into Problem 2. Priya's original ask was really aimed at Problem 1: better training content, delivered differently. But discovery pointed at something a training redesign alone wouldn't fix: the conditions team leads were operating in.",
@@ -260,7 +249,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedStory
-        mark="13"
         title="The learner"
         body={[
           'Before designing anything, I needed to know who I was actually designing for. Not a generic team lead. A specific person, with a specific history and specific reasons to be wary of yet another new tool.',
@@ -269,7 +257,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedPersona
-        mark="14"
         name="Jordan Lee, 46"
         title="Academic Program Director"
         context="Manages 8 lecturers and tutors in an undergraduate health sciences program."
@@ -311,7 +298,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedStory
-        mark="15"
         title="Planning the experience"
         body={[
           'Before opening either tool, the course was mapped out in full: a course outline to establish the lesson structure and logic, a storyboard to plan the story beat by beat, and an interaction map to work out where the learner needed to do something rather than just read.',
@@ -336,7 +322,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedStory
-        mark="16"
         title="Microlearning format"
         body={[
           'Six lessons, five to eight minutes each. Under 40 minutes for the whole course.',
@@ -345,7 +330,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedStory
-        mark="17"
         title="Rise for content, Storyline for interaction"
         body={[
           'The original plan was to build the whole course in Storyline. It made sense on paper: more control over every screen, richer interactions, full custom design.',
@@ -358,7 +342,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedStory
-        mark="18"
         title="Learning theory"
         itemsLayout="grid"
         itemsIntro={[
@@ -389,7 +372,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedStory
-        mark="19"
         title="Accessibility"
         body={[
           'Accessibility was designed in from the start, not bolted on afterward. WCAG 2.1 AA was the baseline throughout.',
@@ -405,7 +387,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedStory
-        mark="20"
         title="AI in this project"
         body={[
           'AI tools were part of this project on purpose, not to replace design judgment, but to speed up production and try out ideas faster.',
@@ -413,7 +394,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedStory
-        mark="21"
         title="Creating illustration variations"
         body={[
           "Carl and Jamie needed a real range across the course: different facial expressions, body language, and angles for every scene, not one pose reused throughout. OpenPeeps isn't an AI tool, it's an open-source illustration library by Pablo Stanley, and it gave me the foundation: hand-drawn components I could mix and match to land on a look I was happy with.",
@@ -428,7 +408,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedStory
-        mark="22"
         title="Giving the story a voice"
         body={[
           'ElevenLabs gave the Storyline activity a narrated, story-like quality, so the learner connects with Carl and Jamie as characters instead of just reading blocks of dialogue on screen.',
@@ -442,7 +421,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedStory
-        mark="23"
         title="A mentor in the process"
         body={[
           'Claude helped with the fictional brief, refining content, and troubleshooting throughout. Less a tool I ran prompts through and more a senior instructional designer mentoring me as I worked through the project.',
@@ -450,7 +428,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedStory
-        mark="24"
         title="Deployed to MoodleCloud"
         body={[
           "Unlike Carl and Jamie, I wasn't able to get my hands on Canvas, so proving the course works as a real SCORM package meant finding a different LMS. I uploaded the same SCORM 1.2 export to a MoodleCloud site instead, to confirm it launches, tracks, and behaves the way it would inside any real LMS, not just as a preview in Rise.",
@@ -463,7 +440,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedStory
-        mark="25"
         title="Constraints and trade-offs"
         items={[
           {
@@ -490,7 +466,6 @@ export default function BuildingAdaptiveTeams() {
       />
 
       <CaseStagedStory
-        mark="26"
         variant="outcome"
         title="Reflections"
         body={[

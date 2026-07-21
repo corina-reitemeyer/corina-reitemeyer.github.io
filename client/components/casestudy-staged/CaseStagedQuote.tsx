@@ -2,14 +2,12 @@ import { useId } from 'react'
 import { useScrollReveal } from '../../lib/useScrollReveal'
 
 type Props = {
-  mark?: string
   quote: string
   attribution?: string
   attributionRole?: string
 }
 
 export default function CaseStagedQuote({
-  mark,
   quote,
   attribution,
   attributionRole,
@@ -27,11 +25,6 @@ export default function CaseStagedQuote({
       <div
         className={`reveal reveal--1 mx-auto max-w-3xl px-6 sm:px-10 xl:px-0 ${revealClass}`}
       >
-        {mark && (
-          <p className="text-teal-mid mb-6 font-normal text-[0.72rem] uppercase tracking-[0.16em]">
-            ({mark})
-          </p>
-        )}
         <div className="relative pt-10 sm:pt-14">
           <span
             aria-hidden="true"

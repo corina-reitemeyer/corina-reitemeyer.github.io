@@ -3,12 +3,11 @@ import { useScrollReveal } from '../../lib/useScrollReveal'
 type Stat = { stat: string; label: string }
 
 type Props = {
-  mark?: string
   intro?: string
   stats: Stat[]
 }
 
-export default function CaseStagedStats({ mark, intro, stats }: Props) {
+export default function CaseStagedStats({ intro, stats }: Props) {
   const { ref: sectionRef, isInView } = useScrollReveal<HTMLElement>()
   const revealClass = isInView ? 'is-inview' : ''
 
@@ -21,11 +20,6 @@ export default function CaseStagedStats({ mark, intro, stats }: Props) {
       <div
         className={`reveal reveal--1 mx-auto w-full max-w-6xl px-6 sm:px-10 xl:px-0 ${revealClass}`}
       >
-        {mark && (
-          <p className="text-teal-mid mb-4 font-normal text-[0.72rem] uppercase tracking-[0.16em]">
-            ({mark})
-          </p>
-        )}
         {intro && (
           <p className="text-paper-muted mb-12 max-w-measure text-base leading-relaxed">
             {intro}

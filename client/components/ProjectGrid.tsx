@@ -49,7 +49,6 @@ function ProjectCard({
   const revealClass = isInView ? 'is-inview' : ''
 
   const layout = LAYOUT_BY_INDEX[index] ?? 'row-span-2'
-  const mark = String(index + 1).padStart(2, '0')
   const ariaLabel = `${project.company ?? 'Project'}. ${project.projectTitle}`
   const resolvedPrefix = project.linkPrefix ?? linkPrefix
 
@@ -72,24 +71,22 @@ function ProjectCard({
           aria-hidden="true"
           className="pointer-events-none absolute bottom-6 left-6 right-6 z-10 hidden translate-y-3 opacity-0 transition duration-300 lg:block lg:group-hover:translate-y-0 lg:group-hover:opacity-100 lg:group-focus-within:translate-y-0 lg:group-focus-within:opacity-100"
         >
-          <span className="text-teal-mid mb-2 flex items-center gap-2 font-light text-[0.68rem] uppercase tracking-[0.12em]">
-            <span aria-hidden="true">({mark})</span>
+          <span className="text-teal-mid mb-2 flex items-center gap-2 font-normal text-xs uppercase tracking-[0.12em]">
             {project.company ?? 'Project'}
           </span>
-          <span className="text-paper block text-lg font-semibold leading-snug sm:text-xl">
+          <h2 className="text-paper block text-lg font-semibold leading-snug sm:text-xl">
             {project.projectTitle}
-          </span>
+          </h2>
         </span>
       </div>
 
       <div className="pt-4 lg:hidden">
-        <span className="text-teal-mid mb-1 flex items-center gap-2 font-light text-[0.68rem] uppercase tracking-[0.12em]">
-          <span aria-hidden="true">({mark})</span>
+        <span className="text-teal-mid mb-1 flex items-center gap-2 font-normal text-xs uppercase tracking-[0.12em]">
           {project.company ?? 'Project'}
         </span>
-        <span className="text-paper block text-lg font-semibold leading-snug sm:text-xl">
+        <h2 className="text-paper block text-lg font-semibold leading-snug sm:text-xl">
           {project.projectTitle}
-        </span>
+        </h2>
       </div>
     </>
   )
@@ -123,7 +120,7 @@ export default function ProjectGrid({ projects, linkPrefix }: ProjectGridProps) 
 
   return (
     <section aria-label="All projects" className="bg-ink w-full py-16 sm:py-24">
-      <div className="mx-auto grid max-w-6xl auto-rows-[14rem] grid-cols-1 gap-16 px-6 sm:auto-rows-[16rem] sm:gap-8 md:grid-cols-2 xl:px-0">
+      <div className="mx-auto grid max-w-6xl auto-rows-[14rem] grid-cols-1 gap-16 px-6 sm:auto-rows-[16rem] sm:gap-8 sm:px-10 md:grid-cols-2 xl:px-0">
         {visibleProjects.map((project, i) => (
           <ProjectCard key={project.id} project={project} index={i} linkPrefix={linkPrefix} />
         ))}

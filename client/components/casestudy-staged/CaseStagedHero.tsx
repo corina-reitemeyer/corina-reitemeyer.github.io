@@ -138,7 +138,7 @@ export default function CaseStagedHero({
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 sm:px-10 xl:px-0">
         <div className="mb-6 flex items-center gap-2.5">
           <HandAsterisk className="ink-draw text-teal-mid h-4 w-4 shrink-0" />
-          <p className="text-teal-mid font-normal text-[0.72rem] uppercase tracking-[0.16em]">
+          <p className="text-teal-mid font-normal text-xs uppercase tracking-[0.16em]">
             {meta}
           </p>
         </div>
@@ -160,7 +160,7 @@ export default function CaseStagedHero({
         aria-hidden="true"
         className="pointer-events-none absolute bottom-6 right-6 z-10 flex flex-col items-center gap-2 text-paper-muted sm:bottom-10 sm:right-10"
       >
-        <span className="font-normal text-[0.6rem] uppercase tracking-[0.16em]">
+        <span className="font-normal text-[0.65rem] uppercase tracking-[0.16em]">
           Scroll
         </span>
         <ScrollMouseIcon className="h-7 w-4 sm:h-8 sm:w-5" />

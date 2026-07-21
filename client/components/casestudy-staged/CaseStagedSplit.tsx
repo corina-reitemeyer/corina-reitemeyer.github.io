@@ -52,7 +52,7 @@ export default function CaseStagedSplit({
               {railLede}
             </p>
 
-            <h3 className="text-teal-mid mb-3 font-normal text-[0.7rem] uppercase tracking-[0.12em]">
+            <h3 className="text-teal-mid mb-3 font-normal text-xs uppercase tracking-[0.12em]">
               About
             </h3>
             <div className="text-paper-muted mb-8 space-y-3 text-sm leading-relaxed">
@@ -64,7 +64,7 @@ export default function CaseStagedSplit({
             <dl className="border-rule grid grid-cols-2 gap-x-6 gap-y-4 border-t pt-6">
               {meta.map((item) => (
                 <div key={item.label}>
-                  <dt className="text-teal-mid font-normal text-[0.68rem] uppercase tracking-[0.1em]">
+                  <dt className="text-teal-mid font-normal text-xs uppercase tracking-[0.12em]">
                     {item.label}
                   </dt>
                   <dd className="text-paper mt-1 text-sm">{item.value}</dd>

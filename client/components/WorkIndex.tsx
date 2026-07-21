@@ -39,7 +39,7 @@ export default function WorkIndex({ projects, linkPrefix }: WorkIndexProps) {
     <section
       ref={sectionRef}
       aria-labelledby={headingId}
-      className="w-full bg-ink py-16 sm:py-24"
+      className="w-full bg-ink py-20 sm:py-28"
     >
       <div className="mx-auto max-w-6xl px-6 sm:px-10 xl:px-0">
         <header
@@ -81,7 +81,7 @@ export default function WorkIndex({ projects, linkPrefix }: WorkIndexProps) {
                 </div>
                 <div className="mt-4">
                   {active.company && (
-                    <p className="mb-1 font-light text-[0.7rem] uppercase tracking-[0.12em] text-teal-mid">
+                    <p className="mb-1 font-normal text-xs uppercase tracking-[0.12em] text-teal-mid">
                       {active.company}
                     </p>
                   )}
@@ -95,7 +95,7 @@ export default function WorkIndex({ projects, linkPrefix }: WorkIndexProps) {
 
           {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
           <ul role="list" className="divide-y divide-rule border-t border-rule">
-            {projects.map((project, i) => {
+            {projects.map((project) => {
               const isActive = project.slug === activeSlug
               return (
                 <li key={project.id}>
@@ -105,20 +105,14 @@ export default function WorkIndex({ projects, linkPrefix }: WorkIndexProps) {
                     onMouseLeave={() => close(project.slug)}
                     onFocus={() => open(project.slug)}
                     onBlur={() => close(project.slug)}
-                    className={`flex items-center gap-4 py-5 transition-colors duration-150 ease-out sm:gap-6 sm:py-6 ${
+                    className={`flex items-center gap-4 py-5 transition-colors duration-200 ease-out sm:gap-6 sm:py-6 ${
                       isActive ? 'text-paper' : 'text-paper-muted hover:text-paper'
                     }`}
                   >
-                    <span
-                      aria-hidden="true"
-                      className="font-light text-xs text-teal-mid"
-                    >
-                      ({String(i + 1).padStart(2, '0')})
-                    </span>
-                    <span className="flex-1 text-lg sm:text-xl">
+                    <h3 className="flex-1 text-lg sm:text-xl">
                       {project.projectTitle}
-                    </span>
-                    <span className="whitespace-nowrap font-light text-xs text-paper-muted">
+                    </h3>
+                    <span className="whitespace-nowrap font-normal text-xs text-paper-muted">
                       {YEAR_BY_SLUG[project.slug] ?? ''}
                     </span>
                   </Link>

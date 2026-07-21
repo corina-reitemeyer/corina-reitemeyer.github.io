@@ -4,7 +4,6 @@ import { useScrollReveal } from '../../lib/useScrollReveal'
 type Fact = { label: string; value: string }
 
 type Props = {
-  mark: string
   eyebrow?: string
   name: string
   title: string
@@ -16,7 +15,6 @@ type Props = {
 }
 
 export default function CaseStagedPersona({
-  mark,
   eyebrow = 'Meet the learner',
   name,
   title,
@@ -37,10 +35,7 @@ export default function CaseStagedPersona({
       className="case-staged__snap bg-ink w-full py-20 sm:py-28"
     >
       <div className={`reveal reveal--1 mx-auto max-w-4xl px-6 sm:px-10 xl:px-0 ${revealClass}`}>
-        <p className="text-teal-mid mb-4 font-normal text-[0.72rem] uppercase tracking-[0.16em]">
-          ({mark})
-        </p>
-        <p className="text-paper-muted mb-8 font-normal text-[0.7rem] uppercase tracking-[0.12em]">
+        <p className="text-paper-muted mb-8 font-normal text-xs uppercase tracking-[0.12em]">
           {eyebrow}
         </p>
 
@@ -54,7 +49,7 @@ export default function CaseStagedPersona({
             <h2 id={headingId} className="text-paper text-2xl font-bold tracking-[-0.01em]">
               {name}
             </h2>
-            <p className="text-teal-mid mt-1 font-normal text-[0.7rem] uppercase tracking-[0.1em]">
+            <p className="text-teal-mid mt-1 font-normal text-xs uppercase tracking-[0.12em]">
               {title}
             </p>
             {context && (
@@ -68,7 +63,7 @@ export default function CaseStagedPersona({
         <dl className="grid grid-cols-1 gap-6 py-8 sm:grid-cols-2">
           {facts.map((fact) => (
             <div key={fact.label}>
-              <dt className="text-teal-mid font-normal text-[0.68rem] uppercase tracking-[0.1em]">
+              <dt className="text-teal-mid font-normal text-xs uppercase tracking-[0.12em]">
                 {fact.label}
               </dt>
               <dd className="text-paper-muted mt-2 text-sm leading-relaxed">

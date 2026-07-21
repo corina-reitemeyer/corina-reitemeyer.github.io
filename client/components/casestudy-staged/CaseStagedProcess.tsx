@@ -10,7 +10,6 @@ type ProcessStep = {
 }
 
 type Props = {
-  mark: string
   heading: string
   description?: string
   loopLabel?: string
@@ -18,7 +17,6 @@ type Props = {
 }
 
 export default function CaseStagedProcess({
-  mark,
   heading,
   description,
   loopLabel,
@@ -87,9 +85,6 @@ export default function CaseStagedProcess({
       className="case-staged__snap bg-ink w-full py-20 sm:py-28"
     >
       <div className={`reveal reveal--1 mx-auto max-w-6xl px-6 sm:px-10 xl:px-0 ${revealClass}`}>
-        <p className="text-teal-mid mb-4 font-normal text-[0.72rem] uppercase tracking-[0.16em]">
-          ({mark})
-        </p>
         <h2
           id={headingId}
           className="text-paper mb-2 max-w-measure text-[clamp(1.85rem,4vw,2.85rem)] font-bold leading-[1.05] tracking-[-0.02em]"
@@ -150,7 +145,7 @@ export default function CaseStagedProcess({
                   {steps.map((step, index) => (
                     <div key={step.id} className="flex flex-none items-start">
                       <div className="w-36 flex-none sm:w-40">
-                        <p className="text-teal-mid mb-2 h-8 font-normal text-[10px] uppercase leading-4 tracking-[0.15em]">
+                        <p className="text-teal-mid mb-2 h-8 font-normal text-xs uppercase leading-4 tracking-[0.12em]">
                           {step.groupLabel ?? ''}
                         </p>
                         <div className="border-rule h-full border px-4 py-4">

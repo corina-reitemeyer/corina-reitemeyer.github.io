@@ -10,11 +10,15 @@ export default function Footer() {
 
   return (
     <footer id="contact" className="w-full bg-ink">
-      {isHome ? <TechTicker /> : <div className="w-full border-t border-rule" />}
+      {isHome ? (
+        <TechTicker />
+      ) : (
+        <div className="w-full border-t border-rule" />
+      )}
 
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-16 sm:grid-cols-2 sm:gap-12 sm:px-8 sm:py-24 lg:grid-cols-3">
         <div>
-          <h2 className="mb-4 font-light text-[0.72rem] uppercase tracking-[0.16em] text-paper-muted">
+          <h2 className="mb-4 text-xs font-normal uppercase tracking-[0.16em] text-paper-muted">
             Elsewhere
           </h2>
           {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
@@ -32,10 +36,10 @@ export default function Footer() {
                 href={calendlyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Book a meeting (opens in a new tab)"
+                aria-label="Book a call (opens in a new tab)"
                 className="font-semibold text-paper-muted transition-colors duration-200 hover:text-paper"
               >
-                Book a meeting.
+                Book a call.
               </a>
             </li>
             <li>
@@ -75,25 +79,18 @@ export default function Footer() {
         </div>
 
         <div>
-          <h2 className="mb-4 font-light text-[0.72rem] uppercase tracking-[0.16em] text-paper-muted">
+          <h2 className="mb-4 text-xs font-normal uppercase tracking-[0.16em] text-paper-muted">
             Colophon
           </h2>
           <p className="max-w-[28rem] text-sm leading-relaxed text-paper-muted">
-            Set in Sofia Pro and Caveat. Built with TypeScript, React, and
-            Vite. Handled with care.
+            Set in Sofia Pro. Built with TypeScript, React, and Vite. Handled
+            with care.
           </p>
         </div>
 
         <div className="flex flex-col gap-2 sm:col-span-2 lg:col-span-1">
           <p className="text-sm text-paper-muted">
             <span className="sr-only">Copyright </span>© {year}
-          </p>
-          <p className="flex items-center gap-2 text-sm text-paper-muted">
-            Currently open to select engagements
-            <span
-              aria-hidden="true"
-              className="h-1.5 w-1.5 rounded-full bg-teal-mid"
-            />
           </p>
         </div>
       </div>

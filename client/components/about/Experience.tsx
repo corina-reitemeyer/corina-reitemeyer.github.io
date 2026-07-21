@@ -27,8 +27,8 @@ export default function ExperienceSection({ items }: Props) {
         <div
           className={`reveal reveal--1 max-w-measure mb-10 sm:mb-14 ${revealClass}`}
         >
-          <p className="text-teal-mid mb-3 font-light text-[0.72rem] uppercase tracking-[0.16em]">
-            (02) Experience
+          <p className="text-teal-mid mb-3 font-normal text-xs uppercase tracking-[0.16em]">
+            Experience
           </p>
           <h2
             id={headingId}
@@ -60,7 +60,7 @@ export default function ExperienceSection({ items }: Props) {
                 </p>
                 <p className="text-paper-muted">{item.company}</p>
               </div>
-              <p className="text-paper-muted whitespace-nowrap font-light text-xs">
+              <p className="text-paper-muted whitespace-nowrap font-normal text-xs">
                 {item.dates}
               </p>
             </li>

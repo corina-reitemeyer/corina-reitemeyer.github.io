@@ -161,9 +161,9 @@ export default function ImpactStatement() {
         <HandSquiggle className="ink-draw text-teal-mid/60 absolute bottom-10 left-6 h-6 w-[140px] sm:left-10" />
       </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-start px-6 pb-16 pt-[80px] sm:px-10 sm:pt-[156px] xl:px-0">
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-start px-6 pb-[112px] pt-[112px] sm:px-10 sm:pb-[164px] sm:pt-[164px] xl:px-0">
         <p
-          className={`reveal reveal--1 text-paper-muted mb-2 flex items-center gap-2 font-light text-[0.72rem] uppercase tracking-[0.16em] sm:mb-3 ${revealClass}`}
+          className={`reveal reveal--1 text-teal-mid mb-2 flex items-center gap-2 font-normal text-xs uppercase tracking-[0.16em] sm:mb-3 ${revealClass}`}
         >
           <span aria-hidden="true" className="relative flex h-1.5 w-1.5">
             <span className="bg-teal-mid absolute inline-flex h-full w-full animate-ping rounded-full opacity-75" />
@@ -211,7 +211,7 @@ export default function ImpactStatement() {
         aria-hidden="true"
         className="pointer-events-none absolute bottom-6 right-6 z-10 flex flex-col items-center gap-2 text-paper-muted sm:bottom-10 sm:right-10"
       >
-        <span className="font-light text-[0.6rem] uppercase tracking-[0.16em]">
+        <span className="font-normal text-[0.65rem] uppercase tracking-[0.16em]">
           Scroll
         </span>
         <ScrollMouseIcon className="h-7 w-4 sm:h-8 sm:w-5" />

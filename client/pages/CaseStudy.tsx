@@ -30,16 +30,16 @@ export default function CaseStudy() {
         return <BuildingAdaptiveTeams />
       default:
         return (
-          <section className="flex min-h-screen flex-col items-center justify-center bg-[#08082a] px-6 text-center">
-            <h1 className="text-4xl font-bold text-white">
+          <section className="bg-ink flex min-h-screen flex-col items-center justify-center px-6 text-center">
+            <h1 className="text-paper text-4xl font-bold">
               Case study not found
             </h1>
-            <p className="mt-4 text-slate-300">
+            <p className="text-paper-muted mt-4">
               {"The page you're looking for doesn't exist or has been moved."}
             </p>
             <Link
               to={backToProjectsPath}
-              className="mt-8 rounded-md bg-white px-6 py-3 text-sm font-semibold text-[#08082a] transition hover:bg-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#08082a]"
+              className="bg-paper text-ink hover:bg-teal-mist mt-8 rounded-md px-6 py-3 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
             >
               Back to projects
             </Link>

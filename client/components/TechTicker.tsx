@@ -1,20 +1,15 @@
 const tools = [
   'Figma',
   'FigJam',
-  'Tokens Studio',
-  'Storybook',
+  'Notion',
+  'Lovable',
   'Cursor',
-  'Claude',
-  'Playwright',
-  'Motion',
-  'Framer',
-  'Node',
-  'PostgreSQL',
-  'Axe',
-  'Vite',
-  'TypeScript',
-  'React',
-  'Remix',
+  'Claude Code',
+  'VS Code',
+  'GitHub',
+  'Tailwind',
+  'WAVE',
+  'VoiceOver',
 ]
 
 function TickerSequence({ suffix }: { suffix: string }) {
@@ -23,7 +18,7 @@ function TickerSequence({ suffix }: { suffix: string }) {
       {tools.map((tool) => (
         <span
           key={`${tool}-${suffix}`}
-          className="flex items-center gap-6 whitespace-nowrap font-light text-sm uppercase tracking-[0.12em] text-paper-muted"
+          className="flex items-center gap-6 whitespace-nowrap font-normal text-sm uppercase tracking-[0.12em] text-paper-muted"
         >
           <span>{tool}</span>
           <span aria-hidden="true" className="text-teal-mid">

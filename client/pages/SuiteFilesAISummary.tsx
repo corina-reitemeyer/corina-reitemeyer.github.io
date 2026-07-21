@@ -71,7 +71,6 @@ export default function SuiteFilesAISummary() {
       />
 
       <CaseStagedStory
-        mark="02"
         title="Recipients struggled to understand what they were signing"
         body={[
           'In a platform used by accountants and financial professionals, signing requests often involved multiple lengthy documents. Recipients had no way to quickly grasp what they were agreeing to.',
@@ -83,7 +82,6 @@ export default function SuiteFilesAISummary() {
       />
 
       <CaseStagedStory
-        mark="03"
         title="AI could help, but in the wrong hands, it could also mislead"
         body={[
           'In a legal and financial context, an AI summary that feels authoritative can be more dangerous than no summary at all. Recipients could easily mistake generated output for verified fact.',
@@ -95,7 +93,6 @@ export default function SuiteFilesAISummary() {
       />
 
       <CaseStagedStory
-        mark="04"
         title="Principles before pixels"
         body={[
           'Before opening Figma, I defined three human-AI principles to guide every decision: transparency, editability, and user agency. Rather than treating AI as an add-on, I designed it as a supporting layer: automation where it helped, human judgment where it mattered.',
@@ -109,7 +106,6 @@ export default function SuiteFilesAISummary() {
       />
 
       <CaseStagedStory
-        mark="05"
         title="Finding signal without formal research"
         body={[
           "Research wasn't always an option, whether due to limited participant availability or time constraints. So I found signal elsewhere. I audited existing AI summarisation tools and competing e-signing platforms to understand established conventions and what users would likely expect.",
@@ -124,7 +120,6 @@ export default function SuiteFilesAISummary() {
       />
 
       <CaseStagedStory
-        mark="06"
         title="Designing alongside a moving target"
         body={[
           'The AI model was being finalised in parallel with the design work, which meant consistent check-ins with engineers to test whether ideas were feasible as the model evolved.',
@@ -133,7 +128,6 @@ export default function SuiteFilesAISummary() {
       />
 
       <CaseStagedStory
-        mark="07"
         title="Finding the right moment in the flow"
         body={[
           "We landed on surfacing the summary during the document review step, when the user is already in the document and considering what they're about to sign. That's the moment where a summary has the most value and the least friction.",
@@ -148,7 +142,6 @@ export default function SuiteFilesAISummary() {
       />
 
       <CaseStagedStory
-        mark="08"
         title="Designing the disclaimer as a guardrail, not an afterthought"
         body={[
           'In a legal and financial context, AI output that feels authoritative is a liability. I added a clear in-context disclaimer to signal that summaries should be treated as a starting point: reviewed critically, not accepted at face value.',
@@ -157,7 +150,6 @@ export default function SuiteFilesAISummary() {
       />
 
       <CaseStagedStory
-        mark="09"
         title="Shipping a deliberate, limited v1"
         body={[
           'Summary generation was limited to recipients only at launch: a known trade-off, managed by prioritising the most critical problem first: recipients interpreting AI output incorrectly in a high-stakes workflow.',
@@ -166,7 +158,6 @@ export default function SuiteFilesAISummary() {
       />
 
       <CaseStagedStory
-        mark="10"
         title="Constraints & trade-offs"
         items={[
           {
@@ -188,7 +179,6 @@ export default function SuiteFilesAISummary() {
       />
 
       <CaseStagedStory
-        mark="11"
         title="Results"
         itemsLayout="grid"
         items={[
@@ -211,7 +201,6 @@ export default function SuiteFilesAISummary() {
       />
 
       <CaseStagedStory
-        mark="12"
         variant="outcome"
         title="Reflections"
         body={[

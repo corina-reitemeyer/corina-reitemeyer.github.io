@@ -11,19 +11,20 @@ const tracks: Track[] = [
   {
     label: 'Design',
     items: [
-      'Design systems',
-      'Interaction design',
+      'UX/UI Design',
+      'Interaction Design',
+      'Design Systems',
       'Prototyping',
-      'User research',
+      'Visual Design',
     ],
   },
   {
     label: 'Build',
     items: [
       'HTML & CSS',
-      'React',
-      'AI-assisted development',
-      'Accessibility (WCAG 2.2)',
+      'Modular Frameworks',
+      'Design Tokens',
+      'Component Architecture',
     ],
   },
   {
@@ -42,16 +43,16 @@ export default function SkillSets() {
       ref={sectionRef}
       id="skills"
       aria-labelledby={headingId}
-      className="w-full bg-ink py-16 sm:py-24"
+      className="w-full bg-ink py-24 sm:py-32"
     >
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-14 px-6 sm:gap-16 sm:px-10 lg:grid-cols-[minmax(18rem,26rem)_1fr] xl:px-0">
-        <div className={`reveal reveal--1 relative ${revealClass}`}>
+        <div className={`reveal reveal--1 relative flex flex-col ${revealClass}`}>
           <h2
             id={headingId}
             className="text-[clamp(2.85rem,7vw,4.75rem)] font-bold leading-[0.92] tracking-[-0.04em] text-paper"
           >
-            <span className="block">Skill</span>
-            <span className="block text-teal-mid">sets</span>
+            <span className="block">Skill &amp;</span>
+            <span className="block text-teal-mid">Toolset</span>
           </h2>
 
           <div className="my-6 h-px w-16 bg-rule sm:my-8" aria-hidden="true" />
@@ -61,49 +62,43 @@ export default function SkillSets() {
             and the tooling that keeps them honest from sketch to shipped UI.
           </p>
 
-          <p className="margin-note ink-draw ink-write mt-6" aria-hidden="true">
-            ~ p.s. if it&rsquo;s not accessible, it&rsquo;s not done.
-          </p>
-
           <Link
             to="/about"
-            className="mt-8 inline-flex items-center gap-1.5 font-light text-[0.72rem] uppercase tracking-[0.16em] text-teal-mid transition-colors duration-150 ease-out hover:text-teal-mist"
+            className="mt-8 inline-flex items-center gap-1.5 font-normal text-xs uppercase tracking-[0.16em] text-teal-mid transition-colors duration-200 ease-out hover:text-teal-mist lg:mt-auto lg:pt-8"
           >
             More about me
             <span aria-hidden="true">→</span>
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-8">
-          {tracks.map((track, trackIndex) => (
-            <div
-              key={track.label}
-              className={`reveal reveal--${trackIndex + 2} ${revealClass}`}
-            >
-              <h3 className="mb-4 flex items-baseline gap-2 border-b border-rule pb-3">
-                <span aria-hidden="true" className="font-light text-xs text-teal-mid">
-                  ({String(trackIndex + 1).padStart(2, '0')})
-                </span>
-                <span className="text-lg font-semibold text-paper">
+        <div className="flex flex-col">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-8">
+            {tracks.map((track, trackIndex) => (
+              <div
+                key={track.label}
+                className={`reveal reveal--${trackIndex + 2} ${revealClass}`}
+              >
+                <h3 className="mb-4 border-b border-rule pb-3 text-lg font-semibold text-paper">
                   {track.label}
-                </span>
-              </h3>
-              {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
-              <ul role="list" className="space-y-3">
-                {track.items.map((item, i) => (
-                  <li
-                    key={item}
-                    className="flex items-baseline justify-between gap-3 text-sm text-paper-muted"
-                  >
-                    <span>{item}</span>
-                    <span aria-hidden="true" className="font-light text-xs text-paper-muted/70">
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+                </h3>
+                {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
+                <ul role="list" className="space-y-3">
+                  {track.items.map((item) => (
+                    <li key={item} className="text-sm text-paper-muted">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <p
+            className="margin-note ink-draw ink-write mt-10 hidden text-right sm:block lg:mt-auto lg:pt-8"
+            aria-hidden="true"
+          >
+            ~ p.s. if it&rsquo;s not accessible, it&rsquo;s not done.
+          </p>
         </div>
       </div>
     </section>

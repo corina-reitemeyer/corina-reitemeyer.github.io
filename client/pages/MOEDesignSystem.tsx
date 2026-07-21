@@ -92,7 +92,6 @@ export default function MOEDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="02"
         title="A crisis site exposed a systemic problem"
         body={[
           "The COVID-19 website wasn't the problem, it was the symptom that exposed the pain points the team had been experiencing for a long time. The rushed launch revealed that the organisation had no shared design language, no accessibility baked into the components or designs from the get-go, and no way to prevent the same issues from appearing on the next site.",
@@ -104,7 +103,6 @@ export default function MOEDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="03"
         title="Accessibility wasn't optional, but it wasn't happening without its hurdles"
         body={[
           'Government digital services in New Zealand are required to meet WCAG standards. Despite that, accessibility issues were being repeated across new builds because there was no shared reference point. This caused longer testing and fixing periods before we could launch a site to the public.',
@@ -116,7 +114,6 @@ export default function MOEDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="04"
         title="A system nobody uses is not a system"
         body={[
           'The organisation had designers, engineers, content teams, and external vendors all working independently across several sites. Getting them to adopt a shared standard meant the system had to feel like a tool that made their job easier, not another thing to learn.',
@@ -128,7 +125,6 @@ export default function MOEDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="05"
         title="Starting with the organisation, not the components"
         body={[
           'Before designing anything, I mapped existing sites, reviewed feedback from external vendors, and conducted staff interviews to understand where teams were actually struggling.',
@@ -137,7 +133,6 @@ export default function MOEDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="06"
         title="Building ownership through collaboration"
         body={[
           'Components were workshopped and agreed collaboratively, not handed down or decided by one person. Sessions with designers, engineers, and content teams surfaced what each group actually needed from the system.',
@@ -146,7 +141,6 @@ export default function MOEDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="07"
         title="Designing the information architecture of the system itself"
         body={[
           'The design system website needed its own IA, a structure that worked for very different audiences. Internal designers and engineers needed quick access to components and usage guidelines. External vendors needed enough context to implement correctly without a handover document. Other government agencies needed to understand the standards without any prior knowledge of the organisation.',
@@ -161,7 +155,6 @@ export default function MOEDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="08"
         title="Accessibility as the foundation, not a feature"
         body={[
           'Rather than adding accessibility at the end, I embedded WCAG compliance into the component library from the start. Every component was built to meet the standard by default, so teams using the system would be compliant without having to think about it.',
@@ -170,7 +163,6 @@ export default function MOEDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="09"
         title="Creating standards that worked across vendors"
         body={[
           'With 50+ sites involving multiple external vendors, each with their own tools and brand interpretations, the system had to be flexible enough to accommodate variation while structured enough to create real consistency.',
@@ -179,7 +171,6 @@ export default function MOEDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="10"
         title="Making the system public, not just internal"
         body={[
           'Rather than keeping guidelines inside Adobe XD or a knowledge platform only internal teams could access, I designed and built a public-facing design system website. That decision was deliberate: external vendors, the branding team, and third-party agencies all needed access without requiring an internal login or a handover document.',
@@ -194,7 +185,6 @@ export default function MOEDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="11"
         title="Constraints & trade-offs"
         items={[
           {
@@ -221,7 +211,6 @@ export default function MOEDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="12"
         title="Results"
         itemsLayout="grid"
         items={[
@@ -249,7 +238,6 @@ export default function MOEDesignSystem() {
       />
 
       <CaseStagedStory
-        mark="13"
         variant="outcome"
         title="Reflections"
         body={[

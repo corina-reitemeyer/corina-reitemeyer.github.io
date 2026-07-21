@@ -28,9 +28,9 @@ export default function ProductDesign() {
 
         <div className="relative z-10 mx-auto max-w-6xl px-6 pb-16 pt-[112px] sm:px-10 sm:pb-24 sm:pt-[164px] xl:px-0">
           <p
-            className={`reveal reveal--1 text-paper-muted mb-3 font-light text-[0.72rem] uppercase tracking-[0.16em] ${revealClass}`}
+            className={`reveal reveal--1 text-teal-mid mb-3 font-normal text-xs uppercase tracking-[0.16em] ${revealClass}`}
           >
-            Digital Products
+            Work
           </p>
 
           <h1

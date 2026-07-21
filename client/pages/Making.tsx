@@ -16,17 +16,6 @@ const STATUS_CLASS: Record<MakingProject['status'], string> = {
   shelved: 'text-paper-muted',
 }
 
-const COVER_GRADIENT: Record<NonNullable<MakingProject['coverVariant']>, string> = {
-  systems:
-    'linear-gradient(145deg, color-mix(in srgb, var(--teal-deep) 70%, var(--ink)) 0%, var(--ink) 70%)',
-  interfaces:
-    'linear-gradient(160deg, var(--ink) 10%, color-mix(in srgb, var(--teal) 35%, var(--ink)) 100%)',
-  prototypes:
-    'linear-gradient(200deg, color-mix(in srgb, var(--charcoal) 40%, var(--teal-deep)) 0%, var(--ink) 80%)',
-  learning:
-    'linear-gradient(155deg, color-mix(in srgb, var(--teal-mid) 28%, var(--ink)) 0%, var(--ink) 65%, color-mix(in srgb, var(--teal-deep) 55%, var(--ink)) 100%)',
-}
-
 function HandAsterisk(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false" {...props}>
@@ -62,23 +51,28 @@ function HandSquiggle(props: SVGProps<SVGSVGElement>) {
 }
 
 function ProjectTile({ project, index }: { project: MakingProject; index: number }) {
-  const cover = project.image ? (
+  // Matches lg:grid-cols-3 below, so the whole first row is visible on load
+  // (rather than just the first card) on the widest layout.
+  const isFirstRow = index < 3
+  const [hasMounted, setHasMounted] = useState(false)
+  const { ref: scrollRef, isInView: scrollInView } = useScrollReveal<HTMLLIElement>()
+
+  useEffect(() => {
+    if (!isFirstRow) return
+    const frame = requestAnimationFrame(() => setHasMounted(true))
+    return () => cancelAnimationFrame(frame)
+  }, [isFirstRow])
+
+  const isInView = isFirstRow ? hasMounted : scrollInView
+  const revealClass = isInView ? 'is-inview' : ''
+
+  const cover = (
     <img
       src={project.image}
       alt=""
       aria-hidden="true"
       className="aspect-[4/3] w-full rounded-2xl object-cover transition-transform duration-500 ease-editorial group-hover:scale-[1.03]"
     />
-  ) : (
-    <div
-      className="flex aspect-[4/3] w-full items-end rounded-2xl p-5 transition-transform duration-500 ease-editorial group-hover:scale-[1.03]"
-      style={{ background: COVER_GRADIENT[project.coverVariant ?? 'systems'] }}
-      aria-hidden="true"
-    >
-      <p className="text-[clamp(1.85rem,3.2vw,2.6rem)] font-bold leading-[0.88] tracking-[-0.04em] text-paper/90">
-        {project.coverWord}
-      </p>
-    </div>
   )
 
   const content = (
@@ -96,7 +90,7 @@ function ProjectTile({ project, index }: { project: MakingProject; index: number
       </div>
 
       <div className="mt-4">
-        <p className="mb-1.5 flex flex-wrap gap-x-2 font-light text-[0.68rem] uppercase tracking-[0.08em] text-paper-muted">
+        <p className="mb-1.5 flex flex-wrap gap-x-2 font-normal text-xs uppercase tracking-[0.12em] text-paper-muted">
           <span>{project.category}</span>
           <span aria-hidden="true">·</span>
           <span className={STATUS_CLASS[project.status]}>
@@ -120,19 +114,24 @@ function ProjectTile({ project, index }: { project: MakingProject; index: number
     </>
   )
 
-  if (project.href) {
-    return (
-      <Link
-        to={project.href}
-        aria-label={`${project.title}. ${project.description}`}
-        className="group block"
-      >
-        {content}
-      </Link>
-    )
-  }
-
-  return <div>{content}</div>
+  return (
+    <li
+      ref={scrollRef}
+      className={`reveal group min-w-0 ${revealClass}`}
+    >
+      {project.href ? (
+        <Link
+          to={project.href}
+          aria-label={`${project.title}. ${project.description}`}
+          className="block"
+        >
+          {content}
+        </Link>
+      ) : (
+        <div>{content}</div>
+      )}
+    </li>
+  )
 }
 
 export default function Making() {
@@ -164,21 +163,28 @@ export default function Making() {
           </p>
         </div>
 
-        <div className="relative z-10 mx-auto max-w-6xl px-6 pb-11 pt-[152px] sm:px-10 sm:pb-14 sm:pt-[208px] xl:px-0">
-          <div className={`reveal reveal--1 ${revealClass}`}>
+        <div className="relative z-10 mx-auto max-w-6xl px-6 pb-16 pt-[112px] sm:px-10 sm:pb-24 sm:pt-[164px] xl:px-0">
+          <p
+            className={`reveal reveal--1 text-teal-mid mb-3 font-normal text-xs uppercase tracking-[0.16em] ${revealClass}`}
+          >
+            Playground
+          </p>
+
+          <div className={`reveal reveal--2 ${revealClass}`}>
             <h1
               id={headingId}
-              className="text-paper text-[clamp(2.85rem,7vw,4.5rem)] font-bold leading-[0.92] tracking-[-0.04em]"
+              className="text-paper text-[clamp(2.75rem,8vw,5.5rem)] font-bold leading-[0.95] tracking-[-0.03em]"
             >
-              Playground
+              <span className="block">Small experiments,</span>
+              <span className="block">tried in the open.</span>
             </h1>
           </div>
 
           <p
-            className={`reveal reveal--2 max-w-measure text-paper-soft mt-7 text-[clamp(1.05rem,1.7vw,1.15rem)] ${revealClass}`}
+            className={`reveal reveal--3 max-w-measure text-paper-soft mt-7 text-[clamp(1.05rem,1.7vw,1.15rem)] ${revealClass}`}
           >
             Side projects and{' '}
-            <span className="text-teal-mid">small experiments</span>, dumping
+            <span className="text-teal-mid">half-built ideas</span>, dumping
             the pieces out and figuring out what wants to stand up.
           </p>
         </div>
@@ -203,12 +209,7 @@ export default function Making() {
             className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3"
           >
             {projects.map((project, index) => (
-              <li
-                key={project.id}
-                className={`reveal reveal--${(index % 5) + 1} group min-w-0 ${gridRevealClass}`}
-              >
-                <ProjectTile project={project} index={index} />
-              </li>
+              <ProjectTile key={project.id} project={project} index={index} />
             ))}
           </ul>
         </div>

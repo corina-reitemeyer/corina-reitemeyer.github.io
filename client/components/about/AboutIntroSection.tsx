@@ -31,9 +31,6 @@ export default function AboutIntroSection() {
     >
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 sm:px-10 lg:grid-cols-[10rem_1fr_14rem] lg:gap-16 xl:px-0">
         <div className={`reveal reveal--1 flex items-start gap-3 lg:flex-col lg:gap-4 ${revealClass}`}>
-          <span className="font-light text-[0.72rem] uppercase tracking-[0.16em] text-teal-mid">
-            (01)
-          </span>
           <h2 id={headingId} className="text-2xl font-bold text-paper">
             Who I am
           </h2>

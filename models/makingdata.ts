@@ -1,5 +1,4 @@
 export type MakingStatus = 'live' | 'wip' | 'shelved'
-export type MakingCoverVariant = 'systems' | 'interfaces' | 'prototypes' | 'learning'
 
 export default interface Making {
   id: number
@@ -9,8 +8,6 @@ export default interface Making {
   status: MakingStatus
   year: string
   href?: string
-  image?: string
-  coverWord?: string
-  coverVariant?: MakingCoverVariant
+  image: string
   note?: string
 }

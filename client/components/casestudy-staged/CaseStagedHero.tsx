@@ -7,6 +7,7 @@ type Props = {
   meta: string
   title: string
   marginNote?: string
+  disclaimer?: string
 }
 
 function HandAsterisk(props: SVGProps<SVGSVGElement>) {
@@ -107,6 +108,7 @@ export default function CaseStagedHero({
   meta,
   title,
   marginNote = 'case notes',
+  disclaimer,
 }: Props) {
   return (
     <section
@@ -147,6 +149,11 @@ export default function CaseStagedHero({
           {title}
         </h1>
         <HandUnderline className="ink-draw text-teal-mid/70 mt-2 h-3 w-[90px]" />
+        {disclaimer && (
+          <p className="text-paper-muted mt-6 max-w-measure text-sm italic leading-relaxed">
+            {disclaimer}
+          </p>
+        )}
       </div>
 
       <div

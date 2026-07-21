@@ -52,8 +52,14 @@ type Props = {
   title: string
   body?: CaseStagedParagraph[]
   items?: CaseStagedListItem[]
+  itemsIntro?: CaseStagedParagraph[]
   itemsLayout?: 'rows' | 'grid'
-  image?: { src: string; alt: string; caption: string }
+  image?: {
+    src: string
+    alt: string
+    caption: string
+    links?: { label: string; href: string }[]
+  }
   note?: { label: string; text: string }
   variant?: 'default' | 'outcome'
 }
@@ -63,6 +69,7 @@ export default function CaseStagedStory({
   title,
   body,
   items,
+  itemsIntro,
   itemsLayout = 'rows',
   image,
   note,
@@ -92,6 +99,19 @@ export default function CaseStagedStory({
             >
               {title}
             </h2>
+            {itemsIntro && (
+              <div className="text-paper-muted mt-4 space-y-3 text-base leading-relaxed">
+                {itemsIntro.map((p, i) =>
+                  typeof p === 'string' ? (
+                    <p key={i}>{p}</p>
+                  ) : (
+                    <p key={i} className={p.bold ? 'text-paper font-semibold' : undefined}>
+                      {p.text}
+                    </p>
+                  ),
+                )}
+              </div>
+            )}
           </div>
 
           {itemsLayout === 'grid' ? (
@@ -245,6 +265,23 @@ export default function CaseStagedStory({
             <figcaption className="text-paper-muted mt-3 text-sm italic leading-relaxed">
               {image.caption}
             </figcaption>
+            {image.links && image.links.length > 0 && (
+              <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-1">
+                {image.links.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-teal-mid hover:text-teal-bright inline-flex items-center gap-1.5 text-sm font-semibold transition-colors duration-200"
+                    >
+                      {link.label}
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
           </figure>
         ) : note ? (
           <aside className="border-rule border-l pl-6">

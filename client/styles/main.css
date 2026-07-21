@@ -21,6 +21,12 @@
   --focus: #b5ddd8;
   --note: color-mix(in srgb, var(--teal-mid) 45%, var(--teal-bright));
 
+  /* Case-study "staged" panel tones (11-case-study-staged.md) -- scoped accents, used only within .case-staged */
+  --slate-deep: #2b3440;
+  --slate: #6d7f8f;
+  --moss-deep: #33402c;
+  --moss: #7c9268;
+
   --font: 'sofia-pro', 'Segoe UI', 'Helvetica Neue', sans-serif;
   --font-mono: 'JetBrains Mono', 'SFMono-Regular', ui-monospace, monospace;
   --font-note: 'Caveat', 'Segoe Print', 'Comic Sans MS', cursive;
@@ -221,4 +227,64 @@ body {
 .hero-deck:has(.hero-keyword button:hover, .hero-keyword button:focus-visible)
   .hero-keyword button:not(:hover):not(:focus-visible) {
   opacity: 0.35;
+}
+
+/* =========================
+   Case study -- staged / immersive (11-case-study-staged.md)
+   ========================= */
+
+/* No site header/footer while an immersive case study is mounted */
+html.is-case-staged header,
+html.is-case-staged footer {
+  display: none;
+}
+
+/* Gentle one-section-at-a-time scroll; proximity (not mandatory) so long story
+   sections never fight natural reading/scrolling */
+html.is-case-staged {
+  scroll-snap-type: y proximity;
+}
+
+.case-staged__snap {
+  scroll-snap-align: start;
+  /* Without this, a fast trackpad fling can skip several sections at once,
+     making the "one section at a time" snap feel like it isn't happening */
+  scroll-snap-stop: always;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.is-case-staged {
+    scroll-snap-type: none;
+  }
+}
+
+/* Notebook lines confined to the top-left and bottom-right corners, fading out
+   toward the centre so the content column stays clear */
+.atmosphere-corner-rules {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--teal-mist) 9%, transparent) 0,
+    color-mix(in srgb, var(--teal-mist) 9%, transparent) 1px,
+    transparent 1px,
+    transparent 1.85rem
+  );
+  -webkit-mask-image:
+    radial-gradient(ellipse 42% 48% at 0% 0%, black 0%, transparent 100%),
+    radial-gradient(ellipse 42% 48% at 100% 100%, black 0%, transparent 100%);
+  mask-image:
+    radial-gradient(ellipse 42% 48% at 0% 0%, black 0%, transparent 100%),
+    radial-gradient(ellipse 42% 48% at 100% 100%, black 0%, transparent 100%);
+}
+
+/* Panel tones -- solid backdrops behind case-study imagery (not a fade, so the colour reads clearly) */
+.case-panel--teal {
+  background: color-mix(in srgb, var(--teal-deep) 55%, var(--ink));
+}
+
+.case-panel--slate {
+  background: color-mix(in srgb, var(--slate-deep) 55%, var(--ink));
+}
+
+.case-panel--moss {
+  background: color-mix(in srgb, var(--moss-deep) 55%, var(--ink));
 }

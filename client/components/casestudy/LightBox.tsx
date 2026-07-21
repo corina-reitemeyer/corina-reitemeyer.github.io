@@ -96,9 +96,22 @@ export default function Lightbox({
         type="button"
         onClick={onClose}
         aria-label="Close lightbox"
-        className="absolute right-5 top-5 z-50 rounded-full p-2 transition duration-200 hover:bg-white/10 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+        className="absolute right-5 top-5 z-50 rounded-full p-2 text-white transition duration-200 hover:bg-white/10 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
       >
-        <img src="/images/Close.webp" alt="" className="h-8 w-8" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M6 18L18 6M6 6l12 12" />
+        </svg>
       </button>
 
       <div

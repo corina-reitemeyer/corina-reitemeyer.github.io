@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "projectTitle": "Helping recipients understand what they're signing — with a little help from AI.",
+    "projectTitle": "Helping recipients understand what they're signing, with a little help from AI.",
     "slug": "suitefiles-ai-summary",
     "projectImage": "/images/portfolio/product/suitefiles-ai-summary-cover.webp",
     "company": "SuiteFiles"
@@ -15,7 +15,7 @@
   },
   {
     "id": 3,
-    "projectTitle": "Building the first design system for a government organisation — used across 50+ platforms.",
+    "projectTitle": "Building the first design system for a government organisation, used across 50+ platforms.",
     "slug": "moe-design-system",
     "projectImage": "/images/portfolio/product/moe-design-system-cover.webp",
     "company": "Ministry of Education"

@@ -5,6 +5,9 @@ import { useScrollReveal } from '../../../lib/useScrollReveal'
 type WorkItem = {
   id: number
   projectImage: string
+  /** Alternative crop for this preview panel; falls back to projectImage
+   *  when omitted. */
+  previewImage?: string
   projectTitle: string
   shortTitle: string
   company?: string
@@ -74,7 +77,7 @@ export default function WorkIndex({ projects, linkPrefix }: WorkIndexProps) {
               <>
                 <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-charcoal-soft">
                   <img
-                    src={active.projectImage}
+                    src={active.previewImage ?? active.projectImage}
                     alt=""
                     aria-hidden="true"
                     className="h-full w-full object-cover"

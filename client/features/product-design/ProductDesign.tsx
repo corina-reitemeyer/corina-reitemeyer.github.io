@@ -19,34 +19,36 @@ export default function ProductDesign() {
     <>
       <header
         aria-labelledby={headingId}
-        className="bg-ink relative w-full overflow-hidden"
+        className="relative w-full overflow-hidden bg-ink"
       >
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 z-0"
+        >
           <div className="atmosphere-wash absolute inset-0" />
           <div className="atmosphere-rules absolute inset-0" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-6xl px-6 pb-16 pt-[112px] sm:px-10 sm:pb-24 sm:pt-[164px] xl:px-0">
           <p
-            className={`reveal reveal--1 text-teal-mid mb-3 font-normal text-xs uppercase tracking-[0.16em] ${revealClass}`}
+            className={`reveal reveal--1 mb-3 text-xs font-normal uppercase tracking-[0.16em] text-teal-mid ${revealClass}`}
           >
             Work
           </p>
 
           <h1
             id={headingId}
-            className={`reveal reveal--2 text-paper mb-6 text-[clamp(2.75rem,8vw,5.5rem)] font-bold leading-[0.95] tracking-[-0.03em] ${revealClass}`}
+            className={`reveal reveal--2 mb-6 text-[clamp(2.75rem,8vw,5.5rem)] font-bold leading-[0.95] tracking-[-0.03em] text-paper ${revealClass}`}
           >
             <span className="block">Product design,</span>
             <span className="block">under real constraints.</span>
           </h1>
 
           <p
-            className={`reveal reveal--3 max-w-measure text-paper-muted text-[clamp(1.1rem,1.8vw,1.25rem)] ${revealClass}`}
+            className={`reveal reveal--3 max-w-measure text-[clamp(1.1rem,1.8vw,1.25rem)] text-paper-muted ${revealClass}`}
           >
-            Four projects across AI features, design systems, and research
-            tooling. Proof of how I work when the brief, the team, or the
-            timeline isn&rsquo;t ideal.
+            An AI feature, a growth project, and two design systems &mdash; I
+            can zoom out to build the system and zoom in to ship the feature.
           </p>
         </div>
       </header>

@@ -5,6 +5,7 @@ import {
   useRef,
   useState,
   type MouseEvent,
+  type ReactNode,
   type SVGProps,
 } from 'react'
 import { useScrollReveal } from '../../../lib/useScrollReveal'
@@ -51,6 +52,22 @@ function PlayIcon(props: SVGProps<SVGSVGElement>) {
   )
 }
 
+/** Points left; the right-facing arrow button flips it with -scale-x-100
+ *  rather than duplicating a mirrored path. */
+function ChevronIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" {...props}>
+      <path
+        d="M12.5 15L7.5 10L12.5 5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
 /** Photos rendered three times so there's always a full screen of images to
  *  scroll into in either direction; the middle copy is the only one exposed
  *  to assistive tech, the two flanking copies are aria-hidden clones used
@@ -62,6 +79,33 @@ const loopedPhotos = [0, 1, 2].flatMap((setIndex) =>
     isReal: setIndex === 1,
   })),
 )
+
+const iconWrapClass =
+  'bg-ink/80 text-paper flex h-10 w-10 flex-none items-center justify-center rounded-full border border-rule backdrop-blur-sm transition-colors duration-200 hover:border-teal-mid'
+const controlButtonClass =
+  'absolute z-20 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100'
+
+type ControlButtonProps = {
+  onClick: () => void
+  label: string
+  position: string
+  pressed?: boolean
+  children: ReactNode
+}
+
+function ControlButton({ onClick, label, position, pressed, children }: ControlButtonProps) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-label={label}
+      aria-pressed={pressed}
+      className={`${controlButtonClass} ${position}`}
+    >
+      <span className={iconWrapClass}>{children}</span>
+    </button>
+  )
+}
 
 function PhotoCarousel() {
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -134,13 +178,10 @@ function PhotoCarousel() {
     wrapIfNeeded()
   }, [wrapIfNeeded])
 
-  const arrowButtonClass =
-    'bg-ink/80 text-paper flex h-10 w-10 flex-none items-center justify-center rounded-full border border-rule backdrop-blur-sm transition-colors duration-200 hover:border-teal-mid'
-
   useEffect(() => {
     const el = scrollRef.current
     if (!el) return
-    const setWidth = el.scrollWidth / 3
+    const setWidth = getSetWidth()
     el.scrollLeft = setWidth
     driftPositionRef.current = setWidth
 
@@ -212,59 +253,30 @@ function PhotoCarousel() {
         </div>
         {/* eslint-enable jsx-a11y/no-static-element-interactions, jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/no-noninteractive-tabindex */}
 
-        <button
-          type="button"
+        <ControlButton
           onClick={() => scrollByStep(-1)}
-          aria-label="Scroll left"
-          className="absolute left-4 top-1/2 z-20 -translate-y-1/2 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100"
+          label="Scroll left"
+          position="left-4 top-1/2 -translate-y-1/2"
         >
-          <span className={arrowButtonClass}>
-            <svg viewBox="0 0 20 20" fill="none" className="h-4 w-4">
-              <path
-                d="M12.5 15L7.5 10L12.5 5"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </span>
-        </button>
+          <ChevronIcon className="h-4 w-4" />
+        </ControlButton>
 
-        <button
-          type="button"
+        <ControlButton
           onClick={() => scrollByStep(1)}
-          aria-label="Scroll right"
-          className="absolute right-4 top-1/2 z-20 -translate-y-1/2 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100"
+          label="Scroll right"
+          position="right-4 top-1/2 -translate-y-1/2"
         >
-          <span className={arrowButtonClass}>
-            <svg viewBox="0 0 20 20" fill="none" className="h-4 w-4">
-              <path
-                d="M7.5 5L12.5 10L7.5 15"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </span>
-        </button>
+          <ChevronIcon className="h-4 w-4 -scale-x-100" />
+        </ControlButton>
 
-        <button
-          type="button"
+        <ControlButton
           onClick={() => setIsPaused((prev) => !prev)}
-          aria-pressed={isPaused}
-          aria-label={isPaused ? 'Play photo carousel' : 'Pause photo carousel'}
-          className="absolute bottom-4 right-4 z-20 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100"
+          label={isPaused ? 'Play photo carousel' : 'Pause photo carousel'}
+          position="bottom-4 right-4"
+          pressed={isPaused}
         >
-          <span className={arrowButtonClass}>
-            {isPaused ? (
-              <PlayIcon className="h-4 w-4" />
-            ) : (
-              <PauseIcon className="h-4 w-4" />
-            )}
-          </span>
-        </button>
+          {isPaused ? <PlayIcon className="h-4 w-4" /> : <PauseIcon className="h-4 w-4" />}
+        </ControlButton>
       </div>
     </div>
   )

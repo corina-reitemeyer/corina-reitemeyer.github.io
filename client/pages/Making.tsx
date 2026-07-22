@@ -1,8 +1,9 @@
-import { useEffect, useId, useState, type SVGProps } from 'react'
+import { useEffect, useId, useState } from 'react'
 import { Link } from 'react-router-dom'
 import MakingData from '../../src/makingdata.json'
 import type MakingProject from '../../models/makingdata'
 import { useScrollReveal } from '../lib/useScrollReveal'
+import { HandAsterisk, HandSquiggleCompact } from '../components/icons/Doodles'
 
 const STATUS_LABEL: Record<MakingProject['status'], string> = {
   live: 'Live',
@@ -14,40 +15,6 @@ const STATUS_CLASS: Record<MakingProject['status'], string> = {
   live: 'text-teal-mid',
   wip: 'text-paper-soft',
   shelved: 'text-paper-muted',
-}
-
-function HandAsterisk(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false" {...props}>
-      <path
-        className="ink-stroke"
-        d="M16 4v24M6.5 10.5l19 11M6.5 21.5l19-11"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        pathLength={1}
-        strokeDasharray={1}
-        strokeDashoffset={1}
-      />
-    </svg>
-  )
-}
-
-function HandSquiggle(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 80 28" fill="none" aria-hidden="true" focusable="false" {...props}>
-      <path
-        className="ink-stroke"
-        d="M4 18c8-12 16 8 24-2s14-2 22 4 14-10 26-6"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        pathLength={1}
-        strokeDasharray={1}
-        strokeDashoffset={1}
-      />
-    </svg>
-  )
 }
 
 function ProjectTile({ project, index }: { project: MakingProject; index: number }) {
@@ -157,7 +124,7 @@ export default function Making() {
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0">
           <div className="atmosphere-wash absolute inset-0" />
           <div className="atmosphere-rules absolute inset-0" />
-          <HandSquiggle className="text-teal-mid/60 absolute bottom-3 left-6 h-6 w-[110px] -rotate-6 sm:bottom-10 sm:left-10" />
+          <HandSquiggleCompact className="text-teal-mid/60 absolute bottom-3 left-6 h-6 w-[110px] -rotate-6 sm:bottom-10 sm:left-10" />
           <p className="margin-note ink-write absolute right-6 top-32 hidden -rotate-3 sm:right-10 sm:block">
             try · break · remake
           </p>

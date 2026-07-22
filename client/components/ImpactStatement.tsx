@@ -1,4 +1,5 @@
-import { useEffect, useId, useState, type SVGProps } from 'react'
+import { useEffect, useId, useState } from 'react'
+import { HandAsterisk, HandSquiggle, ScrollMouseIcon } from './icons/Doodles'
 
 type Keyword = {
   id: string
@@ -33,75 +34,6 @@ const keywords: Keyword[] = [
   },
 ]
 
-function HandSquiggle(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      viewBox="0 0 140 24"
-      fill="none"
-      aria-hidden="true"
-      focusable="false"
-      {...props}
-    >
-      <path
-        className="ink-stroke"
-        d="M4 14c12-8 22-8 34-2s22 8 34 2 22-8 34-2 20 7 30 1"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        pathLength={1}
-        strokeDasharray={1}
-        strokeDashoffset={1}
-      />
-    </svg>
-  )
-}
-
-function ScrollMouseIcon(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 40" fill="none" aria-hidden="true" focusable="false" {...props}>
-      <rect
-        x="1.25"
-        y="1.25"
-        width="21.5"
-        height="37.5"
-        rx="10.75"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
-      <circle
-        className="motion-safe:animate-scroll-wheel"
-        cx="12"
-        cy="11"
-        r="2.5"
-        fill="currentColor"
-      />
-    </svg>
-  )
-}
-
-function HandAsterisk(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      viewBox="0 0 32 32"
-      fill="none"
-      aria-hidden="true"
-      focusable="false"
-      {...props}
-    >
-      <path
-        className="ink-stroke"
-        d="M16 4v24M6.5 10.5l19 11M6.5 21.5l19-11"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        pathLength={1}
-        strokeDasharray={1}
-        strokeDashoffset={1}
-      />
-    </svg>
-  )
-}
 
 export default function ImpactStatement() {
   const headingId = useId()

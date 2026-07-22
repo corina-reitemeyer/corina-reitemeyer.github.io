@@ -1,28 +1,6 @@
-import { useId, type SVGProps } from 'react'
+import { useId } from 'react'
 import { useScrollReveal } from '../../lib/useScrollReveal'
-
-function HandAsterisk(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      viewBox="0 0 32 32"
-      fill="none"
-      aria-hidden="true"
-      focusable="false"
-      {...props}
-    >
-      <path
-        className="ink-stroke"
-        d="M16 4v24M6.5 10.5l19 11M6.5 21.5l19-11"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        pathLength={1}
-        strokeDasharray={1}
-        strokeDashoffset={1}
-      />
-    </svg>
-  )
-}
+import { HandAsterisk } from '../icons/Doodles'
 
 export default function AboutIntroSection() {
   const headingId = useId()

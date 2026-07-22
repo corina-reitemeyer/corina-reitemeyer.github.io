@@ -54,7 +54,7 @@ export default function AboutHero() {
         </p>
 
         <dl
-          className={`reveal reveal--4 grid grid-cols-1 gap-x-10 gap-y-6 border-t border-rule pt-8 sm:grid-cols-3 ${revealClass}`}
+          className={`reveal reveal--4 flex flex-col gap-y-6 border-t border-rule pt-8 sm:flex-row sm:gap-x-10 ${revealClass}`}
           aria-label="At a glance"
         >
           {meta.map((item) => (

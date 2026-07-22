@@ -1,5 +1,6 @@
 import {
   useId,
+  useCallback,
   useEffect,
   useRef,
   useState,
@@ -82,7 +83,7 @@ function PhotoCarousel() {
   /** Once scroll position drifts into a cloned set, silently jump back by
    *  one set width so it looks like the scroll never stopped. Since the
    *  clones are pixel-identical to the real set, the jump is invisible. */
-  const wrapIfNeeded = () => {
+  const wrapIfNeeded = useCallback(() => {
     const el = scrollRef.current
     if (!el || isDraggingRef.current) return
     const setWidth = getSetWidth()
@@ -93,7 +94,7 @@ function PhotoCarousel() {
       el.scrollLeft -= setWidth
     }
     driftPositionRef.current = el.scrollLeft
-  }
+  }, [])
 
   const handleScroll = () => {
     const el = scrollRef.current
@@ -126,12 +127,12 @@ function PhotoCarousel() {
     el.scrollLeft = dragStartScrollLeftRef.current - (e.pageX - dragStartXRef.current)
   }
 
-  const stopDragging = () => {
+  const stopDragging = useCallback(() => {
     isDraggingRef.current = false
     const el = scrollRef.current
     if (el) driftPositionRef.current = el.scrollLeft
     wrapIfNeeded()
-  }
+  }, [wrapIfNeeded])
 
   const arrowButtonClass =
     'bg-ink/80 text-paper flex h-10 w-10 flex-none items-center justify-center rounded-full border border-rule backdrop-blur-sm transition-colors duration-200 hover:border-teal-mid'
@@ -150,7 +151,7 @@ function PhotoCarousel() {
       window.removeEventListener('mouseup', stopDragging)
       window.clearTimeout(scrollEndTimeoutRef.current)
     }
-  }, [])
+  }, [wrapIfNeeded, stopDragging])
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia(
@@ -172,7 +173,7 @@ function PhotoCarousel() {
 
     frame = window.requestAnimationFrame(drift)
     return () => window.cancelAnimationFrame(frame)
-  }, [isPaused, isHovering])
+  }, [isPaused, isHovering, wrapIfNeeded])
 
   return (
     <div

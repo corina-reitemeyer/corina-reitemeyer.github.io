@@ -1,11 +1,11 @@
 import { createRoutesFromElements, Route } from 'react-router-dom'
-import App from './components/App'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import ProductDesign from './pages/ProductDesign'
-import Making from './pages/Making'
-import CaseStudy from './pages/CaseStudy'
-import Home from './pages/Landing'
+import App from './layout/App'
+import About from './features/about/About'
+import Contact from './features/contact/Contact'
+import ProductDesign from './features/product-design/ProductDesign'
+import Making from './features/making/Making'
+import CaseStudy from './features/case-study/CaseStudy'
+import Home from './features/landing/Landing'
 import { ROUTES } from './lib/routes'
 
 const routes = createRoutesFromElements(

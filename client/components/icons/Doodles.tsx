@@ -99,31 +99,6 @@ export function HandLoop(props: SVGProps<SVGSVGElement>) {
   )
 }
 
-/** Plain single-stroke underline -- distinct from the masked, filled
- *  HandUnderline in components/contact, which renders a heavier ink shape. */
-export function HandUnderlineSimple(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      viewBox="0 0 90 14"
-      fill="none"
-      aria-hidden="true"
-      focusable="false"
-      {...props}
-    >
-      <path
-        className="ink-stroke"
-        d="M3 8c14-5 30-6 44-3s25 4 40-2"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        pathLength={1}
-        strokeDasharray={1}
-        strokeDashoffset={1}
-      />
-    </svg>
-  )
-}
-
 export function ScrollMouseIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg

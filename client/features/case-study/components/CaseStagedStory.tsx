@@ -48,6 +48,10 @@ function RippleDrawing(props: SVGProps<SVGSVGElement>) {
 export type CaseStagedListItem = { title: string; description: string }
 
 type Props = {
+  /** Step number shown as a small rail mark (e.g. "03"), giving readers a
+   *  sense of progress through a long run of sections. Omit for sections
+   *  that aren't part of the numbered narrative (e.g. the outcome variant). */
+  index?: number
   title: string
   body?: CaseStagedParagraph[]
   items?: CaseStagedListItem[]
@@ -58,12 +62,28 @@ type Props = {
     alt: string
     caption: string
     links?: { label: string; href: string }[]
+    /** Small label distinguishing process/exploration artifacts (sketches,
+     *  wireframes, XD screenshots) from final shipped product imagery. */
+    tag?: string
   }
   note?: { label: string; text: string }
   variant?: 'default' | 'outcome'
 }
 
+function StepMark({ index }: { index?: number }) {
+  if (typeof index !== 'number') return null
+  return (
+    <p
+      aria-hidden="true"
+      className="text-teal-mid mb-3 font-mono text-xs tracking-[0.08em]"
+    >
+      {String(index).padStart(2, '0')}
+    </p>
+  )
+}
+
 export default function CaseStagedStory({
+  index,
   title,
   body,
   items,
@@ -88,6 +108,7 @@ export default function CaseStagedStory({
       >
         <div className={`reveal reveal--1 mx-auto max-w-6xl px-6 sm:px-10 xl:px-0 ${revealClass}`}>
           <div className="mb-10 max-w-measure sm:mb-14">
+            <StepMark index={index} />
             <h2
               id={headingId}
               className="text-paper text-[clamp(1.85rem,4vw,2.85rem)] font-bold leading-[1.05] tracking-[-0.02em]"
@@ -161,6 +182,7 @@ export default function CaseStagedStory({
         <div
           className={`reveal reveal--1 mx-auto max-w-2xl px-6 text-left sm:px-10 xl:px-0 ${revealClass}`}
         >
+          <StepMark index={index} />
           <h2
             id={headingId}
             className="text-paper mb-6 text-[clamp(1.85rem,4vw,2.85rem)] font-bold leading-[1.05] tracking-[-0.02em]"
@@ -211,6 +233,7 @@ export default function CaseStagedStory({
         } ${revealClass}`}
       >
         <div className={image ? 'lg:order-2' : ''}>
+          <StepMark index={index} />
           <h2
             id={headingId}
             className="text-paper mb-6 max-w-measure text-[clamp(1.85rem,4vw,2.85rem)] font-bold leading-[1.05] tracking-[-0.02em]"
@@ -231,7 +254,12 @@ export default function CaseStagedStory({
         </div>
 
         {image ? (
-          <figure className="lg:order-1">
+          <figure className="relative lg:order-1">
+            {image.tag && (
+              <span className="bg-ink/80 text-teal-mist absolute left-3 top-3 z-10 rounded-full px-2.5 py-1 font-semibold text-[10px] uppercase tracking-[0.08em] backdrop-blur-sm">
+                {image.tag}
+              </span>
+            )}
             <button
               ref={triggerRef}
               type="button"
@@ -267,12 +295,12 @@ export default function CaseStagedStory({
             )}
           </figure>
         ) : note ? (
-          <aside className="border-rule border-l pl-6">
+          <div className="border-rule border-l pl-6">
             <p className="text-teal-mid mb-2 font-normal text-xs uppercase tracking-[0.12em]">
               {note.label}
             </p>
             <p className="text-paper-muted text-sm leading-relaxed">{note.text}</p>
-          </aside>
+          </div>
         ) : variant === 'outcome' ? (
           <div className="flex items-center justify-center">
             <RippleDrawing className="text-teal-mid/70 h-auto w-full max-w-[16rem]" />

@@ -40,7 +40,6 @@ export default function BuildingAdaptiveTeams() {
         panels={[
           {
             id: 'overview-full-1',
-            tone: 'slate',
             grid: 'full',
             images: [
               {
@@ -54,7 +53,6 @@ export default function BuildingAdaptiveTeams() {
           },
           {
             id: 'overview-full-2',
-            tone: 'slate',
             grid: 'full',
             images: [
               {

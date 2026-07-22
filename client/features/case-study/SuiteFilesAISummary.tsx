@@ -28,28 +28,26 @@ export default function SuiteFilesAISummary() {
           { label: 'My Role', value: 'Senior Product Designer' },
           {
             label: 'Team',
-            value: 'PM, frontend & backend engineers, risk stakeholders',
+            value: 'PM, Fullstack engineers, risk stakeholders',
           },
         ]}
         panels={[
           {
             id: 'overview-full',
-            tone: 'teal',
             grid: 'full',
             images: [
               {
-                id: 'sfai-desktop-slides',
-                src: '/images/product/sfai-desktop-slides.webp',
-                alt: 'Desktop screens showing the AI summary feature',
+                id: 'suitefiles-ai-summary-cover',
+                src: '/images/portfolio/product/suitefiles-ai-summary-cover.webp',
+                alt: 'AI summary panel shown on desktop and mobile in a signing request',
                 caption:
                   'The full desktop experience in a multi-document signing request.',
               },
             ],
           },
           {
-            id: 'overview-pair',
-            tone: 'teal',
-            grid: 'pair',
+            id: 'overview-full-2',
+            grid: 'full',
             images: [
               {
                 id: 'sfai-mobile',
@@ -58,6 +56,12 @@ export default function SuiteFilesAISummary() {
                 caption:
                   'The summary panel on mobile, designed to sit within the signing flow without interrupting it.',
               },
+            ],
+          },
+          {
+            id: 'overview-full-3',
+            grid: 'full',
+            images: [
               {
                 id: 'sfai-desktop-anatomy',
                 src: '/images/product/sfai-desktop-panel-anatomy.webp',

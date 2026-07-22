@@ -9,8 +9,7 @@ export type CaseStagedImage = {
 
 export type CaseStagedPanel = {
   id: string
-  tone: 'teal' | 'slate' | 'moss'
-  grid: 'full' | 'pair' | 'process'
+  grid: 'full' | 'process'
   images: CaseStagedImage[]
 }
 
@@ -24,7 +23,6 @@ type Props = {
 
 const GRID_CLASS: Record<CaseStagedPanel['grid'], string> = {
   full: 'grid grid-cols-1',
-  pair: 'grid grid-cols-1 gap-6 sm:grid-cols-2',
   process: 'grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3',
 }
 
@@ -39,9 +37,9 @@ export default function CaseStagedSplit({
 
   return (
     <section aria-label="Project overview" className="relative">
-      <div className="grid grid-cols-1 lg:grid-cols-[minmax(18rem,26rem)_1fr]">
+      <div className="grid grid-cols-1 lg:grid-cols-[minmax(25rem,37.5rem)_1fr]">
         <div className="border-rule border-b px-6 py-16 sm:px-10 sm:py-20 lg:sticky lg:top-0 lg:flex lg:h-dvh lg:flex-col lg:justify-center lg:border-b-0 lg:border-r lg:px-12">
-          <div className="max-w-md">
+          <div className="max-w-[40rem]">
             <h2
               id={headingId}
               className="text-paper mb-4 text-[clamp(1.85rem,3.5vw,2.5rem)] font-bold leading-[1.05] tracking-[-0.02em]"
@@ -78,7 +76,7 @@ export default function CaseStagedSplit({
           {panels.map((panel) => (
             <div
               key={panel.id}
-              className={`case-staged__snap case-panel--${panel.tone} flex min-h-[80dvh] items-center px-6 py-16 sm:px-10`}
+              className="case-staged__snap bg-ink flex min-h-[80dvh] items-center px-6 py-16 sm:px-10"
             >
               <div className={`w-full ${GRID_CLASS[panel.grid]}`}>
                 {panel.images.map((image) => (

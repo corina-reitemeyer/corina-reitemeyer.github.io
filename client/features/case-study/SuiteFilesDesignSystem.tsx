@@ -35,22 +35,20 @@ export default function SuiteFilesDesignSystem() {
         panels={[
           {
             id: 'overview-full',
-            tone: 'slate',
             grid: 'full',
             images: [
               {
-                id: 'sfds-desktop-examples',
-                src: '/images/product/sfds-desktop-examples.webp',
-                alt: 'Desktop examples of the product after rebranding',
+                id: 'suitefiles-design-system-hero',
+                src: '/images/product/suitefiles-design-system-hero.webp',
+                alt: 'Figma workspace showing SuiteFiles design system components and tokens',
                 caption:
                   'The new brand and component patterns applied consistently across the product through the design system.',
               },
             ],
           },
           {
-            id: 'overview-pair',
-            tone: 'slate',
-            grid: 'pair',
+            id: 'overview-full-2',
+            grid: 'full',
             images: [
               {
                 id: 'sfds-component-diagram',
@@ -58,6 +56,12 @@ export default function SuiteFilesDesignSystem() {
                 alt: 'Diagram of example components used in the design system',
                 caption: 'Components mapped to real product context.',
               },
+            ],
+          },
+          {
+            id: 'overview-full-3',
+            grid: 'full',
+            images: [
               {
                 id: 'sfds-components',
                 src: '/images/product/sfds-components.webp',
@@ -67,8 +71,7 @@ export default function SuiteFilesDesignSystem() {
             ],
           },
           {
-            id: 'overview-full-2',
-            tone: 'slate',
+            id: 'overview-full-4',
             grid: 'full',
             images: [
               {

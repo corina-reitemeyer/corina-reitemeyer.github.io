@@ -31,22 +31,20 @@ export default function OWTemplates() {
         panels={[
           {
             id: 'overview-full',
-            tone: 'teal',
             grid: 'full',
             images: [
               {
-                id: 'ow-desktop-1',
-                src: '/images/product/ow-desktop-1.webp',
-                alt: 'Two laptops showing the template library and overview modal',
+                id: 'ow-casestudy-hero',
+                src: '/images/product/ow-casestudy-hero.webp',
+                alt: 'Laptop showing the templates browsing modal in Optimal Workshop',
                 caption:
                   'Template library and overview modal, the entry point for starting a research study.',
               },
             ],
           },
           {
-            id: 'overview-pair',
-            tone: 'teal',
-            grid: 'pair',
+            id: 'overview-full-2',
+            grid: 'full',
             images: [
               {
                 id: 'ow-desktop-2',
@@ -55,6 +53,12 @@ export default function OWTemplates() {
                 caption:
                   'Template library accessed from core workflows, with study details for added context.',
               },
+            ],
+          },
+          {
+            id: 'overview-full-3',
+            grid: 'full',
+            images: [
               {
                 id: 'ow-template-types',
                 src: '/images/product/ow-template-types.webp',
@@ -104,6 +108,18 @@ export default function OWTemplates() {
         title="Treating v1 as an experiment, not a finished product"
         body={[
           'The templates concept originated from the IA Lead and PM in my squad, a hypothesis responding to both the churn problem and the new IA strategy. My role was to take that idea and make it real. Before opening Figma, I drew on existing research initiatives (the IA strategy work and the Voice of Customer research) to understand what users actually needed from a templates feature.',
+        ]}
+        image={{
+          src: '/images/process/ow-sketches.webp',
+          alt: 'Hand-drawn sketches exploring early template concepts',
+          caption:
+            'Early sketches, exploring the dashboard, library, and modal before any wireframes were built.',
+        }}
+      />
+
+      <CaseStagedStory
+        title="Narrowing down before scaling up"
+        body={[
           'I also audited competitor products and platforms researchers and designers commonly used, productivity tools and research platforms, to understand established template conventions and what users would likely expect. The deliberate constraint of starting with six templates meant we could learn from real use before scaling rather than building a full library nobody had validated.',
         ]}
         image={{

@@ -3,7 +3,6 @@ import {
   HandAsterisk,
   HandLoop,
   HandSquiggle,
-  HandUnderlineSimple,
   ScrollMouseIcon,
 } from '../../../components/icons/Doodles'
 
@@ -62,7 +61,6 @@ export default function CaseStagedHero({
         >
           {title}
         </h1>
-        <HandUnderlineSimple className="text-teal-mid/70 mt-2 h-3 w-[90px]" />
         {disclaimer && (
           <p className="text-paper-muted mt-6 max-w-measure text-sm italic leading-relaxed">
             {disclaimer}

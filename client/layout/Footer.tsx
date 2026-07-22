@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom'
-import contactData from '../../src/contactdata.json'
-import type ContactData from '../../models/contactdata'
+import contactData from '../data/contactdata.json'
+import type ContactData from '../data/contactdata.types'
 import TechTicker from './TechTicker'
 
 export default function Footer() {

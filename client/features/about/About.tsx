@@ -1,5 +1,5 @@
-import aboutData from '../../../src/about.json'
-import type AboutData from '../../../models/aboutdata'
+import aboutData from './about.json'
+import type AboutData from './aboutdata'
 import AboutHero from './AboutHero'
 import AboutIntroSection from './AboutIntroSection'
 import ExperienceSection from './Experience'

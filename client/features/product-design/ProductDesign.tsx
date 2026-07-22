@@ -1,6 +1,6 @@
 import { useEffect, useId, useState } from 'react'
-import ProjectData from '../../../src/projectsdata.json'
-import Project from '../../../models/projectdata'
+import ProjectData from '../../data/projectsdata.json'
+import Project from '../../data/projectdata'
 import ProjectGrid from './ProjectGrid'
 import { ROUTES } from '../../lib/routes'
 

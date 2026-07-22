@@ -1,7 +1,7 @@
 import { useEffect, useId, useState } from 'react'
 import { Link } from 'react-router-dom'
-import MakingData from '../../../src/makingdata.json'
-import type MakingProject from '../../../models/makingdata'
+import MakingData from './makingdata.json'
+import type MakingProject from './makingdata.types'
 import { useScrollReveal } from '../../lib/useScrollReveal'
 import { HandAsterisk, HandSquiggleCompact } from '../../components/icons/Doodles'
 

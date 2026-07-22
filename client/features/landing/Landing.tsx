@@ -1,5 +1,5 @@
-import ProjectData from '../../../src/projectsdata.json'
-import Project from '../../../models/projectdata'
+import ProjectData from '../../data/projectsdata.json'
+import Project from '../../data/projectdata'
 import ImpactStatement from './ImpactStatement'
 import LiquidBanner from './LiquidBanner'
 import Services from './Services'

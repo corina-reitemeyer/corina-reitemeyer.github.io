@@ -76,7 +76,7 @@ export default function AboutIntroSection() {
           </p>
         </div>
 
-        <aside className={`reveal reveal--3 ${revealClass}`}>
+        <div className={`reveal reveal--3 ${revealClass}`}>
           <img
             src="/images/corina-about.webp"
             alt="Corina Reitemeyer"
@@ -88,7 +88,7 @@ export default function AboutIntroSection() {
           >
             ^INFJ, but sometimes a selective extrovert
           </p>
-        </aside>
+        </div>
       </div>
     </section>
   )

@@ -40,7 +40,7 @@ export default function CaseStagedSplit({
   return (
     <section aria-label="Project overview" className="relative">
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(18rem,26rem)_1fr]">
-        <aside className="border-rule border-b px-6 py-16 sm:px-10 sm:py-20 lg:sticky lg:top-0 lg:flex lg:h-dvh lg:flex-col lg:justify-center lg:border-b-0 lg:border-r lg:px-12">
+        <div className="border-rule border-b px-6 py-16 sm:px-10 sm:py-20 lg:sticky lg:top-0 lg:flex lg:h-dvh lg:flex-col lg:justify-center lg:border-b-0 lg:border-r lg:px-12">
           <div className="max-w-md">
             <h2
               id={headingId}
@@ -72,7 +72,7 @@ export default function CaseStagedSplit({
               ))}
             </dl>
           </div>
-        </aside>
+        </div>
 
         <div className="flex flex-col">
           {panels.map((panel) => (

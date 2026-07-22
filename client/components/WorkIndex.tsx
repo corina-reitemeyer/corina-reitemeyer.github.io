@@ -69,7 +69,7 @@ export default function WorkIndex({ projects, linkPrefix }: WorkIndexProps) {
         <div
           className={`reveal reveal--3 grid grid-cols-1 gap-10 pt-10 sm:gap-12 sm:pt-14 lg:grid-cols-[minmax(14rem,22rem)_1fr] lg:gap-16 ${revealClass}`}
         >
-          <aside>
+          <div>
             {active && (
               <>
                 <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-charcoal-soft">
@@ -92,7 +92,7 @@ export default function WorkIndex({ projects, linkPrefix }: WorkIndexProps) {
                 </div>
               </>
             )}
-          </aside>
+          </div>
 
           {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
           <ul role="list" className="divide-y divide-rule border-t border-rule">

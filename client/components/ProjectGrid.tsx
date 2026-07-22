@@ -1,4 +1,4 @@
-import { useEffect, useState, type Ref } from 'react'
+import { useEffect, useId, useState, type Ref } from 'react'
 import { Link } from 'react-router-dom'
 import { useScrollReveal } from '../lib/useScrollReveal'
 
@@ -114,12 +114,19 @@ function ProjectCard({
 }
 
 export default function ProjectGrid({ projects, linkPrefix }: ProjectGridProps) {
+  const headingId = useId()
   const visibleProjects = projects
     .filter((p) => p.projectTitle && p.slug && p.projectImage)
     .slice(0, 4)
 
   return (
-    <section aria-label="All projects" className="bg-ink w-full py-16 sm:py-24">
+    <section
+      aria-labelledby={headingId}
+      className="bg-ink w-full py-16 sm:py-24"
+    >
+      <h2 id={headingId} className="sr-only">
+        All projects
+      </h2>
       <div className="mx-auto grid max-w-6xl auto-rows-[14rem] grid-cols-1 gap-16 px-6 sm:auto-rows-[16rem] sm:gap-8 sm:px-10 md:grid-cols-2 xl:px-0">
         {visibleProjects.map((project, i) => (
           <ProjectCard key={project.id} project={project} index={i} linkPrefix={linkPrefix} />

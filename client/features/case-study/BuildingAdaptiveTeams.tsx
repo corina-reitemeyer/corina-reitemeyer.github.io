@@ -69,7 +69,7 @@ export default function BuildingAdaptiveTeams() {
 
       <CaseStagedVideo
         title="Course walkthrough"
-        src="/files/video/elearning-course-walkthrough.mov"
+        src="/files/video/elearning-course-walkthrough.mp4"
         caption="A walkthrough of the full six-lesson course, built in Articulate Rise."
         cta={{
           label: 'Experience the live course',

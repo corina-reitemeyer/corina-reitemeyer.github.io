@@ -104,8 +104,15 @@ export function AsciiLiquid({ className = '' }: AsciiLiquidProps) {
 
     const resize = () => {
       const rect = canvas.getBoundingClientRect()
-      width = Math.max(1, Math.floor(rect.width))
-      height = Math.max(1, Math.floor(rect.height))
+      const nextWidth = Math.max(1, Math.floor(rect.width))
+      const nextHeight = Math.max(1, Math.floor(rect.height))
+      // Mobile toolbars showing/hiding mid-scroll fire this repeatedly by a
+      // pixel or two; skip the reinit so the canvas doesn't flicker.
+      if (Math.abs(nextWidth - width) <= 2 && Math.abs(nextHeight - height) <= 2) {
+        return
+      }
+      width = nextWidth
+      height = nextHeight
       dpr = Math.min(window.devicePixelRatio || 1, 1.5)
       cell = width < 640 ? 10 : 8
       cols = Math.ceil(width / cell)

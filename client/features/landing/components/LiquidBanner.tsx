@@ -70,7 +70,7 @@ export default function LiquidBanner() {
     <div ref={trackRef} className="liquid-banner-track relative h-[250vh]">
       <section
         aria-labelledby={headingId}
-        className="sticky top-0 flex h-[100dvh] w-full items-center justify-center overflow-hidden bg-ink"
+        className="sticky top-0 flex h-[100svh] w-full items-center justify-center overflow-hidden bg-ink"
       >
         <div
           ref={fieldRef}

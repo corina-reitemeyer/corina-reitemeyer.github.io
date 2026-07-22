@@ -226,6 +226,7 @@ export default function OWTemplates() {
       <CaseStagedStory
         title="Results"
         itemsLayout="grid"
+        spacingBottom="loose"
         items={[
           {
             title: 'Faster study setup',
@@ -271,13 +272,13 @@ export default function OWTemplates() {
       <CaseStagedAdjacentNav
         previous={{
           href: `${ROUTES.digitalProduct}/moe-design-system`,
-          label:
-            "Building the first design system for a government organisation, used across 50+ platforms.",
+          company: 'Ministry of Education',
+          label: 'The first design system for a government education organisation',
         }}
         next={{
           href: `${ROUTES.digitalProduct}/suitefiles-ai-summary`,
-          label:
-            "Helping recipients understand what they're signing, with a little help from AI.",
+          company: 'SuiteFiles',
+          label: 'An AI summary feature for a document signing platform',
         }}
       />
     </>

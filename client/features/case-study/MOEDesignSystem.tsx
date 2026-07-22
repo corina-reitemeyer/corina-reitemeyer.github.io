@@ -230,6 +230,7 @@ export default function MOEDesignSystem() {
       <CaseStagedStory
         title="Results"
         itemsLayout="grid"
+        spacingBottom="loose"
         items={[
           {
             title: 'Faster design and development',
@@ -270,13 +271,13 @@ export default function MOEDesignSystem() {
       <CaseStagedAdjacentNav
         previous={{
           href: `${ROUTES.digitalProduct}/suitefiles-design-system`,
-          label:
-            'A live rebrand. A fast-moving product. One design system that had to keep up with both.',
+          company: 'SuiteFiles',
+          label: 'An evolving design system for a document management platform',
         }}
         next={{
           href: `${ROUTES.digitalProduct}/ow-templates`,
-          label:
-            "Helping researchers start studies faster, and discover methods they didn't know existed.",
+          company: 'Optimal Workshop',
+          label: 'Ready-made templates for a UX research platform',
         }}
       />
     </>

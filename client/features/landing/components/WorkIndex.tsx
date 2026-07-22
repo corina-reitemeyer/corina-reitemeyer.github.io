@@ -65,14 +65,14 @@ export default function WorkIndex({ projects, linkPrefix }: WorkIndexProps) {
         </header>
 
         <div
-          className={`reveal reveal--2 border-t border-rule ${revealClass}`}
+          className={`reveal reveal--2 hidden border-t border-rule lg:block ${revealClass}`}
           aria-hidden="true"
         />
 
         <div
           className={`reveal reveal--3 grid grid-cols-1 gap-10 pt-10 sm:gap-12 sm:pt-14 lg:grid-cols-[minmax(14rem,22rem)_1fr] lg:gap-16 ${revealClass}`}
         >
-          <div>
+          <div className="hidden lg:block">
             {active && (
               <>
                 <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-charcoal-soft">

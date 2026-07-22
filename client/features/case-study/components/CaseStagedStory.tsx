@@ -89,6 +89,9 @@ type Props = {
     tag?: string
   }
   variant?: 'default' | 'outcome'
+  /** Extra breathing room below the section on very large screens, e.g. for
+   *  the last grid before a visually distinct section (like Reflections). */
+  spacingBottom?: 'default' | 'loose'
 }
 
 function CategoryLabel({ category }: { category?: string }) {
@@ -109,6 +112,7 @@ export default function CaseStagedStory({
   itemsLayout = 'rows',
   image,
   variant = 'default',
+  spacingBottom = 'default',
 }: Props) {
   const headingId = useId()
   const { ref: sectionRef, isInView } = useScrollReveal<HTMLElement>()
@@ -121,61 +125,73 @@ export default function CaseStagedStory({
       <section
         ref={sectionRef}
         aria-labelledby={headingId}
-        className="bg-ink w-full py-24 sm:py-32"
+        className={`bg-ink w-full py-24 sm:py-32 ${
+          spacingBottom === 'loose' ? 'xl:pb-56' : ''
+        }`}
       >
         <div className={`reveal reveal--1 mx-auto max-w-6xl px-6 sm:px-10 xl:px-0 ${revealClass}`}>
-          <div className="mb-10 max-w-measure sm:mb-14">
-            <CategoryLabel category={category} />
-            <h2
-              id={headingId}
-              className="text-paper text-[clamp(1.85rem,4vw,2.85rem)] font-bold leading-[1.05] tracking-[-0.02em]"
-            >
-              {title}
-            </h2>
-            {itemsIntro && (
-              <div className="text-paper-muted mt-4 space-y-3 text-base leading-relaxed">
-                {renderParagraphs(itemsIntro)}
-              </div>
-            )}
-          </div>
+          <div
+            className={
+              itemsLayout === 'grid' && items.length < 3
+                ? 'lg:mx-auto lg:max-w-[66.6667%]'
+                : ''
+            }
+          >
+            <div className="mb-10 max-w-measure sm:mb-14">
+              <CategoryLabel category={category} />
+              <h2
+                id={headingId}
+                className="text-paper text-[clamp(1.85rem,4vw,2.85rem)] font-bold leading-[1.05] tracking-[-0.02em]"
+              >
+                {title}
+              </h2>
+              {itemsIntro && (
+                <div className="text-paper-muted mt-4 space-y-3 text-base leading-relaxed">
+                  {renderParagraphs(itemsIntro)}
+                </div>
+              )}
+            </div>
 
-          {itemsLayout === 'grid' ? (
-            /* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */
-            <ul
-              role="list"
-              className="grid grid-cols-1 gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-3"
-            >
-              {items.map((item) => (
-                <li key={item.title}>
-                  <h3 className="border-rule text-paper mb-4 border-b pb-3 text-lg font-semibold">
-                    {item.title}
-                  </h3>
-                  <div className="text-paper-muted space-y-2 text-sm leading-relaxed">
-                    {renderDescription(item.description)}
-                  </div>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            /* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */
-            <ul role="list" className="divide-rule border-rule divide-y border-t">
-              {items.map((item) => (
-                <li
-                  key={item.title}
-                  className="flex flex-col gap-1 py-6 sm:flex-row sm:gap-6 sm:py-7"
-                >
-                  <div>
-                    <h3 className="text-paper mb-1 text-lg font-semibold sm:text-xl">
+            {itemsLayout === 'grid' ? (
+              /* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */
+              <ul
+                role="list"
+                className={`grid grid-cols-1 gap-x-12 gap-y-10 sm:grid-cols-2 ${
+                  items.length >= 3 ? 'lg:grid-cols-3' : ''
+                }`}
+              >
+                {items.map((item) => (
+                  <li key={item.title}>
+                    <h3 className="border-rule text-paper mb-4 border-b pb-3 text-lg font-semibold">
                       {item.title}
                     </h3>
-                    <div className="text-paper-muted max-w-measure space-y-2 text-sm leading-relaxed">
+                    <div className="text-paper-muted space-y-2 text-sm leading-relaxed">
                       {renderDescription(item.description)}
                     </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          )}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              /* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */
+              <ul role="list" className="divide-rule border-rule divide-y border-t">
+                {items.map((item) => (
+                  <li
+                    key={item.title}
+                    className="flex flex-col gap-1 py-6 sm:flex-row sm:gap-6 sm:py-7"
+                  >
+                    <div>
+                      <h3 className="text-paper mb-1 text-lg font-semibold sm:text-xl">
+                        {item.title}
+                      </h3>
+                      <div className="text-paper-muted max-w-measure space-y-2 text-sm leading-relaxed">
+                        {renderDescription(item.description)}
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
         </div>
       </section>
     )

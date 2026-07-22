@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-type AdjacentLink = { href: string; label: string }
+type AdjacentLink = { href: string; company: string; label: string }
 
 type Props = {
   previous: AdjacentLink | null
@@ -16,10 +16,13 @@ export default function CaseStagedAdjacentNav({ previous, next }: Props) {
       {previous ? (
         <Link
           to={previous.href}
-          className="group border-rule flex flex-col justify-center gap-2 border-b px-6 py-16 transition-colors duration-200 hover:bg-charcoal-soft sm:border-b-0 sm:border-r sm:px-10"
+          className="group border-rule order-2 flex flex-col justify-center gap-2 px-6 py-16 transition-colors duration-200 hover:bg-charcoal-soft sm:order-none sm:border-r sm:px-10"
         >
           <span className="text-paper-muted font-normal text-xs uppercase tracking-[0.12em]">
             Previous
+          </span>
+          <span className="text-teal-mid font-normal text-xs uppercase tracking-[0.12em]">
+            {previous.company}
           </span>
           <strong className="text-paper group-hover:text-teal-mist inline-flex items-center gap-2 text-2xl font-bold tracking-[-0.02em] transition-colors duration-200">
             <span aria-hidden="true">←</span>
@@ -33,10 +36,13 @@ export default function CaseStagedAdjacentNav({ previous, next }: Props) {
       {next ? (
         <Link
           to={next.href}
-          className="group flex flex-col items-start justify-center gap-2 px-6 py-16 text-left transition-colors duration-200 hover:bg-charcoal-soft sm:items-end sm:px-10 sm:text-right"
+          className="group border-rule order-1 flex flex-col items-start justify-center gap-2 border-b px-6 py-16 text-left transition-colors duration-200 hover:bg-charcoal-soft sm:order-none sm:items-end sm:border-b-0 sm:px-10 sm:text-right"
         >
           <span className="text-paper-muted font-normal text-xs uppercase tracking-[0.12em]">
             Next
+          </span>
+          <span className="text-teal-mid font-normal text-xs uppercase tracking-[0.12em]">
+            {next.company}
           </span>
           <strong className="text-paper group-hover:text-teal-mist inline-flex items-center gap-2 text-2xl font-bold tracking-[-0.02em] transition-colors duration-200">
             {next.label}

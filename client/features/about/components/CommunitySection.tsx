@@ -246,6 +246,7 @@ function PhotoCarousel() {
                 src={photo.src}
                 alt={photo.isReal ? photo.alt : ''}
                 aria-hidden={!photo.isReal}
+                loading="lazy"
                 className="aspect-[4/3] w-[26rem] flex-none object-cover sm:w-[28rem]"
               />
             ))}

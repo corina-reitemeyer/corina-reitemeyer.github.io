@@ -38,6 +38,7 @@ function ProjectTile({ project, index }: { project: MakingProject; index: number
       src={project.image}
       alt=""
       aria-hidden="true"
+      loading={isFirstRow ? 'eager' : 'lazy'}
       className="aspect-[4/3] w-full rounded-2xl object-cover transition-transform duration-500 ease-editorial group-hover:scale-[1.03]"
     />
   )

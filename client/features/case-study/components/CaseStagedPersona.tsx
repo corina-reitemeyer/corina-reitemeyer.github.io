@@ -43,6 +43,7 @@ export default function CaseStagedPersona({
           <img
             src={avatarSrc}
             alt={avatarAlt}
+            loading="lazy"
             className="h-24 w-24 flex-none object-cover"
           />
           <div>

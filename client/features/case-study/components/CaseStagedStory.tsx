@@ -273,6 +273,7 @@ export default function CaseStagedStory({
               <img
                 src={image.src}
                 alt={image.alt}
+                loading="lazy"
                 className="w-full cursor-zoom-in object-cover transition-opacity duration-200 group-hover:opacity-90"
               />
             </button>

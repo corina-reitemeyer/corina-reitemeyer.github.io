@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
@@ -21,7 +22,9 @@ export default function Layout() {
         className="flex flex-1 flex-col outline-none"
       >
         <ScrollToTop />
-        <Outlet />
+        <Suspense fallback={null}>
+          <Outlet />
+        </Suspense>
       </main>
 
       <Footer />

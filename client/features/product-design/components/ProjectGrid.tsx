@@ -59,6 +59,7 @@ function ProjectCard({
           src={project.projectImage}
           alt=""
           aria-hidden="true"
+          loading={isFirst ? 'eager' : 'lazy'}
           className="h-full w-full object-cover transition-transform duration-500 ease-editorial group-hover:scale-[1.03]"
         />
 

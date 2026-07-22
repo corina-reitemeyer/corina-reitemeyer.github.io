@@ -58,6 +58,7 @@ export default function AboutIntroSection() {
           <img
             src="/images/corina-about.webp"
             alt="Corina Reitemeyer"
+            loading="lazy"
             className="mb-4 aspect-[4/5] w-full max-w-[14rem] rounded-2xl object-cover motion-safe:hover:animate-wiggle"
           />
           <p

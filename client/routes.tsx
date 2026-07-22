@@ -1,12 +1,14 @@
+import { lazy } from 'react'
 import { createRoutesFromElements, Route } from 'react-router-dom'
 import App from './layout/App'
-import About from './features/about/About'
-import Contact from './features/contact/Contact'
-import ProductDesign from './features/product-design/ProductDesign'
-import Making from './features/making/Making'
-import CaseStudy from './features/case-study/CaseStudy'
 import Home from './features/landing/Landing'
 import { ROUTES } from './lib/routes'
+
+const About = lazy(() => import('./features/about/About'))
+const Contact = lazy(() => import('./features/contact/Contact'))
+const ProductDesign = lazy(() => import('./features/product-design/ProductDesign'))
+const Making = lazy(() => import('./features/making/Making'))
+const CaseStudy = lazy(() => import('./features/case-study/CaseStudy'))
 
 const routes = createRoutesFromElements(
   <Route path="/" element={<App />}>

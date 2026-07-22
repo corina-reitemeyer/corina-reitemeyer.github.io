@@ -185,7 +185,7 @@ export default function BuildingAdaptiveTeams() {
           "The interview guide was structured around three zones: their world (role, week, pressures, what good looks like), their workflow (how they currently do the things Canvas is supposed to help with), and the tool (what happened, what helped, what didn't, what's missing).",
         ]}
         image={{
-          src: '/images/elearning/process/interview-guide.png',
+          src: '/images/elearning/process/interview-guide.webp',
           alt: 'Discovery interview guide showing the opening script, three question zones, and closing questions',
           caption:
             'Interview guide: three zones structured to surface the conditions behind adoption.',
@@ -302,7 +302,7 @@ export default function BuildingAdaptiveTeams() {
           'That planning phase is where most of the real design decisions happen. The tools come later.',
         ]}
         image={{
-          src: '/images/elearning/process/course-outline-figjam.png',
+          src: '/images/elearning/process/course-outline-figjam.webp',
           alt: 'FigJam course outline showing all six lessons and the embedded Storyline activity in Lesson 6',
           caption:
             'Course outline in FigJam: six lessons, with the embedded Storyline activity mapped out underneath Lesson 6.',
@@ -377,7 +377,7 @@ export default function BuildingAdaptiveTeams() {
           "Motor: keyboard navigable throughout, click targets sized for mouse and touch, nothing that's time-pressured. Cognitive: plain language, content chunked into small pieces, consistent navigation so the learner always knows where they are.",
         ]}
         image={{
-          src: '/images/elearning/process/accessibility-checker-storyline.png',
+          src: '/images/elearning/process/accessibility-checker-storyline.webp',
           alt: 'Storyline Accessibility Checker panel showing 80 Level A issues resolved down to zero, using a mix of AI-assisted and manual fixes',
           caption:
             "Storyline's built-in Accessibility Checker: 80 Level A issues flagged, worked through with a mix of AI-assisted and manual fixes, down to zero outstanding Level AA and AAA issues.",
@@ -398,7 +398,7 @@ export default function BuildingAdaptiveTeams() {
           'Once that foundation was set, ChatGPT helped generate the variations on top of it, different expressions and poses for Carl and Jamie scene by scene, without hand-drawing each one from scratch.',
         ]}
         image={{
-          src: '/images/elearning/process/chatgpt-images.png',
+          src: '/images/elearning/process/chatgpt-images.webp',
           alt: 'ChatGPT prompt asking for a version of Carl looking apologetic, with the generated illustration shown above it',
           caption:
             'Asking ChatGPT for a new expression for Carl, once the OpenPeeps-based look was locked in.',
@@ -411,7 +411,7 @@ export default function BuildingAdaptiveTeams() {
           'ElevenLabs gave the Storyline activity a narrated, story-like quality, so the learner connects with Carl and Jamie as characters instead of just reading blocks of dialogue on screen.',
         ]}
         image={{
-          src: '/images/elearning/process/elevenlabs.png',
+          src: '/images/elearning/process/elevenlabs.webp',
           alt: "ElevenLabs Text to Speech interface generating narration for one of Carl's lines",
           caption:
             'Generating narration in ElevenLabs for the Lesson 6 branching activity.',
@@ -431,7 +431,7 @@ export default function BuildingAdaptiveTeams() {
           "Unlike Carl and Jamie, I wasn't able to get my hands on Canvas, so proving the course works as a real SCORM package meant finding a different LMS. I uploaded the same SCORM 1.2 export to a MoodleCloud site instead, to confirm it launches, tracks, and behaves the way it would inside any real LMS, not just as a preview in Rise.",
         ]}
         image={{
-          src: '/images/elearning/process/moodle-cloud-scorm-upload.png',
+          src: '/images/elearning/process/moodle-cloud-scorm-upload.webp',
           alt: 'MoodleCloud SCORM package page showing "It Will Click Eventually" in preview mode with a Start Course button',
           caption: 'The SCORM package live in MoodleCloud, previewed and ready to launch.',
         }}

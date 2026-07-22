@@ -75,28 +75,35 @@ export default function SuiteFilesAISummary() {
       />
 
       <CaseStagedStory
-        title="Recipients struggled to understand what they were signing"
-        body={[
-          'In a platform used by accountants and financial professionals, signing requests often involved multiple lengthy documents. Recipients had no way to quickly grasp what they were agreeing to.',
+        category="The Problem"
+        title="The problem, from two angles"
+        itemsLayout="grid"
+        items={[
           {
-            bold: true,
-            text: "Senders were compensating outside the product: through emails, calls, and briefings, because the product wasn't helping enough at the moment that mattered most.",
+            title: 'Recipients struggled to understand what they were signing',
+            description: [
+              'In a platform used by accountants and financial professionals, signing requests often involved multiple lengthy documents. Recipients had no way to quickly grasp what they were agreeing to.',
+              {
+                bold: true,
+                text: "Senders were compensating outside the product: through emails, calls, and briefings, because the product wasn't helping enough at the moment that mattered most.",
+              },
+            ],
+          },
+          {
+            title: 'AI could help, but in the wrong hands, it could also mislead',
+            description: [
+              'In a legal and financial context, an AI summary that feels authoritative can be more dangerous than no summary at all. Recipients could easily mistake generated output for verified fact.',
+              {
+                bold: true,
+                text: "The real challenge wasn't building an AI feature. It was building one that improved understanding without removing accountability, and doing it without formal user research to validate the approach.",
+              },
+            ],
           },
         ]}
       />
 
       <CaseStagedStory
-        title="AI could help, but in the wrong hands, it could also mislead"
-        body={[
-          'In a legal and financial context, an AI summary that feels authoritative can be more dangerous than no summary at all. Recipients could easily mistake generated output for verified fact.',
-          {
-            bold: true,
-            text: "The real challenge wasn't building an AI feature. It was building one that improved understanding without removing accountability, and doing it without formal user research to validate the approach.",
-          },
-        ]}
-      />
-
-      <CaseStagedStory
+        category="The Approach"
         title="Principles before pixels"
         body={[
           'Before opening Figma, I defined three human-AI principles to guide every decision: transparency, editability, and user agency. Rather than treating AI as an add-on, I designed it as a supporting layer: automation where it helped, human judgment where it mattered.',
@@ -146,22 +153,28 @@ export default function SuiteFilesAISummary() {
       />
 
       <CaseStagedStory
-        title="Designing the disclaimer as a guardrail, not an afterthought"
-        body={[
-          'In a legal and financial context, AI output that feels authoritative is a liability. I added a clear in-context disclaimer to signal that summaries should be treated as a starting point: reviewed critically, not accepted at face value.',
-          "The feedback mechanism I originally intended didn't make it to v1. Losing it pushed me toward the disclaimer as the primary trust signal, a constraint that removed one solution and surfaced a better one.",
+        title="What made it into v1"
+        itemsLayout="grid"
+        items={[
+          {
+            title: 'Designing the disclaimer as a guardrail, not an afterthought',
+            description: [
+              'In a legal and financial context, AI output that feels authoritative is a liability. I added a clear in-context disclaimer to signal that summaries should be treated as a starting point: reviewed critically, not accepted at face value.',
+              "The feedback mechanism I originally intended didn't make it to v1. Losing it pushed me toward the disclaimer as the primary trust signal, a constraint that removed one solution and surfaced a better one.",
+            ],
+          },
+          {
+            title: 'Shipping a deliberate, limited v1',
+            description: [
+              'Summary generation was limited to recipients only at launch: a known trade-off, managed by prioritising the most critical problem first: recipients interpreting AI output incorrectly in a high-stakes workflow.',
+              'The first phase was designed to be expandable without requiring a rebuild, so trust could be earned incrementally rather than promised upfront.',
+            ],
+          },
         ]}
       />
 
       <CaseStagedStory
-        title="Shipping a deliberate, limited v1"
-        body={[
-          'Summary generation was limited to recipients only at launch: a known trade-off, managed by prioritising the most critical problem first: recipients interpreting AI output incorrectly in a high-stakes workflow.',
-          'The first phase was designed to be expandable without requiring a rebuild, so trust could be earned incrementally rather than promised upfront.',
-        ]}
-      />
-
-      <CaseStagedStory
+        category="The Outcome"
         title="Constraints & trade-offs"
         items={[
           {

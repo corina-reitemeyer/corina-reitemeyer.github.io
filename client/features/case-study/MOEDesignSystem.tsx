@@ -3,6 +3,7 @@ import { ROUTES } from '../../lib/routes'
 import CaseStagedHero from './components/CaseStagedHero'
 import CaseStagedSplit from './components/CaseStagedSplit'
 import CaseStagedStory from './components/CaseStagedStory'
+import CaseStagedProcessRail from './components/CaseStagedProcessRail'
 import CaseStagedAdjacentNav from './components/CaseStagedAdjacentNav'
 
 export default function MOEDesignSystem() {
@@ -76,116 +77,127 @@ export default function MOEDesignSystem() {
 
       <CaseStagedStory
         category="The Problem"
-        title="A crisis site exposed a systemic problem"
-        body={[
-          "The COVID-19 website wasn't the problem, it was the symptom that exposed the pain points the team had been experiencing for a long time. The rushed launch revealed that the organisation had no shared design language, no accessibility baked into the components or designs from the get-go, and no way to prevent the same issues from appearing on the next site.",
-        ]}
-        note={{
-          label: 'The real challenge',
-          text: "Not fixing one website. It was changing how an entire organisation built digital products, across 50+ platforms, multiple internal teams, and external vendors all working independently.",
-        }}
-      />
-
-      <CaseStagedStory
-        title="Accessibility wasn't optional, but it wasn't happening without its hurdles"
-        body={[
-          'Government digital services in New Zealand are required to meet WCAG standards. Despite that, accessibility issues were being repeated across new builds because there was no shared reference point. This caused longer testing and fixing periods before we could launch a site to the public.',
+        title="Three angles on the same problem"
+        itemsLayout="grid"
+        items={[
           {
-            bold: true,
-            text: 'The design system had to make accessibility the default, not an afterthought. It had to be clear enough that external vendors with no prior context could implement it correctly.',
+            title: 'A crisis site exposed a systemic problem',
+            description: [
+              "The COVID-19 website wasn't the problem, it was the symptom that exposed the pain points the team had been experiencing for a long time. The rushed launch revealed that the organisation had no shared design language, no accessibility baked into the components or designs from the get-go, and no way to prevent the same issues from appearing on the next site.",
+              {
+                bold: true,
+                text: "The real challenge wasn't fixing one website. It was changing how an entire organisation built digital products, across 50+ platforms, multiple internal teams, and external vendors all working independently.",
+              },
+            ],
+          },
+          {
+            title: "Accessibility wasn't optional, but it wasn't happening without its hurdles",
+            description: [
+              'Government digital services in New Zealand are required to meet WCAG standards. Despite that, accessibility issues were being repeated across new builds because there was no shared reference point. This caused longer testing and fixing periods before we could launch a site to the public.',
+              {
+                bold: true,
+                text: 'The design system had to make accessibility the default, not an afterthought. It had to be clear enough that external vendors with no prior context could implement it correctly.',
+              },
+            ],
+          },
+          {
+            title: 'A system nobody uses is not a system',
+            description: [
+              'The organisation had designers, engineers, content teams, and external vendors all working independently across several sites. Getting them to adopt a shared standard meant the system had to feel like a tool that made their job easier, not another thing to learn.',
+              {
+                bold: true,
+                text: "The real risk wasn't building the wrong components. It was building something too polished to feel practical, and watching teams quietly go back to doing whatever they were doing before.",
+              },
+            ],
           },
         ]}
       />
 
       <CaseStagedStory
-        title="A system nobody uses is not a system"
-        body={[
-          'The organisation had designers, engineers, content teams, and external vendors all working independently across several sites. Getting them to adopt a shared standard meant the system had to feel like a tool that made their job easier, not another thing to learn.',
+        title="Understanding before designing"
+        itemsLayout="grid"
+        items={[
+          {
+            title: 'Starting with the organisation, not the components',
+            description: [
+              'Before designing anything, I mapped existing sites, reviewed feedback from external vendors, and conducted staff interviews to understand where teams were actually struggling.',
+              "The problem wasn't just visual inconsistency: it was duplicated effort, unclear handoff, and accessibility issues repeating across builds because there was no shared reference. Understanding that shaped what the system needed to solve.",
+            ],
+          },
+          {
+            title: 'Building ownership through collaboration',
+            description: [
+              'Components were workshopped and agreed collaboratively, not handed down or decided by one person. Sessions with designers, engineers, and content teams surfaced what each group actually needed from the system.',
+              {
+                bold: true,
+                text: 'The trade-off: slower than designing in isolation. But teams felt ownership over what was built, which made adoption significantly easier.',
+              },
+            ],
+          },
         ]}
-        note={{
-          label: 'The real risk',
-          text: 'Not building the wrong components. Building something too polished to feel practical, and watching teams quietly go back to doing whatever they were doing before.',
-        }}
       />
 
-      <CaseStagedStory
+      <CaseStagedProcessRail
         category="The Approach"
-        title="Starting with the organisation, not the components"
-        body={[
-          'Before designing anything, I mapped existing sites, reviewed feedback from external vendors, and conducted staff interviews to understand where teams were actually struggling.',
-          "The problem wasn't just visual inconsistency: it was duplicated effort, unclear handoff, and accessibility issues repeating across builds because there was no shared reference. Understanding that shaped what the system needed to solve.",
+        railLabel="Process"
+        entries={[
+          {
+            id: 'moe-sitemap',
+            title: 'Designing the information architecture of the system itself',
+            body: [
+              'The design system website needed its own IA, a structure that worked for very different audiences. Internal designers and engineers needed quick access to components and usage guidelines. External vendors needed enough context to implement correctly without a handover document. Other government agencies needed to understand the standards without any prior knowledge of the organisation.',
+              'The sitemap shaped how content was organised before a single page was designed, ensuring the system was as navigable as the products it was meant to improve.',
+            ],
+            image: {
+              src: '/images/process/moe-sitemap.webp',
+              alt: 'Sitemap of the design system website',
+              caption:
+                'Sitemap, organising the design system website for multiple audiences before designing it.',
+            },
+          },
+          {
+            id: 'moe-components-example',
+            title: 'Accessibility as the foundation, not a feature',
+            body: [
+              'Rather than adding accessibility at the end, I embedded WCAG compliance into the component library from the start. Every component was built to meet the standard by default, so teams using the system would be compliant without having to think about it.',
+              'In a government context, mandatory accessibility legislation also became the strongest argument for adoption. When the law requires it, the conversation shifts from "should we" to "how do we," which is a much more productive place to work from.',
+            ],
+            image: {
+              src: '/images/product/moe-components-example.webp',
+              alt: 'Component guidelines in Adobe XD',
+              caption:
+                'Component guidelines, each documented with usage rules and accessibility notes.',
+            },
+          },
+          {
+            id: 'moe-brand-assets',
+            title: 'Creating standards that worked across vendors',
+            body: [
+              'With 50+ sites involving multiple external vendors, each with their own tools and brand interpretations, the system had to be flexible enough to accommodate variation while structured enough to create real consistency.',
+              'Mandatory accessibility legislation and brand regulations became the strongest arguments for adoption where general guidance wasn\'t enough, shifting the conversation from "should we follow this" to "how do we follow this."',
+            ],
+            image: {
+              src: '/images/product/moe-brand-assets.webp',
+              alt: 'Brand assets and tokens in Adobe XD',
+              caption:
+                'Brand assets and tokens, the foundation every component was built on.',
+            },
+          },
+          {
+            id: 'moe-desktop-wireframe',
+            title: 'Making the system public, not just internal',
+            body: [
+              'Rather than keeping guidelines inside Adobe XD or a knowledge platform only internal teams could access, I designed and built a public-facing design system website. That decision was deliberate: external vendors, the branding team, and third-party agencies all needed access without requiring an internal login or a handover document.',
+              'Making it visible to other government agencies also meant that if collaboration happened across organisations, the standards were already available. A design system locked behind an intranet is only as useful as the people who can reach it.',
+            ],
+            image: {
+              src: '/images/process/moe-desktop-wireframe.webp',
+              alt: 'Low fidelity wireframes progressing to final designs',
+              caption:
+                'From early wireframes to final designs, the design system website built from scratch.',
+            },
+          },
         ]}
-      />
-
-      <CaseStagedStory
-        title="Building ownership through collaboration"
-        body={[
-          'Components were workshopped and agreed collaboratively, not handed down or decided by one person. Sessions with designers, engineers, and content teams surfaced what each group actually needed from the system.',
-        ]}
-        note={{
-          label: 'The trade-off',
-          text: 'Slower than designing in isolation. But teams felt ownership over what was built, which made adoption significantly easier.',
-        }}
-      />
-
-      <CaseStagedStory
-        title="Designing the information architecture of the system itself"
-        body={[
-          'The design system website needed its own IA, a structure that worked for very different audiences. Internal designers and engineers needed quick access to components and usage guidelines. External vendors needed enough context to implement correctly without a handover document. Other government agencies needed to understand the standards without any prior knowledge of the organisation.',
-          'The sitemap shaped how content was organised before a single page was designed, ensuring the system was as navigable as the products it was meant to improve.',
-        ]}
-        image={{
-          src: '/images/process/moe-sitemap.webp',
-          alt: 'Sitemap of the design system website',
-          caption:
-            'Sitemap, organising the design system website for multiple audiences before designing it.',
-          tag: 'Process',
-        }}
-      />
-
-      <CaseStagedStory
-        title="Accessibility as the foundation, not a feature"
-        body={[
-          'Rather than adding accessibility at the end, I embedded WCAG compliance into the component library from the start. Every component was built to meet the standard by default, so teams using the system would be compliant without having to think about it.',
-          'In a government context, mandatory accessibility legislation also became the strongest argument for adoption. When the law requires it, the conversation shifts from "should we" to "how do we," which is a much more productive place to work from.',
-        ]}
-        image={{
-          src: '/images/product/moe-components-example.webp',
-          alt: 'Component guidelines in Adobe XD',
-          caption:
-            'Component guidelines, each documented with usage rules and accessibility notes.',
-          tag: 'Process',
-        }}
-      />
-
-      <CaseStagedStory
-        title="Creating standards that worked across vendors"
-        body={[
-          'With 50+ sites involving multiple external vendors, each with their own tools and brand interpretations, the system had to be flexible enough to accommodate variation while structured enough to create real consistency.',
-          'Mandatory accessibility legislation and brand regulations became the strongest arguments for adoption where general guidance wasn\'t enough, shifting the conversation from "should we follow this" to "how do we follow this."',
-        ]}
-        image={{
-          src: '/images/product/moe-brand-assets.webp',
-          alt: 'Brand assets and tokens in Adobe XD',
-          caption:
-            'Brand assets and tokens, the foundation every component was built on.',
-          tag: 'Process',
-        }}
-      />
-
-      <CaseStagedStory
-        title="Making the system public, not just internal"
-        body={[
-          'Rather than keeping guidelines inside Adobe XD or a knowledge platform only internal teams could access, I designed and built a public-facing design system website. That decision was deliberate: external vendors, the branding team, and third-party agencies all needed access without requiring an internal login or a handover document.',
-          'Making it visible to other government agencies also meant that if collaboration happened across organisations, the standards were already available. A design system locked behind an intranet is only as useful as the people who can reach it.',
-        ]}
-        image={{
-          src: '/images/process/moe-desktop-wireframe.webp',
-          alt: 'Low fidelity wireframes progressing to final designs',
-          caption:
-            'From early wireframes to final designs, the design system website built from scratch.',
-          tag: 'Process',
-        }}
       />
 
       <CaseStagedStory

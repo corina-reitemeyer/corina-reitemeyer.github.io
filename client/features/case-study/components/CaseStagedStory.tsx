@@ -221,12 +221,7 @@ export default function CaseStagedStory({
       }`}
     >
       {variant === 'outcome' && (
-        <div
-          aria-hidden="true"
-          className={`pointer-events-none absolute inset-0 z-0 origin-center transition-all duration-[1600ms] ease-out ${
-            isInView ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
-          }`}
-        >
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0">
           <div className="atmosphere-wash absolute inset-0" />
           <div className="atmosphere-corner-rules absolute inset-0" />
         </div>

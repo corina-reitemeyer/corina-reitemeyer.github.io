@@ -11,8 +11,9 @@ export type CaseStagedProcessEntry = {
 
 type Props = {
   /** Main heading for this rail -- the named phase of the story (e.g.
-   *  "The Approach"), same size as the other top-level section titles. */
-  category: string
+   *  "The Approach"), same size as the other top-level section titles. Omit
+   *  if a preceding section in the same phase already carries the label. */
+  category?: string
   /** Small eyebrow above the heading, distinguishing this rail's imagery as
    *  process/exploration work (e.g. "Process"). */
   railLabel: string
@@ -77,9 +78,11 @@ export default function CaseStagedProcessRail({
           <p className="text-teal-mid mb-3 font-normal text-xs uppercase tracking-[0.16em]">
             {railLabel}
           </p>
-          <h2 className="text-paper text-[clamp(1.85rem,4vw,2.85rem)] font-bold leading-[1.05] tracking-[-0.02em]">
-            {category}
-          </h2>
+          {category && (
+            <h2 className="text-paper text-[clamp(1.85rem,4vw,2.85rem)] font-bold leading-[1.05] tracking-[-0.02em]">
+              {category}
+            </h2>
+          )}
         </div>
 
         <div className="flex flex-col gap-12 sm:gap-16">

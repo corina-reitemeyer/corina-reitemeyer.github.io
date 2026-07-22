@@ -148,7 +148,7 @@ export default function Making() {
           </div>
 
           <p
-            className={`reveal reveal--3 max-w-measure text-paper-soft mt-7 text-[clamp(1.05rem,1.7vw,1.15rem)] ${revealClass}`}
+            className={`reveal reveal--3 max-w-measure text-paper-soft mt-8 text-[clamp(1.05rem,1.7vw,1.15rem)] ${revealClass}`}
           >
             Where I upskill,{' '}
             <span className="text-teal-mid">test new tools and approaches</span>,

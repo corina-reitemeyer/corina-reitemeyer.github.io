@@ -38,7 +38,7 @@ export default function ProductDesign() {
 
           <h1
             id={headingId}
-            className={`reveal reveal--2 mb-6 text-[clamp(2.75rem,8vw,5.5rem)] font-bold leading-[0.95] tracking-[-0.03em] text-paper ${revealClass}`}
+            className={`reveal reveal--2 mb-8 text-[clamp(2.75rem,8vw,5.5rem)] font-bold leading-[0.95] tracking-[-0.03em] text-paper ${revealClass}`}
           >
             <span className="block">Product design,</span>
             <span className="block">under real constraints.</span>

@@ -87,39 +87,45 @@ export default function SuiteFilesDesignSystem() {
       />
 
       <CaseStagedStory
-        title="Inheriting a system mid-rebrand without a full handover"
-        body={[
-          'The designer who built the foundations and worked with the brand consultant had left. I inherited their decisions without always knowing the reasoning behind them.',
+        category="The Problem"
+        title="Three pressures at once"
+        itemsLayout="grid"
+        items={[
           {
-            bold: true,
-            text: 'Evolving a system responsibly means understanding why things are the way they are before changing them. That takes longer than starting from scratch, and it requires a different kind of judgment.',
+            title: 'Inheriting a system mid-rebrand without a full handover',
+            description: [
+              'The designer who built the foundations and worked with the brand consultant had left. I inherited their decisions without always knowing the reasoning behind them.',
+              {
+                bold: true,
+                text: 'Evolving a system responsibly means understanding why things are the way they are before changing them. That takes longer than starting from scratch, and it requires a different kind of judgment.',
+              },
+            ],
+          },
+          {
+            title: 'Building with a brand that was still being defined',
+            description: [
+              'The brand guidelines were being developed alongside the redesign, not before it. There was no finished reference to implement from.',
+              {
+                bold: true,
+                text: 'Every component decision was being made against a moving target. The system had to be built while the brand was still being shaped, which meant testing the identity in real product context and feeding gaps back to the brand consultant simultaneously.',
+              },
+            ],
+          },
+          {
+            title: 'A product moving faster than any system could keep up with',
+            description: [
+              'Features were shipping constantly. By the time there was space to update anything, there were already new components waiting.',
+              {
+                bold: true,
+                text: "The risk wasn't falling behind, it was letting the gap between the designed system and shipped product grow wide enough that the system stopped being useful.",
+              },
+            ],
           },
         ]}
       />
 
       <CaseStagedStory
-        title="Building with a brand that was still being defined"
-        body={[
-          'The brand guidelines were being developed alongside the redesign, not before it. There was no finished reference to implement from.',
-          {
-            bold: true,
-            text: 'Every component decision was being made against a moving target. The system had to be built while the brand was still being shaped, which meant testing the identity in real product context and feeding gaps back to the brand consultant simultaneously.',
-          },
-        ]}
-      />
-
-      <CaseStagedStory
-        title="A product moving faster than any system could keep up with"
-        body={[
-          'Features were shipping constantly. By the time there was space to update anything, there were already new components waiting.',
-          {
-            bold: true,
-            text: "The risk wasn't falling behind, it was letting the gap between the designed system and shipped product grow wide enough that the system stopped being useful.",
-          },
-        ]}
-      />
-
-      <CaseStagedStory
+        category="The Approach"
         title="Starting with an audit, not a rebuild"
         body={[
           'My first move was to map what existed, not to plan a full rebuild, but to understand where the inherited system was breaking down and why. That meant reading the decisions made before I arrived, not overwriting them.',
@@ -142,30 +148,35 @@ export default function SuiteFilesDesignSystem() {
       />
 
       <CaseStagedStory
-        title="Keeping design and engineering in sync"
-        body={[
-          'Early on, one of the frontend engineers and I mapped out how changes would be introduced, through updated tokens and semantics in Figma, rolling out new and updated components on an ongoing basis.',
-          'As the team grew and priorities shifted, direct collaboration became harder. The documentation had to fill the gap, specific enough that engineers could implement confidently without needing intent explained every time.',
+        title="Designing for what comes next"
+        itemsLayout="grid"
+        items={[
+          {
+            title: 'Keeping design and engineering in sync',
+            description: [
+              'Early on, one of the frontend engineers and I mapped out how changes would be introduced, through updated tokens and semantics in Figma, rolling out new and updated components on an ongoing basis.',
+              'As the team grew and priorities shifted, direct collaboration became harder. The documentation had to fill the gap, specific enough that engineers could implement confidently without needing intent explained every time.',
+            ],
+          },
+          {
+            title: "Designing for a team that didn't exist yet",
+            description: [
+              "As the sole designer, the system needed to be clear enough that a new designer could onboard quickly and contribute confidently without reverse-engineering decisions I'd already made.",
+              'That meant documenting not just what components did, but why they were built that way. The reasoning behind a decision is often more valuable than the decision itself.',
+            ],
+          },
+          {
+            title: 'Let the product lead the system',
+            description: [
+              "The guiding principle throughout: don't try to finish the system before the product needs it. Let real design work surface what's required, build what's proven itself, and keep documenting.",
+              'Each iteration of the product tells you what the system actually needs next. A system that grows with the product is more useful than a perfect one nobody is waiting for.',
+            ],
+          },
         ]}
       />
 
       <CaseStagedStory
-        title="Designing for a team that didn't exist yet"
-        body={[
-          "As the sole designer, the system needed to be clear enough that a new designer could onboard quickly and contribute confidently without reverse-engineering decisions I'd already made.",
-          'That meant documenting not just what components did, but why they were built that way. The reasoning behind a decision is often more valuable than the decision itself.',
-        ]}
-      />
-
-      <CaseStagedStory
-        title="Let the product lead the system"
-        body={[
-          "The guiding principle throughout: don't try to finish the system before the product needs it. Let real design work surface what's required, build what's proven itself, and keep documenting.",
-          'Each iteration of the product tells you what the system actually needs next. A system that grows with the product is more useful than a perfect one nobody is waiting for.',
-        ]}
-      />
-
-      <CaseStagedStory
+        category="The Outcome"
         title="Constraints & trade-offs"
         items={[
           {

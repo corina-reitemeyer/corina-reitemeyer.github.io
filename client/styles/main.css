@@ -228,25 +228,6 @@ html.is-case-staged footer {
   display: none;
 }
 
-/* Gentle one-section-at-a-time scroll; proximity (not mandatory) so long story
-   sections never fight natural reading/scrolling. No scroll-snap-stop here --
-   forcing a stop at every section made any scroll through the page feel
-   heavy/laggy, since a normal scroll couldn't glide past more than one
-   section at a time. */
-html.is-case-staged {
-  scroll-snap-type: y proximity;
-}
-
-.case-staged__snap {
-  scroll-snap-align: start;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html.is-case-staged {
-    scroll-snap-type: none;
-  }
-}
-
 /* Notebook lines confined to the top-left and bottom-right corners, fading out
    toward the centre so the content column stays clear */
 .atmosphere-corner-rules {

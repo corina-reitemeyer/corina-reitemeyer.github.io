@@ -3,6 +3,7 @@ import { ROUTES } from '../../lib/routes'
 import CaseStagedHero from './components/CaseStagedHero'
 import CaseStagedSplit from './components/CaseStagedSplit'
 import CaseStagedStory from './components/CaseStagedStory'
+import CaseStagedProcessRail from './components/CaseStagedProcessRail'
 import CaseStagedAdjacentNav from './components/CaseStagedAdjacentNav'
 
 export default function OWTemplates() {
@@ -47,6 +48,19 @@ export default function OWTemplates() {
             grid: 'full',
             images: [
               {
+                id: 'ow-desktop-1',
+                src: '/images/product/ow-desktop-1.webp',
+                alt: "Two laptops showing the template library and a template's step-by-step detail",
+                caption:
+                  'Browsing the template library, then previewing a template’s steps before starting.',
+              },
+            ],
+          },
+          {
+            id: 'overview-full-3',
+            grid: 'full',
+            images: [
+              {
                 id: 'ow-desktop-2',
                 src: '/images/product/ow-desktop-2.webp',
                 alt: 'Two laptops showing the create study modal and details tab',
@@ -56,7 +70,7 @@ export default function OWTemplates() {
             ],
           },
           {
-            id: 'overview-full-3',
+            id: 'overview-full-4',
             grid: 'full',
             images: [
               {
@@ -72,95 +86,113 @@ export default function OWTemplates() {
       />
 
       <CaseStagedStory
-        title="Users were leaving before they saw the product's real value"
-        body={[
-          'Most users ran a single study and left. The product supported far more than that: card sorting, tree testing, IA testing, multi-method combinations. But the complexity of getting started meant most users never explored beyond their first study.',
+        category="The Problem"
+        title="The problem, from three angles"
+        itemsLayout="grid"
+        items={[
           {
-            bold: true,
-            text: "The churn problem wasn't about the product being bad. It was about users not having a clear path to the value that would make them stay.",
+            title: "Users were leaving before they saw the product's real value",
+            description: [
+              'Most users ran a single study and left. The product supported far more than that: card sorting, tree testing, IA testing, multi-method combinations. But the complexity of getting started meant most users never explored beyond their first study.',
+              {
+                bold: true,
+                text: "The churn problem wasn't about the product being bad. It was about users not having a clear path to the value that would make them stay.",
+              },
+            ],
+          },
+          {
+            title: 'Setting up research was slower than it needed to be',
+            description: [
+              'Even experienced researchers spent time on configuration that added no value to their work. For less experienced users, the setup process was a barrier that stopped them from getting started at all.',
+              {
+                bold: true,
+                text: 'The feature had to reduce friction for beginners without feeling prescriptive to experts, two very different needs that had to be served by the same solution.',
+              },
+            ],
+          },
+          {
+            title: 'IA testing was underused despite being a core capability',
+            description: [
+              "Information architecture testing was one of the product's strongest capabilities, but most users didn't know it existed or how to use it effectively.",
+              {
+                bold: true,
+                text: 'The new IA strategy needed a concrete expression in the product. Templates were the opportunity to surface that capability and shift user behaviour, without requiring users to already know what they were looking for.',
+              },
+            ],
+          },
+        ]}
+      />
+
+      <CaseStagedProcessRail
+        category="The Approach"
+        railLabel="Process"
+        entries={[
+          {
+            id: 'ow-sketches',
+            title: 'Treating v1 as an experiment, not a finished product',
+            body: [
+              'The templates concept originated from the IA Lead and PM in my squad, a hypothesis responding to both the churn problem and the new IA strategy. My role was to take that idea and make it real. Before opening Figma, I drew on existing research initiatives (the IA strategy work and the Voice of Customer research) to understand what users actually needed from a templates feature.',
+            ],
+            image: {
+              src: '/images/process/ow-sketches.webp',
+              alt: 'Hand-drawn sketches exploring early template concepts',
+              caption:
+                'Early sketches, exploring the dashboard, library, and modal before any wireframes were built.',
+            },
+          },
+          {
+            id: 'ow-wireframes',
+            title: 'Narrowing down before scaling up',
+            body: [
+              'I also audited competitor products and platforms researchers and designers commonly used, productivity tools and research platforms, to understand established template conventions and what users would likely expect. The deliberate constraint of starting with six templates meant we could learn from real use before scaling rather than building a full library nobody had validated.',
+            ],
+            image: {
+              src: '/images/process/ow-wireframes.webp',
+              alt: 'Wireframes showing the dashboard and the template modal',
+              caption:
+                'Early wireframes, a starting point in how users can access the templates.',
+            },
+          },
+          {
+            id: 'ow-userflow',
+            title: 'Mapping where templates fit in the workflow',
+            body: [
+              "A key design decision was where in the product templates should live. Too buried and they'd be missed. Too prominent and they'd feel like a forced starting point rather than a useful option.",
+              "I mapped all the entry points where a user might want to start from a template and designed access points that fit naturally into existing workflows. The goal was for templates to feel like they'd always been there, not like a new feature bolted on.",
+            ],
+            image: {
+              src: '/images/process/ow-userflow.webp',
+              alt: 'Interaction map showing how a user can access and use templates inside the product',
+              caption:
+                'Interaction map, showing how users access and use templates across the product.',
+            },
           },
         ]}
       />
 
       <CaseStagedStory
-        title="Setting up research was slower than it needed to be"
-        body={[
-          'Even experienced researchers spent time on configuration that added no value to their work. For less experienced users, the setup process was a barrier that stopped them from getting started at all.',
+        title="What I added, and what I learned"
+        itemsLayout="grid"
+        items={[
           {
-            bold: true,
-            text: 'The feature had to reduce friction for beginners without feeling prescriptive to experts, two very different needs that had to be served by the same solution.',
+            title: 'One page added on instinct',
+            description: [
+              "I realised that the product wasn't deeply designed for collaboration. Context, decisions, and changes often got lost unless teams had a separate system in place to track them. I noticed this gap in usage patterns and added a details page that let users document the purpose of their study directly inside the product; it wasn't in the original brief.",
+              'The data it generated gave the team a window into how users actually thought about their research: what they were trying to learn, whether they were choosing the right tools, and what templates were missing. That fed directly into leadership conversations about product direction.',
+            ],
+          },
+          {
+            title: 'Learning from real use',
+            description: [
+              'Post-launch, I worked closely with a researcher to observe how the first six templates were used in real workflows. The churn signal was positive: users were staying longer. But template uptake itself was lower than expected.',
+              "I ran user interviews and click-testing with a small controlled group to understand why. The finding was specific: users wanted to customise templates but couldn't, so they were starting from a template and then duplicating it to tailor it to their needs. A workaround that worked, but signalled a clear gap. That became the primary input for the second iteration.",
+            ],
           },
         ]}
       />
 
       <CaseStagedStory
-        title="IA testing was underused despite being a core capability"
-        body={[
-          "Information architecture testing was one of the product's strongest capabilities, but most users didn't know it existed or how to use it effectively.",
-          {
-            bold: true,
-            text: 'The new IA strategy needed a concrete expression in the product. Templates were the opportunity to surface that capability and shift user behaviour, without requiring users to already know what they were looking for.',
-          },
-        ]}
-      />
-
-      <CaseStagedStory
-        title="Treating v1 as an experiment, not a finished product"
-        body={[
-          'The templates concept originated from the IA Lead and PM in my squad, a hypothesis responding to both the churn problem and the new IA strategy. My role was to take that idea and make it real. Before opening Figma, I drew on existing research initiatives (the IA strategy work and the Voice of Customer research) to understand what users actually needed from a templates feature.',
-        ]}
-        image={{
-          src: '/images/process/ow-sketches.webp',
-          alt: 'Hand-drawn sketches exploring early template concepts',
-          caption:
-            'Early sketches, exploring the dashboard, library, and modal before any wireframes were built.',
-        }}
-      />
-
-      <CaseStagedStory
-        title="Narrowing down before scaling up"
-        body={[
-          'I also audited competitor products and platforms researchers and designers commonly used, productivity tools and research platforms, to understand established template conventions and what users would likely expect. The deliberate constraint of starting with six templates meant we could learn from real use before scaling rather than building a full library nobody had validated.',
-        ]}
-        image={{
-          src: '/images/process/ow-wireframes.webp',
-          alt: 'Wireframes showing the dashboard and the template modal',
-          caption:
-            'Early wireframes, a starting point in how users can access the templates.',
-        }}
-      />
-
-      <CaseStagedStory
-        title="Mapping where templates fit in the workflow"
-        body={[
-          "A key design decision was where in the product templates should live. Too buried and they'd be missed. Too prominent and they'd feel like a forced starting point rather than a useful option.",
-          "I mapped all the entry points where a user might want to start from a template and designed access points that fit naturally into existing workflows. The goal was for templates to feel like they'd always been there, not like a new feature bolted on.",
-        ]}
-        image={{
-          src: '/images/process/ow-userflow.webp',
-          alt: 'Interaction map showing how a user can access and use templates inside the product',
-          caption:
-            'Interaction map, showing how users access and use templates across the product.',
-        }}
-      />
-
-      <CaseStagedStory
-        title="One page added on instinct"
-        body={[
-          "I realised that the product wasn't deeply designed for collaboration. Context, decisions, and changes often got lost unless teams had a separate system in place to track them. I noticed this gap in usage patterns and added a details page that let users document the purpose of their study directly inside the product; it wasn't in the original brief.",
-          'The data it generated gave the team a window into how users actually thought about their research: what they were trying to learn, whether they were choosing the right tools, and what templates were missing. That fed directly into leadership conversations about product direction.',
-        ]}
-      />
-
-      <CaseStagedStory
-        title="Learning from real use"
-        body={[
-          'Post-launch, I worked closely with a researcher to observe how the first six templates were used in real workflows. The churn signal was positive: users were staying longer. But template uptake itself was lower than expected.',
-          "I ran user interviews and click-testing with a small controlled group to understand why. The finding was specific: users wanted to customise templates but couldn't, so they were starting from a template and then duplicating it to tailor it to their needs. A workaround that worked, but signalled a clear gap. That became the primary input for the second iteration.",
-        ]}
-      />
-
-      <CaseStagedStory
+        category="The Outcome"
         title="Constraints & trade-offs"
         items={[
           {

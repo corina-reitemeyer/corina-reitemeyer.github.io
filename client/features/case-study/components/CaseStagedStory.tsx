@@ -45,13 +45,35 @@ function RippleDrawing(props: SVGProps<SVGSVGElement>) {
   )
 }
 
-export type CaseStagedListItem = { title: string; description: string }
+export type CaseStagedListItem = {
+  title: string
+  description: string | CaseStagedParagraph[]
+}
+
+export function renderParagraphs(paragraphs: CaseStagedParagraph[]) {
+  return paragraphs.map((p, i) =>
+    typeof p === 'string' ? (
+      <p key={i}>{p}</p>
+    ) : (
+      <p key={i} className={p.bold ? 'text-paper font-semibold' : undefined}>
+        {p.text}
+      </p>
+    ),
+  )
+}
+
+function renderDescription(description: string | CaseStagedParagraph[]) {
+  return renderParagraphs(
+    typeof description === 'string' ? [description] : description,
+  )
+}
 
 type Props = {
-  /** Step number shown as a small rail mark (e.g. "03"), giving readers a
-   *  sense of progress through a long run of sections. Omit for sections
-   *  that aren't part of the numbered narrative (e.g. the outcome variant). */
-  index?: number
+  /** Eyebrow label grouping a run of sections under a named phase of the
+   *  story (e.g. "The Problem", "The Approach", "The Outcome"). Pass it only
+   *  on the first section of each group -- omit on the rest so the label
+   *  doesn't repeat down the page. */
+  category?: string
   title: string
   body?: CaseStagedParagraph[]
   items?: CaseStagedListItem[]
@@ -70,20 +92,17 @@ type Props = {
   variant?: 'default' | 'outcome'
 }
 
-function StepMark({ index }: { index?: number }) {
-  if (typeof index !== 'number') return null
+function CategoryLabel({ category }: { category?: string }) {
+  if (!category) return null
   return (
-    <p
-      aria-hidden="true"
-      className="text-teal-mid mb-3 font-mono text-xs tracking-[0.08em]"
-    >
-      {String(index).padStart(2, '0')}
+    <p className="text-teal-mid mb-3 font-normal text-xs uppercase tracking-[0.16em]">
+      {category}
     </p>
   )
 }
 
 export default function CaseStagedStory({
-  index,
+  category,
   title,
   body,
   items,
@@ -104,11 +123,11 @@ export default function CaseStagedStory({
       <section
         ref={sectionRef}
         aria-labelledby={headingId}
-        className="case-staged__snap bg-ink w-full py-20 sm:py-28"
+        className="case-staged__snap bg-ink w-full py-24 sm:py-32"
       >
         <div className={`reveal reveal--1 mx-auto max-w-6xl px-6 sm:px-10 xl:px-0 ${revealClass}`}>
           <div className="mb-10 max-w-measure sm:mb-14">
-            <StepMark index={index} />
+            <CategoryLabel category={category} />
             <h2
               id={headingId}
               className="text-paper text-[clamp(1.85rem,4vw,2.85rem)] font-bold leading-[1.05] tracking-[-0.02em]"
@@ -117,15 +136,7 @@ export default function CaseStagedStory({
             </h2>
             {itemsIntro && (
               <div className="text-paper-muted mt-4 space-y-3 text-base leading-relaxed">
-                {itemsIntro.map((p, i) =>
-                  typeof p === 'string' ? (
-                    <p key={i}>{p}</p>
-                  ) : (
-                    <p key={i} className={p.bold ? 'text-paper font-semibold' : undefined}>
-                      {p.text}
-                    </p>
-                  ),
-                )}
+                {renderParagraphs(itemsIntro)}
               </div>
             )}
           </div>
@@ -134,14 +145,16 @@ export default function CaseStagedStory({
             /* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */
             <ul
               role="list"
-              className="border-rule grid grid-cols-1 gap-x-12 gap-y-10 border-t pt-10 sm:grid-cols-2 lg:grid-cols-3"
+              className="grid grid-cols-1 gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-3"
             >
               {items.map((item) => (
                 <li key={item.title}>
-                  <h3 className="text-paper mb-2 text-lg font-semibold">{item.title}</h3>
-                  <p className="text-paper-muted text-sm leading-relaxed">
-                    {item.description}
-                  </p>
+                  <h3 className="border-rule text-paper mb-4 border-b pb-3 text-lg font-semibold">
+                    {item.title}
+                  </h3>
+                  <div className="text-paper-muted space-y-2 text-sm leading-relaxed">
+                    {renderDescription(item.description)}
+                  </div>
                 </li>
               ))}
             </ul>
@@ -157,9 +170,9 @@ export default function CaseStagedStory({
                     <h3 className="text-paper mb-1 text-lg font-semibold sm:text-xl">
                       {item.title}
                     </h3>
-                    <p className="text-paper-muted max-w-measure text-sm leading-relaxed">
-                      {item.description}
-                    </p>
+                    <div className="text-paper-muted max-w-measure space-y-2 text-sm leading-relaxed">
+                      {renderDescription(item.description)}
+                    </div>
                   </div>
                 </li>
               ))}
@@ -177,12 +190,12 @@ export default function CaseStagedStory({
       <section
         ref={sectionRef}
         aria-labelledby={headingId}
-        className="case-staged__snap bg-ink w-full py-20 sm:py-28"
+        className="case-staged__snap bg-ink w-full py-24 sm:py-32"
       >
         <div
           className={`reveal reveal--1 mx-auto max-w-2xl px-6 text-left sm:px-10 xl:px-0 ${revealClass}`}
         >
-          <StepMark index={index} />
+          <CategoryLabel category={category} />
           <h2
             id={headingId}
             className="text-paper mb-6 text-[clamp(1.85rem,4vw,2.85rem)] font-bold leading-[1.05] tracking-[-0.02em]"
@@ -190,15 +203,7 @@ export default function CaseStagedStory({
             {title}
           </h2>
           <div className="text-paper-muted space-y-4 text-base leading-relaxed">
-            {(body ?? []).map((p, i) =>
-              typeof p === 'string' ? (
-                <p key={i}>{p}</p>
-              ) : (
-                <p key={i} className={p.bold ? 'text-paper font-semibold' : undefined}>
-                  {p.text}
-                </p>
-              ),
-            )}
+            {renderParagraphs(body ?? [])}
           </div>
         </div>
       </section>
@@ -212,7 +217,7 @@ export default function CaseStagedStory({
       className={`case-staged__snap relative w-full overflow-hidden ${
         variant === 'outcome'
           ? 'bg-charcoal flex min-h-[100dvh] items-center py-20'
-          : 'bg-ink py-20 sm:py-28'
+          : 'bg-ink py-24 sm:py-32'
       }`}
     >
       {variant === 'outcome' && (
@@ -233,7 +238,9 @@ export default function CaseStagedStory({
         } ${revealClass}`}
       >
         <div className={image ? 'lg:order-2' : ''}>
-          <StepMark index={index} />
+          <CategoryLabel
+            category={[category, image?.tag].filter(Boolean).join(' · ')}
+          />
           <h2
             id={headingId}
             className="text-paper mb-6 max-w-measure text-[clamp(1.85rem,4vw,2.85rem)] font-bold leading-[1.05] tracking-[-0.02em]"
@@ -241,25 +248,12 @@ export default function CaseStagedStory({
             {title}
           </h2>
           <div className="text-paper-muted max-w-measure space-y-4 text-base leading-relaxed">
-            {(body ?? []).map((p, i) =>
-              typeof p === 'string' ? (
-                <p key={i}>{p}</p>
-              ) : (
-                <p key={i} className={p.bold ? 'text-paper font-semibold' : undefined}>
-                  {p.text}
-                </p>
-              ),
-            )}
+            {renderParagraphs(body ?? [])}
           </div>
         </div>
 
         {image ? (
-          <figure className="relative lg:order-1">
-            {image.tag && (
-              <span className="bg-ink/80 text-teal-mist absolute left-3 top-3 z-10 rounded-full px-2.5 py-1 font-semibold text-[10px] uppercase tracking-[0.08em] backdrop-blur-sm">
-                {image.tag}
-              </span>
-            )}
+          <figure className="lg:order-1">
             <button
               ref={triggerRef}
               type="button"
@@ -303,7 +297,9 @@ export default function CaseStagedStory({
           </div>
         ) : variant === 'outcome' ? (
           <div className="flex items-center justify-center">
-            <RippleDrawing className="text-teal-mid/70 h-auto w-full max-w-[16rem]" />
+            {isInView && (
+              <RippleDrawing className="text-teal-mid/70 h-auto w-full max-w-[16rem]" />
+            )}
           </div>
         ) : null}
       </div>

@@ -1,4 +1,5 @@
-import { useId } from 'react'
+import { useId, useRef, useState } from 'react'
+import Lightbox from './LightBox'
 
 export type CaseStagedImage = {
   id: string
@@ -24,6 +25,41 @@ type Props = {
 const GRID_CLASS: Record<CaseStagedPanel['grid'], string> = {
   full: 'grid grid-cols-1',
   process: 'grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3',
+}
+
+function GalleryImage({ image }: { image: CaseStagedImage }) {
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false)
+  const triggerRef = useRef<HTMLButtonElement>(null)
+
+  return (
+    <figure>
+      <button
+        ref={triggerRef}
+        type="button"
+        onClick={() => setIsLightboxOpen(true)}
+        aria-label={`Open enlarged image: ${image.caption || image.alt}`}
+        className="group block w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus"
+      >
+        <img
+          src={image.src}
+          alt={image.alt}
+          className="w-full cursor-zoom-in object-cover transition-opacity duration-200 group-hover:opacity-90"
+        />
+      </button>
+      <figcaption className="text-paper-muted mt-3 text-sm italic leading-relaxed">
+        {image.caption}
+      </figcaption>
+
+      {isLightboxOpen && (
+        <Lightbox
+          src={image.src}
+          alt={image.alt}
+          onClose={() => setIsLightboxOpen(false)}
+          triggerRef={triggerRef}
+        />
+      )}
+    </figure>
+  )
 }
 
 export default function CaseStagedSplit({
@@ -76,20 +112,11 @@ export default function CaseStagedSplit({
           {panels.map((panel) => (
             <div
               key={panel.id}
-              className="case-staged__snap bg-ink flex min-h-[80dvh] items-center px-6 py-16 sm:px-10"
+              className="case-staged__snap bg-ink flex min-h-[60dvh] items-center px-6 py-16 sm:px-10 lg:min-h-[70dvh] xl:min-h-[80dvh]"
             >
               <div className={`w-full ${GRID_CLASS[panel.grid]}`}>
                 {panel.images.map((image) => (
-                  <figure key={image.id}>
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full object-cover"
-                    />
-                    <figcaption className="text-paper-muted mt-3 text-sm italic leading-relaxed">
-                      {image.caption}
-                    </figcaption>
-                  </figure>
+                  <GalleryImage key={image.id} image={image} />
                 ))}
               </div>
             </div>

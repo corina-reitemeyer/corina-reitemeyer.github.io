@@ -267,18 +267,6 @@ export default function Header() {
                 </NavLink>
               </li>
             ))}
-            {resumes.map((resume) => (
-              <li key={resume.href}>
-                <a
-                  href={resume.href}
-                  download={resume.download}
-                  className="flex items-center gap-3 rounded-lg px-3 py-2 text-base font-medium text-paper-muted transition-colors duration-200 hover:text-paper"
-                >
-                  <DownloadIcon />
-                  {resume.label}
-                </a>
-              </li>
-            ))}
             <li>
               <NavLink
                 to={contactItem.to}
@@ -295,6 +283,27 @@ export default function Header() {
               </NavLink>
             </li>
           </ul>
+
+          <div className="border-rule mt-6 border-t pt-4">
+            <p className="text-teal-mid mb-2 px-3 font-normal text-xs uppercase tracking-[0.12em]">
+              Resume
+            </p>
+            {/* eslint-disable-next-line jsx-a11y/no-redundant-roles -- restores list semantics removed by Tailwind preflight in VoiceOver/Safari */}
+            <ul role="list" className="space-y-2">
+              {resumes.map((resume) => (
+                <li key={resume.href}>
+                  <a
+                    href={resume.href}
+                    download={resume.download}
+                    className="flex items-center gap-3 rounded-lg px-3 py-2 text-base font-medium text-paper-muted transition-colors duration-200 hover:text-paper"
+                  >
+                    <DownloadIcon />
+                    {resume.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </header>

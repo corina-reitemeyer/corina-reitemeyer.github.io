@@ -110,14 +110,29 @@ export default function ImpactStatement() {
           <span className="block">who builds.</span>
         </h1>
 
-        <p
-          className={`hero-deck reveal reveal--3 max-w-measure text-paper-muted text-[clamp(1.1rem,1.8vw,1.25rem)] ${revealClass}`}
-        >
-          Corina is a digital product designer who bridges{' '}
-          {renderKeyword(keywords[0])}, {renderKeyword(keywords[1])}, and{' '}
-          {renderKeyword(keywords[2])}, using AI to ship it herself, with{' '}
-          {renderKeyword(keywords[3])} always at the center.
-        </p>
+        <div className="relative w-full">
+          <p
+            className={`hero-deck reveal reveal--3 max-w-measure text-paper-muted text-[clamp(1.1rem,1.8vw,1.25rem)] ${revealClass}`}
+          >
+            Corina is a digital product designer who bridges{' '}
+            {renderKeyword(keywords[0])}, {renderKeyword(keywords[1])}, and{' '}
+            {renderKeyword(keywords[2])}, using AI to ship it herself, with{' '}
+            {renderKeyword(keywords[3])} always at the center.
+          </p>
+
+          {activeKeyword && (
+            <div
+              role="note"
+              aria-live="polite"
+              className="pointer-events-none absolute left-0 top-full mt-4 flex max-w-xs items-start gap-3 sm:hidden"
+            >
+              <HandAsterisk className="text-teal-mid mt-1 h-4 w-4 shrink-0" />
+              <p className="font-note text-note text-[clamp(1.15rem,2vw,1.4rem)] font-medium leading-snug">
+                {activeKeyword.detail}
+              </p>
+            </div>
+          )}
+        </div>
       </div>
 
       <div

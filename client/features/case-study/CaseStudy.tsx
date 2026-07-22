@@ -12,7 +12,7 @@ export default function CaseStudy() {
   const backToProjectsPath = location.pathname.startsWith(
     ROUTES.learningExperience,
   )
-    ? '/making'
+    ? '/playground'
     : ROUTES.digitalProducts
 
   const renderCaseStudy = () => {

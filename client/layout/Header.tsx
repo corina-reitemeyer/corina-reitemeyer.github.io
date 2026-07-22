@@ -10,7 +10,7 @@ const navItems = [
     label: 'work.',
     matchPrefix: ROUTES.digitalProduct,
   },
-  { to: '/making', label: 'playground.' },
+  { to: '/playground', label: 'playground.' },
   { to: '/about', label: 'about.' },
 ]
 
@@ -103,7 +103,7 @@ export default function Header() {
     isActive || (matchPrefix ? location.pathname.startsWith(matchPrefix) : false)
 
   const isHome = location.pathname === '/'
-  const overlayHeaderPaths = [ROUTES.digitalProducts, '/about', '/contact', '/making']
+  const overlayHeaderPaths = [ROUTES.digitalProducts, '/about', '/contact', '/playground']
   const hasOverlayHeader = isHome || overlayHeaderPaths.includes(location.pathname)
 
   return (

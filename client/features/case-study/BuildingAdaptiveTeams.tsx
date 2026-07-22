@@ -14,7 +14,7 @@ export default function BuildingAdaptiveTeams() {
   return (
     <>
       <CaseStagedHero
-        backHref="/making"
+        backHref="/playground"
         backLabel="Back to playground"
         meta="Concept project · Education · 3 weeks"
         title="It will click eventually: a microlearning course for team leads navigating change."

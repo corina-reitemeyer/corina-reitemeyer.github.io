@@ -8,13 +8,13 @@ import routes from '../routes'
  *  case-study slug so their content actually renders. */
 const paths = [
   '/',
-  '/digital-products',
+  '/selected-work',
   '/digital-product/moe-design-system',
   '/digital-product/ow-templates',
   '/digital-product/suitefiles-design-system',
   '/digital-product/suitefiles-ai-summary',
   '/learning-experience/building-adaptive-teams',
-  '/making',
+  '/playground',
   '/about',
   '/contact',
 ]

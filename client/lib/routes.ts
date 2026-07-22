@@ -1,5 +1,5 @@
 export const ROUTES = {
-  digitalProducts: '/digital-products',
+  digitalProducts: '/selected-work',
   digitalProduct: '/digital-product',
   learningExperience: '/learning-experience',
 } as const

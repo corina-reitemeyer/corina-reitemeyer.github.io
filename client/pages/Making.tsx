@@ -80,10 +80,10 @@ function ProjectTile({ project, index }: { project: MakingProject; index: number
       <div className="relative">
         <div className="overflow-hidden rounded-2xl">{cover}</div>
         {index === 0 && (
-          <HandAsterisk className="ink-draw text-teal-mid absolute left-3 top-3 h-5 w-5" />
+          <HandAsterisk className="text-teal-mid absolute left-3 top-3 h-5 w-5" />
         )}
         {project.note && (
-          <p className="margin-note ink-draw ink-write absolute right-3 top-3 max-w-[5rem] rotate-6 text-right text-lg">
+          <p className="margin-note ink-write absolute right-3 top-3 max-w-[5rem] rotate-6 text-right text-lg">
             {project.note}
           </p>
         )}
@@ -157,8 +157,8 @@ export default function Making() {
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0">
           <div className="atmosphere-wash absolute inset-0" />
           <div className="atmosphere-rules absolute inset-0" />
-          <HandSquiggle className="ink-draw text-teal-mid/60 absolute bottom-3 left-6 h-6 w-[110px] -rotate-6 sm:bottom-10 sm:left-10" />
-          <p className="margin-note ink-draw ink-write absolute right-6 top-32 hidden -rotate-3 sm:right-10 sm:block">
+          <HandSquiggle className="text-teal-mid/60 absolute bottom-3 left-6 h-6 w-[110px] -rotate-6 sm:bottom-10 sm:left-10" />
+          <p className="margin-note ink-write absolute right-6 top-32 hidden -rotate-3 sm:right-10 sm:block">
             try · break · remake
           </p>
         </div>

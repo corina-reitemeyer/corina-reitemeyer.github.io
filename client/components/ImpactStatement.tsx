@@ -156,7 +156,7 @@ export default function ImpactStatement() {
       >
         <div className="atmosphere-wash absolute inset-0" />
         <div className="atmosphere-rules absolute inset-0" />
-        <HandSquiggle className="ink-draw text-teal-mid/60 absolute bottom-10 left-6 h-6 w-[140px] sm:left-10" />
+        <HandSquiggle className="text-teal-mid/60 absolute bottom-10 left-6 h-6 w-[140px] sm:left-10" />
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-start px-6 pb-[112px] pt-[112px] sm:px-10 sm:pb-[164px] sm:pt-[164px] xl:px-0">
@@ -197,7 +197,7 @@ export default function ImpactStatement() {
       >
         {displayKeyword && (
           <div className="flex items-start gap-3">
-            <HandAsterisk className="ink-draw text-teal-mid mt-1 h-4 w-4 shrink-0" />
+            <HandAsterisk className="text-teal-mid mt-1 h-4 w-4 shrink-0" />
             <p className="font-note text-note text-[clamp(1.15rem,2vw,1.4rem)] font-medium leading-snug">
               {displayKeyword.detail}
             </p>

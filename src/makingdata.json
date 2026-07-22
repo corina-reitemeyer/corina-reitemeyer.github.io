@@ -5,7 +5,7 @@
     "description": "A test of how far AI can take accessible design systems, built with a fully AI-assisted workflow from Figma Make to Figma MCP/Claude to Storybook.",
     "category": "Experiment",
     "status": "wip",
-    "year": "2025",
+    "year": "2026",
     "image": "/images/portfolio/making/axon-design-system-case-study.webp",
     "note": "still going"
   },
@@ -15,7 +15,7 @@
     "description": "A fictional microlearning course to emulate the ADDIE process of learning design.",
     "category": "Side project",
     "status": "live",
-    "year": "2024",
+    "year": "2026",
     "image": "/images/elearning/final-work/building-adaptive-teams-hero.webp",
     "href": "/learning-experience/building-adaptive-teams"
   }

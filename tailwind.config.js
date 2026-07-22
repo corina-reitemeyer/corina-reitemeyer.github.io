@@ -5,13 +5,10 @@ export default {
     extend: {
       fontFamily: {
         sans: ['sofia-pro', 'sans-serif'],
-        mono: ['JetBrains Mono', 'SFMono-Regular', 'ui-monospace', 'monospace'],
         note: ['Caveat', 'Segoe Print', 'Comic Sans MS', 'cursive'],
       },
 
       colors: {
-        customYellow: '#ffd803',
-
         ink: 'var(--ink)',
         charcoal: 'var(--charcoal)',
         'charcoal-soft': 'var(--charcoal-soft)',
@@ -78,5 +75,5 @@ export default {
       },
     },
   },
-  plugins: [require('@tailwindcss/aspect-ratio')],
+  plugins: [],
 }

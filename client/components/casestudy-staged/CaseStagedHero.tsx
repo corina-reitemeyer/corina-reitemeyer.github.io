@@ -118,11 +118,11 @@ export default function CaseStagedHero({
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0">
         <div className="atmosphere-wash absolute inset-0" />
         <div className="atmosphere-rules absolute inset-0" />
-        <HandSquiggle className="ink-draw text-teal-mid/60 absolute bottom-10 left-6 h-6 w-[140px] sm:left-10" />
-        <HandLoop className="ink-draw text-teal-mid/50 absolute bottom-8 left-[168px] hidden h-5 w-5 -rotate-6 sm:left-[196px] sm:block" />
+        <HandSquiggle className="text-teal-mid/60 absolute bottom-10 left-6 h-6 w-[140px] sm:left-10" />
+        <HandLoop className="text-teal-mid/50 absolute bottom-8 left-[168px] hidden h-5 w-5 -rotate-6 sm:left-[196px] sm:block" />
 
         <div className="absolute right-6 top-24 hidden -rotate-2 text-right sm:right-10 sm:top-28 sm:block">
-          <p className="margin-note ink-draw ink-write">{marginNote}</p>
+          <p className="margin-note ink-write">{marginNote}</p>
         </div>
       </div>
 
@@ -137,7 +137,7 @@ export default function CaseStagedHero({
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 sm:px-10 xl:px-0">
         <div className="mb-6 flex items-center gap-2.5">
-          <HandAsterisk className="ink-draw text-teal-mid h-4 w-4 shrink-0" />
+          <HandAsterisk className="text-teal-mid h-4 w-4 shrink-0" />
           <p className="text-teal-mid font-normal text-xs uppercase tracking-[0.16em]">
             {meta}
           </p>
@@ -148,7 +148,7 @@ export default function CaseStagedHero({
         >
           {title}
         </h1>
-        <HandUnderline className="ink-draw text-teal-mid/70 mt-2 h-3 w-[90px]" />
+        <HandUnderline className="text-teal-mid/70 mt-2 h-3 w-[90px]" />
         {disclaimer && (
           <p className="text-paper-muted mt-6 max-w-measure text-sm italic leading-relaxed">
             {disclaimer}

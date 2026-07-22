@@ -67,7 +67,7 @@ export default function Services() {
             These are some of the ways I can support product teams, from
             product design, to systems work to shipped interfaces.
           </p>
-          <p className="margin-note ink-draw ink-write mt-6" aria-hidden="true">
+          <p className="margin-note ink-write mt-6" aria-hidden="true">
             open to book
           </p>
         </div>

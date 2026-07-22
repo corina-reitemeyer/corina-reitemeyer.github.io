@@ -55,7 +55,7 @@ export default function WorkIndex({ projects, linkPrefix }: WorkIndexProps) {
           </h2>
           <p
             aria-hidden="true"
-            className="margin-note ink-draw ink-write absolute right-0 top-1 hidden sm:block"
+            className="margin-note ink-write absolute right-0 top-1 hidden sm:block"
           >
             proof, not pitch
           </p>

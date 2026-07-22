@@ -42,7 +42,7 @@ export default function AboutIntroSection() {
           <h2 id={headingId} className="text-2xl font-bold text-paper">
             Who I am
           </h2>
-          <HandAsterisk className="ink-draw hidden h-5 w-5 text-teal-mid lg:block" />
+          <HandAsterisk className="hidden h-5 w-5 text-teal-mid lg:block" />
         </div>
 
         <div
@@ -83,7 +83,7 @@ export default function AboutIntroSection() {
             className="mb-4 aspect-[4/5] w-full max-w-[14rem] rounded-2xl object-cover motion-safe:hover:animate-wiggle"
           />
           <p
-            className="margin-note ink-draw ink-write !text-paper"
+            className="margin-note ink-write !text-paper"
             aria-hidden="true"
           >
             ^INFJ, but sometimes a selective extrovert

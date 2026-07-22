@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="w-full border-t border-rule" />
       )}
 
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-16 sm:grid-cols-2 sm:gap-12 sm:px-8 sm:py-24">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-16 sm:grid-cols-2 sm:gap-12 sm:px-10 sm:py-24 xl:px-0">
         <div>
           <h2 className="mb-4 text-xs font-normal uppercase tracking-[0.16em] text-teal-mid">
             Elsewhere

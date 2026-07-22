@@ -26,7 +26,7 @@ export default function Contact() {
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0">
         <div className="atmosphere-wash absolute inset-0" />
         <div className="atmosphere-rules absolute inset-0" />
-        <p className="margin-note ink-draw ink-write absolute right-16 top-40 hidden sm:right-24 sm:top-48 sm:block">
+        <p className="margin-note ink-write absolute right-16 top-40 hidden sm:right-24 sm:top-48 sm:block">
           {data.marginNote}
         </p>
       </div>
@@ -64,7 +64,7 @@ export default function Contact() {
             >
               <span className="relative z-10">{data.email}</span>
               <HandUnderline
-                className="ink-draw text-teal-mid/80 pointer-events-none absolute -left-2 -right-14 bottom-0 h-[0.38em] -rotate-[0.8deg]"
+                className="text-teal-mid/80 pointer-events-none absolute -left-2 -right-14 bottom-0 h-[0.38em] -rotate-[0.8deg]"
                 style={{ '--ink-duration': '1.4s', '--ink-delay': '1.3s' } as CSSProperties}
               />
             </a>

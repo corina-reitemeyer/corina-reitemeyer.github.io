@@ -28,12 +28,7 @@
   --moss: #7c9268;
 
   --font: 'sofia-pro', 'Segoe UI', 'Helvetica Neue', sans-serif;
-  --font-mono: 'JetBrains Mono', 'SFMono-Regular', ui-monospace, monospace;
   --font-note: 'Caveat', 'Segoe Print', 'Comic Sans MS', cursive;
-
-  --display-weight: 700;
-  --display-leading: 0.92;
-  --display-tracking: -0.04em;
 
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --duration: 0.85s;
@@ -130,9 +125,6 @@ body {
 }
 .reveal--4 {
   --reveal-delay: 0.36s;
-}
-.reveal--5 {
-  --reveal-delay: 0.46s;
 }
 
 /* Ink / doodle draw -- SVG stroke draws in once on mount (pathLength=1 + dasharray/dashoffset=1 set inline) */

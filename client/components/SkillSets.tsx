@@ -104,7 +104,7 @@ export default function SkillSets() {
           </div>
 
           <p
-            className="margin-note ink-draw ink-write mt-10 hidden text-right sm:block lg:mt-auto lg:pt-8"
+            className="margin-note ink-write mt-10 hidden text-right sm:block lg:mt-auto lg:pt-8"
             aria-hidden="true"
           >
             ~ p.s. if it&rsquo;s not accessible, it&rsquo;s not done.

@@ -99,7 +99,7 @@ export default function ImpactStatement() {
             <span className="bg-teal-mid absolute inline-flex h-full w-full animate-ping rounded-full opacity-75" />
             <span className="bg-teal-mid relative inline-flex h-1.5 w-1.5 rounded-full shadow-[0_0_6px_var(--teal-mid)]" />
           </span>
-          Available for new opportunities
+          Open for work
         </p>
 
         <h1

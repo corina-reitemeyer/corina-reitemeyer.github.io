@@ -3,7 +3,7 @@ import { useEffect, useId, useState } from 'react'
 const meta = [
   { label: 'Based', value: 'Melbourne, Australia' },
   { label: 'Focus', value: 'Product design & design engineering' },
-  { label: 'Availability', value: 'Actively interviewing' },
+  { label: 'Availability', value: 'Open for work' },
 ]
 
 export default function AboutHero() {

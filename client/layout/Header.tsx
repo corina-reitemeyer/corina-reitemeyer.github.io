@@ -102,9 +102,13 @@ export default function Header() {
   const isNavItemActive = (isActive: boolean, matchPrefix?: string) =>
     isActive || (matchPrefix ? location.pathname.startsWith(matchPrefix) : false)
 
-  const isHome = location.pathname === '/'
-  const overlayHeaderPaths = [ROUTES.digitalProducts, '/about', '/contact', '/playground']
-  const hasOverlayHeader = isHome || overlayHeaderPaths.includes(location.pathname)
+  // Case study pages open straight into their own bg-ink hero, so they use a
+  // solid header instead of overlaying. Every other route -- including the
+  // catch-all 404, which can't be matched by exact path -- overlays.
+  const solidHeaderPrefixes = [`${ROUTES.digitalProduct}/`, `${ROUTES.learningExperience}/`]
+  const hasOverlayHeader = !solidHeaderPrefixes.some((prefix) =>
+    location.pathname.startsWith(prefix),
+  )
 
   return (
     <header

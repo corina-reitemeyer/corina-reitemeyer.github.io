@@ -62,7 +62,7 @@ export default function CaseStagedHero({
           {title}
         </h1>
         {disclaimer && (
-          <p className="text-paper-muted mt-6 max-w-measure text-sm italic leading-relaxed">
+          <p className="text-paper-muted mt-10 max-w-measure text-sm italic leading-relaxed">
             {disclaimer}
           </p>
         )}

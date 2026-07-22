@@ -9,6 +9,7 @@ const Contact = lazy(() => import('./features/contact/Contact'))
 const ProductDesign = lazy(() => import('./features/product-design/ProductDesign'))
 const Making = lazy(() => import('./features/making/Making'))
 const CaseStudy = lazy(() => import('./features/case-study/CaseStudy'))
+const NotFound = lazy(() => import('./features/not-found/NotFound'))
 
 const routes = createRoutesFromElements(
   <Route path="/" element={<App />}>
@@ -22,6 +23,7 @@ const routes = createRoutesFromElements(
     <Route path="/playground" element={<Making />} />
     <Route path="about" element={<About />} />
     <Route path="/contact" element={<Contact />} />
+    <Route path="*" element={<NotFound />} />
   </Route>,
 )
 

@@ -58,7 +58,7 @@ export default function Services() {
         >
           <h2
             id={headingId}
-            className="mb-4 text-[clamp(2.85rem,7vw,4.75rem)] font-bold leading-[0.92] tracking-[-0.04em] text-paper"
+            className="mb-6 text-[clamp(2.85rem,7vw,4.75rem)] font-bold leading-[0.92] tracking-[-0.04em] text-paper"
           >
             <span className="block">Ways I</span>
             <span className="block text-teal-mid">can help</span>

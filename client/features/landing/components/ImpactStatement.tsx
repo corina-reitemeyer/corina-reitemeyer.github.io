@@ -125,16 +125,18 @@ export default function ImpactStatement() {
         role="note"
         aria-live="polite"
         aria-hidden={!activeKeyword}
-        className={`pointer-events-none absolute right-6 top-1/2 z-10 hidden max-w-xs -translate-y-1/2 transition-opacity duration-150 ease-out sm:right-10 sm:block lg:max-w-sm ${activeKeyword ? 'opacity-100' : 'opacity-0'}`}
+        className={`pointer-events-none absolute inset-x-0 top-1/2 z-10 hidden -translate-y-1/2 transition-opacity duration-150 ease-out sm:block ${activeKeyword ? 'opacity-100' : 'opacity-0'}`}
       >
-        {displayKeyword && (
-          <div className="flex items-start gap-3">
-            <HandAsterisk className="text-teal-mid mt-1 h-4 w-4 shrink-0" />
-            <p className="font-note text-note text-[clamp(1.15rem,2vw,1.4rem)] font-medium leading-snug">
-              {displayKeyword.detail}
-            </p>
-          </div>
-        )}
+        <div className="mx-auto flex max-w-6xl justify-end px-6 sm:px-10 xl:px-0">
+          {displayKeyword && (
+            <div className="flex max-w-xs items-start gap-3 lg:max-w-sm">
+              <HandAsterisk className="text-teal-mid mt-1 h-4 w-4 shrink-0" />
+              <p className="font-note text-note text-[clamp(1.15rem,2vw,1.4rem)] font-medium leading-snug">
+                {displayKeyword.detail}
+              </p>
+            </div>
+          )}
+        </div>
       </div>
 
       <div

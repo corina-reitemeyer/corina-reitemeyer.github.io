@@ -51,7 +51,7 @@ export default function SkillSets() {
       ref={sectionRef}
       id="skills"
       aria-labelledby={headingId}
-      className="w-full bg-ink py-24 sm:py-32"
+      className="w-full bg-ink py-24 sm:py-32 xl:py-40"
     >
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-14 px-6 sm:gap-16 sm:px-10 lg:grid-cols-[minmax(18rem,26rem)_1fr] xl:px-0">
         <div

@@ -88,7 +88,6 @@ type Props = {
      *  wireframes, XD screenshots) from final shipped product imagery. */
     tag?: string
   }
-  note?: { label: string; text: string }
   variant?: 'default' | 'outcome'
 }
 
@@ -109,7 +108,6 @@ export default function CaseStagedStory({
   itemsIntro,
   itemsLayout = 'rows',
   image,
-  note,
   variant = 'default',
 }: Props) {
   const headingId = useId()
@@ -123,7 +121,7 @@ export default function CaseStagedStory({
       <section
         ref={sectionRef}
         aria-labelledby={headingId}
-        className="case-staged__snap bg-ink w-full py-24 sm:py-32"
+        className="bg-ink w-full py-24 sm:py-32"
       >
         <div className={`reveal reveal--1 mx-auto max-w-6xl px-6 sm:px-10 xl:px-0 ${revealClass}`}>
           <div className="mb-10 max-w-measure sm:mb-14">
@@ -183,14 +181,14 @@ export default function CaseStagedStory({
     )
   }
 
-  const hasSecondColumn = Boolean(image || note || variant === 'outcome')
+  const hasSecondColumn = Boolean(image || variant === 'outcome')
 
   if (!hasSecondColumn) {
     return (
       <section
         ref={sectionRef}
         aria-labelledby={headingId}
-        className="case-staged__snap bg-ink w-full py-24 sm:py-32"
+        className="bg-ink w-full py-24 sm:py-32"
       >
         <div
           className={`reveal reveal--1 mx-auto max-w-2xl px-6 text-left sm:px-10 xl:px-0 ${revealClass}`}
@@ -214,7 +212,7 @@ export default function CaseStagedStory({
     <section
       ref={sectionRef}
       aria-labelledby={headingId}
-      className={`case-staged__snap relative w-full overflow-hidden ${
+      className={`relative w-full overflow-hidden ${
         variant === 'outcome'
           ? 'bg-charcoal flex min-h-[100dvh] items-center py-20'
           : 'bg-ink py-24 sm:py-32'
@@ -283,13 +281,6 @@ export default function CaseStagedStory({
               </ul>
             )}
           </figure>
-        ) : note ? (
-          <div className="border-rule border-l pl-6">
-            <p className="text-teal-mid mb-2 font-normal text-xs uppercase tracking-[0.12em]">
-              {note.label}
-            </p>
-            <p className="text-paper-muted text-sm leading-relaxed">{note.text}</p>
-          </div>
         ) : variant === 'outcome' ? (
           <div className="flex items-center justify-center">
             {isInView && (

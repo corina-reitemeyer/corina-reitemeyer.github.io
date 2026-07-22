@@ -11,7 +11,7 @@ export default function CaseStagedAdjacentNav({ previous, next }: Props) {
   return (
     <nav
       aria-label="Other case studies"
-      className="case-staged__snap bg-ink grid min-h-[60dvh] w-full grid-cols-1 border-t border-rule sm:grid-cols-2"
+      className="bg-ink grid min-h-[60dvh] w-full grid-cols-1 border-t border-rule sm:grid-cols-2"
     >
       {previous ? (
         <Link

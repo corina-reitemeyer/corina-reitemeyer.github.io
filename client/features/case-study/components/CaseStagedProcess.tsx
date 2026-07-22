@@ -82,7 +82,7 @@ export default function CaseStagedProcess({
     <section
       ref={sectionRef}
       aria-labelledby={headingId}
-      className="case-staged__snap bg-ink w-full py-20 sm:py-28"
+      className="bg-ink w-full py-20 sm:py-28"
     >
       <div className={`reveal reveal--1 mx-auto max-w-6xl px-6 sm:px-10 xl:px-0 ${revealClass}`}>
         <h2

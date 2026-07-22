@@ -15,7 +15,7 @@ export default function CaseStagedStats({ intro, stats }: Props) {
     <section
       ref={sectionRef}
       aria-label={intro ?? 'Key stats'}
-      className="case-staged__snap bg-ink flex min-h-[70dvh] w-full items-center py-20"
+      className="bg-ink flex min-h-[70dvh] w-full items-center py-20"
     >
       <div
         className={`reveal reveal--1 mx-auto w-full max-w-6xl px-6 sm:px-10 xl:px-0 ${revealClass}`}

@@ -32,7 +32,7 @@ export default function CaseStagedPersona({
     <section
       ref={sectionRef}
       aria-labelledby={headingId}
-      className="case-staged__snap bg-ink w-full py-20 sm:py-28"
+      className="bg-ink w-full py-20 sm:py-28"
     >
       <div className={`reveal reveal--1 mx-auto max-w-4xl px-6 sm:px-10 xl:px-0 ${revealClass}`}>
         <p className="text-paper-muted mb-8 font-normal text-xs uppercase tracking-[0.12em]">

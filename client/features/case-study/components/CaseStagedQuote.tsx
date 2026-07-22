@@ -20,7 +20,7 @@ export default function CaseStagedQuote({
     <section
       ref={sectionRef}
       aria-labelledby={headingId}
-      className="case-staged__snap bg-ink flex min-h-[70dvh] w-full items-center py-20"
+      className="bg-ink flex min-h-[70dvh] w-full items-center py-20"
     >
       <div
         className={`reveal reveal--1 mx-auto max-w-3xl px-6 sm:px-10 xl:px-0 ${revealClass}`}

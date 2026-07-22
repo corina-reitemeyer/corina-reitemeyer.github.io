@@ -112,7 +112,7 @@ export default function CaseStagedSplit({
           {panels.map((panel) => (
             <div
               key={panel.id}
-              className="case-staged__snap bg-ink flex min-h-[60dvh] items-center px-6 py-16 sm:px-10 lg:min-h-[70dvh] xl:min-h-[80dvh]"
+              className="bg-ink flex min-h-[60dvh] items-center px-6 py-16 sm:px-10 lg:min-h-[70dvh] xl:min-h-[80dvh]"
             >
               <div className={`w-full ${GRID_CLASS[panel.grid]}`}>
                 {panel.images.map((image) => (

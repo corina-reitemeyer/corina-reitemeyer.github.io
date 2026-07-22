@@ -26,7 +26,7 @@ export default function CaseStagedHero({
   return (
     <section
       aria-labelledby="case-staged-heading"
-      className="case-staged__snap bg-ink relative flex min-h-[100dvh] w-full items-center overflow-hidden"
+      className="bg-ink relative flex min-h-[100dvh] w-full items-center overflow-hidden"
     >
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0">
         <div className="atmosphere-wash absolute inset-0" />

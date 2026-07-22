@@ -1,6 +1,6 @@
 import { useId } from 'react'
-import { useScrollReveal } from '../../lib/useScrollReveal'
-import { HandAsterisk } from '../../components/icons/Doodles'
+import { useScrollReveal } from '../../../lib/useScrollReveal'
+import { HandAsterisk } from '../../../components/icons/Doodles'
 
 export default function AboutIntroSection() {
   const headingId = useId()

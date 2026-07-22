@@ -6,7 +6,7 @@ import {
   type MouseEvent,
   type SVGProps,
 } from 'react'
-import { useScrollReveal } from '../../lib/useScrollReveal'
+import { useScrollReveal } from '../../../lib/useScrollReveal'
 
 type Photo = { src: string; alt: string }
 

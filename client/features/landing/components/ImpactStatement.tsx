@@ -1,5 +1,5 @@
 import { useEffect, useId, useState } from 'react'
-import { HandAsterisk, HandSquiggle, ScrollMouseIcon } from '../../components/icons/Doodles'
+import { HandAsterisk, HandSquiggle, ScrollMouseIcon } from '../../../components/icons/Doodles'
 
 type Keyword = {
   id: string

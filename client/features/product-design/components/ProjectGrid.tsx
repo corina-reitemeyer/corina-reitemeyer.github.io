@@ -1,6 +1,6 @@
 import { useEffect, useId, useState, type Ref } from 'react'
 import { Link } from 'react-router-dom'
-import { useScrollReveal } from '../../lib/useScrollReveal'
+import { useScrollReveal } from '../../../lib/useScrollReveal'
 
 type ProjectGridItem = {
   id: number

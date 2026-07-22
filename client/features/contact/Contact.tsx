@@ -1,8 +1,8 @@
 import { useEffect, useId, useState, type CSSProperties } from 'react'
-import contactData from '../../data/contactdata.json'
-import type ContactData from '../../data/contactdata.types'
+import contactData from '../../data/contact.json'
+import type ContactData from '../../data/contact.types'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
-import HandUnderline from './HandUnderline'
+import HandUnderline from './components/HandUnderline'
 
 export default function Contact() {
   const data: ContactData = contactData

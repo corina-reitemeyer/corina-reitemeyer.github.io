@@ -1,10 +1,10 @@
-import ProjectData from '../../data/projectsdata.json'
-import Project from '../../data/projectdata'
-import ImpactStatement from './ImpactStatement'
-import LiquidBanner from './LiquidBanner'
-import Services from './Services'
-import SkillSets from './SkillSets'
-import WorkIndex from './WorkIndex'
+import ProjectData from '../../data/projects.json'
+import Project from '../../data/projects.types'
+import ImpactStatement from './components/ImpactStatement'
+import LiquidBanner from './components/LiquidBanner'
+import Services from './components/Services'
+import SkillSets from './components/SkillSets'
+import WorkIndex from './components/WorkIndex'
 import { ROUTES } from '../../lib/routes'
 
 export default function Landing() {

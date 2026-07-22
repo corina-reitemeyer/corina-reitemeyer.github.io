@@ -1,11 +1,11 @@
 import aboutData from './about.json'
-import type AboutData from './aboutdata'
-import AboutHero from './AboutHero'
-import AboutIntroSection from './AboutIntroSection'
-import ExperienceSection from './Experience'
-import AboutDuoLists from './AboutDuoLists'
-import ValuesSection from './ValuesSection'
-import CommunitySection from './CommunitySection'
+import type AboutData from './about.types'
+import AboutHero from './components/AboutHero'
+import AboutIntroSection from './components/AboutIntroSection'
+import ExperienceSection from './components/Experience'
+import AboutDuoLists from './components/AboutDuoLists'
+import ValuesSection from './components/ValuesSection'
+import CommunitySection from './components/CommunitySection'
 
 const experience = [
   {

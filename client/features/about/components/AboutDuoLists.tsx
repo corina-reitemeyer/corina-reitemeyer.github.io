@@ -1,5 +1,5 @@
 import { useId } from 'react'
-import { useScrollReveal } from '../../lib/useScrollReveal'
+import { useScrollReveal } from '../../../lib/useScrollReveal'
 
 const interests = [
   'Café hopping and Pilates reformer sessions to reset between screens',

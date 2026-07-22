@@ -1,7 +1,7 @@
 import { useEffect, useId, useState } from 'react'
-import ProjectData from '../../data/projectsdata.json'
-import Project from '../../data/projectdata'
-import ProjectGrid from './ProjectGrid'
+import ProjectData from '../../data/projects.json'
+import Project from '../../data/projects.types'
+import ProjectGrid from './components/ProjectGrid'
 import { ROUTES } from '../../lib/routes'
 
 export default function ProductDesign() {

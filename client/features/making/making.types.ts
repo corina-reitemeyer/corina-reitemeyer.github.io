@@ -1,6 +1,6 @@
 export type MakingStatus = 'live' | 'wip' | 'shelved'
 
-export default interface Making {
+export default interface MakingProject {
   id: number
   title: string
   description: string

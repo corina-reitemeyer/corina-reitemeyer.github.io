@@ -321,9 +321,9 @@ export default function CommunitySection() {
           </h2>
           <p className="max-w-lg text-paper-muted">
             I care about growing capability in the people around me, and showing
-            up for the communities I&rsquo;m part of &mdash; on stage, teaching
-            salsa, volunteering, shooting event photography, or mentoring
-            someone new to the field.
+            up for the communities I&rsquo;m part of &mdash; sharing the stage
+            with talented dancers, teaching salsa, volunteering, shooting event
+            photography, or mentoring someone new to the field.
           </p>
         </div>
 

@@ -1,6 +1,7 @@
-import { useEffect, useId, useState, type Ref } from 'react'
+import { useId, type Ref } from 'react'
 import { Link } from 'react-router-dom'
 import { useScrollReveal } from '../../../lib/useScrollReveal'
+import { useMountReveal } from '../../../lib/useMountReveal'
 
 type ProjectGridItem = {
   id: number
@@ -36,14 +37,8 @@ function ProjectCard({
   linkPrefix?: string
 }) {
   const isFirst = index === 0
-  const [hasMounted, setHasMounted] = useState(false)
+  const hasMounted = useMountReveal()
   const { ref: scrollRef, isInView: scrollInView } = useScrollReveal<HTMLElement>()
-
-  useEffect(() => {
-    if (!isFirst) return
-    const frame = requestAnimationFrame(() => setHasMounted(true))
-    return () => cancelAnimationFrame(frame)
-  }, [isFirst])
 
   const isInView = isFirst ? hasMounted : scrollInView
   const revealClass = isInView ? 'is-inview' : ''

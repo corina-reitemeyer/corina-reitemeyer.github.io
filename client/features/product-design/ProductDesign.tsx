@@ -3,17 +3,21 @@ import ProjectData from '../../data/projects.json'
 import Project from '../../data/projects.types'
 import ProjectGrid from './components/ProjectGrid'
 import { ROUTES } from '../../lib/routes'
+import { useMountReveal } from '../../lib/useMountReveal'
+import { ScrollMouseIcon } from '../../components/icons/Doodles'
 
 export default function ProductDesign() {
   const headingId = useId()
-  const [isInView, setIsInView] = useState(false)
-
-  useEffect(() => {
-    const frame = requestAnimationFrame(() => setIsInView(true))
-    return () => cancelAnimationFrame(frame)
-  }, [])
+  const isInView = useMountReveal()
+  const [hasScrolled, setHasScrolled] = useState(false)
 
   const revealClass = isInView ? 'is-inview' : ''
+
+  useEffect(() => {
+    const onScroll = () => setHasScrolled(window.scrollY > 200)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   return (
     <>
@@ -51,7 +55,20 @@ export default function ProductDesign() {
             can zoom out to build the system and zoom in to ship the feature.
           </p>
         </div>
+
       </header>
+
+      <div
+        aria-hidden="true"
+        className={`pointer-events-none fixed bottom-6 right-6 z-10 flex flex-col items-center gap-2 text-paper-muted transition-opacity duration-300 sm:bottom-10 sm:right-10 ${
+          hasScrolled ? 'opacity-0' : 'opacity-100'
+        }`}
+      >
+        <span className="font-normal text-xs uppercase tracking-[0.16em]">
+          Scroll
+        </span>
+        <ScrollMouseIcon className="h-7 w-4 sm:h-8 sm:w-5" />
+      </div>
 
       <ProjectGrid
         projects={ProjectData as Project[]}

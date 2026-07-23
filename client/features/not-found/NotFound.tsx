@@ -1,19 +1,16 @@
-import { useEffect, useId, useState } from 'react'
+import { useId } from 'react'
 import { Link } from 'react-router-dom'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
+import { useMountReveal } from '../../lib/useMountReveal'
 import { ROUTES } from '../../lib/routes'
 import { HandLoop } from '../../components/icons/Doodles'
+import PrimaryButtonLink from '../../components/PrimaryButtonLink'
 
 export default function NotFound() {
   const headingId = useId()
-  const [isInView, setIsInView] = useState(false)
+  const isInView = useMountReveal()
 
   useDocumentTitle('Page not found • Corina Reitemeyer')
-
-  useEffect(() => {
-    const frame = requestAnimationFrame(() => setIsInView(true))
-    return () => cancelAnimationFrame(frame)
-  }, [])
 
   const revealClass = isInView ? 'is-inview' : ''
 
@@ -55,12 +52,7 @@ export default function NotFound() {
         <div
           className={`reveal reveal--4 flex flex-wrap items-center gap-x-8 gap-y-4 ${revealClass}`}
         >
-          <Link
-            to="/"
-            className="bg-paper text-ink hover:bg-teal-mist inline-flex min-h-[2.75rem] items-center justify-center rounded-full px-6 py-2.5 text-sm font-semibold transition-all duration-200 ease-out hover:-translate-y-0.5"
-          >
-            Back to home
-          </Link>
+          <PrimaryButtonLink to="/">Back to home</PrimaryButtonLink>
           <Link
             to={ROUTES.digitalProducts}
             className="text-teal-mid hover:text-teal-mist inline-flex items-center gap-2 text-sm font-semibold transition-colors duration-200"

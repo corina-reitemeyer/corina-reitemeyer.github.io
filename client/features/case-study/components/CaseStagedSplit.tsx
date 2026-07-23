@@ -1,14 +1,14 @@
 import { useId, useRef, useState } from 'react'
 import Lightbox from './LightBox'
 
-export type CaseStagedImage = {
+type CaseStagedImage = {
   id: string
   src: string
   alt: string
   caption: string
 }
 
-export type CaseStagedPanel = {
+type CaseStagedPanel = {
   id: string
   grid: 'full' | 'process'
   images: CaseStagedImage[]

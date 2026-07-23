@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import { renderParagraphs, type CaseStagedParagraph } from './CaseStagedStory'
 import Lightbox from './LightBox'
 
-export type CaseStagedProcessEntry = {
+type CaseStagedProcessEntry = {
   id: string
   title: string
   body: CaseStagedParagraph[]

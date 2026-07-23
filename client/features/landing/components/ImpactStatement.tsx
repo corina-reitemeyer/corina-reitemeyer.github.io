@@ -1,4 +1,5 @@
 import { useEffect, useId, useState } from 'react'
+import { useMountReveal } from '../../../lib/useMountReveal'
 import { HandAsterisk, HandSquiggle, ScrollMouseIcon } from '../../../components/icons/Doodles'
 
 type Keyword = {
@@ -38,14 +39,9 @@ const keywords: Keyword[] = [
 export default function ImpactStatement() {
   const headingId = useId()
   const panelId = useId()
-  const [isInView, setIsInView] = useState(false)
+  const isInView = useMountReveal()
   const [activeId, setActiveId] = useState<string | null>(null)
   const [displayKeyword, setDisplayKeyword] = useState<Keyword | null>(null)
-
-  useEffect(() => {
-    const frame = requestAnimationFrame(() => setIsInView(true))
-    return () => cancelAnimationFrame(frame)
-  }, [])
 
   const revealClass = isInView ? 'is-inview' : ''
   const activeKeyword = keywords.find((k) => k.id === activeId) ?? null
@@ -95,7 +91,7 @@ export default function ImpactStatement() {
         <p
           className={`reveal reveal--1 text-teal-mid mb-2 flex items-center gap-2 font-normal text-xs uppercase tracking-[0.16em] sm:mb-3 ${revealClass}`}
         >
-          <span aria-hidden="true" className="relative flex h-1.5 w-1.5">
+          <span aria-hidden="true" className="relative top-px flex h-1.5 w-1.5">
             <span className="bg-teal-mid absolute inline-flex h-full w-full animate-ping rounded-full opacity-75" />
             <span className="bg-teal-mid relative inline-flex h-1.5 w-1.5 rounded-full shadow-[0_0_6px_var(--teal-mid)]" />
           </span>

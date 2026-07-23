@@ -45,7 +45,7 @@ function RippleDrawing(props: SVGProps<SVGSVGElement>) {
   )
 }
 
-export type CaseStagedListItem = {
+type CaseStagedListItem = {
   title: string
   description: string | CaseStagedParagraph[]
 }

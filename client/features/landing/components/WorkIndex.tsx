@@ -75,7 +75,7 @@ export default function WorkIndex({ projects, linkPrefix }: WorkIndexProps) {
           <div className="hidden lg:block">
             {active && (
               <>
-                <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-charcoal-soft">
+                <div className="aspect-[4/3] overflow-hidden bg-charcoal-soft">
                   <img
                     src={active.previewImage ?? active.projectImage}
                     alt=""

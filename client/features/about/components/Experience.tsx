@@ -1,7 +1,7 @@
 import { useId } from 'react'
 import { useScrollReveal } from '../../../lib/useScrollReveal'
 
-export type ExperienceItem = {
+type ExperienceItem = {
   id: string
   company: string
   title: string

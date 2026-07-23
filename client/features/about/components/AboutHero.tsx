@@ -1,4 +1,5 @@
-import { useEffect, useId, useState } from 'react'
+import { useId } from 'react'
+import { useMountReveal } from '../../../lib/useMountReveal'
 
 const meta = [
   { label: 'Based', value: 'Melbourne, Australia' },
@@ -8,12 +9,7 @@ const meta = [
 
 export default function AboutHero() {
   const headingId = useId()
-  const [isInView, setIsInView] = useState(false)
-
-  useEffect(() => {
-    const frame = requestAnimationFrame(() => setIsInView(true))
-    return () => cancelAnimationFrame(frame)
-  }, [])
+  const isInView = useMountReveal()
 
   const revealClass = isInView ? 'is-inview' : ''
 

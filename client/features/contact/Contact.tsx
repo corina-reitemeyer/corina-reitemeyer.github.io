@@ -1,20 +1,17 @@
-import { useEffect, useId, useState, type CSSProperties } from 'react'
+import { useId, type CSSProperties } from 'react'
 import contactData from '../../data/contact.json'
 import type ContactData from '../../data/contact.types'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
+import { useMountReveal } from '../../lib/useMountReveal'
+import PrimaryButtonLink from '../../components/PrimaryButtonLink'
 import HandUnderline from './components/HandUnderline'
 
 export default function Contact() {
   const data: ContactData = contactData
   const headingId = useId()
-  const [isInView, setIsInView] = useState(false)
+  const isInView = useMountReveal()
 
   useDocumentTitle('Contact • Corina Reitemeyer')
-
-  useEffect(() => {
-    const frame = requestAnimationFrame(() => setIsInView(true))
-    return () => cancelAnimationFrame(frame)
-  }, [])
 
   const revealClass = isInView ? 'is-inview' : ''
 
@@ -77,14 +74,13 @@ export default function Contact() {
             <p className="text-paper-muted mb-2 font-normal text-xs uppercase tracking-[0.12em]">
               {data.meetingLabel}
             </p>
-            <a
+            <PrimaryButtonLink
               href={data.calendlyUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-paper text-ink hover:bg-teal-mist mb-3 mt-3 inline-flex min-h-[2.75rem] items-center justify-center rounded-full px-6 py-2.5 text-sm font-semibold transition-all duration-200 ease-out hover:-translate-y-0.5"
+              external
+              className="mb-3 mt-3"
             >
               Pick a time
-            </a>
+            </PrimaryButtonLink>
             <p className="text-paper-muted max-w-[22rem] text-sm leading-relaxed">
               {data.meetingHint}
             </p>

@@ -1,8 +1,9 @@
-import { useEffect, useId, useState } from 'react'
+import { useId } from 'react'
 import { Link } from 'react-router-dom'
 import MakingData from './making.json'
 import type MakingProject from './making.types'
 import { useScrollReveal } from '../../lib/useScrollReveal'
+import { useMountReveal } from '../../lib/useMountReveal'
 import { HandAsterisk, HandSquiggleCompact } from '../../components/icons/Doodles'
 
 const STATUS_LABEL: Record<MakingProject['status'], string> = {
@@ -21,14 +22,8 @@ function ProjectTile({ project, index }: { project: MakingProject; index: number
   // Matches lg:grid-cols-3 below, so the whole first row is visible on load
   // (rather than just the first card) on the widest layout.
   const isFirstRow = index < 3
-  const [hasMounted, setHasMounted] = useState(false)
+  const hasMounted = useMountReveal()
   const { ref: scrollRef, isInView: scrollInView } = useScrollReveal<HTMLLIElement>()
-
-  useEffect(() => {
-    if (!isFirstRow) return
-    const frame = requestAnimationFrame(() => setHasMounted(true))
-    return () => cancelAnimationFrame(frame)
-  }, [isFirstRow])
 
   const isInView = isFirstRow ? hasMounted : scrollInView
   const revealClass = isInView ? 'is-inview' : ''
@@ -105,13 +100,8 @@ function ProjectTile({ project, index }: { project: MakingProject; index: number
 export default function Making() {
   const projects = MakingData as MakingProject[]
   const headingId = useId()
-  const [isInView, setIsInView] = useState(false)
+  const isInView = useMountReveal()
   const { ref: gridRef, isInView: gridInView } = useScrollReveal<HTMLElement>()
-
-  useEffect(() => {
-    const frame = requestAnimationFrame(() => setIsInView(true))
-    return () => cancelAnimationFrame(frame)
-  }, [])
 
   const revealClass = isInView ? 'is-inview' : ''
   const gridRevealClass = gridInView ? 'is-inview' : ''

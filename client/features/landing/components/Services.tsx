@@ -95,7 +95,7 @@ export default function Services() {
                   aria-hidden="true"
                   className="block whitespace-nowrap text-right text-xs font-normal uppercase tracking-[0.12em] text-teal-mid opacity-0 transition-opacity duration-150 ease-out group-hover:opacity-100 group-focus-visible:opacity-100"
                 >
-                  Inquire →
+                  Enquire →
                 </span>
               </Link>
             </li>

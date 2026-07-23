@@ -1,4 +1,4 @@
-export type MakingStatus = 'live' | 'wip' | 'shelved'
+type MakingStatus = 'live' | 'wip' | 'shelved'
 
 export default interface MakingProject {
   id: number

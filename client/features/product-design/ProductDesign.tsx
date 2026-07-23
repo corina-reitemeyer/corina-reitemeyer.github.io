@@ -60,7 +60,7 @@ export default function ProductDesign() {
 
       <div
         aria-hidden="true"
-        className="flex flex-col items-center gap-2 py-8 text-paper-muted sm:hidden"
+        className="flex flex-col items-center gap-2 py-3 text-paper-muted sm:hidden"
       >
         <span className="font-normal text-xs uppercase tracking-[0.16em]">
           Scroll

@@ -36,7 +36,6 @@ const tracks: Track[] = [
       'Mentoring',
       'Instructional Design',
       'Accessibility Advocacy',
-      'Clear Communication',
     ],
   },
 ]

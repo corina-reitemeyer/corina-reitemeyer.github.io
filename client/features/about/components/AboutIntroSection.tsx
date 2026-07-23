@@ -59,14 +59,8 @@ export default function AboutIntroSection() {
             src="/images/corina-about.webp"
             alt="Corina Reitemeyer"
             loading="lazy"
-            className="mb-4 aspect-[4/5] w-full max-w-[14rem] rounded-2xl object-cover motion-safe:hover:animate-wiggle"
+            className="aspect-[4/5] w-full max-w-[14rem] rounded-2xl object-cover motion-safe:hover:animate-wiggle"
           />
-          <p
-            className="margin-note ink-write !text-paper"
-            aria-hidden="true"
-          >
-            ^INFJ, but sometimes a selective extrovert
-          </p>
         </div>
       </div>
     </section>

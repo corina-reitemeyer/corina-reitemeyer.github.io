@@ -60,7 +60,17 @@ export default function ProductDesign() {
 
       <div
         aria-hidden="true"
-        className={`pointer-events-none fixed bottom-6 right-6 z-10 flex flex-col items-center gap-2 text-paper-muted transition-opacity duration-300 sm:bottom-10 sm:right-10 ${
+        className="flex flex-col items-center gap-2 py-8 text-paper-muted sm:hidden"
+      >
+        <span className="font-normal text-xs uppercase tracking-[0.16em]">
+          Scroll
+        </span>
+        <ScrollMouseIcon className="h-7 w-4" />
+      </div>
+
+      <div
+        aria-hidden="true"
+        className={`pointer-events-none fixed bottom-6 right-6 z-10 hidden flex-col items-center gap-2 text-paper-muted transition-opacity duration-300 sm:flex sm:bottom-10 sm:right-10 ${
           hasScrolled ? 'opacity-0' : 'opacity-100'
         }`}
       >

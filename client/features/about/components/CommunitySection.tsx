@@ -93,7 +93,13 @@ type ControlButtonProps = {
   children: ReactNode
 }
 
-function ControlButton({ onClick, label, position, pressed, children }: ControlButtonProps) {
+function ControlButton({
+  onClick,
+  label,
+  position,
+  pressed,
+  children,
+}: ControlButtonProps) {
   return (
     <button
       type="button"
@@ -168,7 +174,8 @@ function PhotoCarousel() {
     const el = scrollRef.current
     if (!el || !isDraggingRef.current) return
     e.preventDefault()
-    el.scrollLeft = dragStartScrollLeftRef.current - (e.pageX - dragStartXRef.current)
+    el.scrollLeft =
+      dragStartScrollLeftRef.current - (e.pageX - dragStartXRef.current)
   }
 
   const stopDragging = useCallback(() => {
@@ -223,8 +230,8 @@ function PhotoCarousel() {
       onMouseLeave={() => setIsHovering(false)}
     >
       <div className="relative min-w-0">
-        <div className="from-ink via-ink/50 pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r to-transparent sm:w-28" />
-        <div className="from-ink via-ink/50 pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l to-transparent sm:w-28" />
+        <div className="via-ink/50 pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-ink to-transparent sm:w-28" />
+        <div className="via-ink/50 pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-ink to-transparent sm:w-28" />
 
         {/* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/no-noninteractive-tabindex -- draggable scroll region; tabIndex is the standard fix for axe's scrollable-region-focusable rule, letting native arrow-key scrolling work once focused */}
         <div
@@ -237,7 +244,7 @@ function PhotoCarousel() {
           onMouseMove={handleDragMove}
           onMouseUp={stopDragging}
           onMouseLeave={stopDragging}
-          className="custom-scrollbar-hide cursor-grab select-none overflow-x-auto active:cursor-grabbing focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus"
+          className="custom-scrollbar-hide cursor-grab select-none overflow-x-auto focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus active:cursor-grabbing"
         >
           <div className="flex gap-6">
             {loopedPhotos.map((photo) => (
@@ -276,7 +283,11 @@ function PhotoCarousel() {
           position="bottom-4 right-4"
           pressed={isPaused}
         >
-          {isPaused ? <PlayIcon className="h-4 w-4" /> : <PauseIcon className="h-4 w-4" />}
+          {isPaused ? (
+            <PlayIcon className="h-4 w-4" />
+          ) : (
+            <PauseIcon className="h-4 w-4" />
+          )}
         </ControlButton>
       </div>
     </div>
@@ -304,20 +315,19 @@ export default function CommunitySection() {
           </p>
           <h2
             id={headingId}
-            className="text-[clamp(2rem,5vw,3rem)] font-bold leading-[0.98] tracking-[-0.03em] text-paper"
+            className="mb-4 text-[clamp(2rem,5vw,3rem)] font-bold leading-[0.98] tracking-[-0.03em] text-paper"
           >
             Latin dance and the tech community
           </h2>
+          <p className="max-w-lg text-paper-muted">
+            I care about growing capability in the people around me, and showing
+            up for the communities I&rsquo;m part of. Whether that&rsquo;s
+            performing on stage, teaching salsa, volunteering, shooting event
+            photography, or mentoring someone finding their feet in a new field.
+          </p>
         </div>
 
         <div className={`reveal reveal--2 ${revealClass}`}>
-          <p className="text-paper-muted max-w-measure mb-8">
-            I care about growing capability in the people around me, and showing
-            up for the communities I&rsquo;m part of, whether that&rsquo;s
-            performing, teaching salsa, shooting event photography, or mentoring
-            someone finding their feet in a new field.
-          </p>
-
           <PhotoCarousel />
         </div>
       </div>

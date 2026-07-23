@@ -18,16 +18,16 @@ const photos: Photo[] = [
     alt: 'Corina with the Salsa Therapy dance school performers backstage, 2024',
   },
   {
-    src: '/images/community/corina-jono-wellington-latin-showcase.webp',
-    alt: 'Corina performing at the Wellington Latin Showcase',
-  },
-  {
     src: '/images/community/corina-mentor-summer-of-tech.webp',
     alt: 'Corina mentoring a student during a Summer of Tech session',
   },
   {
     src: '/images/community/corina-event-photo.webp',
     alt: 'Corina photographing at a tech event',
+  },
+  {
+    src: '/images/community/nz-salsa-congress-2023.webp',
+    alt: 'Corina on stage at NZ Salsa Congress with the Salsa Therapy dance school performers',
   },
 ]
 

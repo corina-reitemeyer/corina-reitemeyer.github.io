@@ -97,7 +97,7 @@ export default function SuiteFilesDesignSystem() {
               'The designer who built the foundations and worked with the brand consultant had left. I inherited their decisions without always knowing the reasoning behind them.',
               {
                 bold: true,
-                text: 'Evolving a system responsibly means understanding why things are the way they are before changing them. That takes longer than starting from scratch, and it requires a different kind of judgment.',
+                text: 'Evolving a system responsibly means understanding why things are the way they are before changing them. That takes longer than starting from scratch, and it requires a different kind of judgement.',
               },
             ],
           },

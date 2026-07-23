@@ -113,7 +113,7 @@ export default function ImpactStatement() {
             Corina is a digital product designer who bridges{' '}
             {renderKeyword(keywords[0])}, {renderKeyword(keywords[1])}, and{' '}
             {renderKeyword(keywords[2])}, using AI to ship it herself, with{' '}
-            {renderKeyword(keywords[3])} always at the center.
+            {renderKeyword(keywords[3])} always at the core.
           </p>
 
           {activeKeyword && (

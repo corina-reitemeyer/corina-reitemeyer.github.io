@@ -47,7 +47,7 @@ export default function BuildingAdaptiveTeams() {
                 src: '/images/elearning/final-work/storyline-activity-screens.webp',
                 alt: 'Storyline branching activity: Carl choosing how to respond in a follow-up conversation, with three response options',
                 caption:
-                  'The Storyline branching activity. The learner watches a dialog between Carl and Jamie, and at certain points chooses dialog choices for Carl.',
+                  'The Storyline branching activity. The learner watches a dialogue between Carl and Jamie, and at certain points chooses dialogue choices for Carl.',
               },
             ],
           },
@@ -354,7 +354,7 @@ export default function BuildingAdaptiveTeams() {
           {
             title: 'Edmondson: psychological safety',
             description:
-              'The course models the conditions it teaches. No shame for wrong answers, no judgment in reflection prompts, permission to not know something yet.',
+              'The course models the conditions it teaches. No shame for wrong answers, no judgement in reflection prompts, permission to not know something yet.',
           },
           {
             title: 'Mezirow: transformative learning',
@@ -387,7 +387,7 @@ export default function BuildingAdaptiveTeams() {
       <CaseStagedStory
         title="AI in this project"
         body={[
-          'AI tools were part of this project on purpose, not to replace design judgment, but to speed up production and try out ideas faster.',
+          'AI tools were part of this project on purpose, not to replace design judgement, but to speed up production and try out ideas faster.',
         ]}
       />
 

@@ -106,7 +106,7 @@ export default function SuiteFilesAISummary() {
         category="The Approach"
         title="Principles before pixels"
         body={[
-          'Before opening Figma, I defined three human-AI principles to guide every decision: transparency, editability, and user agency. Rather than treating AI as an add-on, I designed it as a supporting layer: automation where it helped, human judgment where it mattered.',
+          'Before opening Figma, I defined three human-AI principles to guide every decision: transparency, editability, and user agency. Rather than treating AI as an add-on, I designed it as a supporting layer: automation where it helped, human judgement where it mattered.',
           'Having a framework meant design decisions could be evaluated against something concrete, not just instinct, and gave the team a shared language for trade-offs as constraints changed.',
         ]}
         image={{

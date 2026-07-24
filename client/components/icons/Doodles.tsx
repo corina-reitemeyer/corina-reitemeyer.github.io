@@ -99,7 +99,14 @@ export function HandLoop(props: SVGProps<SVGSVGElement>) {
   )
 }
 
-export function ScrollMouseIcon(props: SVGProps<SVGSVGElement>) {
+type ScrollMouseIconProps = SVGProps<SVGSVGElement> & {
+  outlineWidth?: number
+}
+
+export function ScrollMouseIcon({
+  outlineWidth = 1.5,
+  ...props
+}: ScrollMouseIconProps) {
   return (
     <svg
       viewBox="0 0 24 40"
@@ -115,7 +122,7 @@ export function ScrollMouseIcon(props: SVGProps<SVGSVGElement>) {
         height="37.5"
         rx="10.75"
         stroke="currentColor"
-        strokeWidth="1.5"
+        strokeWidth={outlineWidth}
       />
       <circle
         className="motion-safe:animate-scroll-wheel"

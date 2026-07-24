@@ -1,6 +1,7 @@
 import { useEffect, useId, useRef } from 'react'
 import { useReducedMotion } from 'framer-motion'
 import { AsciiLiquid } from './AsciiLiquid'
+import { ScrollMouseIcon } from '../../../components/icons/Doodles'
 
 const lines = ['From sketch', 'to shipped']
 
@@ -10,10 +11,14 @@ const lineWindows: [number, number][] = [
   [0.25, 1],
 ]
 
+/** The scroll cue fades out over the first slice of progress, handing off to the words as they arrive. */
+const ICON_FADE_END = 0.2
+
 export default function LiquidBanner() {
   const headingId = useId()
   const trackRef = useRef<HTMLDivElement>(null)
   const fieldRef = useRef<HTMLDivElement>(null)
+  const iconRef = useRef<HTMLDivElement>(null)
   const lineRefs = useRef<(HTMLSpanElement | null)[]>([])
   const shouldReduceMotion = useReducedMotion()
 
@@ -39,6 +44,13 @@ export default function LiquidBanner() {
       const field = fieldRef.current
       if (field) {
         field.style.transform = `translateY(${(progress - 0.5) * 48}px)`
+      }
+
+      const icon = iconRef.current
+      if (icon) {
+        icon.style.opacity = String(
+          Math.max(0, 1 - progress / ICON_FADE_END),
+        )
       }
     }
 
@@ -88,6 +100,19 @@ export default function LiquidBanner() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(to_bottom,var(--ink)_0%,transparent_30%,transparent_70%,var(--ink)_100%)]"
         />
+
+        {!shouldReduceMotion && (
+          <div
+            ref={iconRef}
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 z-10 flex flex-col items-center justify-center gap-2 text-paper"
+          >
+            <span className="font-normal text-xs uppercase tracking-[0.16em]">
+              Scroll
+            </span>
+            <ScrollMouseIcon outlineWidth={2} className="h-7 w-4 sm:h-8 sm:w-5" />
+          </div>
+        )}
 
         <h2
           id={headingId}

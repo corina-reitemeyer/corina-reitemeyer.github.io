@@ -1,9 +1,19 @@
 [
   {
+    "id": 2,
+    "title": "Figma Plugin - AI-Readiness checker",
+    "description": "A Figma plugin that flags what's not AI-ready in a component, right in the canvas: what's broken, why, and how to fix it. No chat log to reread, no mental checklist.",
+    "category": "Plugin",
+    "status": "wip",
+    "year": "2026",
+    "image": "/images/portfolio/making/figma-plugin-ai-readiness.webp",
+    "note": "still going"
+  },
+  {
     "id": 3,
     "title": "AXON - Accessible Design system",
     "description": "A test of how far AI can take accessible design systems, built with a fully AI-assisted workflow from Figma Make to Figma MCP/Claude to Storybook.",
-    "category": "Experiment",
+    "category": "Resource",
     "status": "wip",
     "year": "2026",
     "image": "/images/portfolio/making/axon-design-system-case-study.webp",
@@ -13,7 +23,7 @@
     "id": 4,
     "title": "Building Adaptive Teams",
     "description": "A fictional microlearning course to emulate the ADDIE process of learning design.",
-    "category": "Side project",
+    "category": "Course",
     "status": "live",
     "year": "2026",
     "image": "/images/elearning/final-work/building-adaptive-teams-hero.webp",

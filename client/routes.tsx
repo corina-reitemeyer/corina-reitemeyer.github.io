@@ -22,7 +22,8 @@ const routes = createRoutesFromElements(
       path={`${ROUTES.learningExperience}/:slug`}
       element={<CaseStudy />}
     />
-    <Route path="/playground" element={<Making />} />
+    <Route path={ROUTES.playground} element={<Making />} />
+    <Route path={`${ROUTES.playground}/:slug`} element={<CaseStudy />} />
     <Route path="about" element={<About />} />
     <Route path="/contact" element={<Contact />} />
     <Route path="*" element={<NotFound />} />

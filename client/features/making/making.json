@@ -1,15 +1,5 @@
 [
   {
-    "id": 2,
-    "title": "Figma Plugin - AI-Readiness checker",
-    "description": "A Figma plugin that flags what's not AI-ready in a component, right in the canvas: what's broken, why, and how to fix it. No chat log to reread, no mental checklist.",
-    "category": "Plugin",
-    "status": "wip",
-    "year": "2026",
-    "image": "/images/portfolio/making/figma-plugin-ai-readiness.webp",
-    "note": "still going"
-  },
-  {
     "id": 3,
     "title": "AXON - Accessible Design system",
     "description": "A test of how far AI can take accessible design systems, built with a fully AI-assisted workflow from Figma Make to Figma MCP/Claude to Storybook.",
@@ -18,6 +8,16 @@
     "year": "2026",
     "image": "/images/portfolio/making/axon-design-system-case-study.webp",
     "note": "still going"
+  },
+  {
+    "id": 2,
+    "title": "Agent-Readiness checker",
+    "description": "Figma's AI agent buried my fixes in a chat log I'd forget by the third message. This shows me right on the canvas: what's broken, why, and how to fix it.",
+    "category": "Plugin",
+    "status": "completed",
+    "year": "2026",
+    "image": "/images/portfolio/making/plugin-overview.webp",
+    "href": "/playground/figma-ai-readiness-checker"
   },
   {
     "id": 4,

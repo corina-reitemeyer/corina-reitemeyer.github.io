@@ -4,16 +4,17 @@ import MOEDesignSystem from './MOEDesignSystem'
 import SuiteFilesDesignSystem from './SuiteFilesDesignSystem'
 import SuiteFilesAISummary from './SuiteFilesAISummary'
 import BuildingAdaptiveTeams from './BuildingAdaptiveTeams'
+import FigmaAiReadinessChecker from './FigmaAiReadinessChecker'
 import { ROUTES } from '../../lib/routes'
 
 export default function CaseStudy() {
   const { slug } = useParams()
   const location = useLocation()
-  const backToProjectsPath = location.pathname.startsWith(
-    ROUTES.learningExperience,
-  )
-    ? '/playground'
-    : ROUTES.digitalProducts
+  const backToProjectsPath =
+    location.pathname.startsWith(ROUTES.learningExperience) ||
+    location.pathname.startsWith(`${ROUTES.playground}/`)
+      ? ROUTES.playground
+      : ROUTES.digitalProducts
 
   const renderCaseStudy = () => {
     switch (slug) {
@@ -27,6 +28,8 @@ export default function CaseStudy() {
         return <SuiteFilesDesignSystem />
       case 'building-adaptive-teams':
         return <BuildingAdaptiveTeams />
+      case 'figma-ai-readiness-checker':
+        return <FigmaAiReadinessChecker />
       default:
         return (
           <section className="bg-ink flex min-h-screen flex-col items-center justify-center px-6 text-center">

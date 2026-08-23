@@ -9,12 +9,14 @@ import { HandAsterisk, HandSquiggleCompact } from '../../components/icons/Doodle
 const STATUS_LABEL: Record<MakingProject['status'], string> = {
   live: 'Live',
   wip: 'In progress',
+  completed: 'Completed',
   shelved: 'Shelved',
 }
 
 const STATUS_CLASS: Record<MakingProject['status'], string> = {
   live: 'text-teal-mid',
   wip: 'text-paper-soft',
+  completed: 'text-teal-mid',
   shelved: 'text-paper-muted',
 }
 

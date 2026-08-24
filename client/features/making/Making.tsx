@@ -7,16 +7,16 @@ import { useMountReveal } from '../../lib/useMountReveal'
 import { HandAsterisk, HandSquiggleCompact } from '../../components/icons/Doodles'
 
 const STATUS_LABEL: Record<MakingProject['status'], string> = {
-  live: 'Live',
+  live: 'Completed',
   wip: 'In progress',
-  completed: 'Completed',
+  testing: 'Testing',
   shelved: 'Shelved',
 }
 
 const STATUS_CLASS: Record<MakingProject['status'], string> = {
   live: 'text-teal-mid',
-  wip: 'text-paper-soft',
-  completed: 'text-teal-mid',
+  wip: 'text-teal-mid',
+  testing: 'text-teal-mid',
   shelved: 'text-paper-muted',
 }
 

@@ -14,7 +14,7 @@
     "title": "Agent-Readiness checker",
     "description": "Figma's AI agent buried my fixes in a chat log I'd forget by the third message. This shows me right on the canvas: what's broken, why, and how to fix it.",
     "category": "Plugin",
-    "status": "completed",
+    "status": "testing",
     "year": "2026",
     "image": "/images/portfolio/making/plugin-overview.webp"
   },

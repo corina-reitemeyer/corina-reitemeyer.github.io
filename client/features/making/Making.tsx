@@ -153,7 +153,7 @@ export default function Making() {
       <section
         ref={gridRef}
         aria-label="Playground projects"
-        className="bg-ink w-full py-10 sm:py-14"
+        className="bg-ink w-full py-16 sm:py-24"
       >
         <div className="mx-auto max-w-6xl px-6 sm:px-10 xl:px-0">
           <div

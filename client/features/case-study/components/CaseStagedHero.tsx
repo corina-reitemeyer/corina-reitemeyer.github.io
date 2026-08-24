@@ -57,7 +57,7 @@ export default function CaseStagedHero({
         </div>
         <h1
           id="case-staged-heading"
-          className="text-paper relative max-w-[16ch] text-[clamp(2.75rem,8vw,6rem)] font-bold leading-[0.95] tracking-[-0.03em]"
+          className="text-paper relative max-w-[20ch] text-[clamp(2.75rem,8vw,6rem)] font-bold leading-[0.95] tracking-[-0.03em]"
         >
           {title}
         </h1>

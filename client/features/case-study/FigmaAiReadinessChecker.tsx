@@ -3,6 +3,7 @@ import { ROUTES } from '../../lib/routes'
 import CaseStagedHero from './components/CaseStagedHero'
 import CaseStagedSplit from './components/CaseStagedSplit'
 import CaseStagedStory from './components/CaseStagedStory'
+import CaseStagedProcess from './components/CaseStagedProcess'
 
 export default function FigmaAiReadinessChecker() {
   useCaseStagedChrome()
@@ -13,7 +14,7 @@ export default function FigmaAiReadinessChecker() {
         backHref={ROUTES.playground}
         backLabel="Back to playground"
         meta="Playground · Figma plugin · Completed, still testing · 2026"
-        title="A Figma plugin that flags what's not AI-ready in a component."
+        title="A Figma plugin that flags what's not AI‑ready in a component."
         marginNote="testing now"
       />
 
@@ -67,6 +68,39 @@ export default function FigmaAiReadinessChecker() {
         ]}
       />
 
+      <CaseStagedProcess
+        heading="The old loop"
+        loopLabel="Check again loops straight back into the chat. Each pass starts with less certainty than the one before."
+        steps={[
+          {
+            id: 'old-design',
+            label: 'Design',
+            description: 'Finish a component or screen, feeling good about it.',
+          },
+          {
+            id: 'old-ask',
+            groupLabel: 'The chat loop',
+            label: 'Ask Figma AI',
+            description: 'Check readiness in the native chat, hopeful this will be quick.',
+          },
+          {
+            id: 'old-list',
+            label: 'Get a list back',
+            description: "Three messages, no severity, no jump-to-element. I'm already losing the thread.",
+          },
+          {
+            id: 'old-refine',
+            label: 'Refine from memory',
+            description: "Try to fix what I think I remember, guessing more than fixing.",
+          },
+          {
+            id: 'old-check',
+            label: 'Check again',
+            description: 'More confused than when I started.',
+          },
+        ]}
+      />
+
       <CaseStagedStory
         category="Creating the solution"
         title="From drafts to ground rules"
@@ -109,6 +143,40 @@ export default function FigmaAiReadinessChecker() {
         body={[
           "Press a button, run a quick scan, and the plugin surfaces what's flagged. It doesn't just point at the quick fixes, it helps me understand why something needs adjusting and how, right where the element sits.",
           "Agent view goes a layer deeper: properties, tokens, and values laid bare, so I can see if I've missed something. It's like an X-ray for the design.",
+        ]}
+      />
+
+      <CaseStagedProcess
+        heading="The new loop"
+        loopLabel="Fix and rescan repeats until the scan comes back clean, before I ever open a chat window."
+        steps={[
+          {
+            id: 'new-design',
+            label: 'Design',
+            description: 'Finish a component or screen, feeling good about it.',
+          },
+          {
+            id: 'new-scan',
+            groupLabel: 'The new loop',
+            label: 'Run the plugin',
+            description: 'One button, instant scan of the frame. No dread this time.',
+          },
+          {
+            id: 'new-fix',
+            label: "Fix what's flagged",
+            description: "What's broken, why, and how, with a jump into the Agent view for the full picture. Understanding instead of guessing, for once.",
+          },
+          {
+            id: 'new-rescan',
+            label: 'Rescan',
+            description: 'Confirm the fix landed. Relief, not guesswork.',
+          },
+          {
+            id: 'new-confirm',
+            groupLabel: 'Confidence check',
+            label: 'Compare notes',
+            description: 'Figma AI, plus my coding agents, just to be sure. Confidence, not blind trust.',
+          },
         ]}
       />
 

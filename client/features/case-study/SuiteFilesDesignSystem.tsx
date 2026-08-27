@@ -21,10 +21,11 @@ export default function SuiteFilesDesignSystem() {
         railLede="Inherited, evolved, and scaled the design system, stress-tested the brand in product, and partnered closely with engineering to keep design and code in sync."
         aboutParagraphs={[
           "SuiteFiles is a document management and e-signing platform built for accounting professionals. When I joined, a design system existed, started by a previous design lead and functional enough for where the product was at the time. But the product wasn't staying still. A major rebrand was underway, the team was changing and growing, and features were shipping faster than the system could keep up with.",
+          "I moved on to a new role a few months into this work. The audit was done and the foundational components were rebuilt under the new brand, but most of the product was still unmigrated when I left. This case study reflects that: where the system stood at handoff, not a finished rollout.",
         ]}
         meta={[
           { label: 'Domain', value: 'SaaS (B2B)' },
-          { label: 'Year', value: '2025' },
+          { label: 'Timeline', value: 'A few months, ongoing at handoff' },
           { label: 'My Role', value: 'Senior Product Designer' },
           {
             label: 'Team',
@@ -42,7 +43,7 @@ export default function SuiteFilesDesignSystem() {
                 src: '/images/product/suitefiles-design-system-hero.webp',
                 alt: 'Figma workspace showing SuiteFiles design system components and tokens',
                 caption:
-                  'The new brand and component patterns applied consistently across the product through the design system.',
+                  'The new brand and component patterns, as they were rebuilt into the design system.',
               },
             ],
           },
@@ -176,6 +177,20 @@ export default function SuiteFilesDesignSystem() {
       />
 
       <CaseStagedStory
+        title="What the documentation actually looked like"
+        body={[
+          "Every component page followed the same shape: anatomy, interactive states, and the rules governing edge cases, laid out next to a live, restrained example. The pagination component below shows the pattern: default, selected, hover, and disabled states spelled out, along with the truncation rules for when the page count grows past what's visible.",
+          "Specific enough that an engineer could implement it without needing intent explained in a meeting first.",
+        ]}
+        image={{
+          src: '/images/process/sfds-guidelines.webp',
+          alt: 'Figma guidelines page for the Pagination component, showing its anatomy, interactive states, and truncation rules next to a live example',
+          caption:
+            "A component guidelines page in Figma: anatomy, interactive states, and truncation rules, documented next to a live example.",
+        }}
+      />
+
+      <CaseStagedStory
         category="The Outcome"
         title="Constraints & trade-offs"
         items={[
@@ -203,29 +218,29 @@ export default function SuiteFilesDesignSystem() {
       />
 
       <CaseStagedStory
-        title="Results"
+        title="Where it stood at handoff"
         itemsLayout="grid"
         spacingBottom="loose"
         items={[
           {
-            title: 'Brand applied consistently',
+            title: 'Foundational components rebuilt',
             description:
-              'The rebrand rolled out through the system rather than component by component, ensuring visual consistency without requiring anyone to interpret the guidelines independently each time.',
+              'Buttons, toggles, checkboxes, and the other base patterns everything else inherits from, shipped under the new brand.',
           },
           {
-            title: 'Delivery kept moving',
+            title: 'A brand-to-product feedback loop',
             description:
-              'By evolving the system iteratively rather than rebuilding from scratch, product development never stopped. The system grew alongside delivery, not ahead of it.',
+              'Established with the brand consultant, catching mismatches between guidelines and real product before they shipped, not after.',
           },
           {
-            title: 'Shared design and dev language',
+            title: 'Documentation engineers could use',
             description:
-              'Aligned component naming, behaviour, and documentation meant engineers could implement components confidently, reducing back-and-forth and keeping design and code in sync.',
+              'Specific enough to implement without a meeting, and repeatable, whoever wrote the next component page could follow the same shape.',
           },
           {
-            title: 'A foundation ready to scale',
+            title: 'Most of the product still unmigrated',
             description:
-              'Foundational components established first meant every new pattern had something solid to inherit from, including for designers who joined after the system was in place.',
+              "The product was still shipping faster than the system could keep pace with when I left. Stated plainly here rather than glossed over: this was a foundation handed off mid-build, not a finished rollout.",
           },
         ]}
       />
@@ -236,6 +251,7 @@ export default function SuiteFilesDesignSystem() {
         body={[
           "Inheriting a system mid-rebrand taught me that evolving someone else's work responsibly takes longer than starting fresh, but produces better outcomes. You have to understand why things are the way they are before you change them.",
           'Brand and system work are not sequential, they inform each other. Some of the best brand refinements in this project came from stress-testing guidelines in product, not from a style guide review.',
+          "I moved on before this one was finished, which turned \"designing for a team that didn't exist yet\" into something more literal than I expected. The documentation I wrote for a designer who hadn't been hired was, in the end, read by whoever picked this up after me.",
           {
             bold: true,
             text: "Being the sole designer on a system changes how you write documentation. You stop writing for yourself and start writing for someone you haven't met yet.",

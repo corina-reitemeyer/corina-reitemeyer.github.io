@@ -55,7 +55,7 @@ export function renderParagraphs(paragraphs: CaseStagedParagraph[]) {
     typeof p === 'string' ? (
       <p key={i}>{p}</p>
     ) : (
-      <p key={i} className={p.bold ? 'text-paper font-semibold' : undefined}>
+      <p key={i} className={p.bold ? 'text-teal-mid' : undefined}>
         {p.text}
       </p>
     ),

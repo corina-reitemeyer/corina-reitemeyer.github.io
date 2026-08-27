@@ -32,7 +32,7 @@ function ProcessEntryItem({ title, body, image }: CaseStagedProcessEntry) {
       <div className="text-paper-muted mb-5 max-w-measure space-y-3 text-sm leading-relaxed sm:text-base">
         {renderParagraphs(body)}
       </div>
-      <figure className="max-w-md">
+      <figure className="max-w-lg">
         <button
           ref={triggerRef}
           type="button"

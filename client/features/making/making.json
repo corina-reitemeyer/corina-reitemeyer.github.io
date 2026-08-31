@@ -16,7 +16,8 @@
     "category": "Plugin",
     "status": "testing",
     "year": "2026",
-    "image": "/images/portfolio/making/plugin-overview.webp"
+    "image": "/images/portfolio/making/plugin-overview.webp",
+    "href": "/playground/figma-ai-readiness-checker"
   },
   {
     "id": 4,

@@ -3,12 +3,25 @@ import { useScrollReveal } from '../../../lib/useScrollReveal'
 import Lightbox from './LightBox'
 import { renderParagraphs, type CaseStagedParagraph } from './CaseStagedStory'
 
+type LogStep = {
+  id: string
+  label: string
+  description: string
+  /** Shown as a small eyebrow above this step, marks the start of a new phase. */
+  groupLabel?: string
+}
+
 type Props = {
   date: string
   title: string
   tags?: string[]
-  body: CaseStagedParagraph[]
+  body?: CaseStagedParagraph[]
   image?: { src: string; alt: string; caption: string }
+  /** Compact vertical step list -- the narrow-column alternative to the wide
+   *  CaseStagedProcess scroller, for when a log entry itself is the step-by-step beat. */
+  steps?: LogStep[]
+  /** Note shown under the steps when the sequence loops back on itself. */
+  loopLabel?: string
   /** Shown once, above the dateline, on the first entry only -- introduces the log itself. */
   sectionIntro?: { eyebrow: string; heading: string; lede?: string }
 }
@@ -19,6 +32,8 @@ export default function CaseStagedLogEntry({
   tags,
   body,
   image,
+  steps,
+  loopLabel,
   sectionIntro,
 }: Props) {
   const headingId = useId()
@@ -82,9 +97,42 @@ export default function CaseStagedLogEntry({
             >
               {title}
             </h3>
-            <div className="text-paper-muted max-w-measure space-y-4 text-base leading-relaxed">
-              {renderParagraphs(body)}
-            </div>
+            {body && (
+              <div className="text-paper-muted max-w-measure space-y-4 text-base leading-relaxed">
+                {renderParagraphs(body)}
+              </div>
+            )}
+
+            {steps && steps.length > 0 && (
+              <div className={body ? 'mt-6' : ''}>
+                {steps.map((step, index) => (
+                  <div key={step.id}>
+                    {step.groupLabel && (
+                      <p className="text-teal-mid mb-1.5 text-xs font-normal uppercase tracking-[0.12em]">
+                        {step.groupLabel}
+                      </p>
+                    )}
+                    <div className="border-rule border px-4 py-3">
+                      <p className="text-paper text-sm font-semibold">{step.label}</p>
+                      <p className="text-paper-muted mt-1 text-xs leading-relaxed">
+                        {step.description}
+                      </p>
+                    </div>
+                    {index < steps.length - 1 && (
+                      <div
+                        aria-hidden="true"
+                        className="text-paper-muted/40 flex justify-center py-1 text-base"
+                      >
+                        ↓
+                      </div>
+                    )}
+                  </div>
+                ))}
+                {loopLabel && (
+                  <p className="text-paper-muted mt-4 text-sm leading-relaxed">{loopLabel}</p>
+                )}
+              </div>
+            )}
 
             {image && (
               <figure className="mt-6">

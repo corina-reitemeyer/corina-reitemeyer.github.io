@@ -3,7 +3,6 @@ import { ROUTES } from '../../lib/routes'
 import CaseStagedHero from './components/CaseStagedHero'
 import CaseStagedSplit from './components/CaseStagedSplit'
 import CaseStagedLogEntry from './components/CaseStagedLogEntry'
-import CaseStagedProcess from './components/CaseStagedProcess'
 
 export default function FigmaAiReadinessChecker() {
   useCaseStagedChrome()
@@ -56,7 +55,7 @@ export default function FigmaAiReadinessChecker() {
         }}
         body={[
           "Press a button, run a quick scan, and the plugin surfaces what's flagged. It doesn't just point at the quick fixes, it helps me understand why something needs adjusting and how, right where the element sits. Agent view goes a layer deeper: properties, tokens, and values laid bare, so I can see if I've missed something. It's like an X-ray for the design.",
-          "I've been running it on AXON, my design system side project, and on an app I'm building, and it's already cut away a lot of the frustration I had with the conversational check. Today I shared a first look on LinkedIn, a short recording of it working through a real design.",
+          "I've been running it on AXON, my design system side project, and tested it against an example app screen too. It's already cut away a lot of the frustration I had with the conversational check. Today I shared a first look on LinkedIn, a short recording of it working through a real design.",
           "I'm not fully trusting it yet, though. While I'm still testing and refining, I keep a final check in the loop, both with Figma AI and inside my coding tool of choice. Several agents, backed by different LLMs, often pick up different things.",
           {
             bold: true,
@@ -65,9 +64,10 @@ export default function FigmaAiReadinessChecker() {
         ]}
       />
 
-      <CaseStagedProcess
-        eyebrow="24–25 Aug 2026"
-        heading="The new loop"
+      <CaseStagedLogEntry
+        date="24–25 Aug 2026"
+        title="The new loop"
+        tags={['Workflow']}
         loopLabel="Fix and rescan repeats until the scan comes back clean, before I ever open a chat window."
         steps={[
           {
@@ -116,9 +116,10 @@ export default function FigmaAiReadinessChecker() {
         }}
       />
 
-      <CaseStagedProcess
-        eyebrow="21–22 Aug 2026"
-        heading="The old loop"
+      <CaseStagedLogEntry
+        date="21–22 Aug 2026"
+        title="The old loop"
+        tags={['Workflow']}
         loopLabel="Check again loops straight back into the chat. Each pass starts with less certainty than the one before."
         steps={[
           {

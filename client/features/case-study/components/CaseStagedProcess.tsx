@@ -11,8 +11,6 @@ type ProcessStep = {
 
 type Props = {
   heading: string
-  /** Small eyebrow above the heading, e.g. a dateline for a log entry. */
-  eyebrow?: string
   description?: string
   loopLabel?: string
   steps: ProcessStep[]
@@ -20,7 +18,6 @@ type Props = {
 
 export default function CaseStagedProcess({
   heading,
-  eyebrow,
   description,
   loopLabel,
   steps,
@@ -88,11 +85,6 @@ export default function CaseStagedProcess({
       className="bg-ink w-full py-20 sm:py-28"
     >
       <div className={`reveal reveal--1 mx-auto max-w-6xl px-6 sm:px-10 xl:px-0 ${revealClass}`}>
-        {eyebrow && (
-          <p className="text-teal-mid mb-3 font-normal text-xs uppercase tracking-[0.16em]">
-            {eyebrow}
-          </p>
-        )}
         <h2
           id={headingId}
           className="text-paper mb-2 max-w-measure text-[clamp(1.85rem,4vw,2.85rem)] font-bold leading-[1.05] tracking-[-0.02em]"

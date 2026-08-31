@@ -25,6 +25,10 @@ type Props = {
   loopLabel?: string
   /** Shown once, above the dateline, on the first entry only -- introduces the log itself. */
   sectionIntro?: { eyebrow: string; heading: string; lede?: string }
+  /** Extra breathing room below the entry, for the last one on the page --
+   *  matches the closing weight other case studies get from their outcome
+   *  section or adjacent-nav block, since the log has neither. */
+  spacingBottom?: 'default' | 'loose'
 }
 
 export default function CaseStagedLogEntry({
@@ -37,6 +41,7 @@ export default function CaseStagedLogEntry({
   steps,
   loopLabel,
   sectionIntro,
+  spacingBottom = 'default',
 }: Props) {
   const headingId = useId()
   const { ref: sectionRef, isInView } = useScrollReveal<HTMLElement>()
@@ -45,7 +50,11 @@ export default function CaseStagedLogEntry({
   const triggerRef = useRef<HTMLButtonElement>(null)
 
   return (
-    <section ref={sectionRef} aria-labelledby={headingId} className="bg-ink w-full">
+    <section
+      ref={sectionRef}
+      aria-labelledby={headingId}
+      className={`bg-ink w-full ${spacingBottom === 'loose' ? 'pb-24 sm:pb-32 xl:pb-40' : ''}`}
+    >
       {/* Sticky date must not sit inside a transformed ancestor -- the .reveal fade
           uses transform, and Chromium breaks position:sticky under a transformed
           ancestor. So .reveal wraps the content column only, not this outer grid. */}
@@ -86,7 +95,7 @@ export default function CaseStagedLogEntry({
                 {tags.map((tag) => (
                   <span
                     key={tag}
-                    className="border-rule text-teal-mid rounded-full border px-2.5 py-1 font-normal text-xs uppercase tracking-[0.08em]"
+                    className="border-rule text-teal-mid inline-flex items-center rounded-full border px-2.5 pb-1.5 pt-1 font-normal text-xs leading-none"
                   >
                     {tag}
                   </span>

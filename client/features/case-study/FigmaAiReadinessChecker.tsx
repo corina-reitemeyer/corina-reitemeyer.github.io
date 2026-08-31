@@ -25,7 +25,7 @@ export default function FigmaAiReadinessChecker() {
         ]}
         meta={[
           { label: 'Category', value: 'Plugin' },
-          { label: 'Status', value: 'Completed, still testing' },
+          { label: 'Status', value: 'Testing' },
           { label: 'Year', value: '2026' },
         ]}
         panels={[
@@ -51,7 +51,7 @@ export default function FigmaAiReadinessChecker() {
         sectionIntro={{
           eyebrow: 'Log',
           heading: 'How this has gone so far',
-          lede: 'A few days, logged roughly as they happened, newest first.',
+          lede: 'A few days of building this, newest first.',
         }}
         body={[
           "Press a button, run a quick scan, and the plugin surfaces what's flagged: why something needs adjusting, how to fix it, right where the element sits. Agent view goes a layer deeper, showing properties, tokens, and values so I can see if I've missed something. It's like an X-ray for the design.",
@@ -159,6 +159,7 @@ export default function FigmaAiReadinessChecker() {
         date="21–22 Aug 2026"
         title="Reviewing a chat log instead of building"
         tags={['Problem']}
+        spacingBottom="loose"
         body={[
           "I finish a component or a mockup of a screen, then ask Figma's native AI agent whether it's ready for another agent to work with. It answers in a chat window, spread across three messages. Helpful, until by the second message I've already forgotten what the first one told me to fix. Lots of scrolling, lots of double-checking, more time reviewing than building. The longer I check, the worse the context spaghetti gets.",
           "Beyond the chat log itself, three things made it hard to act on. Nothing pointed me to the flagged element, so I'd go hunting for it across the frame. There was no quick way to recheck after a fix, so I couldn't tell if I'd solved it or just moved the problem. And there was no score or severity indicator, so I had no real sense of how far off \"ready\" the design actually was, just a wall of text.",

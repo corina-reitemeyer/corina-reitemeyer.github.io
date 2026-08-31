@@ -17,6 +17,7 @@ type Props = {
   tags?: string[]
   body?: CaseStagedParagraph[]
   image?: { src: string; alt: string; caption: string }
+  video?: { src: string; poster?: string; caption?: string }
   /** Compact vertical step list -- the narrow-column alternative to the wide
    *  CaseStagedProcess scroller, for when a log entry itself is the step-by-step beat. */
   steps?: LogStep[]
@@ -32,6 +33,7 @@ export default function CaseStagedLogEntry({
   tags,
   body,
   image,
+  video,
   steps,
   loopLabel,
   sectionIntro,
@@ -101,6 +103,25 @@ export default function CaseStagedLogEntry({
               <div className="text-paper-muted max-w-measure space-y-4 text-base leading-relaxed">
                 {renderParagraphs(body)}
               </div>
+            )}
+
+            {video && (
+              <figure className={body ? 'mt-6' : ''}>
+                <video
+                  src={video.src}
+                  poster={video.poster}
+                  controls
+                  playsInline
+                  preload="metadata"
+                  aria-label={title}
+                  className="w-full"
+                />
+                {video.caption && (
+                  <figcaption className="text-paper-muted mt-3 text-sm italic leading-relaxed">
+                    {video.caption}
+                  </figcaption>
+                )}
+              </figure>
             )}
 
             {steps && steps.length > 0 && (

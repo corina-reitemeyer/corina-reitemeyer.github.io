@@ -12,7 +12,7 @@ export default function FigmaAiReadinessChecker() {
       <CaseStagedHero
         backHref={ROUTES.playground}
         backLabel="Back to playground"
-        meta="Playground · Figma plugin · Completed, still testing · 2026"
+        meta="Playground · Figma plugin · 2026"
         title="A Figma plugin that flags what's not AI‑ready in a component."
         marginNote="testing now"
       />
@@ -54,14 +54,18 @@ export default function FigmaAiReadinessChecker() {
           lede: 'A few days, logged roughly as they happened, newest first.',
         }}
         body={[
-          "Press a button, run a quick scan, and the plugin surfaces what's flagged. It doesn't just point at the quick fixes, it helps me understand why something needs adjusting and how, right where the element sits. Agent view goes a layer deeper: properties, tokens, and values laid bare, so I can see if I've missed something. It's like an X-ray for the design.",
-          "I've been running it on AXON, my design system side project, and tested it against an example app screen too. It's already cut away a lot of the frustration I had with the conversational check. Today I shared a first look on LinkedIn, a short recording of it working through a real design.",
+          "Press a button, run a quick scan, and the plugin surfaces what's flagged: why something needs adjusting, how to fix it, right where the element sits. Agent view goes a layer deeper, showing properties, tokens, and values so I can see if I've missed something. It's like an X-ray for the design.",
+          "I tested it against an example app screen, and it's already cut away a lot of the frustration I had with the conversational check. Today I shared a first look on LinkedIn, a short recording of it working through an app design screen.",
           "I'm not fully trusting it yet, though. While I'm still testing and refining, I keep a final check in the loop, both with Figma AI and inside my coding tool of choice. Several agents, backed by different LLMs, often pick up different things.",
           {
             bold: true,
             text: 'Cross-checking across all of them is how I get to full confidence in the results.',
           },
         ]}
+        video={{
+          src: '/images/portfolio/making/process/figma-plugin-ai-ready-sneakpeak.mp4',
+          caption: 'A first look at the plugin working through an app design screen.',
+        }}
       />
 
       <CaseStagedLogEntry
@@ -105,7 +109,7 @@ export default function FigmaAiReadinessChecker() {
         title="Where AI sped up, and where I had to slow down"
         tags={['Build']}
         body={[
-          "I started by looking at how other checker tools handle this kind of problem, accessibility checkers, design linters, performance checkers, and researching the conventions already forming around agent-readiness for AI tools. Once I'd drafted the main screens, I used Figma MCP to turn them into a design.md and a ux-functional.md, and fed both into Cursor as ground rules before writing any plugin code.",
+          "I started by looking at how other checker tools handle this kind of problem, accessibility checkers, design linters, performance checkers, and researching the conventions already forming around agent-readiness for AI tools. Once I'd drafted the main screens, I used Figma MCP to turn them into a design.md and a user-experience.md, and fed both into Cursor as ground rules before writing any plugin code.",
           "Feeding Cursor one screen at a time, broken into smaller components, worked well for the repetitive ground: button states, hover states, and the other variations I'd otherwise have hand-built one by one. This is where AI earned its keep, turning a screen I'd already established into its full set of states in a fraction of the time.",
           "The Agent view was the opposite experience. Deciding what actually counts as useful evidence for an AI agent, layout, property values, token coverage, isn't something Cursor could infer on its own. That part needed my own judgment call, screen by screen, tested against a real design each time before I trusted it.",
         ]}
@@ -157,10 +161,6 @@ export default function FigmaAiReadinessChecker() {
         tags={['Problem']}
         body={[
           "I finish a component or a mockup of a screen, then ask Figma's native AI agent whether it's ready for another agent to work with. It answers in a chat window, spread across three messages. Helpful, until by the second message I've already forgotten what the first one told me to fix. Lots of scrolling, lots of double-checking, more time reviewing than building. The longer I check, the worse the context spaghetti gets.",
-          {
-            bold: true,
-            text: "I want to work in the canvas and build something that works, not review and backtrack through a chat log and lose my god damn mind. 🥲",
-          },
           "Beyond the chat log itself, three things made it hard to act on. Nothing pointed me to the flagged element, so I'd go hunting for it across the frame. There was no quick way to recheck after a fix, so I couldn't tell if I'd solved it or just moved the problem. And there was no score or severity indicator, so I had no real sense of how far off \"ready\" the design actually was, just a wall of text.",
           {
             bold: true,

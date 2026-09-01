@@ -49,9 +49,9 @@ export default function FigmaAiReadinessChecker() {
         title="Sharing a first look"
         tags={['Testing', 'Sneak peek']}
         sectionIntro={{
-          eyebrow: 'Log',
-          heading: 'How this has gone so far',
-          lede: 'A few days of building this, newest first.',
+          eyebrow: 'Recent Updates',
+          heading: "What's happened so far",
+          lede: 'A couple of quick notes from building this.',
         }}
         body={[
           "Press a button, run a quick scan, and the plugin surfaces what's flagged: why something needs adjusting, how to fix it, right where the element sits. Agent view goes a layer deeper, showing properties, tokens, and values so I can see if I've missed something. It's like an X-ray for the design.",

@@ -82,9 +82,15 @@ export default function CaseStagedLogEntry({
         >
           {/* Chromium doesn't honor position:sticky on a stretched grid item directly --
               a plain wrapper div as the grid item, with the sticky node as its child,
-              works around it. */}
+              works around it. Skipped for the last entry (spacingBottom="loose"): its
+              trailing padding sits outside this box, so the sticky date would release
+              early and drift away from the title instead of stopping level with it. */}
           <div className="sm:h-full">
-            <p className="text-teal-mid mb-4 font-normal text-xs uppercase tracking-[0.16em] sm:sticky sm:top-24 sm:mb-0 sm:pt-1">
+            <p
+              className={`text-teal-mid mb-4 font-normal text-xs uppercase tracking-[0.16em] sm:mb-0 sm:pt-1 ${
+                spacingBottom === 'loose' ? '' : 'sm:sticky sm:top-24'
+              }`}
+            >
               {date}
             </p>
           </div>

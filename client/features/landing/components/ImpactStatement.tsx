@@ -8,6 +8,30 @@ type Keyword = {
   detail: string
 }
 
+type AvailabilityStatus = 'open' | 'unavailable'
+
+const AVAILABILITY: AvailabilityStatus = 'unavailable'
+
+const availabilityCopy: Record<AvailabilityStatus, string> = {
+  open: 'Open for work',
+  unavailable: 'Fully booked',
+}
+
+const availabilityDotClass: Record<AvailabilityStatus, string> = {
+  open: 'bg-teal-mid',
+  unavailable: 'bg-yellow',
+}
+
+const availabilityGlowClass: Record<AvailabilityStatus, string> = {
+  open: 'shadow-[0_0_6px_var(--teal-mid)]',
+  unavailable: 'shadow-[0_0_6px_var(--yellow)]',
+}
+
+const availabilityTextClass: Record<AvailabilityStatus, string> = {
+  open: 'text-teal-mid',
+  unavailable: 'text-yellow',
+}
+
 const keywords: Keyword[] = [
   {
     id: 'design-systems',
@@ -89,13 +113,17 @@ export default function ImpactStatement() {
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-start px-6 pb-[112px] pt-[112px] sm:px-10 sm:pb-[164px] sm:pt-[164px] xl:px-0">
         <p
-          className={`reveal reveal--1 text-teal-mid mb-2 flex items-center gap-2 font-normal text-xs uppercase tracking-[0.16em] sm:mb-3 ${revealClass}`}
+          className={`reveal reveal--1 mb-2 flex items-center gap-2 font-normal text-xs uppercase tracking-[0.16em] sm:mb-3 ${availabilityTextClass[AVAILABILITY]} ${revealClass}`}
         >
           <span aria-hidden="true" className="relative top-px flex h-1.5 w-1.5">
-            <span className="bg-teal-mid absolute inline-flex h-full w-full animate-ping rounded-full opacity-75" />
-            <span className="bg-teal-mid relative inline-flex h-1.5 w-1.5 rounded-full shadow-[0_0_6px_var(--teal-mid)]" />
+            <span
+              className={`absolute inline-flex h-full w-full animate-ping rounded-full opacity-75 ${availabilityDotClass[AVAILABILITY]}`}
+            />
+            <span
+              className={`relative inline-flex h-1.5 w-1.5 rounded-full ${availabilityDotClass[AVAILABILITY]} ${availabilityGlowClass[AVAILABILITY]}`}
+            />
           </span>
-          Open for work
+          {availabilityCopy[AVAILABILITY]}
         </p>
 
         <h1

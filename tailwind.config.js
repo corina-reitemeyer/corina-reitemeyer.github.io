@@ -15,6 +15,7 @@ export default {
         paper: 'var(--paper)',
         'paper-soft': 'var(--paper-soft)',
         'paper-muted': 'var(--paper-muted)',
+        yellow: 'var(--yellow)',
         'teal-deep': 'var(--teal-deep)',
         teal: 'var(--teal)',
         'teal-mid': 'var(--teal-mid)',

@@ -17,6 +17,7 @@
   --paper: #f2f0eb;
   --paper-soft: #cfc8bd;
   --paper-muted: #9a948a;
+  --yellow: #f5d76e;
   --rule: color-mix(in srgb, var(--teal-mid) 18%, transparent);
   --focus: #b5ddd8;
   --note: color-mix(in srgb, var(--teal-mid) 45%, var(--teal-bright));
